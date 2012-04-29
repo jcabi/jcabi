@@ -31,55 +31,20 @@
  *
  * @version $Id: pom.xml 210 2011-07-13 20:38:32Z guard $
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
+    http://maven.apache.org/xsd/decoration-1.0.0.xsd"
+    name="jcabi-log">
 
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.jcabi</groupId>
-        <artifactId>jcabi</artifactId>
-        <version jcabi="yes">1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>jcabi-log</artifactId>
-    <packaging>jar</packaging>
-    <name>jcabi-log</name>
-
-    <dependencies>
-        <dependency>
-            <!--
-            Since every framework uses its own logging mechanism
-            this SLF4J is going to help to control everything from
-            one point.
-            -->
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version since="8 Nov 2010">1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit-dep</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-    </dependencies>
+    <body>
+        <menu ref="parent" />
+        <menu name="Overview">
+            <item name="Introduction" href="index.html" />
+            <item name="Decors" href="decors.html" />
+            <item name="API (JavaDoc)" href="./apidocs/index.html" />
+        </menu>
+        <menu ref="reports" />
+    </body>
 
 </project>
