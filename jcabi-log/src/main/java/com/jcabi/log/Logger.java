@@ -45,7 +45,7 @@ import org.slf4j.LoggerFactory;
  *
  * <pre>
  * package com.example.XXX;
- * import com.ymock.util.Logger;
+ * import com.jcabi.log.Logger;
  * public class MyClass {
  *   public void foo(Integer num) {
  *     Logger.info(this, "foo(%d) just called", num);
