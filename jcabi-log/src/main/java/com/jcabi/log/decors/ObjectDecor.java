@@ -36,7 +36,7 @@ import java.util.Formatter;
  * Format internal structure of an object.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: ObjectDecor.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class ObjectDecor implements Formattable {

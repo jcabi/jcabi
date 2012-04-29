@@ -38,7 +38,7 @@ import java.util.Formatter;
 /**
  * Format list.
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: ListDecor.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class ListDecor implements Formattable {

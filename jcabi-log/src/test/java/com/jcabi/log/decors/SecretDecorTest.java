@@ -40,7 +40,7 @@ import org.junit.runners.Parameterized.Parameters;
  * Test case for {@link SecretDecor}.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: SecretDecorTest.java 341 2012-04-25 21:00:53Z guard $
+ * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")

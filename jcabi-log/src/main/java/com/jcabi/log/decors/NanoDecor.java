@@ -46,7 +46,7 @@ import java.util.Formatter;
  *
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: NanoDecor.java 341 2012-04-25 21:00:53Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class NanoDecor implements Formattable {

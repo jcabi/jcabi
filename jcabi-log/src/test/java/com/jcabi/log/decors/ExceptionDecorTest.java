@@ -38,7 +38,7 @@ import org.mockito.Mockito;
 /**
  * Test case for {@link ExceptionDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: ExceptionDecorTest.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  */
 public final class ExceptionDecorTest {
 

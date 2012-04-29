@@ -44,7 +44,7 @@ import org.w3c.dom.Node;
  * Decorates XML Document.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: DomDecor.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class DomDecor implements Formattable {

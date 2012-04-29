@@ -34,7 +34,7 @@ import org.junit.Test;
 /**
  * Test case for {@link Logger}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: LoggerTest.java 334 2012-04-25 18:38:43Z guard $
+ * @version $Id$
  */
 public final class LoggerTest {
 

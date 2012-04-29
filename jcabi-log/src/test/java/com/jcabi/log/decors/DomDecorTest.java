@@ -39,7 +39,7 @@ import org.w3c.dom.Document;
 /**
  * Test case for {@link DomDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: DomDecorTest.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  */
 public final class DomDecorTest {
 

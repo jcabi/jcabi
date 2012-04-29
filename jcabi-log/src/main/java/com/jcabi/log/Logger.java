@@ -79,7 +79,7 @@ import org.slf4j.LoggerFactory;
  * </pre>
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: Logger.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class Logger {

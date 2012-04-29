@@ -32,6 +32,6 @@
  * Convenient utils, very useful in other projects, mockers.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: package-info.java 341 2012-04-25 21:00:53Z guard $
+ * @version $Id$
  */
 package com.jcabi.log;

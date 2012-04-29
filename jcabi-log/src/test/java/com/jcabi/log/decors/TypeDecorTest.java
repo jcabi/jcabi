@@ -39,7 +39,7 @@ import org.junit.runners.Parameterized.Parameters;
 /**
  * Test case for {@link TypeDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: TypeDecorTest.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")

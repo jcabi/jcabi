@@ -32,6 +32,6 @@
  * Convenient utils, tests.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: package-info.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  */
 package com.jcabi.log;

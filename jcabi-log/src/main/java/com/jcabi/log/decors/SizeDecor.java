@@ -36,7 +36,7 @@ import java.util.Formatter;
  * Size decorator.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: SizeDecor.java 324 2012-02-26 22:31:04Z guard $
+ * @version $Id$
  * @since 0.1
  */
 public final class SizeDecor implements Formattable {
