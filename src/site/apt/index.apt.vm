@@ -1,5 +1,5 @@
  ------
- Logger
+ jcabi
  ------
  Yegor Bugayenko
  ------
@@ -36,32 +36,7 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Convenient Utilities
+jcabi
 
-  {{{./apidocs/com/jcabi/log/Logger.html}<<<Logger>>>}}
-  is a convenient wrapper around {{{http://www.slf4j.org/}slf4j}}
-  (don't forget to include one of
-  {{{http://www.slf4j.org/manual.html#binding}slf4j bindings}}
-  into your project):
-
-+--
-import com.jcabi.log.Logger;
-class Foo {
-  void bar(int value) {
-    Logger.debug(this, "method bar(%d) was called", value);
-  }
-}
-+--
-
-  Read about {{{./decors.html}decors}}.
-
-  Don't forget to include <<<jcabi-log>>> dependency into your project:
-
-+--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-log</artifactId>
-  <version>${releasedVersion}</version>
-</dependency>
-+--
+  {{{./jcabi-log}<<<jcabi-log>>>}} helps to use SLF4J logging.
 
