@@ -39,7 +39,7 @@ import java.util.Formatter;
  * @version $Id$
  * @since 0.1
  */
-final class DecorMocker implements Formattable {
+public final class DecorMocker implements Formattable {
 
     /**
      * The text.
