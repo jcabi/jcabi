@@ -280,27 +280,6 @@
             <build>
                 <plugins>
                     <plugin>
-                        <!--
-                        This plugin will collect current build number
-                        from Subversion and save it into Maven property "buildNumber".
-                        -->
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>buildnumber-maven-plugin</artifactId>
-                        <version since="22 Mar 2012">1.0-beta-4</version>
-                        <executions>
-                            <execution>
-                                <phase>pre-site</phase>
-                                <goals>
-                                    <goal>create</goal>
-                                </goals>
-                                <configuration>
-                                    <doCheck>false</doCheck>
-                                    <doUpdate>false</doUpdate>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
                         <artifactId>maven-site-plugin</artifactId>
                         <version since="2 Sep 2011">3.0-beta-3</version>
                         <configuration>
