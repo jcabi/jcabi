@@ -368,6 +368,8 @@
                                     <artifactId>cobertura-maven-plugin</artifactId>
                                     <version since="18 Oct 2011">2.5.1</version>
                                 </plugin>
+                                <!--
+                                Doesn't work yet, since REMPL doesn't support GITHUB
                                 <plugin>
                                     <groupId>com.rempl.plugins</groupId>
                                     <artifactId>rempl-maven-plugin</artifactId>
@@ -376,6 +378,7 @@
                                         <rom>src/rempl/rom.xml</rom>
                                     </configuration>
                                 </plugin>
+                                -->
                                 <plugin>
                                     <artifactId>maven-plugin-plugin</artifactId>
                                     <version since="4 Oct 2011">2.9</version>
