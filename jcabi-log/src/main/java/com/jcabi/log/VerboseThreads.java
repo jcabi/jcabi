@@ -134,7 +134,7 @@ public final class VerboseThreads implements ThreadFactory {
      * @param type Prefix will be build from this type name
      */
     public VerboseThreads(final Object type) {
-        this(type.getShortName(), true, 1);
+        this(type.getClass().getSimpleName(), true, 1);
     }
 
     /**
