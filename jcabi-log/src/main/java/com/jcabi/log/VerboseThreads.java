@@ -36,7 +36,46 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Convenient {@link ThreadFactory}, that logs all uncaught exceptions.
  *
  * <p>It's a wrapper around
- * {@link Executors#defaultThreadFactory()}.
+ * {@link Executors#defaultThreadFactory()}. The factory should be used together
+ * with executor services from {@code java.util.concurrent} package. Without
+ * these "verbose" threads your runnable tasks will not report anything to
+ * console once they die because of a runtime exception, for example:
+ *
+ * <pre>
+ * Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
+ *   new Runnable() {
+ *     &#64;Override
+ *     public void run() {
+ *       // some sensitive operation that may throw
+ *       // a runtime exception
+ *     },
+ *     1L, 1L, TimeUnit.SECONDS
+ *   }
+ * );
+ * </pre>
+ *
+ * <p>The exception in this example will never be caught by nobody. It will
+ * just terminate current execution of the {@link Runnable} task. Moreover,
+ * it won't reach any {@link Thread.UncaughtExceptionHandler}, because this
+ * is how {@link ScheduledExecutorService} is behaving. This is how we solve
+ * the problem with {@link VerboseThreads}:
+ *
+ * <pre>
+ * ThreadFactory factory = new VerboseThreads();
+ * Executors.newScheduledThreadPool(2, factory).scheduleAtFixedRate(
+ *   new Runnable() {
+ *     &#64;Override
+ *     public void run() {
+ *       // the same sensitive operation that may throw
+ *       // a runtime exception
+ *     },
+ *     1L, 1L, TimeUnit.SECONDS
+ *   }
+ * );
+ * </pre>
+ *
+ * <p>Now, every runtime exception that is not caught inside your
+ * {@link Runnable} will be reported to log (using {@link Logger}).
  *
  * <p>This class is thread-safe.
  *
@@ -73,14 +112,16 @@ public final class VerboseThreads implements ThreadFactory {
     private final transient int priority;
 
     /**
-     * Default constructor.
+     * Default constructor ({@code "verbose"} as a prefix, threads are daemons,
+     * default thread priority is {@code 1}).
      */
     public VerboseThreads() {
         this("verbose", true, 1);
     }
 
     /**
-     * Detailed constructor, with a prefix of thread names.
+     * Detailed constructor, with a prefix of thread names (threads are daemons,
+     * default thread priority is {@code 1}).
      * @param pfx Prefix for thread names
      */
     public VerboseThreads(final String pfx) {
@@ -144,7 +185,7 @@ public final class VerboseThreads implements ThreadFactory {
         );
         thread.setName(
             String.format(
-                "%s-pool-%d",
+                "%s-%d",
                 this.prefix,
                 this.number.getAndIncrement()
             )
