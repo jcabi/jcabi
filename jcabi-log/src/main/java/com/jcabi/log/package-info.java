@@ -29,7 +29,7 @@
  */
 
 /**
- * Convenient utils, very useful in other projects.
+ * Convenient logging utils.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$

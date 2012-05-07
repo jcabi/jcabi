@@ -70,7 +70,7 @@ public final class VerboseThreadsTest {
     @Test
     public void logsWhenThreadsAreNotDying() throws Exception {
         final ExecutorService service = Executors
-            .newSingleThreadExecutor(new VerboseThreads());
+            .newSingleThreadExecutor(new VerboseThreads(this));
         final Future future = service.submit(
             new Runnable() {
                 @Override

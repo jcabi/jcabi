@@ -129,6 +129,15 @@ public final class VerboseThreads implements ThreadFactory {
     }
 
     /**
+     * Detailed constructor, with a prefix of thread names (threads are daemons,
+     * default thread priority is {@code 1}).
+     * @param type Prefix will be build from this type name
+     */
+    public VerboseThreads(final Object type) {
+        this(type.getShortName(), true, 1);
+    }
+
+    /**
      * Detailed constructor.
      * @param pfx Prefix for thread names
      * @param dmn Threads should be daemons?

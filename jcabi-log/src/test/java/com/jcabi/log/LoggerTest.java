@@ -39,47 +39,29 @@ import org.junit.Test;
 public final class LoggerTest {
 
     /**
-     * Test it.
+     * Logger can detect logging class name correctly.
      * @throws Exception If something goes wrong
      */
     @Test
-    public void testDetectionOfLogger() throws Exception {
+    public void detectsLoggerNameCorrectly() throws Exception {
         // not implemented yet
     }
 
     /**
-     * Test it.
+     * Logger can detect logging class with a static param.
      * @throws Exception If something goes wrong
      */
     @Test
-    public void testDetectionOfStaticSource() throws Exception {
+    public void detectsNameOfStaticSource() throws Exception {
         // not implemented yet
     }
 
     /**
-     * Test it.
+     * Logger can set logging level correctly.
      * @throws Exception If something goes wrong
      */
     @Test
-    public void testSettingOfLoggingLevel() throws Exception {
-        // not implemented yet
-    }
-
-    /**
-     * Test it.
-     * @throws Exception If something goes wrong
-     */
-    @Test
-    public void testIsTraceEnabledMethod() throws Exception {
-        // not implemented yet
-    }
-
-    /**
-     * Test it.
-     * @throws Exception If something goes wrong
-     */
-    @Test
-    public void testIsDebugEnabledMethod() throws Exception {
+    public void setsLoggingLevel() throws Exception {
         // not implemented yet
     }
 

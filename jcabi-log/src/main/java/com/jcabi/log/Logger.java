@@ -32,8 +32,7 @@ package com.jcabi.log;
 import org.slf4j.LoggerFactory;
 
 /**
- * Universal logger, and adapter between API
- * and a third-party logging facility.
+ * Universal logger, and adapter between your app and SLF4J API.
  *
  * <p>Instead of relying
  * on some logging engine you can use this class, which transforms all
@@ -64,10 +63,10 @@ import org.slf4j.LoggerFactory;
  * </pre>
  *
  * <p>Exact binding between SLF4J and logging facility has to be
- * specified in {@code pom.xml} of your project.
+ * specified in {@code pom.xml} of your project (or in classpath directly).
  *
  * <p>For performance reasons in most cases before sending a
- * {@code TRACE} or {@code DEBUG} log message you should check whether this
+ * {@code TRACE} or {@code DEBUG} log message you may check whether this
  * logging level is enabled in the project, e.g.:
  *
  * <pre>
@@ -78,6 +77,10 @@ import org.slf4j.LoggerFactory;
  * //...
  * </pre>
  *
+ * <p>There is only one reason to do so - if you want to save time spent on
+ * preparing of the arguments. By default, such a call is made inside every
+ * method of {@link Logger} class.
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
@@ -85,9 +88,7 @@ import org.slf4j.LoggerFactory;
 public final class Logger {
 
     /**
-     * Private ctor, to avoid class instantiation.
-     *
-     * <p>This is utility class and you can't instantiate it directly.
+     * This is utility class.
      */
     private Logger() {
         // intentionally empty

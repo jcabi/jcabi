@@ -44,9 +44,8 @@ public final class DecorException extends Exception {
      * @param format The message
      * @param args Optional arguments
      */
-    public DecorException(
-        final Throwable cause, final String format, final Object... args
-    ) {
+    public DecorException(final Throwable cause, final String format,
+        final Object... args) {
         super(String.format(format, args), cause);
     }
 
