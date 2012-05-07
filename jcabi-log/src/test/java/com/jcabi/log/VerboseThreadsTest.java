@@ -31,6 +31,8 @@ package com.jcabi.log;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 
 /**
@@ -38,6 +40,7 @@ import org.junit.Test;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
+@SuppressWarnings("PMD.DoNotUseThreads")
 public final class VerboseThreadsTest {
 
     /**
@@ -56,6 +59,29 @@ public final class VerboseThreadsTest {
                 }
             }
         );
+        TimeUnit.SECONDS.sleep(1L);
+        service.shutdown();
+    }
+
+    /**
+     * VerboseThreads can log exceptions with {@link ExecutorService#submit()}.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void logsWhenThreadsAreNotDying() throws Exception {
+        final ExecutorService service = Executors
+            .newSingleThreadExecutor(new VerboseThreads());
+        final Future future = service.submit(
+            new Runnable() {
+                @Override
+                public void run() {
+                    throw new IllegalArgumentException("boom");
+                }
+            }
+        );
+        while (!future.isDone()) {
+            TimeUnit.SECONDS.sleep(1L);
+        }
         service.shutdown();
     }
 

@@ -29,7 +29,6 @@
  */
 package com.jcabi.log;
 
-import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -45,6 +44,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @version $Id$
  * @since 0.1.2
  */
+@SuppressWarnings("PMD.DoNotUseThreads")
 public final class VerboseThreads implements ThreadFactory {
 
     /**
@@ -111,7 +111,37 @@ public final class VerboseThreads implements ThreadFactory {
      */
     @Override
     public Thread newThread(final Runnable runnable) {
-        final Thread thread = new Thread(this.group, runnable);
+        final Thread thread = new Thread(
+            this.group,
+            // @checkstyle AnonInnerLength (50 lines)
+            new Runnable() {
+                @Override
+                @SuppressWarnings("PMD.AvoidCatchingGenericException")
+                public void run() {
+                    try {
+                        runnable.run();
+                    // @checkstyle IllegalCatch (1 line)
+                    } catch (RuntimeException ex) {
+                        Logger.warn(
+                            this,
+                            "%s: %[exception]s",
+                            Thread.currentThread().getName(),
+                            ex
+                        );
+                        throw ex;
+                    // @checkstyle IllegalCatch (1 line)
+                    } catch (Error error) {
+                        Logger.error(
+                            this,
+                            "%s (error): %[exception]s",
+                            Thread.currentThread().getName(),
+                            error
+                        );
+                        throw error;
+                    }
+                }
+            }
+        );
         thread.setName(
             String.format(
                 "%s-pool-%d",
@@ -119,6 +149,7 @@ public final class VerboseThreads implements ThreadFactory {
                 this.number.getAndIncrement()
             )
         );
+        thread.setDaemon(this.daemon);
         thread.setPriority(this.priority);
         return thread;
     }
