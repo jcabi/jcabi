@@ -58,11 +58,27 @@ public final class VerboseRunnable implements Runnable {
     private final transient Runnable origin;
 
     /**
-     * Default constructor.
+     * Swallow exceptions?
+     */
+    private final transient boolean swallow;
+
+    /**
+     * Default constructor, doesn't swallow exceptions.
      * @param runnable Runnable to wrap
      */
     public VerboseRunnable(final Runnable runnable) {
+        this(runnable, false);
+    }
+
+    /**
+     * Default constructor.
+     * @param runnable Runnable to wrap
+     * @param swlw Shall we swallow exceptions?
+     * @since 0.1.4
+     */
+    public VerboseRunnable(final Runnable runnable, final boolean swlw) {
         this.origin = runnable;
+        this.swallow = swlw;
     }
 
     /**
@@ -80,7 +96,9 @@ public final class VerboseRunnable implements Runnable {
                 "%[exception]s",
                 ex
             );
-            throw ex;
+            if (!this.swallow) {
+                throw ex;
+            }
         // @checkstyle IllegalCatch (1 line)
         } catch (Error error) {
             Logger.error(
@@ -88,7 +106,9 @@ public final class VerboseRunnable implements Runnable {
                 "error: %[exception]s",
                 error
             );
-            throw error;
+            if (!this.swallow) {
+                throw error;
+            }
         }
     }
 

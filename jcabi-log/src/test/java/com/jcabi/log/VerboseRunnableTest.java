@@ -55,4 +55,21 @@ public final class VerboseRunnableTest {
         ).run();
     }
 
+    /**
+     * VerboseRunnable can swallow exceptions.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void swallowsExceptionsInRunnable() throws Exception {
+        new VerboseRunnable(
+            new Runnable() {
+                @Override
+                public void run() {
+                    throw new IllegalArgumentException("boom");
+                }
+            },
+            true
+        ).run();
+    }
+
 }
