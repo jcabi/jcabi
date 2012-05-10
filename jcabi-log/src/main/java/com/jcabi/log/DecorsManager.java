@@ -37,6 +37,7 @@ import com.jcabi.log.decors.NanoDecor;
 import com.jcabi.log.decors.ObjectDecor;
 import com.jcabi.log.decors.SecretDecor;
 import com.jcabi.log.decors.SizeDecor;
+import com.jcabi.log.decors.TextDecor;
 import com.jcabi.log.decors.TypeDecor;
 import java.lang.reflect.Constructor;
 import java.util.Formattable;
@@ -69,6 +70,7 @@ public final class DecorsManager {
         DecorsManager.DECORS.put("object", ObjectDecor.class);
         DecorsManager.DECORS.put("size", SizeDecor.class);
         DecorsManager.DECORS.put("secret", SecretDecor.class);
+        DecorsManager.DECORS.put("text", TextDecor.class);
         DecorsManager.DECORS.put("type", TypeDecor.class);
     }
 
