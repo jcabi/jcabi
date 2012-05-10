@@ -36,12 +36,16 @@ package com.jcabi.log;
  *
  * <pre>
  * Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
- *   new VerboseRunnable(runnable), 1L, 1L, TimeUnit.SECONDS
+ *   new VerboseRunnable(runnable, true), 1L, 1L, TimeUnit.SECONDS
  * );
  * </pre>
  *
  * <p>Now, every runtime exception that is not caught inside your
  * {@link Runnable} will be reported to log (using {@link Logger}).
+ * Two-arguments constructor can be used when you need to instruct the class
+ * about what to do with the exception: either swallow it or escalate.
+ * Sometimes it's very important to swallow exceptions. Otherwise an entire
+ * thread may get stuck (like in the example above).
  *
  * <p>This class is thread-safe.
  *
@@ -91,22 +95,34 @@ public final class VerboseRunnable implements Runnable {
             this.origin.run();
         // @checkstyle IllegalCatch (1 line)
         } catch (RuntimeException ex) {
-            Logger.warn(
-                this,
-                "%[exception]s",
-                ex
-            );
-            if (!this.swallow) {
+            if (this.swallow) {
+                Logger.warn(
+                    this,
+                    "swallowed exception: %[exception]s",
+                    ex
+                );
+            } else {
+                Logger.warn(
+                    this,
+                    "escalated exception: %[exception]s",
+                    ex
+                );
                 throw ex;
             }
         // @checkstyle IllegalCatch (1 line)
         } catch (Error error) {
-            Logger.error(
-                this,
-                "error: %[exception]s",
-                error
-            );
-            if (!this.swallow) {
+            if (this.swallow) {
+                Logger.error(
+                    this,
+                    "swallowed error: %[exception]s",
+                    error
+                );
+            } else {
+                Logger.error(
+                    this,
+                    "escalated error: %[exception]s",
+                    error
+                );
                 throw error;
             }
         }
