@@ -1,5 +1,5 @@
  ------
- Maven Log binding for SLF4J
+ Aether adapter for Maven plugins
  ------
  Yegor Bugayenko
  ------
@@ -36,34 +36,50 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Maven Log binding for SLF4J
+Aether adapter for Maven plugins
 
-  Maven Log to SLF4J binding is implemented with
-  {{{./apidocs/org/slf4j/impl/StaticLoggerBinder.html}<<<StaticLoggerBinder>>>}}
-  singleton. This is how you use it in your Maven plugin:
+  {{{https://docs.sonatype.org/display/AETHER/Home}Aether}} is a dependency
+  management toolkit for Maven repositories. It is very convenient to use
+  in your Maven plugins, when it's necessary to find a location of certain
+  artifact or find out what transitive dependencies it contains. This
+  module contains a convenient adapter between your plugin and Aether.
+
+  This is how you find out the location of an artifact:
 
 +--
-import com.jcabi.log.Logger;
+import com.jcabi.aether.Aether;
+import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
-import org.slf4j.impl.StaticLoggerBinder;
+import org.sonatype.aether.RepositorySystemSession;
+import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.util.artifact.DefaultArtifact;
 public class MyMojo extends AbstractMojo {
+  /**
+   * @parameter default-value="${repositorySystemSession}"
+   * @readonly
+   */
+  private RepositorySystemSession session;
   @Override
   public void execute() {
-    StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
-    // ... later ...
-    Logger.info(this, "hello, world!");
+    final File repo = this.session.getLocalRepository().getBasedir();
+    final Collection<Artifact> deps = new Aether(this, repo).resolve(
+      new DefaultArtifact("junit", "junit-dep", "", "jar", "4.10"),
+      "system"
+    );
+    // Now you have a full set of artifacts that include junit-dep.jar
+    // and all its dependencies in SYSTEM scope. The first
+    // element in the collection is junit-dep.jar itself. You can use
+    // Artifact#getFile() method to get its absolute path
   }
 }
 +--
-
-  The `Logger.info()` call will go to Maven Log through SLF4J.
 
   The only dependency you need:
 
 +--
 <dependency>
   <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-maven-slf4j</artifactId>
+  <artifactId>jcabi-aether</artifactId>
   <version>${releasedVersion}</version>
 </dependency>
 +--
