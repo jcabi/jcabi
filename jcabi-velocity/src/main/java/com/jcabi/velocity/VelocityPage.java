@@ -54,7 +54,7 @@ import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
  * <p>The class is mutable and thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
- * @version $Id: Template.java 2159 2012-04-03 05:45:07Z guard $
+ * @version $Id$
  * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html">Velocity User Guide</a>
  * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/developer-guide.html">Velocity Developer Guide</a>
  * @link <a href="http://velocity.apache.org/engine/devel/apidocs/org/apache/velocity/slf4j/Slf4jLogChute.html">Slf4jLogChute</a>
