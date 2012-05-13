@@ -42,7 +42,7 @@ Velocity Page (wrapper around Apache Velocity)
   is a convenient builder/wrapper around {{{http://velocity.apache.org/}Apache Velocity}}:
 
 +--
-import com.jcabi.velocity.Velocity;
+import com.jcabi.velocity.VelocityPage;
 String text = new VelocityPage("com/foo/template.vm")
   .set("name", "John Doe")
   .set("file", file)
