@@ -81,19 +81,12 @@
         <dependency>
             <groupId>org.apache.maven.wagon</groupId>
             <artifactId>wagon-provider-api</artifactId>
-            <version since="15 Sep 2011">1.0-beta-6</version>
+            <version since="13 May 2012">2.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.wagon</groupId>
             <artifactId>wagon-http-lightweight</artifactId>
-            <version since="15 Sep 2011">1.0-beta-7</version>
-            <exclusions>
-                <exclusion>
-                    <!-- it's an old version, should be excluded -->
-                    <groupId>nekohtml</groupId>
-                    <artifactId>nekohtml</artifactId>
-                </exclusion>
-            </exclusions>
+            <version since="13 May 2012">2.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
