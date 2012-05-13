@@ -1,9 +1,9 @@
  ------
- jcabi
+ Velocity Page
  ------
  Yegor Bugayenko
  ------
- 2012-04-29
+ 2012-05-13
  ------
 
 ~~
@@ -36,12 +36,27 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-jcabi
+Velocity Page (wrapper around Apache Velocity)
 
-  {{{./jcabi-assembly}<<<jcabi-assembly>>>}} provides an useful
-  assembly descriptor for your open source Maven project.
+  {{{./apidocs/com/jcabi/velocity/VelocityPage.html}<<<VelocityPage>>>}}
+  is a convenient builder/wrapper around {{{http://velocity.apache.org/}Apache Velocity}}:
 
-  {{{./jcabi-log}<<<jcabi-log>>>}} helps to use SLF4J logging.
++--
+import com.jcabi.velocity.Velocity;
+String text = new VelocityPage("com/foo/template.vm")
+  .set("name", "John Doe")
+  .set("file", file)
+  .set("document", doc)
+  .toString();
++--
 
-  {{{./jcabi-velocity}<<<jcabi-velocity>>>}} is a wrapper around Apache
-  Velocity.
+  The only dependency you need:
+
++--
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-velocity</artifactId>
+  <version>${releasedVersion}</version>
+</dependency>
++--
+
