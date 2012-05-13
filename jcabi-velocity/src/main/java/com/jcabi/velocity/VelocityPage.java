@@ -31,20 +31,40 @@ package com.jcabi.velocity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 
 /**
- * Velocity page.
+ * Velocity page, builder/wrapper around Apache Velocity template.
+ *
+ * <p>The template should be in classpath:
+ *
+ * <pre>
+ * String text = new VelocityPage("com/foo/my-template.vm")
+ *   .set("name", "John Doe")
+ *   .toString();
+ * </pre>
+ *
+ * <p>At the moment all logging is forwarded to LOG4J. In Velocity 2.0 there
+ * will be an adapter for SLF4J and we'll use it: {@code Slf4jLogChute}.
  *
  * <p>The class is mutable and thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id: Template.java 2159 2012-04-03 05:45:07Z guard $
+ * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html">Velocity User Guide</a>
+ * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/developer-guide.html">Velocity Developer Guide</a>
+ * @link <a href="http://velocity.apache.org/engine/devel/apidocs/org/apache/velocity/slf4j/Slf4jLogChute.html">Slf4jLogChute</a>
  */
 public final class VelocityPage {
+
+    /**
+     * The engine to use.
+     */
+    private static final VelocityEngine ENGINE = VelocityPage.init();
 
     /**
      * Name of resource.
@@ -65,13 +85,15 @@ public final class VelocityPage {
     }
 
     /**
-     * Add new value.
+     * Set the name to the value specified.
      * @param prop Name of the property to set
-     * @param value The value
+     * @param value The value to use
      * @return This object
      */
     public VelocityPage set(final String prop, final Object value) {
-        this.context.put(prop, value);
+        synchronized (this.context) {
+            this.context.put(prop, value);
+        }
         return this;
     }
 
@@ -80,6 +102,17 @@ public final class VelocityPage {
      */
     @Override
     public String toString() {
+        final Template template = VelocityPage.ENGINE.getTemplate(this.name);
+        final StringWriter writer = new StringWriter();
+        template.merge(this.context, new PrintWriter(writer));
+        return writer.toString();
+    }
+
+    /**
+     * Create and initialize Velocity engine.
+     * @return The engine to use
+     */
+    private static VelocityEngine init() {
         final VelocityEngine engine = new VelocityEngine();
         engine.setProperty("resource.loader", "cp");
         engine.setProperty(
@@ -95,11 +128,7 @@ public final class VelocityPage {
             "org.apache.velocity"
         );
         engine.init();
-        final org.apache.velocity.Template template =
-            engine.getTemplate(this.name);
-        final StringWriter writer = new StringWriter();
-        template.merge(this.context, new PrintWriter(writer));
-        return writer.toString();
+        return engine;
     }
 
 }

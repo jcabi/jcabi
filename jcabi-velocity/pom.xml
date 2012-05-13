@@ -44,10 +44,13 @@
 
     <dependencies>
         <dependency>
-            <!-- Text formatting tool -->
+            <!--
+            Apache Velocity, text formatting tool
+            @see http://velocity.apache.org/
+            -->
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
-            <version since="17 Nov 2011">1.7</version>
+            <version since="13 May 2012">1.7</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -60,10 +63,6 @@
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-library</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
