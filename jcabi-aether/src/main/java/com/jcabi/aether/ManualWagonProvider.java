@@ -41,6 +41,7 @@ import org.sonatype.aether.connector.wagon.WagonProvider;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.6
  */
 final class ManualWagonProvider implements WagonProvider {
 

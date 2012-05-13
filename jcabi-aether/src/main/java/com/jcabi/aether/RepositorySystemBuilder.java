@@ -43,6 +43,7 @@ import org.sonatype.aether.spi.connector.RepositoryConnectorFactory;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.6
  */
 final class RepositorySystemBuilder {
 

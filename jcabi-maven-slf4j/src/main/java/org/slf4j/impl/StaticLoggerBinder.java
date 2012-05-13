@@ -58,6 +58,7 @@ import org.slf4j.spi.LoggerFactoryBinder;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.6
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
 public final class StaticLoggerBinder implements LoggerFactoryBinder {

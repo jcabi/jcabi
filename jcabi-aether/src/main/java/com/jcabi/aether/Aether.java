@@ -53,6 +53,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.6
  */
 public final class Aether {
 

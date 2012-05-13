@@ -46,6 +46,7 @@ import org.slf4j.helpers.MessageFormatter;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.6
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
 @SuppressWarnings("PMD.TooManyMethods")
