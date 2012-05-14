@@ -96,6 +96,7 @@ public final class Aether {
             crq.addRepository(repo);
         }
         final RepositorySystem system = new RepositorySystemBuilder().build();
+        final List<Artifact> deps = new LinkedList<Artifact>();
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
         if (filter != null) {
@@ -105,7 +106,6 @@ public final class Aether {
             session.setLocalRepositoryManager(
                 system.newLocalRepositoryManager(local)
             );
-            final List<Artifact> deps = new LinkedList<Artifact>();
             Collection<ArtifactResult> results;
             try {
                 results = system.resolveDependencies(
