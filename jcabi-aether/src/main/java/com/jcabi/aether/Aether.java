@@ -98,14 +98,14 @@ public final class Aether {
         final RepositorySystem system = new RepositorySystemBuilder().build();
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
-        final MavenRepositorySystemSession session =
-            new MavenRepositorySystemSession();
-        final LocalRepository local = new LocalRepository(this.localRepo);
-        session.setLocalRepositoryManager(
-            system.newLocalRepositoryManager(local)
-        );
-        final List<Artifact> deps = new LinkedList<Artifact>();
-        if (filter != null && system != null) {
+        if (filter != null) {
+            final MavenRepositorySystemSession session =
+                new MavenRepositorySystemSession();
+            final LocalRepository local = new LocalRepository(this.localRepo);
+            session.setLocalRepositoryManager(
+                system.newLocalRepositoryManager(local)
+            );
+            final List<Artifact> deps = new LinkedList<Artifact>();
             Collection<ArtifactResult> results;
             try {
                 results = system.resolveDependencies(
