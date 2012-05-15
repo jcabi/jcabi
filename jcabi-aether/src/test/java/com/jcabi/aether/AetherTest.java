@@ -75,7 +75,7 @@ public final class AetherTest {
                 )
             )
         ).when(project).getRemoteProjectRepositories();
-        final File local = this.temp.newFolder("local-repo");
+        final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(project, local.getPath());
         final List<Artifact> deps = aether.resolve(
             new DefaultArtifact(
