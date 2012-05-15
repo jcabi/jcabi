@@ -49,6 +49,14 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
 /**
  * Resolver of dependencies for one artifact.
  *
+ * <p>You need the following dependencies to have in classpath in order to
+ * to work with this class:
+ *
+ * <pre>
+ * org.sonatype.aether:aether-api:1.13.1
+ * org.apache.maven:maven-core:3.0.3
+ * </pre>
+ *
  * <p>The class is immutable and thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
@@ -68,9 +76,10 @@ public final class Aether {
     private final transient String localRepo;
 
     /**
-     * Ctor.
-     * @param prj The project
-     * @param repo Local repository location
+     * Public ctor, requires information about all remote repos and one
+     * local.
+     * @param prj The Maven project
+     * @param repo Local repository location (file path)
      */
     public Aether(final MavenProject prj, final String repo) {
         this.project = prj;

@@ -78,8 +78,9 @@ public final class VelocityPage {
     private final transient VelocityContext context = new VelocityContext();
 
     /**
-     * Public ctor.
-     * @param res Name of resource with template
+     * Public ctor, with absolute resource name in classpath.
+     * @param res Name of resource with template (absolute resource name in
+     *  classpath)
      */
     public VelocityPage(final String res) {
         this.name = res;
