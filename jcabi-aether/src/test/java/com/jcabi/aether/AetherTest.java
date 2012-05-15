@@ -54,9 +54,10 @@ public final class AetherTest {
 
     /**
      * Temp dir.
+     * @checkstyle VisibilityModifier (3 lines)
      */
     @Rule
-    public TemporaryFolder temp = new TemporaryFolder();
+    public final transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
      * Aether can find and load artifacts.
@@ -67,7 +68,11 @@ public final class AetherTest {
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(
             Arrays.asList(
-                new RemoteRepository("id", "type", "repo1.maven.org/maven2/")
+                new RemoteRepository(
+                    "id",
+                    "default",
+                    "http://repo1.maven.org/maven2/"
+                )
             )
         ).when(project).getRemoteProjectRepositories();
         final File local = this.temp.newFolder("local-repo");
@@ -75,17 +80,25 @@ public final class AetherTest {
         final List<Artifact> deps = aether.resolve(
             new DefaultArtifact(
                 "com.jcabi",
-                "jcabi-velocity",
+                "jcabi-log",
                 "",
                 "jar",
-                "0.1.7"
+                "0.1.5"
             ),
             JavaScopes.RUNTIME
         );
         MatcherAssert.assertThat(
             deps,
-            (Matcher) Matchers.hasItem(
-                Matchers.hasProperty("path", Matchers.equalTo("a"))
+            Matchers.allOf(
+                Matchers.hasSize(Matchers.greaterThan(1)),
+                (Matcher) Matchers.hasItem(
+                    Matchers.hasProperty(
+                        "file",
+                        Matchers.hasToString(
+                            Matchers.endsWith("/jcabi-log-0.1.5.jar")
+                        )
+                    )
+                )
             )
         );
     }

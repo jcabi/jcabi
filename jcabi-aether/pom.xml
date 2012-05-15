@@ -44,11 +44,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-log</artifactId>
-            <version jcabi="yes">1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.sonatype.aether</groupId>
             <artifactId>aether-api</artifactId>
             <version since="14 May 2012">1.13.1</version>
@@ -56,6 +51,11 @@
         <dependency>
             <groupId>org.sonatype.aether</groupId>
             <artifactId>aether-spi</artifactId>
+            <version since="14 May 2012">1.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sonatype.aether</groupId>
+            <artifactId>aether-impl</artifactId>
             <version since="14 May 2012">1.13.1</version>
         </dependency>
         <dependency>
@@ -70,23 +70,13 @@
         </dependency>
         <dependency>
             <groupId>org.sonatype.aether</groupId>
-            <artifactId>aether-connector-wagon</artifactId>
+            <artifactId>aether-connector-asynchttpclient</artifactId>
             <version since="14 May 2012">1.13.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-aether-provider</artifactId>
             <version since="15 Sep 2011">3.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-provider-api</artifactId>
-            <version since="13 May 2012">2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-http-lightweight</artifactId>
-            <version since="13 May 2012">1.0-beta-7</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>

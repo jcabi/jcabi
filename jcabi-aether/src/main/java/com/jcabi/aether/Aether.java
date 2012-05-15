@@ -98,8 +98,9 @@ public final class Aether {
      *  do a proper testing and reproduce this defect in a test.
      */
     public List<Artifact> resolve(final Artifact root, final String scope) {
+        final Dependency rdep = new Dependency(root, scope);
         final CollectRequest crq = new CollectRequest();
-        crq.setRoot(new Dependency(root, scope));
+        crq.setRoot(rdep);
         for (RemoteRepository repo
             : this.project.getRemoteProjectRepositories()) {
             crq.addRepository(repo);
@@ -116,11 +117,11 @@ public final class Aether {
                 system.newLocalRepositoryManager(local)
             );
             Collection<ArtifactResult> results;
+            final DependencyRequest dreq = new DependencyRequest(crq, filter);
             try {
-                results = system.resolveDependencies(
-                    session,
-                    new DependencyRequest(crq, filter)
-                ).getArtifactResults();
+                results = system
+                    .resolveDependencies(session, dreq)
+                    .getArtifactResults();
             } catch (DependencyResolutionException ex) {
                 throw new IllegalStateException(ex);
             }
