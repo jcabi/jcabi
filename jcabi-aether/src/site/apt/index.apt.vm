@@ -63,7 +63,7 @@ public class MyMojo extends AbstractMojo {
   @Override
   public void execute() {
     final File repo = this.session.getLocalRepository().getBasedir();
-    final Collection<Artifact> deps = new Aether(this, repo).resolve(
+    final Collection<Artifact> deps = new Aether(this.getProject(), repo).resolve(
       new DefaultArtifact("junit", "junit-dep", "", "jar", "4.10"),
       JavaScopes.RUNTIME
     );
