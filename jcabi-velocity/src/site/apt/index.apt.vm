@@ -1,5 +1,5 @@
  ------
- Velocity Page
+ Primitive Wrapper for Apache Velocity
  ------
  Yegor Bugayenko
  ------
@@ -36,7 +36,7 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Velocity Page (wrapper around Apache Velocity)
+Primitive Wrapper for Apache Velocity
 
   {{{./apidocs/com/jcabi/velocity/VelocityPage.html}<<<VelocityPage>>>}}
   is a convenient builder/wrapper around {{{http://velocity.apache.org/}Apache Velocity}}:
@@ -50,7 +50,7 @@ String text = new VelocityPage("com/foo/template.vm")
   .toString();
 +--
 
-  The only dependency you need:
+  The only dependency you need is:
 
 +--
 <dependency>

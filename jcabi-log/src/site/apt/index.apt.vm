@@ -1,5 +1,5 @@
  ------
- Logger
+ Static Wrapper of SLF4J
  ------
  Yegor Bugayenko
  ------
@@ -36,13 +36,13 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Logger
+Static Wrapper of SLF4J
 
   {{{./apidocs/com/jcabi/log/Logger.html}<<<Logger>>>}}
-  is a convenient wrapper around {{{http://www.slf4j.org/}slf4j}}
+  is a convenient static wrapper of {{{http://www.slf4j.org/}slf4j}}
   (don't forget to include one of
-  {{{http://www.slf4j.org/manual.html#binding}slf4j bindings}}
-  into your project):
+  {{{http://www.slf4j.org/manual.html#binding}SLF4J Bindings}}
+  into the project):
 
 +--
 import com.jcabi.log.Logger;
@@ -55,7 +55,7 @@ class Foo {
 
   Read also about {{{./decors.html}decors}}.
 
-  The only dependency you need:
+  The only dependency you need is:
 
 +--
 <dependency>
