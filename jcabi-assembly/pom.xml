@@ -42,4 +42,13 @@
     <packaging>jar</packaging>
     <name>jcabi-assembly</name>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
 </project>
