@@ -211,6 +211,26 @@
                         </executions>
                     </plugin>
                     <plugin>
+                        <groupId>com.ning.maven.plugins</groupId>
+                        <artifactId>maven-duplicate-finder-plugin</artifactId>
+                        <version since="30 May 2012">1.0.3</version>
+                        <configuration>
+                            <failBuildInCaseOfConflict>true</failBuildInCaseOfConflict>
+                            <checkTestClasspath>false</checkTestClasspath>
+                            <ignoredResources>
+                                <ignoredResource>META-INF/.*</ignoredResource>
+                            </ignoredResources>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <!--
                         @todo #26 This is a temporary measure, until
                          Qulice implements this validation. Once it's implemented

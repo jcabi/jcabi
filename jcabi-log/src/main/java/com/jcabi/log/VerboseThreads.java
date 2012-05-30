@@ -35,8 +35,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Convenient {@link ThreadFactory}, that logs all uncaught exceptions.
  *
- * <p>It's a wrapper around
- * {@link Executors#defaultThreadFactory()}. The factory should be used together
+ * <p>The factory should be used together
  * with executor services from {@code java.util.concurrent} package. Without
  * these "verbose" threads your runnable tasks will not report anything to
  * console once they die because of a runtime exception, for example:
@@ -56,8 +55,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * <p>The exception in this example will never be caught by nobody. It will
  * just terminate current execution of the {@link Runnable} task. Moreover,
- * it won't reach any {@link Thread.UncaughtExceptionHandler}, because this
- * is how {@link ScheduledExecutorService} is behaving. This is how we solve
+ * it won't reach any {@link java.lang.Thread.UncaughtExceptionHandler},
+ * because this
+ * is how {@link java.util.concurrent.ScheduledExecutorService}
+ * is behaving. This is how we solve
  * the problem with {@link VerboseThreads}:
  *
  * <pre>
