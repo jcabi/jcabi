@@ -122,6 +122,7 @@ public final class DecorsManager {
      * @return The type of decor found
      * @throws DecorException If some problem
      */
+    @SuppressWarnings("unchecked")
     private static Class<? extends Formattable> find(final String key)
         throws DecorException {
         Class<? extends Formattable> type;

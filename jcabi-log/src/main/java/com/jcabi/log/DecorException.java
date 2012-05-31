@@ -39,6 +39,11 @@ package com.jcabi.log;
 public final class DecorException extends Exception {
 
     /**
+     * Serialization marker.
+     */
+    private static final long serialVersionUID = 0x7526FA78EEDAC465L;
+
+    /**
      * Public ctor.
      * @param cause Cause of it
      * @param format The message

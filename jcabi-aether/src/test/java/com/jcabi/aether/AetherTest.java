@@ -33,7 +33,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.maven.project.MavenProject;
-import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Rule;
@@ -64,6 +63,7 @@ public final class AetherTest {
      * @throws Exception If there is some problem inside
      */
     @Test
+    @SuppressWarnings("unchecked")
     public void findsAndLoadsArtifacts() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(
@@ -90,9 +90,9 @@ public final class AetherTest {
         MatcherAssert.assertThat(
             deps,
             Matchers.allOf(
-                Matchers.hasSize(Matchers.greaterThan(1)),
-                (Matcher) Matchers.hasItem(
-                    Matchers.hasProperty(
+                Matchers.<Artifact>iterableWithSize(Matchers.greaterThan(1)),
+                Matchers.<Artifact>hasItems(
+                    Matchers.<Artifact>hasProperty(
                         "file",
                         Matchers.hasToString(
                             Matchers.endsWith("/jcabi-log-0.1.5.jar")
