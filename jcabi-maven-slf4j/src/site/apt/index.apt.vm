@@ -52,6 +52,8 @@ public class MyMojo extends AbstractMojo {
     StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
     // ... later ...
     Logger.info(this, "hello, world!");
+    // and you can still use the usual logging mechanism
+    this.getLog().info("hello again");
   }
 }
 +--
