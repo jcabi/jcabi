@@ -80,7 +80,9 @@ public final class VerboseRunnable implements Runnable {
      * Default constructor, with configurable behavior for exceptions.
      * @param runnable Runnable to wrap
      * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
-     *  ({@code FALSE})?
+     *  ({@code FALSE})? Exception swallowing means that {@link #run()}
+     *  will never throw any exceptions (in any case all exceptions are logged
+     *  using {@link Logger}.
      * @since 0.1.4
      */
     public VerboseRunnable(final Runnable runnable, final boolean swlw) {
@@ -92,7 +94,9 @@ public final class VerboseRunnable implements Runnable {
      * Default constructor.
      * @param callable Callable to wrap
      * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
-     *  ({@code FALSE})?
+     *  ({@code FALSE})? Exception swallowing means that {@link #run()}
+     *  will never throw any exceptions (in any case all exceptions are logged
+     *  using {@link Logger}.
      * @since 0.1.10
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
@@ -113,6 +117,10 @@ public final class VerboseRunnable implements Runnable {
 
     /**
      * {@inheritDoc}
+     *
+     * <p>We catch {@link RuntimeException} and {@link Error} here. All other
+     * types of exceptions are "checked exceptions" and won't be thrown out
+     * of {@link Runnable#run()} method.
      */
     @Override
     @SuppressWarnings("PMD.AvoidCatchingGenericException")

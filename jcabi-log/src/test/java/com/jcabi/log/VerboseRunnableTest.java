@@ -29,6 +29,7 @@
  */
 package com.jcabi.log;
 
+import java.util.concurrent.Callable;
 import org.junit.Test;
 
 /**
@@ -66,6 +67,23 @@ public final class VerboseRunnableTest {
                 @Override
                 public void run() {
                     throw new IllegalArgumentException("boom");
+                }
+            },
+            true
+        ).run();
+    }
+
+    /**
+     * VerboseRunnable can swallow exceptions in Callable.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void swallowsExceptionsInCallable() throws Exception {
+        new VerboseRunnable(
+            new Callable<Boolean>() {
+                @Override
+                public Boolean call() throws Exception {
+                    throw new IllegalArgumentException("boom-2");
                 }
             },
             true
