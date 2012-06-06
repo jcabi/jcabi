@@ -29,6 +29,8 @@
  */
 package com.jcabi.log;
 
+import java.util.concurrent.Callable;
+
 /**
  * Wrapper of {@link Runnable}, that logs all uncaught runtime exceptions.
  *
@@ -75,13 +77,37 @@ public final class VerboseRunnable implements Runnable {
     }
 
     /**
-     * Default constructor.
+     * Default constructor, with configurable behavior for exceptions.
      * @param runnable Runnable to wrap
-     * @param swlw Shall we swallow exceptions?
+     * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
+     *  ({@code FALSE})?
      * @since 0.1.4
      */
     public VerboseRunnable(final Runnable runnable, final boolean swlw) {
         this.origin = runnable;
+        this.swallow = swlw;
+    }
+
+    /**
+     * Default constructor.
+     * @param callable Callable to wrap
+     * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
+     *  ({@code FALSE})?
+     * @since 0.1.10
+     */
+    @SuppressWarnings("PMD.AvoidCatchingGenericException")
+    public VerboseRunnable(final Callable<?> callable, final boolean swlw) {
+        this.origin = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    callable.call();
+                // @checkstyle IllegalCatch (1 line)
+                } catch (Exception ex) {
+                    throw new IllegalArgumentException(ex);
+                }
+            }
+        };
         this.swallow = swlw;
     }
 
