@@ -40,7 +40,7 @@ import org.mockito.Mockito;
  * @version $Id$
  * @since 0.1.10
  */
-public final class ResourceMocker implements Resource {
+public final class ResourceMocker implements Resource<ResourceMocker> {
 
     /**
      * The cloud.
@@ -67,7 +67,7 @@ public final class ResourceMocker implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public <T extends Resource> T acquire() throws IOException {
+    public ResourceMocker acquire() throws IOException {
         return null;
     }
 

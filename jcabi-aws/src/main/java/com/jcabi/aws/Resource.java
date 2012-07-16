@@ -31,6 +31,10 @@ package com.jcabi.aws;
 
 import java.io.Closeable;
 import java.io.IOException;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * Generic resource.
@@ -40,11 +44,31 @@ import java.io.IOException;
  * fast, all heavy resource manipulation operations should be done in the
  * {@link #acquire()} method.
  *
+ * <p>Implementation must be thread-safe.
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1.10
  */
-public interface Resource extends Closeable {
+public interface Resource<T extends Resource> extends Closeable {
+
+    /**
+     * Method may be called only after {@link #acquire()}, otherwise it will
+     * throw a runtime exception.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    @interface After {
+    }
+
+    /**
+     * Method may be called only before {@link #acquire()}, otherwise it will
+     * throw a runtime exception.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    @interface Before {
+    }
 
     /**
      * Get back to the resource manager.
@@ -55,9 +79,8 @@ public interface Resource extends Closeable {
     /**
      * Acquire the resource.
      * @return This object
-     * @param <T> Type of this class
      * @throws IOException If some I/O problem
      */
-    <T extends Resource> T acquire() throws IOException;
+    T acquire() throws IOException;
 
 }

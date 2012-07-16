@@ -29,9 +29,6 @@
  */
 package com.jcabi.aws;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.util.concurrent.Callable;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -49,7 +46,8 @@ public final class CloudTest {
      */
     @Test
     public void acquiresResourceAndReturns() throws Exception {
-        final Resource res = new Cloud().get(ResourceMocker.class);
+        final ResourceMocker res = new Cloud().get(ResourceMocker.class);
+        MatcherAssert.assertThat(res, Matchers.notNullValue());
         res.acquire();
         res.close();
     }
