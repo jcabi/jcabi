@@ -57,7 +57,7 @@ public class ResourceMocker implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public Cloud back() {
+    public final Cloud back() {
         return this.cloud;
     }
 
@@ -65,7 +65,7 @@ public class ResourceMocker implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public void acquire() throws IOException {
+    public final void acquire() throws IOException {
         // do nothing
     }
 
@@ -73,7 +73,7 @@ public class ResourceMocker implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public void close() throws IOException {
+    public final void close() throws IOException {
         // do nothing
     }
 

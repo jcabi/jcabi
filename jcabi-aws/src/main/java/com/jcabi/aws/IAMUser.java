@@ -74,7 +74,7 @@ public class IAMUser implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public Cloud back() {
+    public final Cloud back() {
         return this.cloud;
     }
 
@@ -82,7 +82,7 @@ public class IAMUser implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public void acquire() throws IOException {
+    public final void acquire() throws IOException {
         if (this.iamKey.get() == null) {
             throw new IllegalStateException(
                 "IAM user key is not set with #key()"
@@ -99,7 +99,7 @@ public class IAMUser implements Resource {
      * {@inheritDoc}
      */
     @Override
-    public void close() throws IOException {
+    public final void close() throws IOException {
         // do nothing
     }
 
@@ -109,7 +109,7 @@ public class IAMUser implements Resource {
      * @return This object
      */
     @Resource.Before
-    public IAMUser key(final String key) {
+    public final IAMUser key(final String key) {
         this.iamKey.set(key);
         return this;
     }
@@ -120,7 +120,7 @@ public class IAMUser implements Resource {
      * @return This object
      */
     @Resource.Before
-    public IAMUser secret(final String secret) {
+    public final IAMUser secret(final String secret) {
         this.iamSecret.set(secret);
         return this;
     }
@@ -131,7 +131,7 @@ public class IAMUser implements Resource {
      * @see #isLive()
      */
     @Resource.After
-    public AWSCredentials credentials() {
+    public final AWSCredentials credentials() {
         if (!this.isLive()) {
             throw new IllegalStateException(
                 "IAM user is not live, use #isLive() to check first"
@@ -146,7 +146,7 @@ public class IAMUser implements Resource {
      * @see #credentials()
      */
     @Resource.After
-    public boolean isLive() {
+    public final boolean isLive() {
         return this.iamKey.get().matches("[A-Z]{20}");
     }
 

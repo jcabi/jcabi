@@ -30,8 +30,8 @@
 package com.jcabi.aws;
 
 import com.jcabi.log.Logger;
-import java.io.IOException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -127,11 +127,21 @@ public final class Cloud {
      */
     public Resource instantiate(final String name,
         final Class<? extends Resource> type) {
+        if (Modifier.isFinal(type.getModifiers())) {
+            throw new IllegalStateException(
+                String.format(
+                    "resource %s is final, it's not allowed",
+                    type.getName()
+                )
+            );
+        }
         final ProxyFactory factory = new ProxyFactory();
         factory.setSuperclass(type);
+        factory.setUseCache(true);
         factory.setFilter(Cloud.FILTER);
+        Resource resource;
         try {
-            return type.cast(
+            resource = type.cast(
                 factory.create(
                     new Class<?>[] {Cloud.class},
                     new Object[] {this},
@@ -147,6 +157,13 @@ public final class Cloud {
         } catch (java.lang.reflect.InvocationTargetException ex) {
             throw new IllegalArgumentException(ex);
         }
+        Logger.debug(
+            this,
+            "#instantiate('%s', '%s'): instantiated",
+            name,
+            type.getName()
+        );
+        return resource;
     }
 
     /**
@@ -159,41 +176,54 @@ public final class Cloud {
         private final transient AtomicInteger locks = new AtomicInteger();
         /**
          * {@inheritDoc}
+         * @checkstyle ParameterNumber (5 lines)
          */
         @Override
         public Object invoke(final Object self, final Method method,
-            final Method proceed, final Object[] args) throws Throwable {
+            final Method proceed, final Object[] args) throws Exception {
             Object result = null;
-            if (method.getName().equals("acquire")) {
-                if (this.locks.getAndIncrement() == 0) {
-                    proceed.invoke(self, args);
-                }
-            } else if (method.getName().equals("close")) {
-                if (this.locks.decrementAndGet() == 0) {
-                    proceed.invoke(self, args);
-                }
-            } else {
-                if (proceed.getAnnotation(Resource.Before.class) != null
-                    && this.locks.get() > 0) {
-                    throw new IllegalStateException(
-                        String.format(
-                            "method %s can be called only before #acquire()",
-                            proceed
-                        )
-                    );
-                }
-                if (proceed.getAnnotation(Resource.After.class) != null
-                    && this.locks.get() == 0) {
-                    throw new IllegalStateException(
-                        String.format(
-                            "method %s can be called only after #acquire()",
-                            proceed
-                        )
-                    );
-                }
+            if (proceed.getAnnotation(Resource.Before.class) != null
+                && this.locks.get() > 0) {
+                throw new IllegalStateException(
+                    String.format(
+                        "method %s can be called only before #acquire()",
+                        proceed
+                    )
+                );
+            }
+            if (proceed.getAnnotation(Resource.After.class) != null
+                && this.locks.get() == 0) {
+                throw new IllegalStateException(
+                    String.format(
+                        "method %s can be called only after #acquire()",
+                        proceed
+                    )
+                );
+            }
+            if (this.allowed(method)) {
                 result = proceed.invoke(self, args);
             }
             return result;
+        }
+        /**
+         * Can we proceed?
+         * @param method The method just called
+         * @return TRUE if we should proceed
+         */
+        private boolean allowed(final Method method) {
+            boolean allowed = false;
+            if ("acquire".equals(method.getName())) {
+                if (this.locks.getAndIncrement() == 0) {
+                    allowed = true;
+                }
+            } else if ("close".equals(method.getName())) {
+                if (this.locks.decrementAndGet() == 0) {
+                    allowed = true;
+                }
+            } else {
+                allowed = true;
+            }
+            return allowed;
         }
     }
 

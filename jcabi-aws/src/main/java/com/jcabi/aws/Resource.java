@@ -44,6 +44,8 @@ import java.lang.annotation.Target;
  * fast, all heavy resource manipulation operations should be done in the
  * {@link #acquire()} method.
  *
+ * <p>Implementation can NOT be final.
+ *
  * <p>Implementation must be thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
@@ -78,7 +80,6 @@ public interface Resource extends Closeable {
 
     /**
      * Acquire the resource.
-     * @return This object
      * @throws IOException If some I/O problem
      */
     void acquire() throws IOException;
