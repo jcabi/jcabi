@@ -31,7 +31,6 @@ package com.jcabi.aws;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
-import java.io.Closeable;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -44,7 +43,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @version $Id$
  * @since 0.1.10
  */
-public final class IAMUser implements Resource<IAMUser> {
+public class IAMUser implements Resource {
 
     /**
      * The cloud.
@@ -83,7 +82,7 @@ public final class IAMUser implements Resource<IAMUser> {
      * {@inheritDoc}
      */
     @Override
-    public IAMUser acquire() throws IOException {
+    public void acquire() throws IOException {
         if (this.iamKey.get() == null) {
             throw new IllegalStateException(
                 "IAM user key is not set with #key()"
@@ -94,7 +93,6 @@ public final class IAMUser implements Resource<IAMUser> {
                 "IAM user secret is not set with #secret()"
             );
         }
-        return this;
     }
 
     /**
@@ -107,6 +105,7 @@ public final class IAMUser implements Resource<IAMUser> {
 
     /**
      * Set key.
+     * @param key AWS key to set
      * @return This object
      */
     @Resource.Before
@@ -117,6 +116,7 @@ public final class IAMUser implements Resource<IAMUser> {
 
     /**
      * Set secret key.
+     * @param secret AWS secret to set
      * @return This object
      */
     @Resource.Before

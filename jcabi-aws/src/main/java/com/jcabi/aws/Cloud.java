@@ -30,15 +30,21 @@
 package com.jcabi.aws;
 
 import com.jcabi.log.Logger;
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import javassist.util.proxy.MethodFilter;
+import javassist.util.proxy.MethodHandler;
+import javassist.util.proxy.ProxyFactory;
 
 /**
  * Manager of cloud resources, your main entry point to the library.
  *
  * <p>Use it like this:
  *
- * <pre>MountedDirectory dir = new Cloud()
+ * <pre>Cloud cloud = new Cloud()
  *   .get(IAMUser.class)
  *     .key("...")
  *     .secret("...")
@@ -54,8 +60,8 @@ import java.util.concurrent.ConcurrentMap;
  *     .type("ext4")
  *     .back()
  *   .get(MountedDirectory.class)
- *     .path("/mnt/xdva5")
- *     .acquire();
+ *     .path("/mnt/xdva5");
+ * MountedDirectory dir = cloud.acquire(MountedDirectory.class);
  * FileUtils.touch(new File(dir.path(), "hello.txt"));
  * dir.close();
  * </pre>
@@ -82,10 +88,20 @@ import java.util.concurrent.ConcurrentMap;
 public final class Cloud {
 
     /**
+     * Standard method filter.
+     */
+    private static final MethodFilter FILTER = new MethodFilter() {
+        @Override
+        public boolean isHandled(final Method method) {
+            return true;
+        }
+    };
+
+    /**
      * All resources.
      */
-    private final transient ConcurrentMap<Class<? extends Resource>, Resource> resources =
-        new ConcurrentHashMap<Class<? extends Resource>, Resource>();
+    private final transient ConcurrentMap<String, Resource> resources =
+        new ConcurrentHashMap<String, Resource>();
 
     /**
      * Get resource of the given type.
@@ -94,18 +110,34 @@ public final class Cloud {
      * @param <T> Type of resource
      */
     public <T extends Resource> T get(final Class<T> type) {
-        this.resources.putIfAbsent(type, this.instantiate(type));
-        return type.cast(this.resources.get(type));
+        final String name = type.getName();
+        synchronized (this.resources) {
+            if (!this.resources.containsKey(name)) {
+                this.resources.put(name, this.instantiate(name, type));
+            }
+        }
+        return type.cast(this.resources.get(name));
     }
 
     /**
      * Creare a resource of provided type.
+     * @param name The name of it
      * @param type Type of resource to get
      * @return An instance
      */
-    public Resource instantiate(final Class<? extends Resource> type) {
+    public Resource instantiate(final String name,
+        final Class<? extends Resource> type) {
+        final ProxyFactory factory = new ProxyFactory();
+        factory.setSuperclass(type);
+        factory.setFilter(Cloud.FILTER);
         try {
-            return type.getConstructor(Cloud.class).newInstance(this);
+            return type.cast(
+                factory.create(
+                    new Class<?>[] {Cloud.class},
+                    new Object[] {this},
+                    new Cloud.Handler()
+                )
+            );
         } catch (NoSuchMethodException ex) {
             throw new IllegalArgumentException(ex);
         } catch (InstantiationException ex) {
@@ -114,6 +146,54 @@ public final class Cloud {
             throw new IllegalArgumentException(ex);
         } catch (java.lang.reflect.InvocationTargetException ex) {
             throw new IllegalArgumentException(ex);
+        }
+    }
+
+    /**
+     * Handler of a method.
+     */
+    private static final class Handler implements MethodHandler {
+        /**
+         * Locks for this particular resource.
+         */
+        private final transient AtomicInteger locks = new AtomicInteger();
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public Object invoke(final Object self, final Method method,
+            final Method proceed, final Object[] args) throws Throwable {
+            Object result = null;
+            if (method.getName().equals("acquire")) {
+                if (this.locks.getAndIncrement() == 0) {
+                    proceed.invoke(self, args);
+                }
+            } else if (method.getName().equals("close")) {
+                if (this.locks.decrementAndGet() == 0) {
+                    proceed.invoke(self, args);
+                }
+            } else {
+                if (proceed.getAnnotation(Resource.Before.class) != null
+                    && this.locks.get() > 0) {
+                    throw new IllegalStateException(
+                        String.format(
+                            "method %s can be called only before #acquire()",
+                            proceed
+                        )
+                    );
+                }
+                if (proceed.getAnnotation(Resource.After.class) != null
+                    && this.locks.get() == 0) {
+                    throw new IllegalStateException(
+                        String.format(
+                            "method %s can be called only after #acquire()",
+                            proceed
+                        )
+                    );
+                }
+                result = proceed.invoke(self, args);
+            }
+            return result;
         }
     }
 

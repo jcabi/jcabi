@@ -27,46 +27,12 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.aws;
-
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Test;
 
 /**
- * Test case for {@link IAMUser}.
+ * Manager of Amazon Web Services cloud resources, mocks.
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.10
  */
-public final class IAMUserTest {
-
-    /**
-     * IAMUser can report a non-live situation.
-     * @throws Exception If there is some problem inside
-     */
-    @Test
-    public void createsTestAwsCredentials() throws Exception {
-        final IAMUser res = new Cloud().get(IAMUser.class)
-            .key("-test")
-            .secret("-secret");
-        res.acquire();
-        MatcherAssert.assertThat(res.isLive(), Matchers.is(false));
-        res.close();
-    }
-
-    /**
-     * IAMUser can create real credentials.
-     * @throws Exception If there is some problem inside
-     */
-    @Test
-    public void createsAwsCredentials() throws Exception {
-        final IAMUser res = new Cloud().get(IAMUser.class)
-            .key("AAAABBBBCCCCDDDDEEEE")
-            .secret("-some-secret");
-        res.acquire();
-        MatcherAssert.assertThat(res.credentials(), Matchers.notNullValue());
-        MatcherAssert.assertThat(res.isLive(), Matchers.is(true));
-        res.close();
-    }
-
-}
+package com.jcabi.aws;

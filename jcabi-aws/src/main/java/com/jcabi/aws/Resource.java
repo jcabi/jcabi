@@ -50,7 +50,7 @@ import java.lang.annotation.Target;
  * @version $Id$
  * @since 0.1.10
  */
-public interface Resource<T extends Resource> extends Closeable {
+public interface Resource extends Closeable {
 
     /**
      * Method may be called only after {@link #acquire()}, otherwise it will
@@ -81,6 +81,6 @@ public interface Resource<T extends Resource> extends Closeable {
      * @return This object
      * @throws IOException If some I/O problem
      */
-    T acquire() throws IOException;
+    void acquire() throws IOException;
 
 }

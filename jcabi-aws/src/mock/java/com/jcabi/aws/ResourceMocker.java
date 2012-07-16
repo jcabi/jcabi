@@ -29,9 +29,7 @@
  */
 package com.jcabi.aws;
 
-import java.io.Closeable;
 import java.io.IOException;
-import org.mockito.Mockito;
 
 /**
  * Mocker of {@link Resource}.
@@ -40,7 +38,7 @@ import org.mockito.Mockito;
  * @version $Id$
  * @since 0.1.10
  */
-public final class ResourceMocker implements Resource<ResourceMocker> {
+public class ResourceMocker implements Resource {
 
     /**
      * The cloud.
@@ -67,8 +65,8 @@ public final class ResourceMocker implements Resource<ResourceMocker> {
      * {@inheritDoc}
      */
     @Override
-    public ResourceMocker acquire() throws IOException {
-        return null;
+    public void acquire() throws IOException {
+        // do nothing
     }
 
     /**
