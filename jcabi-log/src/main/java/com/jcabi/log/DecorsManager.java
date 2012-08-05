@@ -148,7 +148,7 @@ public final class DecorsManager {
      * @return The ctor
      * @throws DecorException If some problem
      */
-    private static Constructor ctor(final Class<? extends Formattable> type)
+    private static Constructor<?> ctor(final Class<? extends Formattable> type)
         throws DecorException {
         final Constructor[] ctors = type.getConstructors();
         if (ctors.length != 1) {
@@ -158,7 +158,7 @@ public final class DecorsManager {
                 ctors.length
             );
         }
-        final Constructor ctor = ctors[0];
+        final Constructor<?> ctor = ctors[0];
         if (ctor.getParameterTypes().length != 1) {
             throw new DecorException(
                 "%s public ctor should have just once parameter",

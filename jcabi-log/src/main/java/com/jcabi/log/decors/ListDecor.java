@@ -46,7 +46,7 @@ public final class ListDecor implements Formattable {
     /**
      * The list.
      */
-    private final transient Collection list;
+    private final transient Collection<?> list;
 
     /**
      * Public ctor.

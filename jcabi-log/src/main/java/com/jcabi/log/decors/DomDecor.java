@@ -89,7 +89,7 @@ public final class DomDecor implements Formattable {
             writer.write("NULL");
         } else {
             try {
-                final Transformer trans = this.FACTORY.newTransformer();
+                final Transformer trans = DomDecor.FACTORY.newTransformer();
                 trans.setOutputProperty(OutputKeys.INDENT, "yes");
                 trans.transform(
                     new DOMSource(this.node),
