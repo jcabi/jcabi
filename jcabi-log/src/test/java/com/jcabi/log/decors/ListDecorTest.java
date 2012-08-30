@@ -77,6 +77,7 @@ public final class ListDecorTest extends AbstractDecorTest {
                 {new String[] {"a"}, "[\"a\"]", 0, 0, 0},
                 {new Long[] {2L, 35L}, "[\"2\", \"35\"]", 0, 0, 0},
                 {new Object[] {"b", "c"}, "[\"b\", \"c\"]", 0, 0, 0},
+                {new Object[] {"foo", 2L}, "[\"foo\", \"2\"]", 0, 0, 0},
                 {new ArrayList<String>(), "[]", 0, 0, 0},
                 {Arrays.asList(new String[] {"x"}), "[\"x\"]", 0, 0, 0},
                 {Arrays.asList(new Long[] {5L, 6L}), "[\"5\", \"6\"]", 0, 0, 0},
