@@ -7,7 +7,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 [0.1.10](\#46) (not released yet, use 1.0-SNAPSHOT instead):
 
- * \#34: [jcabi-aspects](http://www.jcabi.com/jcabi-aspects)
+ * /#34: [jcabi-aspects](http://www.jcabi.com/jcabi-aspects)
  * \#37: started to use maven-duplicate-finder-plugin
  * \#39: `@RetryOnException` aspect
  * \#41: `VerboseRunnable(Callable<?>, Boolean)` ctor added
