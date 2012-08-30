@@ -118,7 +118,7 @@ How to release new version to Maven Central:
 
     8. Tag the branch
 
-        tag -a jcabi-0.1.2 -m '#123: version 0.1.2 released to Maven Central'
+        git tag -a jcabi-0.1.2 -m '#123: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.1.2
 
     9. Delete the branch or merge it back to 'master' (if you did any changes). Don't
