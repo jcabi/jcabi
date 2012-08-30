@@ -68,8 +68,9 @@ import org.apache.log4j.spi.LoggingEvent;
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
- * @since 0.1.2
+ * @since 0.1.10
  * @see <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape code</a>
+ * @see <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html">PatternLayout from LOG4J</a>
  */
 @SuppressWarnings("PMD.NonStaticInitializer")
 public final class MulticolorLayout extends PatternLayout {
@@ -89,6 +90,8 @@ public final class MulticolorLayout extends PatternLayout {
                 this.put("black", "30");
                 this.put("blue", "34");
                 this.put("cyan", "36");
+                this.put("green", "32");
+                this.put("magenta", "35");
                 this.put("red", "31");
                 this.put("yellow", "33");
                 this.put("white", "37");
@@ -115,7 +118,7 @@ public final class MulticolorLayout extends PatternLayout {
      * Regular expression for all matches.
      */
     private static final Pattern METAS = Pattern.compile(
-        "%color(?:-([a-z]+|[0-9]{1,3};[0-9]{1,3};[0-9]{1,3}))?\\{(.*)\\}"
+        "%color(?:-([a-z]+|[0-9]{1,3};[0-9]{1,3};[0-9]{1,3}))?\\{(.*?)\\}"
     );
 
     /**
@@ -164,6 +167,11 @@ public final class MulticolorLayout extends PatternLayout {
             ansi = "?";
         } else if (meta.matches("[a-z]+")) {
             ansi = MulticolorLayout.COLORS.get(meta);
+            if (ansi == null) {
+                throw new IllegalArgumentException(
+                    String.format("unknown color '%s'", meta)
+                );
+            }
         } else {
             ansi = meta;
         }

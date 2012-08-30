@@ -51,13 +51,15 @@ public final class MulticolorLayoutTest {
     @Test
     public void transformsLoggingEventToText() throws Exception {
         final MulticolorLayout layout = new MulticolorLayout();
-        layout.setConversionPattern("[%color{%p}] %m");
+        layout.setConversionPattern("[%color{%p}] %color{%m}");
         final LoggingEvent event = Mockito.mock(LoggingEvent.class);
         Mockito.doReturn(Level.DEBUG).when(event).getLevel();
         Mockito.doReturn("hello").when(event).getRenderedMessage();
         MatcherAssert.assertThat(
             StringEscapeUtils.escapeJava(layout.format(event)),
-            Matchers.equalTo("[\\u001B[2;37mDEBUG\\u001B[m] hello")
+            Matchers.equalTo(
+                "[\\u001B[2;37mDEBUG\\u001B[m] \\u001B[2;37mhello\\u001B[m"
+            )
         );
     }
 
@@ -93,6 +95,20 @@ public final class MulticolorLayoutTest {
             StringEscapeUtils.escapeJava(layout.format(event)),
             Matchers.equalTo("\\u001B[0;0;31mDEBUG\\u001B[m bar")
         );
+    }
+
+    /**
+     * MulticolorLayout can throw if color name is not valid.
+     * @throws Exception If something goes wrong
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsOnIllegalColorName() throws Exception {
+        final MulticolorLayout layout = new MulticolorLayout();
+        layout.setConversionPattern("%color-oops{%p} %m");
+        final LoggingEvent event = Mockito.mock(LoggingEvent.class);
+        Mockito.doReturn(Level.DEBUG).when(event).getLevel();
+        Mockito.doReturn("text").when(event).getRenderedMessage();
+        layout.format(event);
     }
 
 }
