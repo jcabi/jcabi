@@ -1,7 +1,7 @@
-jcabi
+jcabi, Simple Useful Java Components
 =====
 
-See [jcabi website](http://www.jcabi.com/)
+See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
