@@ -123,12 +123,6 @@
 
     <distributionManagement>
         <downloadUrl>https://oss.sonatype.org/content/groups/public</downloadUrl>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>sonatype.nexus</id>
-            <name>Sonatype OSS Repository (for releases)</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
         <snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
             <id>sonatype.nexus</id>
@@ -163,20 +157,15 @@
         This property has to be updated every time you release
         a new version to Maven Central
         -->
-        <releasedVersion>0.1.9</releasedVersion>
+        <releasedVersion>0.1.10</releasedVersion>
     </properties>
+
     <repositories>
         <!--
         intentionally empty
         @see http://www.sonatype.com/people/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/
         -->
-        <repository>
-            <!-- we need this repo because of SNAPSHOT status of the project -->
-            <id>sonatype.snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
     </repositories>
-
     <pluginRepositories>
         <!--
         intentionally empty
@@ -185,6 +174,48 @@
     </pluginRepositories>
 
     <profiles>
+        <profile>
+            <activation>
+                <property><name>sonatype</name></property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <artifactId>maven-deploy-plugin</artifactId>
+                            <configuration>
+                                <skip>true</skip>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version since="29 Aug 2012">1.0.2</version>
+                        <configuration>
+                            <serverId>sonatype.nexus</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <stagingRepositoryId>jcabi</stagingRepositoryId>
+                            <deployUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</deployUrl>
+                            <description>${project.version}</description>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>deploy-to-sonatype</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>deploy</goal>
+                                    <goal>close</goal>
+                                    <goal>release</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <!--
             Continuous integration specific settings.
