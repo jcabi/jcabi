@@ -74,8 +74,8 @@ public final class LoggerTest {
     @Test
     public void doesntFormatArraysSinceTheyAreVarArgs() throws Exception {
         MatcherAssert.assertThat(
-            Logger.format("array: %[list]s", new Object[] {"hi", 5}),
-            Matchers.not(Matchers.equalTo("array: [\"hi\", \"5\"]"))
+            Logger.format("array: %[list]s", new Object[] {"hi", 1}),
+            Matchers.not(Matchers.equalTo("array: [\"hi\", \"1\"]"))
         );
     }
 

@@ -32,6 +32,7 @@ package com.jcabi.log.decors;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Formattable;
+import java.util.FormattableFlags;
 import java.util.Formatter;
 
 /**
@@ -77,10 +78,12 @@ public final class ExceptionDecor implements Formattable {
         String text;
         if (this.throwable == null) {
             text = "NULL";
-        } else {
+        } else if ((flags & FormattableFlags.ALTERNATE) == 0) {
             final StringWriter writer = new StringWriter();
             this.throwable.printStackTrace(new PrintWriter(writer));
             text = writer.toString();
+        } else {
+            text = this.throwable.getMessage();
         }
         formatter.format("%s", text);
     }
