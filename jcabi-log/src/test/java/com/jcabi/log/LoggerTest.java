@@ -29,6 +29,8 @@
  */
 package com.jcabi.log;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 /**
@@ -63,6 +65,18 @@ public final class LoggerTest {
     @Test
     public void setsLoggingLevel() throws Exception {
         // not implemented yet
+    }
+
+    /**
+     * Logger can format array correctly.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void formatsArrayCorrectly() throws Exception {
+        MatcherAssert.assertThat(
+            Logger.format("array: %[list]s", new Object[] {"hi", 5}),
+            Matchers.equalTo("array: [\"hi\", \"5\"]")
+        );
     }
 
 }
