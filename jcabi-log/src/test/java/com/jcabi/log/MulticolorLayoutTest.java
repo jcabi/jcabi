@@ -61,4 +61,38 @@ public final class MulticolorLayoutTest {
         );
     }
 
+    /**
+     * MulticolorLayout can render custom color.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void rendersCustomConstantColor() throws Exception {
+        final MulticolorLayout layout = new MulticolorLayout();
+        layout.setConversionPattern("%color-red{%p} %m");
+        final LoggingEvent event = Mockito.mock(LoggingEvent.class);
+        Mockito.doReturn(Level.DEBUG).when(event).getLevel();
+        Mockito.doReturn("foo").when(event).getRenderedMessage();
+        MatcherAssert.assertThat(
+            StringEscapeUtils.escapeJava(layout.format(event)),
+            Matchers.equalTo("\\u001B[31mDEBUG\\u001B[m foo")
+        );
+    }
+
+    /**
+     * MulticolorLayout can render any ANSI color.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void rendersAnsiConstantColor() throws Exception {
+        final MulticolorLayout layout = new MulticolorLayout();
+        layout.setConversionPattern("%color-0;0;31{%p} %m");
+        final LoggingEvent event = Mockito.mock(LoggingEvent.class);
+        Mockito.doReturn(Level.DEBUG).when(event).getLevel();
+        Mockito.doReturn("bar").when(event).getRenderedMessage();
+        MatcherAssert.assertThat(
+            StringEscapeUtils.escapeJava(layout.format(event)),
+            Matchers.equalTo("\\u001B[0;0;31mDEBUG\\u001B[m bar")
+        );
+    }
+
 }
