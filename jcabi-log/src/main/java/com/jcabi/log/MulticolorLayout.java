@@ -49,19 +49,19 @@ import org.apache.log4j.spi.LoggingEvent;
  * log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%-5p}] %c: %m%n
  * </pre>
  *
- * <p>The part of the message wrapped with {@code %color&#123;...&#125;}
+ * <p>The part of the message wrapped with {@code %color{...}}
  * will change its color according to the logging level of the event. Without
  * this highlighting the behavior of the layout is identical to
- * {@link PatternLayout}. You can use {@code %color-red&#123;...&#125;} if you
+ * {@link PatternLayout}. You can use {@code %color-red{...}} if you
  * want to use specifically red color for the wrapped piece of text. Supported
  * colors are: {@code red}, {@code blue}, {@code yellow}, {@code cyan},
  * {@code black}, and {@code white}.
  *
  * Besides that you can specify any ANSI color you like with
- * {@code %color-&lt;attr&gt;-&lt;bg&gt;-&lt;fg&fg;&#123;...&#125;}, where
- * {@code &lt;attr&gt;} is a binary mask of attributes,
- * {@code &lt;bg&gt;} is a background color, and
- * {@code &lt;fg&gt;} is a foreground color. Read more about
+ * {@code %color-<attr>-<bg>-<fg>{...}}, where
+ * {@code <attr>} is a binary mask of attributes,
+ * {@code <bg>} is a background color, and
+ * {@code <fg>} is a foreground color. Read more about
  * <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape code</a>.
  *
  * <p>The class is immutable and thread-safe.
