@@ -97,20 +97,23 @@ public final class DecorsManager {
         } catch (InstantiationException ex) {
             throw new DecorException(
                 ex,
-                "Can't instantiate %s",
-                type.getName()
+                "Can't instantiate %s(%s)",
+                type.getName(),
+                arg.getClass().getName()
             );
         } catch (IllegalAccessException ex) {
             throw new DecorException(
                 ex,
-                "Can't access one-arg constructor in %s",
-                type.getName()
+                "Can't access %s(%s)",
+                type.getName(),
+                arg.getClass().getName()
             );
         } catch (java.lang.reflect.InvocationTargetException ex) {
             throw new DecorException(
                 ex,
-                "Can't invoke one-arg constructor in %s",
-                type.getName()
+                "Can't invoke %s(%s)",
+                type.getName(),
+                arg.getClass().getName()
             );
         }
         return decor;
