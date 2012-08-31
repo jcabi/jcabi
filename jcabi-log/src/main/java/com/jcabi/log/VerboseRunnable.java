@@ -54,6 +54,7 @@ import java.util.concurrent.Callable;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1.3
+ * @see VerboseThreads
  */
 @SuppressWarnings("PMD.DoNotUseThreads")
 public final class VerboseRunnable implements Runnable {
