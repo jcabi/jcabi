@@ -5,7 +5,9 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
-[0.1.10](#46) (not released yet, use 1.0-SNAPSHOT instead):
+[0.1.11] not released yet, use 1.0-SNAPSHOT instead:
+
+[0.1.10](#46):
 
  * #34: [jcabi-aspects](http://www.jcabi.com/jcabi-aspects)
  * #37: started to use maven-duplicate-finder-plugin
