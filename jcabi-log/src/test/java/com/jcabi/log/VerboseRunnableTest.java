@@ -39,7 +39,7 @@ import org.junit.Test;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-@SuppressWarnings("PMD.DoNotUseThreads")
+@SuppressWarnings({ "PMD.DoNotUseThreads", "PMD.TooManyMethods" })
 public final class VerboseRunnableTest {
 
     /**
@@ -104,7 +104,7 @@ public final class VerboseRunnableTest {
             new Runnable() {
                 @Override
                 public void run() {
-                    // nothing to do
+                    assert true;
                 }
                 @Override
                 public String toString() {
