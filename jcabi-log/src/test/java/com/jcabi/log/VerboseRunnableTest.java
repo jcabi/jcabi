@@ -94,11 +94,11 @@ public final class VerboseRunnableTest {
 
     /**
      * VerboseRunnable can translate {@code toString()}
-     * from an underlying object.
+     * from an underlying {@link Runnable}.
      * @throws Exception If something goes wrong
      */
     @Test
-    public void translatesToStringFromUnderlyingObject() throws Exception {
+    public void translatesToStringFromUnderlyingRunnable() throws Exception {
         final String text = "some text abc";
         final Runnable verbose = new VerboseRunnable(
             new Runnable() {
@@ -111,6 +111,33 @@ public final class VerboseRunnableTest {
                     return text;
                 }
             }
+        );
+        MatcherAssert.assertThat(
+            verbose,
+            Matchers.hasToString(Matchers.containsString(text))
+        );
+    }
+
+    /**
+     * VerboseRunnable can translate {@code toString()}
+     * from an underlying {@link Callable}.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void translatesToStringFromUnderlyingCallable() throws Exception {
+        final String text = "some text abc-2";
+        final Runnable verbose = new VerboseRunnable(
+            new Callable<Void>() {
+                @Override
+                public Void call() {
+                    return null;
+                }
+                @Override
+                public String toString() {
+                    return text;
+                }
+            },
+            true
         );
         MatcherAssert.assertThat(
             verbose,
