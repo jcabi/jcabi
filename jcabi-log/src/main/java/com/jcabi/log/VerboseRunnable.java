@@ -112,6 +112,10 @@ public final class VerboseRunnable implements Runnable {
                     throw new IllegalArgumentException(ex);
                 }
             }
+            @Override
+            public String toString() {
+                return callable.toString();
+            }
         };
         this.swallow = swlw;
     }
