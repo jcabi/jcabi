@@ -118,6 +118,14 @@ public final class VerboseRunnable implements Runnable {
 
     /**
      * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        return this.origin.toString();
+    }
+
+    /**
+     * {@inheritDoc}
      *
      * <p>We catch {@link RuntimeException} and {@link Error} here. All other
      * types of exceptions are "checked exceptions" and won't be thrown out
