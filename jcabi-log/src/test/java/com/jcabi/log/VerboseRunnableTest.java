@@ -30,6 +30,8 @@
 package com.jcabi.log;
 
 import java.util.concurrent.Callable;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 /**
@@ -88,6 +90,32 @@ public final class VerboseRunnableTest {
             },
             true
         ).run();
+    }
+
+    /**
+     * VerboseRunnable can translate {@code toString()}
+     * from an underlying object.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void translatesToStringFromUnderlyingObject() throws Exception {
+        final String text = "some text abc";
+        final Runnable verbose = new VerboseRunnable(
+            new Runnable() {
+                @Override
+                public void run() {
+                    // nothing to do
+                }
+                @Override
+                public String toString() {
+                    return text;
+                }
+            }
+        );
+        MatcherAssert.assertThat(
+            verbose,
+            Matchers.hasToString(Matchers.containsString(text))
+        );
     }
 
 }
