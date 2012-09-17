@@ -118,12 +118,14 @@ public final class Aether {
             );
             Collection<ArtifactResult> results;
             final DependencyRequest dreq = new DependencyRequest(crq, filter);
-            try {
-                results = system
-                    .resolveDependencies(session, dreq)
-                    .getArtifactResults();
-            } catch (DependencyResolutionException ex) {
-                throw new IllegalStateException(ex);
+            synchronized (this.localRepo) {
+                try {
+                    results = system
+                        .resolveDependencies(session, dreq)
+                        .getArtifactResults();
+                } catch (DependencyResolutionException ex) {
+                    throw new IllegalStateException(ex);
+                }
             }
             for (ArtifactResult res : results) {
                 deps.add(res.getArtifact());

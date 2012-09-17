@@ -55,7 +55,9 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * Test case for {@link Aether}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@SuppressWarnings("PMD.DoNotUseThreads")
 public final class AetherTest {
 
     /**
@@ -77,6 +79,7 @@ public final class AetherTest {
         final Aether aether = new Aether(project, local.getPath());
         final List<Artifact> deps = aether.resolve(
             new DefaultArtifact(
+                // @checkstyle MultipleStringLiterals (5 lines)
                 "com.jcabi",
                 "jcabi-log",
                 "",
@@ -128,7 +131,7 @@ public final class AetherTest {
                     start.await();
                     MatcherAssert.assertThat(
                         aether.resolve(artifact, JavaScopes.RUNTIME),
-                        Matchers.<Artifact>iterableWithSize(1)
+                        Matchers.not(Matchers.<Artifact>empty())
                     );
                     latch.countDown();
                     return null;

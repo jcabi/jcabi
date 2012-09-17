@@ -38,7 +38,7 @@ import org.sonatype.aether.spi.connector.RepositoryConnectorFactory;
 /**
  * Builder of {@link RepositorySystem} class.
  *
- * <p>The class is immutable and thread-safe.
+ * <p>The class is immutable and possibly NOT thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
