@@ -29,9 +29,16 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.log.VerboseRunnable;
+import com.jcabi.log.VerboseThreads;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -65,16 +72,7 @@ public final class AetherTest {
     @Test
     @SuppressWarnings("unchecked")
     public void findsAndLoadsArtifacts() throws Exception {
-        final MavenProject project = Mockito.mock(MavenProject.class);
-        Mockito.doReturn(
-            Arrays.asList(
-                new RemoteRepository(
-                    "id",
-                    "default",
-                    "http://repo1.maven.org/maven2/"
-                )
-            )
-        ).when(project).getRemoteProjectRepositories();
+        final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(project, local.getPath());
         final List<Artifact> deps = aether.resolve(
@@ -101,6 +99,73 @@ public final class AetherTest {
                 )
             )
         );
+    }
+
+    /**
+     * Aether can resolve in parallel threads.
+     * @throws Exception If there is some problem inside
+     */
+    @Test
+    @SuppressWarnings("unchecked")
+    public void resolvesArtifactsInParallelThreads() throws Exception {
+        final MavenProject project = this.project();
+        final File local = this.temp.newFolder("local-repo-2");
+        final Aether aether = new Aether(project, local.getPath());
+        final int threads = Runtime.getRuntime().availableProcessors() * 5;
+        final Artifact artifact = new DefaultArtifact(
+            "com.jcabi",
+            "jcabi-aether",
+            "",
+            "jar",
+            "0.1.10"
+        );
+        final CountDownLatch start = new CountDownLatch(1);
+        final CountDownLatch latch = new CountDownLatch(threads);
+        final Runnable task = new VerboseRunnable(
+            new Callable<Void>() {
+                @Override
+                public Void call() throws Exception {
+                    start.await();
+                    MatcherAssert.assertThat(
+                        aether.resolve(artifact, JavaScopes.RUNTIME),
+                        Matchers.<Artifact>iterableWithSize(1)
+                    );
+                    latch.countDown();
+                    return null;
+                }
+            },
+            true
+        );
+        final ExecutorService svc =
+            Executors.newFixedThreadPool(threads, new VerboseThreads());
+        for (int thread = 0; thread < threads; ++thread) {
+            svc.submit(task);
+        }
+        start.countDown();
+        MatcherAssert.assertThat(
+            latch.await(1, TimeUnit.MINUTES),
+            Matchers.is(true)
+        );
+        svc.shutdown();
+    }
+
+    /**
+     * Make mock maven project.
+     * @return The project
+     * @throws Exception If there is some problem inside
+     */
+    private MavenProject project() throws Exception {
+        final MavenProject project = Mockito.mock(MavenProject.class);
+        Mockito.doReturn(
+            Arrays.asList(
+                new RemoteRepository(
+                    "id",
+                    "default",
+                    "http://repo1.maven.org/maven2/"
+                )
+            )
+        ).when(project).getRemoteProjectRepositories();
+        return project;
     }
 
 }
