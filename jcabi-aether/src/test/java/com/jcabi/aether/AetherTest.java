@@ -81,6 +81,7 @@ public final class AetherTest {
         final Artifact[] artifacts = new Artifact[] {
             new DefaultArtifact("com.jcabi:jcabi-log:jar:0.1.5"),
             new DefaultArtifact("com.rexsl:rexsl-core:jar:mock:0.3.8"),
+            new DefaultArtifact("junit:junit-dep:4.10"),
         };
         for (Artifact artifact : artifacts) {
             MatcherAssert.assertThat(
@@ -112,11 +113,7 @@ public final class AetherTest {
         final Aether aether = new Aether(project, local.getPath());
         final int threads = Runtime.getRuntime().availableProcessors() * 5;
         final Artifact artifact = new DefaultArtifact(
-            "com.jcabi",
-            "jcabi-aether",
-            "",
-            "jar",
-            "0.1.10"
+            "com.jcabi:jcabi-aether:jar:0.1.10"
         );
         final CountDownLatch start = new CountDownLatch(1);
         final CountDownLatch latch = new CountDownLatch(threads);
@@ -146,6 +143,44 @@ public final class AetherTest {
             Matchers.is(true)
         );
         svc.shutdown();
+    }
+
+    /**
+     * Aether can reject NULL maven project.
+     * @throws Exception If there is some problem inside
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void rejectsNullMavenProject() throws Exception {
+        new Aether(null, this.temp.newFolder("local-repository-77").getPath());
+    }
+
+    /**
+     * Aether can reject NULL repo path.
+     * @throws Exception If there is some problem inside
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void rejectsNullRepoPath() throws Exception {
+        new Aether(this.project(), null);
+    }
+
+    /**
+     * Aether can reject NULL artifact.
+     * @throws Exception If there is some problem inside
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void rejectsNullArtifact() throws Exception {
+        new Aether(this.project(), this.temp.newFolder("repo-1").getPath())
+            .resolve(null, JavaScopes.RUNTIME);
+    }
+
+    /**
+     * Aether can reject NULL scope.
+     * @throws Exception If there is some problem inside
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void rejectsNullScope() throws Exception {
+        new Aether(this.project(), this.temp.newFolder("repo-1").getPath())
+            .resolve(new DefaultArtifact("junit:junit:4.10"), null);
     }
 
     /**

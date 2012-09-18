@@ -82,6 +82,12 @@ public final class Aether {
      * @param repo Local repository location (file path)
      */
     public Aether(final MavenProject prj, final String repo) {
+        if (prj == null) {
+            throw new IllegalArgumentException("maven project can't be NULL");
+        }
+        if (repo == null) {
+            throw new IllegalArgumentException("repo path can't be NULL");
+        }
         this.project = prj;
         this.localRepo = repo;
     }
@@ -98,6 +104,12 @@ public final class Aether {
      *  do a proper testing and reproduce this defect in a test.
      */
     public List<Artifact> resolve(final Artifact root, final String scope) {
+        if (root == null) {
+            throw new IllegalArgumentException("root artifact can't be NULL");
+        }
+        if (scope == null) {
+            throw new IllegalArgumentException("scope can't be NULL");
+        }
         final Dependency rdep = new Dependency(root, scope);
         final CollectRequest crq = new CollectRequest();
         crq.setRoot(rdep);
