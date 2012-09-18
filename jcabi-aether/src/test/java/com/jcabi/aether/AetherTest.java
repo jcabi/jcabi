@@ -33,7 +33,6 @@ import com.jcabi.log.VerboseRunnable;
 import com.jcabi.log.VerboseThreads;
 import java.io.File;
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -179,7 +178,7 @@ public final class AetherTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void rejectsNullScope() throws Exception {
-        new Aether(this.project(), this.temp.newFolder("repo-1").getPath())
+        new Aether(this.project(), this.temp.newFolder("repo-2").getPath())
             .resolve(new DefaultArtifact("junit:junit:4.10"), null);
     }
 

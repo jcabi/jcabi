@@ -97,7 +97,8 @@ public final class Aether {
      * @param root The artifact to work with
      * @param scope The scope to work with ("runtime", "test", etc.)
      * @return The list of dependencies
-     * @todo #134 This "IF NOT NULL" validation is a workaround, since I don't
+     * @todo #51 This "filter IF NOT NULL" validation is a workaround,
+     *  since I don't
      *  know what the actual problem is. Looks like sometimes (for some unknown
      *  reason) #classpathFilter() returns NULL. When exactly this may happen
      *  I have no idea. That's why this workaround. Sometime later we should
@@ -122,26 +123,46 @@ public final class Aether {
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
         if (filter != null) {
+            final LocalRepository local = new LocalRepository(this.localRepo);
             final MavenRepositorySystemSession session =
                 new MavenRepositorySystemSession();
-            final LocalRepository local = new LocalRepository(this.localRepo);
             session.setLocalRepositoryManager(
                 system.newLocalRepositoryManager(local)
             );
-            Collection<ArtifactResult> results;
-            final DependencyRequest dreq = new DependencyRequest(crq, filter);
-            synchronized (this.localRepo) {
-                try {
-                    results = system
-                        .resolveDependencies(session, dreq)
-                        .getArtifactResults();
-                } catch (DependencyResolutionException ex) {
-                    throw new IllegalStateException(ex);
-                }
+            deps.addAll(
+                this.fetch(
+                    system,
+                    session,
+                    new DependencyRequest(crq, filter)
+                )
+            );
+        }
+        return deps;
+    }
+
+    /**
+     * Fetch dependencies.
+     * @param system The system to read from
+     * @param session The session
+     * @param dreq Dependency request
+     * @return The list of dependencies
+     */
+    private List<Artifact> fetch(final RepositorySystem system,
+        final MavenRepositorySystemSession session,
+        final DependencyRequest dreq) {
+        final List<Artifact> deps = new LinkedList<Artifact>();
+        Collection<ArtifactResult> results;
+        synchronized (this.localRepo) {
+            try {
+                results = system
+                    .resolveDependencies(session, dreq)
+                    .getArtifactResults();
+            } catch (DependencyResolutionException ex) {
+                throw new IllegalStateException(ex);
             }
-            for (ArtifactResult res : results) {
-                deps.add(res.getArtifact());
-            }
+        }
+        for (ArtifactResult res : results) {
+            deps.add(res.getArtifact());
         }
         return deps;
     }
