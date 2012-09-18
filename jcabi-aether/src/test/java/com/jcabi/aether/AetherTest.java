@@ -40,14 +40,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.CustomMatcher;
+import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 import org.sonatype.aether.artifact.Artifact;
 import org.sonatype.aether.repository.RemoteRepository;
+import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
 import org.sonatype.aether.util.artifact.JavaScopes;
 
@@ -72,29 +75,25 @@ public final class AetherTest {
      * @throws Exception If there is some problem inside
      */
     @Test
-    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void findsAndLoadsArtifacts() throws Exception {
-        final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repository");
-        final Aether aether = new Aether(project, local.getPath());
+        final Aether aether = new Aether(this.project(), local.getPath());
         final Artifact[] artifacts = new Artifact[] {
             new DefaultArtifact("com.jcabi:jcabi-log:jar:0.1.5"),
             new DefaultArtifact("com.rexsl:rexsl-core:jar:mock:0.3.8"),
             new DefaultArtifact("junit:junit-dep:4.10"),
         };
+        final Matcher<?> matcher = new CustomMatcher<String>("file exists") {
+            @Override
+            public boolean matches(final Object file) {
+                return File.class.cast(file).exists();
+            }
+        };
         for (Artifact artifact : artifacts) {
             MatcherAssert.assertThat(
                 aether.resolve(artifact, JavaScopes.RUNTIME),
                 Matchers.<Artifact>everyItem(
-                    Matchers.<Artifact>hasProperty(
-                        "file",
-                        new CustomMatcher<String>("file exists") {
-                            @Override
-                            public boolean matches(final Object file) {
-                                return File.class.cast(file).exists();
-                            }
-                        }
-                    )
+                    Matchers.<Artifact>hasProperty("file", matcher)
                 )
             );
         }
@@ -106,9 +105,8 @@ public final class AetherTest {
      */
     @Test
     public void resolvesArtifactsInParallelThreads() throws Exception {
-        final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repo-2");
-        final Aether aether = new Aether(project, local.getPath());
+        final Aether aether = new Aether(this.project(), local.getPath());
         final int threads = Runtime.getRuntime().availableProcessors() * 5;
         final Artifact artifact = new DefaultArtifact(
             "com.jcabi:jcabi-aether:jar:0.1.10"
@@ -120,6 +118,10 @@ public final class AetherTest {
                 @Override
                 public Void call() throws Exception {
                     start.await();
+                    MatcherAssert.assertThat(
+                        aether.resolve(artifact, JavaScopes.RUNTIME),
+                        Matchers.not(Matchers.<Artifact>empty())
+                    );
                     MatcherAssert.assertThat(
                         aether.resolve(artifact, JavaScopes.RUNTIME),
                         Matchers.not(Matchers.<Artifact>empty())
@@ -182,17 +184,71 @@ public final class AetherTest {
     }
 
     /**
+     * Aether can throw on non-found artifact.
+     * @throws Exception If there is some problem inside
+     */
+    @Test(expected = DependencyResolutionException.class)
+    public void throwsWhenArtifactNotFound() throws Exception {
+        new Aether(
+            this.project(),
+            this.temp.newFolder("local-repo-97").getPath()
+        ).resolve(
+            new DefaultArtifact("com.jcabi:jcabi-log:jar:0.0.0"),
+            JavaScopes.COMPILE
+        );
+    }
+
+    /**
+     * Aether can recover after failure.
+     * @throws Exception If there is some problem inside
+     */
+    @Test
+    public void recoversAfterFailure() throws Exception {
+        final Aether aether = new Aether(
+            this.project(),
+            this.temp.newFolder("local-repo-99").getPath()
+        );
+        try {
+            aether.resolve(
+                new DefaultArtifact("com.jcabi:jcabi-x:jar:0.0.0"),
+                JavaScopes.TEST
+            );
+            Assert.fail("expection expected here");
+        } catch (DependencyResolutionException ex) {
+            assert ex != null;
+        }
+        MatcherAssert.assertThat(
+            aether.resolve(
+                new DefaultArtifact("com.jcabi:jcabi-log:jar:0.1.8"),
+                JavaScopes.RUNTIME
+            ),
+            Matchers.not(Matchers.<Artifact>empty())
+        );
+    }
+
+    /**
      * Make mock maven project.
      * @return The project
      * @throws Exception If there is some problem inside
      */
     private MavenProject project() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
+        final String type = "default";
         Mockito.doReturn(
             Arrays.asList(
                 new RemoteRepository(
-                    "id",
-                    "default",
+                    "netbout",
+                    "s3",
+                    "s3://repo.netbout.com/snapshots"
+                ),
+                new RemoteRepository(
+                    "sonatype",
+                    type,
+                    "https://oss.sonatype.org/content/groups/public"
+                ),
+                new RemoteRepository(
+                    "maven-central",
+                    type,
                     "http://repo1.maven.org/maven2/"
                 )
             )

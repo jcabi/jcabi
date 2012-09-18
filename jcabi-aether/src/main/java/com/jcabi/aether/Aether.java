@@ -97,6 +97,7 @@ public final class Aether {
      * @param root The artifact to work with
      * @param scope The scope to work with ("runtime", "test", etc.)
      * @return The list of dependencies
+     * @throws DependencyResolutionException If can't fetch it
      * @todo #51 This "filter IF NOT NULL" validation is a workaround,
      *  since I don't
      *  know what the actual problem is. Looks like sometimes (for some unknown
@@ -104,7 +105,8 @@ public final class Aether {
      *  I have no idea. That's why this workaround. Sometime later we should
      *  do a proper testing and reproduce this defect in a test.
      */
-    public List<Artifact> resolve(final Artifact root, final String scope) {
+    public List<Artifact> resolve(final Artifact root, final String scope)
+        throws DependencyResolutionException {
         if (root == null) {
             throw new IllegalArgumentException("root artifact can't be NULL");
         }
@@ -146,20 +148,17 @@ public final class Aether {
      * @param session The session
      * @param dreq Dependency request
      * @return The list of dependencies
+     * @throws DependencyResolutionException If can't fetch it
      */
     private List<Artifact> fetch(final RepositorySystem system,
         final MavenRepositorySystemSession session,
-        final DependencyRequest dreq) {
+        final DependencyRequest dreq) throws DependencyResolutionException {
         final List<Artifact> deps = new LinkedList<Artifact>();
         Collection<ArtifactResult> results;
         synchronized (this.localRepo) {
-            try {
-                results = system
-                    .resolveDependencies(session, dreq)
-                    .getArtifactResults();
-            } catch (DependencyResolutionException ex) {
-                throw new IllegalStateException(ex);
-            }
+            results = system
+                .resolveDependencies(session, dreq)
+                .getArtifactResults();
         }
         for (ArtifactResult res : results) {
             deps.add(res.getArtifact());
