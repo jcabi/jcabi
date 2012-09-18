@@ -63,6 +63,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1.6
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 public final class Aether {
 
@@ -154,6 +155,9 @@ public final class Aether {
      *  Aether throws NPE in case of unresolveable artifact. This is the best
      *  I can do at the moment in order to protect clients of the class.
      */
+    @SuppressWarnings({
+        "PMD.AvoidCatchingNPE", "PMD.AvoidCatchingGenericException"
+    })
     private List<Artifact> fetch(final RepositorySystem system,
         final MavenRepositorySystemSession session,
         final DependencyRequest dreq) throws DependencyResolutionException {

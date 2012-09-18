@@ -60,7 +60,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @version $Id$
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
-@SuppressWarnings("PMD.DoNotUseThreads")
+@SuppressWarnings({ "PMD.DoNotUseThreads", "PMD.TooManyMethods" })
 public final class AetherTest {
 
     /**
