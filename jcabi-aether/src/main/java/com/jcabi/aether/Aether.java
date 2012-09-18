@@ -44,6 +44,7 @@ import org.sonatype.aether.repository.RemoteRepository;
 import org.sonatype.aether.resolution.ArtifactResult;
 import org.sonatype.aether.resolution.DependencyRequest;
 import org.sonatype.aether.resolution.DependencyResolutionException;
+import org.sonatype.aether.resolution.DependencyResult;
 import org.sonatype.aether.util.filter.DependencyFilterUtils;
 
 /**
@@ -149,19 +150,29 @@ public final class Aether {
      * @param dreq Dependency request
      * @return The list of dependencies
      * @throws DependencyResolutionException If can't fetch it
+     * @todo #51 This catch of NPE is a temprorary measure. I don't know why
+     *  Aether throws NPE in case of unresolveable artifact. This is the best
+     *  I can do at the moment in order to protect clients of the class.
      */
     private List<Artifact> fetch(final RepositorySystem system,
         final MavenRepositorySystemSession session,
         final DependencyRequest dreq) throws DependencyResolutionException {
         final List<Artifact> deps = new LinkedList<Artifact>();
-        Collection<ArtifactResult> results;
-        synchronized (this.localRepo) {
-            results = system
-                .resolveDependencies(session, dreq)
-                .getArtifactResults();
-        }
-        for (ArtifactResult res : results) {
-            deps.add(res.getArtifact());
+        try {
+            Collection<ArtifactResult> results;
+            synchronized (this.localRepo) {
+                results = system
+                    .resolveDependencies(session, dreq)
+                    .getArtifactResults();
+            }
+            for (ArtifactResult res : results) {
+                deps.add(res.getArtifact());
+            }
+        } catch (NullPointerException ex) {
+            throw new DependencyResolutionException(
+                new DependencyResult(dreq),
+                ex
+            );
         }
         return deps;
     }

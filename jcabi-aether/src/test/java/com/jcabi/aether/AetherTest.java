@@ -122,10 +122,6 @@ public final class AetherTest {
                         aether.resolve(artifact, JavaScopes.RUNTIME),
                         Matchers.not(Matchers.<Artifact>empty())
                     );
-                    MatcherAssert.assertThat(
-                        aether.resolve(artifact, JavaScopes.RUNTIME),
-                        Matchers.not(Matchers.<Artifact>empty())
-                    );
                     latch.countDown();
                     return null;
                 }
