@@ -72,7 +72,7 @@ public final class AetherTest {
      * @throws Exception If there is some problem inside
      */
     @Test
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void findsAndLoadsArtifacts() throws Exception {
         final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repository");
@@ -85,7 +85,7 @@ public final class AetherTest {
         for (Artifact artifact : artifacts) {
             MatcherAssert.assertThat(
                 aether.resolve(artifact, JavaScopes.RUNTIME),
-                Matchers.<Artifact>hasItems(
+                Matchers.<Artifact>everyItem(
                     Matchers.<Artifact>hasProperty(
                         "file",
                         new CustomMatcher<String>("file exists") {
@@ -105,7 +105,6 @@ public final class AetherTest {
      * @throws Exception If there is some problem inside
      */
     @Test
-    @SuppressWarnings("unchecked")
     public void resolvesArtifactsInParallelThreads() throws Exception {
         final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repo-2");
