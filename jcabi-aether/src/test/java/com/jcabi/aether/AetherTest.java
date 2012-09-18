@@ -40,6 +40,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import org.apache.maven.project.MavenProject;
+import org.hamcrest.CustomMatcher;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Rule;
@@ -77,31 +78,26 @@ public final class AetherTest {
         final MavenProject project = this.project();
         final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(project, local.getPath());
-        final List<Artifact> deps = aether.resolve(
-            new DefaultArtifact(
-                // @checkstyle MultipleStringLiterals (5 lines)
-                "com.jcabi",
-                "jcabi-log",
-                "",
-                "jar",
-                "0.1.5"
-            ),
-            JavaScopes.RUNTIME
-        );
-        MatcherAssert.assertThat(
-            deps,
-            Matchers.allOf(
-                Matchers.<Artifact>iterableWithSize(Matchers.greaterThan(1)),
+        final Artifact[] artifacts = new Artifact[] {
+            new DefaultArtifact("com.jcabi:jcabi-log:jar:0.1.5"),
+            new DefaultArtifact("com.rexsl:rexsl-core:jar:mock:0.3.8"),
+        };
+        for (Artifact artifact : artifacts) {
+            MatcherAssert.assertThat(
+                aether.resolve(artifact, JavaScopes.RUNTIME),
                 Matchers.<Artifact>hasItems(
                     Matchers.<Artifact>hasProperty(
                         "file",
-                        Matchers.hasToString(
-                            Matchers.endsWith("/jcabi-log-0.1.5.jar")
-                        )
+                        new CustomMatcher<String>("file exists") {
+                            @Override
+                            public boolean matches(final Object file) {
+                                return File.class.cast(file).exists();
+                            }
+                        }
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
     /**
