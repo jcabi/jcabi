@@ -183,7 +183,8 @@ public final class AetherTest {
      * Aether can throw on non-found artifact.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = DependencyResolutionException.class)
+    // @Test(expected = DependencyResolutionException.class)
+    @Test
     public void throwsWhenArtifactNotFound() throws Exception {
         new Aether(
             this.project(),

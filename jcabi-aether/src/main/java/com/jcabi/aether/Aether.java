@@ -29,6 +29,7 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -175,7 +176,13 @@ public final class Aether {
         } catch (NullPointerException ex) {
             throw new DependencyResolutionException(
                 new DependencyResult(dreq),
-                ex
+                new IllegalArgumentException(
+                    Logger.format(
+                        "at %[list]s",
+                        dreq.getCollectRequest().getRepositories()
+                    ),
+                    ex
+                )
             );
         }
         return deps;
