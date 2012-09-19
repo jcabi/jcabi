@@ -178,8 +178,11 @@ public final class Aether {
                 new DependencyResult(dreq),
                 new IllegalArgumentException(
                     Logger.format(
-                        "at %[list]s",
-                        dreq.getCollectRequest().getRepositories()
+                        "from %[list]s into %s",
+                        dreq.getCollectRequest().getRepositories(),
+                        session.getLocalRepositoryManager()
+                            .getRepository()
+                            .getBasedir()
                     ),
                     ex
                 )
