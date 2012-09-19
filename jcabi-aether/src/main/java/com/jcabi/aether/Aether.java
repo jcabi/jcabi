@@ -156,9 +156,7 @@ public final class Aether {
      *  Aether throws NPE in case of unresolveable artifact. This is the best
      *  I can do at the moment in order to protect clients of the class.
      */
-    @SuppressWarnings({
-        "PMD.AvoidCatchingNPE", "PMD.AvoidCatchingGenericException"
-    })
+    @SuppressWarnings("PMD.AvoidCatchingGenericException")
     private List<Artifact> fetch(final RepositorySystem system,
         final MavenRepositorySystemSession session,
         final DependencyRequest dreq) throws DependencyResolutionException {
@@ -173,7 +171,8 @@ public final class Aether {
             for (ArtifactResult res : results) {
                 deps.add(res.getArtifact());
             }
-        } catch (NullPointerException ex) {
+        // @checkstyle IllegalCatch (1 line)
+        } catch (Exception ex) {
             throw new DependencyResolutionException(
                 new DependencyResult(dreq),
                 new IllegalArgumentException(
