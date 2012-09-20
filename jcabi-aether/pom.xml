@@ -170,6 +170,7 @@
                     <pomIncludes>
                         <pomInclude>aether-test/pom.xml</pomInclude>
                     </pomIncludes>
+                    <settingsFile>${project.build.testOutputDirectory}/invoker.settings.xml</settingsFile>
                     <projectsDirectory>src/it</projectsDirectory>
                     <showErrors>true</showErrors>
                     <showVersion>false</showVersion>
