@@ -34,8 +34,8 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import org.apache.maven.project.MavenProject;
-import org.apache.maven.repository.internal.MavenRepositorySystemSession;
 import org.sonatype.aether.RepositorySystem;
+import org.sonatype.aether.RepositorySystemSession;
 import org.sonatype.aether.artifact.Artifact;
 import org.sonatype.aether.collection.CollectRequest;
 import org.sonatype.aether.graph.Dependency;
@@ -46,6 +46,7 @@ import org.sonatype.aether.resolution.ArtifactResult;
 import org.sonatype.aether.resolution.DependencyRequest;
 import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.resolution.DependencyResult;
+import org.sonatype.aether.util.DefaultRepositorySystemSession;
 import org.sonatype.aether.util.filter.DependencyFilterUtils;
 
 /**
@@ -124,11 +125,12 @@ public final class Aether {
             DependencyFilterUtils.classpathFilter(scope);
         if (filter != null) {
             final LocalRepository local = new LocalRepository(this.localRepo);
-            final MavenRepositorySystemSession session =
-                new MavenRepositorySystemSession();
+            final DefaultRepositorySystemSession session =
+                new DefaultRepositorySystemSession();
             session.setLocalRepositoryManager(
                 system.newLocalRepositoryManager(local)
             );
+            session.setTransferListener(new LogTransferListener());
             deps.addAll(
                 this.fetch(
                     system,
@@ -153,7 +155,7 @@ public final class Aether {
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
     private List<Artifact> fetch(final RepositorySystem system,
-        final MavenRepositorySystemSession session,
+        final RepositorySystemSession session,
         final DependencyRequest dreq) throws DependencyResolutionException {
         final List<Artifact> deps = new LinkedList<Artifact>();
         try {
@@ -172,7 +174,8 @@ public final class Aether {
                 new DependencyResult(dreq),
                 new IllegalArgumentException(
                     Logger.format(
-                        "from %[list]s into %s",
+                        "failed to load '%s' from %[list]s into %s",
+                        dreq.getCollectRequest().getRoot(),
                         dreq.getCollectRequest().getRepositories(),
                         session.getLocalRepositoryManager()
                             .getRepository()
@@ -195,10 +198,10 @@ public final class Aether {
         request.setRoot(root);
         for (RemoteRepository repo
             : this.project.getRemoteProjectRepositories()) {
-            if (!repo.getProtocol().matches("https?|file")) {
+            if (!repo.getProtocol().matches("https?|file|s3")) {
                 Logger.warn(
                     this,
-                    "%s ignored (only HTTP and FILE are supported)",
+                    "%s ignored (only S3, HTTP/S, and FILE are supported)",
                     repo
                 );
                 continue;

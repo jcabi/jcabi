@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+/**
  * Copyright (c) 2012, jcabi.com
  * All rights reserved.
  *
@@ -27,38 +26,49 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
- -->
-<settings>
-    <profiles>
-        <profile>
-            <id>it-repo</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>local.central</id>
-                    <url>@localRepositoryUrl@</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>local.central</id>
-                    <url>@localRepositoryUrl@</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
-    </profiles>
-</settings>
+ */
+package com.jcabi.aether;
+
+import com.jcabi.log.Logger;
+import org.apache.maven.wagon.Wagon;
+import org.kuali.maven.wagon.S3Wagon;
+import org.sonatype.aether.connector.wagon.WagonProvider;
+
+/**
+ * Builder of {@link RepositorySystem} class.
+ *
+ * <p>The class is immutable and possibly NOT thread-safe.
+ *
+ * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @version $Id$
+ * @since 0.1.6
+ */
+public final class AmazonWagonProvider implements WagonProvider {
+
+    /**
+     * The wagon to return.
+     */
+    private final transient Wagon aws = new S3Wagon();
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Wagon lookup(final String hint) throws Exception {
+        Wagon wagon = null;
+        if ("s3".equals(hint)) {
+            wagon = this.aws;
+        }
+        Logger.debug(this, "#lookup('%s'): %s found", hint, wagon);
+        return wagon;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void release(final Wagon wagon) {
+        Logger.debug(this, "#release(%s): done", wagon);
+    }
+
+}

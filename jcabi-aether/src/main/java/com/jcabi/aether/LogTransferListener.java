@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+/**
  * Copyright (c) 2012, jcabi.com
  * All rights reserved.
  *
@@ -27,38 +26,61 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
- -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ */
+package com.jcabi.aether;
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jcabi.aether-test</groupId>
-    <artifactId>parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>aether-test</name>
+import com.jcabi.log.Logger;
+import org.sonatype.aether.transfer.AbstractTransferListener;
+import org.sonatype.aether.transfer.TransferEvent;
 
-    <modules>
-        <module>plugin</module>
-        <module>client</module>
-    </modules>
+/**
+ * Logger of transfer events.
+ *
+ * <p>The class is immutable and thread-safe.
+ *
+ * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @version $Id$
+ * @since 0.1.6
+ */
+final class LogTransferListener extends AbstractTransferListener {
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>aether-test.jcabi.com</id>
-            <url>s3://aether-test.jcabi.com/snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void transferFailed(final TransferEvent event) {
+        Logger.info(
+            this,
+            "#transferFailed('%s'): %s",
+            event.getResource(),
+            event.getException().getMessage()
+        );
+    }
 
-    <build>
-        <extensions>
-            <extension>
-                <groupId>org.cyclopsgroup</groupId>
-                <artifactId>awss3-maven-wagon</artifactId>
-                <version since="6 Sep 2012">0.1</version>
-            </extension>
-        </extensions>
-    </build>
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void transferCorrupted(final TransferEvent event) {
+        Logger.warn(
+            this,
+            "#transferCorrupted('%s'): %[exception]s",
+            event.getResource(),
+            event.getException()
+        );
+    }
 
-</project>
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void transferSucceeded(final TransferEvent event) {
+        Logger.info(
+            this,
+            "#transferSucceeded('%s'): %d bytes",
+            event.getResource(),
+            event.getTransferredBytes()
+        );
+    }
+
+}

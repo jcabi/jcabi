@@ -49,6 +49,7 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.repository.Authentication;
 import org.sonatype.aether.repository.RemoteRepository;
 import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
@@ -79,9 +80,10 @@ public final class AetherTest {
         final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(this.project(), local.getPath());
         final Artifact[] artifacts = new Artifact[] {
-            new DefaultArtifact("com.jcabi:jcabi-log:jar:0.1.5"),
-            new DefaultArtifact("com.rexsl:rexsl-core:jar:mock:0.3.8"),
-            new DefaultArtifact("junit:junit-dep:4.10"),
+            // @checkstyle LineLength (1 line)
+            new DefaultArtifact("com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT"),
+            new DefaultArtifact("com.jcabi:jcabi-log:pom:1.0-SNAPSHOT"),
+            new DefaultArtifact("log4j:log4j:jar:1.2.16"),
         };
         final Matcher<?> matcher = new CustomMatcher<String>("file exists") {
             @Override
@@ -109,7 +111,7 @@ public final class AetherTest {
         final Aether aether = new Aether(this.project(), local.getPath());
         final int threads = Runtime.getRuntime().availableProcessors() * 5;
         final Artifact artifact = new DefaultArtifact(
-            "com.jcabi:jcabi-aether:jar:0.1.10"
+            "com.jcabi:jcabi-assembly:pom:0.1.10"
         );
         final CountDownLatch start = new CountDownLatch(1);
         final CountDownLatch latch = new CountDownLatch(threads);
@@ -135,7 +137,7 @@ public final class AetherTest {
         }
         start.countDown();
         MatcherAssert.assertThat(
-            latch.await(1, TimeUnit.MINUTES),
+            latch.await(2, TimeUnit.MINUTES),
             Matchers.is(true)
         );
         svc.shutdown();
@@ -230,23 +232,32 @@ public final class AetherTest {
     private MavenProject project() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
         final String type = "default";
+        final RemoteRepository aws = new RemoteRepository(
+            "aether-test",
+            type,
+            "s3://aether-test.jcabi.com/snapshot"
+        );
+        aws.setAuthentication(
+            new Authentication(
+                System.getProperty("aws.key"),
+                System.getProperty("aws.secret")
+            )
+        );
         Mockito.doReturn(
             Arrays.asList(
-                new RemoteRepository(
-                    "netbout",
-                    "s3",
-                    "s3://repo.netbout.com/snapshots"
-                ),
-                new RemoteRepository(
-                    "sonatype",
-                    type,
-                    "https://oss.sonatype.org/content/groups/public"
-                ),
-                new RemoteRepository(
-                    "maven-central",
-                    type,
-                    "http://repo1.maven.org/maven2/"
-                )
+                new RemoteRepository[] {
+                    aws,
+                    new RemoteRepository(
+                        "sonatype",
+                        type,
+                        "https://oss.sonatype.org/content/groups/public"
+                    ),
+                    new RemoteRepository(
+                        "maven-central",
+                        type,
+                        "http://repo1.maven.org/maven2/"
+                    ),
+                }
             )
         ).when(project).getRemoteProjectRepositories();
         return project;

@@ -49,6 +49,17 @@
             <version jcabi="yes">1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>org.kuali.maven.wagons</groupId>
+            <artifactId>maven-s3-wagon</artifactId>
+            <version since="20 Sep 2012">1.1.14</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
             <groupId>org.sonatype.aether</groupId>
             <artifactId>aether-api</artifactId>
             <version since="14 May 2012">1.13.1</version>
@@ -79,9 +90,25 @@
             <version since="14 May 2012">1.13.1</version>
         </dependency>
         <dependency>
+            <groupId>org.sonatype.aether</groupId>
+            <artifactId>aether-impl</artifactId>
+            <version since="14 May 2012">1.13.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-aether-provider</artifactId>
             <version since="15 Sep 2011">3.0.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.sonatype.aether</groupId>
+                    <artifactId>aether-impl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-provider-api</artifactId>
+            <version since="15 Sep 2011">2.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -89,6 +116,10 @@
             <version since="22 Aug 2011">3.0.3</version>
             <scope>provided</scope>
             <exclusions>
+                <exclusion>
+                    <groupId>org.sonatype.aether</groupId>
+                    <artifactId>aether-impl</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>org.sonatype.sisu</groupId>
                     <artifactId>sisu-inject-plexus</artifactId>
@@ -137,13 +168,7 @@
                     <debug>false</debug>
                     <noLog>false</noLog>
                     <pomIncludes>
-                        <!--
-                        @todo #55 I don't know how to configure Wagon
-                         together with MavenProject. Somehow we should get
-                         extensions from a project, load them, and make their
-                         roles/hints available for Aether service locator.
-                        -->
-                        <!-- <pomInclude>aether-test/pom.xml</pomInclude> -->
+                        <pomInclude>aether-test/pom.xml</pomInclude>
                     </pomIncludes>
                     <projectsDirectory>src/it</projectsDirectory>
                     <showErrors>true</showErrors>
@@ -161,6 +186,43 @@
                 </executions>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <systemPropertyVariables>
+                            <aws.key>${aether-test.aws.key}</aws.key>
+                            <aws.secret>${aether-test.aws.secret}</aws.secret>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>ci</id>
+            <activation>
+                <property><name>ci</name></property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.ning.maven.plugins</groupId>
+                        <artifactId>maven-duplicate-finder-plugin</artifactId>
+                        <configuration>
+                            <ignoredResources>
+                                <!-- see https://github.com/jcaddel/maven-s3-wagon/issues/6 -->
+                                <ignoredResource>mime.types</ignoredResource>
+                                <ignoredResource>META-INF/THIRD-PARTY.txt</ignoredResource>
+                            </ignoredResources>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
