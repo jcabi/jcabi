@@ -33,7 +33,7 @@ import org.apache.maven.repository.internal.DefaultServiceLocator;
 import org.sonatype.aether.RepositorySystem;
 import org.sonatype.aether.connector.async.AsyncRepositoryConnectorFactory;
 import org.sonatype.aether.connector.file.FileRepositoryConnectorFactory;
-// import org.sonatype.aether.connector.wagon.WagonRepositoryConnectorFactory;
+import org.sonatype.aether.connector.wagon.WagonRepositoryConnectorFactory;
 import org.sonatype.aether.spi.connector.RepositoryConnectorFactory;
 
 /**
@@ -61,10 +61,10 @@ final class RepositorySystemBuilder {
             RepositoryConnectorFactory.class,
             AsyncRepositoryConnectorFactory.class
         );
-        // locator.addService(
-        //     RepositoryConnectorFactory.class,
-        //     WagonRepositoryConnectorFactory.class
-        // );
+        locator.addService(
+            RepositoryConnectorFactory.class,
+            WagonRepositoryConnectorFactory.class
+        );
         return locator.getService(RepositorySystem.class);
     }
 

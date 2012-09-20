@@ -117,12 +117,7 @@ public final class Aether {
             throw new IllegalArgumentException("scope can't be NULL");
         }
         final Dependency rdep = new Dependency(root, scope);
-        final CollectRequest crq = new CollectRequest();
-        crq.setRoot(rdep);
-        for (RemoteRepository repo
-            : this.project.getRemoteProjectRepositories()) {
-            crq.addRepository(repo);
-        }
+        final CollectRequest crq = this.request(rdep);
         final RepositorySystem system = new RepositorySystemBuilder().build();
         final List<Artifact> deps = new LinkedList<Artifact>();
         final DependencyFilter filter =
@@ -188,6 +183,29 @@ public final class Aether {
             );
         }
         return deps;
+    }
+
+    /**
+     * Create collect request.
+     * @param root The root to start with
+     * @return The request
+     */
+    private CollectRequest request(final Dependency root) {
+        final CollectRequest request = new CollectRequest();
+        request.setRoot(root);
+        for (RemoteRepository repo
+            : this.project.getRemoteProjectRepositories()) {
+            if (!repo.getProtocol().matches("https?|file")) {
+                Logger.warn(
+                    this,
+                    "%s ignored (only HTTP and FILE are supported)",
+                    repo
+                );
+                continue;
+            }
+            request.addRepository(repo);
+        }
+        return request;
     }
 
 }
