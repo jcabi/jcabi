@@ -93,10 +93,13 @@ public final class AetherTest {
     public void findsAndLoadsArtifacts() throws Exception {
         final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(this.project(), local.getPath());
-        final Collection<DefaultArtifact> artifacts = Arrays.asList(
-            new DefaultArtifact("com.jcabi:jcabi-log:pom:1.0-SNAPSHOT"),
-            new DefaultArtifact("log4j:log4j:jar:1.2.16")
-        );
+        final Collection<DefaultArtifact> artifacts =
+            new LinkedList<DefaultArtifact>(
+                Arrays.asList(
+                    new DefaultArtifact("com.jcabi:jcabi-log:pom:1.0-SNAPSHOT"),
+                    new DefaultArtifact("log4j:log4j:jar:1.2.16")
+                )
+            );
         if (AetherTest.AWS_KEY != null) {
             artifacts.add(
                 new DefaultArtifact(
