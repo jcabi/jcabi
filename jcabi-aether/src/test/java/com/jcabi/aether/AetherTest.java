@@ -35,6 +35,7 @@ import com.jcabi.log.VerboseThreads;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
@@ -260,16 +261,18 @@ public final class AetherTest {
     private MavenProject project() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
         final String type = "default";
-        final List<RemoteRepository> repos = Arrays.asList(
-            new RemoteRepository(
-                "sonatype",
-                type,
-                "https://oss.sonatype.org/content/groups/public"
-            ),
-            new RemoteRepository(
-                "maven-central",
-                type,
-                "http://repo1.maven.org/maven2/"
+        final List<RemoteRepository> repos = new LinkedList<RemoteRepository>(
+            Arrays.asList(
+                new RemoteRepository(
+                    "sonatype",
+                    type,
+                    "https://oss.sonatype.org/content/groups/public"
+                ),
+                new RemoteRepository(
+                    "maven-central",
+                    type,
+                    "http://repo1.maven.org/maven2/"
+                )
             )
         );
         if (AetherTest.AWS_KEY != null) {
