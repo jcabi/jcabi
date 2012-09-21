@@ -222,9 +222,10 @@ public final class Aether {
     private static Collection<String> reps(
         final Collection<RemoteRepository> repos) {
         final Collection<String> texts = new ArrayList<String>(repos.size());
+        final StringBuilder text = new StringBuilder();
         for (RemoteRepository repo : repos) {
             final Authentication auth = repo.getAuthentication();
-            final StringBuilder text = new StringBuilder();
+            text.setLength(0);
             text.append(repo.toString());
             if (auth == null) {
                 text.append(" without authentication");
