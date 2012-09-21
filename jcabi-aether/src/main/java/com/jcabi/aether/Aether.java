@@ -30,6 +30,7 @@
 package com.jcabi.aether;
 
 import com.jcabi.log.Logger;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -40,6 +41,7 @@ import org.sonatype.aether.artifact.Artifact;
 import org.sonatype.aether.collection.CollectRequest;
 import org.sonatype.aether.graph.Dependency;
 import org.sonatype.aether.graph.DependencyFilter;
+import org.sonatype.aether.repository.Authentication;
 import org.sonatype.aether.repository.LocalRepository;
 import org.sonatype.aether.repository.RemoteRepository;
 import org.sonatype.aether.resolution.ArtifactResult;
@@ -66,6 +68,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  * @version $Id$
  * @since 0.1.6
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
+ * @see <a href="http://sonatype.github.com/sonatype-aether/apidocs/overview-tree.html">Aether 1.13.1 JavaDoc</a>
  */
 public final class Aether {
 
@@ -176,7 +179,7 @@ public final class Aether {
                     Logger.format(
                         "failed to load '%s' from %[list]s into %s",
                         dreq.getCollectRequest().getRoot(),
-                        dreq.getCollectRequest().getRepositories(),
+                        Aether.reps(dreq.getCollectRequest().getRepositories()),
                         session.getLocalRepositoryManager()
                             .getRepository()
                             .getBasedir()
@@ -209,6 +212,28 @@ public final class Aether {
             request.addRepository(repo);
         }
         return request;
+    }
+
+    /**
+     * Convert a list of repositories into a list of strings.
+     * @param repos The list of them
+     * @return The list of texts
+     */
+    private static Collection<String> reps(
+        final Collection<RemoteRepository> repos) {
+        final Collection<String> texts = new ArrayList<String>(repos.size());
+        for (RemoteRepository repo : repos) {
+            final Authentication auth = repo.getAuthentication();
+            final StringBuilder text = new StringBuilder();
+            text.append(repo.toString());
+            if (auth == null) {
+                text.append(" without authentication");
+            } else {
+                text.append(" with ").append(auth.toString());
+            }
+            texts.add(text.toString());
+        }
+        return texts;
     }
 
 }

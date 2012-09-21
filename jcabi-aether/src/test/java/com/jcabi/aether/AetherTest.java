@@ -74,6 +74,11 @@ public final class AetherTest {
     private static final String AWS_KEY = System.getProperty("aws.key");
 
     /**
+     * AWS Secret key.
+     */
+    private static final String AWS_SECRET = System.getProperty("aws.secret");
+
+    /**
      * Temp dir.
      * @checkstyle VisibilityModifier (3 lines)
      */
@@ -231,7 +236,8 @@ public final class AetherTest {
                 Logger.format("%[exception]s", ex),
                 Matchers.allOf(
                     Matchers.containsString("oss.sonatype.org"),
-                    Matchers.containsString("repo1.maven.org")
+                    Matchers.containsString("repo1.maven.org"),
+                    Matchers.containsString("without authentication")
                 )
             );
             if (AetherTest.AWS_KEY != null) {
@@ -239,7 +245,10 @@ public final class AetherTest {
                     Logger.format("%[exception]s ", ex),
                     Matchers.allOf(
                         Matchers.containsString("aether-test.jcabi.com"),
-                        Matchers.containsString(AetherTest.AWS_KEY)
+                        Matchers.containsString(AetherTest.AWS_KEY),
+                        Matchers.not(
+                            Matchers.containsString(AetherTest.AWS_SECRET)
+                        )
                     )
                 );
             }
@@ -284,7 +293,7 @@ public final class AetherTest {
             aws.setAuthentication(
                 new Authentication(
                     AetherTest.AWS_KEY,
-                    System.getProperty("aws.secret")
+                    AetherTest.AWS_SECRET
                 )
             );
             repos.add(aws);
