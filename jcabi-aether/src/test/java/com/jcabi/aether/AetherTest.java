@@ -29,10 +29,13 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.log.Logger;
 import com.jcabi.log.VerboseRunnable;
 import com.jcabi.log.VerboseThreads;
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -65,6 +68,11 @@ import org.sonatype.aether.util.artifact.JavaScopes;
 public final class AetherTest {
 
     /**
+     * AWS Key.
+     */
+    private static final String AWS_KEY = System.getProperty("aws.key");
+
+    /**
      * Temp dir.
      * @checkstyle VisibilityModifier (3 lines)
      */
@@ -79,12 +87,17 @@ public final class AetherTest {
     public void findsAndLoadsArtifacts() throws Exception {
         final File local = this.temp.newFolder("local-repository");
         final Aether aether = new Aether(this.project(), local.getPath());
-        final Artifact[] artifacts = new Artifact[] {
-            // @checkstyle LineLength (1 line)
-            new DefaultArtifact("com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT"),
+        final Collection<DefaultArtifact> artifacts = Arrays.asList(
             new DefaultArtifact("com.jcabi:jcabi-log:pom:1.0-SNAPSHOT"),
-            new DefaultArtifact("log4j:log4j:jar:1.2.16"),
-        };
+            new DefaultArtifact("log4j:log4j:jar:1.2.16")
+        );
+        if (AetherTest.AWS_KEY != null) {
+            artifacts.add(
+                new DefaultArtifact(
+                    "com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT"
+                )
+            );
+        }
         final Matcher<?> matcher = new CustomMatcher<String>("file exists") {
             @Override
             public boolean matches(final Object file) {
@@ -213,7 +226,22 @@ public final class AetherTest {
             );
             Assert.fail("expection expected here");
         } catch (DependencyResolutionException ex) {
-            assert ex != null;
+            MatcherAssert.assertThat(
+                Logger.format("%[exception]s", ex),
+                Matchers.allOf(
+                    Matchers.containsString("oss.sonatype.org"),
+                    Matchers.containsString("repo1.maven.org")
+                )
+            );
+            if (AetherTest.AWS_KEY != null) {
+                MatcherAssert.assertThat(
+                    Logger.format("%[exception]s ", ex),
+                    Matchers.allOf(
+                        Matchers.containsString("aether-test.jcabi.com"),
+                        Matchers.containsString(AetherTest.AWS_KEY)
+                    )
+                );
+            }
         }
         MatcherAssert.assertThat(
             aether.resolve(
@@ -232,34 +260,33 @@ public final class AetherTest {
     private MavenProject project() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
         final String type = "default";
-        final RemoteRepository aws = new RemoteRepository(
-            "aether-test",
-            type,
-            "s3://aether-test.jcabi.com/snapshot"
-        );
-        aws.setAuthentication(
-            new Authentication(
-                System.getProperty("aws.key"),
-                System.getProperty("aws.secret")
+        final List<RemoteRepository> repos = Arrays.asList(
+            new RemoteRepository(
+                "sonatype",
+                type,
+                "https://oss.sonatype.org/content/groups/public"
+            ),
+            new RemoteRepository(
+                "maven-central",
+                type,
+                "http://repo1.maven.org/maven2/"
             )
         );
-        Mockito.doReturn(
-            Arrays.asList(
-                new RemoteRepository[] {
-                    aws,
-                    new RemoteRepository(
-                        "sonatype",
-                        type,
-                        "https://oss.sonatype.org/content/groups/public"
-                    ),
-                    new RemoteRepository(
-                        "maven-central",
-                        type,
-                        "http://repo1.maven.org/maven2/"
-                    ),
-                }
-            )
-        ).when(project).getRemoteProjectRepositories();
+        if (AetherTest.AWS_KEY != null) {
+            final RemoteRepository aws = new RemoteRepository(
+                "aether-test",
+                type,
+                "s3://aether-test.jcabi.com/snapshot"
+            );
+            aws.setAuthentication(
+                new Authentication(
+                    AetherTest.AWS_KEY,
+                    System.getProperty("aws.secret")
+                )
+            );
+            repos.add(aws);
+        }
+        Mockito.doReturn(repos).when(project).getRemoteProjectRepositories();
         return project;
     }
 
