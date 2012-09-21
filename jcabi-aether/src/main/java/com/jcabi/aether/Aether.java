@@ -35,6 +35,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import org.apache.maven.project.MavenProject;
+import org.apache.maven.repository.internal.MavenRepositorySystemSession;
 import org.sonatype.aether.RepositorySystem;
 import org.sonatype.aether.RepositorySystemSession;
 import org.sonatype.aether.artifact.Artifact;
@@ -48,7 +49,6 @@ import org.sonatype.aether.resolution.ArtifactResult;
 import org.sonatype.aether.resolution.DependencyRequest;
 import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.resolution.DependencyResult;
-import org.sonatype.aether.util.DefaultRepositorySystemSession;
 import org.sonatype.aether.util.filter.DependencyFilterUtils;
 
 /**
@@ -127,17 +127,10 @@ public final class Aether {
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
         if (filter != null) {
-            final LocalRepository local = new LocalRepository(this.localRepo);
-            final DefaultRepositorySystemSession session =
-                new DefaultRepositorySystemSession();
-            session.setLocalRepositoryManager(
-                system.newLocalRepositoryManager(local)
-            );
-            session.setTransferListener(new LogTransferListener());
             deps.addAll(
                 this.fetch(
                     system,
-                    session,
+                    this.session(system),
                     new DependencyRequest(crq, filter)
                 )
             );
@@ -235,6 +228,22 @@ public final class Aether {
             texts.add(text.toString());
         }
         return texts;
+    }
+
+    /**
+     * Create RepositorySystemSession.
+     * @param system The repository system to work with
+     * @return The session
+     */
+    private RepositorySystemSession session(final RepositorySystem system) {
+        final LocalRepository local = new LocalRepository(this.localRepo);
+        final MavenRepositorySystemSession session =
+            new MavenRepositorySystemSession();
+        session.setLocalRepositoryManager(
+            system.newLocalRepositoryManager(local)
+        );
+        session.setTransferListener(new LogTransferListener());
+        return session;
     }
 
 }
