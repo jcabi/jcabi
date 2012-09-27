@@ -42,12 +42,10 @@ import org.apache.log4j.spi.LoggingEvent;
  *
  * <p>Use it in your LOG4J configuration:
  *
- * <pre>
- * log4j.rootLogger=INFO, CONSOLE
+ * <pre>log4j.rootLogger=INFO, CONSOLE
  * log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
  * log4j.appender.CONSOLE.layout=com.jcabi.log.MulticolorLayout
- * log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%-5p}] %c: %m%n
- * </pre>
+ * log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%-5p}] %c: %m%n</pre>
  *
  * <p>The part of the message wrapped with {@code %color{...}}
  * will change its color according to the logging level of the event. Without
@@ -71,6 +69,7 @@ import org.apache.log4j.spi.LoggingEvent;
  * @since 0.1.10
  * @see <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape code</a>
  * @see <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html">PatternLayout from LOG4J</a>
+ * @see <a href="http://www.jcabi.com/jcabi-log/multicolor.html">How to use with Maven</a>
  */
 @SuppressWarnings("PMD.NonStaticInitializer")
 public final class MulticolorLayout extends PatternLayout {
