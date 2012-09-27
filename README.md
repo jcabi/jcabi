@@ -5,7 +5,12 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
-[0.1.11] not released yet, use 1.0-SNAPSHOT instead:
+[0.3.0] not released yet, use 1.0-SNAPSHOT instead:
+
+[0.2.0](#60):
+
+ * #59: custom [JSR-303 constraints](http://www.jcabi.com/jcabi-aspects/jsr-303.html) in jcabi-aspects
+ * #55: [jcabi-aether](http://www.jcabi.com/jcabi-aether) supports S3 wagon
 
 [0.1.10](#46):
 
