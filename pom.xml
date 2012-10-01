@@ -111,8 +111,8 @@
     </issueManagement>
 
     <ciManagement>
-        <system>hudson</system>
-        <url>http://hudson.jcabi.com:8081/hudson/job/jcabi/</url>
+        <system>jenkins</system>
+        <url>http://ci.jcabi.com:8080/job/jcabi/</url>
     </ciManagement>
 
     <scm>
@@ -125,8 +125,7 @@
         <downloadUrl>https://oss.sonatype.org/content/groups/public</downloadUrl>
         <snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
-            <id>sonatype.nexus</id>
-            <name>Sonatype OSS Repository (for snapshots)</name>
+            <id>oss.sonatype.org</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <site>
@@ -135,7 +134,7 @@
             are defined in "settings.xml" file, provided by continuous integration
             server during build cycle.
             -->
-            <id>jcabi.s3</id>
+            <id>www.jcabi.com</id>
             <name>jcabi.com Project Site</name>
             <url>s3://www.jcabi.com/</url>
         </site>
@@ -195,7 +194,7 @@
                         <artifactId>nexus-staging-maven-plugin</artifactId>
                         <version since="29 Aug 2012">1.0.2</version>
                         <configuration>
-                            <serverId>sonatype.nexus</serverId>
+                            <serverId>oss.sonatype.org</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <stagingRepositoryId>jcabi</stagingRepositoryId>
                             <deployUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</deployUrl>
@@ -659,13 +658,9 @@
         </testResources>
         <extensions>
             <extension>
-                <!--
-                Artifacts deployment to Amazon Web Services, S3.
-                @see http://blog.cyclopsgroup.org/2011/06/publish-maven-site-with-amazon-s3-and.html
-                -->
-                <groupId>org.cyclopsgroup</groupId>
-                <artifactId>awss3-maven-wagon</artifactId>
-                <version since="10 Jun 2011">0.1</version>
+                <groupId>org.kuali.maven.wagons</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version since="20 Sep 2012">1.1.14</version>
             </extension>
         </extensions>
         <pluginManagement>
