@@ -46,18 +46,13 @@ import org.sonatype.aether.connector.wagon.WagonProvider;
 public final class AmazonWagonProvider implements WagonProvider {
 
     /**
-     * The wagon to return.
-     */
-    private final transient Wagon aws = new S3Wagon();
-
-    /**
      * {@inheritDoc}
      */
     @Override
     public Wagon lookup(final String hint) throws Exception {
         Wagon wagon = null;
         if ("s3".equals(hint)) {
-            wagon = this.aws;
+            wagon = new S3Wagon();
         }
         Logger.debug(this, "#lookup('%s'): %s found", hint, wagon);
         return wagon;
