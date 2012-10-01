@@ -48,6 +48,10 @@
             <url>s3://aether-test.jcabi.com/snapshot</url>
         </repository>
         <repository>
+            <id>repo.s3auth.com</id>
+            <url>s3://repo.s3auth.com/snapshot</url>
+        </repository>
+        <repository>
             <id>non-existing.jcabi.com</id>
             <url>s3://non-existing.jcabi.com/snapshot</url>
         </repository>
@@ -77,6 +81,7 @@
                         <coordinate>junit:junit-dep:4.10</coordinate>
                         <coordinate>commons-io:commons-io:jar:2.4</coordinate>
                         <coordinate>com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT</coordinate>
+                        <coordinate>com.s3auth:s3auth:pom:1.0-SNAPSHOT</coordinate>
                     </coordinates>
                 </configuration>
                 <executions>
