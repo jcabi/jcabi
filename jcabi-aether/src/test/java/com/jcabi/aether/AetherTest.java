@@ -284,6 +284,16 @@ public final class AetherTest {
                     "maven-central",
                     type,
                     "http://repo1.maven.org/maven2/"
+                ),
+                new RemoteRepository(
+                    "invalid-http-repository",
+                    type,
+                    "http://repo1.maven.org/invalid-maven-repo/"
+                ),
+                new RemoteRepository(
+                    "invalid-s3-repository",
+                    type,
+                    "s3://invalid-s3-repository/"
                 )
             )
         );
