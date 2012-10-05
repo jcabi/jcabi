@@ -109,6 +109,8 @@ public final class DeployMojo extends AbstractMojo {
                 String.format("WAR file '%s' doesn't exist", this.war)
             );
         }
+        // 1. deploy to S3
+        // 2.
     }
 
 }
