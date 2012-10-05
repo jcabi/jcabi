@@ -29,11 +29,23 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
+import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
 import com.jcabi.log.Logger;
 import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
+import org.apache.maven.settings.Server;
+import org.apache.maven.settings.Settings;
+import org.jfrog.maven.annomojo.annotations.MojoExecute;
+import org.jfrog.maven.annomojo.annotations.MojoGoal;
+import org.jfrog.maven.annomojo.annotations.MojoParameter;
+import org.jfrog.maven.annomojo.annotations.MojoPhase;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
@@ -42,75 +54,197 @@ import org.slf4j.impl.StaticLoggerBinder;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.3
- * @goal deploy
- * @phase deploy
- * @threadSafe
  */
+@MojoGoal("deploy")
+@MojoPhase("deploy")
+@MojoExecute(phase = "deploy")
 public final class DeployMojo extends AbstractMojo {
 
     /**
      * Maven project, to be injected by Maven itself.
-     * @parameter expression="${project}"
-     * @required
-     * @readonly
      */
-    private transient MavenProject iproject;
+    @MojoParameter(
+        expression = "${project}",
+        required = true,
+        readonly = true,
+        description = "Maven project reference"
+    )
+    private transient MavenProject project;
+
+    /**
+     * Setting.xml.
+     */
+    @MojoParameter(
+        expression = "${settings}",
+        required = true,
+        readonly = true,
+        description = "Maven settings.xml reference"
+    )
+	private transient Settings settings;
 
     /**
      * Shall we skip execution?
-     * @parameter default-value="false"
-     * @required
      */
+    @MojoParameter(
+        defaultValue = "false",
+        required = true,
+        description = "Skips execution"
+    )
     private transient boolean skip;
 
     /**
-     * WAR file to deploy.
-     * @parameter default-value="${project.build.directory}/${project.build.finalName}.war"
-     * @required
+     * Server ID to deploy to.
      */
-    private transient File war;
+    @MojoParameter(
+        defaultValue = "aws.amazon.com",
+        required = true,
+        description = "ID of the server to deploy to, from settings.xml"
+    )
+    private transient String server;
 
     /**
-     * Set Maven Project (used mostly for unit testing).
-     * @param proj The project to set
+     * Application name.
      */
-    public final void setProject(final MavenProject proj) {
-        this.iproject = proj;
-    }
+    @MojoParameter(
+        required = true,
+        description = "Amazon Elastic Beanstalk application name"
+    )
+    private transient String application;
+
+    /**
+     * Environment name.
+     */
+    @MojoParameter(
+        required = true,
+        description = "Amazon Elastic Beanstalk environment name"
+    )
+    private transient String environment;
+
+    /**
+     * S3 bucket.
+     */
+    @MojoParameter(
+        required = true,
+        description = "Amazon S3 bucket name where to upload WAR file"
+    )
+    private transient String bucket;
+
+    /**
+     * S3 key name.
+     */
+    @MojoParameter(
+        required = true,
+        description = "Amazon S3 bucket key where to upload WAR file"
+    )
+    private transient String key;
+
+    /**
+     * Template name.
+     */
+    @MojoParameter(
+        required = true,
+        description = "Amazon Elastic Beanstalk configuration template name"
+    )
+    private transient String template;
+
+    /**
+     * WAR file to deploy.
+     */
+    @MojoParameter(
+        defaultValue = "${project.build.directory}/${project.build.finalName}.war",
+        required = true,
+        description = "Location of .WAR file to deploy"
+    )
+    private transient File war;
 
     /**
      * Set skip option.
      * @param skp Shall we skip execution?
      */
-    public final void setSkip(final boolean skp) {
+    public void setSkip(final boolean skp) {
         this.skip = skp;
-    }
-
-    /**
-     * Set WAR file location.
-     * @param file The file
-     */
-    public final void setWar(final File file) {
-        this.war = file;
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public final void execute() throws MojoFailureException {
+    public void execute() throws MojoFailureException {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
         if (this.skip) {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
         if (!this.war.exists()) {
-            throw new IllegalStateException(
+            throw new MojoFailureException(
                 String.format("WAR file '%s' doesn't exist", this.war)
             );
         }
-        // 1. deploy to S3
-        // 2.
+        final AWSCredentials creds = this.credentials();
+        final Bundle bundle = new OverridingBundle(
+            new AmazonS3Client(creds),
+            this.bucket,
+            this.key,
+            this.war
+        );
+        final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
+        final Environment env = new Environment(
+            ebt,
+            this.application,
+            this.environment
+        );
+        final Environment candidate = env.candidate(bundle, this.template);
+        if (candidate.ready()) {
+            candidate.activate();
+            env.terminate();
+        } else {
+            candidate.terminate();
+        }
+        ebt.shutdown();
+    }
+
+    /**
+     * Create AWS credentials.
+     * @return The credentials
+     * @throws MojoFailureException If some error
+     */
+    private AWSCredentials credentials() throws MojoFailureException {
+        final Server srv = this.settings.getServer(this.server);
+        if (srv == null) {
+            throw new MojoFailureException(
+                String.format(
+                    "Server '%s' is absent in settings.xml",
+                    this.server
+                )
+            );
+        }
+        final String key = srv.getUsername().trim();
+        if (!key.matches("[A-F0-9]{20}")) {
+            throw new MojoFailureException(
+                String.format(
+                    "Key '%s' for server '%s' is not a valid AWS key",
+                    key,
+                    this.server
+                )
+            );
+        }
+        final String secret = srv.getPassword().trim();
+        if (!secret.matches("[a-zA-Z0-9\\+/]{40}")) {
+            throw new MojoFailureException(
+                String.format(
+                    "Secret '%s' for server '%s' is not a valid AWS secret",
+                    secret,
+                    this.server
+                )
+            );
+        }
+        Logger.info(
+            this,
+            "Using server '%s' with AWS key '%s'",
+            this.server,
+            key
+        );
+        return new BasicAWSCredentials(key, secret);
     }
 
 }

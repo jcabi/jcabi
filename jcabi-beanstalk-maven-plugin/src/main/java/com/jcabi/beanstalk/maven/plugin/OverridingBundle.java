@@ -29,26 +29,70 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.services.elasticbeanstalk.model.S3Location;
+import com.amazonaws.services.s3.AmazonS3;
+import com.jcabi.log.Logger;
 import java.io.File;
-import org.junit.Test;
 
 /**
- * Test case for {@link DeployMojo}.
+ * Bundle that always overrides S3 object.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.3
  */
-public final class DeployMojoTest {
+final class OverridingBundle implements Bundle {
 
     /**
-     * DeployMojo can skip execution when flag is set.
-     * @throws Exception If something is wrong
+     * Amazon S3 client.
      */
-    @Test
-    public void skipsExecutionWhenRequired() throws Exception {
-        final DeployMojo mojo = new DeployMojo();
-        mojo.setSkip(true);
-        mojo.execute();
+    private final transient AmazonS3 client;
+
+    /**
+     * S3 bucket name.
+     */
+    private final transient String bucket;
+
+    /**
+     * S3 key name.
+     */
+    private final transient String key;
+
+    /**
+     * WAR file location.
+     */
+    private final transient File war;
+
+    /**
+     * Public ctor.
+     * @param clnt The client
+     * @param bckt S3 bucket
+     * @param label Location of S3 object, label name
+     * @param file WAR file location
+     */
+    public OverridingBundle(final AmazonS3 clnt, final String bckt,
+        final String label, final File file) {
+        this.client = clnt;
+        this.bucket = bckt;
+        this.key = label;
+        this.war = file;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public S3Location location() {
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String name() {
+        return this.key;
     }
 
 }

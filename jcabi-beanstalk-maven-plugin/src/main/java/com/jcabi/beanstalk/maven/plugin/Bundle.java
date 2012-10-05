@@ -29,26 +29,27 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import java.io.File;
-import org.junit.Test;
+import com.amazonaws.services.elasticbeanstalk.model.S3Location;
 
 /**
- * Test case for {@link DeployMojo}.
+ * Bundle with a WAR application.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.3
  */
-public final class DeployMojoTest {
+interface Bundle {
 
     /**
-     * DeployMojo can skip execution when flag is set.
-     * @throws Exception If something is wrong
+     * Name of this version to use.
+     * @return The name
      */
-    @Test
-    public void skipsExecutionWhenRequired() throws Exception {
-        final DeployMojo mojo = new DeployMojo();
-        mojo.setSkip(true);
-        mojo.execute();
-    }
+    String name();
+
+    /**
+     * Get S3 location of an app.
+     * @return The location
+     */
+    S3Location location();
 
 }

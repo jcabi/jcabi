@@ -29,26 +29,35 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
+import com.amazonaws.services.s3.AmazonS3;
 import java.io.File;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
- * Test case for {@link DeployMojo}.
+ * Test case for {@link OverridingBundle}.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class DeployMojoTest {
+public final class OverridingBundleTest {
 
     /**
-     * DeployMojo can skip execution when flag is set.
+     * OverridingBundle can override a file in AWS S3.
      * @throws Exception If something is wrong
      */
     @Test
-    public void skipsExecutionWhenRequired() throws Exception {
-        final DeployMojo mojo = new DeployMojo();
-        mojo.setSkip(true);
-        mojo.execute();
+    public void overridesFileInAws() throws Exception {
+        final AmazonS3 client = Mockito.mock(AmazonS3.class);
+        final String bucket = "some-bucket";
+        final String key = "some-key";
+        final Bundle bundle = new OverridingBundle(client, bucket, key, null);
+        MatcherAssert.assertThat(
+            bundle.name(),
+            Matchers.equalTo(key)
+        );
     }
 
 }
