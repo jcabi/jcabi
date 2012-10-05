@@ -119,23 +119,29 @@ final class Application {
         final Pattern pattern = Pattern.compile(
             String.format("%s.elasticbeanstalk.com", Pattern.quote(prefix))
         );
+        Logger.info(
+            this,
+            "Found %d environment(s) in '%s' app",
+            envs.size(),
+            this.app
+        );
         for (EnvironmentDescription env : envs) {
-            if (pattern.matcher(env.getCNAME()).matches()) {
-                active = env.getEnvironmentName();
-            } else if ("Terminated".equals(env.getStatus())) {
+            if ("Terminated".equals(env.getStatus())) {
                 Logger.info(
                     this,
-                    "Environment '%s' in '%s' app is terminated",
-                    env.getEnvironmentName(),
-                    env.getApplicationName()
+                    "Environment '%s/%s' is terminated",
+                    env.getApplicationName(),
+                    env.getEnvironmentName()
                 );
+            } else if (pattern.matcher(env.getCNAME()).matches()) {
+                active = env.getEnvironmentName();
             } else {
                 Logger.warn(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "Environment '%s' in '%s' app has incorrect CNAME '%s' (doesn't start with '%s.'), should be terminated (status=%s, health=%s)",
-                    env.getEnvironmentName(),
+                    "Environment '%s/%s' has incorrect CNAME '%s' (doesn't start with '%s.'), should be terminated (status=%s, health=%s)",
                     env.getApplicationName(),
+                    env.getEnvironmentName(),
                     env.getCNAME(),
                     prefix,
                     env.getStatus(),
@@ -151,17 +157,20 @@ final class Application {
         if (active.isEmpty()) {
             Logger.info(
                 this,
-                "No active environments in '%s' app with CNAME prefix '%s'",
+                // @checkstyle LineLength (1 line)
+                "No active environments in '%s' with CNAME prefix '%s' (among %d envs)",
                 this.app,
-                prefix
+                prefix,
+                envs.size()
             );
         } else {
             Logger.info(
                 this,
-                "Environment '%s' is active in '%s' app with CNAME prefix '%s'",
-                active,
+                "Environment '%s/%s' with CNAME prefix '%s', among %d environment(s)",
                 this.app,
-                prefix
+                active,
+                prefix,
+                envs.size()
             );
         }
         return active;

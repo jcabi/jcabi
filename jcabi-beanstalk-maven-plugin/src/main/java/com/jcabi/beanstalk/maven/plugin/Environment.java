@@ -123,7 +123,7 @@ final class Environment {
         Logger.info(
             this,
             // @checkstyle LineLength (1 line)
-            "Candidate environment created %s/%s at CNAME '%s' (status:%s, health:%s)",
+            "Candidate environment '%s/%s' created at CNAME '%s' (status:%s, health:%s)",
             res.getApplicationName(),
             res.getEnvironmentName(),
             res.getCNAME(),
@@ -161,7 +161,8 @@ final class Environment {
         if (!ready) {
             throw new IllegalStateException(
                 Logger.format(
-                    "environment '%s' can't be terminated",
+                    "environment '%s/%s' can't be terminated",
+                    this.app.name(),
                     this.name
                 )
             );
@@ -174,7 +175,7 @@ final class Environment {
             );
         Logger.info(
             this,
-            "Environment '%s/%s/%s' will be terminated (label:'%s', status:%s)",
+            "Environment '%s/%s' will be terminated (label:'%s', status:%s)",
             res.getApplicationName(),
             res.getEnvironmentName(),
             res.getCNAME(),
@@ -248,7 +249,7 @@ final class Environment {
                 break;
             }
             try {
-                TimeUnit.MINUTES.sleep(retry * 2);
+                TimeUnit.MINUTES.sleep(1);
             } catch (InterruptedException ex) {
                 Thread.currentThread().interrupt();
                 throw new IllegalStateException(ex);
