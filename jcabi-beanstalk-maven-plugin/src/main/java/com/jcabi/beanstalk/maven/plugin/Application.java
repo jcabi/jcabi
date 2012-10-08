@@ -43,6 +43,7 @@ import com.jcabi.log.Logger;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
@@ -63,87 +64,116 @@ final class Application {
     /**
      * Application name.
      */
-    private final transient String app;
+    private final transient String name;
 
     /**
      * Public ctor.
      * @param clnt The client
-     * @param name Application name
+     * @param app Application name
      */
-    public Application(final AWSElasticBeanstalk clnt, final String name) {
+    public Application(final AWSElasticBeanstalk clnt, final String app) {
         this.client = clnt;
-        this.app = name;
+        this.name = app;
     }
 
     /**
-     * Get its name.
-     * @return The name
+     * Activate candidate environment by swap of CNAMEs, or leave current
+     * environment as available, if it's alone.
      */
-    public String name() {
-        return this.app;
+    public void swap() {
+        // this.client.swapEnvironmentCNAMEs();
+        // Logger.info(this, "Environments swapped by CNAME update");
     }
 
     /**
-     * Get candidate environment name.
-     * @param env Environment name
-     * @return The name
+     * Create candidate environment.
+     * @param version Version to deploy
+     * @param template Configuration template
+     * @return The environment
      */
-    public String candidate(final String env) {
-        final String active = this.active(env);
-        String candidate;
-        if (active.equals(env)) {
-            candidate = String.format("%s-1", env);
-        } else {
-            candidate = env;
-        }
+    public Environment candidate(final Version version, final String template) {
+        final String available = this.available();
         Logger.info(
             this,
             "Candidate environment name in '%s' app is '%s'",
-            this.app,
-            candidate
+            this.name,
+            available
         );
-        return candidate;
-    }
-
-    /**
-     * Get name of active environment, for this CNAME.
-     * @param prefix The CNAME prefix
-     * @return The name
-     */
-    private String active(final String prefix) {
-        final DescribeEnvironmentsResult res = this.client.describeEnvironments(
-            new DescribeEnvironmentsRequest().withApplicationName(this.app)
-        );
-        final Collection<EnvironmentDescription> envs = res.getEnvironments();
-        String active = "";
-        final Pattern pattern = Pattern.compile(
-            String.format("%s.elasticbeanstalk.com", Pattern.quote(prefix))
+        final CreateEnvironmentResult res = this.client.createEnvironment(
+            new CreateEnvironmentRequest(this.name, available)
+                .withDescription(available)
+                .withVersionLabel(version.label())
+                .withTemplateName(template)
+                .withCNAMEPrefix(available)
         );
         Logger.info(
             this,
-            "Found %d environment(s) in '%s' app",
-            envs.size(),
-            this.app
+            // @checkstyle LineLength (1 line)
+            "Candidate environment '%s/%s' created at CNAME '%s' (status:%s, health:%s)",
+            res.getApplicationName(),
+            res.getEnvironmentName(),
+            res.getCNAME(),
+            res.getStatus(),
+            res.getHealth()
         );
+        return new Environment(
+            this.client,
+            res.getApplicationName(),
+            res.getEnvironmentName()
+        );
+    }
+
+    /**
+     * Get available candidate name.
+     * @return The name
+     */
+    private String available() {
+        final DescribeEnvironmentsResult res = this.client.describeEnvironments(
+            new DescribeEnvironmentsRequest()
+                .withApplicationName(this.name)
+        );
+        final Collection<EnvironmentDescription> envs = res.getEnvironments();
+        final Pattern pattern = Pattern.compile(
+            String.format("%s.elasticbeanstalk.com", Pattern.quote(this.name))
+        );
+        Logger.info(
+            this,
+            "Found %d environment(s) in '%s' app:",
+            envs.size(),
+            this.name
+        );
+        String available = null;
+        final Collection<String> occupied = new HashSet<String>();
         for (EnvironmentDescription env : envs) {
+            occupied.add(env.getEnvironmentName());
             if ("Terminated".equals(env.getStatus())) {
                 Logger.info(
                     this,
-                    "Environment '%s/%s' is terminated",
+                    "  environment '%s/%s' is terminated",
                     env.getApplicationName(),
                     env.getEnvironmentName()
                 );
             } else if (pattern.matcher(env.getCNAME()).matches()) {
-                active = env.getEnvironmentName();
+                available = env.getEnvironmentName();
+                Logger.info(
+                    this,
+                    // @checkstyle LineLength (1 line)
+                    "  environment '%s/%s' is available, CNAME=%s (status=%s, health=%s)",
+                    env.getApplicationName(),
+                    env.getEnvironmentName(),
+                    env.getCNAME(),
+                    env.getStatus(),
+                    env.getHealth()
+                );
             } else {
                 Logger.warn(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "Environment '%s/%s' has incorrect CNAME '%s' (doesn't start with '%s.'), should be terminated (status=%s, health=%s)",
+                    "  environment '%s/%s' has incorrect CNAME '%s' (doesn't start with '%s.'), should be terminated (status=%s, health=%s)",
                     env.getApplicationName(),
                     env.getEnvironmentName(),
                     env.getCNAME(),
-                    prefix,
+                    this.name,
                     env.getStatus(),
                     env.getHealth()
                 );
@@ -154,26 +184,31 @@ final class Application {
                 ).terminate();
             }
         }
-        if (active.isEmpty()) {
+        if (available == null) {
+            available = this.name;
             Logger.info(
                 this,
                 // @checkstyle LineLength (1 line)
                 "No active environments in '%s' with CNAME prefix '%s' (among %d envs)",
-                this.app,
-                prefix,
+                this.name,
+                this.name,
                 envs.size()
             );
         } else {
             Logger.info(
                 this,
-                "Environment '%s/%s' with CNAME prefix '%s', among %d environment(s)",
-                this.app,
-                active,
-                prefix,
+                // @checkstyle LineLength (1 line)
+                "Environment '%s/%s' considered active, among %d environment(s)",
+                this.name,
+                available,
                 envs.size()
             );
+            int suffix = 0;
+            do {
+                available = String.format("%s-%d", this.name, ++suffix);
+            } while (occupied.contains(available));
         }
-        return active;
+        return available;
     }
 
 }

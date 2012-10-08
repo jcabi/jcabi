@@ -34,7 +34,6 @@ import org.junit.Test;
 
 /**
  * Test case for {@link DeployMojo}.
- *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */

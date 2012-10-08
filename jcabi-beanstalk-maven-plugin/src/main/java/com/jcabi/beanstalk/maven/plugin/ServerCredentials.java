@@ -30,97 +30,89 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.services.elasticbeanstalk.model.S3Location;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.PutObjectResult;
 import com.jcabi.log.Logger;
-import java.io.File;
-import org.apache.commons.io.FileUtils;
+import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.settings.Server;
+import org.apache.maven.settings.Settings;
 
 /**
- * Bundle that always overrides S3 object.
+ * AWS credentials from settings.xml.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.3
  */
-final class OverridingBundle implements Bundle {
+final class ServerCredentials implements AWSCredentials {
 
     /**
-     * Amazon S3 client.
-     */
-    private final transient AmazonS3 client;
-
-    /**
-     * S3 bucket name.
-     */
-    private final transient String bucket;
-
-    /**
-     * S3 key name.
+     * AWS key.
      */
     private final transient String key;
 
     /**
-     * WAR file location.
+     * AWS secret.
      */
-    private final transient File war;
+    private final transient String secret;
 
     /**
      * Public ctor.
-     * @param clnt The client
-     * @param bckt S3 bucket
-     * @param label Location of S3 object, label name
-     * @param file WAR file location
+     * @param settings Maven settings
+     * @parma name Name of server ID
+     * @throws MojoFailureException If some error
      */
-    public OverridingBundle(final AmazonS3 clnt, final String bckt,
-        final String label, final File file) {
-        this.client = clnt;
-        this.bucket = bckt;
-        this.key = label;
-        this.war = file;
-        if (!this.war.exists()) {
-            throw new IllegalArgumentException(
-                String.format("WAR file %s doesn't exist", this.war)
+    public ServerCredentials(final Settings settings, final String name)
+        throws MojoFailureException {
+        final Server server = settings.getServer(name);
+        if (server == null) {
+            throw new MojoFailureException(
+                String.format(
+                    "Server '%s' is absent in settings.xml",
+                    name
+                )
             );
         }
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public S3Location location() {
+        this.key = server.getUsername().trim();
+        if (!this.key.matches("[A-F0-9]{20}")) {
+            throw new MojoFailureException(
+                String.format(
+                    "Key '%s' for server '%s' is not a valid AWS key",
+                    this.key,
+                    name
+                )
+            );
+        }
+        this.secret = server.getPassword().trim();
+        if (!this.secret.matches("[a-zA-Z0-9\\+/]{40}")) {
+            throw new MojoFailureException(
+                String.format(
+                    "Secret '%s' for server '%s' is not a valid AWS secret",
+                    this.secret,
+                    name
+                )
+            );
+        }
         Logger.info(
             this,
-            "Uploading %s (%s) to s3://%s/%s... (may take a few minutes)",
-            this.war,
-            FileUtils.byteCountToDisplaySize(this.war.length()),
-            this.bucket,
+            "Using server '%s' with AWS key '%s'",
+            name,
             this.key
         );
-        final PutObjectResult res = this.client.putObject(
-            this.bucket, this.key, this.war
-        );
-        Logger.info(
-            this,
-            // @checkstyle LineLength (1 line)
-            "Uploaded successfully to S3, etag=%s, expires=%s, exp.rule=%s, encryption=%s, version=%s",
-            res.getETag(),
-            res.getExpirationTime(),
-            res.getExpirationTimeRuleId(),
-            res.getServerSideEncryption(),
-            res.getVersionId()
-        );
-        return new S3Location(this.bucket, this.key);
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public String name() {
+    public String getAWSAccessKeyId() {
         return this.key;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String getAWSSecretKey() {
+        return this.secret;
     }
 
 }

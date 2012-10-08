@@ -49,18 +49,10 @@ import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Environment}.
- *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 public final class EnvironmentTest {
-
-    /**
-     * Temporary folder.
-     * @checkstyle VisibilityModifier (3 lines)
-     */
-    @Rule
-    public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
      * Configure logging.
@@ -84,40 +76,6 @@ public final class EnvironmentTest {
             env.ready(),
             Matchers.equalTo(true)
         );
-    }
-
-    /**
-     * Environment can deploy and reverse with a broken WAR file.
-     * @throws Exception If something is wrong
-     */
-    @Test
-    public void deploysAndReversesWithLiveAccount() throws Exception {
-        Assume.assumeThat(
-            System.getProperty("aws.key"),
-            Matchers.notNullValue()
-        );
-        final AWSCredentials creds = new BasicAWSCredentials(
-            System.getProperty("aws.key"),
-            System.getProperty("aws.secret")
-        );
-        final AWSElasticBeanstalk aws = new AWSElasticBeanstalkClient(creds);
-        final Environment env = new Environment(
-            aws,
-            "netbout",
-            "temporary-environment"
-        );
-        final File war = this.temp.newFile("temp.war");
-        FileUtils.writeStringToFile(war, "broken JAR file content");
-        final Environment candidate = env.candidate(
-            new OverridingBundle(
-                new AmazonS3Client(creds),
-                "apps.netbout.com",
-                war.getName(),
-                war
-            ),
-            "netbout"
-        );
-        candidate.terminate();
     }
 
 }

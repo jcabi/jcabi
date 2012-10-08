@@ -33,22 +33,33 @@ import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
+import com.amazonaws.services.s3.AmazonS3Client;
 import org.apache.maven.plugin.logging.SystemStreamLog;
+import java.io.File;
+import org.apache.commons.io.FileUtils;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assume;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Application}.
- *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 public final class ApplicationTest {
+
+    /**
+     * Temporary folder.
+     * @checkstyle VisibilityModifier (3 lines)
+     */
+    @Rule
+    public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
      * Configure logging.
@@ -66,19 +77,21 @@ public final class ApplicationTest {
     public void createsNewEnvironmentName() throws Exception {
         final AWSElasticBeanstalk aws = Mockito.mock(AWSElasticBeanstalk.class);
         final String name = "some-app-name";
+        final String template = "some-template";
+        final Version version = Mockito.mock(Version.class);
         final Application app = new Application(aws, name);
         MatcherAssert.assertThat(
-            app.candidate("old-name"),
+            app.candidate(version, template),
             Matchers.notNullValue()
         );
     }
 
     /**
-     * Application can create a new env name.
+     * Environment can deploy and reverse with a broken WAR file.
      * @throws Exception If something is wrong
      */
     @Test
-    public void createsNewEnvironmentNameInLiveServer() throws Exception {
+    public void deploysAndReversesWithLiveAccount() throws Exception {
         Assume.assumeThat(
             System.getProperty("aws.key"),
             Matchers.notNullValue()
@@ -87,12 +100,25 @@ public final class ApplicationTest {
             System.getProperty("aws.key"),
             System.getProperty("aws.secret")
         );
-        final AWSElasticBeanstalk aws = new AWSElasticBeanstalkClient(creds);
-        final Application app = new Application(aws, "netbout");
-        MatcherAssert.assertThat(
-            app.candidate("netbout"),
-            Matchers.notNullValue()
+        final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
+        final String name = "netbout";
+        final Application app = new Application(ebt, name);
+        final File war = this.temp.newFile("temp.war");
+        FileUtils.writeStringToFile(war, "broken JAR file content");
+        final Environment candidate = app.candidate(
+            new OverridingVersion(
+                ebt,
+                name,
+                new OverridingBundle(
+                    new AmazonS3Client(creds),
+                    "webapps.netbout.com",
+                    war.getName(),
+                    war
+                )
+            ),
+            "netbout"
         );
+        candidate.terminate();
     }
 
 }

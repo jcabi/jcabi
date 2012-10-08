@@ -103,22 +103,13 @@ public final class DeployMojo extends AbstractMojo {
     private transient String server;
 
     /**
-     * Application name.
+     * Application name (also the name of environment and CNAME).
      */
     @MojoParameter(
         required = true,
-        description = "Amazon Elastic Beanstalk application name"
+        description = "EBT application name, environment name, and CNAME"
     )
-    private transient String application;
-
-    /**
-     * Environment name.
-     */
-    @MojoParameter(
-        required = true,
-        description = "Amazon Elastic Beanstalk environment name"
-    )
-    private transient String environment;
+    private transient String name;
 
     /**
      * S3 bucket.
@@ -180,71 +171,31 @@ public final class DeployMojo extends AbstractMojo {
                 String.format("WAR file '%s' doesn't exist", this.war)
             );
         }
-        final AWSCredentials creds = this.credentials();
-        final Bundle bundle = new OverridingBundle(
-            new AmazonS3Client(creds),
-            this.bucket,
-            this.key,
-            this.war
+        final AWSCredentials creds = new ServerCredentials(
+            this.settings,
+            this.server
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
-        final Environment env = new Environment(
-            ebt,
-            this.application,
-            this.environment
+        final Application app = new Application(ebt, this.name);
+        final Environment candidate = app.candidate(
+            new OverridingVersion(
+                ebt,
+                this.name,
+                new OverridingBundle(
+                    new AmazonS3Client(creds),
+                    this.bucket,
+                    this.key,
+                    this.war
+                )
+            ),
+            this.template
         );
-        final Environment candidate = env.candidate(bundle, this.template);
         if (candidate.ready()) {
-            candidate.activate();
-            env.terminate();
+            app.swap();
         } else {
             candidate.terminate();
         }
         ebt.shutdown();
-    }
-
-    /**
-     * Create AWS credentials.
-     * @return The credentials
-     * @throws MojoFailureException If some error
-     */
-    private AWSCredentials credentials() throws MojoFailureException {
-        final Server srv = this.settings.getServer(this.server);
-        if (srv == null) {
-            throw new MojoFailureException(
-                String.format(
-                    "Server '%s' is absent in settings.xml",
-                    this.server
-                )
-            );
-        }
-        final String key = srv.getUsername().trim();
-        if (!key.matches("[A-F0-9]{20}")) {
-            throw new MojoFailureException(
-                String.format(
-                    "Key '%s' for server '%s' is not a valid AWS key",
-                    key,
-                    this.server
-                )
-            );
-        }
-        final String secret = srv.getPassword().trim();
-        if (!secret.matches("[a-zA-Z0-9\\+/]{40}")) {
-            throw new MojoFailureException(
-                String.format(
-                    "Secret '%s' for server '%s' is not a valid AWS secret",
-                    secret,
-                    this.server
-                )
-            );
-        }
-        Logger.info(
-            this,
-            "Using server '%s' with AWS key '%s'",
-            this.server,
-            key
-        );
-        return new BasicAWSCredentials(key, secret);
     }
 
 }

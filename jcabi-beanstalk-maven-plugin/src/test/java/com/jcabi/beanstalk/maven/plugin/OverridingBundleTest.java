@@ -38,7 +38,6 @@ import org.mockito.Mockito;
 
 /**
  * Test case for {@link OverridingBundle}.
- *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */

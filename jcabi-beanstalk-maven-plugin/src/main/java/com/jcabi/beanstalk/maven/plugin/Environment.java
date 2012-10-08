@@ -31,8 +31,12 @@ package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
+import com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting;
+import com.amazonaws.services.elasticbeanstalk.model.ConfigurationSettingsDescription;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
@@ -67,7 +71,7 @@ final class Environment {
     /**
      * Application name.
      */
-    private final transient Application app;
+    private final transient String app;
 
     /**
      * Environment name.
@@ -84,8 +88,32 @@ final class Environment {
     public Environment(final AWSElasticBeanstalk clnt, final String application,
         final String env) {
         this.client = clnt;
-        this.app = new Application(clnt, application);
+        this.app = application;
         this.name = env;
+        final DescribeConfigurationSettingsResult res =
+            this.client.describeConfigurationSettings(
+                new DescribeConfigurationSettingsRequest()
+                    .withApplicationName(this.app)
+                    .withEnvironmentName(this.name)
+            );
+        for (ConfigurationSettingsDescription config
+            : res.getConfigurationSettings()) {
+            Logger.info(
+                this,
+                "Environment '%s/%s' settings:",
+                config.getApplicationName(),
+                config.getEnvironmentName()
+            );
+            for (ConfigurationOptionSetting opt : config.getOptionSettings()) {
+                Logger.info(
+                    this,
+                    "  %s/%s: %s",
+                    opt.getNamespace(),
+                    opt.getOptionName(),
+                    opt.getValue()
+                );
+            }
+        }
     }
 
     /**
@@ -96,6 +124,10 @@ final class Environment {
         return this.until(
             new Environment.Barrier() {
                 @Override
+                public String message() {
+                    return "Green/Ready";
+                }
+                @Override
                 public boolean allow(final EnvironmentDescription desc) {
                     return "Green".equals(desc.getHealth())
                         && "Ready".equals(desc.getStatus());
@@ -105,52 +137,15 @@ final class Environment {
     }
 
     /**
-     * Create a new candidate environment, deploying a new bundle into it.
-     * @param bundle The bundle to deploy there
-     * @param template Configuration template
-     */
-    public Environment candidate(final Bundle bundle, final String template) {
-        final String child = this.app.candidate(this.name);
-        final CreateEnvironmentResult res = this.client.createEnvironment(
-            new CreateEnvironmentRequest(this.app.name(), child)
-                .withDescription("swapped...")
-                .withVersionLabel(
-                    new Version(this.client, this.app.name(), bundle).label()
-                )
-                .withTemplateName(template)
-                .withCNAMEPrefix(child)
-        );
-        Logger.info(
-            this,
-            // @checkstyle LineLength (1 line)
-            "Candidate environment '%s/%s' created at CNAME '%s' (status:%s, health:%s)",
-            res.getApplicationName(),
-            res.getEnvironmentName(),
-            res.getCNAME(),
-            res.getStatus(),
-            res.getHealth()
-        );
-        return new Environment(
-            this.client,
-            res.getApplicationName(),
-            res.getEnvironmentName()
-        );
-    }
-
-    /**
-     * Activate this environment by swap of CNAMEs.
-     */
-    public void activate() {
-        this.client.swapEnvironmentCNAMEs();
-        Logger.info(this, "Environments swapped by CNAME update");
-    }
-
-    /**
      * Terminate environment.
      */
     public void terminate() {
         final boolean ready = this.until(
             new Environment.Barrier() {
+                @Override
+                public String message() {
+                    return "not Terminated and not Launching";
+                }
                 @Override
                 public boolean allow(final EnvironmentDescription desc) {
                     return !"Terminated".equals(desc.getStatus())
@@ -162,7 +157,7 @@ final class Environment {
             throw new IllegalStateException(
                 Logger.format(
                     "environment '%s/%s' can't be terminated",
-                    this.app.name(),
+                    this.app,
                     this.name
                 )
             );
@@ -191,7 +186,7 @@ final class Environment {
     private EnvironmentDescription description() {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest()
-                .withApplicationName(this.app.name())
+                .withApplicationName(this.app)
         );
         EnvironmentDescription desc = null;
         final Collection<EnvironmentDescription> envs = res.getEnvironments();
@@ -214,7 +209,7 @@ final class Environment {
             throw new IllegalStateException(
                 Logger.format(
                     "environment %s/%s not found amount %d others %[list]s",
-                    this.app.name(),
+                    this.app,
                     this.name,
                     res.getEnvironments().size(),
                     names
@@ -236,13 +231,15 @@ final class Environment {
             final EnvironmentDescription desc = this.description();
             Logger.info(
                 this,
-                "Environment '%s/%s': health=%s, status=%s, retry=%d of %d",
+                // @checkstyle LineLength (1 line)
+                "Environment '%s/%s': health=%s, status=%s, retry=%dmin of %d (waiting for %s)",
                 desc.getApplicationName(),
                 desc.getEnvironmentName(),
                 desc.getHealth(),
                 desc.getStatus(),
                 retry,
-                Environment.MAX_ATTEMPTS
+                Environment.MAX_ATTEMPTS,
+                barrier.message()
             );
             if (barrier.allow(desc)) {
                 passed = true;
@@ -267,6 +264,11 @@ final class Environment {
          * @param desc Description of environment
          */
         boolean allow(EnvironmentDescription desc);
+        /**
+         * What are we waiting for?
+         * @return Message to show in log
+         */
+        String message();
     }
 
 }
