@@ -52,7 +52,7 @@ Deploying WAR projects to Amazon Elastic Beanstalk
           <server>aws.amazon.com</server>
           <application>example</application>
           <bucket>webapps.example.com</bucket>
-          <key>${project.build.finalName}-${build.number}.${project.packaging}</key>
+          <key>example-1.0-SNAPSHOT.war</key>
           <template>example</template>
         </configuration>
         <executions>
