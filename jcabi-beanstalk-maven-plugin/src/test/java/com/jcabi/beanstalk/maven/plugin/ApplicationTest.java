@@ -33,14 +33,13 @@ import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
+import com.amazonaws.services.elasticbeanstalk.model.CheckDNSAvailabilityRequest;
+import com.amazonaws.services.elasticbeanstalk.model.CheckDNSAvailabilityResult;
 import com.amazonaws.services.elasticbeanstalk.model.ConfigurationSettingsDescription;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
-import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
-import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
-import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.s3.AmazonS3Client;
 import java.io.File;
 import java.util.ArrayList;
@@ -90,22 +89,20 @@ public final class ApplicationTest {
     }
 
     /**
-     * Application can create a new environment name.
+     * Application can create a new environment.
      * @throws Exception If something is wrong
      */
     @Test
-    public void createsNewEnvironmentName() throws Exception {
+    public void createsNewEnvironment() throws Exception {
         final String name = "some-app-name";
         final String template = "some-template";
         final Version version = Mockito.mock(Version.class);
         final AWSElasticBeanstalk ebt = Mockito.mock(AWSElasticBeanstalk.class);
         Mockito.doReturn(
-            new DescribeEnvironmentsResult().withEnvironments(
-                new ArrayList<EnvironmentDescription>()
-            )
+            new CheckDNSAvailabilityResult().withAvailable(true)
         ).when(ebt)
-            .describeEnvironments(
-                Mockito.any(DescribeEnvironmentsRequest.class)
+            .checkDNSAvailability(
+                Mockito.any(CheckDNSAvailabilityRequest.class)
             );
         Mockito.doReturn(
             new CreateEnvironmentResult()
@@ -131,7 +128,12 @@ public final class ApplicationTest {
     }
 
     /**
-     * Environment can deploy and reverse with a broken WAR file.
+     * Environment can deploy and reverse with a broken WAR file. This test
+     * has to be executed only if you have full access to AWS S3 bucket, and
+     * AWS EBT for deployment. The test runs full cycle of deployment and then
+     * destroying of a new environment. It won't hurt anything, but will
+     * consume some EBT resources. Be careful.
+     *
      * @throws Exception If something is wrong
      */
     @Test
@@ -144,6 +146,7 @@ public final class ApplicationTest {
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final String name = "netbout";
         final Application app = new Application(ebt, name);
+        app.clean();
         final File war = this.temp.newFile("temp.war");
         FileUtils.writeStringToFile(war, "broken JAR file content");
         final Environment candidate = app.candidate(

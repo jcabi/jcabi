@@ -30,15 +30,13 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
+import com.amazonaws.services.elasticbeanstalk.model.CheckDNSAvailabilityRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.jcabi.log.Logger;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.regex.Pattern;
 
 /**
  * EBT application.
@@ -85,19 +83,19 @@ final class Application {
      * @return The environment
      */
     public Environment candidate(final Version version, final String template) {
-        final String available = this.available();
+        final String cname = this.suggest();
         Logger.info(
             this,
-            "Candidate environment name is in '%s' app",
-            available,
+            "Suggested candidate environment name is '%s' in '%s' app",
+            cname,
             this.name
         );
         final CreateEnvironmentResult res = this.client.createEnvironment(
-            new CreateEnvironmentRequest(this.name, available)
-                .withDescription(available)
+            new CreateEnvironmentRequest(this.name, cname)
+                .withDescription(cname)
                 .withVersionLabel(version.label())
                 .withTemplateName(template)
-                .withCNAMEPrefix(available)
+                .withCNAMEPrefix(cname)
         );
         Logger.info(
             this,
@@ -117,91 +115,74 @@ final class Application {
     }
 
     /**
-     * Get available candidate name.
-     * @return The name
+     * Remove all abandoned environments.
      */
-    private String available() {
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
+    public void clean() {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
-            new DescribeEnvironmentsRequest()
-                .withApplicationName(this.name)
+            new DescribeEnvironmentsRequest().withApplicationName(this.name)
         );
-        final Collection<EnvironmentDescription> envs = res.getEnvironments();
-        final Pattern pattern = Pattern.compile(
-            String.format("%s.elasticbeanstalk.com", Pattern.quote(this.name))
-        );
-        Logger.info(
-            this,
-            "Found %d environment(s) in '%s' app:",
-            envs.size(),
-            this.name
-        );
-        String available = null;
-        final Collection<String> occupied = new HashSet<String>();
-        for (EnvironmentDescription env : envs) {
-            occupied.add(env.getEnvironmentName());
-            if ("Terminated".equals(env.getStatus())) {
-                Logger.info(
-                    this,
-                    "  environment '%s/%s' is terminated",
-                    env.getApplicationName(),
-                    env.getEnvironmentName()
-                );
-            } else if (pattern.matcher(env.getCNAME()).matches()) {
-                available = env.getEnvironmentName();
+        final String prefix = String.format("%s.", this.name);
+        for (EnvironmentDescription env : res.getEnvironments()) {
+            if (!env.getCNAME().startsWith(prefix)
+                && !"Terminated".equals(env.getStatus())) {
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "  environment '%s/%s' is available, CNAME=%s (status=%s, health=%s)",
+                    "Environment '%s/%s' doesn't belong to CNAME '%s' (CNAME=%s, health=%s, status=%s), terminating...",
                     env.getApplicationName(),
                     env.getEnvironmentName(),
-                    env.getCNAME(),
-                    env.getStatus(),
-                    env.getHealth()
-                );
-            } else {
-                Logger.warn(
-                    this,
-                    // @checkstyle LineLength (1 line)
-                    "  environment '%s/%s' has incorrect CNAME '%s' (doesn't start with '%s.'), should be terminated (status=%s, health=%s)",
-                    env.getApplicationName(),
-                    env.getEnvironmentName(),
-                    env.getCNAME(),
                     this.name,
-                    env.getStatus(),
-                    env.getHealth()
+                    env.getCNAME(),
+                    env.getHealth(),
+                    env.getStatus()
                 );
                 new Environment(
                     this.client,
-                    env.getApplicationName(),
+                    this.name,
                     env.getEnvironmentName()
                 ).terminate();
             }
         }
-        if (available == null) {
-            available = this.name;
-            Logger.info(
-                this,
-                // @checkstyle LineLength (1 line)
-                "No active environments in '%s' with CNAME prefix '%s' (among %d envs)",
-                this.name,
-                this.name,
-                envs.size()
-            );
+    }
+
+    /**
+     * Suggest new candidate environment CNAME.
+     * @return The CNAME, suggested and not occupied
+     */
+    private String suggest() {
+        String cname;
+        if (this.occupied(this.name)) {
+            cname = this.makeup(this.name);
         } else {
-            Logger.info(
-                this,
-                // @checkstyle LineLength (1 line)
-                "Environment '%s/%s' considered active, among %d environment(s)",
-                this.name,
-                available,
-                envs.size()
-            );
-            int suffix = 0;
-            do {
-                available = String.format("%s-%d", this.name, ++suffix);
-            } while (occupied.contains(available));
+            cname = this.name;
         }
-        return available;
+        return cname;
+    }
+
+    /**
+     * Make up a nice CNAME, using provided one as a base.
+     * @param base Base name, which will get a suffix to become unique
+     * @return The CNAME, suggested and not occupied
+     */
+    private String makeup(final String base) {
+        String cname;
+        int suffix = 0;
+        do {
+            cname = String.format("%s-%d", base, ++suffix);
+        } while (this.occupied(cname));
+        return cname;
+    }
+
+    /**
+     * This CNAME is occupied?
+     * @param cname The CNAME to check
+     * @return TRUE if it's occupied
+     */
+    private boolean occupied(final String cname) {
+        return !this.client.checkDNSAvailability(
+            new CheckDNSAvailabilityRequest(cname)
+        ).getAvailable();
     }
 
 }

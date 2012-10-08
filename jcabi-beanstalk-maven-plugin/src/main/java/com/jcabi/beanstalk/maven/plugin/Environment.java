@@ -90,14 +90,14 @@ final class Environment {
             );
         for (ConfigurationSettingsDescription config
             : res.getConfigurationSettings()) {
-            Logger.info(
+            Logger.debug(
                 this,
                 "Environment '%s/%s' settings:",
                 config.getApplicationName(),
                 config.getEnvironmentName()
             );
             for (ConfigurationOptionSetting opt : config.getOptionSettings()) {
-                Logger.info(
+                Logger.debug(
                     this,
                     "  %s/%s: %s",
                     opt.getNamespace(),

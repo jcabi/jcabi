@@ -37,7 +37,6 @@ import com.jcabi.log.Logger;
 import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.project.MavenProject;
 import org.apache.maven.settings.Settings;
 import org.jfrog.maven.annomojo.annotations.MojoExecute;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
@@ -56,17 +55,6 @@ import org.slf4j.impl.StaticLoggerBinder;
 @MojoPhase("deploy")
 @MojoExecute(phase = "deploy")
 public final class DeployMojo extends AbstractMojo {
-
-    /**
-     * Maven project, to be injected by Maven itself.
-     */
-    @MojoParameter(
-        expression = "${project}",
-        required = true,
-        readonly = true,
-        description = "Maven project reference"
-    )
-    private transient MavenProject project;
 
     /**
      * Setting.xml.
@@ -175,6 +163,7 @@ public final class DeployMojo extends AbstractMojo {
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final Application app = new Application(ebt, this.name);
+        app.clean();
         final Environment candidate = app.candidate(
             new OverridingVersion(
                 ebt,
