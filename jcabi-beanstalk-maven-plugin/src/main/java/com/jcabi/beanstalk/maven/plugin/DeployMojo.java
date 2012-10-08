@@ -178,7 +178,9 @@ public final class DeployMojo extends AbstractMojo {
             this.template
         );
         if (candidate.green()) {
-            app.swap();
+            if (!candidate.primary()) {
+                app.swap(candidate);
+            }
         } else {
             candidate.terminate();
         }

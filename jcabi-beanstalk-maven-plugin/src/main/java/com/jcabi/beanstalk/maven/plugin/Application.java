@@ -36,6 +36,7 @@ import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
+import com.amazonaws.services.elasticbeanstalk.model.SwapEnvironmentCNAMEsRequest;
 import com.jcabi.log.Logger;
 
 /**
@@ -68,11 +69,15 @@ final class Application {
     }
 
     /**
-     * Activate candidate environment by swap of CNAMEs, or leave current
-     * environment as available, if it's alone.
+     * Activate candidate environment by swap of CNAMEs.
+     * @param candidate The candidate to make a primary environment
      */
-    public void swap() {
-        this.client.swapEnvironmentCNAMEs();
+    public void swap(final Environment candidate) {
+        this.client.swapEnvironmentCNAMEs(
+            new SwapEnvironmentCNAMEsRequest()
+                .withDestinationEnvironmentName(this.name)
+                .withSourceEnvironmentName(candidate.name())
+        );
         Logger.info(this, "Environments swapped by CNAME update");
     }
 

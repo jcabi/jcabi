@@ -49,6 +49,7 @@ import java.util.concurrent.TimeUnit;
  * @version $Id$
  * @since 0.3
  */
+@SuppressWarnings("PMD.TooManyMethods")
 final class Environment {
 
     /**
@@ -69,24 +70,24 @@ final class Environment {
     /**
      * Environment name.
      */
-    private final transient String name;
+    private final transient String env;
 
     /**
      * Public ctor.
      * @param clnt The client
      * @param application Application name
-     * @param env Environment name
+     * @param name Environment name
      */
     public Environment(final AWSElasticBeanstalk clnt, final String application,
-        final String env) {
+        final String name) {
         this.client = clnt;
         this.app = application;
-        this.name = env;
+        this.env = name;
         final DescribeConfigurationSettingsResult res =
             this.client.describeConfigurationSettings(
                 new DescribeConfigurationSettingsRequest()
                     .withApplicationName(this.app)
-                    .withEnvironmentName(this.name)
+                    .withEnvironmentName(this.env)
             );
         for (ConfigurationSettingsDescription config
             : res.getConfigurationSettings()) {
@@ -106,6 +107,22 @@ final class Environment {
                 );
             }
         }
+    }
+
+    /**
+     * Is it primary environment in the application?
+     * @return TRUE if this environment is attached to the main CNAME
+     */
+    public boolean primary() {
+        return this.env.equals(this.app);
+    }
+
+    /**
+     * Get environment name.
+     * @return Name of it
+     */
+    public String name() {
+        return this.env;
     }
 
     /**
@@ -149,14 +166,14 @@ final class Environment {
                 Logger.format(
                     "environment '%s/%s' can't be terminated (time out)",
                     this.app,
-                    this.name
+                    this.env
                 )
             );
         }
         final TerminateEnvironmentResult res =
             this.client.terminateEnvironment(
                 new TerminateEnvironmentRequest()
-                    .withEnvironmentName(this.name)
+                    .withEnvironmentName(this.env)
                     .withTerminateResources(true)
             );
         Logger.info(
@@ -178,14 +195,14 @@ final class Environment {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest()
                 .withApplicationName(this.app)
-                .withEnvironmentNames(this.name)
+                .withEnvironmentNames(this.env)
         );
         if (res.getEnvironments().isEmpty()) {
             throw new IllegalStateException(
                 String.format(
                     "environment '%s/%s' not found",
                     this.app,
-                    this.name
+                    this.env
                 )
             );
         }
