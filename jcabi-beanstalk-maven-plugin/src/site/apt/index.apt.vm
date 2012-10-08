@@ -39,9 +39,10 @@
 Amazon Elastic Beanstalk Deployment Maven Plugin
 
   The plugin automates deployment of Java WAR applications
-  to Amazon Elastic Beanstalk. The plugin is designed with a minimalistic
+  to {{{http://aws.amazon.com/elasticbeanstalk/}Amazon Elastic Beanstalk}}.
+  The plugin is designed with a minimalistic
   approach, so that you don't need to provide a lot of configuration
-  options. There are a few conventions:
+  options. Instead, there are a few conventions:
 
    * Application name, environment name, and CNAME are always the same
 
@@ -50,6 +51,8 @@ Amazon Elastic Beanstalk Deployment Maven Plugin
 
    * Deployments is done only by
      {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html}CNAME swap}}
+
+   * An application should always contain one running environment
 
   See {{{./usage.html}Usage}} page.
 
