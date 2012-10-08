@@ -72,7 +72,7 @@ final class ServerCredentials implements AWSCredentials {
             );
         }
         this.key = server.getUsername().trim();
-        if (!this.key.matches("[A-F0-9]{20}")) {
+        if (!this.key.matches("[A-Z0-9]{20}")) {
             throw new MojoFailureException(
                 String.format(
                     "Key '%s' for server '%s' is not a valid AWS key",

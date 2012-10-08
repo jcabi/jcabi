@@ -60,8 +60,8 @@ public final class ServerCredentialsTest {
      */
     @Test
     public void fetchesCredentialsFromMavenSettings() throws Exception {
-        final String key = "AAAABBBBCCCCDDDDEEEE";
-        final String secret = "AbCdEfGhAbCdEfGhAbCdEfGhAbCdEfGhAbCdEfGh";
+        final String key = "AAAABBBBCCCCDDDDZ9Y1";
+        final String secret = "AbCdEfGhAbCdEfG/AbCdE7GhAbCdE9Gh+bCdEfGh";
         final Server server = new Server();
         server.setUsername(key);
         server.setPassword(secret);
