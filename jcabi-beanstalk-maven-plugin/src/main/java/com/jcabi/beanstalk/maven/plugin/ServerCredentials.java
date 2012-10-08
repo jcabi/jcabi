@@ -57,7 +57,7 @@ final class ServerCredentials implements AWSCredentials {
     /**
      * Public ctor.
      * @param settings Maven settings
-     * @parma name Name of server ID
+     * @param name Name of server ID
      * @throws MojoFailureException If some error
      */
     public ServerCredentials(final Settings settings, final String name)

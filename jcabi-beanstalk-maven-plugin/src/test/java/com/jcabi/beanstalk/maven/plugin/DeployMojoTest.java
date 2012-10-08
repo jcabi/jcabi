@@ -29,11 +29,10 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import java.io.File;
 import org.junit.Test;
 
 /**
- * Test case for {@link DeployMojo}.
+ * Test case for {@link DeployMojo} (more detailed test is in maven invoker).
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */

@@ -29,22 +29,15 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
-import com.amazonaws.services.elasticbeanstalk.model.S3Location;
-import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
-import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.jcabi.log.Logger;
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 /**
@@ -81,23 +74,23 @@ final class Application {
      * environment as available, if it's alone.
      */
     public void swap() {
-        // this.client.swapEnvironmentCNAMEs();
-        // Logger.info(this, "Environments swapped by CNAME update");
+        this.client.swapEnvironmentCNAMEs();
+        Logger.info(this, "Environments swapped by CNAME update");
     }
 
     /**
      * Create candidate environment.
      * @param version Version to deploy
-     * @param template Configuration template
+     * @param template EBT configuration template
      * @return The environment
      */
     public Environment candidate(final Version version, final String template) {
         final String available = this.available();
         Logger.info(
             this,
-            "Candidate environment name in '%s' app is '%s'",
-            this.name,
-            available
+            "Candidate environment name is in '%s' app",
+            available,
+            this.name
         );
         final CreateEnvironmentResult res = this.client.createEnvironment(
             new CreateEnvironmentRequest(this.name, available)

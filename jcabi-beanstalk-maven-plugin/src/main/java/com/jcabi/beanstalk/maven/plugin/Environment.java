@@ -29,24 +29,17 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.model.ConfigurationOptionSetting;
 import com.amazonaws.services.elasticbeanstalk.model.ConfigurationSettingsDescription;
-import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
-import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
-import com.amazonaws.services.elasticbeanstalk.model.S3Location;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.jcabi.log.Logger;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -83,7 +76,6 @@ final class Environment {
      * @param clnt The client
      * @param application Application name
      * @param env Environment name
-     * @param tmpl Configuration template name
      */
     public Environment(final AWSElasticBeanstalk clnt, final String application,
         final String env) {
@@ -117,23 +109,22 @@ final class Environment {
     }
 
     /**
-     * Environment is in READY state?
-     * @return TRUE if environment is in Ready state, FALSE otherwise
+     * Environment is in Green health?
+     * @return TRUE if environment is in Green health
      */
-    public boolean ready() {
+    public boolean green() {
         return this.until(
             new Environment.Barrier() {
                 @Override
                 public String message() {
-                    return "Green/Ready";
+                    return "Ready state";
                 }
                 @Override
                 public boolean allow(final EnvironmentDescription desc) {
-                    return "Green".equals(desc.getHealth())
-                        && "Ready".equals(desc.getStatus());
+                    return "Ready".equals(desc.getStatus());
                 }
             }
-        );
+        ) && "Green".equals(this.description().getHealth());
     }
 
     /**
@@ -144,7 +135,7 @@ final class Environment {
             new Environment.Barrier() {
                 @Override
                 public String message() {
-                    return "not Terminated and not Launching";
+                    return "not Terminated/Launching";
                 }
                 @Override
                 public boolean allow(final EnvironmentDescription desc) {
@@ -156,7 +147,7 @@ final class Environment {
         if (!ready) {
             throw new IllegalStateException(
                 Logger.format(
-                    "environment '%s/%s' can't be terminated",
+                    "environment '%s/%s' can't be terminated (time out)",
                     this.app,
                     this.name
                 )
@@ -170,7 +161,7 @@ final class Environment {
             );
         Logger.info(
             this,
-            "Environment '%s/%s' will be terminated (label:'%s', status:%s)",
+            "Environment '%s/%s' is terminated (label:'%s', status:%s)",
             res.getApplicationName(),
             res.getEnvironmentName(),
             res.getCNAME(),
@@ -187,36 +178,18 @@ final class Environment {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest()
                 .withApplicationName(this.app)
+                .withEnvironmentNames(this.name)
         );
-        EnvironmentDescription desc = null;
-        final Collection<EnvironmentDescription> envs = res.getEnvironments();
-        final Collection<String> names = new ArrayList<String>(envs.size());
-        for (EnvironmentDescription env : envs) {
-            names.add(
-                String.format(
-                    "%s/%s",
-                    env.getApplicationName(),
-                    env.getEnvironmentName()
-                )
-            );
-            if (!env.getEnvironmentName().equals(this.name)) {
-                continue;
-            }
-            desc = env;
-            break;
-        }
-        if (desc == null) {
+        if (res.getEnvironments().isEmpty()) {
             throw new IllegalStateException(
-                Logger.format(
-                    "environment %s/%s not found amount %d others %[list]s",
+                String.format(
+                    "environment '%s/%s' not found",
                     this.app,
-                    this.name,
-                    res.getEnvironments().size(),
-                    names
+                    this.name
                 )
             );
         }
-        return desc;
+        return res.getEnvironments().get(0);
     }
 
     /**
@@ -262,6 +235,8 @@ final class Environment {
         /**
          * Can we continue?
          * @param desc Description of environment
+         * @return TRUE if we can continue, FALSE if extra cycle of waiting
+         *  is required
          */
         boolean allow(EnvironmentDescription desc);
         /**

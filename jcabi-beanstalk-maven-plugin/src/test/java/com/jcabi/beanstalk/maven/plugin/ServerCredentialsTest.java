@@ -29,33 +29,22 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.PutObjectResult;
-import java.io.File;
-import org.apache.commons.io.FileUtils;
+import com.amazonaws.auth.AWSCredentials;
 import org.apache.maven.plugin.logging.SystemStreamLog;
+import org.apache.maven.settings.Server;
+import org.apache.maven.settings.Settings;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import org.mockito.Mockito;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link OverridingBundle}.
+ * Test case for {@link ServerCredentials}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class OverridingBundleTest {
-
-    /**
-     * Temporary folder.
-     * @checkstyle VisibilityModifier (3 lines)
-     */
-    @Rule
-    public transient TemporaryFolder temp = new TemporaryFolder();
+public final class ServerCredentialsTest {
 
     /**
      * Configure logging.
@@ -66,27 +55,38 @@ public final class OverridingBundleTest {
     }
 
     /**
-     * OverridingBundle can override a file in AWS S3.
+     * ServerCredentials can fetch credentials from Maven settings.
      * @throws Exception If something is wrong
      */
     @Test
-    public void overridesFileInAws() throws Exception {
-        final String bucket = "some-bucket";
-        final String key = "some-key";
-        final File war = this.temp.newFile("temp.war");
-        FileUtils.writeStringToFile(war, "broken JAR file content");
-        final AmazonS3 client = Mockito.mock(AmazonS3.class);
-        Mockito.doReturn(new PutObjectResult())
-            .when(client).putObject(bucket, key, war);
-        final Bundle bundle = new OverridingBundle(client, bucket, key, war);
+    public void fetchesCredentialsFromMavenSettings() throws Exception {
+        final String key = "AAAABBBBCCCCDDDDEEEE";
+        final String secret = "AbCdEfGhAbCdEfGhAbCdEfGhAbCdEfGhAbCdEfGh";
+        final Server server = new Server();
+        server.setUsername(key);
+        server.setPassword(secret);
+        final String name = "srv1";
+        server.setId(name);
+        final Settings settings = new Settings();
+        settings.addServer(server);
+        final AWSCredentials creds = new ServerCredentials(settings, name);
         MatcherAssert.assertThat(
-            bundle.name(),
+            creds.getAWSAccessKeyId(),
             Matchers.equalTo(key)
         );
         MatcherAssert.assertThat(
-            bundle.location().getS3Key(),
-            Matchers.equalTo(key)
+            creds.getAWSSecretKey(),
+            Matchers.equalTo(secret)
         );
+    }
+
+    /**
+     * ServerCredentials can throw when server is not defined.
+     * @throws Exception If something is wrong
+     */
+    @Test(expected = org.apache.maven.plugin.MojoFailureException.class)
+    public void throwsWhenServerIsNotDefined() throws Exception {
+        new ServerCredentials(new Settings(), "foo");
     }
 
 }

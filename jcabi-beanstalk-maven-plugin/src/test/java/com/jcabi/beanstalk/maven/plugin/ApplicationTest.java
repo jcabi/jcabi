@@ -33,10 +33,19 @@ import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
+import com.amazonaws.services.elasticbeanstalk.model.ConfigurationSettingsDescription;
+import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
+import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
+import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.s3.AmazonS3Client;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import java.io.File;
+import java.util.ArrayList;
 import org.apache.commons.io.FileUtils;
+import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assume;
@@ -51,8 +60,19 @@ import org.slf4j.impl.StaticLoggerBinder;
  * Test case for {@link Application}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 public final class ApplicationTest {
+
+    /**
+     * AWS key, if provided in command line.
+     */
+    private static final String AWS_KEY = System.getProperty("aws.key");
+
+    /**
+     * AWS secret, if provided in command line.
+     */
+    private static final String AWS_SECRET = System.getProperty("aws.secret");
 
     /**
      * Temporary folder.
@@ -75,11 +95,35 @@ public final class ApplicationTest {
      */
     @Test
     public void createsNewEnvironmentName() throws Exception {
-        final AWSElasticBeanstalk aws = Mockito.mock(AWSElasticBeanstalk.class);
         final String name = "some-app-name";
         final String template = "some-template";
         final Version version = Mockito.mock(Version.class);
-        final Application app = new Application(aws, name);
+        final AWSElasticBeanstalk ebt = Mockito.mock(AWSElasticBeanstalk.class);
+        Mockito.doReturn(
+            new DescribeEnvironmentsResult().withEnvironments(
+                new ArrayList<EnvironmentDescription>()
+            )
+        ).when(ebt)
+            .describeEnvironments(
+                Mockito.any(DescribeEnvironmentsRequest.class)
+            );
+        Mockito.doReturn(
+            new CreateEnvironmentResult()
+                .withApplicationName(name)
+                .withEnvironmentName(name)
+        ).when(ebt)
+            .createEnvironment(
+                Mockito.any(CreateEnvironmentRequest.class)
+            );
+        Mockito.doReturn(
+            new DescribeConfigurationSettingsResult().withConfigurationSettings(
+                new ArrayList<ConfigurationSettingsDescription>()
+            )
+        ).when(ebt)
+            .describeConfigurationSettings(
+                Mockito.any(DescribeConfigurationSettingsRequest.class)
+            );
+        final Application app = new Application(ebt, name);
         MatcherAssert.assertThat(
             app.candidate(version, template),
             Matchers.notNullValue()
@@ -92,13 +136,10 @@ public final class ApplicationTest {
      */
     @Test
     public void deploysAndReversesWithLiveAccount() throws Exception {
-        Assume.assumeThat(
-            System.getProperty("aws.key"),
-            Matchers.notNullValue()
-        );
+        Assume.assumeThat(ApplicationTest.AWS_KEY, Matchers.notNullValue());
         final AWSCredentials creds = new BasicAWSCredentials(
-            System.getProperty("aws.key"),
-            System.getProperty("aws.secret")
+            ApplicationTest.AWS_KEY,
+            ApplicationTest.AWS_SECRET
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final String name = "netbout";
@@ -116,7 +157,7 @@ public final class ApplicationTest {
                     war
                 )
             ),
-            "netbout"
+            name
         );
         candidate.terminate();
     }

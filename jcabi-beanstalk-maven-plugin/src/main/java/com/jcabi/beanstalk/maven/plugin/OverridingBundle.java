@@ -29,7 +29,6 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.model.S3Location;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.PutObjectResult;
@@ -72,6 +71,7 @@ final class OverridingBundle implements Bundle {
      * @param bckt S3 bucket
      * @param label Location of S3 object, label name
      * @param file WAR file location
+     * @checkstyle ParameterNumber (4 lines)
      */
     public OverridingBundle(final AmazonS3 clnt, final String bckt,
         final String label, final File file) {

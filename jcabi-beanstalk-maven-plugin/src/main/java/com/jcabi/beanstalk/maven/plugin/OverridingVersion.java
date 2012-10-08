@@ -29,7 +29,6 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.model.ApplicationVersionDescription;
 import com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRequest;
@@ -39,8 +38,6 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersions
 import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersionsResult;
 import com.amazonaws.services.elasticbeanstalk.model.S3Location;
 import com.jcabi.log.Logger;
-import java.io.File;
-import java.util.Collection;
 
 /**
  * EBT application version.
@@ -122,22 +119,20 @@ final class OverridingVersion implements Version {
             this.client.describeApplicationVersions(
                 new DescribeApplicationVersionsRequest()
                     .withApplicationName(this.application)
+                    .withVersionLabels(this.name)
             );
-        final Collection<ApplicationVersionDescription> versions =
-            res.getApplicationVersions();
         boolean exists = false;
-        for (ApplicationVersionDescription ver : versions) {
-            if (ver.getVersionLabel().equals(this.name)) {
-                Logger.info(
-                    this,
-                    "Version '%s' already exists for '%s' app: '%s'",
-                    ver.getVersionLabel(),
-                    ver.getApplicationName(),
-                    ver.getDescription()
-                );
-                exists = true;
-                break;
-            }
+        if (!res.getApplicationVersions().isEmpty()) {
+            final ApplicationVersionDescription ver =
+                res.getApplicationVersions().get(0);
+            Logger.info(
+                this,
+                "Version '%s' already exists for '%s' app: '%s'",
+                ver.getVersionLabel(),
+                ver.getApplicationName(),
+                ver.getDescription()
+            );
+            exists = true;
         }
         return exists;
     }

@@ -30,17 +30,14 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
-import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.jcabi.log.Logger;
 import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
-import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
 import org.jfrog.maven.annomojo.annotations.MojoExecute;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
@@ -80,7 +77,7 @@ public final class DeployMojo extends AbstractMojo {
         readonly = true,
         description = "Maven settings.xml reference"
     )
-	private transient Settings settings;
+    private transient Settings settings;
 
     /**
      * Shall we skip execution?
@@ -142,6 +139,7 @@ public final class DeployMojo extends AbstractMojo {
      * WAR file to deploy.
      */
     @MojoParameter(
+        // @checkstyle LineLength (1 line)
         defaultValue = "${project.build.directory}/${project.build.finalName}.war",
         required = true,
         description = "Location of .WAR file to deploy"
@@ -190,7 +188,7 @@ public final class DeployMojo extends AbstractMojo {
             ),
             this.template
         );
-        if (candidate.ready()) {
+        if (candidate.green()) {
             app.swap();
         } else {
             candidate.terminate();

@@ -29,21 +29,20 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
-import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
-import com.amazonaws.services.s3.AmazonS3Client;
-import java.io.File;
-import org.apache.commons.io.FileUtils;
+import com.amazonaws.services.elasticbeanstalk.model.ConfigurationSettingsDescription;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
+import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.Assume;
 import org.junit.BeforeClass;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 import org.slf4j.impl.StaticLoggerBinder;
 
@@ -68,13 +67,33 @@ public final class EnvironmentTest {
      */
     @Test
     public void checksReadinessOfEnvironment() throws Exception {
-        final AWSElasticBeanstalk aws = Mockito.mock(AWSElasticBeanstalk.class);
         final String app = "some-bucket";
         final String name = "some-key";
-        final Environment env = new Environment(aws, app, name);
+        final AWSElasticBeanstalk ebt = Mockito.mock(AWSElasticBeanstalk.class);
+        Mockito.doReturn(
+            new DescribeConfigurationSettingsResult().withConfigurationSettings(
+                new ArrayList<ConfigurationSettingsDescription>()
+            )
+        ).when(ebt)
+            .describeConfigurationSettings(
+                Mockito.any(DescribeConfigurationSettingsRequest.class)
+            );
+        Mockito.doReturn(
+            new DescribeEnvironmentsResult().withEnvironments(
+                Arrays.asList(
+                    new EnvironmentDescription()
+                        .withStatus("Ready")
+                        .withHealth("Red")
+                )
+            )
+        ).when(ebt)
+            .describeEnvironments(
+                Mockito.any(DescribeEnvironmentsRequest.class)
+            );
+        final Environment env = new Environment(ebt, app, name);
         MatcherAssert.assertThat(
-            env.ready(),
-            Matchers.equalTo(true)
+            env.green(),
+            Matchers.equalTo(false)
         );
     }
 
