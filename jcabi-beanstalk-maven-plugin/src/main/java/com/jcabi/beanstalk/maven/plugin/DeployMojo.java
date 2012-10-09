@@ -72,7 +72,7 @@ public final class DeployMojo extends AbstractMojo {
      */
     @MojoParameter(
         defaultValue = "false",
-        required = true,
+        required = false,
         description = "Skips execution"
     )
     private transient boolean skip;
@@ -82,7 +82,7 @@ public final class DeployMojo extends AbstractMojo {
      */
     @MojoParameter(
         defaultValue = "aws.amazon.com",
-        required = true,
+        required = false,
         description = "ID of the server to deploy to, from settings.xml"
     )
     private transient String server;
@@ -129,7 +129,7 @@ public final class DeployMojo extends AbstractMojo {
     @MojoParameter(
         // @checkstyle LineLength (1 line)
         defaultValue = "${project.build.directory}/${project.build.finalName}.war",
-        required = true,
+        required = false,
         description = "Location of .WAR file to deploy"
     )
     private transient File war;
