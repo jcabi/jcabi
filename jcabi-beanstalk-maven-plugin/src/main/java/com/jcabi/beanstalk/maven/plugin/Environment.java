@@ -55,7 +55,7 @@ final class Environment {
     /**
      * How many retries to do.
      */
-    private static final int MAX_ATTEMPTS = 10;
+    private static final int MAX_ATTEMPTS = 30;
 
     /**
      * AWS beanstalk client.
@@ -241,6 +241,14 @@ final class Environment {
                 Thread.currentThread().interrupt();
                 throw new IllegalStateException(ex);
             }
+        }
+        if (!passed) {
+            Logger.warn(
+                this,
+                "Environment failed to reach '%s' after %d mins",
+                barrier.message(),
+                Environment.MAX_ATTEMPTS
+            );
         }
         return passed;
     }
