@@ -163,7 +163,6 @@ public final class DeployMojo extends AbstractMojo {
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final Application app = new Application(ebt, this.name);
-        app.clean();
         final Environment candidate = app.candidate(
             new OverridingVersion(
                 ebt,

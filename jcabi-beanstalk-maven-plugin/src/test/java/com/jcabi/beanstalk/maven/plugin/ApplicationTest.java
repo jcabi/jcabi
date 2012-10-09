@@ -40,6 +40,9 @@ import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.CreateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
+import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.s3.AmazonS3Client;
 import java.io.File;
 import java.util.ArrayList;
@@ -120,6 +123,14 @@ public final class ApplicationTest {
             .describeConfigurationSettings(
                 Mockito.any(DescribeConfigurationSettingsRequest.class)
             );
+        Mockito.doReturn(
+            new DescribeEnvironmentsResult().withEnvironments(
+                new ArrayList<EnvironmentDescription>()
+            )
+        ).when(ebt)
+            .describeEnvironments(
+                Mockito.any(DescribeEnvironmentsRequest.class)
+            );
         final Application app = new Application(ebt, name);
         MatcherAssert.assertThat(
             app.candidate(version, template),
@@ -146,7 +157,6 @@ public final class ApplicationTest {
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final String name = "netbout";
         final Application app = new Application(ebt, name);
-        app.clean();
         final File war = this.temp.newFile("temp.war");
         FileUtils.writeStringToFile(war, "broken JAR file content");
         final Environment candidate = app.candidate(

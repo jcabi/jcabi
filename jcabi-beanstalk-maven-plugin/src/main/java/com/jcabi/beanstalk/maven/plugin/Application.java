@@ -66,6 +66,7 @@ final class Application {
     public Application(final AWSElasticBeanstalk clnt, final String app) {
         this.client = clnt;
         this.name = app;
+        this.clean();
     }
 
     /**
@@ -78,7 +79,12 @@ final class Application {
                 .withDestinationEnvironmentName(this.name)
                 .withSourceEnvironmentName(candidate.name())
         );
-        Logger.info(this, "Environments swapped by CNAME update");
+        Logger.info(
+            this,
+            "Environment '%s' swapped CNAME with '%s'",
+            candidate.name(),
+            this.name
+        );
     }
 
     /**
@@ -123,7 +129,7 @@ final class Application {
      * Remove all abandoned environments.
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
-    public void clean() {
+    private void clean() {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest().withApplicationName(this.name)
         );
