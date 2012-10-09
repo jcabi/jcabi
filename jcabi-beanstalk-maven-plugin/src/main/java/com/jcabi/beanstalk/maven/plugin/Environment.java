@@ -53,9 +53,9 @@ import java.util.concurrent.TimeUnit;
 final class Environment {
 
     /**
-     * How many retries to do.
+     * For how long we can wait until env reaches certain status.
      */
-    private static final int MAX_ATTEMPTS = 30;
+    private static final int MAX_DELAY_MS = 30 * 60 * 1000;
 
     /**
      * AWS beanstalk client.
@@ -216,23 +216,31 @@ final class Environment {
      */
     private boolean until(final Environment.Barrier barrier) {
         boolean passed = false;
-        int retry = 0;
-        while (++retry < Environment.MAX_ATTEMPTS) {
+        final long start = System.currentTimeMillis();
+        while (true) {
             final EnvironmentDescription desc = this.description();
             Logger.info(
                 this,
                 // @checkstyle LineLength (1 line)
-                "Environment '%s/%s': health=%s, status=%s, retry=%dmin of %d (waiting for %s)",
+                "Environment '%s/%s': health=%s, status=%s (waiting for %s, %[ms]s)",
                 desc.getApplicationName(),
                 desc.getEnvironmentName(),
                 desc.getHealth(),
                 desc.getStatus(),
-                retry,
-                Environment.MAX_ATTEMPTS,
-                barrier.message()
+                barrier.message(),
+                System.currentTimeMillis() - start
             );
             if (barrier.allow(desc)) {
                 passed = true;
+                break;
+            }
+            if (System.currentTimeMillis() - start > Environment.MAX_DELAY_MS) {
+                Logger.warn(
+                    this,
+                    "Environment failed to reach '%s' after %[ms]s",
+                    barrier.message(),
+                    System.currentTimeMillis() - start
+                );
                 break;
             }
             try {
@@ -241,14 +249,6 @@ final class Environment {
                 Thread.currentThread().interrupt();
                 throw new IllegalStateException(ex);
             }
-        }
-        if (!passed) {
-            Logger.warn(
-                this,
-                "Environment failed to reach '%s' after %d mins",
-                barrier.message(),
-                Environment.MAX_ATTEMPTS
-            );
         }
         return passed;
     }
