@@ -67,8 +67,7 @@ public final class EnvironmentTest {
      */
     @Test
     public void checksReadinessOfEnvironment() throws Exception {
-        final String app = "some-bucket";
-        final String name = "some-key";
+        final String eid = "some-env-id";
         final AWSElasticBeanstalk ebt = Mockito.mock(AWSElasticBeanstalk.class);
         Mockito.doReturn(
             new DescribeConfigurationSettingsResult().withConfigurationSettings(
@@ -90,7 +89,7 @@ public final class EnvironmentTest {
             .describeEnvironments(
                 Mockito.any(DescribeEnvironmentsRequest.class)
             );
-        final Environment env = new Environment(ebt, app, name);
+        final Environment env = new Environment(ebt, eid);
         MatcherAssert.assertThat(
             env.green(),
             Matchers.equalTo(false)

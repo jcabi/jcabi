@@ -43,9 +43,12 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettin
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
+import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
+import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.amazonaws.services.s3.AmazonS3Client;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.apache.commons.io.FileUtils;
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
@@ -64,6 +67,7 @@ import org.slf4j.impl.StaticLoggerBinder;
  * @version $Id$
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@SuppressWarnings("PMD.ExcessiveImports")
 public final class ApplicationTest {
 
     /**
@@ -125,11 +129,16 @@ public final class ApplicationTest {
             );
         Mockito.doReturn(
             new DescribeEnvironmentsResult().withEnvironments(
-                new ArrayList<EnvironmentDescription>()
+                Arrays.asList(new EnvironmentDescription().withCNAME(""))
             )
         ).when(ebt)
             .describeEnvironments(
                 Mockito.any(DescribeEnvironmentsRequest.class)
+            );
+        Mockito.doReturn(new TerminateEnvironmentResult())
+            .when(ebt)
+            .terminateEnvironment(
+                Mockito.any(TerminateEnvironmentRequest.class)
             );
         final Application app = new Application(ebt, name);
         MatcherAssert.assertThat(

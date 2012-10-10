@@ -111,18 +111,15 @@ final class Application {
         Logger.info(
             this,
             // @checkstyle LineLength (1 line)
-            "Candidate environment '%s/%s' created at CNAME '%s' (status:%s, health:%s)",
+            "Candidate environment '%s/%s/%s' created at CNAME '%s' (status:%s, health:%s)",
             res.getApplicationName(),
             res.getEnvironmentName(),
+            res.getEnvironmentId(),
             res.getCNAME(),
             res.getStatus(),
             res.getHealth()
         );
-        return new Environment(
-            this.client,
-            res.getApplicationName(),
-            res.getEnvironmentName()
-        );
+        return new Environment(this.client, res.getEnvironmentId());
     }
 
     /**
@@ -140,19 +137,17 @@ final class Application {
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "Environment '%s/%s' doesn't belong to CNAME '%s' (CNAME=%s, health=%s, status=%s), terminating...",
+                    "Environment '%s/%s/%s' doesn't belong to CNAME '%s' (CNAME=%s, health=%s, status=%s), terminating...",
                     env.getApplicationName(),
                     env.getEnvironmentName(),
+                    env.getEnvironmentId(),
                     this.name,
                     env.getCNAME(),
                     env.getHealth(),
                     env.getStatus()
                 );
-                new Environment(
-                    this.client,
-                    this.name,
-                    env.getEnvironmentName()
-                ).terminate();
+                new Environment(this.client, env.getEnvironmentId())
+                    .terminate();
             }
         }
     }

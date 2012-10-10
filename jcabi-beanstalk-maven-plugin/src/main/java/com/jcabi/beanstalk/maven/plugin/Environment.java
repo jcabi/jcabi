@@ -63,37 +63,29 @@ final class Environment {
     private final transient AWSElasticBeanstalk client;
 
     /**
-     * Application name.
+     * Environment ID.
      */
-    private final transient String app;
-
-    /**
-     * Environment name.
-     */
-    private final transient String env;
+    private final transient String eid;
 
     /**
      * Public ctor.
      * @param clnt The client
-     * @param application Application name
-     * @param name Environment name
+     * @param idnt Environment ID
      */
-    public Environment(final AWSElasticBeanstalk clnt, final String application,
-        final String name) {
+    public Environment(final AWSElasticBeanstalk clnt, final String idnt) {
         this.client = clnt;
-        this.app = application;
-        this.env = name;
+        this.eid = idnt;
+        final EnvironmentDescription desc = this.description();
         final DescribeConfigurationSettingsResult res =
             this.client.describeConfigurationSettings(
                 new DescribeConfigurationSettingsRequest()
-                    .withApplicationName(this.app)
-                    .withEnvironmentName(this.env)
+                    .withTemplateName(desc.getTemplateName())
             );
         for (ConfigurationSettingsDescription config
             : res.getConfigurationSettings()) {
             Logger.debug(
                 this,
-                "Environment '%s/%s' settings:",
+                "Environment '%s/%s/%s' settings:",
                 config.getApplicationName(),
                 config.getEnvironmentName()
             );
@@ -114,7 +106,10 @@ final class Environment {
      * @return TRUE if this environment is attached to the main CNAME
      */
     public boolean primary() {
-        return this.env.equals(this.app);
+        final EnvironmentDescription desc = this.description();
+        return desc.getCNAME().startsWith(
+            String.format("%s.", desc.getEnvironmentName())
+        );
     }
 
     /**
@@ -122,7 +117,7 @@ final class Environment {
      * @return Name of it
      */
     public String name() {
-        return this.env;
+        return this.description().getEnvironmentName();
     }
 
     /**
@@ -164,23 +159,23 @@ final class Environment {
         if (!ready) {
             throw new IllegalStateException(
                 Logger.format(
-                    "environment '%s/%s' can't be terminated (time out)",
-                    this.app,
-                    this.env
+                    "environment '%s' can't be terminated (time out)",
+                    this.eid
                 )
             );
         }
         final TerminateEnvironmentResult res =
             this.client.terminateEnvironment(
                 new TerminateEnvironmentRequest()
-                    .withEnvironmentName(this.env)
+                    .withEnvironmentId(this.eid)
                     .withTerminateResources(true)
             );
         Logger.info(
             this,
-            "Environment '%s/%s' is terminated (label:'%s', status:%s)",
+            "Environment '%s/%s/%s' is terminated (label:'%s', status:%s)",
             res.getApplicationName(),
             res.getEnvironmentName(),
+            res.getEnvironmentId(),
             res.getCNAME(),
             res.getVersionLabel(),
             res.getStatus()
@@ -194,15 +189,13 @@ final class Environment {
     private EnvironmentDescription description() {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest()
-                .withApplicationName(this.app)
-                .withEnvironmentNames(this.env)
+                .withEnvironmentIds(this.eid)
         );
         if (res.getEnvironments().isEmpty()) {
             throw new IllegalStateException(
                 String.format(
-                    "environment '%s/%s' not found",
-                    this.app,
-                    this.env
+                    "environment '%s' not found",
+                    this.eid
                 )
             );
         }
@@ -222,9 +215,10 @@ final class Environment {
             Logger.info(
                 this,
                 // @checkstyle LineLength (1 line)
-                "Environment '%s/%s': health=%s, status=%s (waiting for %s, %[ms]s)",
+                "Environment '%s/%s/%s': health=%s, status=%s (waiting for %s, %[ms]s)",
                 desc.getApplicationName(),
                 desc.getEnvironmentName(),
+                desc.getEnvironmentId(),
                 desc.getHealth(),
                 desc.getStatus(),
                 barrier.message(),
