@@ -56,7 +56,7 @@ import org.apache.log4j.spi.LoggingEvent;
  * {@code black}, and {@code white}.
  *
  * Besides that you can specify any ANSI color you like with
- * {@code %color-<attr>-<bg>-<fg>{...}}, where
+ * {@code %color-<attr>;<bg>;<fg>{...}}, where
  * {@code <attr>} is a binary mask of attributes,
  * {@code <bg>} is a background color, and
  * {@code <fg>} is a foreground color. Read more about
