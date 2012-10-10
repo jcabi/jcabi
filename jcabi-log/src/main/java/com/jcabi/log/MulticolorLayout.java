@@ -42,7 +42,7 @@ import org.apache.log4j.spi.LoggingEvent;
  *
  * <p>Use it in your LOG4J configuration:
  *
- * <pre>log4j.rootLogger=INFO, CONSOLE
+ * <pre> log4j.rootLogger=INFO, CONSOLE
  * log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
  * log4j.appender.CONSOLE.layout=com.jcabi.log.MulticolorLayout
  * log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%-5p}] %c: %m%n</pre>
