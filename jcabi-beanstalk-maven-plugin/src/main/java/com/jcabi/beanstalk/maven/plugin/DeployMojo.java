@@ -162,28 +162,43 @@ public final class DeployMojo extends AbstractMojo {
             this.server
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
-        final Application app = new Application(ebt, this.name);
-        final Environment candidate = app.candidate(
-            new OverridingVersion(
+        try {
+            this.deploy(
                 ebt,
-                this.name,
-                new OverridingBundle(
-                    new AmazonS3Client(creds),
-                    this.bucket,
-                    this.key,
-                    this.war
+                new OverridingVersion(
+                    ebt,
+                    this.name,
+                    new OverridingBundle(
+                        new AmazonS3Client(creds),
+                        this.bucket,
+                        this.key,
+                        this.war
+                    )
                 )
-            ),
-            this.template
-        );
+            );
+        } finally {
+            ebt.shutdown();
+        }
+    }
+
+    /**
+     * Deploy using this EBT client.
+     * @param ebt EBT client
+     * @param version Version to deploy
+     * @throws MojoFailureException If failed to deploy
+     */
+    private void deploy(final AWSElasticBeanstalk ebt, final Version version)
+        throws MojoFailureException {
+        final Application app = new Application(ebt, this.name);
+        final Environment candidate = app.candidate(version, this.template);
         if (candidate.green()) {
             if (!candidate.primary()) {
                 app.swap(candidate);
             }
         } else {
             candidate.terminate();
+            throw new MojoFailureException("failed to deploy");
         }
-        ebt.shutdown();
     }
 
 }
