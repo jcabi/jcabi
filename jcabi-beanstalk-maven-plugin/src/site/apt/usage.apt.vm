@@ -38,7 +38,16 @@
 
 Deploying WAR projects to Amazon Elastic Beanstalk
 
-  It's easy:
+  {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.deployment.newapp.html}Create
+  new application}} in Amazon Elastic Beanstalk.
+
+  Configure running environment and save configuration template.
+  Don't forget that you can
+  {{{http://aws.typepad.com/aws/2012/10/customize-elastic-beanstalk-using-configuration-files.html}customize
+  your app with configuration files}} as explained
+  {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/customize-containers.html}here}}.
+
+  Configure <<<jcabi-beanstalk-maven-plugin>>> in your <<<pom.xml>>>:
 
 +--
 <project>
@@ -68,9 +77,14 @@ Deploying WAR projects to Amazon Elastic Beanstalk
 </project>
 +--
 
+  Run <<<mvn deploy>>>.
+
   That's all you need. Application name has to be the same as environment
   name and CNAME. Server has to be defined in <<<settings.xml>>> with <<<username>>>
   and <<<password>>> (AWS IAM key and secret key).
+
+  If you have any problems - don't hesitate to submit a ticket
+  to {{{https://github.com/yegor256/jcabi}github}}.
 
 * Cutting Edge Version
 
