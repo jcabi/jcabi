@@ -37,10 +37,17 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettin
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
+import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoDescription;
+import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoType;
+import com.amazonaws.services.elasticbeanstalk.model.RequestEnvironmentInfoRequest;
+import com.amazonaws.services.elasticbeanstalk.model.RetrieveEnvironmentInfoRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.jcabi.log.Logger;
+import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.apache.commons.io.IOUtils;
 
 /**
  * EBT environment.
@@ -56,6 +63,11 @@ final class Environment {
      * For how long we can wait until env reaches certain status.
      */
     private static final int MAX_DELAY_MS = 30 * 60 * 1000;
+
+    /**
+     * Ready status name.
+     */
+    private static final String READY = "Ready";
 
     /**
      * AWS beanstalk client.
@@ -76,29 +88,48 @@ final class Environment {
         this.client = clnt;
         this.eid = idnt;
         final EnvironmentDescription desc = this.description();
-        final DescribeConfigurationSettingsResult res =
-            this.client.describeConfigurationSettings(
-                new DescribeConfigurationSettingsRequest()
-                    .withTemplateName(desc.getTemplateName())
-            );
-        for (ConfigurationSettingsDescription config
-            : res.getConfigurationSettings()) {
-            Logger.debug(
-                this,
-                "Environment '%s/%s/%s' settings:",
-                config.getApplicationName(),
-                config.getEnvironmentName()
-            );
-            for (ConfigurationOptionSetting opt : config.getOptionSettings()) {
+        final String template = desc.getTemplateName();
+        if (template != null) {
+            final DescribeConfigurationSettingsResult res =
+                this.client.describeConfigurationSettings(
+                    new DescribeConfigurationSettingsRequest()
+                        .withApplicationName(desc.getApplicationName())
+                        .withTemplateName(template)
+                );
+            for (ConfigurationSettingsDescription config
+                : res.getConfigurationSettings()) {
                 Logger.debug(
                     this,
-                    "  %s/%s: %s",
-                    opt.getNamespace(),
-                    opt.getOptionName(),
-                    opt.getValue()
+                    "Environment '%s/%s/%s' settings:",
+                    config.getApplicationName(),
+                    config.getEnvironmentName()
                 );
+                for (ConfigurationOptionSetting opt
+                    : config.getOptionSettings()) {
+                    Logger.debug(
+                        this,
+                        "  %s/%s: %s",
+                        opt.getNamespace(),
+                        opt.getOptionName(),
+                        opt.getValue()
+                    );
+                }
             }
         }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        final EnvironmentDescription desc = this.description();
+        return String.format(
+            "%s/%s/%s",
+            desc.getApplicationName(),
+            desc.getEnvironmentName(),
+            desc.getEnvironmentId()
+        );
     }
 
     /**
@@ -133,7 +164,7 @@ final class Environment {
                 }
                 @Override
                 public boolean allow(final EnvironmentDescription desc) {
-                    return "Ready".equals(desc.getStatus());
+                    return Environment.READY.equals(desc.getStatus());
                 }
             }
         ) && "Green".equals(this.description().getHealth());
@@ -183,6 +214,54 @@ final class Environment {
     }
 
     /**
+     * Tail log.
+     * @return Full text of tail log from the environment
+     */
+    public String tail() {
+        final boolean ready = this.until(
+            new Environment.Barrier() {
+                @Override
+                public String message() {
+                    return "Ready to read TAIL report";
+                }
+                @Override
+                public boolean allow(final EnvironmentDescription desc) {
+                    return Environment.READY.equals(desc.getStatus());
+                }
+            }
+        );
+        if (!ready) {
+            throw new IllegalArgumentException("not ready, can't get tail");
+        }
+        this.client.requestEnvironmentInfo(
+            new RequestEnvironmentInfoRequest()
+                .withEnvironmentId(this.eid)
+                .withInfoType(EnvironmentInfoType.Tail)
+        );
+        final RetrieveEnvironmentInfoRequest req =
+            new RetrieveEnvironmentInfoRequest()
+                .withEnvironmentId(this.eid)
+                .withInfoType(EnvironmentInfoType.Tail);
+        List<EnvironmentInfoDescription> infos;
+        do {
+            Logger.info(
+                this,
+                "Waiting for TAIL info of %s",
+                this.eid
+            );
+            infos = this.client
+                .retrieveEnvironmentInfo(req)
+                .getEnvironmentInfo();
+        } while (infos.isEmpty());
+        final EnvironmentInfoDescription desc = infos.get(0);
+        try {
+            return IOUtils.toString(new URL(desc.getMessage()).openStream());
+        } catch (java.io.IOException ex) {
+            throw new IllegalStateException(ex);
+        }
+    }
+
+    /**
      * Get environment description of this.
      * @return The description
      */
@@ -199,7 +278,21 @@ final class Environment {
                 )
             );
         }
-        return res.getEnvironments().get(0);
+        final EnvironmentDescription desc = res.getEnvironments().get(0);
+        Logger.debug(
+            this,
+            // @checkstyle LineLength (1 line)
+            "ID=%s, env=%s, app=%s, CNAME=%s, label=%s, template=%s, status=%s, health=%s",
+            desc.getEnvironmentId(),
+            desc.getEnvironmentName(),
+            desc.getApplicationName(),
+            desc.getCNAME(),
+            desc.getVersionLabel(),
+            desc.getTemplateName(),
+            desc.getStatus(),
+            desc.getHealth()
+        );
+        return desc;
     }
 
     /**

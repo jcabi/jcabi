@@ -46,6 +46,7 @@ import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.jcabi.log.Logger;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -181,6 +182,8 @@ public final class ApplicationTest {
             ),
             name
         );
+        MatcherAssert.assertThat(candidate.green(), Matchers.equalTo(false));
+        Logger.info(this, "tail report:\n%s", candidate.tail());
         candidate.terminate();
     }
 

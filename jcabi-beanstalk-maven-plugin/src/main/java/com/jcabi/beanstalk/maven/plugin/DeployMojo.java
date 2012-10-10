@@ -196,6 +196,15 @@ public final class DeployMojo extends AbstractMojo {
                 app.swap(candidate);
             }
         } else {
+            Logger.error(
+                this,
+                "Failed to deploy %s to %s:",
+                version,
+                candidate
+            );
+            for (String line : candidate.tail().split("\n")) {
+                Logger.info(this, "  %s", line);
+            }
             candidate.terminate();
             throw new MojoFailureException("failed to deploy");
         }

@@ -70,6 +70,14 @@ final class Application {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        return this.name;
+    }
+
+    /**
      * Activate candidate environment by swap of CNAMEs.
      * @param candidate The candidate to make a primary environment
      */
@@ -133,7 +141,8 @@ final class Application {
         final String prefix = String.format("%s.", this.name);
         for (EnvironmentDescription env : res.getEnvironments()) {
             if (!env.getCNAME().startsWith(prefix)
-                && !"Terminated".equals(env.getStatus())) {
+                && !"Terminated".equals(env.getStatus())
+                && !"Terminating".equals(env.getStatus())) {
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)

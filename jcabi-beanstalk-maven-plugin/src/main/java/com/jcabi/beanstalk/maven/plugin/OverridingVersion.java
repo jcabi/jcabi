@@ -86,6 +86,14 @@ final class OverridingVersion implements Version {
      * {@inheritDoc}
      */
     @Override
+    public String toString() {
+        return this.name;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public String label() {
         if (this.exists()) {
             this.remove();
