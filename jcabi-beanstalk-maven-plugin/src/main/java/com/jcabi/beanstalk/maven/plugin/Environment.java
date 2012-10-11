@@ -36,15 +36,20 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettin
 import com.amazonaws.services.elasticbeanstalk.model.DescribeConfigurationSettingsResult;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEventsRequest;
+import com.amazonaws.services.elasticbeanstalk.model.DescribeEventsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoDescription;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoType;
+import com.amazonaws.services.elasticbeanstalk.model.EventDescription;
 import com.amazonaws.services.elasticbeanstalk.model.RequestEnvironmentInfoRequest;
 import com.amazonaws.services.elasticbeanstalk.model.RetrieveEnvironmentInfoRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.jcabi.log.Logger;
 import java.net.URL;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.IOUtils;
@@ -55,6 +60,7 @@ import org.apache.commons.io.IOUtils;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.3
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 @SuppressWarnings("PMD.TooManyMethods")
 final class Environment {
@@ -63,11 +69,6 @@ final class Environment {
      * For how long we can wait until env reaches certain status.
      */
     private static final int MAX_DELAY_MS = 30 * 60 * 1000;
-
-    /**
-     * Ready status name.
-     */
-    private static final String READY = "Ready";
 
     /**
      * AWS beanstalk client.
@@ -156,40 +157,17 @@ final class Environment {
      * @return TRUE if environment is in Green health
      */
     public boolean green() {
-        return this.until(
-            new Environment.Barrier() {
-                @Override
-                public String message() {
-                    return "Ready state";
-                }
-                @Override
-                public boolean allow(final EnvironmentDescription desc) {
-                    return Environment.READY.equals(desc.getStatus());
-                }
-            }
-        ) && "Green".equals(this.description().getHealth());
+        return this.stable() && "Green".equals(this.description().getHealth());
     }
 
     /**
      * Terminate environment.
      */
     public void terminate() {
-        final boolean ready = this.until(
-            new Environment.Barrier() {
-                @Override
-                public String message() {
-                    return "stable status";
-                }
-                @Override
-                public boolean allow(final EnvironmentDescription desc) {
-                    return !desc.getStatus().matches(".*ing$");
-                }
-            }
-        );
-        if (!ready) {
-            throw new IllegalStateException(
-                Logger.format(
-                    "environment '%s' can't be terminated (time out)",
+        if (!this.stable()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "env '%s' is not stable, can't terminate",
                     this.eid
                 )
             );
@@ -215,24 +193,46 @@ final class Environment {
     }
 
     /**
+     * Get latest events.
+     * @return Collection of events
+     */
+    public Collection<String> events() {
+        if (!this.stable()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "env '%s' is not stable, can't get list of events",
+                    this.eid
+                )
+            );
+        }
+        final DescribeEventsResult res = this.client.describeEvents(
+            new DescribeEventsRequest().withEnvironmentId(this.eid)
+        );
+        final Collection<String> events = new LinkedList<String>();
+        for (EventDescription desc : res.getEvents()) {
+            events.add(
+                String.format(
+                    "[%s]: %s",
+                    desc.getSeverity(),
+                    desc.getMessage()
+                )
+            );
+        }
+        return events;
+    }
+
+    /**
      * Tail log.
      * @return Full text of tail log from the environment
      */
     public String tail() {
-        final boolean ready = this.until(
-            new Environment.Barrier() {
-                @Override
-                public String message() {
-                    return "Ready to read TAIL report";
-                }
-                @Override
-                public boolean allow(final EnvironmentDescription desc) {
-                    return Environment.READY.equals(desc.getStatus());
-                }
-            }
-        );
-        if (!ready) {
-            throw new IllegalArgumentException("not ready, can't get tail");
+        if (!this.stable()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "env '%s' is not stable, can't get TAL report",
+                    this.eid
+                )
+            );
         }
         this.client.requestEnvironmentInfo(
             new RequestEnvironmentInfoRequest()
@@ -357,6 +357,25 @@ final class Environment {
          * @return Message to show in log
          */
         String message();
+    }
+
+    /**
+     * Wait for stable state, and return TRUE if achieved.
+     * @return TRUE if environment is stable
+     */
+    private boolean stable() {
+        return this.until(
+            new Environment.Barrier() {
+                @Override
+                public String message() {
+                    return "stable state";
+                }
+                @Override
+                public boolean allow(final EnvironmentDescription desc) {
+                    return !desc.getStatus().matches(".*ing$");
+                }
+            }
+        );
     }
 
 }

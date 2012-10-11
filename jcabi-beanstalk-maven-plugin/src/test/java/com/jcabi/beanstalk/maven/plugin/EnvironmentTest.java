@@ -128,4 +128,20 @@ public final class EnvironmentTest {
         Logger.info(this, "tail report:\n%s", env.tail());
     }
 
+    /**
+     * Environment can collect events from running environment.
+     * @throws Exception If something is wrong
+     */
+    @Test
+    public void collectsEventsFromLiveEnvironment() throws Exception {
+        Assume.assumeThat(EnvironmentTest.AWS_KEY, Matchers.notNullValue());
+        final AWSCredentials creds = new BasicAWSCredentials(
+            EnvironmentTest.AWS_KEY,
+            EnvironmentTest.AWS_SECRET
+        );
+        final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
+        final Environment env = new Environment(ebt, "e-nxmcbf3pvk");
+        Logger.info(this, "events: %[list]s", env.events());
+    }
+
 }

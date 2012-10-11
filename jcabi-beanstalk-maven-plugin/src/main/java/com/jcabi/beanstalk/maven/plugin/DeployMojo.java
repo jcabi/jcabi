@@ -205,6 +205,10 @@ public final class DeployMojo extends AbstractMojo {
             for (String line : candidate.tail().split("\n")) {
                 Logger.info(this, "  %s", line);
             }
+            Logger.error(this, "Latest events:");
+            for (String event : candidate.events()) {
+                Logger.info(this, "   %s", event);
+            }
             candidate.terminate();
             throw new MojoFailureException("failed to deploy");
         }
