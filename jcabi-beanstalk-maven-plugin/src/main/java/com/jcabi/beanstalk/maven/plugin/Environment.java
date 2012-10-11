@@ -178,12 +178,11 @@ final class Environment {
             new Environment.Barrier() {
                 @Override
                 public String message() {
-                    return "not Terminated/Launching";
+                    return "stable status";
                 }
                 @Override
                 public boolean allow(final EnvironmentDescription desc) {
-                    return !"Terminated".equals(desc.getStatus())
-                        && !"Launching".equals(desc.getStatus());
+                    return !desc.getStatus().matches(".*ing$");
                 }
             }
         );
@@ -195,22 +194,24 @@ final class Environment {
                 )
             );
         }
-        final TerminateEnvironmentResult res =
-            this.client.terminateEnvironment(
-                new TerminateEnvironmentRequest()
-                    .withEnvironmentId(this.eid)
-                    .withTerminateResources(true)
+        if (!"Terminated".equals(this.description().getStatus())) {
+            final TerminateEnvironmentResult res =
+                this.client.terminateEnvironment(
+                    new TerminateEnvironmentRequest()
+                        .withEnvironmentId(this.eid)
+                        .withTerminateResources(true)
+                );
+            Logger.info(
+                this,
+                "Environment '%s/%s/%s' is terminated (label:'%s', status:%s)",
+                res.getApplicationName(),
+                res.getEnvironmentName(),
+                res.getEnvironmentId(),
+                res.getCNAME(),
+                res.getVersionLabel(),
+                res.getStatus()
             );
-        Logger.info(
-            this,
-            "Environment '%s/%s/%s' is terminated (label:'%s', status:%s)",
-            res.getApplicationName(),
-            res.getEnvironmentName(),
-            res.getEnvironmentId(),
-            res.getCNAME(),
-            res.getVersionLabel(),
-            res.getStatus()
-        );
+        }
     }
 
     /**

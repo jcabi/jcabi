@@ -130,7 +130,11 @@ public final class ApplicationTest {
             );
         Mockito.doReturn(
             new DescribeEnvironmentsResult().withEnvironments(
-                Arrays.asList(new EnvironmentDescription().withCNAME(""))
+                Arrays.asList(
+                    new EnvironmentDescription()
+                        .withCNAME("")
+                        .withStatus("Ready")
+                )
             )
         ).when(ebt)
             .describeEnvironments(
