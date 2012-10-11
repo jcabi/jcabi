@@ -244,7 +244,16 @@ final class Environment {
                 .withEnvironmentId(this.eid)
                 .withInfoType(EnvironmentInfoType.Tail);
         List<EnvironmentInfoDescription> infos;
+        final long start = System.currentTimeMillis();
         do {
+            if (System.currentTimeMillis() - start > Environment.MAX_DELAY_MS) {
+                throw new IllegalArgumentException(
+                    String.format(
+                        "env '%s' doesn't report it's TAIL, time out",
+                        this.eid
+                    )
+                );
+            }
             Logger.info(
                 this,
                 "Waiting for TAIL info of %s",
