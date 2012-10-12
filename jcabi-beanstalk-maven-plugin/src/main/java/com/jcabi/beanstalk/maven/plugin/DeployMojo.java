@@ -195,7 +195,7 @@ public final class DeployMojo extends AbstractMojo {
             if (candidate.primary()) {
                 Logger.info(
                     this,
-                    "Candidate env '%' is already primary, no need to swap",
+                    "Candidate env '%s' is already primary, no need to swap",
                     candidate
                 );
             } else {
