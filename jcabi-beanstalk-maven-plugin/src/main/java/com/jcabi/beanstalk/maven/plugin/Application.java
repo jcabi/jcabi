@@ -120,6 +120,14 @@ final class Application {
             candidate.name(),
             this.name
         );
+        if (!candidate.primary() || primary.primary()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "Failed to swap, '%s' didn't become a primary env",
+                    candidate
+                )
+            );
+        }
         primary.terminate();
     }
 
