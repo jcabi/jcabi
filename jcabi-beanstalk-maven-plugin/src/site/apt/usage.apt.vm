@@ -58,8 +58,8 @@ Deploying WAR projects to Amazon Elastic Beanstalk
         <artifactId>jcabi-beanstalk-maven-plugin</artifactId>
         <version>${releasedVersion}</version>
         <configuration>
+          <name>example</name>
           <server>aws.amazon.com</server>
-          <application>example</application>
           <bucket>webapps.example.com</bucket>
           <key>example-1.0-SNAPSHOT.war</key>
           <template>example</template>
