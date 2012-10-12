@@ -38,6 +38,8 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.elasticbeanstalk.model.SwapEnvironmentCNAMEsRequest;
 import com.jcabi.log.Logger;
+import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  * EBT application.
@@ -66,7 +68,17 @@ final class Application {
     public Application(final AWSElasticBeanstalk clnt, final String app) {
         this.client = clnt;
         this.name = app;
-        this.clean();
+        for (Environment env : this.environments()) {
+            if (!env.primary() && !env.terminated()) {
+                Logger.info(
+                    this,
+                    "Environment '%s' is not primary in '%s', terminating...",
+                    env,
+                    this.name
+                );
+                env.terminate();
+            }
+        }
     }
 
     /**
@@ -82,9 +94,24 @@ final class Application {
      * @param candidate The candidate to make a primary environment
      */
     public void swap(final Environment candidate) {
+        Environment primary = null;
+        for (Environment env : this.environments()) {
+            if (env.primary()) {
+                primary = env;
+                break;
+            }
+        }
+        if (primary == null) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "Application '%s' doesn't have a primary env, can't merge",
+                    this.name
+                )
+            );
+        }
         this.client.swapEnvironmentCNAMEs(
             new SwapEnvironmentCNAMEsRequest()
-                .withDestinationEnvironmentName(this.name)
+                .withDestinationEnvironmentName(primary.name())
                 .withSourceEnvironmentName(candidate.name())
         );
         Logger.info(
@@ -93,6 +120,7 @@ final class Application {
             candidate.name(),
             this.name
         );
+        primary.terminate();
     }
 
     /**
@@ -131,34 +159,19 @@ final class Application {
     }
 
     /**
-     * Remove all abandoned environments.
+     * Get all environments in this app.
+     * @return Collection of envs
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
-    private void clean() {
+    private Collection<Environment> environments() {
         final DescribeEnvironmentsResult res = this.client.describeEnvironments(
             new DescribeEnvironmentsRequest().withApplicationName(this.name)
         );
-        final String prefix = String.format("%s.", this.name);
-        for (EnvironmentDescription env : res.getEnvironments()) {
-            if (!env.getCNAME().startsWith(prefix)
-                && !"Terminated".equals(env.getStatus())
-                && !"Terminating".equals(env.getStatus())) {
-                Logger.info(
-                    this,
-                    // @checkstyle LineLength (1 line)
-                    "Environment '%s/%s/%s' doesn't belong to CNAME '%s' (CNAME=%s, health=%s, status=%s), terminating...",
-                    env.getApplicationName(),
-                    env.getEnvironmentName(),
-                    env.getEnvironmentId(),
-                    this.name,
-                    env.getCNAME(),
-                    env.getHealth(),
-                    env.getStatus()
-                );
-                new Environment(this.client, env.getEnvironmentId())
-                    .terminate();
-            }
+        final Collection<Environment> envs = new LinkedList<Environment>();
+        for (EnvironmentDescription desc : res.getEnvironments()) {
+            envs.add(new Environment(this.client, desc.getEnvironmentId()));
         }
+        return envs;
     }
 
     /**
