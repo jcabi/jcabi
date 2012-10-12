@@ -198,12 +198,18 @@ public final class DeployMojo extends AbstractMojo {
         } else {
             Logger.error(
                 this,
-                "Failed to deploy %s to %s:",
+                "Failed to deploy %s to %s",
                 version,
                 candidate
             );
-            for (String line : candidate.tail().split("\n")) {
-                Logger.info(this, "  %s", line);
+            if (!candidate.terminated()) {
+                Logger.error(
+                    this,
+                    "TAIL report should explain the cause of failure"
+                );
+                for (String line : candidate.tail().split("\n")) {
+                    Logger.info(this, "  %s", line);
+                }
             }
             Logger.error(this, "Latest events:");
             for (String event : candidate.events()) {

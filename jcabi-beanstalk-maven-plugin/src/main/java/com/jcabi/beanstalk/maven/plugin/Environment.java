@@ -161,6 +161,15 @@ final class Environment {
     }
 
     /**
+     * Is it terminated?
+     * @return Yes or no
+     */
+    public boolean terminated() {
+        return this.stable()
+            && "Terminated".equals(this.description().getStatus());
+    }
+
+    /**
      * Terminate environment.
      */
     public void terminate() {
@@ -172,7 +181,7 @@ final class Environment {
                 )
             );
         }
-        if (!"Terminated".equals(this.description().getStatus())) {
+        if (!this.terminated()) {
             final TerminateEnvironmentResult res =
                 this.client.terminateEnvironment(
                     new TerminateEnvironmentRequest()
@@ -229,7 +238,15 @@ final class Environment {
         if (!this.stable()) {
             throw new IllegalArgumentException(
                 String.format(
-                    "env '%s' is not stable, can't get TAL report",
+                    "env '%s' is not stable, can't get TAIL report",
+                    this.eid
+                )
+            );
+        }
+        if (this.terminated()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "env '%s' is terminated, can't get TAIL report",
                     this.eid
                 )
             );
@@ -249,14 +266,14 @@ final class Environment {
             if (System.currentTimeMillis() - start > Environment.MAX_DELAY_MS) {
                 throw new IllegalArgumentException(
                     String.format(
-                        "env '%s' doesn't report it's TAIL, time out",
+                        "env '%s' doesn't report its TAIL, time out",
                         this.eid
                     )
                 );
             }
             Logger.info(
                 this,
-                "Waiting for TAIL info of %s",
+                "Waiting for TAIL report of %s",
                 this.eid
             );
             infos = this.client
