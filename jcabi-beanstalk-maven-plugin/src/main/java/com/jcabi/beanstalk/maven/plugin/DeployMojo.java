@@ -192,7 +192,13 @@ public final class DeployMojo extends AbstractMojo {
         final Application app = new Application(ebt, this.name);
         final Environment candidate = app.candidate(version, this.template);
         if (candidate.green()) {
-            if (!candidate.primary()) {
+            if (candidate.primary()) {
+                Logger.info(
+                    this,
+                    "Candidate env '%' is already primary, no need to swap",
+                    candidate
+                );
+            } else {
                 app.swap(candidate);
             }
         } else {
@@ -211,7 +217,7 @@ public final class DeployMojo extends AbstractMojo {
                     Logger.info(this, "  %s", line);
                 }
             }
-            Logger.error(this, "Latest events:");
+            Logger.error(this, "Latest events (in reverse order):");
             for (String event : candidate.events()) {
                 Logger.info(this, "   %s", event);
             }

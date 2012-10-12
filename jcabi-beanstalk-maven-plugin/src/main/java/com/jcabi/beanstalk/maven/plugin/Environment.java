@@ -140,7 +140,7 @@ final class Environment {
     public boolean primary() {
         final EnvironmentDescription desc = this.description();
         return desc.getCNAME().startsWith(
-            String.format("%s.", desc.getEnvironmentName())
+            String.format("%s.", desc.getApplicationName())
         );
     }
 
