@@ -5,7 +5,9 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
-[0.3.0] not released yet, use 1.0-SNAPSHOT instead:
+[0.3](#69):
+
+ * #65: [jcabi-beanstalk-maven-plugin](http://www.jcabi.com/jcabi-beanstalk-maven-plugin) introduced
 
 [0.2.0](#60):
 
