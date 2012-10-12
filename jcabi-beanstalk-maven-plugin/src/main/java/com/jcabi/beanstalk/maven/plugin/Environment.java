@@ -126,10 +126,11 @@ final class Environment {
     public String toString() {
         final EnvironmentDescription desc = this.description();
         return String.format(
-            "%s/%s/%s",
+            "%s/%s/%s/%s",
             desc.getApplicationName(),
             desc.getEnvironmentName(),
-            desc.getEnvironmentId()
+            desc.getEnvironmentId(),
+            desc.getCNAME()
         );
     }
 
@@ -139,9 +140,16 @@ final class Environment {
      */
     public boolean primary() {
         final EnvironmentDescription desc = this.description();
-        return desc.getCNAME().startsWith(
+        final boolean primary = desc.getCNAME().startsWith(
             String.format("%s.", desc.getApplicationName())
         );
+        Logger.info(
+            this,
+            "Environment '%s' considered primary: %B",
+            this,
+            primary
+        );
+        return primary;
     }
 
     /**

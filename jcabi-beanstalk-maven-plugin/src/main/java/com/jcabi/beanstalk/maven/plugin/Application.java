@@ -118,13 +118,21 @@ final class Application {
             this,
             "Environment '%s' swapped CNAME with '%s'",
             candidate.name(),
-            this.name
+            primary.name()
         );
-        if (!candidate.primary() || primary.primary()) {
+        if (!candidate.primary()) {
             throw new IllegalArgumentException(
                 String.format(
                     "Failed to swap, '%s' didn't become a primary env",
                     candidate
+                )
+            );
+        }
+        if (primary.primary()) {
+            throw new IllegalArgumentException(
+                String.format(
+                    "Failed to swap, '%s' is still a primary env",
+                    primary
                 )
             );
         }
