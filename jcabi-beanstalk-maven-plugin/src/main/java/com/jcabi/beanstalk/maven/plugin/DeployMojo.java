@@ -176,6 +176,8 @@ public final class DeployMojo extends AbstractMojo {
                     )
                 )
             );
+        } catch (DeploymentException ex) {
+            new Application(ebt, this.name).clean();
         } finally {
             ebt.shutdown();
         }
@@ -190,6 +192,7 @@ public final class DeployMojo extends AbstractMojo {
     private void deploy(final AWSElasticBeanstalk ebt, final Version version)
         throws MojoFailureException {
         final Application app = new Application(ebt, this.name);
+        app.clean();
         final Environment candidate = app.candidate(version, this.template);
         if (candidate.green()) {
             if (candidate.primary()) {

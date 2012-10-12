@@ -169,6 +169,25 @@ final class Environment {
     }
 
     /**
+     * Wait for stable state, and return TRUE if achieved or FALSE if not.
+     * @return TRUE if environment is stable
+     */
+    public boolean stable() {
+        return this.until(
+            new Environment.Barrier() {
+                @Override
+                public String message() {
+                    return "stable state";
+                }
+                @Override
+                public boolean allow(final EnvironmentDescription desc) {
+                    return !desc.getStatus().matches(".*ing$");
+                }
+            }
+        );
+    }
+
+    /**
      * Is it terminated?
      * @return Yes or no
      */
@@ -182,7 +201,7 @@ final class Environment {
      */
     public void terminate() {
         if (!this.stable()) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format(
                     "env '%s' is not stable, can't terminate",
                     this.eid
@@ -215,7 +234,7 @@ final class Environment {
      */
     public Collection<String> events() {
         if (!this.stable()) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format(
                     "env '%s' is not stable, can't get list of events",
                     this.eid
@@ -244,7 +263,7 @@ final class Environment {
      */
     public String tail() {
         if (!this.stable()) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format(
                     "env '%s' is not stable, can't get TAIL report",
                     this.eid
@@ -252,7 +271,7 @@ final class Environment {
             );
         }
         if (this.terminated()) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format(
                     "env '%s' is terminated, can't get TAIL report",
                     this.eid
@@ -272,7 +291,7 @@ final class Environment {
         final long start = System.currentTimeMillis();
         do {
             if (System.currentTimeMillis() - start > Environment.MAX_DELAY_MS) {
-                throw new IllegalArgumentException(
+                throw new DeploymentException(
                     String.format(
                         "env '%s' doesn't report its TAIL, time out",
                         this.eid
@@ -306,7 +325,7 @@ final class Environment {
                 .withEnvironmentIds(this.eid)
         );
         if (res.getEnvironments().isEmpty()) {
-            throw new IllegalStateException(
+            throw new DeploymentException(
                 String.format(
                     "environment '%s' not found",
                     this.eid
@@ -369,7 +388,7 @@ final class Environment {
                 TimeUnit.MINUTES.sleep(1);
             } catch (InterruptedException ex) {
                 Thread.currentThread().interrupt();
-                throw new IllegalStateException(ex);
+                throw new DeploymentException(ex);
             }
         }
         return passed;
@@ -391,25 +410,6 @@ final class Environment {
          * @return Message to show in log
          */
         String message();
-    }
-
-    /**
-     * Wait for stable state, and return TRUE if achieved.
-     * @return TRUE if environment is stable
-     */
-    private boolean stable() {
-        return this.until(
-            new Environment.Barrier() {
-                @Override
-                public String message() {
-                    return "stable state";
-                }
-                @Override
-                public boolean allow(final EnvironmentDescription desc) {
-                    return !desc.getStatus().matches(".*ing$");
-                }
-            }
-        );
     }
 
 }

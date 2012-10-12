@@ -80,7 +80,7 @@ final class OverridingBundle implements Bundle {
         this.key = label;
         this.war = file;
         if (!this.war.exists()) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format("WAR file %s doesn't exist", this.war)
             );
         }

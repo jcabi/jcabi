@@ -146,6 +146,7 @@ public final class ApplicationTest {
                 Mockito.any(TerminateEnvironmentRequest.class)
             );
         final Application app = new Application(ebt, name);
+        app.clean();
         MatcherAssert.assertThat(
             app.candidate(version, template),
             Matchers.notNullValue()

@@ -68,13 +68,26 @@ final class Application {
     public Application(final AWSElasticBeanstalk clnt, final String app) {
         this.client = clnt;
         this.name = app;
+    }
+
+    /**
+     * Clean it up beforehand.
+     */
+    public void clean() {
         for (Environment env : this.environments()) {
-            if (!env.primary() && !env.terminated()) {
+            if (env.primary() && env.green()) {
                 Logger.info(
                     this,
-                    "Environment '%s' is not primary in '%s', terminating...",
-                    env,
-                    this.name
+                    "Environment '%s' is primary and green",
+                    env
+                );
+                continue;
+            }
+            if (!env.terminated()) {
+                Logger.info(
+                    this,
+                    "Environment '%s' is not primary+green, terminating...",
+                    env
                 );
                 env.terminate();
             }
@@ -102,7 +115,7 @@ final class Application {
             }
         }
         if (primary == null) {
-            throw new IllegalArgumentException(
+            throw new DeploymentException(
                 String.format(
                     "Application '%s' doesn't have a primary env, can't merge",
                     this.name
@@ -120,16 +133,16 @@ final class Application {
             candidate.name(),
             primary.name()
         );
-        if (!candidate.primary()) {
-            throw new IllegalArgumentException(
+        if (candidate.stable() && !candidate.primary()) {
+            throw new DeploymentException(
                 String.format(
                     "Failed to swap, '%s' didn't become a primary env",
                     candidate
                 )
             );
         }
-        if (primary.primary()) {
-            throw new IllegalArgumentException(
+        if (primary.stable() && primary.primary()) {
+            throw new DeploymentException(
                 String.format(
                     "Failed to swap, '%s' is still a primary env",
                     primary
