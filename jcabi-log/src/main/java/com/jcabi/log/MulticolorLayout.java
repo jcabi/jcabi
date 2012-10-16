@@ -55,12 +55,21 @@ import org.apache.log4j.spi.LoggingEvent;
  * colors are: {@code red}, {@code blue}, {@code yellow}, {@code cyan},
  * {@code black}, and {@code white}.
  *
- * Besides that you can specify any ANSI color you like with
+ * <p>Besides that you can specify any ANSI color you like with
  * {@code %color-<attr>;<bg>;<fg>{...}}, where
  * {@code <attr>} is a binary mask of attributes,
  * {@code <bg>} is a background color, and
  * {@code <fg>} is a foreground color. Read more about
  * <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape code</a>.
+ *
+ * <p>Maven dependency for this class is
+ * (see <a href="http://www.jcabi.com/jcabi-log/multicolor.html">How
+ * to use with Maven</a> instructions):
+ *
+ * <pre>&lt;dependency&gt;
+ *  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+ *  &lt;artifactId&gt;jcabi-log&lt;/artifactId&gt;
+ * &lt;/dependency&gt;</pre>
  *
  * <p>The class is immutable and thread-safe.
  *
