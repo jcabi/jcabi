@@ -53,6 +53,7 @@
         <module>jcabi-maven-slf4j</module>
         <module>jcabi-velocity</module>
         <module>jcabi-beanstalk-maven-plugin</module>
+        <module>jcabi-heroku-maven-plugin</module>
     </modules>
 
     <description>
@@ -174,6 +175,32 @@
     </pluginRepositories>
 
     <profiles>
+        <profile>
+            <id>jdk7-fix</id>
+            <activation>
+                <file>
+                    <exists>${java.home}/../lib/tools.jar</exists>
+                </file>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <artifactId>maven-plugin-plugin</artifactId>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>com.sun</groupId>
+                                    <artifactId>tools</artifactId>
+                                    <version>1.7</version>
+                                    <scope>system</scope>
+                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
         <profile>
             <activation>
                 <property><name>sonatype</name></property>
