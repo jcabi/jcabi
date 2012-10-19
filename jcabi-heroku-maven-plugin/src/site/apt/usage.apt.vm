@@ -51,7 +51,7 @@ Deploying JAR/WAR/EAR projects to Heroku
   <servers>
     <server>
       <id>heroku.com</id>
-      <privateKey>${user.home}/heroku.pem</privateKey>
+      <privateKey>${user.home}/.ssh/id_rsa</privateKey>
     </server>
   </servers>
 </settings>
@@ -73,7 +73,7 @@ Deploying JAR/WAR/EAR projects to Heroku
           <artifacts>
             <artifact>com.example:example-app:jar::\${project.version}</artifact>
           </artifacts>
-          <procfile>web: java -Xmx256m -jar ./com-example-example-app-\${project.version}.jar \\\${PORT}</procfile>
+          <procfile>web: java -Xmx256m -jar ./com-example-example-app-\${project.version}.jar \${PORT}</procfile>
         </configuration>
         <executions>
           <execution>

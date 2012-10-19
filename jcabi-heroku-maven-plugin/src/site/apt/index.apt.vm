@@ -42,31 +42,31 @@ Heroku Maven Plugin (for continuous delivery/integration)
   to {{{http://www.heroku.com/}Heroku}}. This is the workflow we encourage you
   to use:
 
-   # Maven compiles, tests, checks, and packages an app into WAR/JAR file;
+   [[1]] Maven compiles, tests, checks, and packages an app into WAR/JAR file;
 
-   # {{{http://maven.apache.org/plugins/maven-deploy-plugin/}maven-deploy-plugin}}
+   [[2]] {{{http://maven.apache.org/plugins/maven-deploy-plugin/}maven-deploy-plugin}}
      deploys it into repository;
 
-   # <<<jcabi-heroku-maven-plugin>>> clones Heroku Git repo into
+   [[3]] <<<jcabi-heroku-maven-plugin>>> clones Heroku Git repo into
      <<<./target/heroku>>> directory;
 
-   # <<<pom.xml>>> and <<<settings.xml>>> are being generated
+   [[4]] <<<pom.xml>>> and <<<settings.xml>>> are being generated
      in the local Git repo, using data from the Maven project and
      configured settings;
 
-   # <<<Procfile>>> is being copied from plugin configuration into
+   [[5]] <<<Procfile>>> is being copied from plugin configuration into
      the local Git repo;
 
-   # <<<jcabi-heroku-maven-plugin>>> commits and pushes changes to Heroku;
+   [[6]] <<<jcabi-heroku-maven-plugin>>> commits and pushes changes to Heroku;
 
-   # Heroku runs <<<mvn clean test install>>> and WAR/JAR file is being
+   [[7]] Heroku runs <<<mvn clean test install>>> and WAR/JAR file is being
      downloaded by
      {{{http://maven.apache.org/plugins/maven-dependency-plugin/}maven-dependency-plugin}}
      into the root directory of the application;
 
-   # Heroku runs the application as specified in <<<Procfile>>>;
+   [[8]] Heroku runs the application as specified in <<<Procfile>>>;
 
-   # <<<jcabi-heroku-maven-plugin>>> reports the app status and fails
+   [[9]] <<<jcabi-heroku-maven-plugin>>> reports the app status and fails
      the build if it's not OK.
 
   Pay attention to this feature:

@@ -67,13 +67,35 @@ final class Heroku {
      * @return The repo
      */
     public Repo clone(final File path) {
+        this.git.exec(
+            "clone",
+            String.format("git@heroku.com:%s.git", this.name),
+            path.getAbsolutePath()
+        );
         Logger.info(
             this,
             "Heroku Git repository '%s' cloned into %s",
             this.name,
             path
         );
-        return null;
+        final String gitdir = String.format(
+            "--git-dir=%s/.git",
+            path.getAbsolutePath()
+        );
+        this.git.exec(
+            gitdir,
+            // @checkstyle MultipleStringLiterals (1 line)
+            "config",
+            "user.name",
+            "jcabi-heroku-maven-plugin"
+        );
+        this.git.exec(
+            gitdir,
+            "config",
+            "user.email",
+            "no-reply@jcabi.com"
+        );
+        return new Repo(this.git, path);
     }
 
 }

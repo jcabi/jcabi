@@ -29,85 +29,64 @@
  */
 package com.jcabi.heroku.maven.plugin;
 
-import com.jcabi.log.Logger;
 import java.io.File;
-import java.io.IOException;
-import java.util.Date;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.maven.plugin.logging.SystemStreamLog;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
+import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Local Git repository.
- *
+ * Test case for {@link Heroku}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
- * @since 0.4
  */
-final class Repo {
+public final class HerokuTest {
 
     /**
-     * Git engine.
+     * Temporary folder.
+     * @checkstyle VisibilityModifier (3 lines)
      */
-    private final transient Git git;
+    @Rule
+    public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
-     * Location of repository.
+     * Configure logging.
      */
-    private final transient File path;
-
-    /**
-     * Public ctor.
-     * @param engine Git engine
-     * @param file Location of repository
-     */
-    public Repo(final Git engine, final File file) {
-        this.git = engine;
-        this.path = file;
+    @BeforeClass
+    public static void initLog() {
+        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
     }
 
     /**
-     * Add new file.
-     * @param name Name of it
-     * @param content Content of the file to write (overwrite)
-     * @throws IOException If fails
+     * Heroku can execute simple git command.
+     * @throws Exception If something is wrong
      */
-    public void add(final String name, final String content)
-        throws IOException {
-        final File file = new File(this.path, name);
-        FileUtils.writeStringToFile(file, content);
-        Logger.info(
-            this,
-            "File %s updated with new content",
-            file
+    @Test
+    public void clonesSimpleHerokuRepository() throws Exception {
+        final File key = this.temp.newFile("key.pem");
+        FileUtils.writeStringToFile(
+            key,
+            IOUtils.toString(this.getClass().getResource("test-key.pem"))
         );
-    }
-
-    /**
-     * Commit changes and push.
-     */
-    public void commit() {
-        final String gitdir = String.format(
-            "--git-dir=%s/.git",
-            this.path.getAbsolutePath()
-        );
-        this.git.exec(
-            gitdir,
-            "add",
-            "."
-        );
-        this.git.exec(
-            gitdir,
-            "commit",
-            "-a",
-            "-m",
-            new Date().toString()
-        );
-        this.git.exec(
-            gitdir,
-            "push",
-            "origin",
-            "master"
-        );
-        Logger.info(this, "Repository commited to Heroku");
+        try {
+            new Heroku(
+                new Git(key, this.temp.newFolder("temp")),
+                "jcabi"
+            ).clone(this.temp.newFolder("heroku"));
+            Assert.fail("exception was expected");
+        } catch (IllegalStateException ex) {
+            MatcherAssert.assertThat(
+                ex.getMessage(),
+                Matchers.containsString("Permission denied (publickey)")
+            );
+        }
     }
 
 }

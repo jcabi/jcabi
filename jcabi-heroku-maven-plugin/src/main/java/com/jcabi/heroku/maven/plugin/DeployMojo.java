@@ -219,12 +219,14 @@ public final class DeployMojo extends AbstractMojo {
      * @return List of them
      * @throws MojoFailureException If somethings goes wrong
      */
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     private List<Artifact> deps() throws MojoFailureException {
         final List<Artifact> deps = new ArrayList<Artifact>(
             this.artifacts.length
         );
         for (String coordinates : this.artifacts) {
             final String[] parts = coordinates.split(":");
+            // @checkstyle MagicNumber (1 line)
             if (parts.length != 5) {
                 throw new MojoFailureException(
                     String.format(

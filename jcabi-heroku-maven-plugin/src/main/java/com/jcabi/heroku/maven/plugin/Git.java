@@ -1,0 +1,161 @@
+/**
+ * Copyright (c) 2012, jcabi.com
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met: 1) Redistributions of source code must retain the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer. 2) Redistributions in binary form must reproduce the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer in the documentation and/or other materials provided
+ * with the distribution. 3) Neither the name of the jcabi.com nor
+ * the names of its contributors may be used to endorse or promote
+ * products derived from this software without specific prior written
+ * permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+ * NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+ * THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+package com.jcabi.heroku.maven.plugin;
+
+import com.jcabi.log.Logger;
+import com.sun.jna.Library;
+import com.sun.jna.Native;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+
+/**
+ * Git engine.
+ *
+ * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @version $Id$
+ * @since 0.4
+ */
+final class Git {
+
+    /**
+     * Native library, for {@code chmod()} call.
+     */
+    private static final Git.Libc LIBC =
+        Libc.class.cast(Native.loadLibrary("c", Git.Libc.class));
+
+    /**
+     * Permissions to set to SSH key file.
+     */
+    @SuppressWarnings("PMD.AvoidUsingOctalValues")
+    private static final int PERMS = 0600;
+
+    /**
+     * Default SSH location.
+     */
+    private static final String SSH = "/usr/bin/ssh";
+
+    /**
+     * Location of shell script.
+     */
+    private final transient File script;
+
+    /**
+     * Public ctor.
+     * @param key Location of SSH key
+     * @param temp Temp directory
+     * @throws IOException If some error inside
+     */
+    public Git(final File key, final File temp) throws IOException {
+        if (!new File(Git.SSH).exists()) {
+            throw new IllegalStateException(
+                String.format("SSH is not installed at '%s'", Git.SSH)
+            );
+        }
+        final File kfile = new File(temp, "heroku.pem");
+        FileUtils.copyFile(key, kfile);
+        if (Git.LIBC.chmod(kfile.getAbsolutePath(), Git.PERMS) != 0) {
+            throw new IllegalStateException(
+                String.format("Failed to chmod('%s', 0600)", kfile)
+            );
+        }
+        this.script = new File(temp, "git-ssh.sh");
+        FileUtils.writeStringToFile(
+            this.script,
+            String.format(
+                // @checkstyle LineLength (1 line)
+                "%s -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i '%s' $@",
+                Git.SSH,
+                kfile.getAbsolutePath()
+            )
+        );
+        this.script.setExecutable(true);
+    }
+
+    /**
+     * Execute git with these arguments.
+     * @param args Arguments to pass to it
+     * @return The output
+     */
+    public String exec(final String... args) {
+        final List<String> commands = new ArrayList<String>(args.length + 1);
+        commands.add("git");
+        for (String arg : args) {
+            commands.add(arg);
+        }
+        final ProcessBuilder builder = new ProcessBuilder(commands);
+        builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
+        builder.redirectErrorStream(true);
+        Process process;
+        String stdout;
+        try {
+            process = builder.start();
+            process.waitFor();
+            stdout = IOUtils.toString(process.getInputStream());
+        } catch (java.io.IOException ex) {
+            throw new IllegalStateException(ex);
+        } catch (InterruptedException ex) {
+            throw new IllegalStateException(ex);
+        }
+        Logger.info(
+            this,
+            "%[list]s:\n%s",
+            commands,
+            stdout
+        );
+        if (process.exitValue() != 0) {
+            throw new IllegalStateException(
+                Logger.format(
+                    "Failed to call %[list]s: %s",
+                    commands,
+                    stdout
+                )
+            );
+        }
+        return stdout;
+    }
+
+    /**
+     * Simplified mirror of LIBC native library.
+     */
+    private interface Libc extends Library {
+        /**
+         * Change file permissions.
+         * @param path Path to file
+         * @param mode New mode to set
+         * @return Success/failure response
+         */
+        int chmod(String path, int mode);
+    }
+
+}
