@@ -147,7 +147,7 @@ public final class DeployMojo extends AbstractMojo {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
-        final Heroku heroku = new Heroku(this.key(), this.name);
+        final Heroku heroku = new Heroku(this.git(), this.name);
         final Repo repo = heroku.clone(
             new File(new File(this.project.getBuild().getDirectory()), "heroku")
         );
@@ -175,11 +175,11 @@ public final class DeployMojo extends AbstractMojo {
     }
 
     /**
-     * Get heroku key file location.
-     * @return Location of it
+     * Get git engine.
+     * @return The engine
      * @throws MojoFailureException If somethings goes wrong
      */
-    private File key() throws MojoFailureException {
+    private Git git() throws MojoFailureException {
         final Server srv = this.settings.getServer(this.server);
         if (srv == null) {
             throw new MojoFailureException(
@@ -204,7 +204,14 @@ public final class DeployMojo extends AbstractMojo {
                 String.format("SSH key file '%s' doesn't exist", file)
             );
         }
-        return file;
+        try {
+            return new Git(
+                file,
+                new File(this.project.getBuild().getDirectory())
+            );
+        } catch (java.io.IOException ex) {
+            throw new MojoFailureException("failed to initialize git", ex);
+        }
     }
 
     /**

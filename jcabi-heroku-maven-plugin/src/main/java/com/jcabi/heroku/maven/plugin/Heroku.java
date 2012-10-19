@@ -42,9 +42,9 @@ import java.io.File;
 final class Heroku {
 
     /**
-     * Location of SSH key.
+     * Git engine.
      */
-    private final transient File key;
+    private final transient Git git;
 
     /**
      * Project name in Heroku.
@@ -53,11 +53,11 @@ final class Heroku {
 
     /**
      * Public ctor.
-     * @param file Location of SSH key
+     * @param engine Git engine
      * @param project Project name in Heroku
      */
-    public Heroku(final File file, final String project) {
-        this.key = file;
+    public Heroku(final Git engine, final String project) {
+        this.git = engine;
         this.name = project;
     }
 
