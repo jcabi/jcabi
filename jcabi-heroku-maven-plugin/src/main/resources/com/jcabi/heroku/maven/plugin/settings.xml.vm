@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+    http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        #foreach ($server in $settings.getServers())
+            <server>
+                <id>$server.getId()</id>
+                <username>$server.getUsername()</username>
+                <password>$server.getPassword()</password>
+                <privateKey>$server.getPrivateKey()</privateKey>
+                <passphrase>$server.getPassphrase()</passphrase>
+                <filePermissions>$server.getFilePermissions()</filePermissions>
+                <directoryPermissions>$server.getDirectoryPermissions()</directoryPermissions>
+            </server>
+        #end
+    </servers>
+</settings>

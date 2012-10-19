@@ -30,9 +30,16 @@
 package com.jcabi.heroku.maven.plugin;
 
 import com.jcabi.log.Logger;
+import com.jcabi.velocity.VelocityPage;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.maven.artifact.Artifact;
+import org.apache.maven.artifact.DefaultArtifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.project.MavenProject;
+import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
 import org.jfrog.maven.annomojo.annotations.MojoExecute;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
@@ -51,6 +58,17 @@ import org.slf4j.impl.StaticLoggerBinder;
 @MojoPhase("deploy")
 @MojoExecute(phase = "deploy")
 public final class DeployMojo extends AbstractMojo {
+
+    /**
+     * Maven project.
+     */
+    @MojoParameter(
+        expression = "${project}",
+        required = true,
+        readonly = true,
+        description = "Maven project"
+    )
+    private transient MavenProject project;
 
     /**
      * Setting.xml.
@@ -74,13 +92,14 @@ public final class DeployMojo extends AbstractMojo {
     private transient boolean skip;
 
     /**
-     * Location of SSH key file.
+     * Server ID from settings.xml.
      */
     @MojoParameter(
-        required = true,
-        description = "SSH key file name"
+        defaultValue = "heroku.com",
+        required = false,
+        description = "Server ID from settings.xml"
     )
-    private transient File key;
+    private transient String server;
 
     /**
      * Application name.
@@ -128,11 +147,99 @@ public final class DeployMojo extends AbstractMojo {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
-        if (!this.key.exists()) {
+        final Heroku heroku = new Heroku(this.key(), this.name);
+        final Repo repo = heroku.clone(
+            new File(new File(this.project.getBuild().getDirectory()), "heroku")
+        );
+        try {
+            repo.add(
+                "settings.xml",
+                new VelocityPage(
+                    "com/jcabi/heroku/maven/plugin/settings.xml.vm"
+                ).set("settings", this.settings).toString()
+            );
+            repo.add(
+                "pom.xml",
+                new VelocityPage(
+                    "com/jcabi/heroku/maven/plugin/pom.xml.vm"
+                ).set("project", this.project)
+                    .set("deps", this.deps())
+                    .set("timestamp", System.currentTimeMillis())
+                    .toString()
+            );
+            repo.add("Procfile", this.procfile.trim());
+        } catch (java.io.IOException ex) {
+            throw new MojoFailureException("failed to save files", ex);
+        }
+        repo.commit();
+    }
+
+    /**
+     * Get heroku key file location.
+     * @return Location of it
+     * @throws MojoFailureException If somethings goes wrong
+     */
+    private File key() throws MojoFailureException {
+        final Server srv = this.settings.getServer(this.server);
+        if (srv == null) {
             throw new MojoFailureException(
-                String.format("SSH key file '%s' doesn't exist", this.key)
+                String.format(
+                    "Server '%s' not found in settings.xml",
+                    this.server
+                )
             );
         }
+        final String location = srv.getPrivateKey();
+        if (location == null || location.isEmpty()) {
+            throw new MojoFailureException(
+                String.format(
+                    "privateKey is not defined for '%s' server in settings.xml",
+                    srv.getId()
+                )
+            );
+        }
+        final File file = new File(location);
+        if (!file.exists()) {
+            throw new MojoFailureException(
+                String.format("SSH key file '%s' doesn't exist", file)
+            );
+        }
+        return file;
+    }
+
+    /**
+     * Create a collection of artifacts.
+     * @return List of them
+     * @throws MojoFailureException If somethings goes wrong
+     */
+    private List<Artifact> deps() throws MojoFailureException {
+        final List<Artifact> deps = new ArrayList<Artifact>(
+            this.artifacts.length
+        );
+        for (String coordinates : this.artifacts) {
+            final String[] parts = coordinates.split(":");
+            if (parts.length != 5) {
+                throw new MojoFailureException(
+                    String.format(
+                        "Maven artifact coordinates '%s' is not absolute",
+                        coordinates
+                    )
+                );
+            }
+            deps.add(
+                new DefaultArtifact(
+                    parts[0],
+                    parts[1],
+                    // @checkstyle MagicNumber (5 lines)
+                    parts[2],
+                    "runtime",
+                    parts[3],
+                    parts[4],
+                    null
+                )
+            );
+        }
+        return deps;
     }
 
 }

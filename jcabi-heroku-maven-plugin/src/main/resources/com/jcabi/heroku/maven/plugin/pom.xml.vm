@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>${project.getGroupId()}</groupId>
+    <artifactId>${project.getArtifactId()}</artifactId>
+    <version>${project.getVersion()}-${timestamp}</version>
+    <packaging>pom</packaging>
+    <repositories>
+        #foreach ($repository in $project.getRepositories())
+            <repository>
+                <id>${repository.getId()}</id>
+                <url>${repository.getUrl()}</url>
+                <layout>${repository.getLayout()}</layout>
+            </repository>
+        #end
+    </repositories>
+    <build>
+        <extensions>
+            #set($build = $project.getBuild())
+            #foreach ($ext in $build.getExtensions())
+                <extension>
+                    <groupId>${ext.getGroupId()}</groupId>
+                    <artifactId>${ext.getArtifactId()}</artifactId>
+                    <version>${ext.getVersion()}</version>
+                </extension>
+            #end
+        </extensions>
+        <plugins>
+        <plugin>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.4</version>
+            <executions>
+                <execution>
+                    <id>copy</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                    <configuration>
+                        <artifactItems>
+                            #foreach ($item in $deps)
+                                <artifactItem>
+                                    <groupId>${item.getGroupId()}</groupId>
+                                    <artifactId>${item.getArtifactId()}</artifactId>
+                                    <version>${item.getVersion()}</version>
+                                    <classifier>${item.getClassifier()}</classifier>
+                                    <type>${item.getType()}</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${basedir}</outputDirectory>
+                                </artifactItem>
+                            #end
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        </plugins>
+    </build>
+</project>
