@@ -5,6 +5,10 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
+[0.4](#71):
+
+ * #70: [jcabi-heroku-maven-plugin](http://www.jcabi.com/jcabi-heroku-maven-plugin) introduced
+
 [0.3](#69):
 
  * #65: [jcabi-beanstalk-maven-plugin](http://www.jcabi.com/jcabi-beanstalk-maven-plugin) introduced
