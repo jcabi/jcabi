@@ -6,26 +6,24 @@
     <servers>
         #foreach ($server in $settings.getServers())
             <server>
-                #set($id = $server.getId())
-                #if ($id)
-                    <id>${id}</id>
+                #if ($server.getId())
+                    <id>${server.getId()}</id>
                 #end
-                #set($username = $server.getUsername())
-                #if ($username)
-                    <username>${username}</username>
+                #if ($server.getUsername())
+                    <username>${server.getUsername()}</username>
                 #end
-                #set($password = $server.getPassword())
-                #if ($password)
-                    <password>${password}</password>
+                #if ($server.getPassword())
+                    <password>${server.getPassword()}</password>
                 #end
-                <!--
-                privateKey is not supported at the moment,
-                since we're not transferring this file to Heroku.
-                Maybe it's a good feature to implement in the future
-                -->
-                #set($passphrase = $server.getPassphrase())
-                #if ($passphrase)
-                    <passphrase>${passphrase}</passphrase>
+                #if ($server.getPrivateKey())
+                    <!--
+                    privateKey is not supported at the moment,
+                    since we're not transferring this file to Heroku.
+                    Maybe it's a good feature to implement in the future
+                    -->
+                #end
+                #if ($server.getPassphrase())
+                    <passphrase>${server.getPassphrase()}</passphrase>
                 #end
             </server>
         #end

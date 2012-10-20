@@ -41,7 +41,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.CountDownLatch;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
@@ -164,14 +164,14 @@ final class Git {
         final BufferedReader reader = new BufferedReader(
             new InputStreamReader(process.getInputStream())
         );
-        final AtomicBoolean done = new AtomicBoolean(false);
+        final CountDownLatch done = new CountDownLatch(1);
         final StringBuffer stdout = new StringBuffer();
         new Thread(
             new VerboseRunnable(
                 new Callable<Void>() {
                     @Override
                     public Void call() throws Exception {
-                        while (!done.get()) {
+                        while (true) {
                             final String line = reader.readLine();
                             if (line == null) {
                                 break;
@@ -179,6 +179,7 @@ final class Git {
                             Logger.info(Git.class, ">> %s", line);
                             stdout.append(line);
                         }
+                        done.countDown();
                         return null;
                     }
                 },
@@ -188,7 +189,7 @@ final class Git {
         try {
             process.waitFor();
         } finally {
-            done.set(true);
+            done.await();
             IOUtils.closeQuietly(reader);
         }
         return stdout.toString();

@@ -50,6 +50,7 @@
                                 <configuration>
                                     <debug>false</debug>
                                     <projectsDirectory>&#36;{basedir}</projectsDirectory>
+                                    <disableReports>true</disableReports>
                                     <settingsFile>&#36;{basedir}/settings.xml</settingsFile>
                                     <showErrors>true</showErrors>
                                     <showVersion>false</showVersion>
@@ -100,6 +101,7 @@
                                                 <type>${item.getType()}</type>
                                                 <overWrite>true</overWrite>
                                                 <outputDirectory>&#36;{basedir}</outputDirectory>
+                                                <destFileName>${item.getArtifactId()}.${item.getType()}</destFileName>
                                             </artifactItem>
                                         #end
                                     </artifactItems>

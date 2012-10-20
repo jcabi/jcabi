@@ -73,7 +73,7 @@ Deploying JAR/WAR/EAR projects to Heroku
           <artifacts>
             <artifact>com.example:example-app:jar::\${project.version}</artifact>
           </artifacts>
-          <procfile>web: java -Xmx256m -jar ./com-example-example-app-\${project.version}.jar \${PORT}</procfile>
+          <procfile>web: java -Xmx256m -jar ./example-app.jar \${PORT}</procfile>
         </configuration>
         <executions>
           <execution>
@@ -92,6 +92,7 @@ Deploying JAR/WAR/EAR projects to Heroku
   directory of the application (in Heroku server).
   {{{http://maven.apache.org/pom.html#Maven_Coordinates}Maven coordinates}}
   are used to specify artifact locations (always five parts).
+  Downloaded artifacts are renamed to <<<artifactId.packaging>>> format.
 
   Run <<<mvn deploy>>>.
 
