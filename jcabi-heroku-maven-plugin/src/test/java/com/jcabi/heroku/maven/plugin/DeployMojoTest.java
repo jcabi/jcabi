@@ -69,15 +69,23 @@ public final class DeployMojoTest {
     public void velocityTemplateCorrectlyBuildsSettingsXml() throws Exception {
         final Server server = new Server();
         server.setUsername("john");
+        server.setPassword("xxx");
         final Settings settings = new Settings();
         settings.addServer(server);
+        final String nspace = "http://maven.apache.org/SETTINGS/1.0.0";
         MatcherAssert.assertThat(
             new VelocityPage(
                 "com/jcabi/heroku/maven/plugin/settings.xml.vm"
             ).set("settings", settings).toString(),
-            XhtmlMatchers.hasXPath(
-                "//ns1:server[ns1:username='john']",
-                "http://maven.apache.org/SETTINGS/1.0.0"
+            Matchers.allOf(
+                XhtmlMatchers.hasXPath(
+                    "//ns1:server[ns1:username='john' and ns1:password='xxx']",
+                    nspace
+                ),
+                XhtmlMatchers.hasXPath(
+                    "//ns1:server[ns1:username='john' and not(ns1:privateKey)]",
+                    nspace
+                )
             )
         );
     }
