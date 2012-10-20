@@ -68,6 +68,7 @@ final class Heroku {
      */
     public Repo clone(final File path) {
         this.git.exec(
+            path.getParentFile(),
             "clone",
             String.format("git@heroku.com:%s.git", this.name),
             path.getAbsolutePath()
@@ -78,19 +79,15 @@ final class Heroku {
             this.name,
             path
         );
-        final String gitdir = String.format(
-            "--git-dir=%s/.git",
-            path.getAbsolutePath()
-        );
         this.git.exec(
-            gitdir,
+            path,
             // @checkstyle MultipleStringLiterals (1 line)
             "config",
             "user.name",
             "jcabi-heroku-maven-plugin"
         );
         this.git.exec(
-            gitdir,
+            path,
             "config",
             "user.email",
             "no-reply@jcabi.com"

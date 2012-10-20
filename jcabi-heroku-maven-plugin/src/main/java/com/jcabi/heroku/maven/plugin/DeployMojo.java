@@ -41,7 +41,6 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
-import org.jfrog.maven.annomojo.annotations.MojoExecute;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
@@ -56,7 +55,6 @@ import org.slf4j.impl.StaticLoggerBinder;
  */
 @MojoGoal("deploy")
 @MojoPhase("deploy")
-@MojoExecute(phase = "deploy")
 public final class DeployMojo extends AbstractMojo {
 
     /**
@@ -216,8 +214,13 @@ public final class DeployMojo extends AbstractMojo {
 
     /**
      * Create a collection of artifacts.
+     *
+     * <p>Coordinates should be formatted as
+     * {@code groupId:artifactId:packaging:classifier:version}.
+     *
      * @return List of them
      * @throws MojoFailureException If somethings goes wrong
+     * @see <a href="http://maven.apache.org/pom.html#Maven_Coordinates">Maven coordinates</a>
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     private List<Artifact> deps() throws MojoFailureException {
@@ -236,14 +239,14 @@ public final class DeployMojo extends AbstractMojo {
                 );
             }
             deps.add(
+                // @checkstyle MagicNumber (10 lines)
                 new DefaultArtifact(
                     parts[0],
                     parts[1],
-                    // @checkstyle MagicNumber (5 lines)
-                    parts[2],
-                    "runtime",
-                    parts[3],
                     parts[4],
+                    "runtime",
+                    parts[2],
+                    parts[3],
                     null
                 )
             );

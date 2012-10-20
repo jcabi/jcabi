@@ -29,15 +29,22 @@
  */
 package com.jcabi.heroku.maven.plugin;
 
+import com.jcabi.aspects.RetryOnFailure;
 import com.jcabi.log.Logger;
+import com.jcabi.log.VerboseRunnable;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Git engine.
@@ -45,6 +52,7 @@ import org.apache.commons.io.IOUtils;
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.4
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 final class Git {
 
@@ -104,45 +112,86 @@ final class Git {
 
     /**
      * Execute git with these arguments.
+     * @param dir In which directory to run it
      * @param args Arguments to pass to it
-     * @return The output
+     * @return Stdout
      */
-    public String exec(final String... args) {
+    @RetryOnFailure
+    public String exec(final File dir, final String... args) {
         final List<String> commands = new ArrayList<String>(args.length + 1);
         commands.add("git");
         for (String arg : args) {
             commands.add(arg);
         }
+        Logger.info(this, "%s:...", StringUtils.join(commands, " "));
         final ProcessBuilder builder = new ProcessBuilder(commands);
+        builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
         builder.redirectErrorStream(true);
         Process process;
         String stdout;
         try {
             process = builder.start();
-            process.waitFor();
-            stdout = IOUtils.toString(process.getInputStream());
+            process.getOutputStream().close();
+            stdout = this.waitFor(process);
         } catch (java.io.IOException ex) {
             throw new IllegalStateException(ex);
         } catch (InterruptedException ex) {
             throw new IllegalStateException(ex);
         }
-        Logger.info(
-            this,
-            "%[list]s:\n%s",
-            commands,
-            stdout
-        );
-        if (process.exitValue() != 0) {
+        final int code = process.exitValue();
+        if (code != 0) {
             throw new IllegalStateException(
                 Logger.format(
-                    "Failed to call %[list]s: %s",
+                    "Non-zero exit code %d from %[list]s: %s",
+                    code,
                     commands,
                     stdout
                 )
             );
         }
         return stdout;
+    }
+
+    /**
+     * Wait for the process to stop, logging its output in parallel.
+     * @param process The process to wait for
+     * @return Stdout produced by the process
+     * @throws InterruptedException If interrupted in between
+     */
+    @SuppressWarnings("PMD.DoNotUseThreads")
+    private String waitFor(final Process process) throws InterruptedException {
+        final BufferedReader reader = new BufferedReader(
+            new InputStreamReader(process.getInputStream())
+        );
+        final AtomicBoolean done = new AtomicBoolean(false);
+        final StringBuffer stdout = new StringBuffer();
+        new Thread(
+            new VerboseRunnable(
+                new Callable<Void>() {
+                    @Override
+                    public Void call() throws Exception {
+                        while (!done.get()) {
+                            final String line = reader.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            Logger.info(Git.class, ">> %s", line);
+                            stdout.append(line);
+                        }
+                        return null;
+                    }
+                },
+                false
+            )
+        ).start();
+        try {
+            process.waitFor();
+        } finally {
+            done.set(true);
+            IOUtils.closeQuietly(reader);
+        }
+        return stdout.toString();
     }
 
     /**

@@ -114,6 +114,10 @@ public final class DeployMojoTest {
                 XhtmlMatchers.hasXPath(
                     "//ns1:artifactItem[ns1:groupId='fooo']",
                     nspace
+                ),
+                XhtmlMatchers.hasXPath(
+                    "//ns1:artifactItem[ns1:outputDirectory='${basedir}']",
+                    nspace
                 )
             )
         );

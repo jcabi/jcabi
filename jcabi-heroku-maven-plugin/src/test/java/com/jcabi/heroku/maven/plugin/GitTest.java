@@ -70,9 +70,11 @@ public final class GitTest {
     public void clonesSimpleGitRepository() throws Exception {
         final File key = this.temp.newFile("key.pem");
         FileUtils.writeStringToFile(key, "");
-        final Git git = new Git(key, this.temp.newFolder("temp-folder"));
+        final File folder = this.temp.newFolder("temp-folder");
+        final Git git = new Git(key, folder);
         MatcherAssert.assertThat(
             git.exec(
+                folder.getParentFile(),
                 "init",
                 this.temp.newFolder("for-git").getPath()
             ),

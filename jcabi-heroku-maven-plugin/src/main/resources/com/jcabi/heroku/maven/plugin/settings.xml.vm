@@ -6,13 +6,13 @@
     <servers>
         #foreach ($server in $settings.getServers())
             <server>
-                <id>$server.getId()</id>
-                <username>$server.getUsername()</username>
-                <password>$server.getPassword()</password>
-                <privateKey>$server.getPrivateKey()</privateKey>
-                <passphrase>$server.getPassphrase()</passphrase>
-                <filePermissions>$server.getFilePermissions()</filePermissions>
-                <directoryPermissions>$server.getDirectoryPermissions()</directoryPermissions>
+                <id>${server.getId()}</id>
+                <username>${server.getUsername()}</username>
+                <password>${server.getPassword()}</password>
+                <privateKey>${server.getPrivateKey()}</privateKey>
+                <passphrase>${server.getPassphrase()}</passphrase>
+                <filePermissions>${server.getFilePermissions()}</filePermissions>
+                <directoryPermissions>${server.getDirectoryPermissions()}</directoryPermissions>
             </server>
         #end
     </servers>

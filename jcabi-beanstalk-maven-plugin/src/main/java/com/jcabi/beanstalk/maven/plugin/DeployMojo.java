@@ -38,7 +38,6 @@ import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.settings.Settings;
-import org.jfrog.maven.annomojo.annotations.MojoExecute;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
@@ -53,7 +52,6 @@ import org.slf4j.impl.StaticLoggerBinder;
  */
 @MojoGoal("deploy")
 @MojoPhase("deploy")
-@MojoExecute(phase = "deploy")
 public final class DeployMojo extends AbstractMojo {
 
     /**
