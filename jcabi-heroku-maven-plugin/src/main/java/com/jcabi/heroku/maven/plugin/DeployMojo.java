@@ -112,8 +112,7 @@ public final class DeployMojo extends AbstractMojo {
      * Content of {@code Procfile}.
      */
     @MojoParameter(
-        defaultValue = "",
-        required = false,
+        required = true,
         description = "Content of Procfile"
     )
     private transient String procfile;
@@ -122,7 +121,7 @@ public final class DeployMojo extends AbstractMojo {
      * List of artifacts to download.
      */
     @MojoParameter(
-        required = false,
+        required = true,
         description = "Artifacts to download during deployment"
     )
     private transient String[] artifacts;
@@ -224,6 +223,11 @@ public final class DeployMojo extends AbstractMojo {
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     private List<Artifact> deps() throws MojoFailureException {
+        if (this.artifacts.length == 0) {
+            throw new MojoFailureException(
+                "At least one artifact should be configured"
+            );
+        }
         final List<Artifact> deps = new ArrayList<Artifact>(
             this.artifacts.length
         );
