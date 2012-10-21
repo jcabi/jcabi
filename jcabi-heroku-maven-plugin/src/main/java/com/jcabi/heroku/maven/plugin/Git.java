@@ -32,8 +32,6 @@ package com.jcabi.heroku.maven.plugin;
 import com.jcabi.aspects.RetryOnFailure;
 import com.jcabi.log.Logger;
 import com.jcabi.log.VerboseRunnable;
-import com.sun.jna.Library;
-import com.sun.jna.Native;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -55,12 +53,6 @@ import org.apache.commons.lang.StringUtils;
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 final class Git {
-
-    /**
-     * Native library, for {@code chmod()} call.
-     */
-    private static final Git.Libc LIBC =
-        Libc.class.cast(Native.loadLibrary("c", Git.Libc.class));
 
     /**
      * Permissions to set to SSH key file.
@@ -92,11 +84,7 @@ final class Git {
         }
         final File kfile = new File(temp, "heroku.pem");
         FileUtils.copyFile(key, kfile);
-        if (Git.LIBC.chmod(kfile.getAbsolutePath(), Git.PERMS) != 0) {
-            throw new IllegalStateException(
-                String.format("Failed to chmod('%s', 0600)", kfile)
-            );
-        }
+        this.chmod(kfile, Git.PERMS);
         this.script = new File(temp, "git-ssh.sh");
         FileUtils.writeStringToFile(
             this.script,
@@ -137,6 +125,7 @@ final class Git {
         } catch (java.io.IOException ex) {
             throw new IllegalStateException(ex);
         } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
             throw new IllegalStateException(ex);
         }
         final int code = process.exitValue();
@@ -196,16 +185,39 @@ final class Git {
     }
 
     /**
-     * Simplified mirror of LIBC native library.
+     * Change file permissions.
+     * @param file The file to change
+     * @param mode Permissions to set
+     * @throws IOException If some error inside
+     * @see http://stackoverflow.com/questions/664432
+     * @see http://stackoverflow.com/questions/1556119
      */
-    private interface Libc extends Library {
-        /**
-         * Change file permissions.
-         * @param path Path to file
-         * @param mode New mode to set
-         * @return Success/failure response
-         */
-        int chmod(String path, int mode);
+    private void chmod(final File file, final int mode) throws IOException {
+        final ProcessBuilder builder = new ProcessBuilder(
+            "chmod",
+            String.format("%04o", mode),
+            file.getAbsolutePath()
+        );
+        builder.redirectErrorStream(true);
+        final Process process = builder.start();
+        String stdout;
+        try {
+            stdout = this.waitFor(process);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+            throw new IllegalStateException(ex);
+        }
+        final int code = process.exitValue();
+        if (code != 0) {
+            throw new IllegalStateException(
+                Logger.format(
+                    "Failed to chmod('%s', %04o)",
+                    file,
+                    mode,
+                    stdout
+                )
+            );
+        }
     }
 
 }
