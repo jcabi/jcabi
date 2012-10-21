@@ -204,6 +204,9 @@
                         <goals>
                             <goal>helpmojo</goal>
                         </goals>
+                        <configuration>
+                            <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+                        </configuration>
                     </execution>
                 </executions>
                 <dependencies>
@@ -211,7 +214,6 @@
                         <groupId>org.jfrog.maven.annomojo</groupId>
                         <artifactId>maven-plugin-tools-anno</artifactId>
                         <version since="5 Oct 2012">1.4.1</version>
-                        <scope>runtime</scope>
                     </dependency>
                 </dependencies>
             </plugin>
