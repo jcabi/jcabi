@@ -111,7 +111,8 @@ final class Git {
         for (String arg : args) {
             commands.add(arg);
         }
-        Logger.info(this, "%s:...", StringUtils.join(commands, " "));
+        final String cmd = StringUtils.join(commands, " ");
+        Logger.info(this, "%s:...", cmd);
         final ProcessBuilder builder = new ProcessBuilder(commands);
         builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
@@ -132,9 +133,9 @@ final class Git {
         if (code != 0) {
             throw new IllegalStateException(
                 Logger.format(
-                    "Non-zero exit code %d from %[list]s: %s",
+                    "Non-zero exit code %d from '%s': %s",
                     code,
-                    commands,
+                    cmd,
                     stdout
                 )
             );

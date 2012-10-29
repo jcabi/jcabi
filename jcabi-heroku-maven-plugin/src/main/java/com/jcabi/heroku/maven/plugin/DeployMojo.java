@@ -144,6 +144,7 @@ public final class DeployMojo extends AbstractMojo {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
+        final long start = System.currentTimeMillis();
         final Heroku heroku = new Heroku(this.git(), this.name);
         final Repo repo = heroku.clone(
             new File(new File(this.project.getBuild().getDirectory()), "heroku")
@@ -169,6 +170,7 @@ public final class DeployMojo extends AbstractMojo {
             throw new MojoFailureException("failed to save files", ex);
         }
         repo.commit();
+        Logger.info(this, "Done in %[ms]s", System.currentTimeMillis() - start);
     }
 
     /**
