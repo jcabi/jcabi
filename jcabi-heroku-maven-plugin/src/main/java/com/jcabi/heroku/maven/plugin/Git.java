@@ -111,12 +111,20 @@ final class Git {
         for (String arg : args) {
             commands.add(arg);
         }
-        final String cmd = StringUtils.join(commands, " ");
-        Logger.info(this, "%s:...", cmd);
+        Logger.info(this, "%s:...", StringUtils.join(commands, " "));
         final ProcessBuilder builder = new ProcessBuilder(commands);
         builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
         builder.redirectErrorStream(true);
+        return this.stdout(builder);
+    }
+
+    /**
+     * Get stdout from the process.
+     * @param builder The process builder
+     * @return Stdout
+     */
+    private String stdout(final ProcessBuilder builder) {
         Process process;
         String stdout;
         try {
@@ -133,9 +141,8 @@ final class Git {
         if (code != 0) {
             throw new IllegalStateException(
                 Logger.format(
-                    "Non-zero exit code %d from '%s': %s",
+                    "Non-zero exit code %d: %s",
                     code,
-                    cmd,
                     stdout
                 )
             );
