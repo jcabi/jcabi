@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<!--
+ * Copyright (c) 2012, jcabi.com
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met: 1) Redistributions of source code must retain the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer. 2) Redistributions in binary form must reproduce the above
+ * copyright notice, this list of conditions and the following
+ * disclaimer in the documentation and/or other materials provided
+ * with the distribution. 3) Neither the name of the jcabi.com nor
+ * the names of its contributors may be used to endorse or promote
+ * products derived from this software without specific prior written
+ * permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+ * NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+ * THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jcabi</groupId>
+        <artifactId>jcabi</artifactId>
+        <version jcabi="yes">1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>jcabi-ssl-maven-plugin</artifactId>
+    <packaging>maven-plugin</packaging>
+    <name>jcabi-ssl-maven-plugin</name>
+    <repositories>
+        <repository>
+            <id>repo.jfrog.org</id>
+            <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jfrog.org</id>
+            <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-utils</artifactId>
+            <version since="11 Mar 2012">2.0.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-log</artifactId>
+            <version jcabi="yes">1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <!-- see http://wiki.jfrog.org/confluence/display/OSS/Maven+Anno+Mojo -->
+            <groupId>org.jfrog.maven.annomojo</groupId>
+            <artifactId>maven-plugin-anno</artifactId>
+            <version since="5 Oct 2012">1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version since="22 Aug 2011">3.0.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-artifact</artifactId>
+            <version since="22 Aug 2011">3.0.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.maven</groupId>
+        	<artifactId>maven-settings</artifactId>
+            <version since="22 Aug 2011">3.0.3</version>
+            <scope>provided</scope>
+		</dependency>
+        <dependency>
+        	<groupId>org.apache.maven</groupId>
+        	<artifactId>maven-model</artifactId>
+            <version since="22 Aug 2011">3.0.3</version>
+            <scope>provided</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version since="22 Aug 2011">3.0.3</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.sonatype.aether</groupId>
+                    <artifactId>aether-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.sonatype.sisu</groupId>
+                    <artifactId>sisu-inject-plexus</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- Forward all calls to SLF4J to Maven log. -->
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-maven-slf4j</artifactId>
+            <version since="29 Oct 2012">0.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit-dep</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/HelpMojo.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <compilerArgument>-Xlint:-processing</compilerArgument>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>compile-helpmojo</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/HelpMojo.java</include>
+                            </includes>
+                            <compilerArgument>-Xlint:-unchecked,-rawtypes</compilerArgument>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version since="12 Oct 2012">3.1</version>
+                <executions>
+                    <execution>
+                        <id>generated-helpmojo</id>
+                        <goals>
+                            <goal>helpmojo</goal>
+                        </goals>
+                        <configuration>
+                            <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jfrog.maven.annomojo</groupId>
+                        <artifactId>maven-plugin-tools-anno</artifactId>
+                        <version since="5 Oct 2012">1.4.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>maven-invoker-plugin</artifactId>
+                <version since="22 Mar 2011">1.5</version>
+                <configuration>
+                    <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+                    <debug>false</debug>
+                    <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
+                    <noLog>false</noLog>
+                    <postBuildHookScript>verify</postBuildHookScript>
+                    <preBuildHookScript>setup</preBuildHookScript>
+                    <projectsDirectory>src/it</projectsDirectory>
+                    <settingsFile>${basedir}/src/it/settings.xml</settingsFile>
+                    <showErrors>true</showErrors>
+                    <showVersion>false</showVersion>
+                    <streamLogs>true</streamLogs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install-invoker</id>
+                        <goals>
+                            <goal>install</goal>
+                        </goals>
+                        <phase>pre-integration-test</phase>
+                    </execution>
+                    <execution>
+                        <id>run-invoker</id>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
