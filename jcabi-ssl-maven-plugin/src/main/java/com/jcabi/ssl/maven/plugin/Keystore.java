@@ -147,6 +147,12 @@ final class Keystore {
         };
         for (String name : names) {
             props.put(name, System.getProperty(name));
+            Logger.info(
+                this,
+                "Maven property ${%s} set to '%s'",
+                name,
+                System.getProperty(name)
+            );
         }
     }
 
