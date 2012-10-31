@@ -29,19 +29,29 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
+import java.io.File;
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link Keystore} (more detailed test is in maven invoker).
+ * Test case for {@link Keystore}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 public final class KeystoreTest {
+
+    /**
+     * Temporary folder.
+     * @checkstyle VisibilityModifier (3 lines)
+     */
+    @Rule
+    public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
      * Configure logging.
@@ -58,7 +68,11 @@ public final class KeystoreTest {
     @Test
     public void generatesAndActivatesKeystore() throws Exception {
         final Keystore keystore = new Keystore("test-test");
-        keystore.activate();
+        final File file = new File(
+            this.temp.newFolder("tmp"),
+            "/a/b/ckeystore.jks"
+        );
+        keystore.activate(file);
         MatcherAssert.assertThat(keystore.isActive(), Matchers.is(true));
     }
 

@@ -31,11 +31,6 @@ package com.jcabi.ssl.maven.plugin;
 
 import com.jcabi.log.Logger;
 import java.io.File;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import org.apache.commons.io.IOUtils;
-import org.apache.maven.artifact.Artifact;
-import org.apache.maven.artifact.DefaultArtifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
@@ -104,15 +99,16 @@ public final class KeygenMojo extends AbstractMojo {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
-        final Keystore keystore = new Keystore(this.getClass().getName());
-        if (!keystore.isActive()) {
+        final Keystore store = new Keystore(this.getClass().getName());
+        if (!store.isActive()) {
             try {
-                keystore.activate();
+                store.activate(this.keystore);
             } catch (java.io.IOException ex) {
                 throw new IllegalStateException(ex);
             }
         }
-        Logger.info(this, "Keystore is active: %s", keystore);
+        store.populate(this.project.getProperties());
+        Logger.info(this, "Keystore is active: %s", store);
     }
 
 }

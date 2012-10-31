@@ -29,17 +29,29 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
+import java.io.File;
 import org.apache.maven.plugin.logging.SystemStreamLog;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link KeygenMojo} (more detailed test is in maven invoker).
+ * Test case for {@link Keytool}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class KeygenMojoTest {
+public final class KeytoolTest {
+
+    /**
+     * Temporary folder.
+     * @checkstyle VisibilityModifier (3 lines)
+     */
+    @Rule
+    public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
      * Configure logging.
@@ -50,14 +62,19 @@ public final class KeygenMojoTest {
     }
 
     /**
-     * KeygenMojo can skip execution when flag is set.
+     * Keytool can generate a keystore.
      * @throws Exception If something is wrong
      */
     @Test
-    public void skipsExecutionWhenRequired() throws Exception {
-        final KeygenMojo mojo = new KeygenMojo();
-        mojo.setSkip(true);
-        mojo.execute();
+    public void generatesAndActivatesKeystore() throws Exception {
+        final File file = this.temp.newFile("keystore.jks");
+        file.delete();
+        final Keytool keytool = new Keytool(file, "some-password");
+        keytool.genkey();
+        MatcherAssert.assertThat(
+            keytool.list(),
+            Matchers.containsString("localhost")
+        );
     }
 
 }

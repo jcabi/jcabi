@@ -32,21 +32,10 @@ package com.jcabi.ssl.maven.plugin;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import org.apache.commons.io.IOUtils;
-import org.apache.maven.artifact.Artifact;
-import org.apache.maven.artifact.DefaultArtifact;
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.project.MavenProject;
-import org.jfrog.maven.annomojo.annotations.MojoGoal;
-import org.jfrog.maven.annomojo.annotations.MojoParameter;
-import org.jfrog.maven.annomojo.annotations.MojoPhase;
-import org.slf4j.impl.StaticLoggerBinder;
+import java.util.Properties;
 
 /**
- * Keystore abstract.
+ * Keystore abstraction.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
@@ -55,12 +44,32 @@ import org.slf4j.impl.StaticLoggerBinder;
 final class Keystore {
 
     /**
+     * Constant {@code javax.net.ssl.keyStore}.
+     */
+    private static final String KEY = "javax.net.ssl.keyStore";
+
+    /**
+     * Constant {@code javax.net.ssl.trustStore}.
+     */
+    private static final String TRUST = "javax.net.ssl.trustStore";
+
+    /**
+     * Constant {@code javax.net.ssl.keyStorePassword}.
+     */
+    private static final String KEY_PWD = "javax.net.ssl.keyStorePassword";
+
+    /**
+     * Constant {@code javax.net.ssl.trustStorePassword}.
+     */
+    private static final String TRUST_PWD = "javax.net.ssl.trustStorePassword";
+
+    /**
      * Unique password of it.
      */
     private final transient String password;
 
     /**
-     * The password that identifies its uniqueness.
+     * Public ctor.
      * @param pwd The password
      */
     public Keystore(final String pwd) {
@@ -73,10 +82,10 @@ final class Keystore {
     @Override
     public String toString() {
         final String[] names = new String[] {
-            "javax.net.ssl.keyStore",
-            "javax.net.ssl.keyStorePassword",
-            "javax.net.ssl.trustStore",
-            "javax.net.ssl.trustStorePassword",
+            Keystore.KEY,
+            Keystore.KEY_PWD,
+            Keystore.TRUST,
+            Keystore.TRUST_PWD,
         };
         final StringBuilder text = new StringBuilder();
         text.append('[');
@@ -101,87 +110,44 @@ final class Keystore {
      * @return TRUE if JVM is using our keystore
      */
     public boolean isActive() {
-        final String pwd = System.getProperty("javax.net.ssl.keyStorePassword");
+        final String pwd = System.getProperty(Keystore.KEY_PWD);
         return pwd != null && pwd.equals(this.password);
     }
 
     /**
-     * Activate it.
+     * Activate it, in the given file.
+     * @param file The file to use
      * @throws IOException If fails
      */
-    public void activate() throws IOException {
-        final File jks = this.jks();
-        System.setProperty("javax.net.ssl.keyStore", jks.getAbsolutePath());
-        System.setProperty("javax.net.ssl.keyStorePassword", this.password);
-        System.setProperty("javax.net.ssl.trustStore", jks.getAbsolutePath());
-        System.setProperty("javax.net.ssl.trustStorePassword", this.password);
+    public void activate(final File file) throws IOException {
+        file.getParentFile().mkdirs();
+        file.delete();
+        new Keytool(file, this.password).genkey();
+        System.setProperty(Keystore.KEY, file.getAbsolutePath());
+        System.setProperty(Keystore.KEY_PWD, this.password);
+        System.setProperty(Keystore.TRUST, file.getAbsolutePath());
+        System.setProperty(Keystore.TRUST_PWD, this.password);
+        Logger.info(
+            this,
+            "Keystore: %s",
+            new Keytool(file, this.password).list()
+        );
     }
 
     /**
-     * Create and return JKS keystore in a file.
-     * @return The file with keystore
-     * @throws IOException If fails
+     * Populate given properties with data.
+     * @param props The properties
      */
-    private File jks() throws IOException {
-        final long start = System.currentTimeMillis();
-        final File file = File.createTempFile(
-            String.format("%s-", this.getClass().getName()),
-            ".jks"
-        );
-        file.delete();
-        final ProcessBuilder builder = new ProcessBuilder(
-            String.format(
-                "%s/bin/keytool",
-                System.getProperty("java.home")
-            ),
-            "-genkey",
-            "-alias",
-            "localhost",
-            "-keyalg",
-            "RSA",
-            "-storepass",
-            this.password,
-            "-keypass",
-            this.password,
-            "-keystore",
-            file.getAbsolutePath()
-        );
-        builder.redirectErrorStream(true);
-        final Process process = builder.start();
-        final PrintWriter writer = new PrintWriter(
-            new OutputStreamWriter(process.getOutputStream())
-        );
-        writer.print("localhost\n");
-        writer.print("ACME Co.\n");
-        writer.print("software developers\n");
-        writer.print("San Francisco\n");
-        writer.print("California\n");
-        writer.print("US\n");
-        writer.print("yes\n");
-        writer.close();
-        try {
-            process.waitFor();
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-            throw new IllegalStateException(ex);
+    public void populate(final Properties props) {
+        final String[] names = new String[] {
+            Keystore.KEY,
+            Keystore.KEY_PWD,
+            Keystore.TRUST,
+            Keystore.TRUST_PWD,
+        };
+        for (String name : names) {
+            props.put(name, System.getProperty(name));
         }
-        final int code = process.exitValue();
-        if (code != 0) {
-            throw new IllegalStateException(
-                Logger.format(
-                    "Non-zero exit code #%d: %s",
-                    code,
-                    IOUtils.toString(process.getInputStream())
-                )
-            );
-        }
-        Logger.info(
-            this,
-            "Keystore created in '%s' in %[ms]s",
-            file,
-            System.currentTimeMillis() - start
-        );
-        return file;
     }
 
 }
