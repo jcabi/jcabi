@@ -103,7 +103,7 @@ How to release new version to Maven Central:
         http://www.sonatype.com/books/nexus-book/reference/staging-sect-managing-plugin.html
         https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven
 
-    7. Run "mvn -Dci -Pjcabi -Dsonatype clean deploy site-deploy"
+    7. Run "mvn -Dci -Dsite -Pjcabi -Dsonatype clean deploy site-deploy"
 
         Make sure that you have this profile in ~/.m2/settings.xml:
 

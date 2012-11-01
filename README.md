@@ -5,6 +5,11 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
+[0.5](#77):
+
+ * #76: [VerboseProcess](http://www.jcabi.com/jcabi-log/apidocs-0.5/com/jcabi/log/VerboseProcess.html) introduced
+ * #76: [jcabi-ssl-maven-plugin](http://www.jcabi.com/jcabi-ssl-maven-plugin) introduced
+
 [0.4](#71):
 
  * #70: [jcabi-heroku-maven-plugin](http://www.jcabi.com/jcabi-heroku-maven-plugin) introduced
