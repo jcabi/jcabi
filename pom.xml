@@ -435,6 +435,7 @@
                                             </reports>
                                             <configuration>
                                                 <sourcepath>src/main/java</sourcepath>
+                                                <destDir>apidocs-${project.version}</destDir>
                                             </configuration>
                                         </reportSet>
                                         <reportSet>
@@ -444,6 +445,7 @@
                                             </reports>
                                             <configuration>
                                                 <sourcepath>src/mock/java</sourcepath>
+                                                <destDir>testapidocs-${project.version}</destDir>
                                             </configuration>
                                         </reportSet>
                                     </reportSets>
