@@ -35,7 +35,19 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Git engine.
+ * Utility class for getting {@code stdout} from a running process
+ * and logging it through SLF4J.
+ *
+ * <p>For example:
+ *
+ * <pre> String name = new VerboseProcess(
+ *   new ProcessBuilder("who", "am", "i")
+ * ).stdout();</pre>
+ *
+ * <p>The class throws an exception if the process returns a non-zero exit
+ * code.
+ *
+ * <p>The class is immutable and thread-safe.
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
@@ -57,7 +69,8 @@ public final class VerboseProcess {
     }
 
     /**
-     * Public ctor.
+     * Public ctor (builder will be configured to redirect error stream to
+     * the {@code stdout} and will receive an empty {@code stdin}).
      * @param builder Process builder to work with
      */
     public VerboseProcess(final ProcessBuilder builder) {
@@ -71,8 +84,9 @@ public final class VerboseProcess {
     }
 
     /**
-     * Get stdout from the process.
-     * @return Stdout
+     * Get {@code stdout} from the process, after its finish (the method will
+     * wait for the process and log its output).
+     * @return Full {@code stdout} of the process
      */
     public String stdout() {
         String stdout;

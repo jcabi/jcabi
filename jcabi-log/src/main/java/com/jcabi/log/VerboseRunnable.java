@@ -36,11 +36,9 @@ import java.util.concurrent.Callable;
  *
  * <p>You can use it with scheduled executor, for example:
  *
- * <pre>
- * Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
+ * <pre> Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
  *   new VerboseRunnable(runnable, true), 1L, 1L, TimeUnit.SECONDS
- * );
- * </pre>
+ * );</pre>
  *
  * <p>Now, every runtime exception that is not caught inside your
  * {@link Runnable} will be reported to log (using {@link Logger}).

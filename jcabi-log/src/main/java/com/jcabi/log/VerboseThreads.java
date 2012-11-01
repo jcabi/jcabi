@@ -40,8 +40,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * these "verbose" threads your runnable tasks will not report anything to
  * console once they die because of a runtime exception, for example:
  *
- * <pre>
- * Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
+ * <pre> Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
  *   new Runnable() {
  *     &#64;Override
  *     public void run() {
@@ -50,8 +49,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *     },
  *     1L, 1L, TimeUnit.SECONDS
  *   }
- * );
- * </pre>
+ * );</pre>
  *
  * <p>The exception in this example will never be caught by nobody. It will
  * just terminate current execution of the {@link Runnable} task. Moreover,
@@ -61,8 +59,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * is behaving. This is how we solve
  * the problem with {@link VerboseThreads}:
  *
- * <pre>
- * ThreadFactory factory = new VerboseThreads();
+ * <pre> ThreadFactory factory = new VerboseThreads();
  * Executors.newScheduledThreadPool(2, factory).scheduleAtFixedRate(
  *   new Runnable() {
  *     &#64;Override
@@ -72,8 +69,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *     },
  *     1L, 1L, TimeUnit.SECONDS
  *   }
- * );
- * </pre>
+ * );</pre>
  *
  * <p>Now, every runtime exception that is not caught inside your
  * {@link Runnable} will be reported to log (using {@link Logger}).

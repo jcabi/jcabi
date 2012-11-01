@@ -42,25 +42,21 @@ import org.slf4j.LoggerFactory;
  *
  * <p>Use it like this in any class, and in any package:
  *
- * <pre>
- * package com.example.XXX;
+ * <pre> package com.example.XXX;
  * import com.jcabi.log.Logger;
  * public class MyClass {
  *   public void foo(Integer num) {
  *     Logger.info(this, "foo(%d) just called", num);
  *   }
- * }
- * </pre>
+ * } </pre>
  *
  * <p>Or statically (pay attention to {@code MyClass.class}):
  *
- * <pre>
- * public class MyClass {
+ * <pre> public class MyClass {
  *   public static void foo(Integer num) {
  *     Logger.info(MyClass.class, "foo(%d) just called", num);
  *   }
- * }
- * </pre>
+ * }</pre>
  *
  * <p>Exact binding between SLF4J and logging facility has to be
  * specified in {@code pom.xml} of your project (or in classpath directly).
@@ -69,13 +65,11 @@ import org.slf4j.LoggerFactory;
  * {@code TRACE} or {@code DEBUG} log message you may check whether this
  * logging level is enabled in the project, e.g.:
  *
- * <pre>
- * //...
+ * <pre> //...
  * if (Logger.isTraceEnabled(this)) {
  *   Logger.trace(this, "#foo() called");
  * }
- * //...
- * </pre>
+ * //...</pre>
  *
  * <p>There is only one reason to do so - if you want to save time spent on
  * preparing of the arguments. By default, such a call is made inside every
