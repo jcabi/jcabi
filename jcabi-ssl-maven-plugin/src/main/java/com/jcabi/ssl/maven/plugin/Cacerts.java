@@ -32,7 +32,6 @@ package com.jcabi.ssl.maven.plugin;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
-import java.util.Properties;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -53,6 +52,11 @@ final class Cacerts {
      * Constant {@code javax.net.ssl.trustStorePassword}.
      */
     private static final String TRUST_PWD = "javax.net.ssl.trustStorePassword";
+
+    /**
+     * Standard password of {@code cacerts} file.
+     */
+    private static final String STD_PWD = "changeit";
 
     /**
      * New location of the trust store.
@@ -89,9 +93,9 @@ final class Cacerts {
     public void imprt() throws IOException {
         final File keystore = new File(System.getProperty(Keystore.KEY));
         final String pwd = System.getProperty(Keystore.KEY_PWD);
-        new Keytool(this.store, "changeit").imprt(keystore, pwd);
+        new Keytool(this.store, Cacerts.STD_PWD).imprt(keystore, pwd);
         System.setProperty(Cacerts.TRUST, this.store.getAbsolutePath());
-        System.setProperty(Cacerts.TRUST_PWD, "changeit");
+        System.setProperty(Cacerts.TRUST_PWD, Cacerts.STD_PWD);
         Logger.info(
             this,
             "keyStore '%s' imported into trustStore '%s'",
