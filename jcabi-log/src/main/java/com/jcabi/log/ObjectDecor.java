@@ -27,65 +27,41 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Formattable;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import java.util.Formatter;
 
 /**
- * Test case for {@link SecretDecor}.
+ * Format internal structure of an object.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class SecretDecorTest extends AbstractDecorTest {
+final class ObjectDecor implements Formattable {
+
+    /**
+     * The object to work with.
+     */
+    private final transient Object object;
 
     /**
      * Public ctor.
-     * @param secret The secret
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * @param obj The object to format
      */
-    public SecretDecorTest(final String secret, final String text,
-        final int flags, final int width, final int precision) {
-        super(secret, text, flags, width, precision);
-    }
-
-    /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
-     * @todo #26 The SecretDecor class is not implemented yet, that's why
-     *  the test is not enabled at the moment. You should uncomment the
-     *  lines below and make sure the test passes.
-     */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                // @checkstyle MethodBodyComments (4 lines)
-                // { "testing", "t***g", 0, 0, 0 },
-                // { "ouch", "o***h  ", FormattableFlags.LEFT_JUSTIFY, 7, 5 },
-                // { "x", " X***X", FormattableFlags.UPPERCASE, 6, 0 },
-                // { null, "NULL", FormattableFlags.UPPERCASE, 6, 0 },
-            }
-        );
+    public ObjectDecor(final Object obj) {
+        this.object = obj;
     }
 
     /**
      * {@inheritDoc}
+     * @checkstyle ParameterNumber (4 lines)
      */
     @Override
-    protected Formattable decor() {
-        return new SecretDecor((String) this.object());
+    public void formatTo(final Formatter formatter, final int flags,
+        final int width, final int precision) {
+        formatter.format("%s", this.object.getClass().getName());
     }
 
 }

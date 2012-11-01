@@ -29,7 +29,6 @@
  */
 package com.jcabi.log;
 
-import com.jcabi.log.decors.NanoDecor;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;

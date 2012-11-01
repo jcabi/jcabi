@@ -27,66 +27,78 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Formattable;
-import java.util.FormattableFlags;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import java.util.Formatter;
+import org.apache.commons.lang.StringEscapeUtils;
 
 /**
- * Test case for {@link MsDecor}.
+ * Decorator of a text.
+ *
+ * <p>For example:
+ *
+ * <pre>
+ * public void func(Object input) {
+ *   Logger.debug("Long input '%[text]s' provided", input);
+ * }
+ * </pre>
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1.5
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class MsDecorTest extends AbstractDecorTest {
+final class TextDecor implements Formattable {
+
+    /**
+     * Maximum length to show.
+     */
+    private static final int MAX = 100;
+
+    /**
+     * The object.
+     */
+    private final transient Object object;
 
     /**
      * Public ctor.
-     * @param nano The amount of nanoseconds
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * @param obj The object
      */
-    public MsDecorTest(final Long nano, final String text,
-        final int flags, final int width, final int precision) {
-        super(nano, text, flags, width, precision);
-    }
-
-    /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
-     */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                // @checkstyle LineLength (20 lines)
-                // @checkstyle MagicNumber (20 lines)
-                {null, "NULL", 0, 0, 0},
-                {13L, "13ms", 0, 0, -1},
-                {13L, "13.0ms", 0, 0, 1},
-                {1024L, "1s", 0, 0, 0},
-                {6001L, "6.0010s", 0, 0, 4},
-                {122001L, "  2MIN", FormattableFlags.UPPERCASE, 6, 0},
-                {3789003L, "63min", 0, 0, 0},
-            }
-        );
+    public TextDecor(final Object obj) {
+        this.object = obj;
     }
 
     /**
      * {@inheritDoc}
+     * @checkstyle ParameterNumber (4 lines)
      */
     @Override
-    protected Formattable decor() {
-        return new MsDecor((Long) this.object());
+    public void formatTo(final Formatter formatter, final int flags,
+        final int width, final int precision) {
+        if (this.object == null) {
+            formatter.format("NULL");
+        } else {
+            formatter.format("%s", TextDecor.pretty(this.object.toString()));
+        }
+    }
+
+    /**
+     * Make it look pretty.
+     * @param text The text to prettify
+     * @return The result
+     */
+    private static String pretty(final String text) {
+        String result;
+        if (text.length() < TextDecor.MAX) {
+            result = text;
+        } else {
+            result = String.format(
+                "%s... (%d chars)",
+                text.substring(0, TextDecor.MAX),
+                text.length()
+            );
+        }
+        return StringEscapeUtils.escapeJava(result);
     }
 
 }

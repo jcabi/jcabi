@@ -27,7 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
 import java.io.IOException;
 import java.util.Formattable;

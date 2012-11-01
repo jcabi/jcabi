@@ -27,63 +27,41 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Formattable;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import java.util.Formatter;
 
 /**
- * Test case for {@link ObjectDecor}.
+ * Decorator of a secret text.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class ObjectDecorTest extends AbstractDecorTest {
+final class SecretDecor implements Formattable {
+
+    /**
+     * The secret to work with.
+     */
+    private final transient String secret;
 
     /**
      * Public ctor.
-     * @param object The object
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * @param scrt The secret
      */
-    public ObjectDecorTest(final Object object, final String text,
-        final int flags, final int width, final int precision) {
-        super(object, text, flags, width, precision);
-    }
-
-    /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
-     * @todo #26 The ObjectDecor class is not implemented yet, that's why
-     *  the test is not enabled at the moment. You should uncomment the
-     *  lines below and make sure the test passes.
-     */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                // @checkstyle MethodBodyComments (2 lines)
-                // { null, "NULL", 0, 0, 0 },
-                // { new SecretDecor("x"), "{secret: \"x\"}", 0, 0, 0 }
-            }
-        );
+    public SecretDecor(final Object scrt) {
+        this.secret = scrt.toString();
     }
 
     /**
      * {@inheritDoc}
+     * @checkstyle ParameterNumber (4 lines)
      */
     @Override
-    protected Formattable decor() {
-        return new ObjectDecor(this.object());
+    public void formatTo(final Formatter formatter, final int flags,
+        final int width, final int precision) {
+        formatter.format("%s", this.secret);
     }
 
 }

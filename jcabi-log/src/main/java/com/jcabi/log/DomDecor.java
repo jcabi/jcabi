@@ -27,31 +27,53 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
+import java.io.StringWriter;
 import java.util.Formattable;
 import java.util.Formatter;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Node;
 
 /**
- * Format internal structure of an object.
- * @author Marina Kosenko (marina.kosenko@gmail.com)
+ * Decorates XML Document.
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
  */
-public final class ObjectDecor implements Formattable {
+final class DomDecor implements Formattable {
 
     /**
-     * The object to work with.
+     * DOM transformer factory, DOM.
      */
-    private final transient Object object;
+    private static final TransformerFactory FACTORY =
+        TransformerFactory.newInstance();
+
+    /**
+     * The document.
+     */
+    private final transient Node node;
 
     /**
      * Public ctor.
-     * @param obj The object to format
+     * @param doc The document
+     * @throws DecorException If some problem with it
      */
-    public ObjectDecor(final Object obj) {
-        this.object = obj;
+    public DomDecor(final Object doc) throws DecorException {
+        if (doc != null && !(doc instanceof Node)) {
+            throw new DecorException(
+                String.format(
+                    "Instance of org.w3c.dom.Node required, while %s provided",
+                    doc.getClass().getName()
+                )
+            );
+        }
+        this.node = (Node) doc;
     }
 
     /**
@@ -61,7 +83,24 @@ public final class ObjectDecor implements Formattable {
     @Override
     public void formatTo(final Formatter formatter, final int flags,
         final int width, final int precision) {
-        formatter.format("%s", this.object.getClass().getName());
+        final StringWriter writer = new StringWriter();
+        if (this.node == null) {
+            writer.write("NULL");
+        } else {
+            try {
+                final Transformer trans = DomDecor.FACTORY.newTransformer();
+                trans.setOutputProperty(OutputKeys.INDENT, "yes");
+                trans.transform(
+                    new DOMSource(this.node),
+                    new StreamResult(writer)
+                );
+            } catch (javax.xml.transform.TransformerConfigurationException ex) {
+                throw new IllegalStateException(ex);
+            } catch (javax.xml.transform.TransformerException ex) {
+                throw new IllegalStateException(ex);
+            }
+        }
+        formatter.format("%s", writer.toString());
     }
 
 }

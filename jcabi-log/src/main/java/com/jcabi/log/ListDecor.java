@@ -27,54 +27,44 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import com.jcabi.log.DecorException;
-import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Formattable;
 import java.util.Formatter;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Node;
 
 /**
- * Decorates XML Document.
- *
+ * Format list.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
  */
-public final class DomDecor implements Formattable {
+final class ListDecor implements Formattable {
 
     /**
-     * DOM transformer factory, DOM.
+     * The list.
      */
-    private static final TransformerFactory FACTORY =
-        TransformerFactory.newInstance();
-
-    /**
-     * The document.
-     */
-    private final transient Node node;
+    private final transient Collection<?> list;
 
     /**
      * Public ctor.
-     * @param doc The document
+     * @param obj The object to format
      * @throws DecorException If some problem with it
      */
-    public DomDecor(final Object doc) throws DecorException {
-        if (doc != null && !(doc instanceof Node)) {
+    public ListDecor(final Object obj) throws DecorException {
+        if (obj == null || obj instanceof Collection) {
+            this.list = (Collection) obj;
+        } else if (obj instanceof Object[]) {
+            this.list = Arrays.asList((Object[]) obj);
+        } else {
             throw new DecorException(
                 String.format(
-                    "Instance of org.w3c.dom.Node required, while %s provided",
-                    doc.getClass().getName()
+                    "Collection or array required, while %s provided",
+                    obj.getClass().getName()
                 )
             );
         }
-        this.node = (Node) doc;
     }
 
     /**
@@ -84,24 +74,22 @@ public final class DomDecor implements Formattable {
     @Override
     public void formatTo(final Formatter formatter, final int flags,
         final int width, final int precision) {
-        final StringWriter writer = new StringWriter();
-        if (this.node == null) {
-            writer.write("NULL");
+        final StringBuilder builder = new StringBuilder();
+        builder.append("[");
+        if (this.list == null) {
+            builder.append("NULL");
         } else {
-            try {
-                final Transformer trans = DomDecor.FACTORY.newTransformer();
-                trans.setOutputProperty(OutputKeys.INDENT, "yes");
-                trans.transform(
-                    new DOMSource(this.node),
-                    new StreamResult(writer)
-                );
-            } catch (javax.xml.transform.TransformerConfigurationException ex) {
-                throw new IllegalStateException(ex);
-            } catch (javax.xml.transform.TransformerException ex) {
-                throw new IllegalStateException(ex);
+            boolean first = true;
+            for (Object item : this.list) {
+                if (!first) {
+                    builder.append(", ");
+                }
+                builder.append(String.format("\"%s\"", item));
+                first = false;
             }
         }
-        formatter.format("%s", writer.toString());
+        builder.append("]");
+        formatter.format("%s", builder.toString());
     }
 
 }

@@ -36,7 +36,7 @@ package com.jcabi.log;
  * @version $Id$
  * @since 0.1
  */
-public final class DecorException extends Exception {
+final class DecorException extends Exception {
 
     /**
      * Serialization marker.

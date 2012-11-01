@@ -27,12 +27,52 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+package com.jcabi.log;
+
+import java.util.Formattable;
+import java.util.Formatter;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.junit.Test;
+import org.mockito.Mockito;
+import org.w3c.dom.Document;
 
 /**
- * Built-in decors.
- *
- * @author Marina Kosenko (marina.kosenko@gmail.com)
+ * Test case for {@link DomDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-package com.jcabi.log.decors;
+public final class DomDecorTest {
+
+    /**
+     * DocumentDecor can transform Document to text.
+     * @throws Exception If some problem
+     */
+    @Test
+    public void convertsDocumentToText() throws Exception {
+        final Document doc = DocumentBuilderFactory.newInstance()
+            .newDocumentBuilder().newDocument();
+        doc.appendChild(doc.createElement("root"));
+        final Formattable decor = new DomDecor(doc);
+        final Appendable dest = Mockito.mock(Appendable.class);
+        final Formatter fmt = new Formatter(dest);
+        decor.formatTo(fmt, 0, 0, 0);
+        Mockito.verify(dest).append(
+            // @checkstyle LineLength (1 line)
+            "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<root/>\n"
+        );
+    }
+
+    /**
+     * DocumentDecor can handle NULL properly.
+     * @throws Exception If some problem
+     */
+    @Test
+    public void convertsNullToText() throws Exception {
+        final Formattable decor = new DomDecor(null);
+        final Appendable dest = Mockito.mock(Appendable.class);
+        final Formatter fmt = new Formatter(dest);
+        decor.formatTo(fmt, 0, 0, 0);
+        Mockito.verify(dest).append("NULL");
+    }
+
+}

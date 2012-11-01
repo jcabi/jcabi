@@ -29,16 +29,6 @@
  */
 package com.jcabi.log;
 
-import com.jcabi.log.decors.DomDecor;
-import com.jcabi.log.decors.ExceptionDecor;
-import com.jcabi.log.decors.ListDecor;
-import com.jcabi.log.decors.MsDecor;
-import com.jcabi.log.decors.NanoDecor;
-import com.jcabi.log.decors.ObjectDecor;
-import com.jcabi.log.decors.SecretDecor;
-import com.jcabi.log.decors.SizeDecor;
-import com.jcabi.log.decors.TextDecor;
-import com.jcabi.log.decors.TypeDecor;
 import java.lang.reflect.Constructor;
 import java.util.Formattable;
 import java.util.concurrent.ConcurrentHashMap;
@@ -52,7 +42,7 @@ import java.util.concurrent.ConcurrentMap;
  * @version $Id$
  * @since 0.1
  */
-public final class DecorsManager {
+final class DecorsManager {
 
     /**
      * Storage of all found decors.

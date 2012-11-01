@@ -27,65 +27,66 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Formattable;
 import java.util.FormattableFlags;
-import java.util.Formatter;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Decorates an exception.
- *
- * <p>For example:
- *
- * <pre>
- * try {
- *   // ...
- * } catch (IOException ex) {
- *   Logger.error("failed to open file: %[exception]s", ex);
- *   throw new IllegalArgumentException(ex);
- * }
- * </pre>
- *
+ * Test case for {@link MsDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
- * @since 0.1
  */
-public final class ExceptionDecor implements Formattable {
-
-    /**
-     * The exception.
-     */
-    private final transient Throwable throwable;
+@RunWith(Parameterized.class)
+@SuppressWarnings("PMD.TestClassWithoutTestCases")
+public final class MsDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
-     * @param thr The exception
+     * @param nano The amount of nanoseconds
+     * @param text Expected text
+     * @param flags Flags
+     * @param width Width
+     * @param precision Precission
+     * @checkstyle ParameterNumber (3 lines)
      */
-    public ExceptionDecor(final Throwable thr) {
-        this.throwable = thr;
+    public MsDecorTest(final Long nano, final String text,
+        final int flags, final int width, final int precision) {
+        super(nano, text, flags, width, precision);
+    }
+
+    /**
+     * Params for this parametrized test.
+     * @return Array of arrays of params for ctor
+     */
+    @Parameters
+    public static Collection<Object[]> params() {
+        return Arrays.asList(
+            new Object[][] {
+                // @checkstyle LineLength (20 lines)
+                // @checkstyle MagicNumber (20 lines)
+                {null, "NULL", 0, 0, 0},
+                {13L, "13ms", 0, 0, -1},
+                {13L, "13.0ms", 0, 0, 1},
+                {1024L, "1s", 0, 0, 0},
+                {6001L, "6.0010s", 0, 0, 4},
+                {122001L, "  2MIN", FormattableFlags.UPPERCASE, 6, 0},
+                {3789003L, "63min", 0, 0, 0},
+            }
+        );
     }
 
     /**
      * {@inheritDoc}
-     * @checkstyle ParameterNumber (4 lines)
      */
     @Override
-    public void formatTo(final Formatter formatter, final int flags,
-        final int width, final int precision) {
-        String text;
-        if (this.throwable == null) {
-            text = "NULL";
-        } else if ((flags & FormattableFlags.ALTERNATE) == 0) {
-            final StringWriter writer = new StringWriter();
-            this.throwable.printStackTrace(new PrintWriter(writer));
-            text = writer.toString();
-        } else {
-            text = this.throwable.getMessage();
-        }
-        formatter.format("%s", text);
+    protected Formattable decor() {
+        return new MsDecor((Long) this.object());
     }
 
 }

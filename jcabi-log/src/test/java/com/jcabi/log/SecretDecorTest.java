@@ -27,9 +27,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Formattable;
@@ -38,26 +37,27 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Test case for {@link ListDecor}.
+ * Test case for {@link SecretDecor}.
+ * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class ListDecorTest extends AbstractDecorTest {
+public final class SecretDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
-     * @param list The list to test
+     * @param secret The secret
      * @param text Expected text
      * @param flags Flags
      * @param width Width
      * @param precision Precission
      * @checkstyle ParameterNumber (3 lines)
      */
-    public ListDecorTest(final Object list, final String text,
+    public SecretDecorTest(final String secret, final String text,
         final int flags, final int width, final int precision) {
-        super(list, text, flags, width, precision);
+        super(secret, text, flags, width, precision);
     }
 
     /**
@@ -71,16 +71,11 @@ public final class ListDecorTest extends AbstractDecorTest {
     public static Collection<Object[]> params() {
         return Arrays.asList(
             new Object[][] {
-                // @checkstyle MultipleStringLiterals (8 lines)
-                {null, "[NULL]", 0, 0, 0},
-                {new String[] {}, "[]", 0, 0, 0},
-                {new String[] {"a"}, "[\"a\"]", 0, 0, 0},
-                {new Long[] {2L, 1L}, "[\"2\", \"1\"]", 0, 0, 0},
-                {new Object[] {"b", "c"}, "[\"b\", \"c\"]", 0, 0, 0},
-                {new Object[] {"foo", 2L}, "[\"foo\", \"2\"]", 0, 0, 0},
-                {new ArrayList<String>(), "[]", 0, 0, 0},
-                {Arrays.asList(new String[] {"x"}), "[\"x\"]", 0, 0, 0},
-                {Arrays.asList(new Long[] {1L, 2L}), "[\"1\", \"2\"]", 0, 0, 0},
+                // @checkstyle MethodBodyComments (4 lines)
+                // { "testing", "t***g", 0, 0, 0 },
+                // { "ouch", "o***h  ", FormattableFlags.LEFT_JUSTIFY, 7, 5 },
+                // { "x", " X***X", FormattableFlags.UPPERCASE, 6, 0 },
+                // { null, "NULL", FormattableFlags.UPPERCASE, 6, 0 },
             }
         );
     }
@@ -89,8 +84,8 @@ public final class ListDecorTest extends AbstractDecorTest {
      * {@inheritDoc}
      */
     @Override
-    protected Formattable decor() throws Exception {
-        return new ListDecor(this.object());
+    protected Formattable decor() {
+        return new SecretDecor((String) this.object());
     }
 
 }

@@ -27,53 +27,63 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Formattable;
-import java.util.Formatter;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Decorator of a type.
- *
- * <p>For example:
- *
- * <pre>
- * public void func(Object input) {
- *   Logger.debug("Input of type %[type]s provided", input);
- * }
- * </pre>
- *
+ * Test case for {@link TextDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
- * @since 0.1
  */
-public final class TypeDecor implements Formattable {
-
-    /**
-     * The object.
-     */
-    private final transient Object object;
+@RunWith(Parameterized.class)
+@SuppressWarnings("PMD.TestClassWithoutTestCases")
+public final class TextDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
      * @param obj The object
+     * @param text Expected text
+     * @param flags Flags
+     * @param width Width
+     * @param precision Precission
+     * @checkstyle ParameterNumber (3 lines)
      */
-    public TypeDecor(final Object obj) {
-        this.object = obj;
+    public TextDecorTest(final Object obj, final String text,
+        final int flags, final int width, final int precision) {
+        super(obj, text, flags, width, precision);
+    }
+
+    /**
+     * Params for this parametrized test.
+     * @return Array of arrays of params for ctor
+     * @todo #26 The TextDecor class is not implemented yet, that's why
+     *  the test is not enabled at the moment. You should uncomment the
+     *  lines below and make sure the test passes.
+     */
+    @Parameters
+    public static Collection<Object[]> params() {
+        return Arrays.asList(
+            new Object[][] {
+                // @checkstyle MultipleStringLiterals (1 line)
+                {"simple text", "simple text", 0, 0, 0},
+                {null, "NULL", 0, 0, 0},
+                {"\u0433!", "\\u0433!", 0, 0, 0},
+            }
+        );
     }
 
     /**
      * {@inheritDoc}
-     * @checkstyle ParameterNumber (4 lines)
      */
     @Override
-    public void formatTo(final Formatter formatter, final int flags,
-        final int width, final int precision) {
-        if (this.object == null) {
-            formatter.format("NULL");
-        } else {
-            formatter.format("%s", this.object.getClass().getName());
-        }
+    protected Formattable decor() {
+        return new TextDecor(this.object());
     }
 
 }

@@ -27,11 +27,53 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+package com.jcabi.log;
+
+import java.util.Formattable;
+import java.util.Formatter;
 
 /**
- * Built-in decors, tests.
+ * Decorator of a type.
+ *
+ * <p>For example:
+ *
+ * <pre>
+ * public void func(Object input) {
+ *   Logger.debug("Input of type %[type]s provided", input);
+ * }
+ * </pre>
  *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
+ * @since 0.1
  */
-package com.jcabi.log.decors;
+final class TypeDecor implements Formattable {
+
+    /**
+     * The object.
+     */
+    private final transient Object object;
+
+    /**
+     * Public ctor.
+     * @param obj The object
+     */
+    public TypeDecor(final Object obj) {
+        this.object = obj;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @checkstyle ParameterNumber (4 lines)
+     */
+    @Override
+    public void formatTo(final Formatter formatter, final int flags,
+        final int width, final int precision) {
+        if (this.object == null) {
+            formatter.format("NULL");
+        } else {
+            formatter.format("%s", this.object.getClass().getName());
+        }
+    }
+
+}

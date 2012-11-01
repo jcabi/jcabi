@@ -62,26 +62,22 @@ Decors
 [DEBUG] Foo: #bar(1234): done in 3.45ms
 ---
 
-  Nano-seconds will be formatted as time through a built-in "decor":
-  {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<NanoDecor>>>}}.
-
+  Nano-seconds will be formatted as time through a built-in "decor".
   Pre-defined decors:
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<DomDecor>>>}}
+   * <<<dom>>> -- converts <<<org.w3c.dom.Node>>> to text.
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<ExceptionDecor>>>}}
+   * <<<exception>>> -- exception message and full stacktrace;
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<ListDecor>>>}}
+   * <<<list>>> -- array or list of elements into text;
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<NanoDecor>>>}}
+   * <<<ms>>> -- milliseconds into their text presentation;
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<ObjectDecor>>>}}
+   * <<<nano>>> -- nanoseconds into their text presentation;
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<SecretDecor>>>}}
+   * <<<text>>> -- makes text readable;
 
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<SizeDecor>>>}}
-
-   * {{{./apidocs/com/jcabi/log/decors/NanoDecor.html}<<<TypeDecor>>>}}
+   * <<<type>>> -- type name of the object.
 
   In order to use your own decor just implement <<<java.util.Formattable>>>:
 

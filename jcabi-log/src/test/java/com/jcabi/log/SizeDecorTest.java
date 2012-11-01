@@ -27,7 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -37,32 +37,33 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Test case for {@link TextDecor}.
+ * Test case for {@link SizeDecor}.
+ * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class TextDecorTest extends AbstractDecorTest {
+public final class SizeDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
-     * @param obj The object
+     * @param size The size
      * @param text Expected text
      * @param flags Flags
      * @param width Width
      * @param precision Precission
      * @checkstyle ParameterNumber (3 lines)
      */
-    public TextDecorTest(final Object obj, final String text,
+    public SizeDecorTest(final Long size, final String text,
         final int flags, final int width, final int precision) {
-        super(obj, text, flags, width, precision);
+        super(size, text, flags, width, precision);
     }
 
     /**
      * Params for this parametrized test.
      * @return Array of arrays of params for ctor
-     * @todo #26 The TextDecor class is not implemented yet, that's why
+     * @todo #26 The SizeDecor class is not implemented yet, that's why
      *  the test is not enabled at the moment. You should uncomment the
      *  lines below and make sure the test passes.
      */
@@ -70,10 +71,18 @@ public final class TextDecorTest extends AbstractDecorTest {
     public static Collection<Object[]> params() {
         return Arrays.asList(
             new Object[][] {
-                // @checkstyle MultipleStringLiterals (1 line)
-                {"simple text", "simple text", 0, 0, 0},
-                {null, "NULL", 0, 0, 0},
-                {"\u0433!", "\\u0433!", 0, 0, 0},
+                // @checkstyle MethodBodyComments (12 lines)
+                // { null, "NULL", 0, 0, 0 },
+                // { 1L, "1b", 0, 0, 0 },
+                // { 123L, "  123b", 0, 6, 0 },
+                // { 1024L, "1Kb", 0, 0, 3 },
+                // { 5120L, "5Kb", 0, 0, 0 },
+                // { 12345L, "12.056Kb", 0, 0, 3 },
+                // { 12345L, "12.1Kb  ", FormattableFlags.LEFT_JUSTIFY, 8, 1 },
+                // { 98765432L, "94.190MB", FormattableFlags.UPPERCASE, 0, 3 },
+                // { 98765432L, "94.190Mb", 0, 0, 3 },
+                // { 90L * 1024 * 1024 * 1024, "90Gb", 0, 0, 0 },
+                // { 13L * 1024 * 1024 * 1024 * 1024, "13Tb", 0, 0, 0 },
             }
         );
     }
@@ -83,7 +92,7 @@ public final class TextDecorTest extends AbstractDecorTest {
      */
     @Override
     protected Formattable decor() {
-        return new TextDecor(this.object());
+        return new SizeDecor((Long) this.object());
     }
 
 }

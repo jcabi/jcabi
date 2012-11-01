@@ -27,31 +27,31 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
 import java.util.Formattable;
 import java.util.Formatter;
 
 /**
- * Decorator of a secret text.
+ * Size decorator.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
  */
-public final class SecretDecor implements Formattable {
+final class SizeDecor implements Formattable {
 
     /**
-     * The secret to work with.
+     * The size to work with.
      */
-    private final transient String secret;
+    private final transient Long size;
 
     /**
      * Public ctor.
-     * @param scrt The secret
+     * @param sze The size
      */
-    public SecretDecor(final Object scrt) {
-        this.secret = scrt.toString();
+    public SizeDecor(final Long sze) {
+        this.size = sze;
     }
 
     /**
@@ -61,7 +61,7 @@ public final class SecretDecor implements Formattable {
     @Override
     public void formatTo(final Formatter formatter, final int flags,
         final int width, final int precision) {
-        formatter.format("%s", this.secret);
+        formatter.format("%s", this.size.toString());
     }
 
 }

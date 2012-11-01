@@ -27,52 +27,63 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Formattable;
-import java.util.Formatter;
-import javax.xml.parsers.DocumentBuilderFactory;
-import org.junit.Test;
-import org.mockito.Mockito;
-import org.w3c.dom.Document;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Test case for {@link DomDecor}.
+ * Test case for {@link ObjectDecor}.
+ * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class DomDecorTest {
+@RunWith(Parameterized.class)
+@SuppressWarnings("PMD.TestClassWithoutTestCases")
+public final class ObjectDecorTest extends AbstractDecorTest {
 
     /**
-     * DocumentDecor can transform Document to text.
-     * @throws Exception If some problem
+     * Public ctor.
+     * @param object The object
+     * @param text Expected text
+     * @param flags Flags
+     * @param width Width
+     * @param precision Precission
+     * @checkstyle ParameterNumber (3 lines)
      */
-    @Test
-    public void convertsDocumentToText() throws Exception {
-        final Document doc = DocumentBuilderFactory.newInstance()
-            .newDocumentBuilder().newDocument();
-        doc.appendChild(doc.createElement("root"));
-        final Formattable decor = new DomDecor(doc);
-        final Appendable dest = Mockito.mock(Appendable.class);
-        final Formatter fmt = new Formatter(dest);
-        decor.formatTo(fmt, 0, 0, 0);
-        Mockito.verify(dest).append(
-            // @checkstyle LineLength (1 line)
-            "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<root/>\n"
+    public ObjectDecorTest(final Object object, final String text,
+        final int flags, final int width, final int precision) {
+        super(object, text, flags, width, precision);
+    }
+
+    /**
+     * Params for this parametrized test.
+     * @return Array of arrays of params for ctor
+     * @todo #26 The ObjectDecor class is not implemented yet, that's why
+     *  the test is not enabled at the moment. You should uncomment the
+     *  lines below and make sure the test passes.
+     */
+    @Parameters
+    public static Collection<Object[]> params() {
+        return Arrays.asList(
+            new Object[][] {
+                // @checkstyle MethodBodyComments (2 lines)
+                // { null, "NULL", 0, 0, 0 },
+                // { new SecretDecor("x"), "{secret: \"x\"}", 0, 0, 0 }
+            }
         );
     }
 
     /**
-     * DocumentDecor can handle NULL properly.
-     * @throws Exception If some problem
+     * {@inheritDoc}
      */
-    @Test
-    public void convertsNullToText() throws Exception {
-        final Formattable decor = new DomDecor(null);
-        final Appendable dest = Mockito.mock(Appendable.class);
-        final Formatter fmt = new Formatter(dest);
-        decor.formatTo(fmt, 0, 0, 0);
-        Mockito.verify(dest).append("NULL");
+    @Override
+    protected Formattable decor() {
+        return new ObjectDecor(this.object());
     }
 
 }

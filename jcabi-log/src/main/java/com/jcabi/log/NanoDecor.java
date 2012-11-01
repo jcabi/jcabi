@@ -27,44 +27,45 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
 import java.util.Formattable;
 import java.util.FormattableFlags;
 import java.util.Formatter;
 
 /**
- * Decorate time interval in milliseconds.
+ * Decorate time interval in nanoseconds.
  *
  * <p>For example:
  *
  * <pre>
- * final long start = System.currentTimeMillis();
+ * final long start = System.nanoTime();
  * // some operations
- * Logger.debug("completed in %[ms]s", System.currentTimeMillis() - start);
+ * Logger.debug("completed in %[nano]s", System.nanoTime() - start);
  * </pre>
  *
+ * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
  */
-public final class MsDecor implements Formattable {
+final class NanoDecor implements Formattable {
 
     /**
-     * The period to work with, in milliseconds.
+     * The period to work with, in nanoseconds.
      */
-    private final transient Double millis;
+    private final transient Double nano;
 
     /**
      * Public ctor.
-     * @param msec The interval in milliseconds
+     * @param nan The interval in nanoseconds
      */
     @SuppressWarnings("PMD.NullAssignment")
-    public MsDecor(final Long msec) {
-        if (msec == null) {
-            this.millis = null;
+    public NanoDecor(final Long nan) {
+        if (nan == null) {
+            this.nano = null;
         } else {
-            this.millis = Double.valueOf(msec);
+            this.nano = Double.valueOf(nan);
         }
     }
 
@@ -75,7 +76,7 @@ public final class MsDecor implements Formattable {
     @Override
     public void formatTo(final Formatter formatter, final int flags,
         final int width, final int precision) {
-        if (this.millis == null) {
+        if (this.nano == null) {
             formatter.format("NULL");
         } else {
             final StringBuilder format = new StringBuilder();
@@ -106,14 +107,20 @@ public final class MsDecor implements Formattable {
         double number;
         String title;
         // @checkstyle MagicNumber (15 lines)
-        if (this.millis < 1000L) {
-            number = this.millis;
+        if (this.nano < 1000L) {
+            number = this.nano;
+            title = "ns";
+        } else if (this.nano < 1000L * 1000) {
+            number = this.nano / 1000L;
+            title = "mcs";
+        } else if (this.nano < 1000L * 1000 * 1000) {
+            number = this.nano / (1000L * 1000);
             title = "ms";
-        } else if (this.millis < 1000 * 60) {
-            number = this.millis / 1000;
+        } else if (this.nano < 1000L * 1000 * 1000 * 60) {
+            number = this.nano / (1000L * 1000 * 1000);
             title = "s";
         } else {
-            number = this.millis / (1000 * 60);
+            number = this.nano / (1000L * 1000 * 1000 * 60);
             title = "min";
         }
         String format;

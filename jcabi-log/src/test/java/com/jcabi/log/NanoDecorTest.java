@@ -27,62 +27,69 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Formattable;
+import java.util.FormattableFlags;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Test case for {@link SizeDecor}.
+ * Test case for {@link NanoDecor}.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class SizeDecorTest extends AbstractDecorTest {
+public final class NanoDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
-     * @param size The size
+     * @param nano The amount of nanoseconds
      * @param text Expected text
      * @param flags Flags
      * @param width Width
      * @param precision Precission
      * @checkstyle ParameterNumber (3 lines)
      */
-    public SizeDecorTest(final Long size, final String text,
+    public NanoDecorTest(final Long nano, final String text,
         final int flags, final int width, final int precision) {
-        super(size, text, flags, width, precision);
+        super(nano, text, flags, width, precision);
     }
 
     /**
      * Params for this parametrized test.
      * @return Array of arrays of params for ctor
-     * @todo #26 The SizeDecor class is not implemented yet, that's why
-     *  the test is not enabled at the moment. You should uncomment the
-     *  lines below and make sure the test passes.
      */
     @Parameters
     public static Collection<Object[]> params() {
         return Arrays.asList(
             new Object[][] {
-                // @checkstyle MethodBodyComments (12 lines)
-                // { null, "NULL", 0, 0, 0 },
-                // { 1L, "1b", 0, 0, 0 },
-                // { 123L, "  123b", 0, 6, 0 },
-                // { 1024L, "1Kb", 0, 0, 3 },
-                // { 5120L, "5Kb", 0, 0, 0 },
-                // { 12345L, "12.056Kb", 0, 0, 3 },
-                // { 12345L, "12.1Kb  ", FormattableFlags.LEFT_JUSTIFY, 8, 1 },
-                // { 98765432L, "94.190MB", FormattableFlags.UPPERCASE, 0, 3 },
-                // { 98765432L, "94.190Mb", 0, 0, 3 },
-                // { 90L * 1024 * 1024 * 1024, "90Gb", 0, 0, 0 },
-                // { 13L * 1024 * 1024 * 1024 * 1024, "13Tb", 0, 0, 0 },
+                // @checkstyle LineLength (20 lines)
+                // @checkstyle MagicNumber (20 lines)
+                {null, "NULL", 0, 0, 0},
+                {13L, "13ns", 0, 0, -1},
+                {13L, "13.0ns", 0, 0, 1},
+                {25L, "25.00ns", 0, 0, 2},
+                {234L, "234.0ns", 0, 0, 1},
+                {1024L, "1mcs", 0, 0, 0},
+                {1056L, "1.056mcs", 0, 0, 3},
+                {9022L, "9.02mcs", 0, 0, 2},
+                {53111L, "53.11mcs  ", FormattableFlags.LEFT_JUSTIFY, 10, 2},
+                {53156L, "  53mcs", 0, 7, 0},
+                {87090432L, "  87ms", 0, 6, 0},
+                {87090543L, "87.09ms", 0, 0, 2},
+                {87090548L, "87.0905ms", 0, 0, 4},
+                {6001001001L, "6.0010s", 0, 0, 4},
+                {122001001001L, "  2MIN", FormattableFlags.UPPERCASE, 6, 0},
+                {3789001001001L, "63.15002min", 0, 0, 5},
+                {3789002002002L, "63.2min", 0, 0, 1},
+                {3789003003003L, "63min", 0, 0, 0},
+                {342000004004004L, "5700min", 0, 0, 0},
             }
         );
     }
@@ -92,7 +99,7 @@ public final class SizeDecorTest extends AbstractDecorTest {
      */
     @Override
     protected Formattable decor() {
-        return new SizeDecor((Long) this.object());
+        return new NanoDecor((Long) this.object());
     }
 
 }

@@ -27,45 +27,45 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
-import com.jcabi.log.DecorException;
-import java.util.Arrays;
-import java.util.Collection;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Formattable;
+import java.util.FormattableFlags;
 import java.util.Formatter;
 
 /**
- * Format list.
+ * Decorates an exception.
+ *
+ * <p>For example:
+ *
+ * <pre>
+ * try {
+ *   // ...
+ * } catch (IOException ex) {
+ *   Logger.error("failed to open file: %[exception]s", ex);
+ *   throw new IllegalArgumentException(ex);
+ * }
+ * </pre>
+ *
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  * @since 0.1
  */
-public final class ListDecor implements Formattable {
+final class ExceptionDecor implements Formattable {
 
     /**
-     * The list.
+     * The exception.
      */
-    private final transient Collection<?> list;
+    private final transient Throwable throwable;
 
     /**
      * Public ctor.
-     * @param obj The object to format
-     * @throws DecorException If some problem with it
+     * @param thr The exception
      */
-    public ListDecor(final Object obj) throws DecorException {
-        if (obj == null || obj instanceof Collection) {
-            this.list = (Collection) obj;
-        } else if (obj instanceof Object[]) {
-            this.list = Arrays.asList((Object[]) obj);
-        } else {
-            throw new DecorException(
-                String.format(
-                    "Collection or array required, while %s provided",
-                    obj.getClass().getName()
-                )
-            );
-        }
+    public ExceptionDecor(final Throwable thr) {
+        this.throwable = thr;
     }
 
     /**
@@ -75,22 +75,17 @@ public final class ListDecor implements Formattable {
     @Override
     public void formatTo(final Formatter formatter, final int flags,
         final int width, final int precision) {
-        final StringBuilder builder = new StringBuilder();
-        builder.append("[");
-        if (this.list == null) {
-            builder.append("NULL");
+        String text;
+        if (this.throwable == null) {
+            text = "NULL";
+        } else if ((flags & FormattableFlags.ALTERNATE) == 0) {
+            final StringWriter writer = new StringWriter();
+            this.throwable.printStackTrace(new PrintWriter(writer));
+            text = writer.toString();
         } else {
-            boolean first = true;
-            for (Object item : this.list) {
-                if (!first) {
-                    builder.append(", ");
-                }
-                builder.append(String.format("\"%s\"", item));
-                first = false;
-            }
+            text = this.throwable.getMessage();
         }
-        builder.append("]");
-        formatter.format("%s", builder.toString());
+        formatter.format("%s", text);
     }
 
 }

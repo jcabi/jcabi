@@ -27,8 +27,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log.decors;
+package com.jcabi.log;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Formattable;
@@ -37,32 +38,32 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 /**
- * Test case for {@link TypeDecor}.
+ * Test case for {@link ListDecor}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
 @RunWith(Parameterized.class)
 @SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class TypeDecorTest extends AbstractDecorTest {
+public final class ListDecorTest extends AbstractDecorTest {
 
     /**
      * Public ctor.
-     * @param obj The object
+     * @param list The list to test
      * @param text Expected text
      * @param flags Flags
      * @param width Width
      * @param precision Precission
      * @checkstyle ParameterNumber (3 lines)
      */
-    public TypeDecorTest(final Object obj, final String text,
+    public ListDecorTest(final Object list, final String text,
         final int flags, final int width, final int precision) {
-        super(obj, text, flags, width, precision);
+        super(list, text, flags, width, precision);
     }
 
     /**
      * Params for this parametrized test.
      * @return Array of arrays of params for ctor
-     * @todo #26 The TypeDecor class is not implemented yet, that's why
+     * @todo #26 The SecretDecor class is not implemented yet, that's why
      *  the test is not enabled at the moment. You should uncomment the
      *  lines below and make sure the test passes.
      */
@@ -70,9 +71,16 @@ public final class TypeDecorTest extends AbstractDecorTest {
     public static Collection<Object[]> params() {
         return Arrays.asList(
             new Object[][] {
-                {"testing", "java.lang.String", 0, 0, 0},
-                {null, "NULL", 0, 0, 0},
-                {1d, "java.lang.Double", 0, 0, 0},
+                // @checkstyle MultipleStringLiterals (8 lines)
+                {null, "[NULL]", 0, 0, 0},
+                {new String[] {}, "[]", 0, 0, 0},
+                {new String[] {"a"}, "[\"a\"]", 0, 0, 0},
+                {new Long[] {2L, 1L}, "[\"2\", \"1\"]", 0, 0, 0},
+                {new Object[] {"b", "c"}, "[\"b\", \"c\"]", 0, 0, 0},
+                {new Object[] {"foo", 2L}, "[\"foo\", \"2\"]", 0, 0, 0},
+                {new ArrayList<String>(), "[]", 0, 0, 0},
+                {Arrays.asList(new String[] {"x"}), "[\"x\"]", 0, 0, 0},
+                {Arrays.asList(new Long[] {1L, 2L}), "[\"1\", \"2\"]", 0, 0, 0},
             }
         );
     }
@@ -81,8 +89,8 @@ public final class TypeDecorTest extends AbstractDecorTest {
      * {@inheritDoc}
      */
     @Override
-    protected Formattable decor() {
-        return new TypeDecor(this.object());
+    protected Formattable decor() throws Exception {
+        return new ListDecor(this.object());
     }
 
 }
