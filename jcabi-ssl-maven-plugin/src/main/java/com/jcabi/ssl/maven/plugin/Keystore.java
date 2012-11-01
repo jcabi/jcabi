@@ -113,11 +113,7 @@ final class Keystore {
         new Keytool(file, this.password).genkey();
         System.setProperty(Keystore.KEY, file.getAbsolutePath());
         System.setProperty(Keystore.KEY_PWD, this.password);
-        Logger.debug(
-            this,
-            "Keystore: %s",
-            new Keytool(file, this.password).list()
-        );
+        new Keytool(file, this.password).list();
     }
 
     /**
