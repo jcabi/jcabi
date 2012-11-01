@@ -27,64 +27,51 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.heroku.maven.plugin;
+package com.jcabi.log;
 
-import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link Heroku}.
+ * Test case for {@link VerboseProcess}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class HerokuTest {
+public final class VerboseProcessTest {
 
     /**
-     * Temporary folder.
-     * @checkstyle VisibilityModifier (3 lines)
+     * VerboseProcess can run a command line script.
+     * @throws Exception If something goes wrong
      */
-    @Rule
-    public transient TemporaryFolder temp = new TemporaryFolder();
-
-    /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
+    @Test
+    public void runsACommandLineScript() throws Exception {
+        final VerboseProcess process = new VerboseProcess(
+            new ProcessBuilder("echo", "hello, world!")
+        );
+        MatcherAssert.assertThat(
+            process.stdout(),
+            Matchers.containsString("hello")
+        );
     }
 
     /**
-     * Heroku can execute simple git command.
-     * @throws Exception If something is wrong
+     * VerboseProcess can run a command line script with exception.
+     * @throws Exception If something goes wrong
      */
     @Test
-    public void clonesSimpleHerokuRepository() throws Exception {
-        final File key = this.temp.newFile("key.pem");
-        FileUtils.writeStringToFile(
-            key,
-            IOUtils.toString(this.getClass().getResource("test-key.pem"))
+    public void runsACommandLineScriptWithException() throws Exception {
+        final VerboseProcess process = new VerboseProcess(
+            new ProcessBuilder("cat", "/non-existing-file.txt")
         );
         try {
-            new Heroku(
-                new Git(key, this.temp.newFolder("temp")),
-                "jcabi"
-            ).clone(this.temp.newFolder("heroku"));
-            Assert.fail("exception was expected");
+            process.stdout();
+            Assert.fail("exception expected");
         } catch (IllegalArgumentException ex) {
             MatcherAssert.assertThat(
                 ex.getMessage(),
-                Matchers.containsString("Cloning into ")
+                Matchers.containsString("No such file or directory")
             );
         }
     }

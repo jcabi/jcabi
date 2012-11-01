@@ -27,15 +27,12 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.heroku.maven.plugin;
+package com.jcabi.ssl.maven.plugin;
 
 import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -43,11 +40,11 @@ import org.junit.rules.TemporaryFolder;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link Heroku}.
+ * Test case for {@link Cacerts}.
  * @author Yegor Bugayenko (yegor@jcabi.com)
  * @version $Id$
  */
-public final class HerokuTest {
+public final class CacertsTest {
 
     /**
      * Temporary folder.
@@ -65,28 +62,22 @@ public final class HerokuTest {
     }
 
     /**
-     * Heroku can execute simple git command.
+     * Cacerts can generate a keystore.
      * @throws Exception If something is wrong
      */
     @Test
-    public void clonesSimpleHerokuRepository() throws Exception {
-        final File key = this.temp.newFile("key.pem");
-        FileUtils.writeStringToFile(
-            key,
-            IOUtils.toString(this.getClass().getResource("test-key.pem"))
+    public void importsCertificatesFromKeystore() throws Exception {
+        final File keystore = this.temp.newFile("keystore.jks");
+        keystore.delete();
+        final File truststore = this.temp.newFile("cacerts.jks");
+        truststore.delete();
+        final String pwd = "some-password";
+        new Keystore(pwd).activate(keystore);
+        new Cacerts(truststore).imprt();
+        MatcherAssert.assertThat(
+            new Keytool(truststore, "changeit").list(),
+            Matchers.containsString("localhost")
         );
-        try {
-            new Heroku(
-                new Git(key, this.temp.newFolder("temp")),
-                "jcabi"
-            ).clone(this.temp.newFolder("heroku"));
-            Assert.fail("exception was expected");
-        } catch (IllegalArgumentException ex) {
-            MatcherAssert.assertThat(
-                ex.getMessage(),
-                Matchers.containsString("Cloning into ")
-            );
-        }
     }
 
 }

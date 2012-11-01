@@ -31,17 +31,12 @@ package com.jcabi.heroku.maven.plugin;
 
 import com.jcabi.aspects.RetryOnFailure;
 import com.jcabi.log.Logger;
-import com.jcabi.log.VerboseRunnable;
-import java.io.BufferedReader;
+import com.jcabi.log.VerboseProcess;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CountDownLatch;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 
 /**
@@ -115,81 +110,7 @@ final class Git {
         final ProcessBuilder builder = new ProcessBuilder(commands);
         builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
-        builder.redirectErrorStream(true);
-        return this.stdout(builder);
-    }
-
-    /**
-     * Get stdout from the process.
-     * @param builder The process builder
-     * @return Stdout
-     */
-    private String stdout(final ProcessBuilder builder) {
-        Process process;
-        String stdout;
-        try {
-            process = builder.start();
-            process.getOutputStream().close();
-            stdout = this.waitFor(process);
-        } catch (java.io.IOException ex) {
-            throw new IllegalStateException(ex);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-            throw new IllegalStateException(ex);
-        }
-        final int code = process.exitValue();
-        if (code != 0) {
-            throw new IllegalStateException(
-                Logger.format(
-                    "Non-zero exit code %d: %s",
-                    code,
-                    stdout
-                )
-            );
-        }
-        return stdout;
-    }
-
-    /**
-     * Wait for the process to stop, logging its output in parallel.
-     * @param process The process to wait for
-     * @return Stdout produced by the process
-     * @throws InterruptedException If interrupted in between
-     */
-    @SuppressWarnings("PMD.DoNotUseThreads")
-    private String waitFor(final Process process) throws InterruptedException {
-        final BufferedReader reader = new BufferedReader(
-            new InputStreamReader(process.getInputStream())
-        );
-        final CountDownLatch done = new CountDownLatch(1);
-        final StringBuffer stdout = new StringBuffer();
-        new Thread(
-            new VerboseRunnable(
-                new Callable<Void>() {
-                    @Override
-                    public Void call() throws Exception {
-                        while (true) {
-                            final String line = reader.readLine();
-                            if (line == null) {
-                                break;
-                            }
-                            Logger.info(Git.class, ">> %s", line);
-                            stdout.append(line);
-                        }
-                        done.countDown();
-                        return null;
-                    }
-                },
-                false
-            )
-        ).start();
-        try {
-            process.waitFor();
-        } finally {
-            done.await();
-            IOUtils.closeQuietly(reader);
-        }
-        return stdout.toString();
+        return new VerboseProcess(builder).stdout();
     }
 
     /**
@@ -201,31 +122,13 @@ final class Git {
      * @see http://stackoverflow.com/questions/1556119
      */
     private void chmod(final File file, final int mode) throws IOException {
-        final ProcessBuilder builder = new ProcessBuilder(
-            "chmod",
-            String.format("%04o", mode),
-            file.getAbsolutePath()
-        );
-        builder.redirectErrorStream(true);
-        final Process process = builder.start();
-        String stdout;
-        try {
-            stdout = this.waitFor(process);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-            throw new IllegalStateException(ex);
-        }
-        final int code = process.exitValue();
-        if (code != 0) {
-            throw new IllegalStateException(
-                Logger.format(
-                    "Failed to chmod('%s', %04o)",
-                    file,
-                    mode,
-                    stdout
-                )
-            );
-        }
+        new VerboseProcess(
+            new ProcessBuilder(
+                "chmod",
+                String.format("%04o", mode),
+                file.getAbsolutePath()
+            )
+        ).stdout();
     }
 
 }

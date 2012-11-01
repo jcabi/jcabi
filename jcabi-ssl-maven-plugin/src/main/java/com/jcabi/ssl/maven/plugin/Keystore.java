@@ -46,22 +46,12 @@ final class Keystore {
     /**
      * Constant {@code javax.net.ssl.keyStore}.
      */
-    private static final String KEY = "javax.net.ssl.keyStore";
-
-    /**
-     * Constant {@code javax.net.ssl.trustStore}.
-     */
-    private static final String TRUST = "javax.net.ssl.trustStore";
+    public static final String KEY = "javax.net.ssl.keyStore";
 
     /**
      * Constant {@code javax.net.ssl.keyStorePassword}.
      */
-    private static final String KEY_PWD = "javax.net.ssl.keyStorePassword";
-
-    /**
-     * Constant {@code javax.net.ssl.trustStorePassword}.
-     */
-    private static final String TRUST_PWD = "javax.net.ssl.trustStorePassword";
+    public static final String KEY_PWD = "javax.net.ssl.keyStorePassword";
 
     /**
      * Unique password of it.
@@ -84,8 +74,6 @@ final class Keystore {
         final String[] names = new String[] {
             Keystore.KEY,
             Keystore.KEY_PWD,
-            Keystore.TRUST,
-            Keystore.TRUST_PWD,
         };
         final StringBuilder text = new StringBuilder();
         text.append('[');
@@ -125,9 +113,7 @@ final class Keystore {
         new Keytool(file, this.password).genkey();
         System.setProperty(Keystore.KEY, file.getAbsolutePath());
         System.setProperty(Keystore.KEY_PWD, this.password);
-        System.setProperty(Keystore.TRUST, file.getAbsolutePath());
-        System.setProperty(Keystore.TRUST_PWD, this.password);
-        Logger.info(
+        Logger.debug(
             this,
             "Keystore: %s",
             new Keytool(file, this.password).list()
@@ -142,11 +128,13 @@ final class Keystore {
         final String[] names = new String[] {
             Keystore.KEY,
             Keystore.KEY_PWD,
-            Keystore.TRUST,
-            Keystore.TRUST_PWD,
         };
         for (String name : names) {
-            props.put(name, System.getProperty(name));
+            final String value = System.getProperty(name);
+            if (value == null) {
+                continue;
+            }
+            props.put(name, value);
             Logger.info(
                 this,
                 "Maven property ${%s} set to '%s'",

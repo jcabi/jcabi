@@ -30,12 +30,14 @@
 package com.jcabi.ssl.maven.plugin;
 
 import com.jcabi.log.Logger;
+import com.jcabi.log.VerboseProcess;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -73,16 +75,7 @@ final class Keytool {
      * @throws IOException If fails
      */
     public String list() throws IOException {
-        final Process process = Keytool.process(
-            "-list",
-            // @checkstyle MultipleStringLiterals (1 line)
-            "-storepass",
-            this.password,
-            // @checkstyle MultipleStringLiterals (1 line)
-            "-keystore",
-            this.keystore.getAbsolutePath()
-        );
-        return this.waitFor(process);
+        return new VerboseProcess(this.proc("-list", "-v")).stdout();
     }
 
     /**
@@ -91,21 +84,19 @@ final class Keytool {
      */
     public void genkey() throws IOException {
         final long start = System.currentTimeMillis();
-        final Process process = Keytool.process(
-            "-genkey",
+        final Process proc = this.proc(
+            "-genkeypair",
             "-alias",
             "localhost",
             "-keyalg",
             "RSA",
-            "-storepass",
-            this.password,
+            "-keysize",
+            "2048",
             "-keypass",
-            this.password,
-            "-keystore",
-            this.keystore.getAbsolutePath()
-        );
+            this.password
+        ).start();
         final PrintWriter writer = new PrintWriter(
-            new OutputStreamWriter(process.getOutputStream())
+            new OutputStreamWriter(proc.getOutputStream())
         );
         writer.print("localhost\n");
         writer.print("ACME Co.\n");
@@ -115,49 +106,45 @@ final class Keytool {
         writer.print("US\n");
         writer.print("yes\n");
         writer.close();
-        this.waitFor(process);
+        new VerboseProcess(proc).stdout();
         Logger.info(
             this,
-            "Keystore created in '%s' in %[ms]s",
+            "Keystore created in '%s' (%s) in %[ms]s",
             this.keystore,
+            FileUtils.byteCountToDisplaySize(this.keystore.length()),
             System.currentTimeMillis() - start
         );
     }
 
     /**
-     * Wait for this process to finish and validate its output.
-     * @param process The process to wait for
-     * @return Stdout of the process
+     * Import certificate into this store.
+     * @param file The file to import
+     * @param pwd The password there
      * @throws IOException If fails
      */
-    private String waitFor(final Process process) throws IOException {
-        try {
-            process.waitFor();
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-            throw new IllegalStateException(ex);
-        }
-        final int code = process.exitValue();
-        final String stdout = IOUtils.toString(process.getInputStream());
-        if (code != 0) {
-            throw new IllegalStateException(
-                Logger.format(
-                    "Non-zero exit code #%d: %s",
-                    code,
-                    stdout
-                )
-            );
-        }
-        return stdout;
+    public void imprt(final File file, final String pwd) throws IOException {
+        new VerboseProcess(
+            this.proc(
+                "-importkeystore",
+                "-srckeystore",
+                file.getAbsolutePath(),
+                "-srcstorepass",
+                pwd,
+                "-destkeystore",
+                this.keystore.getAbsolutePath(),
+                "-deststorepass",
+                this.password
+            )
+        ).stdout();
     }
 
     /**
-     * Create process.
+     * Create process builder.
      * @param args Arguments
      * @return Process just created and started
      * @throws IOException If fails
      */
-    private static Process process(final String... args) throws IOException {
+    private ProcessBuilder proc(final String... args) throws IOException {
         final List<String> cmds = new ArrayList<String>(args.length + 1);
         cmds.add(
             String.format(
@@ -168,9 +155,14 @@ final class Keytool {
         for (String arg : args) {
             cmds.add(arg);
         }
-        final ProcessBuilder builder = new ProcessBuilder(cmds);
-        builder.redirectErrorStream(true);
-        return builder.start();
+        cmds.add("-storetype");
+        cmds.add("jks");
+        cmds.add("-noprompt");
+        cmds.add("-storepass");
+        cmds.add(this.password);
+        cmds.add("-keystore");
+        cmds.add(this.keystore.getAbsolutePath());
+        return new ProcessBuilder(cmds);
     }
 
 }

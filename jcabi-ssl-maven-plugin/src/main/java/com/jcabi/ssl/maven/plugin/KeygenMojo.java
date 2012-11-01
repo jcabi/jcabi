@@ -72,7 +72,7 @@ public final class KeygenMojo extends AbstractMojo {
     private transient boolean skip;
 
     /**
-     * Name of keystore file.
+     * Name of keystore.jks file.
      */
     @MojoParameter(
         defaultValue = "${project.build.directory}/keystore.jks",
@@ -80,6 +80,16 @@ public final class KeygenMojo extends AbstractMojo {
         description = "Name of keystore.jks file"
     )
     private transient File keystore;
+
+    /**
+     * Name of cacerts.jks file.
+     */
+    @MojoParameter(
+        defaultValue = "${project.build.directory}/cacerts.jks",
+        required = false,
+        description = "Name of cacerts.jks file"
+    )
+    private transient File cacerts;
 
     /**
      * Set skip option.
@@ -103,6 +113,7 @@ public final class KeygenMojo extends AbstractMojo {
         if (!store.isActive()) {
             try {
                 store.activate(this.keystore);
+                new Cacerts(this.cacerts).imprt();
             } catch (java.io.IOException ex) {
                 throw new IllegalStateException(ex);
             }
