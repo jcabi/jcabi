@@ -151,6 +151,9 @@ public final class VerboseThreads implements ThreadFactory {
      * @param prt Default priority for all threads
      */
     public VerboseThreads(final String pfx, final boolean dmn, final int prt) {
+        if (pfx == null) {
+            throw new IllegalArgumentException("prefix can't be NULL");
+        }
         this.prefix = pfx;
         this.daemon = dmn;
         this.priority = prt;

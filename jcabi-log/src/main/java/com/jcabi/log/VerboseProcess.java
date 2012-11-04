@@ -65,6 +65,9 @@ public final class VerboseProcess {
      * @param prc The process to work with
      */
     public VerboseProcess(final Process prc) {
+        if (prc == null) {
+            throw new IllegalArgumentException("process can't be NULL");
+        }
         this.process = prc;
     }
 
@@ -74,6 +77,9 @@ public final class VerboseProcess {
      * @param builder Process builder to work with
      */
     public VerboseProcess(final ProcessBuilder builder) {
+        if (builder == null) {
+            throw new IllegalArgumentException("process builder can't be NULL");
+        }
         builder.redirectErrorStream(true);
         try {
             this.process = builder.start();

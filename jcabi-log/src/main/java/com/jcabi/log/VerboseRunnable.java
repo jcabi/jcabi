@@ -85,6 +85,9 @@ public final class VerboseRunnable implements Runnable {
      * @since 0.1.4
      */
     public VerboseRunnable(final Runnable runnable, final boolean swlw) {
+        if (runnable == null) {
+            throw new IllegalArgumentException("runnable can't be NULL");
+        }
         this.origin = runnable;
         this.swallow = swlw;
     }
@@ -100,6 +103,9 @@ public final class VerboseRunnable implements Runnable {
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
     public VerboseRunnable(final Callable<?> callable, final boolean swlw) {
+        if (callable == null) {
+            throw new IllegalArgumentException("callable can't be NULL");
+        }
         this.origin = new Runnable() {
             @Override
             public void run() {
