@@ -99,7 +99,7 @@ final class Git {
      * @param args Arguments to pass to it
      * @return Stdout
      */
-    @RetryOnFailure
+    @RetryOnFailure(delay = 15000, attempts = 5)
     public String exec(final File dir, final String... args) {
         final List<String> commands = new ArrayList<String>(args.length + 1);
         commands.add("git");
