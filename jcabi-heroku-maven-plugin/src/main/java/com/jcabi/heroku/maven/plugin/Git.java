@@ -109,7 +109,6 @@ final class Git {
         }
         Logger.info(this, "%s:...", StringUtils.join(commands, " "));
         final ProcessBuilder builder = new ProcessBuilder(commands);
-        builder.redirectErrorStream(true);
         builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
         return new VerboseProcess(builder).stdout();

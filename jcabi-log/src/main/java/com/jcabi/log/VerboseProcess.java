@@ -165,6 +165,11 @@ public final class VerboseProcess {
         try {
             this.process.waitFor();
         } finally {
+            Logger.debug(
+                this,
+                "#waitFor(): process finished",
+                this.process
+            );
             done.await(1, TimeUnit.SECONDS);
             try {
                 reader.close();
