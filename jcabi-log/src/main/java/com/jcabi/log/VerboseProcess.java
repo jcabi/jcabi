@@ -95,6 +95,7 @@ public final class VerboseProcess {
      * @return Full {@code stdout} of the process
      */
     public String stdout() {
+        final long start = System.currentTimeMillis();
         String stdout;
         try {
             stdout = this.waitFor();
@@ -103,6 +104,12 @@ public final class VerboseProcess {
             throw new IllegalStateException(ex);
         }
         final int code = this.process.exitValue();
+        Logger.debug(
+            this,
+            "#stdout(): process completed (code=%d) in %[ms]s",
+            code,
+            System.currentTimeMillis() - start
+        );
         if (code != 0) {
             throw new IllegalArgumentException(
                 Logger.format(
@@ -150,6 +157,7 @@ public final class VerboseProcess {
         try {
             this.process.waitFor();
         } finally {
+            Logger.debug(this, "#waitFor(): waiting for stdout...");
             done.await();
             try {
                 reader.close();
