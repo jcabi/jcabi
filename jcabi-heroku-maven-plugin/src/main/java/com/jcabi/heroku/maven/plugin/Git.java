@@ -85,7 +85,7 @@ final class Git {
             this.script,
             String.format(
                 // @checkstyle LineLength (1 line)
-                "set -x && %s -n -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i '%s' $@",
+                "set -x && %s -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i '%s' $@",
                 Git.SSH,
                 kfile.getAbsolutePath()
             )
