@@ -33,6 +33,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Utility class for getting {@code stdout} from a running process
@@ -106,8 +107,10 @@ public final class VerboseProcess {
         final int code = this.process.exitValue();
         Logger.debug(
             this,
-            "#stdout(): process completed (code=%d) in %[ms]s",
+            "#stdout(): process %s completed (code=%d, size=%d) in %[ms]s",
+            this.process,
             code,
+            stdout.length(),
             System.currentTimeMillis() - start
         );
         if (code != 0) {
@@ -154,11 +157,15 @@ public final class VerboseProcess {
                 false
             )
         ).start();
+        Logger.debug(
+            this,
+            "#waitFor(): waiting for stdout of %s...",
+            this.process
+        );
         try {
             this.process.waitFor();
         } finally {
-            Logger.debug(this, "#waitFor(): waiting for stdout...");
-            done.await();
+            done.await(1, TimeUnit.SECONDS);
             try {
                 reader.close();
             } catch (java.io.IOException ex) {

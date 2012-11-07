@@ -100,7 +100,7 @@ final class Git {
      * @return Stdout
      * @checkstyle MagicNumber (2 lines)
      */
-    @RetryOnFailure(delay = 15000, attempts = 5)
+    @RetryOnFailure(delay = 3000, attempts = 2)
     public String exec(final File dir, final String... args) {
         final List<String> commands = new ArrayList<String>(args.length + 1);
         commands.add("git");
@@ -109,6 +109,7 @@ final class Git {
         }
         Logger.info(this, "%s:...", StringUtils.join(commands, " "));
         final ProcessBuilder builder = new ProcessBuilder(commands);
+        builder.redirectErrorStream(true);
         builder.directory(dir);
         builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
         return new VerboseProcess(builder).stdout();

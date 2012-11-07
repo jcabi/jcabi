@@ -76,4 +76,19 @@ public final class VerboseProcessTest {
         }
     }
 
+    /**
+     * VerboseProcess can handle a long running command.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void handlesLongRunningCommand() throws Exception {
+        final VerboseProcess process = new VerboseProcess(
+            new ProcessBuilder("sleep", "2")
+        );
+        MatcherAssert.assertThat(
+            process.stdout(),
+            Matchers.equalTo("")
+        );
+    }
+
 }
