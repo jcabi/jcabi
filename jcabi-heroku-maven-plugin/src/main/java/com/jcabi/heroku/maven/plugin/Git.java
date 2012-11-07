@@ -98,6 +98,7 @@ final class Git {
      * @param dir In which directory to run it
      * @param args Arguments to pass to it
      * @return Stdout
+     * @checkstyle MagicNumber (2 lines)
      */
     @RetryOnFailure(delay = 15000, attempts = 5)
     public String exec(final File dir, final String... args) {
