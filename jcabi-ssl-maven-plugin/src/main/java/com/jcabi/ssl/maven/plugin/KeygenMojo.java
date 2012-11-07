@@ -31,6 +31,7 @@ package com.jcabi.ssl.maven.plugin;
 
 import com.jcabi.log.Logger;
 import java.io.File;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
@@ -109,7 +110,9 @@ public final class KeygenMojo extends AbstractMojo {
             Logger.info(this, "execution skipped because of 'skip' option");
             return;
         }
-        final Keystore store = new Keystore(this.getClass().getName());
+        final Keystore store = new Keystore(
+            DigestUtils.md5Hex(this.getClass().getName())
+        );
         if (!store.isActive()) {
             try {
                 store.activate(this.keystore);

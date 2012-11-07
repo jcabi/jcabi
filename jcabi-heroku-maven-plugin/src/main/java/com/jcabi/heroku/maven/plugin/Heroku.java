@@ -70,6 +70,7 @@ final class Heroku {
         this.git.exec(
             path.getParentFile(),
             "clone",
+            "--verbose",
             String.format("git@heroku.com:%s.git", this.name),
             path.getAbsolutePath()
         );
