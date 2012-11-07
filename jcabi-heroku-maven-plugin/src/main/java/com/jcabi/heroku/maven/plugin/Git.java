@@ -130,6 +130,12 @@ final class Git {
                 file.getAbsolutePath()
             )
         ).stdout();
+        Logger.debug(
+            this,
+            "chmod(%s, %3o): succeeded",
+            file,
+            mode
+        );
     }
 
 }
