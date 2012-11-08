@@ -86,6 +86,8 @@ final class Environment {
      * @param idnt Environment ID
      */
     public Environment(final AWSElasticBeanstalk clnt, final String idnt) {
+        assert clnt != null;
+        assert idnt != null;
         this.client = clnt;
         this.eid = idnt;
         final EnvironmentDescription desc = this.description();

@@ -66,6 +66,8 @@ final class Application {
      * @param app Application name
      */
     public Application(final AWSElasticBeanstalk clnt, final String app) {
+        assert clnt != null;
+        assert app != null;
         this.client = clnt;
         this.name = app;
     }
@@ -204,8 +206,9 @@ final class Application {
     }
 
     /**
-     * Suggest new candidate environment CNAME.
-     * @return The CNAME, suggested and not occupied
+     * Suggest new candidate environment CNAME (and at the same time it will
+     * be used as a name of environment).
+     * @return The CNAME/name suggested and not occupied
      */
     private String suggest() {
         String cname;
@@ -237,7 +240,14 @@ final class Application {
      * @return TRUE if it's occupied
      */
     private boolean occupied(final String cname) {
-        return !this.client.checkDNSAvailability(
+        boolean exists = false;
+        for (Environment env : this.environments()) {
+            if (env.name().equals(cname)) {
+                exists = true;
+                break;
+            }
+        }
+        return exists || !this.client.checkDNSAvailability(
             new CheckDNSAvailabilityRequest(cname)
         ).getAvailable();
     }

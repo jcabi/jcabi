@@ -115,6 +115,7 @@ public final class ApplicationTest {
         Mockito.doReturn(
             new CreateEnvironmentResult()
                 .withApplicationName(name)
+                .withEnvironmentId("f4g5h6j7")
                 .withEnvironmentName(name)
         ).when(ebt)
             .createEnvironment(
@@ -133,6 +134,8 @@ public final class ApplicationTest {
                 Arrays.asList(
                     new EnvironmentDescription()
                         .withCNAME("")
+                        .withEnvironmentName("some-env")
+                        .withEnvironmentId("a1b2c3d4")
                         .withStatus("Ready")
                 )
             )
