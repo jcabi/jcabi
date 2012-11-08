@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
     http://maven.apache.org/xsd/decoration-1.0.0.xsd"
-    name="jcabi-test">
+    name="jcabi-test-basics">
 
     <skin>
       <groupId>com.jcabi</groupId>
@@ -11,10 +11,23 @@
       <version jcabi="yes">1.0-SNAPSHOT</version>
     </skin>
 
+    <bannerLeft>
+        <name>jcabi</name>
+        <src>http://img.jcabi.com/logo.png</src>
+        <href>http://www.jcabi.com/</href>
+    </bannerLeft>
+
     <body>
+        <head>
+            <link href="http://img.jcabi.com/favicon.ico" rel="shortcut icon"/>
+        </head>
+        <breadcrumbs>
+            <item name="jcabi.com" href="http://www.jcabi.com"/>
+        </breadcrumbs>
         <menu name="Overview">
             <item name="Introduction" href="./index.html" />
         </menu>
+        <menu ref="modules" />
         <menu ref="reports" />
     </body>
 

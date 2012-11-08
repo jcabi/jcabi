@@ -29,40 +29,27 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  -->
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
-    http://maven.apache.org/xsd/decoration-1.0.0.xsd"
-    name="jcabi">
-
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0     http://maven.apache.org/xsd/decoration-1.0.0.xsd" name="jcabi">
     <skin>
         <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-stylus-skin</artifactId>
         <version>1.2</version>
     </skin>
-
     <bannerLeft>
         <name>jcabi</name>
         <src>http://img.jcabi.com/logo.png</src>
         <href>http://www.jcabi.com/</href>
     </bannerLeft>
-
     <poweredBy>
-        <logo name="Maven" href="http://maven.apache.org/"
-            img="http://maven.apache.org/images/logos/maven-feather.png"/>
+        <logo name="Maven" href="http://maven.apache.org/" img="http://maven.apache.org/images/logos/maven-feather.png"/>
     </poweredBy>
-
     <body>
         <head>
-            <link href="http://img.jcabi.com/favicon.ico" rel="shortcut icon" />
-            <link href="/css/jcabi.css" rel="stylesheet" type="text/css" />
-            <link type="text/css"
-                href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css"
-                rel="stylesheet" />
-            <script type="text/javascript"
-                src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-            <script type="text/javascript"
-                src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+            <link href="http://img.jcabi.com/favicon.ico" rel="shortcut icon"/>
+            <link href="/css/jcabi.css" rel="stylesheet" type="text/css"/>
+            <link type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" rel="stylesheet"/>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"/>
+            <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"/>
             <script type="text/javascript">
                 //<![CDATA[
                 $(document).ready(
@@ -90,20 +77,18 @@
             <item name="jcabi.com" href="http://www.jcabi.com"/>
         </breadcrumbs>
         <links>
-            <item name="Built with Maven 2" href="http://maven.apache.org/" />
+            <item name="Built with Maven 2" href="http://maven.apache.org/"/>
         </links>
         <menu name="Overview">
-            <item name="Introduction" href="index.html" />
+            <item name="Introduction" href="index.html"/>
         </menu>
-        <menu ref="modules" />
-        <menu ref="reports" />
+        <menu ref="modules"/>
+        <menu ref="reports"/>
     </body>
-
     <!--
     Read more about date format:
     @see http://download.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html
     -->
-    <publishDate position="right" format="dd-MMM-yyyy h:mmaa" />
+    <publishDate position="right" format="dd-MMM-yyyy h:mmaa"/>
     <version position="right"/>
-
 </project>
