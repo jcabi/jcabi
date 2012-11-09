@@ -76,6 +76,17 @@ public final class DeployMojo extends AbstractMojo {
     private transient boolean skip;
 
     /**
+     * Shall we use SWAP mechanism?
+     * @since 0.5.3
+     */
+    @MojoParameter(
+        defaultValue = "true",
+        required = false,
+        description = "Use CNAME swap or terminate first and deploy then"
+    )
+    private transient boolean swap;
+
+    /**
      * Server ID to deploy to.
      */
     @MojoParameter(
@@ -175,7 +186,7 @@ public final class DeployMojo extends AbstractMojo {
                 )
             );
         } catch (DeploymentException ex) {
-            new Application(ebt, this.name).clean();
+            new Application(ebt, this.name).clean(false);
         } finally {
             ebt.shutdown();
         }
@@ -190,7 +201,7 @@ public final class DeployMojo extends AbstractMojo {
     private void deploy(final AWSElasticBeanstalk ebt, final Version version)
         throws MojoFailureException {
         final Application app = new Application(ebt, this.name);
-        app.clean();
+        app.clean(!this.swap);
         final Environment candidate = app.candidate(version, this.template);
         if (candidate.green()) {
             if (candidate.primary()) {

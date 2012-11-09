@@ -74,10 +74,11 @@ final class Application {
 
     /**
      * Clean it up beforehand.
+     * @param wipe Kill all existing environments no matter what?
      */
-    public void clean() {
+    public void clean(final boolean wipe) {
         for (Environment env : this.environments()) {
-            if (env.primary() && env.green()) {
+            if (env.primary() && env.green() && !wipe) {
                 Logger.info(
                     this,
                     "Environment '%s' is primary and green",
@@ -85,14 +86,23 @@ final class Application {
                 );
                 continue;
             }
-            if (!env.terminated()) {
+            if (env.terminated()) {
+                continue;
+            }
+            if (wipe) {
+                Logger.info(
+                    this,
+                    "Wiping out environment '%s'...",
+                    env
+                );
+            } else {
                 Logger.info(
                     this,
                     "Environment '%s' is not primary+green, terminating...",
                     env
                 );
-                env.terminate();
             }
+            env.terminate();
         }
     }
 
