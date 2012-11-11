@@ -133,6 +133,7 @@ How to release new version to Maven Central:
     9. Revert version back to SNAPSHOT:
 
         find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)0\.5\.4\(\<\/version\>\)|\11.0-SNAPSHOT\2|g' {} \;
+        git commit -a -m '#87: version back to SNAPSHOT'
 
     10. Merge the branch to 'master':
 
