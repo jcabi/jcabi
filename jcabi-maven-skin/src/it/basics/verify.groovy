@@ -34,8 +34,6 @@ import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 
 [
-    'target/site/index.html',
-    'target/site/css/jcabi.css',
     'basics-child/target/site/index.html',
 ].each {
     def file = new File(basedir, it)
@@ -46,8 +44,9 @@ import org.hamcrest.Matchers
     }
 }
 
+def html = new File(basedir, 'target/site/index.html').text
 MatcherAssert.assertThat(
-    new File(basedir, 'target/site/index.html').text,
+    html,
     XhtmlMatchers.hasXPaths(
         '//xhtml:head',
         '//xhtml:body',
@@ -56,9 +55,7 @@ MatcherAssert.assertThat(
     )
 )
 
-def htmlResponse = new ValidatorBuilder().html().validate(
-    new File(basedir, 'target/site/index.html').text
-)
+def htmlResponse = new ValidatorBuilder().html().validate(html)
 MatcherAssert.assertThat(
     htmlResponse.errors(),
     /**

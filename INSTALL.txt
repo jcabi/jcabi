@@ -83,28 +83,32 @@ Continuous Integration Configuration
 
 How to release new version to Maven Central:
 ---------------------------------
+    https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide
+    http://www.sonatype.com/books/nexus-book/reference/staging-sect-managing-plugin.html
+    https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven
 
     1. Create a new ticket in GitHub, explaining why you want to release
-       a new version
+        a new version
 
     2. Create new branch, see https://github.com/yegor256/jcabi/issues/87
-       for a live example
+        for a live example
+
+        git checkout -b 87
 
     3. Replace <version jcabi="yes">...</version> with the next
-       version you want to use, e.g.:
+        version you want to use, e.g.:
 
-        find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)1\.0\-SNAPSHOT\(\<\/version\>\)|\10.1\2|g' {} \;
+        find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)1\.0\-SNAPSHOT\(\<\/version\>\)|\10.5.4\2|g' {} \;
 
     4. Update releasedVersion property in pom.xml
 
-    5. Commit/push your changes to GitHub
+    5. Commit your changes
 
-    6. Read these pages:
-        https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide
-        http://www.sonatype.com/books/nexus-book/reference/staging-sect-managing-plugin.html
-        https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven
+        git commit -a -m '#87: version set to 0.5.4'
 
-    7. Run "mvn -Dci -Pjcabi -Dsonatype clean deploy && mvn clean -Dsite site-deploy"
+    6. Deploy the product to Sonatype:
+
+        mvn -Dci -Pjcabi -Dsonatype clean deploy
 
         Make sure that you have this profile in ~/.m2/settings.xml:
 
@@ -117,16 +121,23 @@ How to release new version to Maven Central:
             </properties>
           </profile>
 
+    7. Deploy the site to Amazon S3:
+
+        mvn -Dsite clean install site-deploy
+
     8. Tag the branch
 
-        git tag -a jcabi-0.1.2 -m '#123: version 0.1.2 released to Maven Central'
-        git push origin jcabi-0.1.2
+        git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
+        git push origin jcabi-0.5.4
 
-    9. Delete the branch or merge it back to 'master' (if you did any changes). Don't
-        forget to revert back version number:
+    9. Revert version back to SNAPSHOT:
 
-        find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)0\.1\(\<\/version\>\)|\11.0-SNAPSHOT\2|g' {} \;
+        find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)0\.5\.4\(\<\/version\>\)|\11.0-SNAPSHOT\2|g' {} \;
 
-    10. Close the issue as "fixed" in Github
+    10. Merge the branch to 'master':
+
+        git checkout master && git merge 87 && git push origin master && git branch -D 87
+
+    11. Close the issue as "fixed" in Github
 
     That's it
