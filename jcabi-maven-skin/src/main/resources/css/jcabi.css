@@ -28,8 +28,13 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+body {
+    padding: 2em;
+    font-family: 'Helvetica', Arial, serif;
+}
+
 #breadcrumbs {
-    list-style: none;
+    list-style-type: none;
     padding-left: 0;
 }
 
@@ -40,10 +45,45 @@
 #menu {
     float: left;
     width: 17em;
+    margin-top: 3em;
     padding-left: 0;
-    list-style: none;
+    list-style-type: none;
 }
+
+    #menu > li {
+        margin-top: 1em;
+    }
+
+    #menu ul {
+        padding-left: 1em;
+        list-style-type: none;
+    }
 
 #content {
     margin-left: 19em;
 }
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+a {
+    color: #2276A4;
+}
+
+pre {
+    background-color: black;
+    color: white;
+    padding: 0.5em 1em;
+}
+
+table {
+    border: 1px solid black;
+}
+
+    table th {
+        background-color: #2276A4;
+        color: white;
+        font-weight: normal;
+        text-align: left;
+    }
