@@ -50,7 +50,8 @@ MatcherAssert.assertThat(
     new File(basedir, 'target/site/index.html').text,
     XhtmlMatchers.hasXPaths(
         '//xhtml:head',
-        '//xhtml:body'
+        '//xhtml:body',
+        '//xhtml:p[contains(.,"1.0.0-SNAPSHOT")]'
     )
 )
 

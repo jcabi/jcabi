@@ -87,7 +87,7 @@
             </ul>
             <p>
                 $dateFormat.applyPattern('dd-MMM-yyyy')
-                ${dateFormat.format($currentDate)} ${version}
+                ${dateFormat.format($currentDate)} $${version}
             </p>
             ${bodyContent}
             <p>
