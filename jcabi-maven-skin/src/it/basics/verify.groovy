@@ -28,6 +28,11 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import com.rexsl.test.XhtmlMatchers
+import com.rexsl.w3c.ValidatorBuilder
+import org.hamcrest.MatcherAssert
+import org.hamcrest.Matchers
+
 [
     'target/site/index.html',
     'target/site/css/screen.css',
@@ -40,4 +45,26 @@
         )
     }
 }
-true
+
+MatcherAssert.assertThat(
+    new File(basedir, 'target/site/index.html').text,
+    XhtmlMatchers.hasXPaths(
+        '//xhtml:head',
+        '//xhtml:body'
+    )
+)
+
+def response = new ValidatorBuilder().html().validate(
+    new File(basedir, 'target/site/index.html').text
+)
+MatcherAssert.assertThat(response.errors(), Matchers.empty())
+MatcherAssert.assertThat(
+    response.warnings(),
+    /**
+     * @todo #86 This validation doesn't work because maven-site-plugin produces
+     *  invalid HTML5 output (it is using an obsolete NAME attribute on
+     *  some HTML elements). We're expecting exactly one warning here, and
+     *  no errors.
+     */
+    Matchers.hasSize(1)
+)
