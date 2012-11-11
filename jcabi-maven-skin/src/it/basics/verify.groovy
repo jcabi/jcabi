@@ -35,7 +35,7 @@ import org.hamcrest.Matchers
 
 [
     'target/site/index.html',
-    'target/site/css/screen.css',
+    'target/site/css/jcabi.css',
     'basics-child/target/site/index.html',
 ].each {
     def file = new File(basedir, it)
@@ -54,17 +54,28 @@ MatcherAssert.assertThat(
     )
 )
 
-def response = new ValidatorBuilder().html().validate(
+def htmlResponse = new ValidatorBuilder().html().validate(
     new File(basedir, 'target/site/index.html').text
 )
-MatcherAssert.assertThat(response.errors(), Matchers.empty())
 MatcherAssert.assertThat(
-    response.warnings(),
+    htmlResponse.errors(),
+    Matchers.describedAs(htmlResponse.toString(), Matchers.empty())
+)
+MatcherAssert.assertThat(
+    htmlResponse.warnings(),
     /**
      * @todo #86 This validation doesn't work because maven-site-plugin produces
      *  invalid HTML5 output (it is using an obsolete NAME attribute on
      *  some HTML elements). We're expecting exactly one warning here, and
      *  no errors.
      */
-    Matchers.hasSize(1)
+    Matchers.describedAs(htmlResponse.toString(), Matchers.hasSize(1))
+)
+
+def cssResponse = new ValidatorBuilder().css().validate(
+    new File(basedir, 'target/site/css/jcabi.css').text
+)
+MatcherAssert.assertThat(
+    cssResponse.valid(),
+    Matchers.describedAs(cssResponse.toString(), Matchers.is(true))
 )
