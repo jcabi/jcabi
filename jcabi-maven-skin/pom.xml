@@ -39,6 +39,12 @@
     <packaging>jar</packaging>
     <name>jcabi-maven-skin</name>
     <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <artifactId>maven-invoker-plugin</artifactId>

@@ -51,7 +51,8 @@ MatcherAssert.assertThat(
     XhtmlMatchers.hasXPaths(
         '//xhtml:head',
         '//xhtml:body',
-        '//xhtml:p[contains(.,"1.0.0-SNAPSHOT")]'
+        '//xhtml:p[contains(.,"1.0.0-SNAPSHOT")]',
+        '//xhtml:p[contains(.,"test-org-name")]'
     )
 )
 

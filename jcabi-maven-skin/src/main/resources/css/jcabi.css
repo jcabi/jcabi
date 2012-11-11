@@ -44,6 +44,14 @@ body {
         display: inline;
     }
 
+    #breadcrumbs li:before {
+        content: ">";
+    }
+
+    #breadcrumbs li:first-child:before {
+        content: "";
+    }
+
 #menu {
     float: left;
     width: 17em;
