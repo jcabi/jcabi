@@ -231,7 +231,8 @@ final class Application {
             final String ename = String.format(
                 "%s-%s",
                 this.name,
-                RandomStringUtils.randomAlphabetic(2)
+                // @checkstyle MagicNumber (1 line)
+                RandomStringUtils.randomAlphabetic(4)
             );
             boolean exists = false;
             for (Environment env : this.environments()) {
