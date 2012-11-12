@@ -171,6 +171,7 @@ public final class DeployMojo extends AbstractMojo {
             this.server
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
+        final long start = System.currentTimeMillis();
         try {
             this.deploy(
                 ebt,
@@ -189,6 +190,11 @@ public final class DeployMojo extends AbstractMojo {
             new Application(ebt, this.name).clean(false);
         } finally {
             ebt.shutdown();
+            Logger.info(
+                this,
+                "Deployment took %[ms]s",
+                System.currentTimeMillis() - start
+            );
         }
     }
 
