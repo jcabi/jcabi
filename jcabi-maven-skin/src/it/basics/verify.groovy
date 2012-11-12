@@ -33,6 +33,11 @@ import com.rexsl.w3c.ValidatorBuilder
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 
+MatcherAssert.assertThat(
+    new File(basedir, 'build.log').text,
+    Matchers.not(Matchers.containsString('ERROR'))
+)
+
 [
     'basics-child/target/site/index.html',
 ].each {

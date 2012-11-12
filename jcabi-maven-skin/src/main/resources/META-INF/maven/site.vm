@@ -76,15 +76,17 @@
             #end
         </ul>
         <div id="content">
-            <a href="${decoration.bannerLeft.href}">
+            <a href="${decoration.bannerLeft.href}" title="${decoration.bannerLeft.name}">
                 <img src="${decoration.bannerLeft.src}"
                     alt="${decoration.bannerLeft.name}"/>
             </a>
-            <ul id="breadcrumbs">
-                #foreach ($item in $decoration.body.breadcrumbs)
-                    <li>#link($item)</li>
-                #end
-            </ul>
+            #if (${decoration.body.breadcrumbs} && ${decoration.body.breadcrumbs.size()} > 1)
+                <ul id="breadcrumbs">
+                    #foreach ($item in $decoration.body.breadcrumbs)
+                        <li>#link($item)</li>
+                    #end
+                </ul>
+            #end
             <p>
                 $dateFormat.applyPattern('dd-MMM-yyyy')
                 ${dateFormat.format($currentDate)} ${project.version}
