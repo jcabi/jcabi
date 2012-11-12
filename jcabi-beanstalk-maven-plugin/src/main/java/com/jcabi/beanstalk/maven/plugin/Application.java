@@ -40,6 +40,7 @@ import com.amazonaws.services.elasticbeanstalk.model.SwapEnvironmentCNAMEsReques
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.LinkedList;
+import org.apache.commons.lang.RandomStringUtils;
 
 /**
  * EBT application.
@@ -171,19 +172,18 @@ final class Application {
      * @return The environment
      */
     public Environment candidate(final Version version, final String template) {
-        final String cname = this.suggest();
+        final CreateEnvironmentRequest request = this.suggest();
         Logger.info(
             this,
-            "Suggested candidate environment name is '%s' in '%s' app",
-            cname,
-            this.name
+            "Suggested candidate environment name is '%s' with '%s' CNAME",
+            request.getEnvironmentName(),
+            request.getCNAMEPrefix()
         );
         final CreateEnvironmentResult res = this.client.createEnvironment(
-            new CreateEnvironmentRequest(this.name, cname)
-                .withDescription(cname)
+            request
+                .withApplicationName(this.name)
                 .withVersionLabel(version.label())
                 .withTemplateName(template)
-                .withCNAMEPrefix(cname)
         );
         Logger.info(
             this,
@@ -218,16 +218,34 @@ final class Application {
     /**
      * Suggest new candidate environment CNAME (and at the same time it will
      * be used as a name of environment).
-     * @return The CNAME/name suggested and not occupied
+     * @return The environment create request with data inside
      */
-    private String suggest() {
-        String cname;
+    private CreateEnvironmentRequest suggest() {
+        final CreateEnvironmentRequest request = new CreateEnvironmentRequest();
         if (this.occupied(this.name)) {
-            cname = this.makeup(this.name);
+            request.withCNAMEPrefix(this.makeup(this.name));
         } else {
-            cname = this.name;
+            request.withCNAMEPrefix(this.name);
         }
-        return cname;
+        while (true) {
+            final String ename = String.format(
+                "%s-%s",
+                this.name,
+                RandomStringUtils.randomAlphabetic(2)
+            );
+            boolean exists = false;
+            for (Environment env : this.environments()) {
+                if (env.name().equals(ename)) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (!exists) {
+                request.withEnvironmentName(ename).withDescription(ename);
+                break;
+            }
+        }
+        return request;
     }
 
     /**
@@ -250,14 +268,7 @@ final class Application {
      * @return TRUE if it's occupied
      */
     private boolean occupied(final String cname) {
-        boolean exists = false;
-        for (Environment env : this.environments()) {
-            if (env.name().equals(cname)) {
-                exists = true;
-                break;
-            }
-        }
-        return exists || !this.client.checkDNSAvailability(
+        return !this.client.checkDNSAvailability(
             new CheckDNSAvailabilityRequest(cname)
         ).getAvailable();
     }
