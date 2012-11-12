@@ -53,7 +53,7 @@ def html = new File(basedir, 'target/site/index.html').text
 MatcherAssert.assertThat(
     html,
     XhtmlMatchers.hasXPaths(
-        '//xhtml:head',
+        '//xhtml:head/xhtml:link[@rel="shortcut icon"]',
         '//xhtml:body',
         '//xhtml:p[contains(.,"1.0.0-SNAPSHOT")]',
         '//xhtml:p[contains(.,"test-org-name")]'
