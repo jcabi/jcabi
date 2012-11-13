@@ -39,7 +39,7 @@ import org.slf4j.Logger;
  *
  * <p>The class is thread-safe.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>

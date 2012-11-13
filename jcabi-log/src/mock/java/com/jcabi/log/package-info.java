@@ -31,7 +31,7 @@
 /**
  * Convenient utils, very useful in other projects, mockers.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 package com.jcabi.log;

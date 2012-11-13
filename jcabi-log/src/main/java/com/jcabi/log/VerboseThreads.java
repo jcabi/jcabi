@@ -76,7 +76,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * <p>This class is thread-safe.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.2
  * @see VerboseRunnable

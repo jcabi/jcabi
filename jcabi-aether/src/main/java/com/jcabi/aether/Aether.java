@@ -64,7 +64,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  *
  * <p>The class is immutable and thread-safe.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  * @checkstyle ClassDataAbstractionCoupling (500 lines)

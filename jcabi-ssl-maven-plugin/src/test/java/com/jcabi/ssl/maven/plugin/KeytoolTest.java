@@ -41,7 +41,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Keytool}.
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 public final class KeytoolTest {

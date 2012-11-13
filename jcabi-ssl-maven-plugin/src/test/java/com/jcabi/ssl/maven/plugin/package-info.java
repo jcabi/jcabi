@@ -31,7 +31,7 @@
 /**
  * SSL manipulation Maven plugin, tests.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.5
  */

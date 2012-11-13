@@ -75,7 +75,7 @@ import org.slf4j.LoggerFactory;
  * preparing of the arguments. By default, such a call is made inside every
  * method of {@link Logger} class.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1
  */

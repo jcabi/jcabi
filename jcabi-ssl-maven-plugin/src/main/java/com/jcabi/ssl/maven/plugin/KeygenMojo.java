@@ -43,7 +43,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 /**
  * Generate SSL keystore and configure in JVM.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.5
  */

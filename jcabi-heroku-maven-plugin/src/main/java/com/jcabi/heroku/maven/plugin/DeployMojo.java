@@ -49,7 +49,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 /**
  * Deploys JAR/WAR artifact to Heroku.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.4
  */

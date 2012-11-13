@@ -57,7 +57,7 @@ import org.apache.commons.io.IOUtils;
 /**
  * EBT environment.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.3
  * @checkstyle ClassDataAbstractionCoupling (500 lines)

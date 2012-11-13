@@ -39,7 +39,7 @@ import org.junit.Test;
 /**
  * Test case for {@link Slf4jAdapter}.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 public final class Slf4jAdapterTest {

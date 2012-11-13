@@ -42,7 +42,7 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Git engine.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.4
  * @checkstyle ClassDataAbstractionCoupling (500 lines)

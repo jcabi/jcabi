@@ -53,7 +53,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Environment}.
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */

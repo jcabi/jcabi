@@ -36,7 +36,7 @@ import org.junit.Test;
 
 /**
  * Test case for {@link VerboseRunnable}.
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 @SuppressWarnings({ "PMD.DoNotUseThreads", "PMD.TooManyMethods" })

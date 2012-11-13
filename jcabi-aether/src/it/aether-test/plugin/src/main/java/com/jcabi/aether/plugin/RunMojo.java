@@ -46,7 +46,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
 /**
  * Finds all artifacts by names in the current project.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @goal run
  * @phase test

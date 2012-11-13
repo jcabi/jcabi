@@ -53,7 +53,7 @@ import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
  *
  * <p>The class is mutable and thread-safe.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html">Velocity User Guide</a>

@@ -31,7 +31,7 @@
 /**
  * Maven Log to SLFJ bridge, tests.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 package org.slf4j.impl;

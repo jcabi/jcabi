@@ -37,7 +37,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Abstraction of {@code java.home/lib/security/cacerts} file.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.5
  */

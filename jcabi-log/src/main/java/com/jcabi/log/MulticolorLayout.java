@@ -73,7 +73,7 @@ import org.apache.log4j.spi.LoggingEvent;
  *
  * <p>The class is immutable and thread-safe.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.10
  * @see <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape code</a>

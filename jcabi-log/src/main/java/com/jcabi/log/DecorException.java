@@ -32,7 +32,7 @@ package com.jcabi.log;
 /**
  * Exception if some problem with decor.
  *
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1
  */

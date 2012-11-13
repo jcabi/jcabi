@@ -39,7 +39,7 @@ import org.junit.runners.Parameterized.Parameters;
 /**
  * Test case for {@link SecretDecor}.
  * @author Marina Kosenko (marina.kosenko@gmail.com)
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 @RunWith(Parameterized.class)

@@ -39,7 +39,7 @@ import java.util.regex.Pattern;
  * {@link String#format(String,Object[])}.
  *
  * @author Marina Kosenko (marina.kosenko@gmail.com)
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1
  */

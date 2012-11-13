@@ -61,7 +61,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * Test case for {@link Aether}.
- * @author Yegor Bugayenko (yegor@jcabi.com)
+ * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
