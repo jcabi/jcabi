@@ -53,7 +53,21 @@ class Foo {
 }
 +--
 
-  Read also about {{{./decors.html}decors}}.
+  Read also about log {{{./decors.html}decors}}.
+
+  There are a few other convenient classes in this package:
+
+   * {{{./apidocs/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}} -
+     wrapper around <<<java.lang.Runnable>>> that swallows all runtime
+     exceptions and logs them to SLF4J.
+
+   * {{{./apidocs/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}} -
+     wrapper around <<<java.lang.Process>>> that monitors process executions,
+     collects its output into a <<<String>>> and logs everything through SLF4J.
+
+   * {{{./apidocs/com/jcabi/log/VerboseThreads.html}<<<VerboseThreads>>>}} -
+     an implementation of <<<java.util.concurrent.ThreadFactory>>> that
+     instantiates threads that log all runtime exceptions through SLF4J.
 
   The only dependency you need is:
 

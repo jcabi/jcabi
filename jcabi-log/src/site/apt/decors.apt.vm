@@ -41,19 +41,19 @@ Decors
   Log an event like this:
 
 +--
-  import com.jcabi.log.Logger;
-  class Foo {
-    void bar(int value) {
-      final long start = System.nanoTime();
-      // some operations
-      Logger.debug(
-        this,
-        "bar(%d): done in %[nano]d",
-        value,
-        System.nanoTime() - start
-      );
-    }
+import com.jcabi.log.Logger;
+class Foo {
+  void bar(int value) {
+    final long start = System.nanoTime();
+    // some operations
+    Logger.debug(
+      this,
+      "bar(%d): done in %[nano]d",
+      value,
+      System.nanoTime() - start
+    );
   }
+}
 +--
 
   You will see something like this in log:
@@ -101,12 +101,12 @@ public final class DataDecor implements Formattable {
   Then, provide its class name in log formatting string, for example:
 
 +--
-  import com.jcabi.log.Logger;
-  Logger.debug(
-    this,
-    "bar(%d): show some data: %[com.example.DataDecor]s",
-    value,
-    data
-  );
+import com.jcabi.log.Logger;
+Logger.debug(
+  this,
+  "bar(%d): show some data: %[com.example.DataDecor]s",
+  value,
+  data
+);
 +--
 
