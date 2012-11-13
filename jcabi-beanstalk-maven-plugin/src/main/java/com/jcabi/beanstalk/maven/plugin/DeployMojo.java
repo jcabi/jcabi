@@ -217,30 +217,41 @@ public final class DeployMojo extends AbstractMojo {
                     candidate
                 );
             } else {
+                Logger.info(
+                    this,
+                    "Candidate env '%s' is not primary, let's swap",
+                    candidate
+                );
                 app.swap(candidate);
             }
         } else {
             Logger.error(
                 this,
-                "Failed to deploy %s to %s",
+                "Failed to deploy '%s' to '%s'",
                 version,
                 candidate
             );
             if (!candidate.terminated()) {
                 Logger.error(
                     this,
-                    "TAIL report should explain the cause of failure"
+                    "TAIL report should explain the cause of failure:"
                 );
-                for (String line : candidate.tail().split("\n")) {
-                    Logger.info(this, "  %s", line);
-                }
+                this.log(candidate.tail().split("\n"));
             }
-            Logger.error(this, "Latest events (in reverse order):");
-            for (String event : candidate.events()) {
-                Logger.info(this, "   %s", event);
-            }
+            Logger.error(this, "Latest EBT events (in reverse order):");
+            this.log(candidate.events());
             candidate.terminate();
             throw new MojoFailureException("failed to deploy");
+        }
+    }
+
+    /**
+     * Log all lines from the collection.
+     * @param lines All lines to log
+     */
+    private void log(final String[] lines) {
+        for (String line : lines) {
+            Logger.info(this, ">> %s", line);
         }
     }
 

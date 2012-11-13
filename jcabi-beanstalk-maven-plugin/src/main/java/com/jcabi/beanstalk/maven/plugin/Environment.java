@@ -128,8 +128,7 @@ final class Environment {
     public String toString() {
         final EnvironmentDescription desc = this.description();
         return String.format(
-            "%s/%s/%s/%s",
-            desc.getApplicationName(),
+            "%s/%s/%s",
             desc.getEnvironmentName(),
             desc.getEnvironmentId(),
             desc.getCNAME()
@@ -142,15 +141,24 @@ final class Environment {
      */
     public boolean primary() {
         final EnvironmentDescription desc = this.description();
-        final boolean primary = desc.getCNAME().startsWith(
-            String.format("%s.", desc.getApplicationName())
-        );
-        Logger.info(
-            this,
-            "Environment '%s' considered primary: %B",
-            this,
-            primary
-        );
+        final String prefix = String.format("%s.", desc.getApplicationName());
+        final boolean primary = this.stable()
+            && desc.getCNAME().startsWith(prefix);
+        if (primary) {
+            Logger.info(
+                this,
+                "Environment '%s' considered primary",
+                this
+            );
+        } else {
+            Logger.info(
+                this,
+                // @checkstyle LineLength (1 line)
+                "Environment '%s' considered secondary since its CNAME doesn't start with '%s'",
+                this,
+                prefix
+            );
+        }
         return primary;
     }
 
@@ -234,7 +242,7 @@ final class Environment {
      * Get latest events.
      * @return Collection of events
      */
-    public Collection<String> events() {
+    public String[] events() {
         if (!this.stable()) {
             throw new DeploymentException(
                 String.format(
@@ -256,7 +264,7 @@ final class Environment {
                 )
             );
         }
-        return events;
+        return events.toArray(new String[] {});
     }
 
     /**

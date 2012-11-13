@@ -40,7 +40,7 @@ import com.amazonaws.services.elasticbeanstalk.model.SwapEnvironmentCNAMEsReques
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.LinkedList;
-import org.apache.commons.lang.RandomStringUtils;
+import java.util.Random;
 
 /**
  * EBT application.
@@ -48,7 +48,9 @@ import org.apache.commons.lang.RandomStringUtils;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.3
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@SuppressWarnings("PMD.TooManyMethods")
 final class Application {
 
     /**
@@ -71,6 +73,11 @@ final class Application {
         assert app != null;
         this.client = clnt;
         this.name = app;
+        Logger.info(
+            this,
+            "Working with application '%s'",
+            this.name
+        );
     }
 
     /**
@@ -93,7 +100,8 @@ final class Application {
             if (wipe) {
                 Logger.info(
                     this,
-                    "Wiping out environment '%s'...",
+                    // @checkstyle LineLength (1 line)
+                    "Wiping out environment '%s' as required by configuration...",
                     env
                 );
             } else {
@@ -222,27 +230,22 @@ final class Application {
      */
     private CreateEnvironmentRequest suggest() {
         final CreateEnvironmentRequest request = new CreateEnvironmentRequest();
-        if (this.occupied(this.name)) {
-            request.withCNAMEPrefix(this.makeup(this.name));
-        } else {
-            request.withCNAMEPrefix(this.name);
+        while (true) {
+            if (!this.occupied(this.name)) {
+                request.withCNAMEPrefix(this.name);
+                break;
+            }
+            if (this.hasPrimary()) {
+                request.withCNAMEPrefix(this.makeup());
+                break;
+            }
+            Logger.debug(this, "#suggest(): waiting for '%s' CNAME", this.name);
         }
         while (true) {
-            final String ename = String.format(
-                "%s-%s",
-                this.name,
-                // @checkstyle MagicNumber (1 line)
-                RandomStringUtils.randomAlphabetic(4)
-            );
-            boolean exists = false;
-            for (Environment env : this.environments()) {
-                if (env.name().equals(ename)) {
-                    exists = true;
-                    break;
-                }
-            }
-            if (!exists) {
+            final String ename = this.random();
+            if (!this.exists(ename)) {
                 request.withEnvironmentName(ename).withDescription(ename);
+                Logger.debug(this, "#suggest(): '%s' as env name", ename);
                 break;
             }
         }
@@ -250,15 +253,14 @@ final class Application {
     }
 
     /**
-     * Make up a nice CNAME, using provided one as a base.
-     * @param base Base name, which will get a suffix to become unique
+     * Make up a nice CNAME in this application.
      * @return The CNAME, suggested and not occupied
      */
-    private String makeup(final String base) {
+    private String makeup() {
         String cname;
-        int suffix = 0;
         do {
-            cname = String.format("%s-%d", base, ++suffix);
+            cname = this.random();
+            Logger.debug(this, "#makeup(): trying '%s' CNAME", cname);
         } while (this.occupied(cname));
         return cname;
     }
@@ -272,6 +274,50 @@ final class Application {
         return !this.client.checkDNSAvailability(
             new CheckDNSAvailabilityRequest(cname)
         ).getAvailable();
+    }
+
+    /**
+     * This environment exists?
+     * @param ename The name of environment to check
+     * @return TRUE if it exists
+     */
+    private boolean exists(final String ename) {
+        boolean exists = false;
+        for (Environment env : this.environments()) {
+            if (env.name().equals(ename)) {
+                exists = true;
+                break;
+            }
+        }
+        return exists;
+    }
+
+    /**
+     * This application has a primary environment?
+     * @return TRUE if it exists
+     */
+    private boolean hasPrimary() {
+        boolean has = false;
+        for (Environment env : this.environments()) {
+            if (env.primary()) {
+                has = true;
+                break;
+            }
+        }
+        return has;
+    }
+
+    /**
+     * Generate random name.
+     * @return Random name
+     */
+    private String random() {
+        return String.format(
+            "%s-e%03d",
+            this.name,
+            // @checkstyle MagicNumber (1 line)
+            100 + new Random().nextInt(900)
+        );
     }
 
 }

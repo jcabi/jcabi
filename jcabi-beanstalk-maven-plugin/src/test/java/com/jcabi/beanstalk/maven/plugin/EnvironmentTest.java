@@ -141,7 +141,11 @@ public final class EnvironmentTest {
         );
         final AWSElasticBeanstalk ebt = new AWSElasticBeanstalkClient(creds);
         final Environment env = new Environment(ebt, "e-nxmcbf3pvk");
-        Logger.info(this, "events: %[list]s", env.events());
+        Logger.info(
+            this,
+            "events: %[list]s",
+            Arrays.asList(env.events())
+        );
     }
 
 }
