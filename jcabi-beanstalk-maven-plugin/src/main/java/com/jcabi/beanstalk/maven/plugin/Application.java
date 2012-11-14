@@ -239,13 +239,13 @@ final class Application {
                 request.withCNAMEPrefix(this.makeup());
                 break;
             }
-            Logger.debug(this, "#suggest(): waiting for '%s' CNAME", this.name);
+            Logger.info(this, "Waiting for '%s' CNAME", this.name);
         }
         while (true) {
             final String ename = this.random();
             if (!this.exists(ename)) {
                 request.withEnvironmentName(ename).withDescription(ename);
-                Logger.debug(this, "#suggest(): '%s' as env name", ename);
+                Logger.info(this, "Using '%s' as env name", ename);
                 break;
             }
         }
@@ -260,7 +260,7 @@ final class Application {
         String cname;
         do {
             cname = this.random();
-            Logger.debug(this, "#makeup(): trying '%s' CNAME", cname);
+            Logger.info(this, "Trying '%s' CNAME", cname);
         } while (this.occupied(cname));
         return cname;
     }
