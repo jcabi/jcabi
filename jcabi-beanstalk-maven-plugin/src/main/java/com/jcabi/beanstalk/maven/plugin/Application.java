@@ -299,7 +299,7 @@ final class Application {
     private boolean hasPrimary() {
         boolean has = false;
         for (Environment env : this.environments()) {
-            if (env.primary()) {
+            if (env.primary() && env.green()) {
                 has = true;
                 break;
             }
