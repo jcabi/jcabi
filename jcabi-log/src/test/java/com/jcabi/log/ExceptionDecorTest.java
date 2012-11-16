@@ -57,7 +57,7 @@ public final class ExceptionDecorTest {
             Mockito.argThat(
                 Matchers.allOf(
                     Matchers.containsString(
-                        "java.io.IOException: ouch!\n\t"
+                        "java.io.IOException: ouch!\n\tat "
                     ),
                     Matchers.containsString(
                         "at com.jcabi.log.ExceptionDecorTest."
