@@ -32,6 +32,7 @@ package com.jcabi.log;
 import java.io.IOException;
 import java.util.Formattable;
 import java.util.Formatter;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -52,7 +53,18 @@ public final class ExceptionDecorTest {
         final Appendable dest = Mockito.mock(Appendable.class);
         final Formatter fmt = new Formatter(dest);
         decor.formatTo(fmt, 0, 0, 0);
-        Mockito.verify(dest).append(Mockito.contains("ouch"));
+        Mockito.verify(dest).append(
+            Mockito.argThat(
+                Matchers.allOf(
+                    Matchers.containsString(
+                        "java.io.IOException: ouch!\n\t"
+                    ),
+                    Matchers.containsString(
+                        "at com.jcabi.log.ExceptionDecorTest."
+                    )
+                )
+            )
+        );
     }
 
     /**
