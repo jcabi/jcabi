@@ -47,7 +47,7 @@ Injecting SSL into JVM
       <plugin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-ssl-maven-plugin</artifactId>
-        <version>${releasedVersion}</version>
+        <version>${project.version}</version>
         <executions>
           <execution>
             <goals>
@@ -62,27 +62,3 @@ Injecting SSL into JVM
 +--
 
   That's it.
-
-* Cutting Edge Version
-
-  If you want to use current version of the product, you can do it with
-  this configuration in your <<<pom.xml>>>:
-
-+--
-<pluginRepositories>
-  <pluginRepository>
-    <id>oss.sonatype.org</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-  </pluginRepository>
-</pluginRepositories>
-<build>
-  <plugins>
-    <plugin>
-      <groupId>com.jcabi</groupId>
-      <artifactId>jcabi-ssl-maven-plugin</artifactId>
-      <version>${project.version}</version>
-      [...]
-    </plugin>
-  </plugins>
-</build>
-+--

@@ -66,7 +66,7 @@ Deploying JAR/WAR/EAR projects to Heroku
       <plugin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-heroku-maven-plugin</artifactId>
-        <version>${releasedVersion}</version>
+        <version>${project.version}</version>
         <configuration>
           <server>heroku.com</server> <!-- name from settings.xml -->
           <name>my-test-app</name>
@@ -116,7 +116,7 @@ Deploying JAR/WAR/EAR projects to Heroku
     <plugin>
       <groupId>com.jcabi</groupId>
       <artifactId>jcabi-heroku-maven-plugin</artifactId>
-      <version>${project.version}</version>
+      <version>1.0-SNAPSHOT</version>
       [...]
     </plugin>
   </plugins>

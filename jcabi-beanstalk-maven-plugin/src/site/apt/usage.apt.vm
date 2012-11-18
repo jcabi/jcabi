@@ -56,7 +56,7 @@ Deploying WAR projects to Amazon Elastic Beanstalk
       <plugin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-beanstalk-maven-plugin</artifactId>
-        <version>${releasedVersion}</version>
+        <version>${project.version}</version>
         <configuration>
           <name>example</name>
           <bucket>webapps.example.com</bucket>
@@ -102,7 +102,7 @@ Deploying WAR projects to Amazon Elastic Beanstalk
     <plugin>
       <groupId>com.jcabi</groupId>
       <artifactId>jcabi-beanstalk-maven-plugin</artifactId>
-      <version>${project.version}</version>
+      <version>1.0-SNAPSHOT</version>
       [...]
     </plugin>
   </plugins>
