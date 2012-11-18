@@ -354,9 +354,11 @@ public final class Manifests {
         Manifests.attributes.putAll(attrs);
         Logger.info(
             Manifests.class,
-            "#append('%s'): %d attributes loaded in %[ms]s: %[list]s",
+            // @checkstyle LineLength (1 line)
+            "#append('%s'): %d attributes loaded in %[ms]s (%d total): %[list]s",
             file, attrs.size(),
             System.currentTimeMillis() - start,
+            Manifests.attributes.size(),
             new TreeSet<String>(attrs.keySet())
         );
     }
