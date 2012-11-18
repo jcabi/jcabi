@@ -118,7 +118,8 @@ How to release new version to Maven Central:
             </properties>
           </profile>
 
-    6. Deploy the site to Amazon S3:
+    6. Deploy the site to Amazon S3 (in 3-4 hours, when this artifact
+        becomes available in Maven Central):
 
         mvn -Dsite clean install site-deploy
 
