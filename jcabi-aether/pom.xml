@@ -28,10 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jcabi</groupId>
@@ -41,7 +38,6 @@
     <artifactId>jcabi-aether</artifactId>
     <packaging>jar</packaging>
     <name>jcabi-aether</name>
-
     <dependencies>
         <dependency>
             <groupId>com.jcabi</groupId>
@@ -161,7 +157,6 @@
             <artifactId>log4j</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -177,12 +172,13 @@
             </plugins>
         </pluginManagement>
     </build>
-
     <profiles>
         <profile>
             <id>invoker-tests</id>
             <activation>
-                <property><name>aether-test.aws.key</name></property>
+                <property>
+                    <name>aether-test.aws.key</name>
+                </property>
             </activation>
             <build>
                 <plugins>
@@ -218,7 +214,9 @@
         <profile>
             <id>ci</id>
             <activation>
-                <property><name>ci</name></property>
+                <property>
+                    <name>ci</name>
+                </property>
             </activation>
             <build>
                 <plugins>
@@ -237,5 +235,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>

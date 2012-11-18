@@ -28,10 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jcabi</groupId>
@@ -41,7 +38,6 @@
     <artifactId>jcabi-beanstalk-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <name>jcabi-beanstalk-maven-plugin</name>
-
     <repositories>
         <repository>
             <id>repo.jfrog.org</id>
@@ -54,7 +50,6 @@
             <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
         </pluginRepository>
     </pluginRepositories>
-
     <dependencies>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
@@ -85,11 +80,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.maven</groupId>
-        	<artifactId>maven-settings</artifactId>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-settings</artifactId>
             <version since="22 Aug 2011">3.0.3</version>
             <scope>provided</scope>
-		</dependency>
+        </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-artifact</artifactId>
@@ -139,7 +134,6 @@
             <artifactId>mockito-core</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -227,5 +221,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

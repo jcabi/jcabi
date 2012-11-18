@@ -1,9 +1,9 @@
  ------
- JCabi Maven Skin
+ Uniform Resource Name (URN)
  ------
  Yegor Bugayenko
  ------
- 2012-11-08
+ 2012-11-18
  ------
 
 ~~
@@ -36,21 +36,27 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-JCabi Maven Skin
+Uniform Resource Name (URN)
 
-  Use it in your <<<site.xml>>>, as explained in
-  {{{http://maven.apache.org/plugins/maven-site-plugin/examples/sitedescriptor.html#Skinning}skinning}}:
+  {{{./apidocs/com/jcabi/urn/URN.html}<<<URN>>>}}
+  is an immutable implementation of a Uniform Resource Name (URN)
+  according to
+  {{{http://tools.ietf.org/html/rfc2141}RFC 2141}}:
 
 +--
-<project>
-  [...]
-  <skin>
-    <groupId>com.jcabi</groupId>
-    <artifactId>jcabi-maven-skin</artifactId>
-    <version>${releasedVersion}</version>
-  </skin>
-  [...]
-</project>
+import com.jcabi.urn.URN;
+URN urn = new URN("urn:test:my-example");
+assert urn.nid().equals("test");
+assert urn.nss().equals("my-example");
 +--
 
-  This site is using <<<jcabi-maven-skin>>>.
+  The only dependency you need is:
+
++--
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-urn</artifactId>
+  <version>${releasedVersion}</version>
+</dependency>
++--
+
