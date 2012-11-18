@@ -79,7 +79,7 @@ public final class URNTest {
      * URN can throw exception when text is NULL.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void throwsExceptionWhenTextIsNull() throws Exception {
         new URN(null);
     }
@@ -102,7 +102,7 @@ public final class URNTest {
      * URN can throw exception when NID is NULL.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void throwsExceptionWhenNidIsNull() throws Exception {
         new URN(null, "some-test-nss");
     }
@@ -111,7 +111,7 @@ public final class URNTest {
      * URN can throw exception when NSS is NULL.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void throwsExceptionWhenNssIsNull() throws Exception {
         new URN("namespace1", null);
     }

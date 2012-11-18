@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import javax.validation.constraints.NotNull;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.repository.internal.MavenRepositorySystemSession;
 import org.sonatype.aether.RepositorySystem;
@@ -88,13 +89,7 @@ public final class Aether {
      * @param prj The Maven project
      * @param repo Local repository location (file path)
      */
-    public Aether(final MavenProject prj, final String repo) {
-        if (prj == null) {
-            throw new IllegalArgumentException("maven project can't be NULL");
-        }
-        if (repo == null) {
-            throw new IllegalArgumentException("repo path can't be NULL");
-        }
+    public Aether(@NotNull final MavenProject prj, @NotNull final String repo) {
         this.project = prj;
         this.localRepo = repo;
     }
@@ -112,14 +107,9 @@ public final class Aether {
      *  I have no idea. That's why this workaround. Sometime later we should
      *  do a proper testing and reproduce this defect in a test.
      */
-    public List<Artifact> resolve(final Artifact root, final String scope)
+    public List<Artifact> resolve(@NotNull final Artifact root,
+        @NotNull final String scope)
         throws DependencyResolutionException {
-        if (root == null) {
-            throw new IllegalArgumentException("root artifact can't be NULL");
-        }
-        if (scope == null) {
-            throw new IllegalArgumentException("scope can't be NULL");
-        }
         final Dependency rdep = new Dependency(root, scope);
         final CollectRequest crq = this.request(rdep);
         final RepositorySystem system = new RepositorySystemBuilder().build();

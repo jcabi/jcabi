@@ -169,7 +169,7 @@ public final class AetherTest {
      * Aether can reject NULL maven project.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullMavenProject() throws Exception {
         new Aether(null, this.temp.newFolder("local-repository-77").getPath());
     }
@@ -178,7 +178,7 @@ public final class AetherTest {
      * Aether can reject NULL repo path.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullRepoPath() throws Exception {
         new Aether(this.project(), null);
     }
@@ -187,7 +187,7 @@ public final class AetherTest {
      * Aether can reject NULL artifact.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullArtifact() throws Exception {
         new Aether(this.project(), this.temp.newFolder("repo-1").getPath())
             .resolve(null, JavaScopes.RUNTIME);
@@ -197,7 +197,7 @@ public final class AetherTest {
      * Aether can reject NULL scope.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullScope() throws Exception {
         new Aether(this.project(), this.temp.newFolder("repo-2").getPath())
             .resolve(new DefaultArtifact("junit:junit:4.10"), null);

@@ -31,6 +31,7 @@ package com.jcabi.velocity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import javax.validation.constraints.NotNull;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -82,7 +83,7 @@ public final class VelocityPage {
      * @param res Name of resource with template (absolute resource name in
      *  classpath)
      */
-    public VelocityPage(final String res) {
+    public VelocityPage(@NotNull final String res) {
         this.name = res;
     }
 
@@ -92,7 +93,7 @@ public final class VelocityPage {
      * @param value The value to use
      * @return This object
      */
-    public VelocityPage set(final String prop, final Object value) {
+    public VelocityPage set(@NotNull final String prop, final Object value) {
         synchronized (this.context) {
             this.context.put(prop, value);
         }

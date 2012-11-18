@@ -35,6 +35,7 @@ import java.net.URISyntaxException;
 import java.net.URLDecoder;
 import java.util.Map;
 import java.util.TreeMap;
+import javax.validation.constraints.NotNull;
 import org.apache.commons.lang.CharEncoding;
 import org.apache.commons.lang.StringUtils;
 
@@ -107,10 +108,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param text The text of the URN
      * @throws URISyntaxException If syntax is not correct
      */
-    public URN(final String text) throws URISyntaxException {
-        if (text == null) {
-            throw new IllegalArgumentException("text can't be NULL");
-        }
+    public URN(@NotNull final String text) throws URISyntaxException {
         if (!text.matches(URN.REGEX)) {
             throw new URISyntaxException(text, "Invalid format of URN");
         }
@@ -123,13 +121,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param nid The namespace ID
      * @param nss The namespace specific string
      */
-    public URN(final String nid, final String nss) {
-        if (nid == null) {
-            throw new IllegalArgumentException("NID can't be NULL");
-        }
-        if (nss == null) {
-            throw new IllegalArgumentException("NSS can't be NULL");
-        }
+    public URN(@NotNull final String nid, @NotNull final String nss) {
         this.uri = URI.create(
             String.format(
                 "%s%s%s%2$s%s",
@@ -152,7 +144,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param text The text of the URN
      * @return The URN created
      */
-    public static URN create(final String text) {
+    public static URN create(@NotNull final String text) {
         try {
             return new URN(text);
         } catch (URISyntaxException ex) {
@@ -218,7 +210,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param pattern The pattern to match
      * @return Yes of no
      */
-    public boolean matches(final String pattern) {
+    public boolean matches(@NotNull final String pattern) {
         boolean matches = false;
         if (this.equals(pattern)) {
             matches = true;
@@ -278,7 +270,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param name Name of parameter
      * @return The value of it
      */
-    public String param(final String name) {
+    public String param(@NotNull final String name) {
         final Map<String, String> params = this.params();
         if (!params.containsKey(name)) {
             throw new IllegalArgumentException(
@@ -299,7 +291,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param value The value of parameter
      * @return New URN
      */
-    public URN param(final String name, final Object value) {
+    public URN param(@NotNull final String name, @NotNull final Object value) {
         final Map<String, String> params = this.params();
         params.put(name, value.toString());
         return URN.create(

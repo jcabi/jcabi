@@ -80,7 +80,7 @@ import org.apache.commons.lang.SerializationUtils;
  * these attributes where it's necessary (in one of your JAXB annotated objects,
  * for example) and show to users:
  *
- * <pre> import com.rexsl.core.Manifest;
+ * <pre> import com.jcabi.manifests.Manifest;
  * import java.text.SimpleDateFormat;
  * import java.util.Date;
  * import java.util.Locale;
@@ -104,7 +104,7 @@ import org.apache.commons.lang.SerializationUtils;
  * to {@code MANIFEST.MF} in runtime (for example, in your bootstrap Groovy
  * scripts):
  *
- * <pre> import com.rexsl.core.Manifests
+ * <pre> import com.jcabi.manifests.Manifests
  * Manifests.inject("Foo-URL", "http://localhost/abc");</pre>
  *
  * <p>When it is necessary to isolate such injections between different unit
@@ -125,7 +125,6 @@ import org.apache.commons.lang.SerializationUtils;
  * @since 0.7
  * @see <a href="http://download.oracle.com/javase/1,5.0/docs/guide/jar/jar.html#JAR%20Manifest">JAR Manifest</a>
  * @see <a href="http://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver</a>
- * @see <a href="http://trac.fazend.com/rexsl/ticket/55">Class was introduced in ticket #55</a>
  */
 @SuppressWarnings("PMD.UseConcurrentHashMap")
 public final class Manifests {
@@ -259,7 +258,6 @@ public final class Manifests {
     /**
      * Make a snapshot of current attributes and their values.
      * @return The snapshot, to be used later with {@link #revert(byte[])}
-     * @see <a href="http://trac.fazend.com/rexsl/ticket/107">Introduced in ticket #107</a>
      */
     public static byte[] snapshot() {
         byte[] snapshot;
@@ -279,7 +277,6 @@ public final class Manifests {
     /**
      * Revert to the state that was recorded by {@link #snapshot()}.
      * @param snapshot The snapshot taken by {@link #snapshot()}
-     * @see <a href="http://trac.fazend.com/rexsl/ticket/107">Introduced in ticket #107</a>
      */
     @SuppressWarnings("unchecked")
     public static void revert(@NotNull final byte[] snapshot) {
