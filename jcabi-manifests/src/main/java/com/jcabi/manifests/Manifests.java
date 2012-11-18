@@ -294,8 +294,7 @@ public final class Manifests {
     }
 
     /**
-     * Append attributes from the web application {@code MANIFEST.MF}, called
-     * from {@link XsltFilter#init(FilterConfig)}.
+     * Append attributes from the web application {@code MANIFEST.MF}.
      *
      * <p>You can call this method in your own
      * {@link javax.servlet.Filter} or
