@@ -41,8 +41,10 @@ Aether adapter for Maven plugins
   {{{https://docs.sonatype.org/display/AETHER/Home}Aether}} is a dependency
   management toolkit for Maven repositories. It is very convenient to use
   in your Maven plugins, when it's necessary to find a location of certain
-  artifact or find out what transitive dependencies it contains. This
-  module is an adapter between your plugin and Aether.
+  artifact or find out what transitive dependencies it contains. The
+  module contains
+  {{{./apidocs-${project.version}/com/jcabi/aether/Aether.html}Aether}}
+  class, an adapter between your plugin and Aether.
 
   This is how you find out the location of a <<<junit:junit-dep:4.10>>> artifact:
 
@@ -54,6 +56,7 @@ import org.sonatype.aether.RepositorySystemSession;
 import org.sonatype.aether.artifact.Artifact;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
 import org.sonatype.aether.util.artifact.JavaScopes;
+
 public class MyMojo extends AbstractMojo {
   /**
    * @parameter default-value="${repositorySystemSession}"
@@ -62,8 +65,8 @@ public class MyMojo extends AbstractMojo {
   private RepositorySystemSession session;
   @Override
   public void execute() {
-    final File repo = this.session.getLocalRepository().getBasedir();
-    final Collection<Artifact> deps = new Aether(this.getProject(), repo).resolve(
+    File repo = this.session.getLocalRepository().getBasedir();
+    Collection<Artifact> deps = new Aether(this.getProject(), repo).resolve(
       new DefaultArtifact("junit", "junit-dep", "", "jar", "4.10"),
       JavaScopes.RUNTIME
     );
@@ -75,7 +78,38 @@ public class MyMojo extends AbstractMojo {
 }
 +--
 
-  The only dependency you need is:
+  Otherwise, if you're outside of Maven infrastructure:
+
++--
+import com.jcabi.aether.Aether;
+import java.io.File;
+import java.util.Arrays;
+import org.apache.maven.project.MavenProject;
+import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.repository.RemoteRepository;
+import org.sonatype.aether.util.artifact.DefaultArtifact;
+
+File repo = new File("/tmp/local-repository");
+MavenProject project = new MavenProject();
+project.setRemoteProjectRepositories(
+  Arrays.asList(
+    new RemoteRepository(
+      "maven-central",
+      "default",
+      "http://repo1.maven.org/maven2/"
+    )
+  )
+);
+Collection<Artifact> deps = new Aether(project, repo).resolve(
+  new DefaultArtifact("junit", "junit-dep", "", "jar", "4.10"),
+  "runtime"
+);
++--
+
+  More examples you can find in
+  {{{https://github.com/yegor256/jcabi/blob/master/jcabi-aether/src/test/java/com/jcabi/aether/AetherTest.java}AetherTest}}.
+
+  The only dependency you need:
 
 +--
 <dependency>

@@ -1,4 +1,4 @@
-jcabi, Simple Useful Java Components
+jcabi.com, Simple Useful Java Components
 =====
 
 See [www.jcabi.com](http://www.jcabi.com/) website for more details.
