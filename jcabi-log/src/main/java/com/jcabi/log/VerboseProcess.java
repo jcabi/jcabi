@@ -34,6 +34,7 @@ import java.io.InputStreamReader;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import javax.validation.constraints.NotNull;
 
 /**
  * Utility class for getting {@code stdout} from a running process
@@ -65,10 +66,7 @@ public final class VerboseProcess {
      * Public ctor.
      * @param prc The process to work with
      */
-    public VerboseProcess(final Process prc) {
-        if (prc == null) {
-            throw new IllegalArgumentException("process can't be NULL");
-        }
+    public VerboseProcess(@NotNull final Process prc) {
         this.process = prc;
     }
 
@@ -77,10 +75,7 @@ public final class VerboseProcess {
      * the {@code stdout} and will receive an empty {@code stdin}).
      * @param builder Process builder to work with
      */
-    public VerboseProcess(final ProcessBuilder builder) {
-        if (builder == null) {
-            throw new IllegalArgumentException("process builder can't be NULL");
-        }
+    public VerboseProcess(@NotNull final ProcessBuilder builder) {
         builder.redirectErrorStream(true);
         try {
             this.process = builder.start();

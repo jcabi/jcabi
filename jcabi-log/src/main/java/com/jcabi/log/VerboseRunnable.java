@@ -30,6 +30,7 @@
 package com.jcabi.log;
 
 import java.util.concurrent.Callable;
+import javax.validation.constraints.NotNull;
 
 /**
  * Wrapper of {@link Runnable}, that logs all uncaught runtime exceptions.
@@ -71,7 +72,7 @@ public final class VerboseRunnable implements Runnable {
      * Default constructor, doesn't swallow exceptions.
      * @param runnable Runnable to wrap
      */
-    public VerboseRunnable(final Runnable runnable) {
+    public VerboseRunnable(@NotNull final Runnable runnable) {
         this(runnable, false);
     }
 
@@ -84,10 +85,8 @@ public final class VerboseRunnable implements Runnable {
      *  using {@link Logger}.
      * @since 0.1.4
      */
-    public VerboseRunnable(final Runnable runnable, final boolean swlw) {
-        if (runnable == null) {
-            throw new IllegalArgumentException("runnable can't be NULL");
-        }
+    public VerboseRunnable(@NotNull final Runnable runnable,
+        final boolean swlw) {
         this.origin = runnable;
         this.swallow = swlw;
     }
@@ -102,10 +101,8 @@ public final class VerboseRunnable implements Runnable {
      * @since 0.1.10
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
-    public VerboseRunnable(final Callable<?> callable, final boolean swlw) {
-        if (callable == null) {
-            throw new IllegalArgumentException("callable can't be NULL");
-        }
+    public VerboseRunnable(@NotNull final Callable<?> callable,
+        final boolean swlw) {
         this.origin = new Runnable() {
             @Override
             public void run() {
