@@ -91,4 +91,14 @@ public final class VerboseProcessTest {
         );
     }
 
+    /**
+     * VerboseProcess can reject NULL.
+     * @throws Exception If something goes wrong
+     */
+    @Test(expected = javax.validation.ConstraintViolationException.class)
+    public void rejectsNullProcesses() throws Exception {
+        final ProcessBuilder builder = null;
+        new VerboseProcess(builder);
+    }
+
 }

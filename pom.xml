@@ -255,7 +255,7 @@
                     <plugin>
                         <groupId>com.qulice</groupId>
                         <artifactId>qulice-maven-plugin</artifactId>
-                        <version since="1 Nov 2012">0.2.1</version>
+                        <version since="18 Nov 2012">0.2.2</version>
                         <configuration>
                             <license>file:${basedir}/LICENSE.txt</license>
                         </configuration>
@@ -808,40 +808,23 @@
                         </reportPlugins>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>aspectj-maven-plugin</artifactId>
+                    <version since="27 May 2012">1.4</version>
+                    <configuration>
+                        <complianceLevel>1.6</complianceLevel>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <showWeaveInfo>false</showWeaveInfo>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                        <verbose>false</verbose>
+                        <Xlint>warning</Xlint>
+                        <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <version since="27 May 2012">1.4</version>
-                <configuration>
-                    <complianceLevel>1.6</complianceLevel>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <showWeaveInfo>false</showWeaveInfo>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <verbose>false</verbose>
-                    <Xlint>warning</Xlint>
-                    <argumentFileName>builddef-${project.name}.lst</argumentFileName>
-                    <aspectLibraries>
-                        <aspectLibrary>
-                            <groupId>com.jcabi</groupId>
-                            <artifactId>jcabi-aspects</artifactId>
-                        </aspectLibrary>
-                    </aspectLibraries>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>weave-classes</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
     </build>
 
     <reporting>
