@@ -724,6 +724,31 @@
                 <version since="20 Sep 2012">1.1.14</version>
             </extension>
         </extensions>
+        <plugins>
+            <plugin>
+                <!--
+                This plugin will collect current build number
+                from Git and save it into Maven property
+                -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version since="5 Aug 2012">1.1</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                        <configuration>
+                            <buildNumberPropertyName>buildNumber</buildNumberPropertyName>
+                            <doCheck>false</doCheck>
+                            <doUpdate>false</doUpdate>
+                            <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -753,6 +778,14 @@
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version since="7 Nov 2012">2.4</version>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <JCabi-Version>${project.version}</JCabi-Version>
+                                <ReXSL-Build>${buildNumber}</ReXSL-Build>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>

@@ -326,11 +326,13 @@ public final class Manifests {
             Manifests.attributes.putAll(attrs);
             Logger.info(
                 Manifests.class,
-                "#append(%s): %d attribs loaded from %s in %[ms]s: %[list]s",
+                // @checkstyle LineLength (1 line)
+                "#append(%s): %d attribs loaded from %s in %[ms]s (%d total): %[list]s",
                 ctx.getClass().getName(),
                 attrs.size(),
                 main,
                 System.currentTimeMillis() - start,
+                Manifests.attributes.size(),
                 new TreeSet<String>(attrs.keySet())
             );
         }
