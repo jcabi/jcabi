@@ -5,6 +5,16 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
+[0.7](#100):
+
+ * #99: [Manifests](http://www.jcabi.com/jcabi-manifests/apidocs-0.7/com/jcabi/manifests/Manifests.html) introduced
+
+[0.6](#98):
+
+ * #97: [URN](http://www.jcabi.com/jcabi-urn/apidocs-0.6/com/jcabi/urn/URN.html) introduced
+ * #74: [jcabi-maven-skin](http://www.jcabi.com/jcabi-maven-skin/) introduced
+ * many bug fixes for [jcabi-beanstalk-maven-plugin](http://www.jcabi.com/jcabi-beanstalk-maven-plugin/)
+
 [0.5](#77):
 
  * #76: [VerboseProcess](http://www.jcabi.com/jcabi-log/apidocs-0.5/com/jcabi/log/VerboseProcess.html) introduced
