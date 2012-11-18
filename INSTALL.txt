@@ -75,10 +75,9 @@ Continuous Integration Configuration
      </servers>
     </settings>
 
-    At the moment the following two goals are defined in our CI
-    server:
+    At the moment the following goal is defined in our CI server:
 
-    1) mvn clean deploy site-deploy -e -Dci --settings ../../closures/settings.xml
+        mvn clean deploy -e -Dci --settings ../../closures/settings.xml
 
 
 How to release new version to Maven Central:
