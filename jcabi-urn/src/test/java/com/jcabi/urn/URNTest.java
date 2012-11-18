@@ -268,7 +268,7 @@ public final class URNTest {
     public void matchesPatternWithAnotherURN() throws Exception {
         MatcherAssert.assertThat(
             "matches",
-            new URN("urn:test:file").matches(new URN("urn:test:*"))
+            new URN("urn:test:file").matches("urn:test:*")
         );
     }
 
@@ -336,6 +336,18 @@ public final class URNTest {
             second = second.param(param, "");
         }
         MatcherAssert.assertThat(first, Matchers.equalTo(second));
+    }
+
+    /**
+     * URN can be mocked.
+     * @throws Exception If there is some problem inside
+     */
+    @Test
+    public void mocksUrnWithAMocker() throws Exception {
+        MatcherAssert.assertThat(
+            new URNMocker().mock(),
+            Matchers.not(Matchers.equalTo(new URNMocker().mock()))
+        );
     }
 
 }

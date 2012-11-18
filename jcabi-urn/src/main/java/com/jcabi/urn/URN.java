@@ -39,11 +39,25 @@ import org.apache.commons.lang.CharEncoding;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * Uniform Resource Name (URN).
+ * Uniform Resource Name (URN) as in
+ * <a href="http://tools.ietf.org/html/rfc2141">RFC 2141</a>.
+ *
+ * <p>Usage is similar to {@link java.net.URI} or {@link java.net.URL}:
+ *
+ * <pre> URN urn = new URN("urn:foo:A123,456");
+ * assert urn.nid().equals("foo");
+ * assert urn.nss().equals("A123,456");</pre>
+ *
+ * <p><b>NOTICE:</b> the implementation is not fully compliant with RFC 2141.
+ * It will become compliant in one of our future versions. Once it becomes
+ * fully compliant this notice will be removed.
+ *
+ * <p>The class is immutable and thread-safe.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.6
+ * @see <a href="http://tools.ietf.org/html/rfc2141">RFC 2141</a>
  */
 @SuppressWarnings({ "PMD.TooManyMethods", "PMD.UseConcurrentHashMap" })
 public final class URN implements Comparable<URN>, Serializable {
@@ -51,15 +65,15 @@ public final class URN implements Comparable<URN>, Serializable {
     /**
      * Serialization marker.
      */
-    private static final long serialVersionUID = 0x4243AFCD9812ABDCL;
+    private static final long serialVersionUID = 0xBF46AFCD9612A6DFL;
 
     /**
-     * Marker of an empty URN.
+     * NID of an empty URN.
      */
     private static final String EMPTY = "void";
 
     /**
-     * The prefix.
+     * The leading sequence.
      */
     private static final String PREFIX = "urn";
 
@@ -82,7 +96,7 @@ public final class URN implements Comparable<URN>, Serializable {
     private final URI uri;
 
     /**
-     * Public ctor, for JAXB mostly.
+     * Public ctor (for JAXB mostly) that creates an "empty" URN.
      */
     public URN() {
         this(URN.EMPTY, "");
@@ -95,7 +109,7 @@ public final class URN implements Comparable<URN>, Serializable {
      */
     public URN(final String text) throws URISyntaxException {
         if (text == null) {
-            throw new IllegalArgumentException("Text can't be NULL");
+            throw new IllegalArgumentException("text can't be NULL");
         }
         if (!text.matches(URN.REGEX)) {
             throw new URISyntaxException(text, "Invalid format of URN");
@@ -133,9 +147,10 @@ public final class URN implements Comparable<URN>, Serializable {
     }
 
     /**
-     * Static ctor.
+     * Creates an instance of URN and throws a runtime exception if
+     * its syntax is not valid.
      * @param text The text of the URN
-     * @return The URN
+     * @return The URN created
      */
     public static URN create(final String text) {
         try {
@@ -166,15 +181,11 @@ public final class URN implements Comparable<URN>, Serializable {
      */
     @Override
     public boolean equals(final Object obj) {
-        boolean equals = false;
+        boolean equals;
         if (obj == this) {
             equals = true;
-        } else if (obj instanceof URN) {
-            equals = this.uri.equals(URN.class.cast(obj).uri);
-        } else if (obj instanceof String) {
-            equals = this.uri.toString().equals(String.class.cast(obj));
-        } else if (obj instanceof URI) {
-            equals = this.uri.equals(URI.class.cast(obj));
+        } else {
+            equals = this.uri.toString().equals(obj.toString());
         }
         return equals;
     }
@@ -188,7 +199,7 @@ public final class URN implements Comparable<URN>, Serializable {
     }
 
     /**
-     * Is it URN?
+     * Is it a valid URN?
      * @param text The text to validate
      * @return Yes of no
      */
@@ -207,26 +218,15 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param pattern The pattern to match
      * @return Yes of no
      */
-    public boolean matches(final URN pattern) {
+    public boolean matches(final String pattern) {
         boolean matches = false;
         if (this.equals(pattern)) {
             matches = true;
-        } else if (pattern.toString().endsWith("*")) {
-            final String body = pattern.toString().substring(
-                0,  pattern.toString().length() - 1
-            );
+        } else if (pattern.endsWith("*")) {
+            final String body = pattern.substring(0, pattern.length() - 1);
             matches = this.uri.toString().startsWith(body);
         }
         return matches;
-    }
-
-    /**
-     * Does it match the pattern?
-     * @param pattern The pattern to match
-     * @return Yes of no
-     */
-    public boolean matches(final String pattern) {
-        return this.matches(URN.create(pattern));
     }
 
     /**
@@ -294,7 +294,7 @@ public final class URN implements Comparable<URN>, Serializable {
     }
 
     /**
-     * Add query param and return new URN.
+     * Add (overwrite) a query param and return a new URN.
      * @param name Name of parameter
      * @param value The value of parameter
      * @return New URN

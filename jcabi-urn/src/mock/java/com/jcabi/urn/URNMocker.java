@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<!--
- *
+/**
  * Copyright (c) 2012, jcabi.com
  * All rights reserved.
  *
@@ -28,15 +26,63 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
- -->
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0     http://maven.apache.org/xsd/decoration-1.0.0.xsd" name="jcabi-velocity">
-    <body>
-        <menu ref="parent"/>
-        <menu name="Overview">
-            <item name="Introduction" href="index.html"/>
-            <item name="API ${project.version} (JavaDoc)" href="./apidocs-${project.version}/index.html"/>
-            <item name="Test coverage" href="./cobertura/index.html"/>
-        </menu>
-        <menu ref="reports"/>
-    </body>
-</project>
+ */
+package com.jcabi.urn;
+
+import java.util.UUID;
+
+/**
+ * Mocker of {@link URN}.
+ * @author Yegor Bugayenko (yegor@tpc2.com)
+ * @version $Id$
+ * @since 0.6
+ */
+public final class URNMocker {
+
+    /**
+     * Namespace ID.
+     */
+    private transient String nid;
+
+    /**
+     * Nammespace specific string.
+     */
+    private transient String nss;
+
+    /**
+     * Public ctor.
+     */
+    public URNMocker() {
+        this.nid = "test";
+        this.nss = UUID.randomUUID().toString();
+    }
+
+    /**
+     * With this namespace.
+     * @param name The namespace
+     * @return This object
+     */
+    public URNMocker withNid(final String name) {
+        this.nid = name;
+        return this;
+    }
+
+    /**
+     * With this nss.
+     * @param text The nss
+     * @return This object
+     */
+    public URNMocker withNss(final String text) {
+        this.nss = text;
+        return this;
+    }
+
+    /**
+     * Mock it.
+     * @return Mocked URN
+     */
+    public URN mock() {
+        return new URN(this.nid, this.nss);
+    }
+
+}
