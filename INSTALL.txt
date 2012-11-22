@@ -106,6 +106,7 @@ How to release new version to Maven Central:
     5. Deploy the product to Sonatype:
 
         mvn -Dci -Pjcabi -Dsonatype clean deploy
+        cd parent && mvn clean deploy && cd ..
 
         Make sure that you have this profile in ~/.m2/settings.xml:
 
@@ -122,6 +123,7 @@ How to release new version to Maven Central:
         becomes available in Maven Central):
 
         mvn -Dsite clean install site-deploy
+        cd parent && mvn -Dsite clean site-deploy && cd ..
 
     7. Tag the branch
 
