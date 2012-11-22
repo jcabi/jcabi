@@ -48,7 +48,7 @@ import org.slf4j.LoggerFactory;
  *   public void foo(Integer num) {
  *     Logger.info(this, "foo(%d) just called", num);
  *   }
- * } </pre>
+ * }</pre>
  *
  * <p>Or statically (pay attention to {@code MyClass.class}):
  *

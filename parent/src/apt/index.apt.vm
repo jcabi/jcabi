@@ -1,9 +1,9 @@
  ------
- Reader of META-INF/MANIFEST.MF files
+ Universal Maven Parent POM
  ------
  Yegor Bugayenko
  ------
- 2012-11-18
+ 2012-04-29
  ------
 
 ~~
@@ -36,23 +36,28 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Reader of META-INF/MANIFEST.MF files
+Universal Maven Parent POM
 
-  {{{./apidocs/com/jcabi/manifests/Manifests.html}<<<com.jcabi.manifests.Manifests>>>}}
-  is a convenient reader of <<<META-INF/MANIFEST.MF>>> files. Try this:
-
-+--
-import com.jcabi.manifests.Manifests;
-String version = Manifests.read("JCabi-Version");
-+--
-
-  The only dependency you need is:
+  Base your Maven projects on this artifact and you will get
+  many pre-configuration benefits, including up-to-date
+  {{{<dependencies>}}}, {{{<plugins>}}}, build {{{<extensions>}}},
+  {{{<repositories>}}}, and more. All that you need to do is to
+  define our artifact as a parent of your project:
 
 +--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-manifests</artifactId>
-  <version>${project.version}</version>
-</dependency>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.jcabi</groupId>
+    <artifactId>parent</artifactId>
+    <version>${project.version}</version>
+  </parent>
+  <groupId>your-group-id</groupId>
+  <artifactId>your-artifact-id</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  [...]
+</project>
 +--
 
+  This is what we have in our
+  {{{https://github.com/yegor256/jcabi/blob/master/parent/pom.xml}<<<pom.xml>>>}.

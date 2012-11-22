@@ -28,37 +28,16 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * Release management is done with oss.sonatype.org Nexus platform. Every
- * time you want to make a new release of the product use the
- * instructions from this page:
  * @link http://www.sonatype.com/books/nexus-book/reference/staging-sect-managing-plugin.html
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jcabi</groupId>
-    <artifactId>jcabi</artifactId>
+    <artifactId>parent</artifactId>
     <version jcabi="yes">1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>jcabi</name>
-    <modules>
-        <module>jcabi-parent</module>
-        <module>jcabi-aether</module>
-        <module>jcabi-aspects</module>
-        <module>jcabi-assembly</module>
-        <module>jcabi-jdbc</module>
-        <module>jcabi-log</module>
-        <module>jcabi-maven-slf4j</module>
-        <module>jcabi-velocity</module>
-        <module>jcabi-beanstalk-maven-plugin</module>
-        <module>jcabi-heroku-maven-plugin</module>
-        <module>jcabi-ssl-maven-plugin</module>
-        <module>jcabi-maven-skin</module>
-        <module>jcabi-urn</module>
-        <module>jcabi-manifests</module>
-    </modules>
-    <description><![CDATA[
-        JCABI is a set of useful open source Java components.
-        ]]></description>
+    <description>jcabi parent POM</description>
     <url>http://www.jcabi.com</url>
     <inceptionYear>2012</inceptionYear>
     <organization>
@@ -70,20 +49,9 @@
             <name>BSD</name>
             <url>http://www.jcabi.com/LICENSE.txt</url>
             <distribution>repo</distribution>
-            <comments><![CDATA[
-                This is free open source project, feel free to redistribute it
-                ]]></comments>
+            <comments>BSD License</comments>
         </license>
     </licenses>
-    <mailingLists>
-        <mailingList>
-            <name>jcabi Discussions</name>
-            <subscribe>jcabi@googlegroups.com</subscribe>
-            <unsubscribe>jcabi@googlegroups.com</unsubscribe>
-            <post>jcabi@googlegroups.com</post>
-            <archive>http://groups.google.com/group/jcabi</archive>
-        </mailingList>
-    </mailingLists>
     <developers>
         <developer>
             <id>1</id>
@@ -114,7 +82,6 @@
     <distributionManagement>
         <downloadUrl>https://oss.sonatype.org/content/groups/public</downloadUrl>
         <snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
             <id>oss.sonatype.org</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
@@ -442,17 +409,6 @@
                                     <artifactId>maven-plugin-plugin</artifactId>
                                     <version since="7 Nov 2012">3.1</version>
                                 </plugin>
-                                <!--
-                                Doesn't work yet, since REMPL doesn't support GITHUB
-                                <plugin>
-                                    <groupId>com.rempl.plugins</groupId>
-                                    <artifactId>rempl-maven-plugin</artifactId>
-                                    <version since="2 Sep 2011">1.1.3</version>
-                                    <configuration>
-                                        <rom>src/rempl/rom.xml</rom>
-                                    </configuration>
-                                </plugin>
-                                -->
                             </reportPlugins>
                         </configuration>
                         <executions>
@@ -701,12 +657,6 @@
         </testResources>
         <extensions>
             <extension>
-                <!-- see http://stackoverflow.com/questions/12787657 -->
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-http-lightweight</artifactId>
-                <version>2.2</version>
-            </extension>
-            <extension>
                 <groupId>org.kuali.maven.wagons</groupId>
                 <artifactId>maven-s3-wagon</artifactId>
                 <version since="20 Sep 2012">1.1.14</version>
@@ -770,7 +720,7 @@
                         <archive>
                             <manifestEntries>
                                 <JCabi-Version>${project.version}</JCabi-Version>
-                                <ReXSL-Build>${buildNumber}</ReXSL-Build>
+                                <JCabi-Build>${buildNumber}</JCabi-Build>
                             </manifestEntries>
                         </archive>
                     </configuration>
@@ -809,7 +759,7 @@
                             <!-- @see https://blogs.oracle.com/darcy/entry/bootclasspath_older_source -->
                             <Xlint:-options/>
                             <!-- @see http://stackoverflow.com/questions/10738609 -->
-                            <proc:none/>
+                            <none/>
                         </compilerArguments>
                         <testExcludes>
                             <exclude>**/package-info.java</exclude>
