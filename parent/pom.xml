@@ -193,14 +193,9 @@
         </profile>
         <profile>
             <!--
-            Continuous integration specific settings.
+            Static quality analysis with Qulice and other tools.
             -->
-            <id>ci</id>
-            <activation>
-                <property>
-                    <name>ci</name>
-                </property>
-            </activation>
+            <id>qulice</id>
             <build>
                 <plugins>
                     <plugin>
@@ -277,7 +272,7 @@
                             <dependency>
                                 <groupId>com.jcabi</groupId>
                                 <artifactId>jcabi-assembly</artifactId>
-                                <version since="5 Aug 2012">0.1.9</version>
+                                <version since="23 Nov 2012">0.7</version>
                             </dependency>
                         </dependencies>
                         <executions>
@@ -299,14 +294,9 @@
         </profile>
         <profile>
             <!--
-            Site for production deployment
+            Site for production deployment.
             -->
-            <id>site-in-production</id>
-            <activation>
-                <property>
-                    <name>site</name>
-                </property>
-            </activation>
+            <id>site</id>
             <build>
                 <plugins>
                     <plugin>
@@ -759,7 +749,7 @@
                             <!-- @see https://blogs.oracle.com/darcy/entry/bootclasspath_older_source -->
                             <Xlint:-options/>
                             <!-- @see http://stackoverflow.com/questions/10738609 -->
-                            <none/>
+                            <Proc:none/>
                         </compilerArguments>
                         <testExcludes>
                             <exclude>**/package-info.java</exclude>
