@@ -111,6 +111,7 @@
         later in the file
         -->
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+        <jcabi.version since="23 Nov 2012">0.7</jcabi.version>
     </properties>
     <repositories>
         <!--
@@ -135,6 +136,19 @@
             <build>
                 <pluginManagement>
                     <plugins>
+                        <plugin>
+                            <groupId>com.sun.tools.jxc.maven2</groupId>
+                            <artifactId>maven-jaxb-schemagen-plugin</artifactId>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>com.sun</groupId>
+                                    <artifactId>tools</artifactId>
+                                    <version>1.7</version>
+                                    <scope>system</scope>
+                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
                         <plugin>
                             <artifactId>maven-plugin-plugin</artifactId>
                             <dependencies>
@@ -498,8 +512,90 @@
                                     <classifier>mock</classifier>
                                     <includes>
                                         <include>**/*Mocker.class</include>
+                                        <include>**/*Mocker$*.class</include>
                                     </includes>
                                 </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>antlr3</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/main/antlr3</exists>
+                </file>
+            </activation>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <!--
+                        ANTLR3 Parser/Lexer
+                        @link http://www.antlr.org/
+                        -->
+                        <groupId>org.antlr</groupId>
+                        <artifactId>antlr-runtime</artifactId>
+                        <version since="9 Jan 2012">3.4</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.antlr</groupId>
+                        <artifactId>antlr3-maven-plugin</artifactId>
+                        <version since="6 Jan 2012">3.4</version>
+                        <executions>
+                            <execution>
+                                <id>antlr</id>
+                                <goals>
+                                    <goal>antlr</goal>
+                                </goals>
+                                <phase>generate-sources</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>aspectj</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/main/aj</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>aspectj-maven-plugin</artifactId>
+                        <version since="27 May 2012">1.4</version>
+                        <configuration>
+                            <complianceLevel>1.6</complianceLevel>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                            <showWeaveInfo>false</showWeaveInfo>
+                            <source>1.6</source>
+                            <target>1.6</target>
+                            <verbose>false</verbose>
+                            <Xlint>warning</Xlint>
+                            <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                            <aspectLibraries>
+                                <aspectLibrary>
+                                    <groupId>com.jcabi</groupId>
+                                    <artifactId>jcabi-aspects</artifactId>
+                                </aspectLibrary>
+                            </aspectLibraries>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>weave-classes</id>
+                                <phase>process-classes</phase>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
                             </execution>
                         </executions>
                     </plugin>
@@ -509,6 +605,28 @@
     </profiles>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <!--
+                Reader of META-INF/MANIFEST.MF files
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-manifests</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
+            <dependency>
+                <!--
+                Logging facility.
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-log</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
+            <dependency>
+                <!-- Aspects -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-aspects</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
@@ -748,8 +866,11 @@
                             <Xlint:-path/>
                             <!-- @see https://blogs.oracle.com/darcy/entry/bootclasspath_older_source -->
                             <Xlint:-options/>
+                            <!-- @see http://netbeans.org/bugzilla/show_bug.cgi?format=multiple&id=208666 -->
+                            <!-- this is to avoid a problem with ANTLR and JDK7 -->
+                            <Xlint:-classfile/>
                             <!-- @see http://stackoverflow.com/questions/10738609 -->
-                            <Proc:none/>
+                            <proc:none/>
                         </compilerArguments>
                         <testExcludes>
                             <exclude>**/package-info.java</exclude>
@@ -768,6 +889,10 @@
                             -->
                         </reportPlugins>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version since="2 Dec 2011">1.7</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
