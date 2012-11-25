@@ -44,16 +44,17 @@ Amazon Elastic Beanstalk Deployment Maven Plugin
   approach, so that you don't need to provide a lot of configuration
   options. Instead, there are a few conventions:
 
-   * Name and CNAME of a "primary" environment
-     are always equal to the application name;
+   * CNAME of a "primary" environment
+     is always the same as the application name;
 
    * Environments are configured only by
      {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.managing.html#using-features.managing.saving}saved configuration templates}};
 
-   * Deployment, by default, is done with
-     {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html}CNAME swap}};
+   * Deployment is done either by
+     {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html}CNAME swap}}
+     or version update;
 
-   * An application always contains one "primary" environment.
+   * An application always contains only one "primary" environment.
 
   See {{{./usage.html}Usage}} page.
 

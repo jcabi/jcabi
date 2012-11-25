@@ -1,5 +1,5 @@
  ------
- Usage
+ Usage of Amazon Beanstalk Maven Plugin
  ------
  Yegor Bugayenko
  ------
@@ -78,8 +78,9 @@ Deploying WAR projects to Amazon Elastic Beanstalk
 
   Run <<<mvn deploy>>>.
 
-  That's all you need. Application name has to be the same as environment
-  name and CNAME. Server has to be defined in <<<settings.xml>>> with <<<username>>>
+  That's all you need. Application name has to be the same as
+  the CNAME of environment.
+  Server has to be defined in <<<settings.xml>>> with <<<username>>>
   and <<<password>>> (AWS IAM key and secret key).
 
   If you have any problems - don't hesitate to submit a ticket

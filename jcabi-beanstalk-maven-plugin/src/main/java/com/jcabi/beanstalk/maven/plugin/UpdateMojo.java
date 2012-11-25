@@ -40,7 +40,7 @@ import org.jfrog.maven.annomojo.annotations.MojoPhase;
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
- * @since 0.3
+ * @since 0.7.1
  */
 @MojoGoal("update")
 @MojoPhase("deploy")
