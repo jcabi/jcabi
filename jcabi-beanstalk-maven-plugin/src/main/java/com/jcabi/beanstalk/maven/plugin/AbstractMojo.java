@@ -188,12 +188,10 @@ abstract class AbstractMojo
      * Deploy using this EBT client.
      * @param app Application to deploy to
      * @param version Version to deploy
-     * @param template Template to use
-     * @throws DeploymentException If failed to deploy
+     * @param tmpl Template to use
      */
     protected abstract void exec(final Application app,
-        final Version version, final String template)
-        throws DeploymentException;
+        final Version version, final String tmpl);
 
     /**
      * Report when environment is failed.

@@ -30,9 +30,7 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.jcabi.log.Logger;
-import org.apache.maven.plugin.MojoFailureException;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
-import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
 
 /**
@@ -51,7 +49,7 @@ public final class UpdateMojo extends AbstractMojo {
      */
     @Override
     protected void exec(final Application app, final Version version,
-        final String template) throws DeploymentException {
+        final String template) {
         Environment primary;
         if (app.hasPrimary()) {
             primary = app.primary();
@@ -63,6 +61,12 @@ public final class UpdateMojo extends AbstractMojo {
             this.postMortem(primary);
             throw new DeploymentException("failed to deploy");
         }
+        Logger.info(
+            this,
+            "Environment '%s' successfully updated to '%s'",
+            primary,
+            version
+        );
     }
 
 }

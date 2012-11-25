@@ -29,18 +29,9 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
-import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
-import com.amazonaws.services.s3.AmazonS3Client;
 import com.jcabi.log.Logger;
-import java.io.File;
-import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.settings.Settings;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
-import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Deploys WAR artifact to Amazon Elastic Beanstalk.
@@ -58,7 +49,7 @@ public final class DeployMojo extends AbstractMojo {
      */
     @Override
     protected void exec(final Application app, final Version version,
-        final String template) throws DeploymentException {
+        final String template) {
         try {
             this.deploy(app, version, template);
         } catch (DeploymentException ex) {
@@ -72,10 +63,9 @@ public final class DeployMojo extends AbstractMojo {
      * @param app The application to deploy to
      * @param version Version to deploy
      * @param template Template to use
-     * @throws DeploymentException If failed to deploy
      */
     private void deploy(final Application app, final Version version,
-        final String template) throws DeploymentException {
+        final String template) {
         app.clean(false);
         final Environment candidate = app.candidate(version, template);
         if (candidate.green()) {

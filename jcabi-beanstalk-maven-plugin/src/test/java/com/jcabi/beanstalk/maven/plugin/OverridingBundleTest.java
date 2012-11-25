@@ -30,6 +30,8 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.ListObjectsRequest;
+import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import java.io.File;
 import org.apache.commons.io.FileUtils;
@@ -78,6 +80,8 @@ public final class OverridingBundleTest {
         final AmazonS3 client = Mockito.mock(AmazonS3.class);
         Mockito.doReturn(new PutObjectResult())
             .when(client).putObject(bucket, key, war);
+        Mockito.doReturn(new ObjectListing())
+            .when(client).listObjects(Mockito.any(ListObjectsRequest.class));
         final Bundle bundle = new OverridingBundle(client, bucket, key, war);
         MatcherAssert.assertThat(
             bundle.name(),
