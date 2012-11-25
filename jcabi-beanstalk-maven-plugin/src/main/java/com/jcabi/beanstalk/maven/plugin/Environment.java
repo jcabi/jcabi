@@ -46,6 +46,8 @@ import com.amazonaws.services.elasticbeanstalk.model.RequestEnvironmentInfoReque
 import com.amazonaws.services.elasticbeanstalk.model.RetrieveEnvironmentInfoRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
+import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentRequest;
+import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentResult;
 import com.jcabi.log.Logger;
 import java.net.URL;
 import java.util.Collection;
@@ -323,6 +325,24 @@ final class Environment {
         } catch (java.io.IOException ex) {
             throw new IllegalStateException(ex);
         }
+    }
+
+    /**
+     * Update this environment with a new version.
+     * @param version The version to update to
+     */
+    public void update(final Version version) {
+        final UpdateEnvironmentResult res = this.client.updateEnvironment(
+            new UpdateEnvironmentRequest()
+                .withEnvironmentId(this.eid)
+                .withVersionLabel(version.label())
+        );
+        Logger.info(
+            this,
+            "Environment '%s' updated to '%s'",
+            res.getEnvironmentId(),
+            res.getVersionLabel()
+        );
     }
 
     /**

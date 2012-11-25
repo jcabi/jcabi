@@ -124,10 +124,10 @@ final class Application {
     }
 
     /**
-     * Activate candidate environment by swap of CNAMEs.
-     * @param candidate The candidate to make a primary environment
+     * Get primary environment or throws a runtime exception if it is absent.
+     * @return Primary environment
      */
-    public void swap(final Environment candidate) {
+    public Environment primary() {
         Environment primary = null;
         for (Environment env : this.environments()) {
             if (env.primary()) {
@@ -138,11 +138,35 @@ final class Application {
         if (primary == null) {
             throw new DeploymentException(
                 String.format(
-                    "Application '%s' doesn't have a primary env, can't merge",
+                    "Application '%s' doesn't have a primary env",
                     this.name
                 )
             );
         }
+        return primary;
+    }
+
+    /**
+     * This application has a primary environment?
+     * @return TRUE if it exists
+     */
+    public boolean hasPrimary() {
+        boolean has = false;
+        for (Environment env : this.environments()) {
+            if (env.primary() && env.green()) {
+                has = true;
+                break;
+            }
+        }
+        return has;
+    }
+
+    /**
+     * Activate candidate environment by swap of CNAMEs.
+     * @param candidate The candidate to make a primary environment
+     */
+    public void swap(final Environment candidate) {
+        final Environment primary = this.primary();
         this.client.swapEnvironmentCNAMEs(
             new SwapEnvironmentCNAMEsRequest()
                 .withDestinationEnvironmentName(primary.name())
@@ -290,21 +314,6 @@ final class Application {
             }
         }
         return exists;
-    }
-
-    /**
-     * This application has a primary environment?
-     * @return TRUE if it exists
-     */
-    private boolean hasPrimary() {
-        boolean has = false;
-        for (Environment env : this.environments()) {
-            if (env.primary() && env.green()) {
-                has = true;
-                break;
-            }
-        }
-        return has;
     }
 
     /**

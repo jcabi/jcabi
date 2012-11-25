@@ -29,18 +29,11 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalk;
-import com.amazonaws.services.elasticbeanstalk.AWSElasticBeanstalkClient;
-import com.amazonaws.services.s3.AmazonS3Client;
 import com.jcabi.log.Logger;
-import java.io.File;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.settings.Settings;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Deploys WAR artifact to Amazon Elastic Beanstalk.
@@ -49,9 +42,9 @@ import org.slf4j.impl.StaticLoggerBinder;
  * @version $Id$
  * @since 0.3
  */
-@MojoGoal("deploy")
+@MojoGoal("update")
 @MojoPhase("deploy")
-public final class DeployMojo extends AbstractMojo {
+public final class UpdateMojo extends AbstractMojo {
 
     /**
      * {@inheritDoc}
@@ -59,42 +52,15 @@ public final class DeployMojo extends AbstractMojo {
     @Override
     protected void exec(final Application app, final Version version,
         final String template) throws DeploymentException {
-        try {
-            this.deploy(app, version, template);
-        } catch (DeploymentException ex) {
-            app.clean(false);
-            throw ex;
-        }
-    }
-
-    /**
-     * Deploy using this EBT client.
-     * @param app The application to deploy to
-     * @param version Version to deploy
-     * @param template Template to use
-     * @throws DeploymentException If failed to deploy
-     */
-    private void deploy(final Application app, final Version version,
-        final String template) throws DeploymentException {
-        app.clean(false);
-        final Environment candidate = app.candidate(version, template);
-        if (candidate.green()) {
-            if (candidate.primary()) {
-                Logger.info(
-                    this,
-                    "Candidate env '%s' is already primary, no need to swap",
-                    candidate
-                );
-            } else {
-                Logger.info(
-                    this,
-                    "Candidate env '%s' is not primary, let's swap",
-                    candidate
-                );
-                app.swap(candidate);
-            }
+        Environment primary;
+        if (app.hasPrimary()) {
+            primary = app.primary();
+            primary.update(version);
         } else {
-            this.postMortem(candidate);
+            primary = app.candidate(version, template);
+        }
+        if (!primary.green()) {
+            this.postMortem(primary);
             throw new DeploymentException("failed to deploy");
         }
     }
