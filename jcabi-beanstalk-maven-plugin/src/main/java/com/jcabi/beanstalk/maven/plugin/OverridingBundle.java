@@ -171,7 +171,7 @@ final class OverridingBundle implements Bundle {
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "MD5 ETag '%' of existing S3 object '%s' (%s) equals to the one of the local file (%s)",
+                    "MD5 ETag '%s' of existing S3 object '%s' (%s) equals to the one of the local file (%s)",
                     meta.getETag(),
                     this.key,
                     FileUtils.byteCountToDisplaySize(meta.getContentLength()),
