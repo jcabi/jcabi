@@ -43,6 +43,7 @@ import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoDescription;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentInfoType;
 import com.amazonaws.services.elasticbeanstalk.model.EventDescription;
 import com.amazonaws.services.elasticbeanstalk.model.RequestEnvironmentInfoRequest;
+import com.amazonaws.services.elasticbeanstalk.model.RestartAppServerRequest;
 import com.amazonaws.services.elasticbeanstalk.model.RetrieveEnvironmentInfoRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
@@ -336,6 +337,10 @@ final class Environment {
             new UpdateEnvironmentRequest()
                 .withEnvironmentId(this.eid)
                 .withVersionLabel(version.label())
+        );
+        this.client.restartAppServer(
+            new RestartAppServerRequest()
+                .withEnvironmentId(this.eid)
         );
         Logger.info(
             this,

@@ -96,26 +96,42 @@ final class OverridingVersion implements Version {
     @Override
     public String label() {
         if (this.exists()) {
-            this.remove();
-        }
-        final CreateApplicationVersionResult res =
-            this.client.createApplicationVersion(
-                new CreateApplicationVersionRequest()
-                    .withApplicationName(this.application)
-                    .withVersionLabel(this.name)
-                    .withSourceBundle(this.location)
-                    .withDescription(this.name)
+            Logger.info(
+                this,
+                "Version '%s' already exists for '%s'",
+                this.name,
+                this.application
             );
-        final ApplicationVersionDescription desc = res.getApplicationVersion();
-        Logger.info(
-            this,
-            "Version '%s' created for '%s' (%s): '%s'",
-            desc.getVersionLabel(),
-            desc.getApplicationName(),
-            this.location,
-            desc.getDescription()
-        );
-        return desc.getVersionLabel();
+        } else {
+            final CreateApplicationVersionResult res =
+                this.client.createApplicationVersion(
+                    new CreateApplicationVersionRequest()
+                        .withApplicationName(this.application)
+                        .withVersionLabel(this.name)
+                        .withSourceBundle(this.location)
+                        .withDescription(this.name)
+                );
+            final ApplicationVersionDescription desc =
+                res.getApplicationVersion();
+            Logger.info(
+                this,
+                "Version '%s' created for '%s' (%s): '%s'",
+                desc.getVersionLabel(),
+                desc.getApplicationName(),
+                this.location,
+                desc.getDescription()
+            );
+            if (desc.getVersionLabel() != this.name) {
+                throw new DeploymentException(
+                    String.format(
+                        "version label is '%s' while '%s' expected",
+                        desc.getVersionLabel(),
+                        this.name
+                    )
+                );
+            }
+        }
+        return this.name;
     }
 
     /**
@@ -130,36 +146,41 @@ final class OverridingVersion implements Version {
                     .withVersionLabels(this.name)
             );
         boolean exists = false;
-        if (!res.getApplicationVersions().isEmpty()) {
-            final ApplicationVersionDescription ver =
-                res.getApplicationVersions().get(0);
+        if (res.getApplicationVersions().isEmpty()) {
             Logger.info(
                 this,
-                "Version '%s' already exists for '%s' app: '%s'",
-                ver.getVersionLabel(),
-                ver.getApplicationName(),
-                ver.getDescription()
+                "Version '%s' is absent in '%s'",
+                this.name,
+                this.application
             );
-            exists = true;
+        } else {
+            final ApplicationVersionDescription ver =
+                res.getApplicationVersions().get(0);
+            if (ver.getSourceBundle().equals(this.location)) {
+                Logger.info(
+                    this,
+                    "Version '%s' already exists for '%s' app: '%s'",
+                    ver.getVersionLabel(),
+                    ver.getApplicationName(),
+                    ver.getDescription()
+                );
+                exists = true;
+            } else {
+                this.client.deleteApplicationVersion(
+                    new DeleteApplicationVersionRequest()
+                        .withApplicationName(this.application)
+                        .withVersionLabel(this.name)
+                );
+                Logger.info(
+                    this,
+                    // @checkstyle LineLength (1 line)
+                    "Version '%s' deleted in '%s' because of its outdated S3 location",
+                    this.name,
+                    this.application
+                );
+            }
         }
         return exists;
-    }
-
-    /**
-     * Remove this label.
-     */
-    private void remove() {
-        this.client.deleteApplicationVersion(
-            new DeleteApplicationVersionRequest()
-                .withApplicationName(this.application)
-                .withVersionLabel(this.name)
-        );
-        Logger.info(
-            this,
-            "Version '%s' deleted for '%s' app",
-            this.name,
-            this.application
-        );
     }
 
 }

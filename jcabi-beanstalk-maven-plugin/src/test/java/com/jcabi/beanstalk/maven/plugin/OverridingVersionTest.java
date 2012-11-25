@@ -67,6 +67,7 @@ public final class OverridingVersionTest {
         final String app = "some-app";
         final String key = "some-bundle-key";
         final Bundle bundle = Mockito.mock(Bundle.class);
+        Mockito.doReturn(key).when(bundle).name();
         final AWSElasticBeanstalk ebt = Mockito.mock(AWSElasticBeanstalk.class);
         Mockito.doReturn(new DescribeApplicationVersionsResult())
             .when(ebt).describeApplicationVersions(

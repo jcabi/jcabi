@@ -167,7 +167,7 @@ final class OverridingBundle implements Bundle {
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)
-                    "MD5 Etag '%s' of S3 object '%s' (%s) differs from '%s' of the local file (%s)",
+                    "MD5 ETag '%s' of S3 object '%s' (%s) differs from '%s' of the local file (%s)",
                     meta.getETag(),
                     this.key,
                     FileUtils.byteCountToDisplaySize(meta.getContentLength()),
@@ -207,9 +207,9 @@ final class OverridingBundle implements Bundle {
                 // @checkstyle LineLength (1 line)
                 "S3 object '%s' found in '%s' bucket (size=%d, last-modified=%s, etag=%s)",
                 summary.getKey(),
+                summary.getBucketName(),
                 summary.getSize(),
                 summary.getLastModified(),
-                summary.getBucketName(),
                 summary.getETag()
             );
             exists = true;
