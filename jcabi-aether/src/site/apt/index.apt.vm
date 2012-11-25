@@ -43,7 +43,7 @@ Aether adapter for Maven plugins
   in your Maven plugins, when it's necessary to find a location of certain
   artifact or find out what transitive dependencies it contains. The
   module contains
-  {{{./apidocs-${project.version}/com/jcabi/aether/Aether.html}Aether}}
+  {{{./apidocs-${project.version}/com/jcabi/aether/Aether.html}<<<Aether>>>}}
   class, an adapter between your plugin and Aether.
 
   This is how you find out the location of a <<<junit:junit-dep:4.10>>> artifact:
@@ -107,7 +107,7 @@ Collection<Artifact> deps = new Aether(project, repo).resolve(
 +--
 
   More examples you can find in
-  {{{https://github.com/yegor256/jcabi/blob/master/jcabi-aether/src/test/java/com/jcabi/aether/AetherTest.java}AetherTest}}.
+  {{{https://github.com/yegor256/jcabi/blob/master/jcabi-aether/src/test/java/com/jcabi/aether/AetherTest.java}<<<AetherTest>>>}}.
 
   The only dependency you need:
 

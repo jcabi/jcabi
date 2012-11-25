@@ -338,16 +338,23 @@ final class Environment {
                 .withEnvironmentId(this.eid)
                 .withVersionLabel(version.label())
         );
-        this.client.restartAppServer(
-            new RestartAppServerRequest()
-                .withEnvironmentId(this.eid)
-        );
         Logger.info(
             this,
             "Environment '%s' updated to '%s'",
             res.getEnvironmentId(),
             res.getVersionLabel()
         );
+        if (this.green()) {
+            this.client.restartAppServer(
+                new RestartAppServerRequest()
+                    .withEnvironmentId(this.eid)
+            );
+            Logger.info(
+                this,
+                "AppServer restarted at '%s'",
+                this.eid
+            );
+        }
     }
 
     /**
