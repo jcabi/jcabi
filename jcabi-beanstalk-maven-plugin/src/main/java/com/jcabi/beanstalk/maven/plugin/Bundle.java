@@ -52,4 +52,11 @@ interface Bundle {
      */
     S3Location location();
 
+    /**
+     * Get MD5 ETag hex of the bundle, according to RFC-1864.
+     * @return The ETag
+     * @since 0.7.1
+     */
+    String etag();
+
 }

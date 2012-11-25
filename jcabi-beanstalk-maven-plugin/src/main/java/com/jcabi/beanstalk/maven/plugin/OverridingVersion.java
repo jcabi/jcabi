@@ -36,7 +36,6 @@ import com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRes
 import com.amazonaws.services.elasticbeanstalk.model.DeleteApplicationVersionRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersionsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersionsResult;
-import com.amazonaws.services.elasticbeanstalk.model.S3Location;
 import com.jcabi.log.Logger;
 
 /**
@@ -59,27 +58,21 @@ final class OverridingVersion implements Version {
     private final transient String application;
 
     /**
-     * Version name.
+     * Bundle with a file.
      */
-    private final transient String name;
-
-    /**
-     * S3 location of the bundle.
-     */
-    private final transient S3Location location;
+    private final transient Bundle bundle;
 
     /**
      * Public ctor.
      * @param clnt Client
      * @param app Application name
-     * @param bundle Bundle
+     * @param bndl Bundle
      */
     public OverridingVersion(final AWSElasticBeanstalk clnt, final String app,
-        final Bundle bundle) {
+        final Bundle bndl) {
         this.client = clnt;
         this.application = app;
-        this.name = bundle.name();
-        this.location = bundle.location();
+        this.bundle = bndl;
     }
 
     /**
@@ -87,7 +80,7 @@ final class OverridingVersion implements Version {
      */
     @Override
     public String toString() {
-        return this.name;
+        return this.bundle.name();
     }
 
     /**
@@ -99,7 +92,7 @@ final class OverridingVersion implements Version {
             Logger.info(
                 this,
                 "Version '%s' already exists for '%s'",
-                this.name,
+                this.bundle.name(),
                 this.application
             );
         } else {
@@ -107,9 +100,9 @@ final class OverridingVersion implements Version {
                 this.client.createApplicationVersion(
                     new CreateApplicationVersionRequest()
                         .withApplicationName(this.application)
-                        .withVersionLabel(this.name)
-                        .withSourceBundle(this.location)
-                        .withDescription(this.name)
+                        .withVersionLabel(this.bundle.name())
+                        .withSourceBundle(this.bundle.location())
+                        .withDescription(this.bundle.etag())
                 );
             final ApplicationVersionDescription desc =
                 res.getApplicationVersion();
@@ -118,20 +111,20 @@ final class OverridingVersion implements Version {
                 "Version '%s' created for '%s' (%s): '%s'",
                 desc.getVersionLabel(),
                 desc.getApplicationName(),
-                this.location,
+                this.bundle.location(),
                 desc.getDescription()
             );
-            if (desc.getVersionLabel() != this.name) {
+            if (desc.getVersionLabel() != this.bundle.name()) {
                 throw new DeploymentException(
                     String.format(
                         "version label is '%s' while '%s' expected",
                         desc.getVersionLabel(),
-                        this.name
+                        this.bundle.name()
                     )
                 );
             }
         }
-        return this.name;
+        return this.bundle.name();
     }
 
     /**
@@ -143,23 +136,24 @@ final class OverridingVersion implements Version {
             this.client.describeApplicationVersions(
                 new DescribeApplicationVersionsRequest()
                     .withApplicationName(this.application)
-                    .withVersionLabels(this.name)
+                    .withVersionLabels(this.bundle.name())
             );
         boolean exists = false;
         if (res.getApplicationVersions().isEmpty()) {
             Logger.info(
                 this,
                 "Version '%s' is absent in '%s'",
-                this.name,
+                this.bundle.name(),
                 this.application
             );
         } else {
             final ApplicationVersionDescription ver =
                 res.getApplicationVersions().get(0);
-            if (ver.getSourceBundle().equals(this.location)) {
+            if (ver.getSourceBundle().equals(this.bundle.location())
+                && ver.getDescription().equals(this.bundle.etag())) {
                 Logger.info(
                     this,
-                    "Version '%s' already exists for '%s' app: '%s'",
+                    "Version '%s' already exists for '%s', etag='%s'",
                     ver.getVersionLabel(),
                     ver.getApplicationName(),
                     ver.getDescription()
@@ -169,13 +163,13 @@ final class OverridingVersion implements Version {
                 this.client.deleteApplicationVersion(
                     new DeleteApplicationVersionRequest()
                         .withApplicationName(this.application)
-                        .withVersionLabel(this.name)
+                        .withVersionLabel(this.bundle.name())
                 );
                 Logger.info(
                     this,
                     // @checkstyle LineLength (1 line)
                     "Version '%s' deleted in '%s' because of its outdated S3 location",
-                    this.name,
+                    this.bundle.name(),
                     this.application
                 );
             }

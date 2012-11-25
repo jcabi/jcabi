@@ -142,6 +142,21 @@ final class OverridingBundle implements Bundle {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String etag() {
+        try {
+            final InputStream stream = new FileInputStream(this.war);
+            final String hash = DigestUtils.md5Hex(stream);
+            IOUtils.closeQuietly(stream);
+            return hash;
+        } catch (java.io.IOException ex) {
+            throw new DeploymentException(ex);
+        }
+    }
+
+    /**
      * This object already exists in the bucket.
      * @return TRUE if exists already
      */
@@ -215,21 +230,6 @@ final class OverridingBundle implements Bundle {
             exists = true;
         }
         return exists;
-    }
-
-    /**
-     * Get MD5 ETag hex of the file, according to RFC-1864.
-     * @return ETag of the WAR file
-     */
-    private String etag() {
-        try {
-            final InputStream stream = new FileInputStream(this.war);
-            final String hash = DigestUtils.md5Hex(stream);
-            IOUtils.closeQuietly(stream);
-            return hash;
-        } catch (java.io.IOException ex) {
-            throw new DeploymentException(ex);
-        }
     }
 
 }
