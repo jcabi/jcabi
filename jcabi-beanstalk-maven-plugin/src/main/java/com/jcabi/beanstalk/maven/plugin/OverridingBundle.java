@@ -97,6 +97,9 @@ final class OverridingBundle implements Bundle {
 
     /**
      * {@inheritDoc}
+     *
+     * @todo #103 Would be nice to make it cacheable, as suggested in
+     *  https://github.com/yegor256/jcabi/issues/105
      */
     @Override
     public S3Location location() {

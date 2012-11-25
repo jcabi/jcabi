@@ -114,7 +114,7 @@ final class OverridingVersion implements Version {
                 this.bundle.location(),
                 desc.getDescription()
             );
-            if (desc.getVersionLabel() != this.bundle.name()) {
+            if (!desc.getVersionLabel().equals(this.bundle.name())) {
                 throw new DeploymentException(
                     String.format(
                         "version label is '%s' while '%s' expected",
