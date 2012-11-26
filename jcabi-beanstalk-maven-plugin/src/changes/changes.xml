@@ -29,20 +29,17 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  -->
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0     http://maven.apache.org/xsd/decoration-1.0.0.xsd" name="jcabi-beanstalk-maven-plugin">
+<document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <body>
-        <menu ref="parent"/>
-        <menu name="Overview">
-            <item name="Introduction" href="./index.html"/>
-            <item name="Usage" href="./usage.html"/>
-            <item name="Goals" href="./plugin-info.html"/>
-            <item name="FAQ" href="./faq.html"/>
-        </menu>
-        <menu name="Best Practices">
-            <item name="Package ebextensions" href="./best-ebextensions.html"/>
-            <item name="Logging w/syslog" href="./best-syslog.html"/>
-            <item name="Mounting EBS volume" href="./best-ebs-volume.html"/>
-        </menu>
-        <menu ref="reports"/>
+        <release version="0.7.1" date="25 Nov 2012" description="jcabi-beanstalk-maven-plugin:update goal">
+            <action dev="yegor" issue="102" type="add">
+                New "UPDATE" goal introduced for faster deployment
+                without environment termination.
+            </action>
+            <action dev="yegor" issue="103" type="add">
+                More intellectual uploading of artifacts to S3, including
+                ETags validation and avoiding duplication.
+            </action>
+        </release>
     </body>
-</project>
+</document>
