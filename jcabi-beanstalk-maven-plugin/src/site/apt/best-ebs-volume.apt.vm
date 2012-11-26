@@ -71,7 +71,7 @@ commands:
         --aws-access-key ${sign}{aws.key} \
         --aws-secret-key ${sign}{aws.secret} \
         ${sign}{ebs.volume} | grep in-use) && \
-      if [ -n "${sign}{IN_USE}" ]; then
+      if [ -z "${sign}{IN_USE}" ]; then
         /opt/aws/bin/ec2-attach-volume ${sign}{ebs.volume} \
           -i ${sign}(/opt/aws/bin/ec2-metadata --instance-id | cut -c14-) \
           -d /dev/sdf \
