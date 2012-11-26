@@ -103,7 +103,9 @@ How to release new version to Maven Central:
 
         git commit -a -m '#87: version set to 0.5.4'
 
-    5. Deploy the product to Sonatype:
+    5. Explain this new release in changes/changes.xml release notes
+
+    6. Deploy the product to Sonatype:
 
         mvn -Pqulice -Pjcabi -Psonatype clean deploy
         cd parent && mvn clean deploy && cd ..
@@ -119,26 +121,26 @@ How to release new version to Maven Central:
             </properties>
           </profile>
 
-    6. Deploy the site to Amazon S3 (in 3-4 hours, when this artifact
+    7. Deploy the site to Amazon S3 (in 3-4 hours, when this artifact
         becomes available in Maven Central):
 
         mvn -Psite clean install site-deploy
         cd parent && mvn -Dsite clean site-deploy && cd ..
 
-    7. Tag the branch
+    8. Tag the branch
 
         git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.5.4
 
-    8. Revert version back to SNAPSHOT:
+    9. Revert version back to SNAPSHOT:
 
         find . -name "*.xml" -exec sed -i "" 's|\(\<version jcabi\=\"yes\"\>\)0\.5\.4\(\<\/version\>\)|\11.0-SNAPSHOT\2|g' {} \;
         git commit -a -m '#87: version back to SNAPSHOT'
 
-    9. Merge the branch to 'master':
+    10. Merge the branch to 'master':
 
         git checkout master && git merge 87 && git push origin master && git branch -D 87
 
-    10. Close the issue as "fixed" in Github
+    11. Close the issue as "fixed" in Github
 
     That's it
