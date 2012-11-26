@@ -104,7 +104,7 @@
     </developers>
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/yegor256/jcabi</url>
+        <url>https://github.com/yegor256/jcabi/issues</url>
     </issueManagement>
     <ciManagement>
         <system>jenkins</system>
@@ -131,33 +131,31 @@
         <profile>
             <id>site</id>
             <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <artifactId>maven-site-plugin</artifactId>
-                            <configuration>
-                                <reportPlugins>
-                                    <plugin>
-                                        <artifactId>maven-changes-plugin</artifactId>
-                                        <version since="19 Nov 2012">2.8</version>
-                                        <configuration>
-                                            <columnNames>Id, Priority, Summary, Reporter, Resolution</columnNames>
-                                            <includeOpenIssues>false</includeOpenIssues>
-                                        </configuration>
-                                        <reportSets>
-                                            <reportSet>
-                                                <reports>
-                                                    <report>github-report</report>
-                                                    <report>changes-report</report>
-                                                </reports>
-                                            </reportSet>
-                                        </reportSets>
-                                    </plugin>
-                                </reportPlugins>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <configuration>
+                            <reportPlugins combine.children="append">
+                                <plugin>
+                                    <artifactId>maven-changes-plugin</artifactId>
+                                    <version since="19 Nov 2012">2.8</version>
+                                    <configuration>
+                                        <columnNames>Id, Priority, Summary, Reporter, Resolution</columnNames>
+                                        <includeOpenIssues>false</includeOpenIssues>
+                                    </configuration>
+                                    <reportSets>
+                                        <reportSet>
+                                            <reports>
+                                                <report>github-report</report>
+                                                <report>changes-report</report>
+                                            </reports>
+                                        </reportSet>
+                                    </reportSets>
+                                </plugin>
+                            </reportPlugins>
+                        </configuration>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
     </profiles>
