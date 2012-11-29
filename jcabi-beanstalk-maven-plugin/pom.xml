@@ -209,15 +209,8 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>install-invoker</id>
                         <goals>
                             <goal>install</goal>
-                        </goals>
-                        <phase>pre-integration-test</phase>
-                    </execution>
-                    <execution>
-                        <id>run-invoker</id>
-                        <goals>
                             <goal>run</goal>
                         </goals>
                     </execution>
