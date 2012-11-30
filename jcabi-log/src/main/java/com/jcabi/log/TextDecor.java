@@ -38,11 +38,9 @@ import org.apache.commons.lang.StringEscapeUtils;
  *
  * <p>For example:
  *
- * <pre>
- * public void func(Object input) {
+ * <pre>public void func(Object input) {
  *   Logger.debug("Long input '%[text]s' provided", input);
- * }
- * </pre>
+ * }</pre>
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$

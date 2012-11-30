@@ -32,6 +32,7 @@ package com.jcabi.log;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Formattable;
+import java.util.FormattableFlags;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -71,11 +72,11 @@ public final class SecretDecorTest extends AbstractDecorTest {
     public static Collection<Object[]> params() {
         return Arrays.asList(
             new Object[][] {
-                // @checkstyle MethodBodyComments (4 lines)
-                // { "testing", "t***g", 0, 0, 0 },
-                // { "ouch", "o***h  ", FormattableFlags.LEFT_JUSTIFY, 7, 5 },
-                // { "x", " X***X", FormattableFlags.UPPERCASE, 6, 0 },
-                // { null, "NULL", FormattableFlags.UPPERCASE, 6, 0 },
+                // @checkstyle MagicNumber (4 lines)
+                {"testing", "t***g", 0, 0, 0},
+                {"ouch", "o***h  ", FormattableFlags.LEFT_JUSTIFY, 7, 5},
+                {"x", " X***X", FormattableFlags.UPPERCASE, 6, 0},
+                {null, "NULL", FormattableFlags.UPPERCASE, 6, 0},
             }
         );
     }
