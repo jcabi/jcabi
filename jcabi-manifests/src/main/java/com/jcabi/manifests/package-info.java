@@ -29,10 +29,11 @@
  */
 
 /**
- * Reader of {@code META-INF/MANIFEST.MF} files.
+ * Static eader of {@code META-INF/MANIFEST.MF} files.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7
+ * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
  */
 package com.jcabi.manifests;

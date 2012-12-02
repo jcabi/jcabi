@@ -121,11 +121,22 @@ import org.apache.commons.lang.SerializationUtils;
  *   Manifests.revert(snapshot);
  * }</pre>
  *
+ * <p>The only dependency you need (check the latest version at
+ * <a href="http://www.jcabi.com/jcabi-manifests/">jcabi-manifests</a>):
+ *
+ * <pre> &lt;dependency>
+ *  &lt;groupId>com.jcabi&lt;/groupId>
+ *  &lt;artifactId>jcabi-manifests&lt;/artifactId>
+ * &lt;/dependency></pre>
+ *
+ * <p>The class is immutable and thread-safe.
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7
  * @see <a href="http://download.oracle.com/javase/1,5.0/docs/guide/jar/jar.html#JAR%20Manifest">JAR Manifest</a>
  * @see <a href="http://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver</a>
+ * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
  */
 @SuppressWarnings("PMD.UseConcurrentHashMap")
 public final class Manifests {
@@ -166,6 +177,8 @@ public final class Manifests {
      * <p>During testing you can inject attributes into this class by means
      * of {@link #inject(String,String)}.
      *
+     * <p>The method is thread-safe.
+     *
      * @param name Name of the attribute
      * @return The value of the attribute retrieved
      */
@@ -175,7 +188,7 @@ public final class Manifests {
         final String name) {
         if (Manifests.attributes == null) {
             throw new IllegalArgumentException(
-                "Manifests haven't been loaded yet by request from XsltFilter"
+                "Manifests haven't been loaded yet, internal error"
             );
         }
         if (!Manifests.exists(name)) {
@@ -212,6 +225,8 @@ public final class Manifests {
      * unit and integration testing. Once injected an attribute becomes
      * available with {@link #read(String)}.
      *
+     * <p>The method is thread-safe.
+     *
      * @param name Name of the attribute
      * @param value The value of the attribute being injected
      */
@@ -245,6 +260,8 @@ public final class Manifests {
      * <p>Use this method before {@link #read(String)} to check whether an
      * attribute exists, in order to avoid a runtime exception.
      *
+     * <p>The method is thread-safe.
+     *
      * @param name Name of the attribute to check
      * @return Returns {@code TRUE} if it exists, {@code FALSE} otherwise
      */
@@ -258,6 +275,9 @@ public final class Manifests {
 
     /**
      * Make a snapshot of current attributes and their values.
+     *
+     * <p>The method is thread-safe.
+     *
      * @return The snapshot, to be used later with {@link #revert(byte[])}
      */
     public static byte[] snapshot() {
@@ -277,6 +297,9 @@ public final class Manifests {
 
     /**
      * Revert to the state that was recorded by {@link #snapshot()}.
+     *
+     * <p>The method is thread-safe.
+     *
      * @param snapshot The snapshot taken by {@link #snapshot()}
      */
     @SuppressWarnings("unchecked")
@@ -301,6 +324,8 @@ public final class Manifests {
      * {@link javax.servlet.Filter} or
      * {@link javax.servlet.ServletContextListener},
      * in order to inject {@code MANIFEST.MF} attributes to the class.
+     *
+     * <p>The method is thread-safe.
      *
      * @param ctx Servlet context
      * @see #Manifests()
@@ -340,6 +365,9 @@ public final class Manifests {
 
     /**
      * Append attributes from the file.
+     *
+     * <p>The method is thread-safe.
+     *
      * @param file The file to load attributes from
      * @throws IOException If some I/O problem inside
      */
