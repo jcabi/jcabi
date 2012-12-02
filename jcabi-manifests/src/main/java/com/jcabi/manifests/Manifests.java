@@ -53,13 +53,14 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.SerializationUtils;
 
 /**
- * Reader of {@code META-INF/MANIFEST.MF} files.
+ * Static reader of {@code META-INF/MANIFEST.MF} files.
  *
- * The class will read all {@code MANIFEST.MF} files available in classpath
- * and all attributes from them. This mechanism is very useful for sending
+ * The class provides convenient methods to read
+ * all {@code MANIFEST.MF} files available in classpath
+ * and all attributes from them. This mechanism is very useful for transferring
  * information from continuous integration environment to the production
  * environment. For example, you want your site to show project version and
- * the date of WAR file packaging. First, you configure
+ * the date of {@code WAR} file packaging. First, you configure
  * {@code maven-war-plugin} to add this information to {@code MANIFEST.MF}:
  *
  * <pre> &lt;plugin>
@@ -90,13 +91,13 @@ import org.apache.commons.lang.SerializationUtils;
  * public final class Page {
  *   &#64;XmlElement
  *   public String version() {
- *    return Manifests.read("Foo-Version");
+ *     return Manifests.read("Foo-Version");
  *   }
  *   &#64;XmlElement
  *   public Date date() {
- *    return new SimpleDateFormat("yyyy.MM.dd", Locale.ENGLISH).parse(
- *     Manifests.read("Foo-Date");
- *    );
+ *     return new SimpleDateFormat("yyyy.MM.dd", Locale.ENGLISH).parse(
+ *       Manifests.read("Foo-Date");
+ *     );
  *   }
  * }</pre>
  *
