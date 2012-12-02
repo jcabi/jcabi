@@ -50,7 +50,10 @@ assert urn.nid().equals("test");
 assert urn.nss().equals("my-example");
 +--
 
-  The only dependency you need is:
+  The only dependency you need is
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-urn/${project.version}/jcabi-urn-${project.version}.jar}<<<jcabi-urn-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>

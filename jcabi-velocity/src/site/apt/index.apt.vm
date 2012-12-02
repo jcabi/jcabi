@@ -50,7 +50,10 @@ String text = new VelocityPage("com/foo/template.vm")
   .toString();
 +--
 
-  The only dependency you need is:
+  The only dependency you need is
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-velocity/${project.version}/jcabi-velocity-${project.version}.jar}<<<jcabi-velocity-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>

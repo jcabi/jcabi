@@ -75,7 +75,8 @@ Created-By: 1.6.0_26-b03-384-10M3425 (Apple Inc.)
   {{{./apidocs-${project.version}/com/jcabi/manifests/Manifests.html}<<<Manifests>>>}}
   utility class is used. You don't need to worry about finding the right
   location of the right <<<.properties>>>, loading it into memory, and
-  dealing with exceptions. All you do is reading from manifests:
+  dealing with exceptions. All you do is reading from
+  {{{./apidocs-${project.version}/com/jcabi/manifests/Manifests.html}<<<Manifests>>>}}:
 
 +--
 System.out.println("My JAR was created by " + Manifests.read("Created-By"));
@@ -108,8 +109,15 @@ Foo-Version: 1.0-SNAPSHOT
 
   Read more about using <<<MANIFEST.MF>>> file for
   {{{./versioning.html}versioning}} of your Java application.
+  Also pay attention to the
+  {{{./servlets.html}difference between JAR and WAR applications}}.
+  Besides that, there is a number of best practices related to
+  {{{./mocking.html}unit testing and mocking}} of <<<MANIFEST.MF>>> attributes.
 
-  The only dependency you need is:
+  The only dependency you need in your class path is
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-manifests/${project.version}/jcabi-manifests-${project.version}.jar}<<<jcabi-manifests-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>

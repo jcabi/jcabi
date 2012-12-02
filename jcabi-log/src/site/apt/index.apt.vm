@@ -69,7 +69,10 @@ class Foo {
      an implementation of <<<java.util.concurrent.ThreadFactory>>> that
      instantiates threads that log all runtime exceptions through SLF4J.
 
-  The only dependency you need is:
+  The only dependency you need is
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>

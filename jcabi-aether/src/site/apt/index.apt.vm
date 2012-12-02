@@ -109,7 +109,10 @@ Collection<Artifact> deps = new Aether(project, repo).resolve(
   More examples you can find in
   {{{https://github.com/yegor256/jcabi/blob/master/jcabi-aether/src/test/java/com/jcabi/aether/AetherTest.java}<<<AetherTest>>>}}.
 
-  The only dependency you need:
+  The only dependency you need
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-aether/${project.version}/jcabi-aether-${project.version}.jar}<<<jcabi-aether-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>
