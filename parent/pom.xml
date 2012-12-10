@@ -290,6 +290,24 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <!--
+                        Checks the quality of Maven project documentation
+                        @see http://maven.apache.org/plugins/maven-docck-plugin/index.html
+                        -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-docck-plugin</artifactId>
+                        <version since="10 Dec 2012">1.0</version>
+                        <executions>
+                            <execution>
+                                <id>jcabi-check</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -529,6 +547,12 @@
                     </dependency>
                 </dependencies>
             </dependencyManagement>
+            <dependencies>
+                <dependency>
+                    <groupId>org.antlr</groupId>
+                    <artifactId>antlr-runtime</artifactId>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
@@ -555,30 +579,50 @@
                     <exists>${basedir}/src/main/aj</exists>
                 </file>
             </activation>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <!-- Aspects -->
+                        <groupId>com.jcabi</groupId>
+                        <artifactId>jcabi-aspects</artifactId>
+                        <version>${jcabi.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjrt</artifactId>
+                        <!-- this one is compliant with aspectj-maven-plugin -->
+                        <version since="27 May 2012">1.6.11</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>javax.validation</groupId>
+                        <artifactId>validation-api</artifactId>
+                        <version since="27 May 2012">1.1.0.Alpha1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-validator</artifactId>
+                        <version since="27 May 2012">4.3.0.Final</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
             <dependencies>
                 <dependency>
-                    <!-- Aspects -->
                     <groupId>com.jcabi</groupId>
                     <artifactId>jcabi-aspects</artifactId>
-                    <version>${jcabi.version}</version>
                 </dependency>
                 <dependency>
                     <groupId>org.aspectj</groupId>
                     <artifactId>aspectjrt</artifactId>
-                    <!-- this one is compliant with aspectj-maven-plugin -->
-                    <version since="27 May 2012">1.6.11</version>
-                    <scope>runtime</scope>
                 </dependency>
                 <dependency>
                     <groupId>javax.validation</groupId>
                     <artifactId>validation-api</artifactId>
-                    <version since="27 May 2012">1.1.0.Alpha1</version>
                 </dependency>
                 <dependency>
                     <groupId>org.hibernate</groupId>
                     <artifactId>hibernate-validator</artifactId>
-                    <version since="27 May 2012">4.3.0.Final</version>
-                    <scope>runtime</scope>
                 </dependency>
             </dependencies>
             <build>
@@ -623,61 +667,81 @@
                     <exists>${basedir}/src/test/java</exists>
                 </file>
             </activation>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <!--
+                        We are using JUnit framework for unit test organization
+                        and management. This framework is the most stable and mature
+                        in the market. Other options considered: TestNG.
+                        @link http://www.junit.org/
+                        -->
+                        <groupId>junit</groupId>
+                        <artifactId>junit-dep</artifactId>
+                        <version since="2 Dec 2012">4.10</version>
+                        <scope>test</scope>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.hamcrest</groupId>
+                                <artifactId>hamcrest-core</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                    <dependency>
+                        <!--
+                        Assertions and matchers for unit tests.
+                        @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                        -->
+                        <groupId>org.hamcrest</groupId>
+                        <artifactId>hamcrest-core</artifactId>
+                        <version since="23 Dec 2011">1.3</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <!--
+                        Assertions and matchers for unit tests.
+                        @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                        -->
+                        <groupId>org.hamcrest</groupId>
+                        <artifactId>hamcrest-library</artifactId>
+                        <version since="23 Dec 2011">1.3</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <!--
+                        Mockito is used as a mocking library during testing.
+                        Other options: jMock.
+                        @link http://www.mockito.org/
+                        -->
+                        <groupId>org.mockito</groupId>
+                        <artifactId>mockito-core</artifactId>
+                        <version since="17 Apr 2012">1.9.0</version>
+                        <scope>test</scope>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.hamcrest</groupId>
+                                <artifactId>hamcrest-core</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
             <dependencies>
                 <dependency>
-                    <!--
-                    We are using JUnit framework for unit test organization
-                    and management. This framework is the most stable and mature
-                    in the market. Other options considered: TestNG.
-                    @link http://www.junit.org/
-                    -->
                     <groupId>junit</groupId>
                     <artifactId>junit-dep</artifactId>
-                    <version since="2 Dec 2012">4.10</version>
-                    <scope>test</scope>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.hamcrest</groupId>
-                            <artifactId>hamcrest-core</artifactId>
-                        </exclusion>
-                    </exclusions>
                 </dependency>
                 <dependency>
-                    <!--
-                    Assertions and matchers for unit tests.
-                    @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                    -->
                     <groupId>org.hamcrest</groupId>
                     <artifactId>hamcrest-core</artifactId>
-                    <version since="23 Dec 2011">1.3</version>
-                    <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <!--
-                    Assertions and matchers for unit tests.
-                    @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                    -->
                     <groupId>org.hamcrest</groupId>
                     <artifactId>hamcrest-library</artifactId>
-                    <version since="23 Dec 2011">1.3</version>
-                    <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <!--
-                    Mockito is used as a mocking library during testing.
-                    Other options: jMock.
-                    @link http://www.mockito.org/
-                    -->
                     <groupId>org.mockito</groupId>
                     <artifactId>mockito-core</artifactId>
-                    <version since="17 Apr 2012">1.9.0</version>
-                    <scope>test</scope>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.hamcrest</groupId>
-                            <artifactId>hamcrest-core</artifactId>
-                        </exclusion>
-                    </exclusions>
                 </dependency>
             </dependencies>
         </profile>
@@ -688,20 +752,32 @@
                     <exists>${basedir}/src/test/resources/log4j.properties</exists>
                 </file>
             </activation>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <!-- Forward all SLF4J calls to LOG4J. -->
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <version since="19 Sep 2011">1.6.2</version>
+                        <scope>test</scope>
+                    </dependency>
+                    <dependency>
+                        <!-- Use LOG4J logging facility for all loggings. -->
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                        <version since="19 Sep 2011">1.2.16</version>
+                        <scope>test</scope>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
             <dependencies>
                 <dependency>
-                    <!-- Forward all SLF4J calls to LOG4J. -->
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
-                    <version since="19 Sep 2011">1.6.2</version>
-                    <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <!-- Use LOG4J logging facility for all loggings. -->
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
-                    <version since="19 Sep 2011">1.2.16</version>
-                    <scope>test</scope>
                 </dependency>
             </dependencies>
         </profile>
