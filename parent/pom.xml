@@ -796,19 +796,25 @@
                 <version>${jcabi.version}</version>
             </dependency>
             <dependency>
-                <!-- Base64 and other codecs -->
+                <!--
+                Base64 and other codecs
+                -->
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version since="23 Nov 2012">1.7</version>
             </dependency>
             <dependency>
-                <!-- String manipulations -->
+                <!--
+                String manipulations
+                -->
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version since="23 Nov 2012">2.6</version>
             </dependency>
             <dependency>
-                <!-- for file/stream manipulations -->
+                <!--
+                For file/stream manipulations
+                -->
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version since="23 Nov 2012">2.4</version>
@@ -932,6 +938,10 @@
                     <version since="23 Nov 2012">1.7</version>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-changes-plugin</artifactId>
+                    <version since="10 Dec 2012">2.8</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version since="7 Nov 2012">2.5</version>
                 </plugin>
@@ -962,12 +972,20 @@
                     </configuration>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version since="7 Nov 2012">2.5.1</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version since="7 Nov 2012">2.7</version>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version since="7 Nov 2012">2.5.1</version>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version since="10 Dec 2012">2.12.4</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-help-plugin</artifactId>
+                    <version since="10 Dec 2012">2.1.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
@@ -1032,6 +1050,10 @@
                         <runOrder>random</runOrder>
                         <trimStackTrace>false</trimStackTrace>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version since="10 Dec 2012">2.3</version>
                 </plugin>
             </plugins>
         </pluginManagement>
