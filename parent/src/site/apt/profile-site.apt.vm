@@ -1,0 +1,109 @@
+ ------
+ "Site" Profile for Advanced Maven Site Configuration
+ ------
+ Yegor Bugayenko
+ ------
+ 2012-12-10
+ ------
+
+~~
+~~ #set($sign="$")
+~~ Copyright (c) 2012, jcabi.com
+~~ All rights reserved.
+~~
+~~ Redistribution and use in source and binary forms, with or without
+~~ modification, are permitted provided that the following conditions
+~~ are met: 1) Redistributions of source code must retain the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer. 2) Redistributions in binary form must reproduce the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer in the documentation and/or other materials provided
+~~ with the distribution. 3) Neither the name of the jcabi.com nor
+~~ the names of its contributors may be used to endorse or promote
+~~ products derived from this software without specific prior written
+~~ permission.
+~~
+~~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+~~ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+~~ NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+~~ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+~~ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+~~ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+~~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+~~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+~~ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+~~ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+~~ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+~~ OF THE POSSIBILITY OF SUCH DAMAGE.
+~~
+
+"Site" Profile for Advanced Maven Site Configuration
+
+  Most of production site content takes time to build (for example,
+  JavaDoc API, changes report, etc). It's convenient to move that
+  configuration plugins to a profile, which is activated only
+  once in a while. Profile <<<site>>> does exactly that, grouping together
+  most time-consuming reporting plugins.
+  The profile can be activated only manually from
+  command line, e.g.:
+
++--
+$ mvn clean install site-deploy -Psite
++--
+
+  The profile configures
+  {{{http://maven.apache.org/plugins/maven-site-plugin/}<<<maven-site-plugin>>>}}
+  with all required reporting plugins:
+
+   * {{{http://maven.apache.org/plugins/maven-project-info-reports-plugin/}<<<maven-project-info-reports-plugin>>>}}
+     creates basic "project information" reports.
+
+   * {{{http://maven.apache.org/plugins/maven-javadoc-plugin/}<<<maven-javadoc-plugin>>>}}
+     builds JavaDoc API documentation in <<<./apidocs-${sign}{project.version}>>>
+     directory.
+
+   * {{{http://mojo.codehaus.org/cobertura-maven-plugin/}<<<cobertura-maven-plugin>>>}}
+     generates code coverage report.
+
+   * {{{http://maven.apache.org/plugin-tools/maven-plugin-plugin/}<<<maven-plugin-plugin>>>}}
+     generate documentation for maven plugin.
+
+  You can add your own reporting plugins, for example (pay
+  attention to <<<combine.children>>> attribute of <<<reportPlugins>>>
+  element):
+
++--
+<profiles>
+  [...]
+  <profile>
+    <id>site</id>
+    <build>
+      <plugins>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <configuration>
+            <reportPlugins combine.children="append">
+              <plugin>
+                <artifactId>maven-changes-plugin</artifactId>
+                <version>2.8</version>
+                <reportSets>
+                  <reportSet>
+                    <reports>
+                      <report>changes-report</report>
+                    </reports>
+                  </reportSet>
+                </reportSets>
+              </plugin>
+            </reportPlugins>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+  </profile>
+</profiles>
++--
+
+  Also you can add your own plugins that should be
+  executed when you're building a production site. Just add them
+  to the <<<site>>> profile.
+

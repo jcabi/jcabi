@@ -111,7 +111,7 @@
         later in the file
         -->
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <jcabi.version since="23 Nov 2012">0.7</jcabi.version>
+        <jcabi.version since="10 Dec 2012">0.7</jcabi.version>
     </properties>
     <repositories>
         <!--
@@ -127,45 +127,12 @@
     </pluginRepositories>
     <profiles>
         <profile>
-            <id>jdk7-fix</id>
-            <activation>
-                <file>
-                    <exists>${java.home}/../lib/tools.jar</exists>
-                </file>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>com.sun.tools.jxc.maven2</groupId>
-                            <artifactId>maven-jaxb-schemagen-plugin</artifactId>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>com.sun</groupId>
-                                    <artifactId>tools</artifactId>
-                                    <version>1.7</version>
-                                    <scope>system</scope>
-                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
-                                </dependency>
-                            </dependencies>
-                        </plugin>
-                        <plugin>
-                            <artifactId>maven-plugin-plugin</artifactId>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>com.sun</groupId>
-                                    <artifactId>tools</artifactId>
-                                    <version>1.7</version>
-                                    <scope>system</scope>
-                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
-                                </dependency>
-                            </dependencies>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-        <profile>
+            <!--
+            The profile deploys all artifacts to oss.sonatype.org
+            repository (if you're registered there). It also skips
+            default deployment plugin.
+            @see http://www.jcabi.com/jcabi-parent/profile-sonatype.html
+            -->
             <id>sonatype</id>
             <build>
                 <pluginManagement>
@@ -182,23 +149,23 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version since="29 Aug 2012">1.0.2</version>
-                        <configuration>
-                            <serverId>oss.sonatype.org</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <stagingRepositoryId>jcabi</stagingRepositoryId>
-                            <deployUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</deployUrl>
-                            <description>${project.version}</description>
-                        </configuration>
+                        <version since="10 Dec 2012">1.2</version>
                         <executions>
                             <execution>
-                                <id>deploy-to-sonatype</id>
+                                <id>jcabi-deploy-to-sonatype</id>
                                 <phase>deploy</phase>
                                 <goals>
                                     <goal>deploy</goal>
                                     <goal>close</goal>
                                     <goal>release</goal>
                                 </goals>
+                                <configuration>
+                                    <serverId>oss.sonatype.org</serverId>
+                                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                                    <stagingRepositoryId>jcabi</stagingRepositoryId>
+                                    <deployUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</deployUrl>
+                                    <description>${project.version}</description>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -208,58 +175,84 @@
         <profile>
             <!--
             Static quality analysis with Qulice and other tools.
+            This profile is supposed to be activated in continuous
+            integration environment, right before the final approval
+            of the build. It runs a number of static code analysis
+            tools to validate and approve the quality of source
+            code and the SCM repository.
+            @see http://www.jcabi.com/jcabi-parent/profile-qulice.html
             -->
             <id>qulice</id>
             <build>
                 <plugins>
                     <plugin>
+                        <!--
+                        Qulice-maven-plugin is a compound static analysis
+                        tool that aggregates Checkstyle, PMD, FindBugs,
+                        CodeNarc (for Groovy code) and a few other analyzers.
+                        Qulice also configures them correctly to enable the
+                        most important rules.
+                        @see http://www.qulice.com/qulice-maven-plugin/
+                        -->
                         <groupId>com.qulice</groupId>
                         <artifactId>qulice-maven-plugin</artifactId>
                         <version since="18 Nov 2012">0.2.2</version>
-                        <configuration>
-                            <license>file:${basedir}/LICENSE.txt</license>
-                        </configuration>
                         <executions>
                             <execution>
-                                <goals>
-                                    <goal>check</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>com.ning.maven.plugins</groupId>
-                        <artifactId>maven-duplicate-finder-plugin</artifactId>
-                        <version since="30 May 2012">1.0.3</version>
-                        <configuration>
-                            <failBuildInCaseOfConflict>true</failBuildInCaseOfConflict>
-                            <checkTestClasspath>false</checkTestClasspath>
-                            <ignoredResources>
-                                <ignoredResource>META-INF/.*</ignoredResource>
-                            </ignoredResources>
-                        </configuration>
-                        <executions>
-                            <execution>
+                                <id>jcabi-check</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>check</goal>
                                 </goals>
+                                <configuration>
+                                    <license>file:${basedir}/LICENSE.txt</license>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
                     <plugin>
                         <!--
-                        @todo #26 This is a temporary measure, until
-                         Qulice implements this validation. Once it's implemented
-                         in qulice - just remove this plugin from here.
+                        This plugin finds duplicated resources and classes
+                        and reports them. Very useful tool to avoid dependencies
+                        overriding and overlapping.
+                        @see https://github.com/ning/maven-duplicate-finder-plugin
+                        -->
+                        <groupId>com.ning.maven.plugins</groupId>
+                        <artifactId>maven-duplicate-finder-plugin</artifactId>
+                        <version since="30 May 2012">1.0.3</version>
+                        <executions>
+                            <execution>
+                                <id>jcabi-check</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                                <configuration>
+                                    <failBuildInCaseOfConflict>true</failBuildInCaseOfConflict>
+                                    <checkTestClasspath>false</checkTestClasspath>
+                                    <ignoredResources>
+                                        <ignoredResource>META-INF/.*</ignoredResource>
+                                    </ignoredResources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <!--
+                        This plugin finds dependencies that are not used but
+                        declared, and the ones that are not declared but
+                        are used.
+                        @see http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html
                         -->
                         <artifactId>maven-dependency-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>analyze-only</id>
+                                <id>jcabi-check</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>analyze-only</goal>
+                                    <goal>analyze-dep-mgt</goal>
+                                    <goal>analyze-duplicate</goal>
                                 </goals>
                                 <configuration>
                                     <ignoreNonCompile>true</ignoreNonCompile>
@@ -269,36 +262,30 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <!--
+                        Validate XML files for well-formeness.
+                        @see http://mojo.codehaus.org/xml-maven-plugin/
+                        -->
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>xml-maven-plugin</artifactId>
+                        <version since="10 Dec 2012">1.0-beta-3</version>
                         <executions>
                             <execution>
-                                <phase>package</phase>
+                                <id>jcabi-check</id>
+                                <phase>verify</phase>
                                 <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <version since="7 Nov 2012">2.3</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.jcabi</groupId>
-                                <artifactId>jcabi-assembly</artifactId>
-                                <version since="23 Nov 2012">0.7</version>
-                            </dependency>
-                        </dependencies>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
+                                    <goal>validate</goal>
                                 </goals>
                                 <configuration>
-                                    <descriptorRefs>
-                                        <descriptorRef>jcabi-sources</descriptorRef>
-                                    </descriptorRefs>
+                                    <validationSets>
+                                        <validationSet>
+                                            <dir>src</dir>
+                                            <validating>true</validating>
+                                            <includes>
+                                                <include>.xml</include>
+                                            </includes>
+                                        </validationSet>
+                                    </validationSets>
                                 </configuration>
                             </execution>
                         </executions>
@@ -308,7 +295,8 @@
         </profile>
         <profile>
             <!--
-            Site for production deployment.
+            The profile builds site for production environment.
+            @see http://www.jcabi.com/jcabi-parent/profile-qulice.html
             -->
             <id>site</id>
             <build>
@@ -383,7 +371,7 @@
                                     </configuration>
                                     <reportSets>
                                         <reportSet>
-                                            <id>versioned-html</id>
+                                            <id>jcabi-versioned-html</id>
                                             <reports>
                                                 <report>javadoc</report>
                                             </reports>
@@ -393,7 +381,7 @@
                                             </configuration>
                                         </reportSet>
                                         <reportSet>
-                                            <id>versioned-test</id>
+                                            <id>jcabi-versioned-test</id>
                                             <reports>
                                                 <report>test-javadoc</report>
                                             </reports>
@@ -417,7 +405,7 @@
                         </configuration>
                         <executions>
                             <execution>
-                                <id>attach-descriptor</id>
+                                <id>jcabi-attach-descriptor</id>
                                 <goals>
                                     <goal>attach-descriptor</goal>
                                 </goals>
@@ -431,7 +419,7 @@
             <!--
             Sign artifacts before installation with GPG.
             -->
-            <id>gpg</id>
+            <id>jcabi-gpg</id>
             <activation>
                 <property>
                     <name>gpg.keyname</name>
@@ -450,7 +438,7 @@
                         <version since="7 Nov 2012">1.4</version>
                         <executions>
                             <execution>
-                                <id>sign-artifacts</id>
+                                <id>jcabi-sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
@@ -465,7 +453,7 @@
             <!--
             Package MOCK artifact.
             -->
-            <id>mock</id>
+            <id>jcabi-mock</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/mock</exists>
@@ -479,7 +467,7 @@
                         <version since="2 Dec 2011">1.7</version>
                         <executions>
                             <execution>
-                                <id>add-test-sources</id>
+                                <id>jcabi-add-test-sources</id>
                                 <phase>validate</phase>
                                 <goals>
                                     <goal>add-test-source</goal>
@@ -496,7 +484,7 @@
                         <artifactId>maven-jar-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>mock-artifact</id>
+                                <id>jcabi-mock-artifact</id>
                                 <phase>package</phase>
                                 <goals>
                                     <goal>jar</goal>
@@ -522,7 +510,7 @@
             </build>
         </profile>
         <profile>
-            <id>antlr3</id>
+            <id>jcabi-antlr3</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/main/antlr3</exists>
@@ -549,7 +537,7 @@
                         <version since="6 Jan 2012">3.4</version>
                         <executions>
                             <execution>
-                                <id>antlr</id>
+                                <id>jcabi-antlr</id>
                                 <goals>
                                     <goal>antlr</goal>
                                 </goals>
@@ -561,45 +549,199 @@
             </build>
         </profile>
         <profile>
-            <id>aspectj</id>
+            <id>jcabi-aspectj</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/main/aj</exists>
                 </file>
             </activation>
+            <dependencies>
+                <dependency>
+                    <!-- Aspects -->
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-aspects</artifactId>
+                    <version>${jcabi.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjrt</artifactId>
+                    <!-- this one is compliant with aspectj-maven-plugin -->
+                    <version since="27 May 2012">1.6.11</version>
+                    <scope>runtime</scope>
+                </dependency>
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                    <version since="27 May 2012">1.1.0.Alpha1</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                    <version since="27 May 2012">4.3.0.Final</version>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>aspectj-maven-plugin</artifactId>
                         <version since="27 May 2012">1.4</version>
-                        <configuration>
-                            <complianceLevel>1.6</complianceLevel>
-                            <encoding>${project.build.sourceEncoding}</encoding>
-                            <showWeaveInfo>false</showWeaveInfo>
-                            <source>1.6</source>
-                            <target>1.6</target>
-                            <verbose>false</verbose>
-                            <Xlint>warning</Xlint>
-                            <argumentFileName>builddef-${project.name}.lst</argumentFileName>
-                            <aspectLibraries>
-                                <aspectLibrary>
-                                    <groupId>com.jcabi</groupId>
-                                    <artifactId>jcabi-aspects</artifactId>
-                                </aspectLibrary>
-                            </aspectLibraries>
-                        </configuration>
                         <executions>
                             <execution>
-                                <id>weave-classes</id>
+                                <id>jcabi-weave-classes</id>
                                 <phase>process-classes</phase>
                                 <goals>
                                     <goal>compile</goal>
                                 </goals>
+                                <configuration>
+                                    <complianceLevel>1.6</complianceLevel>
+                                    <encoding>${project.build.sourceEncoding}</encoding>
+                                    <showWeaveInfo>false</showWeaveInfo>
+                                    <source>1.6</source>
+                                    <target>1.6</target>
+                                    <verbose>false</verbose>
+                                    <Xlint>warning</Xlint>
+                                    <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                                    <aspectLibraries>
+                                        <aspectLibrary>
+                                            <groupId>com.jcabi</groupId>
+                                            <artifactId>jcabi-aspects</artifactId>
+                                        </aspectLibrary>
+                                    </aspectLibraries>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
                 </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>jcabi-unit-tests</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/test/java</exists>
+                </file>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <!--
+                    We are using JUnit framework for unit test organization
+                    and management. This framework is the most stable and mature
+                    in the market. Other options considered: TestNG.
+                    @link http://www.junit.org/
+                    -->
+                    <groupId>junit</groupId>
+                    <artifactId>junit-dep</artifactId>
+                    <version since="2 Dec 2012">4.10</version>
+                    <scope>test</scope>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.hamcrest</groupId>
+                            <artifactId>hamcrest-core</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                <dependency>
+                    <!--
+                    Assertions and matchers for unit tests.
+                    @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                    -->
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-core</artifactId>
+                    <version since="23 Dec 2011">1.3</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <!--
+                    Assertions and matchers for unit tests.
+                    @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                    -->
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-library</artifactId>
+                    <version since="23 Dec 2011">1.3</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <!--
+                    Mockito is used as a mocking library during testing.
+                    Other options: jMock.
+                    @link http://www.mockito.org/
+                    -->
+                    <groupId>org.mockito</groupId>
+                    <artifactId>mockito-core</artifactId>
+                    <version since="17 Apr 2012">1.9.0</version>
+                    <scope>test</scope>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.hamcrest</groupId>
+                            <artifactId>hamcrest-core</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>jcabi-log4j</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/test/resources/log4j.properties</exists>
+                </file>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <!-- Forward all SLF4J calls to LOG4J. -->
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <version since="19 Sep 2011">1.6.2</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <!-- Use LOG4J logging facility for all loggings. -->
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                    <version since="19 Sep 2011">1.2.16</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>jcabi-jdk7-fix</id>
+            <activation>
+                <file>
+                    <exists>${java.home}/../lib/tools.jar</exists>
+                </file>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.sun.tools.jxc.maven2</groupId>
+                            <artifactId>maven-jaxb-schemagen-plugin</artifactId>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>com.sun</groupId>
+                                    <artifactId>tools</artifactId>
+                                    <version>1.7</version>
+                                    <scope>system</scope>
+                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
+                        <plugin>
+                            <artifactId>maven-plugin-plugin</artifactId>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>com.sun</groupId>
+                                    <artifactId>tools</artifactId>
+                                    <version>1.7</version>
+                                    <scope>system</scope>
+                                    <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
             </build>
         </profile>
     </profiles>
@@ -607,10 +749,18 @@
         <dependencies>
             <dependency>
                 <!--
-                Reader of META-INF/MANIFEST.MF files
+                Aether wrapper.
                 -->
                 <groupId>com.jcabi</groupId>
-                <artifactId>jcabi-manifests</artifactId>
+                <artifactId>jcabi-aether</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
+            <dependency>
+                <!--
+                JDBC wrapper.
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-jdbc</artifactId>
                 <version>${jcabi.version}</version>
             </dependency>
             <dependency>
@@ -622,83 +772,28 @@
                 <version>${jcabi.version}</version>
             </dependency>
             <dependency>
-                <!-- Aspects -->
+                <!--
+                Reader of META-INF/MANIFEST.MF files
+                -->
                 <groupId>com.jcabi</groupId>
-                <artifactId>jcabi-aspects</artifactId>
+                <artifactId>jcabi-manifests</artifactId>
                 <version>${jcabi.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.aspectj</groupId>
-                <artifactId>aspectjrt</artifactId>
-                <!-- this one is compliant with aspectj-maven-plugin -->
-                <version since="27 May 2012">1.6.11</version>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version since="27 May 2012">1.1.0.Alpha1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version since="27 May 2012">4.3.0.Final</version>
-                <scope>runtime</scope>
+                <!--
+                URN.
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-urn</artifactId>
+                <version>${jcabi.version}</version>
             </dependency>
             <dependency>
                 <!--
-                We are using JUnit framework for unit test organization
-                and management. This framework is the most stable and mature
-                in the market. Other options considered: TestNG.
-                @link http://www.junit.org/
+                Velocity wrapper.
                 -->
-                <groupId>junit</groupId>
-                <artifactId>junit-dep</artifactId>
-                <version since="2 Dec 2012">4.11</version>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.hamcrest</groupId>
-                        <artifactId>hamcrest-core</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <!--
-                Assertions and matchers for unit tests.
-                @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                -->
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-core</artifactId>
-                <version since="23 Dec 2011">1.3</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <!--
-                Assertions and matchers for unit tests.
-                @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                -->
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-library</artifactId>
-                <version since="23 Dec 2011">1.3</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <!--
-                Mockito is used as a mocking library during testing.
-                Other options: jMock.
-                @link http://www.mockito.org/
-                -->
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version since="17 Apr 2012">1.9.0</version>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.hamcrest</groupId>
-                        <artifactId>hamcrest-core</artifactId>
-                    </exclusion>
-                </exclusions>
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-velocity</artifactId>
+                <version>${jcabi.version}</version>
             </dependency>
             <dependency>
                 <!-- Base64 and other codecs -->
@@ -725,20 +820,6 @@
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
                 <version since="1 Mar 2012">3.2.1</version>
-            </dependency>
-            <dependency>
-                <!-- Forward all calls to SLF4J to LOG4J. -->
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version since="19 Sep 2011">1.6.2</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <!-- Use LOG4J logging facility for all loggings. -->
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version since="19 Sep 2011">1.2.16</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -772,6 +853,31 @@
         </extensions>
         <plugins>
             <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version since="7 Nov 2012">2.3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.jcabi</groupId>
+                        <artifactId>jcabi-assembly</artifactId>
+                        <version>${jcabi.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>jcabi-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jcabi-sources</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <!--
                 This plugin will collect current build number
                 from Git and save it into Maven property
@@ -781,6 +887,7 @@
                 <version since="5 Aug 2012">1.1</version>
                 <executions>
                     <execution>
+                        <id>jcabi-build-number</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>create</goal>
@@ -798,58 +905,35 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version since="7 Nov 2012">2.5</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version since="7 Nov 2012">2.7</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version since="7 Nov 2012">2.5.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version since="7 Nov 2012">2.2.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version since="7 Nov 2012">2.4</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version since="7 Nov 2012">2.9</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version since="7 Nov 2012">2.4</version>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>aspectj-maven-plugin</artifactId>
+                    <version since="27 May 2012">1.4</version>
                     <configuration>
-                        <archive>
-                            <manifestEntries>
-                                <JCabi-Version>${project.version}</JCabi-Version>
-                                <JCabi-Build>${buildNumber}</JCabi-Build>
-                            </manifestEntries>
-                        </archive>
+                        <complianceLevel>1.6</complianceLevel>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <showWeaveInfo>false</showWeaveInfo>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                        <verbose>false</verbose>
+                        <Xlint>warning</Xlint>
+                        <argumentFileName>builddef-${project.name}.lst</argumentFileName>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version since="23 Nov 2012">2.6</version>
                 </plugin>
                 <plugin>
                     <!--
-                    Starts unit tests, protocols their results and creates
-                    a summary report. It is required to send testing protocol
-                    to the STDOUT as well, not only to the file.
+                    Code coverage tool.
                     -->
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version since="23 Nov 2012">2.12.4</version>
-                    <configuration>
-                        <useFile>false</useFile>
-                        <runOrder>random</runOrder>
-                        <trimStackTrace>false</trimStackTrace>
-                    </configuration>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version since="10 Aug 2012">2.5.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version since="23 Nov 2012">1.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version since="7 Nov 2012">2.5</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -878,17 +962,16 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version since="7 Nov 2012">3.2</version>
-                    <configuration>
-                        <reportPlugins>
-                            <!--
-                            Section is intentionally empty. Full list of plugins
-                            is configured in "CI" profile. We don't need all them
-                            during development, that's why they are not here.
-                            -->
-                        </reportPlugins>
-                    </configuration>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version since="7 Nov 2012">2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version since="7 Nov 2012">2.5.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version since="7 Nov 2012">2.4</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-invoker-plugin</artifactId>
@@ -908,30 +991,46 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-antrun-plugin</artifactId>
-                    <version since="23 Nov 2012">1.7</version>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version since="7 Nov 2012">2.4</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version since="7 Nov 2012">2.9</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version since="23 Nov 2012">2.6</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version since="7 Nov 2012">3.2</version>
+                    <configuration>
+                        <reportPlugins>
+                            <!--
+                            Section is intentionally empty. Full list of plugins
+                            is configured in "CI" profile. We don't need all them
+                            during development, that's why they are not here.
+                            -->
+                        </reportPlugins>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version since="7 Nov 2012">2.2.1</version>
                 </plugin>
                 <plugin>
                     <!--
-                    Code coverage tool.
+                    Starts unit tests, protocols their results and creates
+                    a summary report. It is required to send testing protocol
+                    to the STDOUT as well, not only to the file.
                     -->
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>cobertura-maven-plugin</artifactId>
-                    <version since="10 Aug 2012">2.5.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>aspectj-maven-plugin</artifactId>
-                    <version since="27 May 2012">1.4</version>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version since="23 Nov 2012">2.12.4</version>
                     <configuration>
-                        <complianceLevel>1.6</complianceLevel>
-                        <encoding>${project.build.sourceEncoding}</encoding>
-                        <showWeaveInfo>false</showWeaveInfo>
-                        <source>1.6</source>
-                        <target>1.6</target>
-                        <verbose>false</verbose>
-                        <Xlint>warning</Xlint>
-                        <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                        <useFile>false</useFile>
+                        <runOrder>random</runOrder>
+                        <trimStackTrace>false</trimStackTrace>
                     </configuration>
                 </plugin>
             </plugins>

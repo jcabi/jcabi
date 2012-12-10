@@ -1,0 +1,99 @@
+ ------
+ Pre-defined Artifacts in <<<dependencyManagement>>>
+ ------
+ Yegor Bugayenko
+ ------
+ 2012-12-10
+ ------
+
+~~
+~~ Copyright (c) 2012, jcabi.com
+~~ All rights reserved.
+~~
+~~ Redistribution and use in source and binary forms, with or without
+~~ modification, are permitted provided that the following conditions
+~~ are met: 1) Redistributions of source code must retain the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer. 2) Redistributions in binary form must reproduce the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer in the documentation and/or other materials provided
+~~ with the distribution. 3) Neither the name of the jcabi.com nor
+~~ the names of its contributors may be used to endorse or promote
+~~ products derived from this software without specific prior written
+~~ permission.
+~~
+~~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+~~ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+~~ NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+~~ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+~~ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+~~ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+~~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+~~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+~~ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+~~ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+~~ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+~~ OF THE POSSIBILITY OF SUCH DAMAGE.
+~~
+
+Pre-defined Artifacts in <<<dependencyManagement>>>
+
+  <<<com.jcabi:parent>>> POM declares a number of most useful
+  artifacts in its <<<dependencyManagement>>> section. You can use
+  them without specifying <<<version>>>. Thus, you don't need to worry
+  about keeping versions up to date. When you're ready to upgrade just
+  change the version of our parent POM and all dependencies will
+  be upgraded automatically.
+
+  These dependencies are defined always:
+
+   * {{{http://www.jcabi.com/jcabi-log/}<<<jcabi-log>>>}},
+     {{{http://www.jcabi.com/jcabi-log/}<<<jcabi-manifests>>>}},
+     and all other <<<jcabi-*>>> artifacts.
+
+   * {{{http://commons.apache.org/io/}<<<commons-io>>>}},
+     {{{http://commons.apache.org/lang/}<<<commons-lang>>>}},
+     and all other {{{http://commons.apache.org/}Apache commons}}.
+
+* Unit Tests
+
+  When <<<src/test/java>>> directory exists in the project these artifacts
+  are automatically added to <<<dependencies>>>:
+
+   * {{{https://github.com/kentbeck/junit/wiki}<<<junit:junit-dep>>>}}:
+     unit testing framework;
+
+   * {{{http://code.google.com/p/hamcrest/}<<<org.hamcrest:hamcrest-core>>>}}
+     and {{{http://code.google.com/p/hamcrest/}<<<org.hamcrest:hamcrest-library>>>}}:
+     assertion framework;
+
+   * {{{http://code.google.com/p/mockito/}<<<org.mockito:mockito-core>>>}}:
+     mocking framework.
+
+* JSR-303 and Other AOP Aspects
+
+  When <<<src/main/aj>>> directory exists in the project these dependencies
+  are added to the classpath:
+
+   * {{{http://www.jcabi.com/jcabi-aspects}<<<com.jcabi:jcabi-aspects>>>}}:
+     JSR-303 and other AOP aspects;
+
+   * {{{http://www.eclipse.org/aspectj/}<<<org.aspectj:aspectjrt>>>}} (in <<<runtime>>> scope):
+     runtime AOP engine;
+
+   * {{{http://docs.oracle.com/javaee/6/api/javax/validation/package-summary.html}<<<javax.validation:validation-api>>>}}:
+     JSR-303 API;
+
+   * {{{http://www.hibernate.org/subprojects/validator.html}<<<org.hibernate:hibernate-validator>>>}} (in <<<runtime>>> scope):
+     JSR-303 runtime implementation.
+
+* Antlr3 Grammar Generator
+
+  When you have a <<<src/main/antlr3>>> directory
+  {{{http://www.antlr.org/wiki/display/ANTLR3/ANTLR+3+Wiki+Home}<<<org.antlr:antlr-runtime>>>}}
+  dependency goes into classpath
+  and {{{http://mojo.codehaus.org/antlr-maven-plugin/}<<<antlr3-maven-plugin>>>}}
+  is executed in
+  <<<generate-sources>>> phase.
+
+

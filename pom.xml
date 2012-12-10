@@ -128,6 +128,21 @@
             <url>s3://www.jcabi.com/</url>
         </site>
     </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <JCabi-Version>${project.version}</JCabi-Version>
+                            <JCabi-Build>${buildNumber}</JCabi-Build>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <profiles>
         <profile>
             <id>site</id>
