@@ -36,6 +36,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.constraints.NotNull;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 
@@ -71,7 +72,8 @@ final class Git {
      * @param temp Temp directory
      * @throws IOException If some error inside
      */
-    public Git(final File key, final File temp) throws IOException {
+    public Git(@NotNull final File key,
+        @NotNull final File temp) throws IOException {
         if (!new File(Git.SSH).exists()) {
             throw new IllegalStateException(
                 String.format("SSH is not installed at '%s'", Git.SSH)
