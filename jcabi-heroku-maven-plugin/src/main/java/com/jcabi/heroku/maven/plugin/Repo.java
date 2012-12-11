@@ -92,6 +92,10 @@ final class Repo {
     public void commit() {
         this.git.exec(
             this.path,
+            "status"
+        );
+        this.git.exec(
+            this.path,
             "commit",
             "-a",
             "-m",
