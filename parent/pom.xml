@@ -290,6 +290,17 @@
                             </execution>
                         </executions>
                     </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!--
+            The profile builds site for production environment.
+            @see http://www.jcabi.com/jcabi-parent/profile-qulice.html
+            -->
+            <id>site</id>
+            <build>
+                <plugins>
                     <plugin>
                         <!--
                         Checks the quality of Maven project documentation
@@ -308,17 +319,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <!--
-            The profile builds site for production environment.
-            @see http://www.jcabi.com/jcabi-parent/profile-qulice.html
-            -->
-            <id>site</id>
-            <build>
-                <plugins>
                     <plugin>
                         <artifactId>maven-site-plugin</artifactId>
                         <version since="7 Nov 2012">3.2</version>
@@ -350,6 +350,23 @@
                                 </plugin>
                                 <plugin>
                                     <!--
+                                    Shows reports about recent versions of plugins and deps.
+                                    @see http://mojo.codehaus.org/versions-maven-plugin/
+                                    -->
+                                    <groupId>org.codehaus.mojo</groupId>
+                                    <artifactId>versions-maven-plugin</artifactId>
+                                    <version since="11 Dec 2012">2.0</version>
+                                    <reportSets>
+                                        <reportSet>
+                                            <reports>
+                                                <report>dependency-updates-report</report>
+                                                <report>plugin-updates-report</report>
+                                            </reports>
+                                        </reportSet>
+                                    </reportSets>
+                                </plugin>
+                                <plugin>
+                                    <!--
                                     API documentation builder. It will produce documentation
                                     which is then to be used in site:site. It will be
                                     located at target/site/apidocs.
@@ -357,9 +374,7 @@
                                     <artifactId>maven-javadoc-plugin</artifactId>
                                     <configuration>
                                         <failOnError>true</failOnError>
-                                        <windowtitle>
-                                            ${project.name} ${project.version} API
-                                        </windowtitle>
+                                        <windowtitle>${project.name} ${project.version} API</windowtitle>
                                         <quiet>true</quiet>
                                         <links>
                                             <link>http://download.oracle.com/javaee/6/api/</link>
@@ -544,6 +559,7 @@
                         <groupId>org.antlr</groupId>
                         <artifactId>antlr-runtime</artifactId>
                         <version since="9 Jan 2012">3.4</version>
+                        <scope>compile</scope>
                     </dependency>
                 </dependencies>
             </dependencyManagement>
@@ -857,6 +873,14 @@
             </dependency>
             <dependency>
                 <!--
+                Maven to SLF4J binding.
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-maven-slf4j</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
+            <dependency>
+                <!--
                 URN.
                 -->
                 <groupId>com.jcabi</groupId>
@@ -1093,6 +1117,10 @@
                     <version since="7 Nov 2012">2.9</version>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version since="7 Nov 2012">3.1</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version since="23 Nov 2012">2.6</version>
                 </plugin>
@@ -1130,6 +1158,11 @@
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version since="10 Dec 2012">2.3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version since="11 Dec 2012">2.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>

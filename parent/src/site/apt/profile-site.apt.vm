@@ -68,6 +68,14 @@ $ mvn clean install site-deploy -Psite
    * {{{http://maven.apache.org/plugin-tools/maven-plugin-plugin/}<<<maven-plugin-plugin>>>}}
      generate documentation for maven plugin.
 
+   * {{{http://mojo.codehaus.org/versions-maven-plugin/}<<<versions-maven-plugin>>>}}
+     reports about available dependency and plugin versions.
+
+  Also <<<site>>> profile has the following plugins:
+
+   * {{{http://maven.apache.org/plugins/maven-docck-plugin/index.html}<<<maven-docck-plugin>>>}}
+     checks the quality of Maven project documentation.
+
   You can add your own reporting plugins, for example (pay
   attention to <<<combine.children>>> attribute of <<<reportPlugins>>>
   element):

@@ -40,8 +40,7 @@ import org.slf4j.spi.LoggerFactoryBinder;
  *
  * <p>This is what you should do in your Maven plugin (before everything else):
  *
- * <pre>
- * import org.apache.maven.plugin.AbstractMojo;
+ * <pre> import org.apache.maven.plugin.AbstractMojo;
  * import org.slf4j.impl.StaticLoggerBinder;
  * public class MyMojo extends AbstractMojo {
  *   &#64;Override
@@ -49,8 +48,7 @@ import org.slf4j.spi.LoggerFactoryBinder;
  *     StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
  *     // ... all the rest
  *   }
- * }
- * </pre>
+ * }</pre>
  *
  * <p>All SLF4J calls will be forwarded to Maven Log.
  *
