@@ -127,3 +127,14 @@ Foo-Version: 1.0-SNAPSHOT
 </dependency>
 +--
 
+  If you are outside of WAR application you should add Servlet API
+  to compile-time classpath:
+
++--
+<dependency>
+  <groupId>javax.servlet</groupId>
+  <artifactId>servlet-api</artifactId>
+  <version>2.4</version>
+  <scope>provided</scope>
+</dependency>
++--
