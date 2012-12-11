@@ -40,6 +40,12 @@
     <name>jcabi-log</name>
     <dependencies>
         <dependency>
+            <!-- for MulticolorLayout -->
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <!--
             Since every framework uses its own logging mechanism
             this SLF4J is going to help to control everything from

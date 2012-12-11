@@ -657,14 +657,9 @@
                                     <goal>test-compile</goal>
                                 </goals>
                                 <configuration>
-                                    <complianceLevel>1.6</complianceLevel>
-                                    <encoding>${project.build.sourceEncoding}</encoding>
-                                    <showWeaveInfo>false</showWeaveInfo>
-                                    <source>1.6</source>
-                                    <target>1.6</target>
-                                    <verbose>false</verbose>
-                                    <Xlint>warning</Xlint>
-                                    <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                                    <excludes>
+                                        <exclude>**/package-info.java</exclude>
+                                    </excludes>
                                     <aspectLibraries>
                                         <aspectLibrary>
                                             <groupId>com.jcabi</groupId>
