@@ -374,7 +374,6 @@
                                     <artifactId>maven-javadoc-plugin</artifactId>
                                     <configuration>
                                         <failOnError>true</failOnError>
-                                        <windowtitle>${project.name} ${project.version} API</windowtitle>
                                         <quiet>true</quiet>
                                         <links>
                                             <link>http://download.oracle.com/javaee/6/api/</link>
@@ -409,6 +408,8 @@
                                                 <report>javadoc</report>
                                             </reports>
                                             <configuration>
+                                                <windowtitle>${project.name} ${project.version} API</windowtitle>
+                                                <doctitle>${project.name} ${project.version} API</doctitle>
                                                 <sourcepath>src/main/java</sourcepath>
                                                 <destDir>apidocs-${project.version}</destDir>
                                             </configuration>
@@ -419,6 +420,8 @@
                                                 <report>test-javadoc</report>
                                             </reports>
                                             <configuration>
+                                                <testWindowtitle>${project.name} ${project.version} Mock API</testWindowtitle>
+                                                <testDoctitle>${project.name} ${project.version} Mock API</testDoctitle>
                                                 <sourcepath>src/mock/java</sourcepath>
                                                 <destDir>testapidocs-${project.version}</destDir>
                                             </configuration>
@@ -619,7 +622,7 @@
                         <groupId>org.hibernate</groupId>
                         <artifactId>hibernate-validator</artifactId>
                         <version since="27 May 2012">4.3.0.Final</version>
-                        <scope>runtime</scope>
+                        <scope>test</scope>
                     </dependency>
                 </dependencies>
             </dependencyManagement>
@@ -646,7 +649,6 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>aspectj-maven-plugin</artifactId>
-                        <version since="27 May 2012">1.4</version>
                         <executions>
                             <execution>
                                 <id>jcabi-weave-classes</id>

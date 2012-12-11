@@ -84,8 +84,8 @@ Pre-defined Artifacts in <<<dependencyManagement>>>
    * {{{http://docs.oracle.com/javaee/6/api/javax/validation/package-summary.html}<<<javax.validation:validation-api>>>}}:
      JSR-303 API;
 
-   * {{{http://www.hibernate.org/subprojects/validator.html}<<<org.hibernate:hibernate-validator>>>}} (in <<<runtime>>> scope):
-     JSR-303 runtime implementation.
+  Don't forget to add JSR-303 validator implementation to your classpath,
+  as explained in {{{http://www.jcabi.com/jcabi-aspects/jsr-303.html}jcabi-aspects}}.
 
 * Antlr3 Grammar Generator
 
