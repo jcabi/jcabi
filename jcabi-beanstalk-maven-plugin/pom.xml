@@ -65,7 +65,6 @@
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
-            <version jcabi="yes">0.7.3</version>
         </dependency>
         <dependency>
             <!-- see http://wiki.jfrog.org/confluence/display/OSS/Maven+Anno+Mojo -->
@@ -111,19 +110,6 @@
             <!-- Forward all calls to SLF4J to Maven log. -->
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-maven-slf4j</artifactId>
-            <version since="29 Oct 2012">0.4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit-dep</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
@@ -132,10 +118,6 @@
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -173,7 +155,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version since="12 Oct 2012">3.1</version>
                 <executions>
                     <execution>
                         <id>generated-helpmojo</id>
@@ -193,20 +174,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-invoker-plugin</artifactId>
-                <version since="22 Mar 2011">1.5</version>
-                <configuration>
-                    <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-                    <debug>false</debug>
-                    <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-                    <noLog>false</noLog>
-                    <postBuildHookScript>verify</postBuildHookScript>
-                    <preBuildHookScript>setup</preBuildHookScript>
-                    <projectsDirectory>src/it</projectsDirectory>
-                    <settingsFile>${basedir}/src/it/settings.xml</settingsFile>
-                    <showErrors>true</showErrors>
-                    <showVersion>false</showVersion>
-                    <streamLogs>true</streamLogs>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>

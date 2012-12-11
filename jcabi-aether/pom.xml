@@ -42,24 +42,6 @@
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
-            <version jcabi="yes">0.7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-aspects</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
         </dependency>
         <dependency>
             <groupId>org.kuali.maven.wagons</groupId>
@@ -149,55 +131,8 @@
             <version since="4 Aug 2012">2.3.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit-dep</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
     </dependencies>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <configuration>
-                    <aspectLibraries>
-                        <aspectLibrary>
-                            <groupId>com.jcabi</groupId>
-                            <artifactId>jcabi-aspects</artifactId>
-                        </aspectLibrary>
-                    </aspectLibraries>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>weave-classes</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -224,20 +159,6 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-invoker-plugin</artifactId>
-                        <version since="22 Mar 2011">1.5</version>
-                        <configuration>
-                            <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-                            <debug>false</debug>
-                            <noLog>false</noLog>
-                            <pomIncludes>
-                                <pomInclude>aether-test/pom.xml</pomInclude>
-                            </pomIncludes>
-                            <settingsFile>${project.build.testOutputDirectory}/invoker.settings.xml</settingsFile>
-                            <projectsDirectory>src/it</projectsDirectory>
-                            <showErrors>true</showErrors>
-                            <showVersion>false</showVersion>
-                            <streamLogs>true</streamLogs>
-                        </configuration>
                         <executions>
                             <execution>
                                 <id>install-invoker</id>
@@ -245,6 +166,12 @@
                                     <goal>install</goal>
                                     <goal>run</goal>
                                 </goals>
+                                <configuration>
+                                    <pomIncludes>
+                                        <pomInclude>aether-test/pom.xml</pomInclude>
+                                    </pomIncludes>
+                                    <settingsFile>${project.build.testOutputDirectory}/invoker.settings.xml</settingsFile>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -259,7 +186,7 @@
                         <groupId>com.ning.maven.plugins</groupId>
                         <artifactId>maven-duplicate-finder-plugin</artifactId>
                         <configuration>
-                            <ignoredResources>
+                            <ignoredResources combine.children="append">
                                 <!-- see https://github.com/jcaddel/maven-s3-wagon/issues/6 -->
                                 <ignoredResource>mime.types</ignoredResource>
                                 <ignoredResource>META-INF/THIRD-PARTY.txt</ignoredResource>

@@ -60,25 +60,10 @@
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
-            <version jcabi="yes">0.7.3</version>
         </dependency>
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-velocity</artifactId>
-            <version jcabi="yes">0.7.3</version>
-        </dependency>
-        <dependency>
-            <!-- Aspects -->
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-aspects</artifactId>
-            <version jcabi="yes">0.7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <!-- this one is compliant with aspectj-maven-plugin -->
-            <version since="27 May 2012">1.6.11</version>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.rexsl</groupId>
@@ -135,15 +120,6 @@
             <!-- Forward all calls to SLF4J to Maven log. -->
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-maven-slf4j</artifactId>
-            <version jcabi="yes">0.7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit-dep</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -152,14 +128,6 @@
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -197,7 +165,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version since="12 Oct 2012">3.1</version>
                 <executions>
                     <execution>
                         <id>generated-helpmojo</id>
@@ -219,47 +186,12 @@
             </plugin>
             <plugin>
                 <artifactId>maven-invoker-plugin</artifactId>
-                <version since="22 Mar 2011">1.5</version>
-                <configuration>
-                    <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-                    <debug>false</debug>
-                    <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-                    <noLog>false</noLog>
-                    <postBuildHookScript>verify</postBuildHookScript>
-                    <preBuildHookScript>setup</preBuildHookScript>
-                    <projectsDirectory>src/it</projectsDirectory>
-                    <settingsFile>${basedir}/src/it/settings.xml</settingsFile>
-                    <showErrors>true</showErrors>
-                    <showVersion>false</showVersion>
-                    <streamLogs>true</streamLogs>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>install</goal>
                             <goal>run</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>weave-classes</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                            <aspectLibraries>
-                                <aspectLibrary>
-                                    <groupId>com.jcabi</groupId>
-                                    <artifactId>jcabi-aspects</artifactId>
-                                </aspectLibrary>
-                            </aspectLibraries>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

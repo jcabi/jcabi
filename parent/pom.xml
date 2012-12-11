@@ -57,8 +57,8 @@
             <id>1</id>
             <name>Yegor Bugayenko</name>
             <email>yegor@tpc2.com</email>
-            <organization>jcabi.com</organization>
-            <organizationUrl>http://www.jcabi.com</organizationUrl>
+            <organization>TPC2.com</organization>
+            <organizationUrl>http://www.tpc2.com</organizationUrl>
             <roles>
                 <role>Architect</role>
                 <role>Developer</role>
@@ -592,7 +592,7 @@
             <id>jcabi-aspectj</id>
             <activation>
                 <file>
-                    <exists>${basedir}/src/main/aj</exists>
+                    <exists>${basedir}/src/main/aspect</exists>
                 </file>
             </activation>
             <dependencyManagement>
@@ -650,9 +650,9 @@
                         <executions>
                             <execution>
                                 <id>jcabi-weave-classes</id>
-                                <phase>process-classes</phase>
                                 <goals>
                                     <goal>compile</goal>
+                                    <goal>test-compile</goal>
                                 </goals>
                                 <configuration>
                                     <complianceLevel>1.6</complianceLevel>
