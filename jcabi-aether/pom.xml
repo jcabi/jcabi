@@ -41,6 +41,19 @@
     <dependencies>
         <dependency>
             <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-aspects</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
         </dependency>
         <dependency>
@@ -161,7 +174,7 @@
                         <artifactId>maven-invoker-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>install-invoker</id>
+                                <id>aws-invoker</id>
                                 <goals>
                                     <goal>install</goal>
                                     <goal>run</goal>
@@ -170,10 +183,21 @@
                                     <pomIncludes>
                                         <pomInclude>aether-test/pom.xml</pomInclude>
                                     </pomIncludes>
+                                    <extraArtifacts>
+                                        <extraArtifact>${project.groupId}:jcabi-maven-slf4j:${project.version}:jar</extraArtifact>
+                                    </extraArtifacts>
+                                    <projectsDirectory>src/aws-it</projectsDirectory>
                                     <settingsFile>${project.build.testOutputDirectory}/invoker.settings.xml</settingsFile>
                                 </configuration>
                             </execution>
                         </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.jcabi</groupId>
+                                <artifactId>jcabi-maven-slf4j</artifactId>
+                                <version jcabi="yes">0.7.3</version>
+                            </dependency>
+                        </dependencies>
                     </plugin>
                 </plugins>
             </build>

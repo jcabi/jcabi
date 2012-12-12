@@ -38,12 +38,32 @@
     <artifactId>jcabi-log</artifactId>
     <packaging>jar</packaging>
     <name>jcabi-log</name>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- for MulticolorLayout -->
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version since="19 Sep 2011">1.2.16</version>
+                <scope>compile</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
-            <!-- for MulticolorLayout -->
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <scope>compile</scope>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-aspects</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-log</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <!--
@@ -58,12 +78,6 @@
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-log</artifactId>
-            <version>0.1.10</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

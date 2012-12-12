@@ -53,12 +53,13 @@ Pre-defined Artifacts in <<<dependencyManagement>>>
 
    * {{{http://commons.apache.org/io/}<<<commons-io>>>}},
      {{{http://commons.apache.org/lang/}<<<commons-lang>>>}},
-     and all other {{{http://commons.apache.org/}Apache commons}}.
+     and almost all other {{{http://commons.apache.org/}Apache commons}}.
 
-* Unit Tests
+* JUnit, Hamcrest, and Mockito
 
   When <<<src/test/java>>> directory exists in the project these artifacts
-  are automatically added to <<<dependencies>>>:
+  are automatically added to the list of <<<dependencies>>> (in "test" scope,
+  of course):
 
    * {{{https://github.com/kentbeck/junit/wiki}<<<junit:junit-dep>>>}}:
      unit testing framework;
@@ -70,23 +71,6 @@ Pre-defined Artifacts in <<<dependencyManagement>>>
    * {{{http://code.google.com/p/mockito/}<<<org.mockito:mockito-core>>>}}:
      mocking framework.
 
-* JSR-303 and Other AOP Aspects
-
-  When <<<src/main/aspect>>> directory exists in the project these dependencies
-  are added to the classpath:
-
-   * {{{http://www.jcabi.com/jcabi-aspects}<<<com.jcabi:jcabi-aspects>>>}}:
-     JSR-303 and other AOP aspects;
-
-   * {{{http://www.eclipse.org/aspectj/}<<<org.aspectj:aspectjrt>>>}} (in <<<runtime>>> scope):
-     runtime AOP engine;
-
-   * {{{http://docs.oracle.com/javaee/6/api/javax/validation/package-summary.html}<<<javax.validation:validation-api>>>}}:
-     JSR-303 API;
-
-  Don't forget to add JSR-303 validator implementation to your classpath,
-  as explained in {{{http://www.jcabi.com/jcabi-aspects/jsr-303.html}jcabi-aspects}}.
-
 * Antlr3 Grammar Generator
 
   When you have a <<<src/main/antlr3>>> directory
@@ -94,6 +78,26 @@ Pre-defined Artifacts in <<<dependencyManagement>>>
   dependency goes into classpath
   and {{{http://mojo.codehaus.org/antlr-maven-plugin/}<<<antlr3-maven-plugin>>>}}
   is executed in
-  <<<generate-sources>>> phase.
+  <<<generate-sources>>> phase. Don't forget to add it explicitly to your
+  list of dependencies in runtime scope:
+
++--
+<dependencies>
+  <dependency>
+    <groupId>org.antlr</groupId>
+    <artifactId>antlr-runtime</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+</dependencies>
+
++--
+
+* SLF4J and LOG4J Logging
+
+  When <<<src/test/resources/log4j.properties>>> file exists in your
+  project the following two dependencies become available in classpath
+  ("test" scope):
+  <<<org.slf4j:slf4j-log4j12>>>
+  and <<<log4j:log4j>>>.
 
 

@@ -453,6 +453,71 @@
         </profile>
         <profile>
             <!--
+            Enable AOP AspectJ aspects. The profile is activated when you
+            have a directory src/main/aspect (even if it's empty). The profile
+            will apply all aspects from that folder to your classes and test
+            classes, and also will apply com.jcabi:jcabi-aspects. It will
+            also add JSR-303 API to the classpath.
+            -->
+            <id>aspectj</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/main/aspect</exists>
+                </file>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-aspects</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjrt</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>aspectj-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>jcabi-weave-classes</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                    <goal>test-compile</goal>
+                                </goals>
+                                <configuration>
+                                    <excludes>
+                                        <exclude>**/package-info.java</exclude>
+                                    </excludes>
+                                    <aspectLibraries>
+                                        <aspectLibrary>
+                                            <groupId>com.jcabi</groupId>
+                                            <artifactId>jcabi-aspects</artifactId>
+                                        </aspectLibrary>
+                                    </aspectLibraries>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!--
             Sign artifacts before installation with GPG. To enable
             this profile you should have "gpg.keyname" property defined.
             -->
@@ -552,6 +617,32 @@
         </profile>
         <profile>
             <!--
+            Start maven-invoker-plugin when src/it folder is present.
+            -->
+            <id>jcabi-invoker</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/it</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-invoker-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!--
             Generate ANTLR3 grammar. The profile is activated when you have
             a directory src/main/antlr3. It will activate an ANTLR3 compiler and
             add a runtime ANTLR3 dependency.
@@ -572,7 +663,7 @@
                         <groupId>org.antlr</groupId>
                         <artifactId>antlr-runtime</artifactId>
                         <version since="9 Jan 2012">3.4</version>
-                        <scope>compile</scope>
+                        <scope>provided</scope>
                     </dependency>
                 </dependencies>
             </dependencyManagement>
@@ -595,95 +686,6 @@
                                 <goals>
                                     <goal>antlr</goal>
                                 </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <!--
-            Enable AOP AspectJ aspects. The profile is activated when you
-            have a directory src/main/aspect (even if it's empty). The profile
-            will apply all aspects from that folder to your classes and test
-            classes, and also will apply com.jcabi:jcabi-aspects. It will
-            also add JSR-303 API to the classpath.
-            -->
-            <id>jcabi-aspectj</id>
-            <activation>
-                <file>
-                    <exists>${basedir}/src/main/aspect</exists>
-                </file>
-            </activation>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <!-- Aspects -->
-                        <groupId>com.jcabi</groupId>
-                        <artifactId>jcabi-aspects</artifactId>
-                        <version>${jcabi.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjrt</artifactId>
-                        <!-- this one is compliant with aspectj-maven-plugin -->
-                        <version since="27 May 2012">1.6.11</version>
-                        <scope>runtime</scope>
-                    </dependency>
-                    <dependency>
-                        <groupId>javax.validation</groupId>
-                        <artifactId>validation-api</artifactId>
-                        <version since="27 May 2012">1.1.0.Alpha1</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.hibernate</groupId>
-                        <artifactId>hibernate-validator</artifactId>
-                        <version since="27 May 2012">4.3.0.Final</version>
-                        <scope>test</scope>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-            <dependencies>
-                <dependency>
-                    <groupId>com.jcabi</groupId>
-                    <artifactId>jcabi-aspects</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjrt</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>javax.validation</groupId>
-                    <artifactId>validation-api</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.hibernate</groupId>
-                    <artifactId>hibernate-validator</artifactId>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>aspectj-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>jcabi-weave-classes</id>
-                                <goals>
-                                    <goal>compile</goal>
-                                    <goal>test-compile</goal>
-                                </goals>
-                                <configuration>
-                                    <excludes>
-                                        <exclude>**/package-info.java</exclude>
-                                    </excludes>
-                                    <aspectLibraries>
-                                        <aspectLibrary>
-                                            <groupId>com.jcabi</groupId>
-                                            <artifactId>jcabi-aspects</artifactId>
-                                        </aspectLibrary>
-                                    </aspectLibraries>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -879,6 +881,15 @@
             </dependency>
             <dependency>
                 <!--
+                AOP Aspects.
+                @see http://www.jcabi.com/jcabi-aspects/index.html
+                -->
+                <groupId>com.jcabi</groupId>
+                <artifactId>jcabi-aspects</artifactId>
+                <version>${jcabi.version}</version>
+            </dependency>
+            <dependency>
+                <!--
                 JDBC wrapper.
                 @see http://www.jcabi.com/jcabi-jdbc/index.html
                 -->
@@ -966,6 +977,33 @@
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
                 <version since="1 Mar 2012">3.2.1</version>
+            </dependency>
+            <dependency>
+                <!--
+                Runtime component of AspectJ.
+                -->
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <!-- this one is compliant with aspectj-maven-plugin -->
+                <version since="27 May 2012">1.6.11</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <!--
+                JSR-303 Vaidation API.
+                -->
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version since="27 May 2012">1.1.0.Alpha1</version>
+            </dependency>
+            <dependency>
+                <!--
+                JSR-303 implementation by Hibernate.
+                -->
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version since="27 May 2012">4.3.0.Final</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -1134,6 +1172,9 @@
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version since="7 Nov 2012">2.4</version>
+                    <configuration>
+                        <createChecksum>true</createChecksum>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-invoker-plugin</artifactId>
