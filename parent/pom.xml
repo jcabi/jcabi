@@ -37,8 +37,8 @@
     <version jcabi="yes">0.7.3</version>
     <packaging>pom</packaging>
     <name>parent</name>
-    <description>jcabi parent POM</description>
-    <url>http://www.jcabi.com</url>
+    <description>com.jcabi:parent</description>
+    <url>http://www.jcabi.com/parent</url>
     <inceptionYear>2012</inceptionYear>
     <organization>
         <name>jcabi.com</name>
@@ -68,7 +68,7 @@
     </developers>
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/yegor256/jcabi</url>
+        <url>https://github.com/yegor256/jcabi/issues</url>
     </issueManagement>
     <ciManagement>
         <system>jenkins</system>
@@ -453,7 +453,8 @@
         </profile>
         <profile>
             <!--
-            Sign artifacts before installation with GPG.
+            Sign artifacts before installation with GPG. To enable
+            this profile you should have "gpg.keyname" property defined.
             -->
             <id>jcabi-gpg</id>
             <activation>
@@ -487,12 +488,16 @@
         </profile>
         <profile>
             <!--
-            Package MOCK artifact.
+            Package MOCK artifact. The profile is activated when you have
+            a directory "/src/mock/java" available. The profile will create
+            and install a new artifact with "mock" classifier, which will
+            include all sources from that src/mock/java folder and all
+            required resources.
             -->
             <id>jcabi-mock</id>
             <activation>
                 <file>
-                    <exists>${basedir}/src/mock</exists>
+                    <exists>${basedir}/src/mock/java</exists>
                 </file>
             </activation>
             <build>
@@ -546,6 +551,11 @@
             </build>
         </profile>
         <profile>
+            <!--
+            Generate ANTLR3 grammar. The profile is activated when you have
+            a directory src/main/antlr3. It will activate an ANTLR3 compiler and
+            add a runtime ANTLR3 dependency.
+            -->
             <id>jcabi-antlr3</id>
             <activation>
                 <file>
@@ -581,10 +591,10 @@
                         <executions>
                             <execution>
                                 <id>jcabi-antlr</id>
+                                <phase>generate-sources</phase>
                                 <goals>
                                     <goal>antlr</goal>
                                 </goals>
-                                <phase>generate-sources</phase>
                             </execution>
                         </executions>
                     </plugin>
@@ -592,6 +602,13 @@
             </build>
         </profile>
         <profile>
+            <!--
+            Enable AOP AspectJ aspects. The profile is activated when you
+            have a directory src/main/aspect (even if it's empty). The profile
+            will apply all aspects from that folder to your classes and test
+            classes, and also will apply com.jcabi:jcabi-aspects. It will
+            also add JSR-303 API to the classpath.
+            -->
             <id>jcabi-aspectj</id>
             <activation>
                 <file>
@@ -674,6 +691,11 @@
             </build>
         </profile>
         <profile>
+            <!--
+            Enable unit testing. The profile is activated when you have
+            src/test/java directory in the project. It will add junit, hamcrest,
+            and mockito artifacts to the classpath ("test" scope).
+            -->
             <id>jcabi-unit-tests</id>
             <activation>
                 <file>
@@ -759,6 +781,13 @@
             </dependencies>
         </profile>
         <profile>
+            <!--
+            Enable LOG4J for testing and SLF4J binding. The profile is activated
+            when you have src/test/resources/log4j.properties. When this file
+            is present it means that you want your SLF4J logs to be sent to
+            LOG4J during testing time. The profile will add required bindings
+            to the classpath.
+            -->
             <id>jcabi-slf4j-to-log4j</id>
             <activation>
                 <file>
@@ -795,6 +824,9 @@
             </dependencies>
         </profile>
         <profile>
+            <!--
+            It is a fix for schemagen in JDK7.
+            -->
             <id>jcabi-jdk7-fix</id>
             <activation>
                 <file>
@@ -839,6 +871,7 @@
             <dependency>
                 <!--
                 Aether wrapper.
+                @see http://www.jcabi.com/jcabi-aether/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-aether</artifactId>
@@ -847,6 +880,7 @@
             <dependency>
                 <!--
                 JDBC wrapper.
+                @see http://www.jcabi.com/jcabi-jdbc/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-jdbc</artifactId>
@@ -855,6 +889,7 @@
             <dependency>
                 <!--
                 Logging facility.
+                @see http://www.jcabi.com/jcabi-log/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-log</artifactId>
@@ -863,6 +898,7 @@
             <dependency>
                 <!--
                 Reader of META-INF/MANIFEST.MF files
+                @see http://www.jcabi.com/jcabi-manifests/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-manifests</artifactId>
@@ -871,6 +907,7 @@
             <dependency>
                 <!--
                 Maven to SLF4J binding.
+                @see http://www.jcabi.com/jcabi-maven-slf4j/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-maven-slf4j</artifactId>
@@ -879,6 +916,7 @@
             <dependency>
                 <!--
                 URN.
+                @see http://www.jcabi.com/jcabi-urn/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-urn</artifactId>
@@ -887,6 +925,7 @@
             <dependency>
                 <!--
                 Velocity wrapper.
+                @see http://www.jcabi.com/jcabi-velocity/index.html
                 -->
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-velocity</artifactId>
@@ -895,6 +934,7 @@
             <dependency>
                 <!--
                 Base64 and other codecs
+                @see http://commons.apache.org/codec/
                 -->
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
@@ -903,6 +943,7 @@
             <dependency>
                 <!--
                 String manipulations
+                @see http://commons.apache.org/lang/
                 -->
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
@@ -911,6 +952,7 @@
             <dependency>
                 <!--
                 For file/stream manipulations
+                @see http://commons.apache.org/io/
                 -->
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -919,6 +961,7 @@
             <dependency>
                 <!--
                 This library simplifies collections-management operations.
+                @see http://commons.apache.org/collections/
                 -->
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
@@ -949,6 +992,10 @@
         </testResources>
         <extensions>
             <extension>
+                <!--
+                This extension enables deployment of artifacts to
+                Amazon S3 repository.
+                -->
                 <groupId>org.kuali.maven.wagons</groupId>
                 <artifactId>maven-s3-wagon</artifactId>
                 <version since="20 Sep 2012">1.1.14</version>
