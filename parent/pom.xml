@@ -132,6 +132,9 @@
             repository (if you're registered there). It also skips
             default deployment plugin.
             @see http://www.jcabi.com/jcabi-parent/profile-sonatype.html
+            At the moment sonatype plugin is not used, since it doesn't work
+            and we should close and release manually:
+            https://github.com/sonatype/nexus-maven-plugins/issues/25
             -->
             <id>sonatype</id>
             <build>
@@ -140,7 +143,7 @@
                         <plugin>
                             <artifactId>maven-deploy-plugin</artifactId>
                             <configuration>
-                                <skip>true</skip>
+                                <skip>false</skip>
                             </configuration>
                         </plugin>
                     </plugins>
@@ -164,22 +167,19 @@
                         <!-- @see https://github.com/sonatype/nexus-maven-plugins/tree/master/nexus-staging-maven-plugin -->
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <!-- @see https://github.com/sonatype/nexus-maven-plugins/issues/25 -->
                         <version since="10 Dec 2012">1.0.2</version>
+                        <extensions>true</extensions>
                         <executions>
                             <execution>
                                 <id>jcabi-deploy-to-sonatype</id>
-                                <phase>deploy</phase>
+                                <phase>never-deploy</phase>
                                 <goals>
                                     <goal>deploy</goal>
-                                    <goal>close</goal>
                                     <goal>release</goal>
                                 </goals>
                                 <configuration>
                                     <serverId>oss.sonatype.org</serverId>
                                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                                    <stagingRepositoryId>jcabi</stagingRepositoryId>
-                                    <deployUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</deployUrl>
                                     <description>${project.version}</description>
                                 </configuration>
                             </execution>
