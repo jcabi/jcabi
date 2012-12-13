@@ -119,9 +119,9 @@ abstract class AbstractMojo
 
     /**
      * WAR file to deploy.
+     * @checkstyle LineLength (3 lines)
      */
     @MojoParameter(
-        // @checkstyle LineLength (1 line)
         defaultValue = "${project.build.directory}/${project.build.finalName}.war",
         required = false,
         description = "Location of .WAR file to deploy"
