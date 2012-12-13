@@ -98,7 +98,7 @@ How to release new version to Maven Central:
 
         mvn versions:use-latest-versions
 
-    4. Set the right version:
+    4. Set the right version (change them manually in PARENT):
 
         mvn versions:set
 
@@ -133,7 +133,7 @@ How to release new version to Maven Central:
         git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.5.4
 
-    10. Revert version back to SNAPSHOT:
+    10. Revert version back to SNAPSHOT (change them manually in PARENT):
 
         mvn versions:set
         git commit -am '#87: version back to SNAPSHOT'
