@@ -121,7 +121,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * {@inheritDoc}
      */
     @Override
-    public void trace(final String format, final Object[] array) {
+    public void trace(final String format, final Object... array) {
         this.log().debug(this.format(format, array));
     }
 
@@ -170,7 +170,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * {@inheritDoc}
      */
     @Override
-    public void debug(final String format, final Object[] array) {
+    public void debug(final String format, final Object... array) {
         this.log().debug(this.format(format, array));
     }
 
@@ -219,7 +219,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * {@inheritDoc}
      */
     @Override
-    public void info(final String format, final Object[] array) {
+    public void info(final String format, final Object... array) {
         this.log().info(this.format(format, array));
     }
 
@@ -259,7 +259,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * {@inheritDoc}
      */
     @Override
-    public void warn(final String format, final Object[] array) {
+    public void warn(final String format, final Object... array) {
         this.log().warn(this.format(format, array));
     }
 
@@ -317,7 +317,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * {@inheritDoc}
      */
     @Override
-    public void error(final String format, final Object[] array) {
+    public void error(final String format, final Object... array) {
         this.log().error(this.format(format, array));
     }
 
