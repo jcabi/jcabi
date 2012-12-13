@@ -80,7 +80,6 @@ final class Repo {
             "File %s updated, %[size]s",
             file,
             file.length()
-
         );
     }
 
