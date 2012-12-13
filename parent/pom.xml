@@ -712,8 +712,8 @@
                         @link http://www.junit.org/
                         -->
                         <groupId>junit</groupId>
-                        <artifactId>junit-dep</artifactId>
-                        <version since="2 Dec 2012">4.10</version>
+                        <artifactId>junit</artifactId>
+                        <version since="12 Dec 2012">4.11</version>
                         <scope>test</scope>
                         <exclusions>
                             <exclusion>
@@ -750,7 +750,7 @@
                         -->
                         <groupId>org.mockito</groupId>
                         <artifactId>mockito-core</artifactId>
-                        <version since="17 Apr 2012">1.9.0</version>
+                        <version since="12 Dec 2012">1.9.5-rc1</version>
                         <scope>test</scope>
                         <exclusions>
                             <exclusion>
@@ -800,14 +800,14 @@
                         <!-- Forward all SLF4J calls to LOG4J. -->
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-log4j12</artifactId>
-                        <version since="19 Sep 2011">1.6.2</version>
+                        <version since="12 Dec 2012">1.7.0</version>
                         <scope>test</scope>
                     </dependency>
                     <dependency>
                         <!-- Use LOG4J logging facility for all loggings. -->
                         <groupId>log4j</groupId>
                         <artifactId>log4j</artifactId>
-                        <version since="19 Sep 2011">1.2.16</version>
+                        <version since="13 Dec 2012">1.2.17</version>
                         <scope>test</scope>
                     </dependency>
                 </dependencies>
@@ -983,7 +983,7 @@
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
                 <!-- this one is compliant with aspectj-maven-plugin -->
-                <version since="27 May 2012">1.6.11</version>
+                <version since="12 Dec 2012">1.7.1</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
@@ -992,7 +992,7 @@
                 -->
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
-                <version since="27 May 2012">1.1.0.Alpha1</version>
+                <version since="12 Dec 2012">1.1.0.Beta2</version>
             </dependency>
             <dependency>
                 <!--
@@ -1000,7 +1000,7 @@
                 -->
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version since="27 May 2012">4.3.0.Final</version>
+                <version since="27 May 2012">4.3.1.Final</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
