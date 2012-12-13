@@ -3,7 +3,11 @@
     <skin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-maven-skin</artifactId>
-        <version jcabi="yes">1.0-SNAPSHOT</version>
+        <!--
+        Would be nice to have an ability to use @project.version@ here
+        http://jira.codehaus.org/browse/MINVOKER-148
+        -->
+        <version>1.0-SNAPSHOT</version>
     </skin>
     <bannerLeft>
         <name>jcabi</name>
