@@ -107,6 +107,7 @@ public final class DeployMojoTest {
             new VelocityPage(
                 "com/jcabi/heroku/maven/plugin/pom.xml.vm"
             ).set("project", project)
+                .set("timestamp", "332211")
                 .set(
                     "deps",
                     Arrays.asList(
@@ -115,6 +116,10 @@ public final class DeployMojoTest {
                 )
                 .toString(),
             Matchers.allOf(
+                XhtmlMatchers.hasXPath(
+                    "//ns1:name[.='332211']",
+                    nspace
+                ),
                 XhtmlMatchers.hasXPath(
                     "//ns1:extension[ns1:artifactId='test-foo']",
                     nspace

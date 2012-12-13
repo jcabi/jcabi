@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>${project.getGroupId()}</groupId>
     <artifactId>${project.getArtifactId()}</artifactId>
-    <version>${project.getVersion()}-${timestamp}</version>
+    <version>${project.getVersion()}</version>
+    <name>${timestamp}</name>
     <packaging>pom</packaging>
     <repositories>
         #foreach ($repository in $project.getRepositories())

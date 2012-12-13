@@ -74,15 +74,13 @@ final class Repo {
         throws IOException {
         final File file = new File(this.path, name);
         FileUtils.writeStringToFile(file, content);
-        this.git.exec(
-            this.path,
-            "add",
-            name
-        );
+        this.git.exec(this.path, "add", name);
         Logger.info(
             this,
-            "File %s updated with new content",
-            file
+            "File %s updated, %[size]s",
+            file,
+            file.length()
+
         );
     }
 
@@ -90,15 +88,11 @@ final class Repo {
      * Commit changes and push.
      */
     public void commit() {
-        this.git.exec(
-            this.path,
-            "status"
-        );
+        this.git.exec(this.path, "status");
         this.git.exec(
             this.path,
             "commit",
-            "-a",
-            "-m",
+            "-am",
             new Date().toString()
         );
         this.git.exec(
