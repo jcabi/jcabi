@@ -318,6 +318,24 @@
             <build>
                 <plugins>
                     <plugin>
+                        <!--
+                        Checks the quality of Maven project documentation
+                        @see http://maven.apache.org/plugins/maven-docck-plugin/index.html
+                        -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-docck-plugin</artifactId>
+                        <version since="10 Dec 2012">1.0</version>
+                        <executions>
+                            <execution>
+                                <id>jcabi-check</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <artifactId>maven-site-plugin</artifactId>
                         <version>3.2</version>
                         <configuration>
