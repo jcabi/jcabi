@@ -94,6 +94,10 @@ How to release new version to Maven Central:
 
         git checkout -b 87
 
+    3. Update version:
+
+        mvn versions:use-latest-releases
+
     3. Replace <version jcabi="yes">...</version> with the next
         version you want to use, e.g.:
 

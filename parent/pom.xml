@@ -1000,7 +1000,7 @@
                 -->
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>4.3.1.Final</version>
+                <version>5.0.0.Alpha2</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -1246,6 +1246,9 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>2.0</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
