@@ -328,7 +328,12 @@
                         <executions>
                             <execution>
                                 <id>jcabi-check</id>
-                                <phase>verify</phase>
+                                <!--
+                                It doesn't work as expected:
+                                https://jira.codehaus.org/browse/MDOCCK-27
+                                https://jira.codehaus.org/browse/MDOCCK-28
+                                -->
+                                <phase>never-verify</phase>
                                 <goals>
                                     <goal>check</goal>
                                 </goals>
@@ -360,6 +365,37 @@
                                                 <report>project-team</report>
                                                 <report>scm</report>
                                                 <report>summary</report>
+                                            </reports>
+                                        </reportSet>
+                                    </reportSets>
+                                </plugin>
+                                <plugin>
+                                    <artifactId>maven-jxr-plugin</artifactId>
+                                    <version>2.3</version>
+                                    <configuration>
+                                        <aggregate>true</aggregate>
+                                    </configuration>
+                                </plugin>
+                                <plugin>
+                                    <artifactId>maven-surefire-report-plugin</artifactId>
+                                    <version>2.12.4</version>
+                                    <reportSets>
+                                        <reportSet>
+                                            <reports>
+                                                <report>report-only</report>
+                                            </reports>
+                                        </reportSet>
+                                    </reportSets>
+                                </plugin>
+                                <plugin>
+                                    <artifactId>maven-changelog-plugin</artifactId>
+                                    <version>2.2</version>
+                                    <reportSets>
+                                        <reportSet>
+                                            <reports>
+                                                <report>changelog</report>
+                                                <report>dev-activity</report>
+                                                <report>file-activity</report>
                                             </reports>
                                         </reportSet>
                                     </reportSets>

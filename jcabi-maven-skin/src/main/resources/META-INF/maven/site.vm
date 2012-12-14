@@ -119,7 +119,7 @@
                 ${dateFormat.format($currentDate)} ${project.version}
             </p>
             ${bodyContent}
-            <p style="margin-bottom: 3em;">
+            <p style="margin-bottom: 3em; margin-top: 2em;">
                 Copyright &#169;
                 #set ($currentYear = ${currentDate.year} + 1900)
                 #if (${project.inceptionYear} && ${project.inceptionYear} != ${currentYear.toString()})
