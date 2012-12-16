@@ -38,7 +38,7 @@
 
 Static Wrapper of SLF4J
 
-  {{{./apidocs/com/jcabi/log/Logger.html}<<<Logger>>>}}
+  {{{./apidocs-${project.version}/com/jcabi/log/Logger.html}<<<Logger>>>}}
   is a convenient static wrapper of {{{http://www.slf4j.org/}slf4j}}
   (don't forget to include one of
   {{{http://www.slf4j.org/manual.html#binding}SLF4J Bindings}}
@@ -57,15 +57,15 @@ class Foo {
 
   There are a few other convenient classes in this package:
 
-   * {{{./apidocs/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}} -
+   * {{{./apidocs-${project.version}/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}} -
      wrapper around <<<java.lang.Runnable>>> that swallows all runtime
      exceptions and logs them to SLF4J.
 
-   * {{{./apidocs/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}} -
+   * {{{./apidocs-${project.version}/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}} -
      wrapper around <<<java.lang.Process>>> that monitors process executions,
      collects its output into a <<<String>>> and logs everything through SLF4J.
 
-   * {{{./apidocs/com/jcabi/log/VerboseThreads.html}<<<VerboseThreads>>>}} -
+   * {{{./apidocs-${project.version}/com/jcabi/log/VerboseThreads.html}<<<VerboseThreads>>>}} -
      an implementation of <<<java.util.concurrent.ThreadFactory>>> that
      instantiates threads that log all runtime exceptions through SLF4J.
 

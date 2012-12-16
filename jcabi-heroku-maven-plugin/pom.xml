@@ -56,6 +56,12 @@
             <artifactId>jcabi-aspects</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-manifests</artifactId>
+            <!-- for invoker tests only -->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
@@ -70,12 +76,6 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>3.0.10</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
         </dependency>
@@ -87,6 +87,12 @@
             <groupId>com.rexsl</groupId>
             <artifactId>rexsl-test</artifactId>
             <version>0.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.3.04</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <!-- see http://wiki.jfrog.org/confluence/display/OSS/Maven+Anno+Mojo -->

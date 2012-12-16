@@ -1,9 +1,9 @@
  ------
- Primitive Wrapper for Apache Velocity
+ Process That Logs And Consumes Output
  ------
  Yegor Bugayenko
  ------
- 2012-05-13
+ 2012-12-16
  ------
 
 ~~
@@ -36,29 +36,31 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Primitive Wrapper for Apache Velocity
+Process That Logs And Consumes Output
 
-  {{{./apidocs-${project.version}/com/jcabi/velocity/VelocityPage.html}<<<VelocityPage>>>}}
-  is a convenient builder/wrapper around {{{http://velocity.apache.org/}Apache Velocity}}:
+  {{{./apidocs-${project.version}/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}}
+  logs output of a java
+  {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Process.html}<<<Process>>>}}
+  and consumes its output at the same time, for example:
 
 +--
-import com.jcabi.velocity.VelocityPage;
-String text = new VelocityPage("com/foo/template.vm")
-  .set("name", "John Doe")
-  .set("file", file)
-  .set("document", doc)
-  .toString();
+String name = new VerboseProcess(
+  new ProcessBuilder("who", "am", "i")
+).stdout();
 +--
+
+  {{{./apidocs-${project.version}/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}}
+  throws an exception if the process returns a non-zero exit code.
 
   The only dependency you need is
   (you can also download
-  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-velocity/${project.version}/jcabi-velocity-${project.version}.jar}<<<jcabi-velocity-${project.version}.jar>>>}}
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
   and add it to the classpath):
 
 +--
 <dependency>
   <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-velocity</artifactId>
+  <artifactId>jcabi-log</artifactId>
   <version>${project.version}</version>
 </dependency>
 +--
