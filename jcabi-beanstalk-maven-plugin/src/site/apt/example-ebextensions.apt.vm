@@ -37,7 +37,7 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Package <<<.ebextensions>>> for Amazon Elastic Beanstalk
+Package ".ebextensions" for Amazon Elastic Beanstalk
 
   For in-server operations Amazon Elastic Beanstalk proposes a
   mechanism based on {{{http://yaml.org/spec/history/2001-08-01.html}YAML}}
@@ -65,6 +65,9 @@ Package <<<.ebextensions>>> for Amazon Elastic Beanstalk
 </plugin>
 +--
 
-  All of them will picked up by <<<maven-war-plugin>>> during packaging,
+  All of them will be picked up by <<<maven-war-plugin>>> during packaging,
   filtered (all <<<${sign}\{...\}>>> sequences replaced with real values),
   and placed into <<<.ebextensions>>> directory of WAR archive.
+
+  This mechanism can be very useful for, say,
+  {{{./example-syslog.html}syslog configuration}}.

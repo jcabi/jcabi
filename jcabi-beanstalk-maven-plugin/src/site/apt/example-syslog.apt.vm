@@ -115,7 +115,9 @@ commands:
   01-set-correct-hostname:
     command: hostname www.example.com
   02-forward-rsyslog-to-papertrail:
-    command: echo "*.* @logs.papertrailapp.com:15357" >> /etc/rsyslog.conf
+    command: |
+      grep -v papertrailapp.com /etc/rsyslog.conf \
+        | echo "*.* @logs.papertrailapp.com:15357" > /etc/rsyslog.conf
   03-enable-remote-logging:
     command: |
       echo -e "\$ModLoad imudp\n\$UDPServerRun 514\n\$ModLoad imtcp\n\$InputTCPServerRun 514" \
@@ -133,7 +135,7 @@ commands:
   Package this <<<ebs-volume.config>>> file as suggested
   {{{./example-ebextensions.html}here}}.
 
-  As you see in the <<<syslog.config>>> file above we're using
+  As you see in the <<<syslog.config>>> file above, we are using
   {{{https://papertrailapp.com/?thank=9e5dc6}papertrailapp.com}}
   as a collector of log events. We recommend to use
   this platform as one of the best in the market.

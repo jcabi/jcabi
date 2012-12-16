@@ -7,6 +7,7 @@
  ------
 
 ~~
+~~ #set($sign="$")
 ~~ Copyright (c) 2012, jcabi.com
 ~~ All rights reserved.
 ~~
@@ -71,9 +72,9 @@ Deploying JAR/WAR/EAR projects to Heroku
           <server>heroku.com</server> <!-- name from settings.xml -->
           <name>my-test-app</name>
           <artifacts>
-            <artifact>com.example:example-app:jar::\${project.version}</artifact>
+            <artifact>${sign}{project.groupId}:${sign}{project.artifactId}:jar::${sign}{project.version}</artifact>
           </artifacts>
-          <procfile>web: java -Xmx256m -jar ./example-app.jar \${PORT}</procfile>
+          <procfile>web: java -Xmx256m -jar ./${sign}{project.artifactId}.jar ${sign}{PORT}</procfile>
         </configuration>
         <executions>
           <execution>
