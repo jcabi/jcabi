@@ -68,7 +68,7 @@ Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
   {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html}<<<Thread.UncaughtExceptionHandler>>>}},
   because this
   is how
-  {{{http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ScheduledExecutorService.html}<<<ScheduledExecutorService>>>}
+  {{{http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ScheduledExecutorService.html}<<<ScheduledExecutorService>>>}}
   is behaving by default. This is how we solve
   the problem with
   {{{./apidocs-${project.version}/com/jcabi/log/VerboseThreads.html}<<<VerboseThreads>>>}}:
