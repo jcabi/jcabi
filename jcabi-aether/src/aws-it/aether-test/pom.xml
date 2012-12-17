@@ -32,7 +32,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jcabi.aether-test</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
     <name>aether-test</name>
     <modules>
@@ -40,10 +40,10 @@
         <module>client</module>
     </modules>
     <distributionManagement>
-        <snapshotRepository>
+        <repository>
             <id>aether-test.jcabi.com</id>
-            <url>s3://aether-test.jcabi.com/snapshot</url>
-        </snapshotRepository>
+            <url>s3://aether-test.jcabi.com/release</url>
+        </repository>
     </distributionManagement>
     <build>
         <extensions>

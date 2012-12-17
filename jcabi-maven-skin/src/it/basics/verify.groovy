@@ -33,6 +33,7 @@ import com.rexsl.w3c.ValidatorBuilder
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 
+def version = new XmlParser().parse(new File(basedir, 'pom.xml')).version.text()
 MatcherAssert.assertThat(
     new File(basedir, 'build.log').text,
     Matchers.not(Matchers.containsString('ERROR'))
@@ -55,7 +56,7 @@ MatcherAssert.assertThat(
     XhtmlMatchers.hasXPaths(
         '//xhtml:head/xhtml:link[@rel="shortcut icon"]',
         '//xhtml:body',
-        '//xhtml:p[contains(.,"1.0.0-SNAPSHOT")]',
+        "//xhtml:p[contains(.,'${version}')]",
         '//xhtml:p[contains(.,"test-org-name")]'
     )
 )

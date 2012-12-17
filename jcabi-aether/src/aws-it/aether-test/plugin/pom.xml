@@ -33,7 +33,7 @@
     <parent>
         <groupId>com.jcabi.aether-test</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <artifactId>plugin</artifactId>
     <packaging>maven-plugin</packaging>
@@ -42,17 +42,17 @@
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-aether</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>@project.version@</version>
         </dependency>
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-log</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>@project.version@</version>
         </dependency>
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-maven-slf4j</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>@project.version@</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>

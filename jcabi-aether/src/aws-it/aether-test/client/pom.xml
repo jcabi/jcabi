@@ -33,7 +33,7 @@
     <parent>
         <groupId>com.jcabi.aether-test</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <artifactId>client</artifactId>
     <packaging>pom</packaging>
@@ -69,12 +69,12 @@
             <plugin>
                 <groupId>com.jcabi.aether-test</groupId>
                 <artifactId>plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
                 <configuration>
                     <coordinates>
                         <coordinate>junit:junit-dep:4.10</coordinate>
                         <coordinate>commons-io:commons-io:jar:2.4</coordinate>
-                        <coordinate>com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT</coordinate>
+                        <coordinate>com.jcabi.aether-test:parent:pom:${project.version}</coordinate>
                         <coordinate>com.s3auth:s3auth:pom:1.0-SNAPSHOT</coordinate>
                     </coordinates>
                 </configuration>
