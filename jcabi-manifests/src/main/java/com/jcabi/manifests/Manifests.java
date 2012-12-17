@@ -270,8 +270,10 @@ public final class Manifests {
         @NotNull(message = "name of attribute can't be NULL")
         @Pattern(regexp = ".+", message = "name of attribute can't be empty")
         final String name) {
-        return Manifests.attributes.containsKey(name)
+        final boolean exists = Manifests.attributes.containsKey(name)
             || Manifests.INJECTED.containsKey(name);
+        Logger.debug(this, "#exists('%s'): %B", name, exists);
+        return exists;
     }
 
     /**
