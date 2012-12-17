@@ -215,7 +215,7 @@ public final class Manifests {
         } else {
             result = Manifests.attributes.get(name);
         }
-        Logger.debug(this, "#read('%s'): found '%s'", name, result);
+        Logger.debug(Manifests.class, "#read('%s'): found '%s'", name, result);
         return result;
     }
 
@@ -272,7 +272,7 @@ public final class Manifests {
         final String name) {
         final boolean exists = Manifests.attributes.containsKey(name)
             || Manifests.INJECTED.containsKey(name);
-        Logger.debug(this, "#exists('%s'): %B", name, exists);
+        Logger.debug(Manifests.class, "#exists('%s'): %B", name, exists);
         return exists;
     }
 

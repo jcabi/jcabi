@@ -34,7 +34,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.7.5</version>
     <packaging>pom</packaging>
     <name>parent</name>
     <description>com.jcabi:parent</description>
@@ -111,7 +111,7 @@
         later in the file
         -->
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <jcabi.version>0.7.4</jcabi.version>
+        <jcabi.version>0.7.5</jcabi.version>
     </properties>
     <repositories>
         <!--
@@ -736,20 +736,6 @@
                     <exists>${basedir}/src/main/antlr3</exists>
                 </file>
             </activation>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <!--
-                        ANTLR3 Parser/Lexer
-                        @link http://www.antlr.org/
-                        -->
-                        <groupId>org.antlr</groupId>
-                        <artifactId>antlr-runtime</artifactId>
-                        <version>3.4</version>
-                        <scope>provided</scope>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <dependencies>
                 <dependency>
                     <groupId>org.antlr</groupId>
@@ -787,81 +773,26 @@
                     <exists>${basedir}/src/test/java</exists>
                 </file>
             </activation>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <!--
-                        We are using JUnit framework for unit test organization
-                        and management. This framework is the most stable and mature
-                        in the market. Other options considered: TestNG.
-                        @link http://www.junit.org/
-                        -->
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                        <version>4.11</version>
-                        <scope>test</scope>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>org.hamcrest</groupId>
-                                <artifactId>hamcrest-core</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                    <dependency>
-                        <!--
-                        Assertions and matchers for unit tests.
-                        @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                        -->
-                        <groupId>org.hamcrest</groupId>
-                        <artifactId>hamcrest-core</artifactId>
-                        <version>1.3</version>
-                        <scope>test</scope>
-                    </dependency>
-                    <dependency>
-                        <!--
-                        Assertions and matchers for unit tests.
-                        @link http://code.google.com/p/hamcrest/wiki/Tutorial
-                        -->
-                        <groupId>org.hamcrest</groupId>
-                        <artifactId>hamcrest-library</artifactId>
-                        <version>1.3</version>
-                        <scope>test</scope>
-                    </dependency>
-                    <dependency>
-                        <!--
-                        Mockito is used as a mocking library during testing.
-                        Other options: jMock.
-                        @link http://www.mockito.org/
-                        -->
-                        <groupId>org.mockito</groupId>
-                        <artifactId>mockito-core</artifactId>
-                        <version>1.9.5-rc1</version>
-                        <scope>test</scope>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>org.hamcrest</groupId>
-                                <artifactId>hamcrest-core</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <dependencies>
                 <dependency>
                     <groupId>junit</groupId>
                     <artifactId>junit</artifactId>
+                    <scope>test</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.hamcrest</groupId>
                     <artifactId>hamcrest-core</artifactId>
+                    <scope>test</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.hamcrest</groupId>
                     <artifactId>hamcrest-library</artifactId>
+                    <scope>test</scope>
                 </dependency>
                 <dependency>
                     <groupId>org.mockito</groupId>
                     <artifactId>mockito-core</artifactId>
+                    <scope>test</scope>
                 </dependency>
             </dependencies>
         </profile>
@@ -879,32 +810,16 @@
                     <exists>${basedir}/src/test/resources/log4j.properties</exists>
                 </file>
             </activation>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <!-- Forward all SLF4J calls to LOG4J. -->
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                        <version>1.7.0</version>
-                        <scope>test</scope>
-                    </dependency>
-                    <dependency>
-                        <!-- Use LOG4J logging facility for all loggings. -->
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                        <version>1.2.17</version>
-                        <scope>test</scope>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <dependencies>
                 <dependency>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
+                    <scope>test</scope>
                 </dependency>
                 <dependency>
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
+                    <scope>test</scope>
                 </dependency>
             </dependencies>
         </profile>
@@ -1067,9 +982,7 @@
                 -->
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
-                <!-- this one is compliant with aspectj-maven-plugin -->
                 <version>1.7.1</version>
-                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <!--
@@ -1086,7 +999,78 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>5.0.0.Alpha2</version>
-                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <!--
+                We are using JUnit framework for unit test organization
+                and management. This framework is the most stable and mature
+                in the market. Other options considered: TestNG.
+                @link http://www.junit.org/
+                -->
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hamcrest</groupId>
+                        <artifactId>hamcrest-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <!--
+                Assertions and matchers for unit tests.
+                @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                -->
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>1.3</version>
+            </dependency>
+            <dependency>
+                <!--
+                Assertions and matchers for unit tests.
+                @link http://code.google.com/p/hamcrest/wiki/Tutorial
+                -->
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-library</artifactId>
+                <version>1.3</version>
+            </dependency>
+            <dependency>
+                <!--
+                Mockito is used as a mocking library during testing.
+                Other options: jMock.
+                @link http://www.mockito.org/
+                -->
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>1.9.5-rc1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hamcrest</groupId>
+                        <artifactId>hamcrest-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <!-- Forward all SLF4J calls to LOG4J. -->
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.0</version>
+            </dependency>
+            <dependency>
+                <!-- Use LOG4J logging facility for all loggings. -->
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+            <dependency>
+                <!--
+                ANTLR3 Parser/Lexer
+                @link http://www.antlr.org/
+                -->
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr-runtime</artifactId>
+                <version>3.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
