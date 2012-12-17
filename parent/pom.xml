@@ -595,6 +595,13 @@
                                 </configuration>
                             </execution>
                         </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>javax.servlet</groupId>
+                                <artifactId>javax.servlet-api</artifactId>
+                                <version>3.1-b03</version>
+                            </dependency>
+                        </dependencies>
                     </plugin>
                 </plugins>
             </build>

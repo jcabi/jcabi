@@ -53,3 +53,5 @@ $ mvn clean deploy -Psonatype
   Deployment is bound to the <<<deploy>>> Maven phase. The profile
   also skips the default deployment of <<<maven-deploy-plugin>>>.
 
+  The profile also automates creation of <<<-sources.jar>>>
+  and <<<-javadoc.jar>>> artifacts, required by Sonatype.
