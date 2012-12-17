@@ -215,6 +215,7 @@ public final class Manifests {
         } else {
             result = Manifests.attributes.get(name);
         }
+        Logger.debug(this, "#read('%s'): found '%s'", name, result);
         return result;
     }
 
