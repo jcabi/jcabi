@@ -56,6 +56,19 @@
             <artifactId>jcabi-log</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-aspects</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
             <!-- see http://wiki.jfrog.org/confluence/display/OSS/Maven+Anno+Mojo -->
             <groupId>org.jfrog.maven.annomojo</groupId>
             <artifactId>maven-plugin-anno</artifactId>
