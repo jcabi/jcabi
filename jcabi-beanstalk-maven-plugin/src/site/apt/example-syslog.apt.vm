@@ -117,7 +117,7 @@ commands:
   02-forward-rsyslog-to-papertrail:
     command: |
       grep -v papertrailapp.com /etc/rsyslog.conf \
-        | echo "*.* @logs.papertrailapp.com:15357" > /etc/rsyslog.conf
+        | echo "*.* @logs.papertrailapp.com:55555" > /etc/rsyslog.conf
   03-enable-remote-logging:
     command: |
       echo -e "\$ModLoad imudp\n\$UDPServerRun 514\n\$ModLoad imtcp\n\$InputTCPServerRun 514" \
@@ -131,6 +131,8 @@ commands:
   05-restart-syslog:
     command: service rsyslog restart
 +--
+
+  Replace <<<55555>>> with the UDP port number provided by papertrailapp.com.
 
   Package this <<<ebs-volume.config>>> file as suggested
   {{{./example-ebextensions.html}here}}.

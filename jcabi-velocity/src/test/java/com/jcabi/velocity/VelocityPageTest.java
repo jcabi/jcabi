@@ -48,9 +48,11 @@ public final class VelocityPageTest {
     public void formatsVelocityTemplate() throws Exception {
         MatcherAssert.assertThat(
             new VelocityPage("com/jcabi/velocity/text.vm")
-                .set("xname", "John Doe")
+                .set("xname", "\u0412\u0430\u0441\u044F")
                 .toString(),
-            Matchers.containsString("Doe")
+            Matchers.containsString(
+                "\u043F\u0440\u0438\u0432\u0435\u0442, \u0412\u0430\u0441\u044F"
+            )
         );
     }
 

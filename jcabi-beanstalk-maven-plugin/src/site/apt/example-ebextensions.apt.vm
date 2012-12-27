@@ -45,6 +45,8 @@ Package ".ebextensions" for Amazon Elastic Beanstalk
   <<<.ebextensions>>> directory of your WAR package.
   Read more about them
   {{{http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/customize-containers.html}here}}.
+  Also, pay attention to
+  {{{http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-resources.html}configurable resources}}.
 
   This is how we recommend to package these files in Maven.
   Configure <<<maven-war-plugin>>> in <<<pom.xml>>>:

@@ -43,11 +43,9 @@ import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
  *
  * <p>The template should be in classpath:
  *
- * <pre>
- * String text = new VelocityPage("com/foo/my-template.vm")
+ * <pre> String text = new VelocityPage("com/foo/my-template.vm")
  *   .set("name", "John Doe")
- *   .toString();
- * </pre>
+ *   .toString();</pre>
  *
  * <p>At the moment all logging is forwarded to LOG4J. In Velocity 2.0 there
  * will be an adapter for SLF4J and we'll use it: {@code Slf4jLogChute}.
@@ -105,7 +103,8 @@ public final class VelocityPage {
      */
     @Override
     public String toString() {
-        final Template template = VelocityPage.ENGINE.getTemplate(this.name);
+        final Template template =
+            VelocityPage.ENGINE.getTemplate(this.name, "UTF-8");
         final StringWriter writer = new StringWriter();
         template.merge(this.context, new PrintWriter(writer));
         return writer.toString();
