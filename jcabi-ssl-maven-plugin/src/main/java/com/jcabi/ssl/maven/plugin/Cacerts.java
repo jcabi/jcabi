@@ -32,6 +32,7 @@ package com.jcabi.ssl.maven.plugin;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
+import javax.validation.constraints.NotNull;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -68,7 +69,7 @@ final class Cacerts {
      * @param file New location
      * @throws IOException If fails
      */
-    public Cacerts(final File file) throws IOException {
+    public Cacerts(@NotNull final File file) throws IOException {
         this.store = file;
         final File prev = new File(
             String.format(

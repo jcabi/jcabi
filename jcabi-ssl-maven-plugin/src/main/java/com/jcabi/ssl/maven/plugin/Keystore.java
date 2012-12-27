@@ -33,6 +33,7 @@ import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
+import javax.validation.constraints.NotNull;
 
 /**
  * Keystore abstraction.
@@ -62,7 +63,7 @@ final class Keystore {
      * Public ctor.
      * @param pwd The password
      */
-    public Keystore(final String pwd) {
+    public Keystore(@NotNull final String pwd) {
         this.password = pwd;
     }
 
