@@ -103,7 +103,7 @@ public final class AetherTest {
         if (AetherTest.AWS_KEY != null) {
             artifacts.add(
                 new DefaultArtifact(
-                    "com.jcabi.aether-test:parent:pom:1.0-SNAPSHOT"
+                    "com.jcabi.aether-test:parent:pom:1.0"
                 )
             );
         }
@@ -301,7 +301,7 @@ public final class AetherTest {
             final RemoteRepository aws = new RemoteRepository(
                 "aether-test",
                 type,
-                "s3://aether-test.jcabi.com/snapshot"
+                "s3://aether-test.jcabi.com/release"
             );
             aws.setAuthentication(
                 new Authentication(

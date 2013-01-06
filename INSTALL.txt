@@ -77,7 +77,7 @@ Continuous Integration Configuration
 
     At the moment the following goal is defined in our CI server:
 
-        mvn clean deploy -e -Dci --settings ../../closures/settings.xml
+        mvn clean deploy -e -Pqulice --settings ../../closures/settings.xml
 
 
 How to release new version to Maven Central:
@@ -106,7 +106,8 @@ How to release new version to Maven Central:
 
         git commit -am '#87: version set to 0.5.4'
 
-    6. Explain this new release in changes/changes.xml release notes
+    6. Explain this new release in changes/changes.xml release notes,
+        and in README.md
 
     7. Deploy the product to Sonatype:
 
@@ -117,33 +118,36 @@ How to release new version to Maven Central:
 
         Make sure that you have this profile in ~/.m2/settings.xml:
 
-          <profile>
+        <profile>
             <id>jcabi</id>
             <properties>
-              <gpg.homedir>/code/gpg/jcabi</gpg.homedir>
-              <gpg.keyname>...</gpg.keyname>
-              <gpg.passphrase>...</gpg.passphrase>
+                <gpg.homedir>/code/gpg/jcabi</gpg.homedir>
+                <gpg.keyname>...</gpg.keyname>
+                <gpg.passphrase>...</gpg.passphrase>
             </properties>
-          </profile>
+        </profile>
 
-    8. Deploy the site to Amazon S3 (in 3-4 hours, when this artifact
-        becomes available in Maven Central):
+        Close and release the artifact in Sonatype panel manually.
 
-        mvn -Psite clean install site-deploy
-
-    9. Tag the branch
+    8. Tag the branch
 
         git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.5.4
 
-    10. Revert version back to SNAPSHOT (change them manually in PARENT):
+    9. Revert version back to SNAPSHOT (change them manually in PARENT):
 
         mvn versions:set
         git commit -am '#87: version back to SNAPSHOT'
 
-    11. Merge the branch to 'master':
+    10. Merge the branch to 'master':
 
         git checkout master && git merge 87 && git push origin master && git branch -D 87
+
+    11. In 4 hours, when the artifact is available in Maven Central,
+        checkout the tag and deploy the site to Amazon S3:
+
+            git checkout jcabi-0.5.4
+            mvn -Psite clean install site-deploy
 
     12. Close the issue as "fixed" in Github
 

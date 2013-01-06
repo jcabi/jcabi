@@ -5,6 +5,21 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Release Notes ##
 
+0.8: upcoming release
+
+ * #124: `@Loggable` has a time limit (`jcabi-aspects`)
+ * #122: UTF-8 is a default encoding (`jcabi-velocity`)
+ * #119: dependency management fixed (`parent`)
+ * #118: sonatype repository is in default list in `pom.xml` (`parent)
+ * #115: wrong resources filtering fixed (`jcabi-heroku-maven-plugin`)
+ * #112: `xml-maven-plugin` added to `qulice` profile (`parent`)
+ * #111: `maven-docck-plugin` added to `qulice` profile (`parent`)
+ * #110: `git status` is shown before commit (`jcabi-heroku-maven-plugin`)
+ * #104: `parent` project introduced
+ * #103: checksum to differ versions (`jcabi-beanstalk-maven-plugin`)
+ * #102: UPDATE method added (`jcabi-beanstalk-maven-plugin`)
+ * #101: `@Loggable` annotation added (`jcabi-aspects`)
+
 [0.7](#100):
 
  * #99: [Manifests](http://www.jcabi.com/jcabi-manifests/apidocs-0.7/com/jcabi/manifests/Manifests.html) introduced
