@@ -51,16 +51,19 @@ log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%-5p}] %c: %m%n
 
 +--
 <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
-    <layout class="com.jcabi.log.MulticolorLayout">
-        <param name="ConversionPattern" value="[%color{%p}] %m%m" />
-    </layout>
+  <layout class="com.jcabi.log.MulticolorLayout">
+    <param name="ConversionPattern" value="[%color{%-5p}] %c: %m%n" />
+  </layout>
 </appender>
 +--
 
   Read JavaDoc of
-  {{{./apidocs-${project.version}/com/jcabi/log/MulticolorLayout.html}com.jcabi.log.MulticolorLayout}}.
+  {{{./apidocs-${project.version}/com/jcabi/log/MulticolorLayout.html}<<<MulticolorLayout>>>}}.
 
-  The only dependency you need is:
+  The only dependency you need is
+  (you can also download
+  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
+  and add it to the classpath):
 
 +--
 <dependency>

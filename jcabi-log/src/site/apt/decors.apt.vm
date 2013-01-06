@@ -63,7 +63,8 @@ class Foo {
 ---
 
   Nano-seconds will be formatted as time through a built-in "decor".
-  Pre-defined decors:
+
+  There are a few other pre-defined decors:
 
    * <<<dom>>> -- converts <<<org.w3c.dom.Node>>> to text.
 
@@ -86,15 +87,15 @@ import com.jcabi.log.Decor;
 import java.util.Formattable;
 import java.util.Formatter;
 public final class DataDecor implements Formattable {
-    private final transient Data data;
-    public DataDecor(final Data dat) {
-        this.data = dat;
-    }
-    @Override
-    public void formatTo(final Formatter formatter, final int flags,
-        final int width, final int precision) {
-        formatter.format("%s", this.data.getSomeValueOutOfIt());
-    }
+  private final transient Data data;
+  public DataDecor(final Data dat) {
+    this.data = dat;
+  }
+  @Override
+  public void formatTo(final Formatter formatter, final int flags,
+    final int width, final int precision) {
+    formatter.format("%s", this.data.getSomeValueOutOfIt());
+  }
 }
 +--
 
