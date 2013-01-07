@@ -98,9 +98,13 @@ How to release new version to Maven Central:
 
         mvn versions:use-latest-versions
 
-    4. Set the right version (change them manually in PARENT):
+    4. Set the right version:
 
         mvn versions:set
+
+        Change <version> manually in PARENT module
+
+        Change jcabi.version property in PARENT module
 
     5. Commit your changes
 
