@@ -31,6 +31,14 @@
 /**
  * Static eader of {@code META-INF/MANIFEST.MF} files.
  *
+ * <p>The only dependency you need is (check our latest version available
+ * at <a href="http://www.jcabi.com">www.jcabi.com</a>):
+ *
+ * <pre>&lt;depedency&gt;
+ *   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+ *   &lt;artifactId&gt;jcabi-manifests&lt;/artifactId&gt;
+ * &lt;/dependency&gt;</pre>
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7
