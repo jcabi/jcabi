@@ -27,59 +27,64 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log;
+package com.jcabi.aspects.aj;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Formattable;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import com.jcabi.aspects.Cacheable;
+import java.lang.reflect.Method;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
- * Test case for {@link TypeDecor}.
+ * Test case for {@link MethodCacher}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class TypeDecorTest extends AbstractDecorTest {
+public final class MethodCacherTest {
 
     /**
-     * Public ctor.
-     * @param obj The object
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * MethodCacher can cache calls.
+     * @throws Throwable If something goes wrong
+     * @checkstyle IllegalThrows (5 lines)
      */
-    public TypeDecorTest(final Object obj, final String text,
-        final int flags, final int width, final int precision) {
-        super(obj, text, flags, width, precision);
+    @Test
+    public void cachesSimpleCall() throws Throwable {
+        this.call(new Object[] {null});
     }
 
     /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
+     * Call it with the provided params.
+     * @param args The args
+     * @throws Throwable If something goes wrong
+     * @checkstyle IllegalThrows (5 lines)
      */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                {"testing", "java.lang.String", 0, 0, 0},
-                {null, "NULL", 0, 0, 0},
-                {1d, "java.lang.Double", 0, 0, 0},
-            }
-        );
+    private void call(final Object[] args) throws Throwable {
+        final MethodCacher cacher = new MethodCacher();
+        final Method method = MethodCacherTest.Foo.class
+            .getMethod("download", String.class);
+        final MethodSignature sig = Mockito.mock(MethodSignature.class);
+        Mockito.doReturn(method).when(sig).getMethod();
+        final ProceedingJoinPoint point =
+            Mockito.mock(ProceedingJoinPoint.class);
+        Mockito.doReturn(sig).when(point).getSignature();
+        Mockito.doReturn(args).when(point).getArgs();
+        cacher.wrap(point);
     }
 
     /**
-     * {@inheritDoc}
+     * Dummy class, for tests above.
      */
-    @Override
-    protected Formattable decor() {
-        return new TypeDecor(this.object());
+    private static final class Foo {
+        /**
+         * Download some text.
+         * @param text Some text
+         * @return Downloaded text
+         */
+        @Cacheable
+        public String download(final String text) {
+            return "done";
+        }
     }
 
 }

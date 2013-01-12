@@ -27,59 +27,38 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log;
+package com.jcabi.aspects;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Formattable;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * Test case for {@link TypeDecor}.
+ * Makes a method response cacheable in memory for some time.
+ *
+ * <p>For example, this {@code load()} method loads some data from the network
+ * and we want it to cache loaded data for 5 seconds (to avoid delays):
+ *
+ * <pre> &#64;Cacheable(msec = 5000)
+ * String load(String resource) throws IOException {
+ *   return "something";
+ * }</pre>
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
+ * @since 0.8
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class TypeDecorTest extends AbstractDecorTest {
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.METHOD, ElementType.CONSTRUCTOR })
+public @interface Cacheable {
 
     /**
-     * Public ctor.
-     * @param obj The object
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * Cache period in milliseconds.
+     * @checkstyle MagicNumber (2 lines)
      */
-    public TypeDecorTest(final Object obj, final String text,
-        final int flags, final int width, final int precision) {
-        super(obj, text, flags, width, precision);
-    }
-
-    /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
-     */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                {"testing", "java.lang.String", 0, 0, 0},
-                {null, "NULL", 0, 0, 0},
-                {1d, "java.lang.Double", 0, 0, 0},
-            }
-        );
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected Formattable decor() {
-        return new TypeDecor(this.object());
-    }
+    int msec() default 5000;
 
 }

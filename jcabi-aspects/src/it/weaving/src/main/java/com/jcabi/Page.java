@@ -27,59 +27,38 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.log;
+package com.jcabi;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Formattable;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import com.jcabi.aspects.Cacheable;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Test case for {@link TypeDecor}.
+ * Page with content.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-@RunWith(Parameterized.class)
-@SuppressWarnings("PMD.TestClassWithoutTestCases")
-public final class TypeDecorTest extends AbstractDecorTest {
+public final class Page {
 
     /**
-     * Public ctor.
-     * @param obj The object
-     * @param text Expected text
-     * @param flags Flags
-     * @param width Width
-     * @param precision Precission
-     * @checkstyle ParameterNumber (3 lines)
+     * Number of calls made.
      */
-    public TypeDecorTest(final Object obj, final String text,
-        final int flags, final int width, final int precision) {
-        super(obj, text, flags, width, precision);
+    private int cnt;
+    /**
+     * Download some text.
+     * @param text Some text
+     * @return Downloaded text
+     */
+    @Cacheable
+    public String download(final String text) {
+        ++this.cnt;
+        return "done";
     }
-
     /**
-     * Params for this parametrized test.
-     * @return Array of arrays of params for ctor
+     * Get counter.
+     * @return The number
      */
-    @Parameters
-    public static Collection<Object[]> params() {
-        return Arrays.asList(
-            new Object[][] {
-                {"testing", "java.lang.String", 0, 0, 0},
-                {null, "NULL", 0, 0, 0},
-                {1d, "java.lang.Double", 0, 0, 0},
-            }
-        );
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected Formattable decor() {
-        return new TypeDecor(this.object());
+    public int counted() {
+        return this.cnt;
     }
 
 }
