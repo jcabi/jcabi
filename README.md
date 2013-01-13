@@ -16,6 +16,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
  * #111: `maven-docck-plugin` added to `qulice` profile (`parent`)
  * #110: `git status` is shown before commit (`jcabi-heroku-maven-plugin`)
  * #104: `parent` project introduced
+ * #105: `@Cacheable` annotation added (`jcabi-aspects`)
  * #103: checksum to differ versions (`jcabi-beanstalk-maven-plugin`)
  * #102: UPDATE method added (`jcabi-beanstalk-maven-plugin`)
  * #101: `@Loggable` annotation added (`jcabi-aspects`)
