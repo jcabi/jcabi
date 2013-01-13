@@ -42,6 +42,6 @@
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7
- * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
+ * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">project website</a>
  */
 package com.jcabi.manifests;

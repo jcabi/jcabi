@@ -41,5 +41,6 @@
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
+ * @link <a href="http://www.jcabi.com/jcabi-log">project website</a>
  */
 package com.jcabi.log;
