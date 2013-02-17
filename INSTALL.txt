@@ -97,6 +97,7 @@ How to release new version to Maven Central:
     3. Update versions:
 
         mvn versions:use-latest-versions
+        git commit -am '#87: versions automatically updated'
 
     4. Set the right version:
 
