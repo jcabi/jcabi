@@ -139,9 +139,10 @@ How to release new version to Maven Central:
         git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.5.4
 
-    9. Revert version back to SNAPSHOT (change them manually in PARENT):
+    9. Revert version back to SNAPSHOT:
 
         mvn versions:set
+        change them manually in PARENT module
         git commit -am '#87: version back to SNAPSHOT'
 
     10. Merge the branch to 'master':
