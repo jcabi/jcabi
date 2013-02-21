@@ -92,6 +92,9 @@
                                     <goal>copy</goal>
                                 </goals>
                                 <configuration>
+                                    <localRepositoryDirectory>&#36;{basedir}/local-repo</localRepositoryDirectory>
+                                    <overWriteReleases>true</overWriteReleases>
+                                    <overWriteSnapshots>true</overWriteSnapshots>
                                     <artifactItems>
                                         #foreach ($item in $deps)
                                             <artifactItem>
