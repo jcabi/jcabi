@@ -1166,6 +1166,34 @@
                         <verbose>false</verbose>
                         <Xlint>warning</Xlint>
                         <argumentFileName>builddef-${project.name}.lst</argumentFileName>
+                        <sources>
+                            <source>
+                                <basedir>${basedir}/src/main/java</basedir>
+                                <includes>
+                                    <include>**/*.java</include>
+                                </includes>
+                            </source>
+                            <source>
+                                <basedir>${project.build.directory}/generated-sources/annotations</basedir>
+                                <includes>
+                                    <include>**/*.java</include>
+                                </includes>
+                            </source>
+                        </sources>
+                        <testSources>
+                            <testSource>
+                                <basedir>${basedir}/src/test/java</basedir>
+                                <includes>
+                                    <include>**/*.java</include>
+                                </includes>
+                            </testSource>
+                            <testSource>
+                                <basedir>${project.build.directory}/generated-test-sources/annotations</basedir>
+                                <includes>
+                                    <include>**/*.java</include>
+                                </includes>
+                            </testSource>
+                        </testSources>
                     </configuration>
                 </plugin>
                 <plugin>
