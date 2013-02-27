@@ -79,7 +79,7 @@ interface Bundle {
          */
         @Override
         public String name() {
-            return this.origin.name();
+            return this.origin.name().replace("/", "_");
         }
         /**
          * {@inheritDoc}
