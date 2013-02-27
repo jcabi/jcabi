@@ -594,12 +594,14 @@
                                 <phase>generate-resources</phase>
                                 <configuration>
                                     <target>
-                                        <echo file="${project.build.outputDirectory}/ajc-ant.xml"><![CDATA[
+                                        <echo file="${project.build.directory}/ajc-ant.xml"><![CDATA[
                                             <project name="main" basedir="." default="main">
                                                 <path id="classpath">
                                                     <pathelement path="${cp.scope}" />
                                                     <pathelement path="${cp.plugin}" />
                                                 </path>
+                                                <mkdir dir="${aspectj.bin}"/>
+                                                <mkdir dir="${aspectj.temp}"/>
                                                 <taskdef classname="org.aspectj.tools.ant.taskdefs.AjcTask"
                                                     name="iajc" classpathref="classpath" />
                                                 <target name="main">
@@ -616,7 +618,7 @@
                                                         target="1.6"
                                                         showWeaveInfo="true"
                                                         failonerror="true" />
-                                                    <copy todir="${aspectj.bin}" overwrite="true">
+                                                    <copy todir="${aspectj.bin}" verbose="true">
                                                         <fileset dir="${aspectj.temp}">
                                                             <include name="**/*.class" />
                                                         </fileset>
@@ -641,7 +643,7 @@
                                         <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
                                         <property name="cp.scope" refid="maven.compile.classpath" />
                                         <property name="cp.plugin" refid="maven.plugin.classpath" />
-                                        <ant antfile="${project.build.outputDirectory}/ajc-ant.xml" />
+                                        <ant antfile="${project.build.directory}/ajc-ant.xml" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -659,7 +661,7 @@
                                         <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
                                         <property name="cp.scope" refid="maven.test.classpath" />
                                         <property name="cp.plugin" refid="maven.plugin.classpath" />
-                                        <ant antfile="${project.build.outputDirectory}/ajc-ant.xml" />
+                                        <ant antfile="${project.build.directory}/ajc-ant.xml" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -1080,6 +1082,16 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>5.0.0.Beta1</version>
+            </dependency>
+            <dependency>
+                <!--
+                Compile-time annotations.
+                @see http://projectlombok.org/features/index.html
+                -->
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>0.11.6</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <!--
