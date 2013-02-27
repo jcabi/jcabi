@@ -34,7 +34,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.7.8</version>
     <packaging>pom</packaging>
     <name>parent</name>
     <description>com.jcabi:parent</description>
@@ -574,18 +574,24 @@
             <build>
                 <plugins>
                     <plugin>
+                        <!--
+                        This magic code below solves the conflict between APT
+                        and AspectJ explained here: http://stackoverflow.com/questions/3660547
+                        APT changes are applied during compilation and AspectJ
+                        plugin (if being used) would destroy them and re-compile
+                        the sources. Thus, we would loose the entire effect of
+                        APT processing. The solution is to use binary-weaving
+                        instead of re-compilation from source. Such feature is
+                        not supported by maven-aspectj-plugin, that's why we should
+                        use ANT and call AspectJ ANT task, which is flexible enough
+                        to allow us to weave binaries.
+                        -->
                         <artifactId>maven-antrun-plugin</artifactId>
                         <dependencies>
                             <dependency>
                                 <groupId>org.aspectj</groupId>
                                 <artifactId>aspectjtools</artifactId>
                                 <version>1.7.2</version>
-                            </dependency>
-                            <dependency>
-                                <!-- I'm not sure whether it's still necessary -->
-                                <groupId>javax.servlet</groupId>
-                                <artifactId>javax.servlet-api</artifactId>
-                                <version>3.1-b03</version>
                             </dependency>
                         </dependencies>
                         <executions>
@@ -613,12 +619,12 @@
                                                         warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
                                                         debug="false"
                                                         time="true"
-                                                        verbose="false"
+                                                        verbose="true"
                                                         source="1.6"
                                                         target="1.6"
                                                         showWeaveInfo="true"
                                                         failonerror="true" />
-                                                    <copy todir="${aspectj.bin}" verbose="true">
+                                                    <copy todir="${aspectj.bin}" verbose="true" overwrite="true">
                                                         <fileset dir="${aspectj.temp}">
                                                             <include name="**/*.class" />
                                                         </fileset>
@@ -1271,6 +1277,8 @@
                             <!-- @see http://netbeans.org/bugzilla/show_bug.cgi?format=multiple&id=208666 -->
                             <!-- this is to avoid a problem with ANTLR and JDK7 -->
                             <Xlint:-classfile/>
+                            <!-- ignore APT warnings -->
+                            <Xlint:-processing/>
                         </compilerArguments>
                         <testExcludes>
                             <exclude>**/package-info.java</exclude>
