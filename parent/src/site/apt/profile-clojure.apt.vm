@@ -40,7 +40,7 @@
 "closure" Profile for Clojure sources compiling
 
   The profile is activated automatically when you have
-  a <<<src/main/clj>>> directory in the project. Otherwise, you can
+  a <<<src/main/clojure>>> directory in the project. Otherwise, you can
   activate it explicitly:
 
 +--
@@ -48,4 +48,4 @@ $ mvn clean install -Pclojure
 +--
 
   The profile compiles all Clojure sources, both from
-  <<<src/main/clj>>> and <<<src/test/clj>>> directories.
+  <<<src/main/clojure>>> and <<<src/test/clojure>>> directories.

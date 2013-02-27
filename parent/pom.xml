@@ -681,13 +681,13 @@
         </profile>
         <profile>
             <!--
-            Compile Clojure sources from src/main/clj and src/test/clj
+            Compile Clojure sources from src/main/clojure and src/test/clojure
             directories.
             -->
             <id>clojure</id>
             <activation>
                 <file>
-                    <exists>${basedir}/src/main/clj</exists>
+                    <exists>${basedir}/src/main/clojure</exists>
                 </file>
             </activation>
             <build>
