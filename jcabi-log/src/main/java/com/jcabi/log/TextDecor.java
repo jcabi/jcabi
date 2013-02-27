@@ -91,8 +91,9 @@ final class TextDecor implements Formattable {
             result = text;
         } else {
             result = String.format(
-                "%s... (%d chars)",
-                text.substring(0, TextDecor.MAX),
+                "%s...%s (%d chars)",
+                text.substring(0, (TextDecor.MAX / 2) - 2),
+                text.substring(text.length() - (TextDecor.MAX / 2) + 1),
                 text.length()
             );
         }
