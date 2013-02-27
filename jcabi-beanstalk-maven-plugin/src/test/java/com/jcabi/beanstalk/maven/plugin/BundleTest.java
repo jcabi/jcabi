@@ -29,72 +29,30 @@
  */
 package com.jcabi.beanstalk.maven.plugin;
 
-import com.amazonaws.services.elasticbeanstalk.model.S3Location;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
- * Bundle with a WAR application.
- *
+ * Test case for {@link Bundle}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
- * @since 0.3
  */
-interface Bundle {
+public final class BundleTest {
 
     /**
-     * Name of this version to use.
-     * @return The name
+     * Bundle.Safe can remove invalid symbols from label name.
+     * @throws Exception If something is wrong
      */
-    String name();
-
-    /**
-     * Get S3 location of an app.
-     * @return The location
-     */
-    S3Location location();
-
-    /**
-     * Get MD5 ETag hex of the bundle, according to RFC-1864.
-     * @return The ETag
-     * @since 0.7.1
-     */
-    String etag();
-
-    /**
-     * Safe bundle, with a safe name.
-     */
-    final class Safe implements Bundle {
-        /**
-         * Original bundle.
-         */
-        private final transient Bundle origin;
-        /**
-         * Public ctor.
-         * @param bundle Original bundle
-         */
-        public Safe(final Bundle bundle) {
-            this.origin = bundle;
-        }
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public String name() {
-            return this.origin.name();
-        }
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public S3Location location() {
-            return this.origin.location();
-        }
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public String etag() {
-            return this.origin.etag();
-        }
+    @Test
+    public void fixesBrokenNames() throws Exception {
+        final Bundle bundle = Mockito.mock(Bundle.class);
+        Mockito.doReturn("safe/name").when(bundle).name();
+        MatcherAssert.assertThat(
+            new Bundle.Safe(bundle).name(),
+            Matchers.equalTo("safe_name")
+        );
     }
 
 }

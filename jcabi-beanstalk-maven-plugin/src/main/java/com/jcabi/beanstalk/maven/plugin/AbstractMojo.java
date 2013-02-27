@@ -163,11 +163,13 @@ abstract class AbstractMojo
                 new OverridingVersion(
                     ebt,
                     this.name,
-                    new OverridingBundle(
-                        new AmazonS3Client(creds),
-                        this.bucket,
-                        this.key,
-                        this.war
+                    new Bundle.Safe(
+                        new OverridingBundle(
+                            new AmazonS3Client(creds),
+                            this.bucket,
+                            this.key,
+                            this.war
+                        )
                     )
                 ),
                 this.template
