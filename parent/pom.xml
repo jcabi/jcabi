@@ -574,35 +574,99 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>aspectj-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>jcabi-weave-classes</id>
-                                <goals>
-                                    <goal>compile</goal>
-                                    <goal>test-compile</goal>
-                                </goals>
-                                <configuration>
-                                    <excludes>
-                                        <exclude>**/package-info.java</exclude>
-                                    </excludes>
-                                    <aspectLibraries>
-                                        <aspectLibrary>
-                                            <groupId>com.jcabi</groupId>
-                                            <artifactId>jcabi-aspects</artifactId>
-                                        </aspectLibrary>
-                                    </aspectLibraries>
-                                </configuration>
-                            </execution>
-                        </executions>
+                        <artifactId>maven-antrun-plugin</artifactId>
                         <dependencies>
                             <dependency>
+                                <groupId>org.aspectj</groupId>
+                                <artifactId>aspectjtools</artifactId>
+                                <version>1.7.2</version>
+                            </dependency>
+                            <dependency>
+                                <!-- I'm not sure whether it's still necessary -->
                                 <groupId>javax.servlet</groupId>
                                 <artifactId>javax.servlet-api</artifactId>
                                 <version>3.1-b03</version>
                             </dependency>
                         </dependencies>
+                        <executions>
+                            <execution>
+                                <id>jcabi-prepare-ajc</id>
+                                <phase>generate-resources</phase>
+                                <configuration>
+                                    <target>
+                                        <echo file="${project.build.outputDirectory}/ajc-ant.xml"><![CDATA[
+                                            <project name="main" basedir="." default="main">
+                                                <path id="classpath">
+                                                    <pathelement path="${cp.scope}" />
+                                                    <pathelement path="${cp.plugin}" />
+                                                </path>
+                                                <taskdef classname="org.aspectj.tools.ant.taskdefs.AjcTask"
+                                                    name="iajc" classpathref="classpath" />
+                                                <target name="main">
+                                                    <iajc sourceroots="${aspectj.src}"
+                                                        inpath="${aspectj.bin}"
+                                                        destdir="${aspectj.temp}"
+                                                        classpathref="classpath"
+                                                        aspectPath="${aspectj.libs}"
+                                                        warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
+                                                        debug="true"
+                                                        time="true"
+                                                        verbose="true"
+                                                        source="1.6"
+                                                        target="1.6"
+                                                        showWeaveInfo="true"
+                                                        failonerror="true" />
+                                                    <copy todir="${aspectj.bin}" overwrite="true">
+                                                        <fileset dir="${aspectj.temp}">
+                                                            <include name="**/*.class" />
+                                                        </fileset>
+                                                    </copy>
+                                                </target>
+                                            </project>
+                                        ]]></echo>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>jcabi-ajc-compile</id>
+                                <phase>process-classes</phase>
+                                <configuration>
+                                    <target>
+                                        <property name="aspectj.src" value="${project.basedir}/src/main/aspect" />
+                                        <property name="aspectj.bin" value="${project.build.outputDirectory}" />
+                                        <property name="aspectj.temp" value="${project.build.directory}/aspectj-classes" />
+                                        <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
+                                        <property name="cp.scope" refid="maven.compile.classpath" />
+                                        <property name="cp.plugin" refid="maven.plugin.classpath" />
+                                        <ant antfile="${project.build.outputDirectory}/ajc-ant.xml" />
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>ajc-test-compile</id>
+                                <phase>process-test-classes</phase>
+                                <configuration>
+                                    <target unless="maven.test.skip">
+                                        <property name="aspectj.src" value="${project.basedir}/src/main/aspect" />
+                                        <property name="aspectj.bin" value="${project.build.testOutputDirectory}" />
+                                        <property name="aspectj.temp" value="${project.build.directory}/aspectj-test-classes" />
+                                        <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
+                                        <property name="cp.scope" refid="maven.test.classpath" />
+                                        <property name="cp.plugin" refid="maven.plugin.classpath" />
+                                        <ant antfile="${project.build.outputDirectory}/ajc-ant.xml" />
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -1153,49 +1217,6 @@
         </plugins>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>aspectj-maven-plugin</artifactId>
-                    <version>1.4</version>
-                    <configuration>
-                        <complianceLevel>1.6</complianceLevel>
-                        <encoding>${project.build.sourceEncoding}</encoding>
-                        <showWeaveInfo>false</showWeaveInfo>
-                        <source>1.6</source>
-                        <target>1.6</target>
-                        <verbose>false</verbose>
-                        <Xlint>warning</Xlint>
-                        <argumentFileName>builddef-${project.name}.lst</argumentFileName>
-                        <sources>
-                            <source>
-                                <basedir>${basedir}/src/main/java</basedir>
-                                <includes>
-                                    <include>**/*.java</include>
-                                </includes>
-                            </source>
-                            <source>
-                                <basedir>${project.build.directory}/generated-sources/annotations</basedir>
-                                <includes>
-                                    <include>**/*.java</include>
-                                </includes>
-                            </source>
-                        </sources>
-                        <testSources>
-                            <testSource>
-                                <basedir>${basedir}/src/test/java</basedir>
-                                <includes>
-                                    <include>**/*.java</include>
-                                </includes>
-                            </testSource>
-                            <testSource>
-                                <basedir>${project.build.directory}/generated-test-sources/annotations</basedir>
-                                <includes>
-                                    <include>**/*.java</include>
-                                </includes>
-                            </testSource>
-                        </testSources>
-                    </configuration>
-                </plugin>
                 <plugin>
                     <!--
                     Code coverage tool.
