@@ -7,6 +7,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #134: APT and AspectJ work together (`jcabi-aspects`)
  * #133: `@Immutable` annotation added (`jcabi-aspects`)
  * #130: `@RetryOnFailure` has a time limit (`jcabi-aspects`)
  * #124: `@Loggable` has a time limit (`jcabi-aspects`)
