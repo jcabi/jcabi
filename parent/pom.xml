@@ -619,12 +619,12 @@
                                                         warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
                                                         debug="false"
                                                         time="true"
-                                                        verbose="true"
+                                                        verbose="false"
                                                         source="1.6"
                                                         target="1.6"
                                                         showWeaveInfo="true"
                                                         failonerror="true" />
-                                                    <copy todir="${aspectj.bin}" verbose="true" overwrite="true">
+                                                    <copy todir="${aspectj.bin}" verbose="false" overwrite="true">
                                                         <fileset dir="${aspectj.temp}">
                                                             <include name="**/*.class" />
                                                         </fileset>
