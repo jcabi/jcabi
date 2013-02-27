@@ -61,7 +61,7 @@ Deploying WAR projects to Amazon Elastic Beanstalk
         <configuration>
           <name>example</name>
           <bucket>webapps.example.com</bucket>
-          <key>example-${sign}{project.version}.war</key>
+          <key>${sign}{project.artifactId}-${sign}{project.version}.war</key>
           <template>example</template>
         </configuration>
         <executions>
