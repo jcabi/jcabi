@@ -29,6 +29,7 @@
  */
 package com.jcabi.manifests;
 
+import com.jcabi.aspects.Immutable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
