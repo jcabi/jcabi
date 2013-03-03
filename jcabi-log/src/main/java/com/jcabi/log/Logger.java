@@ -29,6 +29,9 @@
  */
 package com.jcabi.log;
 
+import com.jcabi.aspects.Immutable;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -79,6 +82,9 @@ import org.slf4j.LoggerFactory;
  * @version $Id$
  * @since 0.1
  */
+@Immutable
+@ToString
+@EqualsAndHashCode
 public final class Logger {
 
     /**

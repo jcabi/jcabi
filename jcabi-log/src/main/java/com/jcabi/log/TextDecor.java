@@ -31,6 +31,8 @@ package com.jcabi.log;
 
 import java.util.Formattable;
 import java.util.Formatter;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.lang.StringEscapeUtils;
 
 /**
@@ -46,6 +48,8 @@ import org.apache.commons.lang.StringEscapeUtils;
  * @version $Id$
  * @since 0.1.5
  */
+@ToString
+@EqualsAndHashCode(of = "object")
 final class TextDecor implements Formattable {
 
     /**

@@ -29,9 +29,12 @@
  */
 package com.jcabi.log;
 
+import com.jcabi.aspects.Immutable;
 import java.util.Formattable;
 import java.util.FormattableFlags;
 import java.util.Formatter;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Decorate time interval in nanoseconds.
@@ -49,6 +52,9 @@ import java.util.Formatter;
  * @version $Id$
  * @since 0.1
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = "nano")
 final class NanoDecor implements Formattable {
 
     /**

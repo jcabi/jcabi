@@ -31,6 +31,8 @@ package com.jcabi.log;
 
 import java.util.Formattable;
 import java.util.Formatter;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Format internal structure of an object.
@@ -39,6 +41,8 @@ import java.util.Formatter;
  * @version $Id$
  * @since 0.1
  */
+@ToString
+@EqualsAndHashCode(of = "object")
 final class ObjectDecor implements Formattable {
 
     /**

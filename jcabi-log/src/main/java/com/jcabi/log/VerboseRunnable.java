@@ -31,6 +31,8 @@ package com.jcabi.log;
 
 import java.util.concurrent.Callable;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Wrapper of {@link Runnable}, that logs all uncaught runtime exceptions.
@@ -55,6 +57,8 @@ import javax.validation.constraints.NotNull;
  * @since 0.1.3
  * @see VerboseThreads
  */
+@ToString
+@EqualsAndHashCode(of = { "origin", "swallow" })
 @SuppressWarnings("PMD.DoNotUseThreads")
 public final class VerboseRunnable implements Runnable {
 
@@ -119,14 +123,6 @@ public final class VerboseRunnable implements Runnable {
             }
         };
         this.swallow = swlw;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String toString() {
-        return this.origin.toString();
     }
 
     /**

@@ -33,6 +33,8 @@ import java.lang.reflect.Constructor;
 import java.util.Formattable;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Manager of all decors.
@@ -41,7 +43,11 @@ import java.util.concurrent.ConcurrentMap;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1
+ * @todo #143 The class has to be @Immutable, but with ConcurrentMap it's
+ *  impossible to do. Let's refactor.
  */
+@ToString
+@EqualsAndHashCode
 final class DecorsManager {
 
     /**

@@ -29,9 +29,12 @@
  */
 package com.jcabi.log;
 
+import com.jcabi.aspects.Immutable;
 import java.util.Formattable;
 import java.util.FormattableFlags;
 import java.util.Formatter;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Decorator of a secret text.
@@ -40,6 +43,9 @@ import java.util.Formatter;
  * @version $Id$
  * @since 0.1
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = "secret")
 final class SecretDecor implements Formattable {
 
     /**

@@ -37,6 +37,8 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.w3c.dom.Node;
 
 /**
@@ -46,6 +48,8 @@ import org.w3c.dom.Node;
  * @version $Id$
  * @since 0.1
  */
+@ToString
+@EqualsAndHashCode(of = "node")
 final class DomDecor implements Formattable {
 
     /**

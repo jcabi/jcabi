@@ -35,6 +35,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Utility class for getting {@code stdout} from a running process
@@ -49,12 +51,14 @@ import javax.validation.constraints.NotNull;
  * <p>The class throws an exception if the process returns a non-zero exit
  * code.
  *
- * <p>The class is immutable and thread-safe.
+ * <p>The class is thread-safe.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.5
  */
+@ToString
+@EqualsAndHashCode(of = "process")
 public final class VerboseProcess {
 
     /**

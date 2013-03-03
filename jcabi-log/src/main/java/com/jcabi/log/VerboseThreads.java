@@ -29,9 +29,12 @@
  */
 package com.jcabi.log;
 
+import com.jcabi.aspects.Loggable;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Convenient {@link ThreadFactory}, that logs all uncaught exceptions.
@@ -82,6 +85,8 @@ import javax.validation.constraints.NotNull;
  * @since 0.1.2
  * @see VerboseRunnable
  */
+@ToString
+@EqualsAndHashCode(of = { "group", "prefix", "number", "daemon", "priority" })
 @SuppressWarnings("PMD.DoNotUseThreads")
 public final class VerboseThreads implements ThreadFactory {
 
@@ -169,6 +174,7 @@ public final class VerboseThreads implements ThreadFactory {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public Thread newThread(final Runnable runnable) {
         final Thread thread = new Thread(
             this.group,

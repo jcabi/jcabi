@@ -29,6 +29,10 @@
  */
 package com.jcabi.log;
 
+import com.jcabi.aspects.Immutable;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 /**
  * Exception if some problem with decor.
  *
@@ -36,6 +40,9 @@ package com.jcabi.log;
  * @version $Id$
  * @since 0.1
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(callSuper = false)
 final class DecorException extends Exception {
 
     /**
