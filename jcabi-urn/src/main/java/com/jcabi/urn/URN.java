@@ -29,6 +29,7 @@
  */
 package com.jcabi.urn;
 
+import com.jcabi.aspects.Immutable;
 import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -36,6 +37,7 @@ import java.net.URLDecoder;
 import java.util.Map;
 import java.util.TreeMap;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 import org.apache.commons.lang.CharEncoding;
 import org.apache.commons.lang.StringUtils;
 
@@ -53,13 +55,13 @@ import org.apache.commons.lang.StringUtils;
  * It will become compliant in one of our future versions. Once it becomes
  * fully compliant this notice will be removed.
  *
- * <p>The class is immutable and thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.6
  * @see <a href="http://tools.ietf.org/html/rfc2141">RFC 2141</a>
  */
+@Immutable
+@EqualsAndHashCode
 @SuppressWarnings({ "PMD.TooManyMethods", "PMD.UseConcurrentHashMap" })
 public final class URN implements Comparable<URN>, Serializable {
 
@@ -94,7 +96,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * The URI.
      */
     @SuppressWarnings("PMD.BeanMembersShouldSerialize")
-    private final URI uri;
+    private final String uri;
 
     /**
      * Public ctor (for JAXB mostly) that creates an "empty" URN.
@@ -112,7 +114,7 @@ public final class URN implements Comparable<URN>, Serializable {
         if (!text.matches(URN.REGEX)) {
             throw new URISyntaxException(text, "Invalid format of URN");
         }
-        this.uri = new URI(text);
+        this.uri = text;
         this.validate();
     }
 
@@ -122,14 +124,12 @@ public final class URN implements Comparable<URN>, Serializable {
      * @param nss The namespace specific string
      */
     public URN(@NotNull final String nid, @NotNull final String nss) {
-        this.uri = URI.create(
-            String.format(
-                "%s%s%s%2$s%s",
-                URN.PREFIX,
-                URN.SEP,
-                nid,
-                URN.encode(nss)
-            )
+        this.uri = String.format(
+            "%s%s%s%2$s%s",
+            URN.PREFIX,
+            URN.SEP,
+            nid,
+            URN.encode(nss)
         );
         try {
             this.validate();
@@ -157,7 +157,7 @@ public final class URN implements Comparable<URN>, Serializable {
      */
     @Override
     public String toString() {
-        return this.uri.toString();
+        return this.uri;
     }
 
     /**
@@ -166,28 +166,6 @@ public final class URN implements Comparable<URN>, Serializable {
     @Override
     public int compareTo(final URN urn) {
         return this.uri.compareTo(urn.uri);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean equals(final Object obj) {
-        boolean equals;
-        if (obj == this) {
-            equals = true;
-        } else {
-            equals = this.uri.toString().equals(obj.toString());
-        }
-        return equals;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public int hashCode() {
-        return this.uri.hashCode();
     }
 
     /**
@@ -216,7 +194,7 @@ public final class URN implements Comparable<URN>, Serializable {
             matches = true;
         } else if (pattern.endsWith("*")) {
             final String body = pattern.substring(0, pattern.length() - 1);
-            matches = this.uri.toString().startsWith(body);
+            matches = this.uri.startsWith(body);
         }
         return matches;
     }
@@ -234,7 +212,7 @@ public final class URN implements Comparable<URN>, Serializable {
      * @return The URI
      */
     public URI toURI() {
-        return URI.create(this.uri.toString());
+        return URI.create(this.uri);
     }
 
     /**
@@ -332,7 +310,7 @@ public final class URN implements Comparable<URN>, Serializable {
      */
     private String segment(final int pos) {
         return StringUtils.splitPreserveAllTokens(
-            this.uri.toString(),
+            this.uri,
             URN.SEP,
             // @checkstyle MagicNumber (1 line)
             3

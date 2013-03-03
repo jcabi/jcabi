@@ -74,8 +74,6 @@ import org.apache.log4j.spi.LoggingEvent;
  *  &lt;artifactId&gt;jcabi-log&lt;/artifactId&gt;
  * &lt;/dependency&gt;</pre>
  *
- * <p>The class is immutable and thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.10

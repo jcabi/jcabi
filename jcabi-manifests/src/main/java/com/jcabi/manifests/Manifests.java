@@ -129,8 +129,6 @@ import org.apache.commons.lang.SerializationUtils;
  *  &lt;artifactId>jcabi-manifests&lt;/artifactId>
  * &lt;/dependency></pre>
  *
- * <p>The class is immutable and thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7
@@ -138,6 +136,7 @@ import org.apache.commons.lang.SerializationUtils;
  * @see <a href="http://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver</a>
  * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
  */
+@Immutable
 @SuppressWarnings("PMD.UseConcurrentHashMap")
 public final class Manifests {
 

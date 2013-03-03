@@ -137,7 +137,7 @@ public final class URNTest {
         final String text = "urn:foo:somespecificstring";
         final URN first = new URN(text);
         final URI second = new URI(text);
-        MatcherAssert.assertThat(first.equals(second), Matchers.is(true));
+        MatcherAssert.assertThat(first.equals(second), Matchers.is(false));
     }
 
     /**
@@ -148,7 +148,7 @@ public final class URNTest {
     public void comparesForEquivalenceWithString() throws Exception {
         final String text = "urn:foo:sometextastext";
         final URN first = new URN(text);
-        MatcherAssert.assertThat(first.equals(text), Matchers.is(true));
+        MatcherAssert.assertThat(first.equals(text), Matchers.is(false));
     }
 
     /**
