@@ -29,10 +29,13 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -42,6 +45,9 @@ import org.apache.commons.io.FileUtils;
  * @version $Id$
  * @since 0.5
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = "store")
 final class Cacerts {
 
     /**
@@ -62,7 +68,7 @@ final class Cacerts {
     /**
      * New location of the trust store.
      */
-    private final transient File store;
+    private final transient String store;
 
     /**
      * Public ctor.
@@ -70,14 +76,14 @@ final class Cacerts {
      * @throws IOException If fails
      */
     public Cacerts(@NotNull final File file) throws IOException {
-        this.store = file;
+        this.store = file.getAbsolutePath();
         final File prev = new File(
             String.format(
                 "%s/lib/security/cacerts",
                 System.getProperty("java.home")
             )
         );
-        FileUtils.copyFile(prev, this.store);
+        FileUtils.copyFile(prev, file);
         Logger.info(
             this,
             "Existing cacerts '%s' copied to '%s' (%s)",
@@ -94,8 +100,8 @@ final class Cacerts {
     public void imprt() throws IOException {
         final File keystore = new File(System.getProperty(Keystore.KEY));
         final String pwd = System.getProperty(Keystore.KEY_PWD);
-        new Keytool(this.store, Cacerts.STD_PWD).imprt(keystore, pwd);
-        System.setProperty(Cacerts.TRUST, this.store.getAbsolutePath());
+        new Keytool(new File(this.store), Cacerts.STD_PWD).imprt(keystore, pwd);
+        System.setProperty(Cacerts.TRUST, this.store);
         System.setProperty(Cacerts.TRUST_PWD, Cacerts.STD_PWD);
         Logger.info(
             this,

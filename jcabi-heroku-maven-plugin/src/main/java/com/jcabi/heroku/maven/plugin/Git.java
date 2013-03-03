@@ -70,7 +70,7 @@ final class Git {
     /**
      * Location of shell script.
      */
-    private final transient File script;
+    private final transient String script;
 
     /**
      * Public ctor.
@@ -88,9 +88,10 @@ final class Git {
         final File kfile = new File(temp, "heroku.pem");
         FileUtils.copyFile(key, kfile);
         this.chmod(kfile, Git.PERMS);
-        this.script = new File(temp, "git-ssh.sh");
+        final File file = new File(temp, "git-ssh.sh");
+        this.script = file.getAbsolutePath();
         FileUtils.writeStringToFile(
-            this.script,
+            new File(this.script),
             String.format(
                 // @checkstyle LineLength (1 line)
                 "set -x && %s -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i '%s' $@",
@@ -98,7 +99,7 @@ final class Git {
                 kfile.getAbsolutePath()
             )
         );
-        this.script.setExecutable(true);
+        file.setExecutable(true);
     }
 
     /**
@@ -118,7 +119,7 @@ final class Git {
         Logger.info(this, "%s:...", StringUtils.join(commands, " "));
         final ProcessBuilder builder = new ProcessBuilder(commands);
         builder.directory(dir);
-        builder.environment().put("GIT_SSH", this.script.getAbsolutePath());
+        builder.environment().put("GIT_SSH", this.script);
         return new VerboseProcess(builder).stdout();
     }
 

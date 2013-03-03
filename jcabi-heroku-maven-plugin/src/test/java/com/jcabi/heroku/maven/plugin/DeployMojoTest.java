@@ -125,11 +125,11 @@ public final class DeployMojoTest {
                     nspace
                 ),
                 XhtmlMatchers.hasXPath(
-                    "//ns1:artifactItem[ns1:groupId='fooo']",
+                    "//ns1:dependency[ns1:groupId='fooo']",
                     nspace
                 ),
                 XhtmlMatchers.hasXPath(
-                    "//ns1:artifactItem[ns1:outputDirectory='${basedir}']",
+                    "//ns1:configuration[ns1:outputDirectory='${basedir}']",
                     nspace
                 )
             )
