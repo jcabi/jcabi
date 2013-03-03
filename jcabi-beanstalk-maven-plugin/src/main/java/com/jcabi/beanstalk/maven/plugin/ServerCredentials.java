@@ -30,7 +30,11 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.auth.AWSCredentials;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
@@ -42,6 +46,8 @@ import org.apache.maven.settings.Settings;
  * @version $Id$
  * @since 0.3
  */
+@ToString
+@EqualsAndHashCode(of = { "key", "secret" })
 final class ServerCredentials implements AWSCredentials {
 
     /**
@@ -60,7 +66,8 @@ final class ServerCredentials implements AWSCredentials {
      * @param name Name of server ID
      * @throws MojoFailureException If some error
      */
-    public ServerCredentials(final Settings settings, final String name)
+    public ServerCredentials(@NotNull final Settings settings,
+        @NotNull final String name)
         throws MojoFailureException {
         final Server server = settings.getServer(name);
         if (server == null) {
@@ -103,6 +110,7 @@ final class ServerCredentials implements AWSCredentials {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public String getAWSAccessKeyId() {
         return this.key;
     }
@@ -111,6 +119,7 @@ final class ServerCredentials implements AWSCredentials {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public String getAWSSecretKey() {
         return this.secret;
     }

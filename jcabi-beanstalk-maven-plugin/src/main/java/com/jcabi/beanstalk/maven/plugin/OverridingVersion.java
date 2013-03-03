@@ -36,7 +36,10 @@ import com.amazonaws.services.elasticbeanstalk.model.CreateApplicationVersionRes
 import com.amazonaws.services.elasticbeanstalk.model.DeleteApplicationVersionRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersionsRequest;
 import com.amazonaws.services.elasticbeanstalk.model.DescribeApplicationVersionsResult;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 
 /**
  * EBT application version.
@@ -45,6 +48,7 @@ import com.jcabi.log.Logger;
  * @version $Id$
  * @since 0.3
  */
+@EqualsAndHashCode(of = { "client", "application", "bundle" })
 final class OverridingVersion implements Version {
 
     /**
@@ -68,8 +72,8 @@ final class OverridingVersion implements Version {
      * @param app Application name
      * @param bndl Bundle
      */
-    public OverridingVersion(final AWSElasticBeanstalk clnt, final String app,
-        final Bundle bndl) {
+    public OverridingVersion(@NotNull final AWSElasticBeanstalk clnt,
+        @NotNull final String app, @NotNull final Bundle bndl) {
         this.client = clnt;
         this.application = app;
         this.bundle = bndl;
@@ -87,6 +91,7 @@ final class OverridingVersion implements Version {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public String label() {
         if (this.exists()) {
             Logger.info(

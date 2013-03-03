@@ -29,6 +29,7 @@
  */
 package com.jcabi.heroku.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.RetryOnFailure;
 import com.jcabi.log.Logger;
 import com.jcabi.log.VerboseProcess;
@@ -37,6 +38,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 
@@ -48,6 +51,9 @@ import org.apache.commons.lang.StringUtils;
  * @since 0.4
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = "script")
 final class Git {
 
     /**
@@ -103,7 +109,7 @@ final class Git {
      * @checkstyle MagicNumber (2 lines)
      */
     @RetryOnFailure(delay = 3000, attempts = 2)
-    public String exec(final File dir, final String... args) {
+    public String exec(@NotNull final File dir, @NotNull final String... args) {
         final List<String> commands = new ArrayList<String>(args.length + 1);
         commands.add("git");
         for (String arg : args) {

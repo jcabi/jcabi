@@ -29,8 +29,12 @@
  */
 package com.jcabi.heroku.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
 import com.jcabi.log.Logger;
 import java.io.File;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Heroku platform.
@@ -39,6 +43,9 @@ import java.io.File;
  * @version $Id$
  * @since 0.4
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = { "git", "name" })
 final class Heroku {
 
     /**
@@ -56,7 +63,7 @@ final class Heroku {
      * @param engine Git engine
      * @param project Project name in Heroku
      */
-    public Heroku(final Git engine, final String project) {
+    public Heroku(@NotNull final Git engine, @NotNull final String project) {
         this.git = engine;
         this.name = project;
     }
@@ -66,7 +73,7 @@ final class Heroku {
      * @param path Where to copy
      * @return The repo
      */
-    public Repo clone(final File path) {
+    public Repo clone(@NotNull final File path) {
         this.git.exec(
             path.getParentFile(),
             "clone",

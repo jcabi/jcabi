@@ -30,6 +30,10 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.services.elasticbeanstalk.model.S3Location;
+import com.jcabi.aspects.Loggable;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Bundle with a WAR application.
@@ -62,6 +66,8 @@ interface Bundle {
     /**
      * Safe bundle, with a safe name.
      */
+    @ToString
+    @EqualsAndHashCode(of = "origin")
     final class Safe implements Bundle {
         /**
          * Original bundle.
@@ -71,13 +77,14 @@ interface Bundle {
          * Public ctor.
          * @param bundle Original bundle
          */
-        public Safe(final Bundle bundle) {
+        public Safe(@NotNull final Bundle bundle) {
             this.origin = bundle;
         }
         /**
          * {@inheritDoc}
          */
         @Override
+        @Loggable(Loggable.DEBUG)
         public String name() {
             return this.origin.name().replace("/", "_");
         }
@@ -85,6 +92,7 @@ interface Bundle {
          * {@inheritDoc}
          */
         @Override
+        @Loggable(Loggable.DEBUG)
         public S3Location location() {
             return this.origin.location();
         }
@@ -92,6 +100,7 @@ interface Bundle {
          * {@inheritDoc}
          */
         @Override
+        @Loggable(Loggable.DEBUG)
         public String etag() {
             return this.origin.etag();
         }

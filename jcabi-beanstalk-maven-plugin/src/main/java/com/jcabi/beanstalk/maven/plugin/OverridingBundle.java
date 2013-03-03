@@ -36,11 +36,15 @@ import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -52,6 +56,8 @@ import org.apache.commons.io.IOUtils;
  * @version $Id$
  * @since 0.3
  */
+@ToString
+@EqualsAndHashCode(of = { "client", "bucket", "key", "war" })
 final class OverridingBundle implements Bundle {
 
     /**
@@ -82,8 +88,9 @@ final class OverridingBundle implements Bundle {
      * @param file WAR file location
      * @checkstyle ParameterNumber (4 lines)
      */
-    public OverridingBundle(final AmazonS3 clnt, final String bckt,
-        final String label, final File file) {
+    public OverridingBundle(@NotNull final AmazonS3 clnt,
+        @NotNull final String bckt, @NotNull final String label,
+        @NotNull final File file) {
         this.client = clnt;
         this.bucket = bckt;
         this.key = label;
@@ -102,6 +109,7 @@ final class OverridingBundle implements Bundle {
      *  https://github.com/yegor256/jcabi/issues/105
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public S3Location location() {
         if (this.exists()) {
             Logger.info(
@@ -140,6 +148,7 @@ final class OverridingBundle implements Bundle {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public String name() {
         return this.key;
     }
@@ -148,6 +157,7 @@ final class OverridingBundle implements Bundle {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public String etag() {
         try {
             final InputStream stream = new FileInputStream(this.war);

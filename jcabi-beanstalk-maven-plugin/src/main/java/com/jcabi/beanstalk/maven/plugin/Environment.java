@@ -48,12 +48,15 @@ import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentRequest
 import com.amazonaws.services.elasticbeanstalk.model.TerminateEnvironmentResult;
 import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentRequest;
 import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentResult;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.net.URL;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -64,6 +67,7 @@ import org.apache.commons.io.IOUtils;
  * @since 0.3
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@EqualsAndHashCode(of = { "client", "eid" })
 @SuppressWarnings("PMD.TooManyMethods")
 final class Environment {
 
@@ -87,9 +91,8 @@ final class Environment {
      * @param clnt The client
      * @param idnt Environment ID
      */
-    public Environment(final AWSElasticBeanstalk clnt, final String idnt) {
-        assert clnt != null;
-        assert idnt != null;
+    public Environment(@NotNull final AWSElasticBeanstalk clnt,
+        @NotNull final String idnt) {
         this.client = clnt;
         this.eid = idnt;
         final EnvironmentDescription desc = this.description();
@@ -141,6 +144,7 @@ final class Environment {
      * Is it primary environment in the application?
      * @return TRUE if this environment is attached to the main CNAME
      */
+    @Loggable(Loggable.DEBUG)
     public boolean primary() {
         final EnvironmentDescription desc = this.description();
         final String prefix = String.format("%s.", desc.getApplicationName());
@@ -168,6 +172,7 @@ final class Environment {
      * Get environment name.
      * @return Name of it
      */
+    @Loggable(Loggable.DEBUG)
     public String name() {
         return this.description().getEnvironmentName();
     }
@@ -176,6 +181,7 @@ final class Environment {
      * Environment is in Green health?
      * @return TRUE if environment is in Green health
      */
+    @Loggable(Loggable.DEBUG)
     public boolean green() {
         return this.stable() && "Green".equals(this.description().getHealth());
     }
@@ -184,6 +190,7 @@ final class Environment {
      * Wait for stable state, and return TRUE if achieved or FALSE if not.
      * @return TRUE if environment is stable
      */
+    @Loggable(Loggable.DEBUG)
     public boolean stable() {
         return this.until(
             new Environment.Barrier() {
@@ -203,6 +210,7 @@ final class Environment {
      * Is it terminated?
      * @return Yes or no
      */
+    @Loggable(Loggable.DEBUG)
     public boolean terminated() {
         return this.stable()
             && "Terminated".equals(this.description().getStatus());
@@ -211,6 +219,7 @@ final class Environment {
     /**
      * Terminate environment.
      */
+    @Loggable(Loggable.DEBUG)
     public void terminate() {
         if (!this.stable()) {
             throw new DeploymentException(
@@ -244,6 +253,7 @@ final class Environment {
      * Get latest events.
      * @return Collection of events
      */
+    @Loggable(Loggable.DEBUG)
     public String[] events() {
         if (!this.stable()) {
             throw new DeploymentException(
@@ -273,6 +283,7 @@ final class Environment {
      * Tail log.
      * @return Full text of tail log from the environment
      */
+    @Loggable(Loggable.DEBUG)
     public String tail() {
         if (!this.stable()) {
             throw new DeploymentException(
@@ -331,6 +342,7 @@ final class Environment {
      * Update this environment with a new version.
      * @param version The version to update to
      */
+    @Loggable(Loggable.DEBUG)
     public void update(final Version version) {
         final UpdateEnvironmentResult res = this.client.updateEnvironment(
             new UpdateEnvironmentRequest()

@@ -37,10 +37,13 @@ import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsRequest
 import com.amazonaws.services.elasticbeanstalk.model.DescribeEnvironmentsResult;
 import com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription;
 import com.amazonaws.services.elasticbeanstalk.model.SwapEnvironmentCNAMEsRequest;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Random;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 
 /**
  * EBT application.
@@ -50,6 +53,7 @@ import java.util.Random;
  * @since 0.3
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
+@EqualsAndHashCode(of = { "client", "name" })
 @SuppressWarnings("PMD.TooManyMethods")
 final class Application {
 
@@ -68,9 +72,8 @@ final class Application {
      * @param clnt The client
      * @param app Application name
      */
-    public Application(final AWSElasticBeanstalk clnt, final String app) {
-        assert clnt != null;
-        assert app != null;
+    public Application(@NotNull final AWSElasticBeanstalk clnt,
+        @NotNull final String app) {
         this.client = clnt;
         this.name = app;
         Logger.info(
@@ -84,6 +87,7 @@ final class Application {
      * Clean it up beforehand.
      * @param wipe Kill all existing environments no matter what?
      */
+    @Loggable(Loggable.DEBUG)
     public void clean(final boolean wipe) {
         for (Environment env : this.environments()) {
             if (env.primary() && env.green() && !wipe) {
@@ -127,6 +131,7 @@ final class Application {
      * Get primary environment or throws a runtime exception if it is absent.
      * @return Primary environment
      */
+    @Loggable(Loggable.DEBUG)
     public Environment primary() {
         Environment primary = null;
         for (Environment env : this.environments()) {
@@ -150,6 +155,7 @@ final class Application {
      * This application has a primary environment?
      * @return TRUE if it exists
      */
+    @Loggable(Loggable.DEBUG)
     public boolean hasPrimary() {
         boolean has = false;
         for (Environment env : this.environments()) {
@@ -165,7 +171,8 @@ final class Application {
      * Activate candidate environment by swap of CNAMEs.
      * @param candidate The candidate to make a primary environment
      */
-    public void swap(final Environment candidate) {
+    @Loggable(Loggable.DEBUG)
+    public void swap(@NotNull final Environment candidate) {
         final Environment primary = this.primary();
         this.client.swapEnvironmentCNAMEs(
             new SwapEnvironmentCNAMEsRequest()
@@ -203,7 +210,9 @@ final class Application {
      * @param template EBT configuration template
      * @return The environment
      */
-    public Environment candidate(final Version version, final String template) {
+    @Loggable(Loggable.DEBUG)
+    public Environment candidate(@NotNull final Version version,
+        @NotNull final String template) {
         final CreateEnvironmentRequest request = this.suggest();
         Logger.info(
             this,

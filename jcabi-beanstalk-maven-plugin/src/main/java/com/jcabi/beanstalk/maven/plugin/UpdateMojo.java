@@ -30,6 +30,7 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.jcabi.log.Logger;
+import javax.validation.constraints.NotNull;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
 
@@ -48,8 +49,8 @@ public final class UpdateMojo extends AbstractMojo {
      * {@inheritDoc}
      */
     @Override
-    protected void exec(final Application app, final Version version,
-        final String template) {
+    protected void exec(@NotNull final Application app,
+        @NotNull final Version version, @NotNull final String template) {
         Environment primary;
         if (app.hasPrimary()) {
             primary = app.primary();

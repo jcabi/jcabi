@@ -29,10 +29,14 @@
  */
 package com.jcabi.heroku.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -42,6 +46,9 @@ import org.apache.commons.io.FileUtils;
  * @version $Id$
  * @since 0.4
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = { "git", "path" })
 final class Repo {
 
     /**
@@ -59,7 +66,7 @@ final class Repo {
      * @param engine Git engine
      * @param file Location of repository
      */
-    public Repo(final Git engine, final File file) {
+    public Repo(@NotNull final Git engine, @NotNull final File file) {
         this.git = engine;
         this.path = file;
     }
@@ -70,7 +77,7 @@ final class Repo {
      * @param content Content of the file to write (overwrite)
      * @throws IOException If fails
      */
-    public void add(final String name, final String content)
+    public void add(@NotNull final String name, @NotNull final String content)
         throws IOException {
         final File file = new File(this.path, name);
         FileUtils.writeStringToFile(file, content);
