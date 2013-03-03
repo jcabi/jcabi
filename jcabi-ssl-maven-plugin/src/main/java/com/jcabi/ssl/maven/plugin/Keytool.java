@@ -29,6 +29,8 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import com.jcabi.log.VerboseProcess;
 import java.io.File;
@@ -37,6 +39,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -46,12 +50,15 @@ import org.apache.commons.io.FileUtils;
  * @version $Id$
  * @since 0.5
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(of = { "keystore", "password" })
 final class Keytool {
 
     /**
      * Keystore location.
      */
-    private final transient File keystore;
+    private final transient String keystore;
 
     /**
      * Keystore password.
@@ -64,7 +71,7 @@ final class Keytool {
      * @param pwd The password
      */
     public Keytool(final File store, final String pwd) {
-        this.keystore = store;
+        this.keystore = store.getAbsolutePath();
         this.password = pwd;
     }
 
@@ -73,6 +80,7 @@ final class Keytool {
      * @return The content of it
      * @throws IOException If fails
      */
+    @Loggable(Loggable.DEBUG)
     public String list() throws IOException {
         return new VerboseProcess(this.proc("-list", "-v")).stdout();
     }
@@ -81,8 +89,8 @@ final class Keytool {
      * Generate key.
      * @throws IOException If fails
      */
+    @Loggable(Loggable.DEBUG)
     public void genkey() throws IOException {
-        final long start = System.currentTimeMillis();
         final Process proc = this.proc(
             "-genkeypair",
             "-alias",
@@ -108,10 +116,9 @@ final class Keytool {
         new VerboseProcess(proc).stdout();
         Logger.info(
             this,
-            "Keystore created in '%s' (%s) in %[ms]s",
+            "Keystore created in '%s' (%s)",
             this.keystore,
-            FileUtils.byteCountToDisplaySize(this.keystore.length()),
-            System.currentTimeMillis() - start
+            FileUtils.byteCountToDisplaySize(this.keystore.length())
         );
     }
 
@@ -121,6 +128,7 @@ final class Keytool {
      * @param pwd The password there
      * @throws IOException If fails
      */
+    @Loggable(Loggable.DEBUG)
     public void imprt(final File file, final String pwd) throws IOException {
         new VerboseProcess(
             this.proc(
@@ -130,7 +138,7 @@ final class Keytool {
                 "-srcstorepass",
                 pwd,
                 "-destkeystore",
-                this.keystore.getAbsolutePath(),
+                this.keystore,
                 "-deststorepass",
                 this.password
             )
@@ -160,7 +168,7 @@ final class Keytool {
         cmds.add("-storepass");
         cmds.add(this.password);
         cmds.add("-keystore");
-        cmds.add(this.keystore.getAbsolutePath());
+        cmds.add(this.keystore);
         return new ProcessBuilder(cmds);
     }
 

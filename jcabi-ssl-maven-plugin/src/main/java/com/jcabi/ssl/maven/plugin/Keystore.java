@@ -29,11 +29,14 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
+import com.jcabi.aspects.Immutable;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 
 /**
  * Keystore abstraction.
@@ -42,6 +45,8 @@ import javax.validation.constraints.NotNull;
  * @version $Id$
  * @since 0.5
  */
+@Immutable
+@EqualsAndHashCode(of = "password")
 final class Keystore {
 
     /**
@@ -98,6 +103,7 @@ final class Keystore {
      * Is it active now in the JVM?
      * @return TRUE if JVM is using our keystore
      */
+    @Loggable(Loggable.DEBUG)
     public boolean isActive() {
         final String pwd = System.getProperty(Keystore.KEY_PWD);
         return pwd != null && pwd.equals(this.password);
@@ -108,6 +114,7 @@ final class Keystore {
      * @param file The file to use
      * @throws IOException If fails
      */
+    @Loggable(Loggable.DEBUG)
     public void activate(final File file) throws IOException {
         file.getParentFile().mkdirs();
         file.delete();
@@ -121,6 +128,7 @@ final class Keystore {
      * Populate given properties with data.
      * @param props The properties
      */
+    @Loggable(Loggable.DEBUG)
     public void populate(final Properties props) {
         final String[] names = new String[] {
             Keystore.KEY,
