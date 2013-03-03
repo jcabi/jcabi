@@ -79,6 +79,15 @@
                     <name>with-settings</name>
                 </property>
             </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>${item.getGroupId()}</groupId>
+                    <artifactId>${item.getArtifactId()}</artifactId>
+                    <version>${item.getVersion()}</version>
+                    <classifier>${item.getClassifier()}</classifier>
+                    <type>${item.getType()}</type>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
@@ -100,7 +109,6 @@
                                             <artifactItem>
                                                 <groupId>${item.getGroupId()}</groupId>
                                                 <artifactId>${item.getArtifactId()}</artifactId>
-                                                <version>${item.getVersion()}</version>
                                                 <classifier>${item.getClassifier()}</classifier>
                                                 <type>${item.getType()}</type>
                                                 <overWrite>true</overWrite>
