@@ -31,7 +31,14 @@
  -->
 <document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <body>
-        <release version="0.7.4" date="16 Dec 2012" description="">
+        <release version="0.7.10" date="3 Mar 2013" description="copy-dependencies instead of copy">
+            <action dev="yegor" issue="145" type="fix">
+                "copy-dependencies" goal is used with maven-dependency-plugin
+                instead of "copy", which solves the problem with
+                timestamped snapshot artifacts explained in the ticket
+            </action>
+        </release>
+        <release version="0.7.4" date="16 Dec 2012" description="resource filtering fixed">
             <action dev="yegor" issue="115" type="fix">
                 De-deployment failure fixed by correct filtering
                 of heroku text resources.

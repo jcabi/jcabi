@@ -5,8 +5,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>${project.getGroupId()}</groupId>
-    <artifactId>${project.getArtifactId()}</artifactId>
-    <version>${project.getVersion()}</version>
+    <artifactId>${project.getArtifactId()}-pom</artifactId>
+    <version>1.0</version>
     <name>${timestamp}</name>
     <packaging>pom</packaging>
     <repositories>
@@ -107,8 +107,10 @@
                                     <localRepositoryDirectory>${dollar}{basedir}/local-repo</localRepositoryDirectory>
                                     <overWriteReleases>true</overWriteReleases>
                                     <overWriteSnapshots>true</overWriteSnapshots>
-                                    <excludeTransitive>true</excludeTransitive>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
                                     <outputDirectory>${dollar}{basedir}</outputDirectory>
+                                    <failOnMissingClassifierArtifact>true</failOnMissingClassifierArtifact>
+                                    <stripVersion>true</stripVersion>
                                 </configuration>
                             </execution>
                         </executions>
