@@ -29,6 +29,8 @@
  */
 package org.slf4j.impl;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.plugin.logging.Log;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.spi.LoggerFactoryBinder;
@@ -59,6 +61,8 @@ import org.slf4j.spi.LoggerFactoryBinder;
  * @since 0.1.6
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
+@ToString
+@EqualsAndHashCode(of = "loggers")
 public final class StaticLoggerBinder implements LoggerFactoryBinder {
 
     /**

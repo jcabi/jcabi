@@ -29,6 +29,8 @@
  */
 package org.slf4j.impl;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.plugin.logging.Log;
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
@@ -49,6 +51,8 @@ import org.slf4j.helpers.MessageFormatter;
  * @since 0.1.6
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
+@ToString
+@EqualsAndHashCode(callSuper = false)
 @SuppressWarnings("PMD.TooManyMethods")
 final class Slf4jAdapter extends MarkerIgnoringBase {
 
