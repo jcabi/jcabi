@@ -29,58 +29,50 @@
  */
 package com.jcabi.aether;
 
-import com.jcabi.log.Logger;
+import com.jcabi.aspects.Immutable;
+import com.jcabi.aspects.Loggable;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.sonatype.aether.transfer.AbstractTransferListener;
 import org.sonatype.aether.transfer.TransferEvent;
 
 /**
  * Logger of transfer events.
  *
- * <p>The class is immutable and thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  */
+@Immutable
+@ToString
+@EqualsAndHashCode(callSuper = false)
 final class LogTransferListener extends AbstractTransferListener {
 
     /**
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.WARN)
     public void transferFailed(final TransferEvent event) {
-        Logger.info(
-            this,
-            "#transferFailed('%s'): %s",
-            event.getResource(),
-            event.getException().getMessage()
-        );
+        // nothing to do
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.WARN)
     public void transferCorrupted(final TransferEvent event) {
-        Logger.warn(
-            this,
-            "#transferCorrupted('%s'): %[exception]s",
-            event.getResource(),
-            event.getException()
-        );
+        // nothing to do
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.INFO)
     public void transferSucceeded(final TransferEvent event) {
-        Logger.info(
-            this,
-            "#transferSucceeded('%s'): %d bytes",
-            event.getResource(),
-            event.getTransferredBytes()
-        );
+        // nothing to do
     }
 
 }

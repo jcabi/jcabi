@@ -29,7 +29,10 @@
  */
 package com.jcabi.aether;
 
-import com.jcabi.log.Logger;
+import com.jcabi.aspects.Immutable;
+import com.jcabi.aspects.Loggable;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.wagon.Wagon;
 import org.kuali.maven.wagon.S3Wagon;
 import org.sonatype.aether.connector.wagon.WagonProvider;
@@ -37,24 +40,25 @@ import org.sonatype.aether.connector.wagon.WagonProvider;
 /**
  * Builder of {@link RepositorySystem} class.
  *
- * <p>The class is immutable and possibly NOT thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  */
+@Immutable
+@ToString
+@EqualsAndHashCode
 public final class AmazonWagonProvider implements WagonProvider {
 
     /**
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public Wagon lookup(final String hint) throws Exception {
         Wagon wagon = null;
         if ("s3".equals(hint)) {
             wagon = new S3Wagon();
         }
-        Logger.debug(this, "#lookup('%s'): %s found", hint, wagon);
         return wagon;
     }
 
@@ -62,8 +66,9 @@ public final class AmazonWagonProvider implements WagonProvider {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(Loggable.DEBUG)
     public void release(final Wagon wagon) {
-        Logger.debug(this, "#release(%s): done", wagon);
+        // nothing to do
     }
 
 }

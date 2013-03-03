@@ -29,7 +29,10 @@
  */
 package com.jcabi.aether;
 
-import com.jcabi.log.Logger;
+import com.jcabi.aspects.Immutable;
+import com.jcabi.aspects.Loggable;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.repository.internal.DefaultArtifactDescriptorReader;
 import org.apache.maven.repository.internal.DefaultVersionRangeResolver;
 import org.apache.maven.repository.internal.DefaultVersionResolver;
@@ -50,18 +53,20 @@ import org.sonatype.aether.spi.connector.RepositoryConnectorFactory;
 /**
  * Builder of {@link RepositorySystem} class.
  *
- * <p>The class is immutable and possibly NOT thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  */
+@Immutable
+@ToString
+@EqualsAndHashCode
 final class RepositorySystemBuilder {
 
     /**
      * Build it.
      * @return The repo system.
      */
+    @Loggable(Loggable.DEBUG)
     public RepositorySystem build() {
         final DefaultServiceLocator locator = new DefaultServiceLocator();
         locator.addService(
@@ -105,7 +110,6 @@ final class RepositorySystemBuilder {
         if (system == null) {
             throw new IllegalStateException("failed to get service");
         }
-        Logger.debug(this, "#build(): %[type]s located", system);
         return system;
     }
 

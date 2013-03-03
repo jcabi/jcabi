@@ -29,12 +29,15 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.repository.internal.MavenRepositorySystemSession;
 import org.sonatype.aether.RepositorySystem;
@@ -63,20 +66,23 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  * org.apache.maven:maven-core:3.0.3
  * </pre>
  *
- * <p>The class is immutable and thread-safe.
- *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  * @see <a href="http://sonatype.github.com/sonatype-aether/apidocs/overview-tree.html">Aether 1.13.1 JavaDoc</a>
+ * @todo #143 This class should be @Immutable, but RemoteRepository is
+ *  not immutable. Let's create a new class to encapsulate all necessary
+ *  properties from RemoteRepository.
  */
+@ToString
+@EqualsAndHashCode
 public final class Aether {
 
     /**
-     * The project.
+     * Remote project repositories.
      */
-    private final transient MavenProject project;
+    private final transient RemoteRepository[] remotes;
 
     /**
      * Location of local repo.
@@ -90,7 +96,8 @@ public final class Aether {
      * @param repo Local repository location (file path)
      */
     public Aether(@NotNull final MavenProject prj, @NotNull final String repo) {
-        this.project = prj;
+        this.remotes = prj.getRemoteProjectRepositories()
+            .toArray(new RemoteRepository[] {});
         this.localRepo = repo;
     }
 
@@ -107,6 +114,7 @@ public final class Aether {
      *  I have no idea. That's why this workaround. Sometime later we should
      *  do a proper testing and reproduce this defect in a test.
      */
+    @Loggable(Loggable.DEBUG)
     public List<Artifact> resolve(@NotNull final Artifact root,
         @NotNull final String scope)
         throws DependencyResolutionException {
@@ -182,8 +190,7 @@ public final class Aether {
     private CollectRequest request(final Dependency root) {
         final CollectRequest request = new CollectRequest();
         request.setRoot(root);
-        for (RemoteRepository repo
-            : this.project.getRemoteProjectRepositories()) {
+        for (RemoteRepository repo : this.remotes) {
             if (!repo.getProtocol().matches("https?|file|s3")) {
                 Logger.warn(
                     this,
