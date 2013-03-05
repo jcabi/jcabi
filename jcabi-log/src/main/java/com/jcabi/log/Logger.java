@@ -85,6 +85,7 @@ import org.slf4j.LoggerFactory;
 @Immutable
 @ToString
 @EqualsAndHashCode
+@SuppressWarnings("PMD.TooManyMethods")
 public final class Logger {
 
     /**
@@ -114,6 +115,16 @@ public final class Logger {
     /**
      * Protocol one message, with {@code TRACE} priority level.
      * @param source The source of the logging operation
+     * @param msg The text message to be logged
+     * @since 0.7.11
+     */
+    public static void trace(final Object source, final String msg) {
+        Logger.trace(source, msg, new Object[] {});
+    }
+
+    /**
+     * Protocol one message, with {@code TRACE} priority level.
+     * @param source The source of the logging operation
      * @param msg The text message to be logged, with meta-tags
      * @param args List of arguments
      */
@@ -124,6 +135,16 @@ public final class Logger {
         if (Logger.isTraceEnabled(source)) {
             Logger.logger(source).trace(Logger.format(msg, args));
         }
+    }
+
+    /**
+     * Protocol one message, with {@code DEBUG} priority level.
+     * @param source The source of the logging operation
+     * @param msg The text message to be logged, with meta-tags
+     * @since 0.7.11
+     */
+    public static void debug(final Object source, final String msg) {
+        Logger.debug(source, msg, new Object[] {});
     }
 
     /**
@@ -144,6 +165,16 @@ public final class Logger {
     /**
      * Protocol one message, with {@code INFO} priority level.
      * @param source The source of the logging operation
+     * @param msg The text message to be logged
+     * @since 0.7.11
+     */
+    public static void info(final Object source, final String msg) {
+        Logger.info(source, msg, new Object[] {});
+    }
+
+    /**
+     * Protocol one message, with {@code INFO} priority level.
+     * @param source The source of the logging operation
      * @param msg The text message to be logged, with meta-tags
      * @param args List of arguments
      */
@@ -159,6 +190,16 @@ public final class Logger {
     /**
      * Protocol one message, with {@code WARN} priority level.
      * @param source The source of the logging operation
+     * @param msg The text message to be logged
+     * @since 0.7.11
+     */
+    public static void warn(final Object source, final String msg) {
+        Logger.warn(source, msg, new Object[] {});
+    }
+
+    /**
+     * Protocol one message, with {@code WARN} priority level.
+     * @param source The source of the logging operation
      * @param msg The text message to be logged, with meta-tags
      * @param args List of arguments
      */
@@ -169,6 +210,16 @@ public final class Logger {
         if (Logger.isWarnEnabled(source)) {
             Logger.logger(source).warn(Logger.format(msg, args));
         }
+    }
+
+    /**
+     * Protocol one message, with {@code ERROR} priority level.
+     * @param source The source of the logging operation
+     * @param msg The text message to be logged
+     * @since 0.7.11
+     */
+    public static void error(final Object source, final String msg) {
+        Logger.error(source, msg, new Object[] {});
     }
 
     /**
