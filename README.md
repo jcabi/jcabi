@@ -7,6 +7,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #147: methods can be annotated with `@NotNull` (`jcabi-aspects`)
  * #145: fixed defect with SNAPSHOT artifacts (`jcabi-heroku-maven-plugin`)
  * #143: Lombok annotations used in almost every class
  * #134: APT and AspectJ work together (`jcabi-aspects`)
