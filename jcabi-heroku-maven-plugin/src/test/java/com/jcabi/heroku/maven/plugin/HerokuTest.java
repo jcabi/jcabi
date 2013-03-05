@@ -70,16 +70,16 @@ public final class HerokuTest {
      */
     @Test
     public void clonesSimpleHerokuRepository() throws Exception {
-        final File key = this.temp.newFile("key.pem");
+        final File key = this.temp.newFile();
         FileUtils.writeStringToFile(
             key,
             IOUtils.toString(this.getClass().getResource("test-key.pem"))
         );
         try {
             new Heroku(
-                new Git(key, this.temp.newFolder("temp")),
+                new Git(key, this.temp.newFolder()),
                 "jcabi"
-            ).clone(this.temp.newFolder("heroku"));
+            ).clone(this.temp.newFolder());
             Assert.fail("exception was expected");
         } catch (IllegalArgumentException ex) {
             MatcherAssert.assertThat(

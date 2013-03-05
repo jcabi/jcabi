@@ -68,15 +68,15 @@ public final class GitTest {
      */
     @Test
     public void clonesSimpleGitRepository() throws Exception {
-        final File key = this.temp.newFile("key.pem");
+        final File key = this.temp.newFile();
         FileUtils.writeStringToFile(key, "");
-        final File folder = this.temp.newFolder("temp-folder");
+        final File folder = this.temp.newFolder();
         final Git git = new Git(key, folder);
         MatcherAssert.assertThat(
             git.exec(
                 folder.getParentFile(),
                 "init",
-                this.temp.newFolder("for-git").getPath()
+                this.temp.newFolder().getPath()
             ),
             Matchers.containsString("Initialized empty Git repository")
         );

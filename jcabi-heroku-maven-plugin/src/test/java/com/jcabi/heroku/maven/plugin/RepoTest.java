@@ -68,21 +68,25 @@ public final class RepoTest {
      */
     @Test
     public void addsFilesToSimpleGitRepo() throws Exception {
-        final File key = this.temp.newFile("key.pem");
+        final File key = this.temp.newFile();
         FileUtils.writeStringToFile(key, "");
-        final File folder = this.temp.newFolder("temp-folder");
+        final File folder = this.temp.newFolder();
         final Git git = new Git(key, folder);
         git.exec(
-            folder.getParentFile(),
+            this.temp.newFolder(),
             "init",
-            this.temp.newFolder("for-git").getPath()
+            folder.getPath()
         );
         final Repo repo = new Repo(git, folder);
         final String name = "extra.txt";
-        repo.add(name, "text content");
+        repo.add(name, "\u0433 text content!");
         MatcherAssert.assertThat(
             new File(folder, name).exists(),
             Matchers.is(true)
+        );
+        MatcherAssert.assertThat(
+            FileUtils.readFileToString(new File(folder, name)),
+            Matchers.startsWith("\u0433 text content")
         );
     }
 

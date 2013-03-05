@@ -59,7 +59,7 @@ final class Repo {
     /**
      * Location of repository.
      */
-    private final transient File path;
+    private final transient String path;
 
     /**
      * Public ctor.
@@ -68,7 +68,7 @@ final class Repo {
      */
     public Repo(@NotNull final Git engine, @NotNull final File file) {
         this.git = engine;
-        this.path = file;
+        this.path = file.getAbsolutePath();
     }
 
     /**
@@ -79,9 +79,10 @@ final class Repo {
      */
     public void add(@NotNull final String name, @NotNull final String content)
         throws IOException {
-        final File file = new File(this.path, name);
+        final File dir = new File(this.path);
+        final File file = new File(dir, name);
         FileUtils.writeStringToFile(file, content);
-        this.git.exec(this.path, "add", name);
+        this.git.exec(dir, "add", name);
         Logger.info(
             this,
             "File %s updated, %[size]s",
@@ -94,15 +95,16 @@ final class Repo {
      * Commit changes and push.
      */
     public void commit() {
-        this.git.exec(this.path, "status");
+        final File dir = new File(this.path);
+        this.git.exec(dir, "status");
         this.git.exec(
-            this.path,
+            dir,
             "commit",
             "-am",
             new Date().toString()
         );
         this.git.exec(
-            this.path,
+            dir,
             "push",
             "origin",
             "master"
