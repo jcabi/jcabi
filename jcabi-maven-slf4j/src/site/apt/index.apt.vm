@@ -60,6 +60,11 @@ public class MyMojo extends AbstractMojo {
 
   The <<<Logger.info()>>> call will go to Maven Log through SLF4J.
 
+  Since 0.7.12 log stream is forwarded to
+  {{{http://maven.apache.org/ref/3.0.5/maven-plugin-api/apidocs/org/apache/maven/plugin/logging/SystemStreamLog.html}<<<SystemStreamLog>>>}}
+  if <<<StaticLoggerBinder.setMavenLog()>>> is not called. In earlier versions
+  a runtime exception was thrown.
+
   The only dependency you need
   (you can also download
   {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-maven-slf4j/${project.version}/jcabi-maven-slf4j-${project.version}.jar}<<<jcabi-maven-slf4j-${project.version}.jar>>>}}
