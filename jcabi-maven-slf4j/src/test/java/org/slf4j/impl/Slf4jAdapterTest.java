@@ -104,7 +104,7 @@ public final class Slf4jAdapterTest {
     @Test
     public void worksWithoutMavenLog() throws Exception {
         final Slf4jAdapter logger = new Slf4jAdapter();
-        logger.trace("trace-test message");
+        logger.info("this message should be visible in system stream");
     }
 
 }

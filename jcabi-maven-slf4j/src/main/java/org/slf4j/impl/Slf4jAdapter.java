@@ -32,6 +32,7 @@ package org.slf4j.impl;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.apache.maven.plugin.logging.Log;
+import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;
@@ -338,10 +339,10 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * @return The log from Maven plugin
      */
     private Log log() {
-        if (this.mlog == null) {
-            throw new IllegalStateException(
-                "initialize StaticLoggerBinder with #setMavenLog() first"
-            );
+        synchronized (Slf4jAdapter.class) {
+            if (this.mlog == null) {
+                this.mlog = new SystemStreamLog();
+            }
         }
         return this.mlog;
     }
