@@ -141,9 +141,6 @@
             repository (if you're registered there). It also skips
             default deployment plugin.
             @see http://www.jcabi.com/jcabi-parent/profile-sonatype.html
-            At the moment sonatype plugin is not used, since it doesn't work
-            and we should close and release manually:
-            https://github.com/sonatype/nexus-maven-plugins/issues/25
             -->
             <id>sonatype</id>
             <build>
@@ -152,7 +149,7 @@
                         <plugin>
                             <artifactId>maven-deploy-plugin</artifactId>
                             <configuration>
-                                <skip>false</skip>
+                                <skip>true</skip>
                             </configuration>
                         </plugin>
                     </plugins>
@@ -197,24 +194,24 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <!-- @see https://github.com/sonatype/nexus-maven-plugins/tree/master/nexus-staging-maven-plugin -->
+                        <!-- @see http://www.sonatype.com/books/nexus-book/reference/staging-sect-deployment.html -->
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.0.2</version>
+                        <version>1.3</version>
                         <extensions>true</extensions>
+                        <configuration>
+                            <serverId>oss.sonatype.org</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <description>${project.version}</description>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>jcabi-deploy-to-sonatype</id>
-                                <phase>never-deploy</phase>
+                                <phase>deploy</phase>
                                 <goals>
                                     <goal>deploy</goal>
                                     <goal>release</goal>
                                 </goals>
-                                <configuration>
-                                    <serverId>oss.sonatype.org</serverId>
-                                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                                    <description>${project.version}</description>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
