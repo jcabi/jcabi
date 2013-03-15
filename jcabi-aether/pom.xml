@@ -33,7 +33,7 @@
     <parent>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi</artifactId>
-        <version>0.7.14</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>jcabi-aether</artifactId>
     <packaging>jar</packaging>
@@ -143,6 +143,12 @@
             <artifactId>sisu-inject-plexus</artifactId>
             <version>2.3.3</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.sonatype.sisu</groupId>
+                    <artifactId>sisu-inject-bean</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     <build>
