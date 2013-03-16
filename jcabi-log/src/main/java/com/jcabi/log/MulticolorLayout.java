@@ -113,16 +113,16 @@ public final class MulticolorLayout extends PatternLayout {
     /**
      * Colors of levels.
      */
-    private static final ConcurrentMap<Level, String> LEVELS =
-        new ConcurrentHashMap<Level, String>() {
+    private static final ConcurrentMap<String, String> LEVELS =
+        new ConcurrentHashMap<String, String>() {
             private static final long serialVersionUID = 0x7526FF78EEDFC465L;
             {
-                this.put(Level.TRACE, "2;33");
-                this.put(Level.DEBUG, "2;37");
-                this.put(Level.INFO, "0;37");
-                this.put(Level.WARN, "0;33");
-                this.put(Level.ERROR, "0;31");
-                this.put(Level.FATAL, "0;35");
+                this.put(Level.TRACE.toString(), "2;33");
+                this.put(Level.DEBUG.toString(), "2;37");
+                this.put(Level.INFO.toString(), "0;37");
+                this.put(Level.WARN.toString(), "0;33");
+                this.put(Level.ERROR.toString(), "0;31");
+                this.put(Level.FATAL.toString(), "0;35");
             }
         };
 
@@ -163,7 +163,7 @@ public final class MulticolorLayout extends PatternLayout {
             String.format(
                 "%s%sm",
                 MulticolorLayout.CSI,
-                MulticolorLayout.LEVELS.get(event.getLevel())
+                MulticolorLayout.LEVELS.get(event.getLevel().toString())
             )
         );
     }
