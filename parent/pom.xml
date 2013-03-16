@@ -1004,27 +1004,25 @@
                                 </goals>
                                 <configuration>
                                     <source><![CDATA[
-                                        if (project.packaging.equals('pom')) {
-                                            log.info('No need to version packages in POM project')
-                                            return
-                                        }
                                         log.info('Versioning Java packages:')
                                         def dest = new File(project.build.outputDirectory)
                                         def src = new File(project.build.sourceDirectory)
                                         def name = project.groupId + '-' + project.artifactId + '-' + project.packaging + '.txt'
+                                        def text = project.version +
+                                            System.getProperty('line.separator') +
+                                            project.properties['buildNumber'] +
+                                            System.getProperty('line.separator') +
+                                            new Date()
                                         src.eachDirRecurse {
+                                            if (it.listFiles().findAll { it.name ==~ /.*\\.java/ }.isEmpty()) {
+                                                return
+                                            }
                                             def version = new File(
                                                 new File(dest, it.canonicalPath.substring(src.canonicalPath.length() + 1)),
                                                 name
                                             )
                                             version.parentFile.mkdirs()
-                                            version.write(
-                                                project.version
-                                                + System.getProperty('line.separator')
-                                                + project.properties['buildNumber']
-                                                + System.getProperty('line.separator')
-                                                + new Date()
-                                            )
+                                            version.write(text)
                                             log.info('file ' + version.canonicalPath + ' added')
                                         }
                                     ]]></source>
