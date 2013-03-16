@@ -977,6 +977,64 @@
                 </pluginManagement>
             </build>
         </profile>
+        <profile>
+            <!--
+            For every Java package it creates a VERSION.txt file in
+            "src/main/resources" directory. This is done in order to help
+            with identification of currently used version of a package.
+            -->
+            <id>jcabi-version-files</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/src/main/java</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>gmaven-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>jcabi-versioning-packages</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <source><![CDATA[
+                                        if (project.packaging.equals('pom')) {
+                                            log.info('No need to version packages in POM project')
+                                            return
+                                        }
+                                        log.info('Versioning Java packages:')
+                                        def dest = new File(project.build.outputDirectory)
+                                        def src = new File(project.build.sourceDirectory)
+                                        def name = project.groupId + '-' + project.artifactId + '-' + project.packaging + '.txt'
+                                        src.eachDirRecurse {
+                                            def version = new File(
+                                                new File(dest, it.canonicalPath.substring(src.canonicalPath.length() + 1)),
+                                                name
+                                            )
+                                            version.parentFile.mkdirs()
+                                            version.write(
+                                                project.version
+                                                + System.getProperty('line.separator')
+                                                + project.properties['buildNumber']
+                                                + System.getProperty('line.separator')
+                                                + new Date()
+                                            )
+                                            log.info('file ' + version.canonicalPath + ' added')
+                                        }
+                                    ]]></source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
     <dependencyManagement>
         <dependencies>
