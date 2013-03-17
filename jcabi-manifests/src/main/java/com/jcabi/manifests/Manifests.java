@@ -135,7 +135,7 @@ import org.apache.commons.lang.SerializationUtils;
  * @since 0.7
  * @see <a href="http://download.oracle.com/javase/1,5.0/docs/guide/jar/jar.html#JAR%20Manifest">JAR Manifest</a>
  * @see <a href="http://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver</a>
- * @link <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
+ * @see <a href="http://www.jcabi.com/jcabi-manifests/index.html">www.jcabi.com/jcabi-manifests</a>
  */
 @Immutable
 @SuppressWarnings("PMD.UseConcurrentHashMap")

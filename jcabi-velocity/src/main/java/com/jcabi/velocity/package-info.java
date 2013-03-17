@@ -42,6 +42,6 @@
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
- * @link <a href="http://www.jcabi.com/jcabi-velocity">project website</a>
+ * @see <a href="http://www.jcabi.com/jcabi-velocity">project website</a>
  */
 package com.jcabi.velocity;

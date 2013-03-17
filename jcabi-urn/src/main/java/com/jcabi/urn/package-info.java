@@ -42,6 +42,6 @@
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.6
- * @link <a href="http://www.jcabi.com/jcabi-urn">project website</a>
+ * @see <a href="http://www.jcabi.com/jcabi-urn">project website</a>
  */
 package com.jcabi.urn;

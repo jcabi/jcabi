@@ -42,6 +42,6 @@
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.4
- * @link <a href="http://www.jcabi.com/jcabi-heroku-maven-plugin">project website</a>
+ * @see <a href="http://www.jcabi.com/jcabi-heroku-maven-plugin">project website</a>
  */
 package com.jcabi.heroku.maven.plugin;

@@ -42,6 +42,6 @@
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
- * @link <a href="http://www.jcabi.com/jcabi-maven-slf4j">project website</a>
+ * @see <a href="http://www.jcabi.com/jcabi-maven-slf4j">project website</a>
  */
 package org.slf4j.impl;

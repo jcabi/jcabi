@@ -55,9 +55,9 @@ import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.6
- * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html">Velocity User Guide</a>
- * @link <a href="http://velocity.apache.org/engine/releases/velocity-1.7/developer-guide.html">Velocity Developer Guide</a>
- * @link <a href="http://velocity.apache.org/engine/devel/apidocs/org/apache/velocity/slf4j/Slf4jLogChute.html">Slf4jLogChute</a>
+ * @see <a href="http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html">Velocity User Guide</a>
+ * @see <a href="http://velocity.apache.org/engine/releases/velocity-1.7/developer-guide.html">Velocity Developer Guide</a>
+ * @see <a href="http://velocity.apache.org/engine/devel/apidocs/org/apache/velocity/slf4j/Slf4jLogChute.html">Slf4jLogChute</a>
  */
 public final class VelocityPage {
 
