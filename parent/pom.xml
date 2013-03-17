@@ -1206,6 +1206,16 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <!-- XML APIs. -->
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <!-- 1.3.04 is the latest version, don't upgrade it unless
+                you explicitly check it in Maven Central. Version 2.0.2 is published
+                there, but it's outdated (June 2007), while 1.3.04 is the latest.
+                -->
+                <version>[1.3.04]</version>
+            </dependency>
+            <dependency>
                 <!--
                 We are using JUnit framework for unit test organization
                 and management. This framework is the most stable and mature
