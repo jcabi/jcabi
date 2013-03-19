@@ -7,6 +7,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #171: Java packages are versioned with text file (`parent`)
  * #151: silently ignore absence of Maven Log (`jcabi-maven-slf4j`)
  * #147: methods can be annotated with `@NotNull` (`jcabi-aspects`)
  * #145: fixed defect with SNAPSHOT artifacts (`jcabi-heroku-maven-plugin`)

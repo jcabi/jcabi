@@ -31,6 +31,17 @@
  -->
 <document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <body>
+        <release version="0.7.15" date="19 Mar 2013" description="versioning of Java packages">
+            <action dev="yegor" issue="171" type="add">
+                Every Java package, in compilation time, gets a text
+                file with all details of JAR/WAR package version and
+                date of packaging
+            </action>
+            <action dev="yegor" issue="168" type="add">
+                xml-apis:xml-apis dependency added to dependencyManagement
+                section
+            </action>
+        </release>
         <release version="0.7.5" date="17 Dec 2012" description="dependencies re-organized"/>
         <release version="0.7.3" date="11 Dec 2012" description="more profiles introduced and documented"/>
         <release version="0.7.2" date="3 Dec 2012" description="junit:junit-dep 4.11"/>
