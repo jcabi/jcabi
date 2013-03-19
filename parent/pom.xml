@@ -34,7 +34,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <version>0.7.15</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>parent</name>
     <description>com.jcabi:parent</description>
@@ -112,7 +112,7 @@
         later in the file
         -->
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-        <jcabi.version>0.7.15</jcabi.version>
+        <jcabi.version>1.0-SNAPSHOT</jcabi.version>
     </properties>
     <repositories>
         <!--
@@ -998,7 +998,7 @@
                         <executions>
                             <execution>
                                 <id>jcabi-versioning-packages</id>
-                                <phase>generate-resources</phase>
+                                <phase>prepare-package</phase>
                                 <goals>
                                     <goal>execute</goal>
                                 </goals>
@@ -1007,6 +1007,10 @@
                                         log.info('Versioning Java packages:')
                                         def dest = new File(project.build.outputDirectory)
                                         def src = new File(project.build.sourceDirectory)
+                                        if (!src.exists()) {
+                                            return
+                                        }
+                                        dest.parentFile.mkdirs()
                                         def name = project.groupId + '-' + project.artifactId + '-' + project.packaging + '.txt'
                                         def text = project.version +
                                             System.getProperty('line.separator') +
