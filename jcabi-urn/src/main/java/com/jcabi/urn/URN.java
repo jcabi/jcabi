@@ -38,8 +38,8 @@ import java.util.Map;
 import java.util.TreeMap;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
-import org.apache.commons.lang.CharEncoding;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.CharEncoding;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Uniform Resource Name (URN) as in

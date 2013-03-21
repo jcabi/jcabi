@@ -51,7 +51,7 @@ import javax.servlet.ServletContext;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.SerializationUtils;
+import org.apache.commons.lang3.SerializationUtils;
 
 /**
  * Static reader of {@code META-INF/MANIFEST.MF} files.
