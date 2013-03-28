@@ -50,12 +50,18 @@ import lombok.ToString;
  * Sometimes it's very important to swallow exceptions. Otherwise an entire
  * thread may get stuck (like in the example above).
  *
+ * <p>Since version 0.7.16, besides just swallowing exceptions
+ * the class also clears the interrupted status. That means that the thread
+ * with the runnable can be interrupted but will never expose its interrupted
+ * status.
+ *
  * <p>This class is thread-safe.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.1.3
  * @see VerboseThreads
+ * @link <a href="http://www.ibm.com/developerworks/java/library/j-jtp05236/index.html">Java theory and practice: Dealing with InterruptedException</a>
  */
 @ToString
 @EqualsAndHashCode(of = { "origin", "swallow" })
@@ -139,13 +145,7 @@ public final class VerboseRunnable implements Runnable {
             this.origin.run();
         // @checkstyle IllegalCatch (1 line)
         } catch (RuntimeException ex) {
-            if (this.swallow) {
-                Logger.warn(
-                    this,
-                    "swallowed exception: %[exception]s",
-                    ex
-                );
-            } else {
+            if (!this.swallow) {
                 Logger.warn(
                     this,
                     "escalated exception: %[exception]s",
@@ -153,21 +153,36 @@ public final class VerboseRunnable implements Runnable {
                 );
                 throw ex;
             }
+            Logger.warn(
+                this,
+                "swallowed exception: %[exception]s",
+                ex
+            );
         // @checkstyle IllegalCatch (1 line)
         } catch (Error error) {
-            if (this.swallow) {
-                Logger.error(
-                    this,
-                    "swallowed error: %[exception]s",
-                    error
-                );
-            } else {
+            if (!this.swallow) {
                 Logger.error(
                     this,
                     "escalated error: %[exception]s",
                     error
                 );
                 throw error;
+            }
+            Logger.error(
+                this,
+                "swallowed error: %[exception]s",
+                error
+            );
+        }
+        if (this.swallow) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException ex) {
+                Logger.debug(
+                    this,
+                    "interrupted status cleared of %s",
+                    Thread.currentThread().getName()
+                );
             }
         }
     }

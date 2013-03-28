@@ -30,6 +30,7 @@
 package com.jcabi.log;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -143,6 +144,57 @@ public final class VerboseRunnableTest {
             verbose,
             Matchers.hasToString(Matchers.containsString(text))
         );
+    }
+
+    /**
+     * VerboseRunnable can swallow interrupted exceptions.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void swallowsInterruptedExceptions() throws Exception {
+        final Thread thread = new Thread(
+            new VerboseRunnable(
+                new Callable<Boolean>() {
+                    @Override
+                    public Boolean call() throws Exception {
+                        TimeUnit.MINUTES.sleep(1);
+                        return null;
+                    }
+                },
+                true
+            )
+        );
+        thread.start();
+        MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
+        thread.interrupt();
+        TimeUnit.SECONDS.sleep(1);
+        MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
+    }
+
+    /**
+     * VerboseRunnable can swallow interrupted exceptions, with Runnable.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void swallowsInterruptedExceptionsWithRunnable() throws Exception {
+        final Thread thread = new Thread(
+            new VerboseRunnable(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        while (!Thread.interrupted()) {
+                            assert true;
+                        }
+                    }
+                },
+                true
+            )
+        );
+        thread.start();
+        MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
+        thread.interrupt();
+        TimeUnit.SECONDS.sleep(1);
+        MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
     }
 
 }
