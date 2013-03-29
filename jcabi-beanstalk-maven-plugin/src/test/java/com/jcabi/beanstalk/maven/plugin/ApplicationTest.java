@@ -51,16 +51,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.commons.io.FileUtils;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assume;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Application}.

@@ -30,14 +30,11 @@
 package com.jcabi.ssl.maven.plugin;
 
 import java.io.File;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link Keystore}.

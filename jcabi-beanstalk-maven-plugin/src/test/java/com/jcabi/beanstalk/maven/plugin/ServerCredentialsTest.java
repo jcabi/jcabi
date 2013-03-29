@@ -30,14 +30,11 @@
 package com.jcabi.beanstalk.maven.plugin;
 
 import com.amazonaws.auth.AWSCredentials;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link ServerCredentials}.
