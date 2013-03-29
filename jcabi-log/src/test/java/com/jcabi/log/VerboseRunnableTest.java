@@ -167,7 +167,7 @@ public final class VerboseRunnableTest {
         thread.start();
         MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
         thread.interrupt();
-        TimeUnit.SECONDS.sleep(1);
+        thread.join();
         MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
     }
 
@@ -193,7 +193,7 @@ public final class VerboseRunnableTest {
         thread.start();
         MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
         thread.interrupt();
-        TimeUnit.SECONDS.sleep(1);
+        thread.join();
         MatcherAssert.assertThat(thread.isInterrupted(), Matchers.is(false));
     }
 
