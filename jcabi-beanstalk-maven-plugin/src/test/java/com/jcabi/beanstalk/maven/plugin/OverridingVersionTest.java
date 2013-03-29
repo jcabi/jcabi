@@ -51,14 +51,6 @@ import org.slf4j.impl.StaticLoggerBinder;
 public final class OverridingVersionTest {
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * OverridingVersion can override a version in AWS EBT.
      * @throws Exception If something is wrong
      */

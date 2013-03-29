@@ -47,14 +47,6 @@ import org.slf4j.impl.StaticLoggerBinder;
 public final class ServerCredentialsTest {
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * ServerCredentials can fetch credentials from Maven settings.
      * @throws Exception If something is wrong
      */

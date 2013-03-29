@@ -55,14 +55,6 @@ public final class RepoTest {
     public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * Repo can add files to Git repo.
      * @throws Exception If something is wrong
      */

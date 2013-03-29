@@ -29,10 +29,7 @@
  */
 package com.jcabi.ssl.maven.plugin;
 
-import org.apache.maven.plugin.logging.SystemStreamLog;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * Test case for {@link KeygenMojo} (more detailed test is in maven invoker).
@@ -40,14 +37,6 @@ import org.slf4j.impl.StaticLoggerBinder;
  * @version $Id$
  */
 public final class KeygenMojoTest {
-
-    /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
 
     /**
      * KeygenMojo can skip execution when flag is set.

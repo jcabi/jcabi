@@ -27,58 +27,26 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.heroku.maven.plugin;
+package com.jcabi.maven.plugin;
 
-import java.io.File;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.maven.plugin.logging.SystemStreamLog;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
-import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Test case for {@link Heroku}.
+ * Test case for {@link VersionalizeMojo}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-public final class HerokuTest {
+public final class VersionalizeMojoTest {
 
     /**
-     * Temporary folder.
-     * @checkstyle VisibilityModifier (3 lines)
-     */
-    @Rule
-    public transient TemporaryFolder temp = new TemporaryFolder();
-
-    /**
-     * Heroku can execute simple git command.
+     * KeygenMojo can skip execution when flag is set.
      * @throws Exception If something is wrong
      */
     @Test
-    public void clonesSimpleHerokuRepository() throws Exception {
-        final File key = this.temp.newFile();
-        FileUtils.writeStringToFile(
-            key,
-            IOUtils.toString(this.getClass().getResource("test-key.pem"))
-        );
-        try {
-            new Heroku(
-                new Git(key, this.temp.newFolder()),
-                "jcabi"
-            ).clone(this.temp.newFolder());
-            Assert.fail("exception was expected");
-        } catch (IllegalArgumentException ex) {
-            MatcherAssert.assertThat(
-                ex.getMessage(),
-                Matchers.containsString("Cloning into ")
-            );
-        }
+    public void skipsExecutionWhenRequired() throws Exception {
+        final VersionalizeMojo mojo = new VersionalizeMojo();
+        mojo.setSkip(true);
+        mojo.execute();
     }
 
 }

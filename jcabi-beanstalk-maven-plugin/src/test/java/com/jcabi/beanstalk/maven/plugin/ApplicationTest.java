@@ -89,14 +89,6 @@ public final class ApplicationTest {
     public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * Application can create a new environment.
      * @throws Exception If something is wrong
      */

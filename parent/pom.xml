@@ -983,7 +983,7 @@
             "src/main/resources" directory. This is done in order to help
             with identification of currently used version of a package.
             -->
-            <id>jcabi-version-files</id>
+            <id>jcabi-versionalize-packages</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/main/java</exists>
@@ -992,45 +992,15 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.codehaus.gmaven</groupId>
-                        <artifactId>gmaven-plugin</artifactId>
-                        <version>1.5</version>
+                        <groupId>com.jcabi</groupId>
+                        <artifactId>jcabi-maven-plugin</artifactId>
+                        <version>${jcabi.version}</version>
                         <executions>
                             <execution>
-                                <id>jcabi-versioning-packages</id>
-                                <phase>prepare-package</phase>
+                                <id>jcabi-versionalize-packages</id>
                                 <goals>
-                                    <goal>execute</goal>
+                                    <goal>versionalize</goal>
                                 </goals>
-                                <configuration>
-                                    <source><![CDATA[
-                                        log.info('Versioning Java packages:')
-                                        def dest = new File(project.build.outputDirectory)
-                                        def src = new File(project.build.sourceDirectory)
-                                        if (!src.exists()) {
-                                            return
-                                        }
-                                        dest.parentFile.mkdirs()
-                                        def name = project.groupId + '-' + project.artifactId + '-' + project.packaging + '.txt'
-                                        def text = project.version +
-                                            System.getProperty('line.separator') +
-                                            project.properties['buildNumber'] +
-                                            System.getProperty('line.separator') +
-                                            new Date()
-                                        src.eachDirRecurse {
-                                            if (it.listFiles().findAll { it.name ==~ /.*\\.java/ }.isEmpty()) {
-                                                return
-                                            }
-                                            def version = new File(
-                                                new File(dest, it.canonicalPath.substring(src.canonicalPath.length() + 1)),
-                                                name
-                                            )
-                                            version.parentFile.mkdirs()
-                                            version.write(text)
-                                            log.info('file ' + version.canonicalPath + ' added')
-                                        }
-                                    ]]></source>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>

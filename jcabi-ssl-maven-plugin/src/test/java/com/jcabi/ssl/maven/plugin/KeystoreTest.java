@@ -54,14 +54,6 @@ public final class KeystoreTest {
     public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * Keystore can generate a file.
      * @throws Exception If something is wrong
      */

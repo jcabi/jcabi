@@ -54,14 +54,6 @@ public final class CacertsTest {
     public transient TemporaryFolder temp = new TemporaryFolder();
 
     /**
-     * Configure logging.
-     */
-    @BeforeClass
-    public static void initLog() {
-        StaticLoggerBinder.getSingleton().setMavenLog(new SystemStreamLog());
-    }
-
-    /**
      * Cacerts can generate a keystore.
      * @throws Exception If something is wrong
      */
