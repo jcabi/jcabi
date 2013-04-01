@@ -83,7 +83,7 @@ public final class VersionalizeMojo extends AbstractMojo {
      */
     @MojoParameter(
         expression = "${buildNumber}",
-        required = true,
+        required = false,
         readonly = false,
         description = "Build number"
     )
