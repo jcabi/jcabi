@@ -118,12 +118,27 @@ public final class Aether {
     public List<Artifact> resolve(@NotNull final Artifact root,
         @NotNull final String scope)
         throws DependencyResolutionException {
+        final DependencyFilter filter =
+            DependencyFilterUtils.classpathFilter(scope);
+        return this.resolve(root, scope, filter);
+    }
+
+    /**
+     * List of transitive deps of the artifact.
+     * @param root The artifact to work with
+     * @param scope The scope to work with ("runtime", "test", etc.)
+     * @param filter The dependency filter to work with
+     * @return The list of dependencies
+     * @throws DependencyResolutionException If can't fetch it
+     */
+    @Loggable(Loggable.DEBUG)
+    public List<Artifact> resolve(@NotNull final Artifact root,
+        @NotNull final String scope, @NotNull final DependencyFilter filter)
+        throws DependencyResolutionException {
         final Dependency rdep = new Dependency(root, scope);
         final CollectRequest crq = this.request(rdep);
         final RepositorySystem system = new RepositorySystemBuilder().build();
         final List<Artifact> deps = new LinkedList<Artifact>();
-        final DependencyFilter filter =
-            DependencyFilterUtils.classpathFilter(scope);
         if (filter != null) {
             deps.addAll(
                 this.fetch(
@@ -244,3 +259,4 @@ public final class Aether {
     }
 
 }
+
