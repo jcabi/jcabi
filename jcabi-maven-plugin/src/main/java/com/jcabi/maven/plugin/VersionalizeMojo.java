@@ -173,14 +173,16 @@ public final class VersionalizeMojo extends AbstractMojo {
             if (VersionalizeMojo.files(dir, "*.java").isEmpty()) {
                 continue;
             }
-            final String suffix = dir.getCanonicalPath().substring(
-                src.getCanonicalPath().length() + 1
+            final File ddir = new File(
+                dest,
+                dir.getCanonicalPath().substring(
+                   src.getCanonicalPath().length() + 1
+                )
             );
-            final File ddir = new File(dest, suffix);
             final File version = new File(ddir, name);
             version.getParentFile().mkdirs();
             FileUtils.write(version, this.text(ddir));
-            Logger.info(this, "File %s added", suffix);
+            Logger.info(this, "File %s added", version);
         }
     }
 
