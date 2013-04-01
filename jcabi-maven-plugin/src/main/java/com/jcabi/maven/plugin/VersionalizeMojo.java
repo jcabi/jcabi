@@ -136,7 +136,7 @@ public final class VersionalizeMojo extends AbstractMojo {
 
     /**
      * Create and return a text of the version file.
-     * @param dir The directory
+     * @param dir The destination directory
      * @return The text
      */
     private String text(@NotNull final File dir) {
@@ -176,9 +176,10 @@ public final class VersionalizeMojo extends AbstractMojo {
             final String suffix = dir.getCanonicalPath().substring(
                 src.getCanonicalPath().length() + 1
             );
-            final File version = new File(new File(dest, suffix), name);
+            final File ddir = new File(dest, suffix);
+            final File version = new File(ddir, name);
             version.getParentFile().mkdirs();
-            FileUtils.write(version, this.text(dir));
+            FileUtils.write(version, this.text(ddir));
             Logger.info(this, "File %s added", suffix);
         }
     }

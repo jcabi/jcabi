@@ -29,4 +29,6 @@
  */
 
 def file = new File(basedir, 'target/classes/com/jcabi/foo/com-jcabi-jcabi-test-jar.txt')
-assert file.text.contains('12345')
+assert file.text.contains('Project Version: 1.0')
+assert file.text.contains('Sample.class')
+assert file.text.contains('Sample.txt')
