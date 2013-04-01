@@ -120,7 +120,7 @@ public final class Aether {
         throws DependencyResolutionException {
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
-        return resolve(root, scope, filter);
+        return this.resolve(root, scope, filter);
     }
 
     /**
@@ -259,3 +259,4 @@ public final class Aether {
     }
 
 }
+
