@@ -176,7 +176,7 @@ public final class VersionalizeMojo extends AbstractMojo {
             final File ddir = new File(
                 dest,
                 dir.getCanonicalPath().substring(
-                   src.getCanonicalPath().length() + 1
+                    src.getCanonicalPath().length() + 1
                 )
             );
             final File version = new File(ddir, name);
