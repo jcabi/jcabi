@@ -571,105 +571,35 @@
             <build>
                 <plugins>
                     <plugin>
-                        <!--
-                        This magic code below solves the conflict between APT
-                        and AspectJ explained here: http://stackoverflow.com/questions/3660547
-                        APT changes are applied during compilation and AspectJ
-                        plugin (if being used) would destroy them and re-compile
-                        the sources. Thus, we would loose the entire effect of
-                        APT processing. The solution is to use binary-weaving
-                        instead of re-compilation from source. Such feature is
-                        not supported by maven-aspectj-plugin, that's why we should
-                        use ANT and call AspectJ ANT task, which is flexible enough
-                        to allow us to weave binaries.
-                        -->
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.aspectj</groupId>
-                                <artifactId>aspectjtools</artifactId>
-                                <version>1.7.2</version>
-                            </dependency>
-                        </dependencies>
+                        <groupId>com.jcabi</groupId>
+                        <artifactId>jcabi-maven-plugin</artifactId>
                         <executions>
-                            <execution>
-                                <id>jcabi-prepare-ajc</id>
-                                <phase>generate-resources</phase>
-                                <configuration>
-                                    <target>
-                                        <echo file="${project.build.directory}/ajc-ant.xml"><![CDATA[
-                                            <project name="main" basedir="." default="main">
-                                                <path id="classpath">
-                                                    <pathelement path="${cp.scope}" />
-                                                    <pathelement path="${cp.plugin}" />
-                                                </path>
-                                                <mkdir dir="${aspectj.bin}"/>
-                                                <mkdir dir="${aspectj.temp}"/>
-                                                <taskdef classname="org.aspectj.tools.ant.taskdefs.AjcTask"
-                                                    name="iajc" classpathref="classpath" />
-                                                <target name="main">
-                                                    <iajc sourceroots="${aspectj.src}"
-                                                        inpath="${aspectj.bin}"
-                                                        destdir="${aspectj.temp}"
-                                                        classpathref="classpath"
-                                                        aspectPath="${aspectj.libs}"
-                                                        warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
-                                                        debug="false"
-                                                        time="true"
-                                                        verbose="false"
-                                                        source="1.6"
-                                                        target="1.6"
-                                                        showWeaveInfo="true"
-                                                        failonerror="true" />
-                                                    <copy todir="${aspectj.bin}" verbose="false" overwrite="true">
-                                                        <fileset dir="${aspectj.temp}">
-                                                            <include name="**/*.class" />
-                                                        </fileset>
-                                                    </copy>
-                                                </target>
-                                            </project>
-                                        ]]></echo>
-                                    </target>
-                                </configuration>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                            </execution>
                             <execution>
                                 <id>jcabi-ajc-compile</id>
                                 <phase>process-classes</phase>
-                                <configuration>
-                                    <target>
-                                        <property name="aspectj.src" value="${project.basedir}/src/main/aspect" />
-                                        <property name="aspectj.bin" value="${project.build.outputDirectory}" />
-                                        <property name="aspectj.temp" value="${project.build.directory}/aspectj-classes" />
-                                        <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
-                                        <property name="cp.scope" refid="maven.compile.classpath" />
-                                        <property name="cp.plugin" refid="maven.plugin.classpath" />
-                                        <ant antfile="${project.build.directory}/ajc-ant.xml" />
-                                    </target>
-                                </configuration>
                                 <goals>
-                                    <goal>run</goal>
+                                    <goal>ajc</goal>
                                 </goals>
+                                <configuration>
+                                    <directory>${project.build.outputDirectory}</directory>
+                                    <aspectDirectories>
+                                        <directory>${project.basedir}/src/main/aspect</directory>
+                                    </aspectDirectories>
+                                </configuration>
                             </execution>
                             <execution>
                                 <id>ajc-test-compile</id>
                                 <phase>process-test-classes</phase>
-                                <configuration>
-                                    <target unless="maven.test.skip">
-                                        <property name="aspectj.src" value="${project.basedir}/src/main/aspect" />
-                                        <property name="aspectj.bin" value="${project.build.testOutputDirectory}" />
-                                        <property name="aspectj.temp" value="${project.build.directory}/aspectj-test-classes" />
-                                        <property name="aspectj.libs" value="${maven.dependency.com.jcabi.jcabi-aspects.jar.path}" />
-                                        <property name="cp.scope" refid="maven.test.classpath" />
-                                        <property name="cp.plugin" refid="maven.plugin.classpath" />
-                                        <ant antfile="${project.build.directory}/ajc-ant.xml" />
-                                    </target>
-                                </configuration>
                                 <goals>
-                                    <goal>run</goal>
+                                    <goal>ajc</goal>
                                 </goals>
+                                <configuration>
+                                    <directory>${project.build.testOutputDirectory}</directory>
+                                    <aspectDirectories>
+                                        <directory>${project.basedir}/src/main/aspect</directory>
+                                        <directory>${project.basedir}/src/test/aspect</directory>
+                                    </aspectDirectories>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -1325,6 +1255,26 @@
         </plugins>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-maven-plugin</artifactId>
+                    <version>${jcabi.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-ssl-maven-plugin</artifactId>
+                    <version>${jcabi.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-heroku-maven-plugin</artifactId>
+                    <version>${jcabi.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-beanstalk-maven-plugin</artifactId>
+                    <version>${jcabi.version}</version>
+                </plugin>
                 <plugin>
                     <!--
                     Code coverage tool.

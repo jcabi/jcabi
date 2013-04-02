@@ -32,19 +32,19 @@ package com.jcabi.maven.plugin;
 import org.junit.Test;
 
 /**
- * Test case for {@link VersionalizeMojo}.
+ * Test case for {@link AjcMojo}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-public final class VersionalizeMojoTest {
+public final class AjcMojoTest {
 
     /**
-     * VersionalizeMojo can skip execution when flag is set.
+     * AjcMojo can skip execution when flag is set.
      * @throws Exception If something is wrong
      */
     @Test
     public void skipsExecutionWhenRequired() throws Exception {
-        final VersionalizeMojo mojo = new VersionalizeMojo();
+        final AjcMojo mojo = new AjcMojo();
         mojo.execute();
     }
 

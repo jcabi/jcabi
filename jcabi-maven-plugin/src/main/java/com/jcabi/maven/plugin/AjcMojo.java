@@ -55,17 +55,17 @@ import org.jfrog.maven.annomojo.annotations.MojoPhase;
 import org.slf4j.impl.StaticLoggerBinder;
 
 /**
- * Versionalize Java packages.
+ * AspectJ compile CLASS files.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7.16
  */
-@MojoGoal("versionalize")
-@MojoPhase("prepare-package")
+@MojoGoal("ajc")
+@MojoPhase("process-classes")
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public final class VersionalizeMojo extends AbstractMojo {
+public final class AjcMojo extends AbstractMojo {
 
     /**
      * Maven project.
@@ -79,15 +79,24 @@ public final class VersionalizeMojo extends AbstractMojo {
     private transient MavenProject project;
 
     /**
-     * Build number.
+     * Source directory.
      */
     @MojoParameter(
-        expression = "${buildNumber}",
-        required = false,
+        required = true,
         readonly = false,
-        description = "Build number"
+        description = "Source directory with .java files"
     )
-    private transient String buildNumber;
+    private transient String sourceDirectory;
+
+    /**
+     * Directory with compiled files (they should be there already).
+     */
+    @MojoParameter(
+        required = true,
+        readonly = false,
+        description = "Destination directory with .class files"
+    )
+    private transient String outputDirectory;
 
     /**
      * {@inheritDoc}
@@ -96,19 +105,20 @@ public final class VersionalizeMojo extends AbstractMojo {
     public void execute() throws MojoFailureException {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
         final File src = new File(this.project.getBuild().getSourceDirectory());
-        if (!src.exists()) {
-            Logger.info(this, "source directory '%s' is absent", src);
-            return;
-        }
-        final File dest =
-            new File(this.project.getBuild().getOutputDirectory());
-        dest.mkdirs();
-        Logger.info(this, "Versionalizing %s directory", dest);
-        try {
-            this.versionalize(src, dest);
-        } catch (IOException ex) {
-            throw new MojoFailureException("failed to versionalize", ex);
-        }
+                                                <target name="main">
+                                                    <iajc sourceroots="${aspectj.src}"
+                                                        inpath="${aspectj.bin}"
+                                                        destdir="${aspectj.temp}"
+                                                        classpathref="classpath"
+                                                        aspectPath="${aspectj.libs}"
+                                                        warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
+                                                        debug="false"
+                                                        time="true"
+                                                        verbose="false"
+                                                        source="1.6"
+                                                        target="1.6"
+                                                        showWeaveInfo="true"
+                                                        failonerror="true" />
     }
 
     /**
