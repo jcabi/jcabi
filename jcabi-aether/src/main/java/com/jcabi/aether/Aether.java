@@ -77,6 +77,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  */
 @ToString
 @EqualsAndHashCode
+@Loggable(Loggable.DEBUG)
 public final class Aether {
 
     /**
@@ -114,12 +115,16 @@ public final class Aether {
      *  I have no idea. That's why this workaround. Sometime later we should
      *  do a proper testing and reproduce this defect in a test.
      */
-    @Loggable(Loggable.DEBUG)
     public List<Artifact> resolve(@NotNull final Artifact root,
         @NotNull final String scope)
         throws DependencyResolutionException {
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
+        if (filter == null) {
+            throw new IllegalStateException(
+                String.format("failed to create a filter for '%s'", scope)
+            );
+        }
         return this.resolve(root, scope, filter);
     }
 
@@ -131,7 +136,6 @@ public final class Aether {
      * @return The list of dependencies
      * @throws DependencyResolutionException If can't fetch it
      */
-    @Loggable(Loggable.DEBUG)
     public List<Artifact> resolve(@NotNull final Artifact root,
         @NotNull final String scope, @NotNull final DependencyFilter filter)
         throws DependencyResolutionException {
@@ -139,15 +143,13 @@ public final class Aether {
         final CollectRequest crq = this.request(rdep);
         final RepositorySystem system = new RepositorySystemBuilder().build();
         final List<Artifact> deps = new LinkedList<Artifact>();
-        if (filter != null) {
-            deps.addAll(
-                this.fetch(
-                    system,
-                    this.session(system),
-                    new DependencyRequest(crq, filter)
-                )
-            );
-        }
+        deps.addAll(
+            this.fetch(
+                system,
+                this.session(system),
+                new DependencyRequest(crq, filter)
+            )
+        );
         return deps;
     }
 

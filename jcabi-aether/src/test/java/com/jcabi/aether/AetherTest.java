@@ -91,7 +91,7 @@ public final class AetherTest {
      */
     @Test
     public void findsAndLoadsArtifacts() throws Exception {
-        final File local = this.temp.newFolder("local-repository");
+        final File local = this.temp.newFolder();
         final Aether aether = new Aether(this.project(), local.getPath());
         final Collection<DefaultArtifact> artifacts =
             new LinkedList<DefaultArtifact>(
@@ -129,7 +129,7 @@ public final class AetherTest {
      */
     @Test
     public void resolvesArtifactsInParallelThreads() throws Exception {
-        final File local = this.temp.newFolder("local-repo-2");
+        final File local = this.temp.newFolder();
         final Aether aether = new Aether(this.project(), local.getPath());
         final int threads = Runtime.getRuntime().availableProcessors() * 5;
         final Artifact artifact = new DefaultArtifact(
@@ -171,7 +171,7 @@ public final class AetherTest {
      */
     @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullMavenProject() throws Exception {
-        new Aether(null, this.temp.newFolder("local-repository-77").getPath());
+        new Aether(null, this.temp.newFolder().getPath());
     }
 
     /**
@@ -189,7 +189,7 @@ public final class AetherTest {
      */
     @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullArtifact() throws Exception {
-        new Aether(this.project(), this.temp.newFolder("repo-1").getPath())
+        new Aether(this.project(), this.temp.newFolder().getPath())
             .resolve(null, JavaScopes.RUNTIME);
     }
 
@@ -199,7 +199,7 @@ public final class AetherTest {
      */
     @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullScope() throws Exception {
-        new Aether(this.project(), this.temp.newFolder("repo-2").getPath())
+        new Aether(this.project(), this.temp.newFolder().getPath())
             .resolve(new DefaultArtifact("junit:junit:4.10"), null);
     }
 
@@ -209,10 +209,7 @@ public final class AetherTest {
      */
     @Test(expected = DependencyResolutionException.class)
     public void throwsWhenArtifactNotFound() throws Exception {
-        new Aether(
-            this.project(),
-            this.temp.newFolder("local-repo-97").getPath()
-        ).resolve(
+        new Aether(this.project(), this.temp.newFolder().getPath()).resolve(
             new DefaultArtifact("com.jcabi:jcabi-log:jar:0.0.0"),
             JavaScopes.COMPILE
         );
@@ -226,7 +223,7 @@ public final class AetherTest {
     public void recoversAfterFailure() throws Exception {
         final Aether aether = new Aether(
             this.project(),
-            this.temp.newFolder("local-repo-99").getPath()
+            this.temp.newFolder().getPath()
         );
         try {
             aether.resolve(
