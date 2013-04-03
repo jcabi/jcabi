@@ -29,15 +29,18 @@
  */
 package com.jcabi.maven.plugin;
 
+import com.google.common.io.Files;
 import com.jcabi.log.Logger;
 import java.io.File;
-import java.util.Collection;
+import java.io.IOException;
 import java.util.List;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.plugin.AbstractMojo;
+import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
 import org.aspectj.bridge.IMessage;
@@ -82,9 +85,10 @@ public final class AjcMojo extends AbstractMojo {
      * Compiled directory.
      */
     @MojoParameter(
-        required = true,
+        required = false,
         readonly = false,
-        description = "Directory with compiled .class files"
+        description = "Directory with compiled .class files",
+        defaultValue = "${project.build.outputDirectory}"
     )
     private transient File classesDirectory;
 
@@ -92,7 +96,7 @@ public final class AjcMojo extends AbstractMojo {
      * Directories with aspects.
      */
     @MojoParameter(
-        required = true,
+        required = false,
         readonly = false,
         description = "Directories with aspects"
     )
@@ -123,7 +127,7 @@ public final class AjcMojo extends AbstractMojo {
                 "-inpath",
                 this.classesDirectory.getAbsolutePath(),
                 "-sourceroots",
-                StringUtils.join(this.aspectDirectories, AjcMojo.SEP),
+                this.sourceroots(),
                 "-d",
                 this.tempDirectory.getAbsolutePath(),
                 "-classpath",
@@ -192,6 +196,14 @@ public final class AjcMojo extends AbstractMojo {
                 }
             }
         );
+        try {
+            FileUtils.copyDirectoryToDirectory(
+                this.tempDirectory,
+                this.classesDirectory
+            );
+        } catch (IOException ex) {
+            throw new MojoFailureException("failed to copy files back", ex);
+        }
     }
 
     /**
@@ -215,6 +227,28 @@ public final class AjcMojo extends AbstractMojo {
      */
     private String aspectpath() {
         return System.getProperty("java.class.path");
+    }
+
+    /**
+     * Get locations of all source roots (with aspects in source form).
+     * @return Directories separated
+     */
+    private String sourceroots() {
+        String path;
+        if (this.aspectDirectories == null
+            || this.aspectDirectories.length == 0) {
+            path = Files.createTempDir().getAbsolutePath();
+        } else {
+            for (File dir : this.aspectDirectories) {
+                if (!dir.exists()) {
+                    throw new IllegalStateException(
+                        String.format("source directory %s is absent", dir)
+                    );
+                }
+            }
+            path = StringUtils.join(this.aspectDirectories, AjcMojo.SEP);
+        }
+        return path;
     }
 
 }

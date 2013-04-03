@@ -73,12 +73,6 @@
                         <goals>
                             <goal>ajc</goal>
                         </goals>
-                        <configuration>
-                            <classesDirectory>${project.build.outputDirectory}</classesDirectory>
-                            <aspectDirectories>
-                                <directory>${project.basedir}/src/main/aspect</directory>
-                            </aspectDirectories>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

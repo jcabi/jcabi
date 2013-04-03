@@ -33,6 +33,8 @@ import java.io.File;
 import java.util.ArrayList;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
 import org.apache.maven.project.MavenProject;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 
@@ -73,27 +75,17 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(new ArrayList<String>())
             .when(project).getCompileClasspathElements();
-        this.setVariableValueToObject(
-            mojo,
-            "project",
-            project
-        );
-        this.setVariableValueToObject(
-            mojo,
-            "classesDirectory",
-            this.temp.newFolder()
-        );
-        this.setVariableValueToObject(
-            mojo,
-            "aspectDirectories",
-            new File[] {}
-        );
-        this.setVariableValueToObject(
-            mojo,
-            "tempDirectory",
-            this.temp.newFolder()
-        );
+        final File tdir = this.temp.newFolder();
+        final File cdir = this.temp.newFolder();
+        this.setVariableValueToObject(mojo, "project", project);
+        this.setVariableValueToObject(mojo, "classesDirectory", cdir);
+        this.setVariableValueToObject(mojo, "aspectDirectories", new File[] {});
+        this.setVariableValueToObject(mojo, "tempDirectory", tdir);
         mojo.execute();
+        MatcherAssert.assertThat(
+            tdir.listFiles(),
+            Matchers.not(Matchers.emptyArray())
+        );
     }
 
 }
