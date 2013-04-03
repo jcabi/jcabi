@@ -29,17 +29,36 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.aspects.Cacheable;
+import com.jcabi.log.Logger;
 import java.io.File;
 import java.util.AbstractSet;
+import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.apache.maven.artifact.DependencyResolutionRequiredException;
+import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
+import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.resolution.DependencyResolutionException;
+import org.sonatype.aether.util.artifact.DefaultArtifact;
+import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * A classpath of a Maven Project.
+ *
+ * <p>It is a convenient wrapper around {@link Aether} class, that allows you
+ * to fetch all dependencies of a Maven Project by their scope. The class
+ * implements a {@link Set} of {@link File}s and can be used like this:
+ *
+ * <pre> String classpath = StringUtils.join(
+ *   new Classpath(project, localRepo, "runtime")
+ *   System.getProperty("path.separator")
+ * );</pre>
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
@@ -60,13 +79,21 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private final transient String localRepo;
 
     /**
+     * Artifacts scope.
+     */
+    private final transient String scope;
+
+    /**
      * Public ctor.
      * @param prj The Maven project
-     * @param repo Local repository location (file path)
+     * @param repo Local repository location (directory path)
+     * @param scp The scope to use, e.g. "runtime" or "compile"
      */
-    public Classpath(@NotNull final MavenProject prj, @NotNull final String repo) {
+    public Classpath(@NotNull final MavenProject prj,
+        @NotNull final String repo, @NotNull final String scp) {
         this.project = prj;
         this.localRepo = repo;
+        this.scope = scp;
     }
 
     /**
@@ -74,7 +101,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @Override
     public Iterator<File> iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.fetch().iterator();
     }
 
     /**
@@ -82,7 +109,162 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.fetch().size();
+    }
+
+    /**
+     * Fetch all files found (JAR, ZIP, directories, etc).
+     * @return Set of files
+     */
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
+    @Cacheable(forever = true)
+    public Set<File> fetch() {
+        final Set<String> paths = new LinkedHashSet<String>();
+        paths.addAll(this.elements());
+        for (Artifact artifact : this.artifacts()) {
+            paths.add(artifact.getFile().getPath());
+        }
+        final Set<File> files = new LinkedHashSet<File>();
+        for (String path : paths) {
+            files.add(new File(path));
+        }
+        return files;
+    }
+
+    /**
+     * Get Maven Project elements.
+     * @return Collection of them
+     */
+    private Collection<String> elements() {
+        Collection<String> elements;
+        try {
+            if (this.scope.equals(JavaScopes.TEST)) {
+                elements = this.project.getTestClasspathElements();
+            } else if (this.scope.equals(JavaScopes.RUNTIME)) {
+                elements = this.project.getRuntimeClasspathElements();
+            } else if (this.scope.equals(JavaScopes.SYSTEM)) {
+                elements = this.project.getSystemClasspathElements();
+            } else {
+                elements = this.project.getCompileClasspathElements();
+            }
+        } catch (DependencyResolutionRequiredException ex) {
+            throw new IllegalStateException("Failed to read classpath", ex);
+        }
+        return elements;
+    }
+
+    /**
+     * Set of unique artifacts, which should be available in classpath.
+     *
+     * <p>This method gets a full list of artifacts of the project,
+     * including their transitive dependencies.
+     *
+     * @return The set of artifacts
+     */
+    private Set<Artifact> artifacts() {
+        final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
+        final Aether aether = new Aether(this.project, this.localRepo);
+        Logger.debug(this, "Artifacts in '%s' scope:", this.scope);
+        for (RootArtifact root : this.roots()) {
+            Logger.debug(this, "  %s", root);
+            for (Artifact dep : this.deps(aether, root)) {
+                boolean found = false;
+                for (Artifact exists : artifacts) {
+                    if (dep.getArtifactId().equals(exists.getArtifactId())
+                        && dep.getGroupId().equals(exists.getGroupId())
+                        && dep.getClassifier().equals(exists.getClassifier())) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) {
+                    Logger.debug(
+                        this,
+                        "    %s:%s:%s:%s (duplicate, ignored)",
+                        dep.getGroupId(),
+                        dep.getArtifactId(),
+                        dep.getClassifier(),
+                        dep.getVersion()
+                    );
+                    continue;
+                }
+                if (root.excluded(dep)) {
+                    Logger.debug(
+                        this,
+                        "    %s:%s:%s:%s (excluded)",
+                        dep.getGroupId(),
+                        dep.getArtifactId(),
+                        dep.getClassifier(),
+                        dep.getVersion()
+                    );
+                    continue;
+                }
+                artifacts.add(dep);
+                Logger.debug(
+                    this,
+                    "    %s:%s:%s:%s",
+                    dep.getGroupId(),
+                    dep.getArtifactId(),
+                    dep.getClassifier(),
+                    dep.getVersion()
+                );
+            }
+        }
+        return artifacts;
+    }
+
+    /**
+     * Set of unique root artifacts.
+     *
+     * <p>The method is getting a list of artifacts from Maven Project, without
+     * their transitive dependencies (that's why they are called "root"
+     * artifacts).
+     *
+     * @return The set of root artifacts
+     * @see #artifacts()
+     */
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
+    private Set<RootArtifact> roots() {
+        final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
+        for (Dependency dep : this.project.getDependencies()) {
+            if (!this.scope.equals(dep.getScope())) {
+                continue;
+            }
+            roots.add(
+                new RootArtifact(
+                    new DefaultArtifact(
+                        dep.getGroupId(),
+                        dep.getArtifactId(),
+                        dep.getClassifier(),
+                        dep.getType(),
+                        dep.getVersion()
+                    ),
+                    dep.getExclusions()
+                )
+            );
+        }
+        return roots;
+    }
+
+    /**
+     * Get all deps of a root artifact.
+     * @param aether The aether to use
+     * @param root The root
+     * @return The list of artifacts
+     * @see #artifacts()
+     */
+    private Collection<Artifact> deps(final Aether aether,
+        final RootArtifact root) {
+        Collection<Artifact> deps;
+        try {
+            deps = aether.resolve(root.artifact(), JavaScopes.RUNTIME);
+        } catch (DependencyResolutionException ex) {
+            throw new IllegalStateException(
+                String.format("Failed to resolve '%s'", root),
+                ex
+            );
+        }
+        return deps;
     }
 
 }

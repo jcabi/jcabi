@@ -32,6 +32,7 @@ package com.jcabi.aether;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -40,6 +41,7 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 import org.sonatype.aether.repository.RemoteRepository;
+import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * Test case for {@link Classpath}.
@@ -64,6 +66,13 @@ public final class ClasspathTest {
     public void buildsClasspath() throws Exception {
         final File local = this.temp.newFolder();
         final MavenProject project = Mockito.mock(MavenProject.class);
+        Mockito.doReturn(Arrays.asList("/some/path/as/directory"))
+            .when(project).getTestClasspathElements();
+        final Dependency dep = new Dependency();
+        dep.setGroupId("junit");
+        dep.setArtifactId("junit");
+        dep.setVersion("4.10");
+        Mockito.doReturn(Arrays.asList(dep)).when(project).getDependencies();
         final List<RemoteRepository> repos = Arrays.asList(
             new RemoteRepository(
                 "maven-central",
@@ -73,8 +82,9 @@ public final class ClasspathTest {
         );
         Mockito.doReturn(repos).when(project).getRemoteProjectRepositories();
         MatcherAssert.assertThat(
-            new Classpath(project, local.getPath()),
+            new Classpath(project, local.getPath(), JavaScopes.TEST),
             Matchers.<File>hasItems(
+                Matchers.hasToString(Matchers.endsWith("/as/directory")),
                 Matchers.hasToString(Matchers.endsWith("junit.jar")),
                 Matchers.hasToString(Matchers.endsWith("hamcrest-core.jar"))
             )

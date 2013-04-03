@@ -94,7 +94,7 @@ public final class Aether {
      * Public ctor, requires information about all remote repos and one
      * local.
      * @param prj The Maven project
-     * @param repo Local repository location (file path)
+     * @param repo Local repository location (directory path)
      */
     public Aether(@NotNull final MavenProject prj, @NotNull final String repo) {
         this.remotes = prj.getRemoteProjectRepositories()
