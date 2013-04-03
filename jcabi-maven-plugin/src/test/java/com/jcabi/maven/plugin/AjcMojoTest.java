@@ -29,22 +29,70 @@
  */
 package com.jcabi.maven.plugin;
 
-import org.junit.Test;
+import java.io.File;
+import java.util.ArrayList;
+import org.apache.maven.plugin.testing.AbstractMojoTestCase;
+import org.apache.maven.project.MavenProject;
+import org.junit.rules.TemporaryFolder;
+import org.mockito.Mockito;
 
 /**
  * Test case for {@link AjcMojo}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-public final class AjcMojoTest {
+public final class AjcMojoTest extends AbstractMojoTestCase {
 
     /**
-     * AjcMojo can skip execution when flag is set.
+     * Temp dir.
+     * @checkstyle VisibilityModifier (3 lines)
+     */
+    public final transient TemporaryFolder temp = new TemporaryFolder();
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void setUp() throws Exception {
+//        super.setUp();
+        this.temp.create();
+    }
+
+    /**
+     * AjcMojo can weave class files with aspects.
      * @throws Exception If something is wrong
      */
-    @Test
-    public void skipsExecutionWhenRequired() throws Exception {
+    public void testClassFilesWeaving() throws Exception {
+//        final AjcMojo mojo = AjcMojo.class.cast(
+//            this.lookupMojo(
+//                "ajc",
+//                this.getClass().getResource("ajc-pom.xml").getFile()
+//            )
+//        );
         final AjcMojo mojo = new AjcMojo();
+        final MavenProject project = Mockito.mock(MavenProject.class);
+        Mockito.doReturn(new ArrayList<String>())
+            .when(project).getCompileClasspathElements();
+        this.setVariableValueToObject(
+            mojo,
+            "project",
+            project
+        );
+        this.setVariableValueToObject(
+            mojo,
+            "classesDirectory",
+            this.temp.newFolder()
+        );
+        this.setVariableValueToObject(
+            mojo,
+            "aspectDirectories",
+            new File[] {}
+        );
+        this.setVariableValueToObject(
+            mojo,
+            "tempDirectory",
+            this.temp.newFolder()
+        );
         mojo.execute();
     }
 

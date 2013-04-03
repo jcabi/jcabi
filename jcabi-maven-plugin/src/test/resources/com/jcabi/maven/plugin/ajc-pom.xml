@@ -1,0 +1,15 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>jcabi-maven-plugin</artifactId>
+                <configuration>
+                    <classesDirectory>${basedir}</classesDirectory>
+                    <aspectDirectories>
+                        <directory>${basedir}</directory>
+                    </aspectDirectories>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

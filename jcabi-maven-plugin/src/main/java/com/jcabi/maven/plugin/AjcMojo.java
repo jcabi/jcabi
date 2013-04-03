@@ -31,24 +31,18 @@ package com.jcabi.maven.plugin;
 
 import com.jcabi.log.Logger;
 import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
-import javax.validation.constraints.NotNull;
+import java.util.List;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.DirectoryFileFilter;
-import org.apache.commons.io.filefilter.NotFileFilter;
-import org.apache.commons.io.filefilter.TrueFileFilter;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
+import org.aspectj.bridge.IMessage;
+import org.aspectj.bridge.IMessageHolder;
+import org.aspectj.tools.ajc.Main;
 import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
@@ -60,12 +54,18 @@ import org.slf4j.impl.StaticLoggerBinder;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7.16
+ * @link <a href="http://www.eclipse.org/aspectj/doc/next/devguide/ajc-ref.html">AJC compiler manual</a>
  */
 @MojoGoal("ajc")
 @MojoPhase("process-classes")
 @ToString
 @EqualsAndHashCode(callSuper = false)
 public final class AjcMojo extends AbstractMojo {
+
+    /**
+     * Classpath separator.
+     */
+    private static final String SEP = System.getProperty("path.separator");
 
     /**
      * Maven project.
@@ -79,24 +79,35 @@ public final class AjcMojo extends AbstractMojo {
     private transient MavenProject project;
 
     /**
-     * Source directory.
+     * Compiled directory.
      */
     @MojoParameter(
         required = true,
         readonly = false,
-        description = "Source directory with .java files"
+        description = "Directory with compiled .class files"
     )
-    private transient String sourceDirectory;
+    private transient File classesDirectory;
 
     /**
-     * Directory with compiled files (they should be there already).
+     * Directories with aspects.
      */
     @MojoParameter(
         required = true,
         readonly = false,
-        description = "Destination directory with .class files"
+        description = "Directories with aspects"
     )
-    private transient String outputDirectory;
+    private transient File[] aspectDirectories;
+
+    /**
+     * Temporary directory.
+     */
+    @MojoParameter(
+        defaultValue = "${project.build.directory}/jcabi-ajc",
+        required = false,
+        readonly = false,
+        description = "Temporary directory for compiled classes"
+    )
+    private transient File tempDirectory;
 
     /**
      * {@inheritDoc}
@@ -104,98 +115,106 @@ public final class AjcMojo extends AbstractMojo {
     @Override
     public void execute() throws MojoFailureException {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
-        final File src = new File(this.project.getBuild().getSourceDirectory());
-                                                <target name="main">
-                                                    <iajc sourceroots="${aspectj.src}"
-                                                        inpath="${aspectj.bin}"
-                                                        destdir="${aspectj.temp}"
-                                                        classpathref="classpath"
-                                                        aspectPath="${aspectj.libs}"
-                                                        warn="constructorName,packageDefaultMethod,deprecation,maskedCatchBlocks,unusedLocals,unusedArguments,unusedImports,syntheticAccess,assertIdentifier"
-                                                        debug="false"
-                                                        time="true"
-                                                        verbose="false"
-                                                        source="1.6"
-                                                        target="1.6"
-                                                        showWeaveInfo="true"
-                                                        failonerror="true" />
-    }
-
-    /**
-     * Create and return a text of the version file.
-     * @param dir The destination directory
-     * @return The text
-     */
-    private String text(@NotNull final File dir) {
-        return String.format(
-            "Project Version: %s\nBuild Number: %s\nBuild Date: %s\n\n%s",
-            this.project.getVersion(),
-            this.buildNumber,
-            DateFormatUtils.ISO_DATETIME_FORMAT.format(new Date()),
-            StringUtils.join(VersionalizeMojo.files(dir, "*"), "\n")
-        );
-    }
-
-    /**
-     * Versionalize packages from source to dest.
-     * @param src Source directory
-     * @param dest Destination
-     * @throws IOException If some IO problem
-     */
-    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
-    private void versionalize(@NotNull final File src, @NotNull final File dest)
-        throws IOException {
-        final Collection<File> dirs = FileUtils.listFilesAndDirs(
-            src,
-            new NotFileFilter(TrueFileFilter.INSTANCE),
-            DirectoryFileFilter.DIRECTORY
-        );
-        final String name = String.format(
-            "%s-%s-%s.txt",
-            VersionalizeMojo.cleanup(this.project.getGroupId()),
-            VersionalizeMojo.cleanup(this.project.getArtifactId()),
-            VersionalizeMojo.cleanup(this.project.getPackaging())
-        );
-        for (File dir : dirs) {
-            if (VersionalizeMojo.files(dir, "*.java").isEmpty()) {
-                continue;
+        this.classesDirectory.mkdirs();
+        this.tempDirectory.mkdirs();
+        final Main main = new Main();
+        main.run(
+            new String[] {
+                "-inpath",
+                this.classesDirectory.getAbsolutePath(),
+                "-sourceroots",
+                StringUtils.join(this.aspectDirectories, AjcMojo.SEP),
+                "-d",
+                this.tempDirectory.getAbsolutePath(),
+                "-classpath",
+                this.classpath(),
+                "-aspectpath",
+                this.aspectpath(),
+                "-source",
+                "1.6",
+                "-target",
+                "1.6",
+                "-g:none",
+                "-encoding",
+                "UTF-8",
+                "-time",
+                "-showWeaveInfo",
+                "-warn:constructorName",
+                "-warn:packageDefaultMethod",
+                "-warn:deprecation",
+                "-warn:maskedCatchBlocks",
+                "-warn:unusedLocals",
+                "-warn:unusedArguments",
+                "-warn:unusedImports",
+                "-warn:syntheticAccess",
+                "-warn:assertIdentifier",
+            },
+            new IMessageHolder() {
+                @Override
+                public boolean hasAnyMessage(final IMessage.Kind kind,
+                    final boolean bln) {
+                    return false;
+                }
+                @Override
+                public int numMessages(final IMessage.Kind kind,
+                    final boolean bln) {
+                    return 0;
+                }
+                @Override
+                public IMessage[] getMessages(final IMessage.Kind kind,
+                    final boolean bln) {
+                    return new IMessage[] {};
+                }
+                @Override
+                public List<IMessage> getUnmodifiableListView() {
+                    throw new UnsupportedOperationException();
+                }
+                @Override
+                public void clearMessages() {
+                    throw new UnsupportedOperationException();
+                }
+                @Override
+                public boolean handleMessage(final IMessage msg) {
+                    Logger.info(AjcMojo.class, msg.getMessage());
+                    return true;
+                }
+                @Override
+                public boolean isIgnoring(final IMessage.Kind kind) {
+                    return false;
+                }
+                @Override
+                public void dontIgnore(final IMessage.Kind kind) {
+                    assert kind != null;
+                }
+                @Override
+                public void ignore(final IMessage.Kind kind) {
+                    assert kind != null;
+                }
             }
-            final File ddir = new File(
-                dest,
-                dir.getCanonicalPath().substring(
-                    src.getCanonicalPath().length() + 1
-                )
+        );
+    }
+
+    /**
+     * Get classpath for AJC.
+     * @return Classpath
+     */
+    private String classpath() {
+        try {
+            return StringUtils.join(
+                this.project.getCompileClasspathElements(),
+                AjcMojo.SEP
             );
-            final File version = new File(ddir, name);
-            version.getParentFile().mkdirs();
-            FileUtils.write(version, this.text(ddir));
-            Logger.info(this, "File %s added", version);
+        } catch (DependencyResolutionRequiredException ex) {
+            throw new IllegalStateException(ex);
         }
     }
 
     /**
-     * Clean the text.
-     * @param text The text
-     * @return Clean version of it
+     * Get locations of all aspect libraries for AJC.
+     * @return Classpath
      */
-    private static String cleanup(final String text) {
-        return text.replaceAll("[^_a-z0-9\\-]", "-");
-    }
-
-    /**
-     * All Java files in the directory.
-     * @param dir The directory
-     * @param mask Mask to use
-     * @return List of Java file names
-     */
-    private static Collection<String> files(final File dir, final String mask) {
-        final FileFilter filter = new WildcardFileFilter(mask);
-        final File[] files = dir.listFiles(filter);
-        final Collection<String> names = new ArrayList<String>(files.length);
-        for (File file : files) {
-            names.add(file.getName());
-        }
-        return names;
+    private String aspectpath() {
+        return System.getProperty("java.class.path");
     }
 
 }

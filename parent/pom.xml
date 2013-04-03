@@ -581,24 +581,24 @@
                                     <goal>ajc</goal>
                                 </goals>
                                 <configuration>
-                                    <directory>${project.build.outputDirectory}</directory>
-                                    <aspectDirectories>
+                                    <classesDirectory>${project.build.outputDirectory}</classesDirectory>
+                                    <aspectsDirectories>
                                         <directory>${project.basedir}/src/main/aspect</directory>
-                                    </aspectDirectories>
+                                    </aspectsDirectories>
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>ajc-test-compile</id>
+                                <id>jcabi-ajc-test-compile</id>
                                 <phase>process-test-classes</phase>
                                 <goals>
                                     <goal>ajc</goal>
                                 </goals>
                                 <configuration>
-                                    <directory>${project.build.testOutputDirectory}</directory>
-                                    <aspectDirectories>
+                                    <classesDirectory>${project.build.testOutputDirectory}</classesDirectory>
+                                    <aspectsDirectories>
                                         <directory>${project.basedir}/src/main/aspect</directory>
                                         <directory>${project.basedir}/src/test/aspect</directory>
-                                    </aspectDirectories>
+                                    </aspectsDirectories>
                                 </configuration>
                             </execution>
                         </executions>

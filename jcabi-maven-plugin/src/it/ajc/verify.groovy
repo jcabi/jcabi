@@ -27,26 +27,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.jcabi.maven.plugin;
 
-import org.junit.Test;
-
-/**
- * Test case for {@link VersionalizeMojo}.
- * @author Yegor Bugayenko (yegor@tpc2.com)
- * @version $Id$
- */
-public final class VersionalizeMojoTest {
-
-    /**
-     * VersionalizeMojo can skip execution when flag is set.
-     * @throws Exception If something is wrong
-     */
-    @Test
-    @org.junit.Ignore
-    public void skipsExecutionWhenRequired() throws Exception {
-        final VersionalizeMojo mojo = new VersionalizeMojo();
-        mojo.execute();
-    }
-
-}
+def file = new File(basedir, 'target/classes/com/jcabi/foo/com-jcabi-jcabi-test-jar.txt')
+assert file.text.contains('Project Version: 1.0')
+assert file.text.contains('Sample.class')
+assert file.text.contains('Sample.txt')
