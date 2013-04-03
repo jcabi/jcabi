@@ -1,5 +1,7 @@
 package com.jcabi.foo;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 public final class SampleTest {

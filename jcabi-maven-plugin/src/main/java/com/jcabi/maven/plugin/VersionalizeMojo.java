@@ -29,6 +29,7 @@
  */
 package com.jcabi.maven.plugin;
 
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.FileFilter;
@@ -65,6 +66,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 @MojoPhase("prepare-package")
 @ToString
 @EqualsAndHashCode(callSuper = false)
+@Loggable(Loggable.DEBUG)
 public final class VersionalizeMojo extends AbstractMojo {
 
     /**

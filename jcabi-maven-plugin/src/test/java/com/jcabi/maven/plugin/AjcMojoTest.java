@@ -31,6 +31,13 @@ package com.jcabi.maven.plugin;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Locale;
+import javax.tools.JavaCompiler;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
+import org.apache.commons.io.Charsets;
+import org.apache.commons.io.FileUtils;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
@@ -75,15 +82,31 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(new ArrayList<String>())
             .when(project).getCompileClasspathElements();
-        final File tdir = this.temp.newFolder();
-        final File cdir = this.temp.newFolder();
+        final File temps = this.temp.newFolder();
+        final File classes = this.temp.newFolder();
+        final File javas = this.temp.newFolder();
         this.setVariableValueToObject(mojo, "project", project);
-        this.setVariableValueToObject(mojo, "classesDirectory", cdir);
+        this.setVariableValueToObject(mojo, "classesDirectory", classes);
         this.setVariableValueToObject(mojo, "aspectDirectories", new File[] {});
-        this.setVariableValueToObject(mojo, "tempDirectory", tdir);
+        this.setVariableValueToObject(mojo, "tempDirectory", temps);
+        final File java = new File(javas, "Foo.java");
+        FileUtils.write(
+            java,
+            "import com.jcabi.aspects.Immutable; @Immutable class Foo {}"
+        );
+        final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        final StandardJavaFileManager mgr = compiler.getStandardFileManager(
+            null, Locale.ENGLISH, Charsets.UTF_8
+        );
+        compiler.getTask(
+            null, mgr, null, null, null,
+            mgr.getJavaFileObjectsFromFiles(Arrays.asList(java))
+        ).call();
+        mgr.close();
+        FileUtils.copyFileToDirectory(new File(javas, "Foo.class"), classes);
         mojo.execute();
         MatcherAssert.assertThat(
-            tdir.listFiles(),
+            temps.listFiles(),
             Matchers.not(Matchers.emptyArray())
         );
     }

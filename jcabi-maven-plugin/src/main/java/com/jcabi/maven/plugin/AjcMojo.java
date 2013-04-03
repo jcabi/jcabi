@@ -30,17 +30,20 @@
 package com.jcabi.maven.plugin;
 
 import com.google.common.io.Files;
+import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
 import org.aspectj.bridge.IMessage;
@@ -63,6 +66,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 @MojoPhase("process-classes")
 @ToString
 @EqualsAndHashCode(callSuper = false)
+@Loggable(Loggable.DEBUG)
 public final class AjcMojo extends AbstractMojo {
 
     /**
@@ -122,6 +126,7 @@ public final class AjcMojo extends AbstractMojo {
         this.classesDirectory.mkdirs();
         this.tempDirectory.mkdirs();
         final Main main = new Main();
+        final IMessageHolder mholder = new AjcMojo.MsgHolder();
         main.run(
             new String[] {
                 "-inpath",
@@ -153,48 +158,7 @@ public final class AjcMojo extends AbstractMojo {
                 "-warn:syntheticAccess",
                 "-warn:assertIdentifier",
             },
-            new IMessageHolder() {
-                @Override
-                public boolean hasAnyMessage(final IMessage.Kind kind,
-                    final boolean bln) {
-                    return false;
-                }
-                @Override
-                public int numMessages(final IMessage.Kind kind,
-                    final boolean bln) {
-                    return 0;
-                }
-                @Override
-                public IMessage[] getMessages(final IMessage.Kind kind,
-                    final boolean bln) {
-                    return new IMessage[] {};
-                }
-                @Override
-                public List<IMessage> getUnmodifiableListView() {
-                    throw new UnsupportedOperationException();
-                }
-                @Override
-                public void clearMessages() {
-                    throw new UnsupportedOperationException();
-                }
-                @Override
-                public boolean handleMessage(final IMessage msg) {
-                    Logger.info(AjcMojo.class, msg.getMessage());
-                    return true;
-                }
-                @Override
-                public boolean isIgnoring(final IMessage.Kind kind) {
-                    return false;
-                }
-                @Override
-                public void dontIgnore(final IMessage.Kind kind) {
-                    assert kind != null;
-                }
-                @Override
-                public void ignore(final IMessage.Kind kind) {
-                    assert kind != null;
-                }
-            }
+            mholder
         );
         try {
             FileUtils.copyDirectoryToDirectory(
@@ -204,12 +168,27 @@ public final class AjcMojo extends AbstractMojo {
         } catch (IOException ex) {
             throw new MojoFailureException("failed to copy files back", ex);
         }
+        Logger.info(
+            this,
+            "ajc result: %d file(s), %d error(s), %d warning(s)",
+            FileUtils.listFiles(
+                this.tempDirectory,
+                TrueFileFilter.INSTANCE,
+                TrueFileFilter.INSTANCE
+            ).size(),
+            mholder.numMessages(IMessage.ERROR, true),
+            mholder.numMessages(IMessage.WARNING, false)
+        );
+        if (mholder.hasAnyMessage(IMessage.ERROR, true)) {
+            throw new MojoFailureException("AJC failed, see log above");
+        }
     }
 
     /**
      * Get classpath for AJC.
      * @return Classpath
      */
+    @Loggable(value = Loggable.INFO, trim = false)
     private String classpath() {
         try {
             return StringUtils.join(
@@ -225,6 +204,7 @@ public final class AjcMojo extends AbstractMojo {
      * Get locations of all aspect libraries for AJC.
      * @return Classpath
      */
+    @Loggable(value = Loggable.INFO, trim = false)
     private String aspectpath() {
         return System.getProperty("java.class.path");
     }
@@ -233,6 +213,7 @@ public final class AjcMojo extends AbstractMojo {
      * Get locations of all source roots (with aspects in source form).
      * @return Directories separated
      */
+    @Loggable(value = Loggable.INFO, trim = false)
     private String sourceroots() {
         String path;
         if (this.aspectDirectories == null
@@ -249,6 +230,114 @@ public final class AjcMojo extends AbstractMojo {
             path = StringUtils.join(this.aspectDirectories, AjcMojo.SEP);
         }
         return path;
+    }
+
+    /**
+     * Message holder.
+     */
+    private static final class MsgHolder implements IMessageHolder {
+        /**
+         * All messages seen so far.
+         */
+        private final transient Collection<IMessage> messages =
+            new CopyOnWriteArrayList<IMessage>();
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean hasAnyMessage(final IMessage.Kind kind,
+            final boolean orGreater) {
+            boolean has = false;
+            for (IMessage msg : this.messages) {
+                has = msg.getKind().equals(kind) || orGreater
+                    && IMessage.Kind.COMPARATOR
+                    .compare(msg.getKind(), kind) > 0;
+                if (has) {
+                    break;
+                }
+            }
+            return has;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public int numMessages(final IMessage.Kind kind,
+            final boolean orGreater) {
+            int num = 0;
+            for (IMessage msg : this.messages) {
+                final boolean has = msg.getKind().equals(kind) || orGreater
+                    && IMessage.Kind.COMPARATOR
+                    .compare(msg.getKind(), kind) > 0;
+                if (has) {
+                    ++num;
+                }
+            }
+            return num;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public IMessage[] getMessages(final IMessage.Kind kind,
+            final boolean orGreater) {
+            throw new UnsupportedOperationException();
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public List<IMessage> getUnmodifiableListView() {
+            throw new UnsupportedOperationException();
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void clearMessages() {
+            throw new UnsupportedOperationException();
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean handleMessage(final IMessage msg) {
+            if (msg.getKind().equals(IMessage.ERROR)
+                || msg.getKind().equals(IMessage.FAIL)
+                || msg.getKind().equals(IMessage.ABORT)) {
+                Logger.error(AjcMojo.class, msg.getMessage());
+            } else if (msg.getKind().equals(IMessage.WARNING)) {
+                Logger.warn(AjcMojo.class, msg.getMessage());
+            } else if (msg.getKind().equals(IMessage.WEAVEINFO)
+                || msg.getKind().equals(IMessage.INFO)) {
+                Logger.info(AjcMojo.class, msg.getMessage());
+            } else {
+                Logger.debug(AjcMojo.class, msg.getMessage());
+            }
+            this.messages.add(msg);
+            return true;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public boolean isIgnoring(final IMessage.Kind kind) {
+            return false;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void dontIgnore(final IMessage.Kind kind) {
+            assert kind != null;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void ignore(final IMessage.Kind kind) {
+            assert kind != null;
+        }
     }
 
 }
