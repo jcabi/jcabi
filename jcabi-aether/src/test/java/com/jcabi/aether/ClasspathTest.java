@@ -72,6 +72,7 @@ public final class ClasspathTest {
         dep.setGroupId("junit");
         dep.setArtifactId("junit");
         dep.setVersion("4.10");
+        dep.setScope(JavaScopes.TEST);
         Mockito.doReturn(Arrays.asList(dep)).when(project).getDependencies();
         final List<RemoteRepository> repos = Arrays.asList(
             new RemoteRepository(
@@ -85,8 +86,8 @@ public final class ClasspathTest {
             new Classpath(project, local.getPath(), JavaScopes.TEST),
             Matchers.<File>hasItems(
                 Matchers.hasToString(Matchers.endsWith("/as/directory")),
-                Matchers.hasToString(Matchers.endsWith("junit.jar")),
-                Matchers.hasToString(Matchers.endsWith("hamcrest-core.jar"))
+                Matchers.hasToString(Matchers.endsWith("junit-4.10.jar")),
+                Matchers.hasToString(Matchers.endsWith("hamcrest-core-1.1.jar"))
             )
         );
     }

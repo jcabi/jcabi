@@ -164,7 +164,8 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private Set<Artifact> artifacts() {
         final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
         final Aether aether = new Aether(this.project, this.localRepo);
-        Logger.debug(this, "Artifacts in '%s' scope:", this.scope);
+        final StringBuilder log = new StringBuilder();
+        log.append(String.format("#artifacts(): in '%s' scope:", this.scope));
         for (RootArtifact root : this.roots()) {
             Logger.debug(this, "  %s", root);
             for (Artifact dep : this.deps(aether, root)) {
@@ -178,38 +179,44 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
                     }
                 }
                 if (found) {
-                    Logger.debug(
-                        this,
-                        "    %s:%s:%s:%s (duplicate, ignored)",
-                        dep.getGroupId(),
-                        dep.getArtifactId(),
-                        dep.getClassifier(),
-                        dep.getVersion()
+                    log.append(
+                        String.format(
+                            "\n    %s:%s:%s:%s (duplicate, ignored)",
+                            dep.getGroupId(),
+                            dep.getArtifactId(),
+                            dep.getClassifier(),
+                            dep.getVersion()
+                        )
                     );
                     continue;
                 }
                 if (root.excluded(dep)) {
-                    Logger.debug(
-                        this,
-                        "    %s:%s:%s:%s (excluded)",
+                    log.append(
+                        String.format(
+                            "\n    %s:%s:%s:%s (excluded)",
+                            dep.getGroupId(),
+                            dep.getArtifactId(),
+                            dep.getClassifier(),
+                            dep.getVersion()
+                        )
+                    );
+                    continue;
+                }
+                log.append(
+                    String.format(
+                        "\n    %s:%s:%s:%s",
                         dep.getGroupId(),
                         dep.getArtifactId(),
                         dep.getClassifier(),
                         dep.getVersion()
-                    );
-                    continue;
-                }
-                artifacts.add(dep);
-                Logger.debug(
-                    this,
-                    "    %s:%s:%s:%s",
-                    dep.getGroupId(),
-                    dep.getArtifactId(),
-                    dep.getClassifier(),
-                    dep.getVersion()
+                    )
                 );
+                if (!artifacts.add(dep)) {
+                    log.append(" (duplicate)");
+                }
             }
         }
+        Logger.debug(this, log.toString());
         return artifacts;
     }
 
