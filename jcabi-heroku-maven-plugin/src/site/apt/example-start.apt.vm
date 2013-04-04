@@ -38,4 +38,62 @@
 
 Quick Start with Heroku Maven Plugin
 
-  To be continued...
+  First of all, {{{https://devcenter.heroku.com/articles/java}create
+  a new application}} in Heroku.
+
+  Then, make sure your Maven project produces an executable JAR/WAR file, which
+  means that it's possible run a web server from a command line, providing
+  just an HTTP port number to it. For example:
+
+---
+$ java -jar my-application.jar --port=8080
+---
+
+  Your application should start, bind itself to port <<<8080>>> and behave
+  like an HTTP server, listening to HTTP requests and replying back with
+  responses.
+
+  Then, make sure your Maven <<<deploy>>> goal deploys said WAR/JAR package
+  to a repository available in Internet. The best two options are Sonatype
+  for open source projects and Amazon S3 for private projects.
+
+  Now it's time to bind <<<jcabi-heroku-maven-plugin>>> to your <<<deploy>>>
+  phase:
+
++--
+<project>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.jcabi</groupId>
+        <artifactId>jcabi-heroku-maven-plugin</artifactId>
+        <version>${project.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+            <configuration>
+              <server>heroku.com</server>
+              <name>my-application</name>
+              <artifacts>
+                <artifact>${sign}{project.groupId}:${sign}{project.artifactId}:jar::${sign}{project.version}</artifact>
+              </artifacts>
+              <procfile>web: java -jar ./${sign}{project.artifactId}.jar --port=${sign}{PORT}</procfile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
++--
+
+  You're ready to go. Ask Maven to deploy the artifact to the repository
+  and then ask Heroku to pick it up and start:
+
+---
+$ mvn deploy
+---
+
+  More details you can find in {{{./usage.html}this page}}.
