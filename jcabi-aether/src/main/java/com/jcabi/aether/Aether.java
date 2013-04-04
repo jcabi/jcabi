@@ -72,6 +72,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  * @since 0.1.6
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  * @see <a href="http://sonatype.github.com/sonatype-aether/apidocs/overview-tree.html">Aether 1.13.1 JavaDoc</a>
+ * @see Classpath
  * @todo #143 This class should be @Immutable, but RemoteRepository is
  *  not immutable. Let's create a new class to encapsulate all necessary
  *  properties from RemoteRepository.

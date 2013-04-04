@@ -38,6 +38,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.Set;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
@@ -65,6 +66,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7.16
+ * @see Aether
  */
 @ToString
 @EqualsAndHashCode(callSuper = false)
@@ -151,16 +153,20 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * @return Collection of them
      */
     private Collection<String> elements() {
-        Collection<String> elements;
+        final Collection<String> elements = new LinkedList<String>();
         try {
             if (this.scopes.contains(JavaScopes.TEST)) {
-                elements = this.project.getTestClasspathElements();
-            } else if (this.scopes.contains(JavaScopes.RUNTIME)) {
-                elements = this.project.getRuntimeClasspathElements();
-            } else if (this.scopes.contains(JavaScopes.SYSTEM)) {
-                elements = this.project.getSystemClasspathElements();
-            } else {
-                elements = this.project.getCompileClasspathElements();
+                elements.addAll(this.project.getTestClasspathElements());
+            }
+            if (this.scopes.contains(JavaScopes.RUNTIME)) {
+                elements.addAll(this.project.getRuntimeClasspathElements());
+            }
+            if (this.scopes.contains(JavaScopes.SYSTEM)) {
+                elements.addAll(this.project.getSystemClasspathElements());
+            }
+            if (this.scopes.contains(JavaScopes.COMPILE)
+                || this.scopes.contains(JavaScopes.PROVIDED)) {
+                elements.addAll(this.project.getCompileClasspathElements());
             }
         } catch (DependencyResolutionRequiredException ex) {
             throw new IllegalStateException("Failed to read classpath", ex);
