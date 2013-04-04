@@ -109,6 +109,9 @@ Collection<Artifact> deps = new Aether(project, repo).resolve(
   More examples you can find in
   {{{https://github.com/yegor256/jcabi/blob/master/jcabi-aether/src/test/java/com/jcabi/aether/AetherTest.java}<<<AetherTest>>>}}.
 
+  {{{./apidocs-${project.version}/com/jcabi/aether/Classpath.html}<<<Classpath>>>}}
+  can help you to collect and filter dependencies in a Maven project.
+
   The only dependency you need
   (you can also download
   {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-aether/${project.version}/jcabi-aether-${project.version}.jar}<<<jcabi-aether-${project.version}.jar>>>}}
