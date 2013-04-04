@@ -47,3 +47,26 @@ Supplementary Maven plugin for Jcabi Parent POM
      adds plain text files with version information to every Java
      package in your source directory.
 
+* Cutting Edge Version
+
+  If you want to use current version of the product, you can do it with
+  this configuration in your <<<pom.xml>>>:
+
++--
+<pluginRepositories>
+  <pluginRepository>
+    <id>oss.sonatype.org</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+  </pluginRepository>
+</pluginRepositories>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>com.jcabi</groupId>
+      <artifactId>jcabi-maven-plugin</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      [...]
+    </plugin>
+  </plugins>
+</build>
++--
