@@ -174,10 +174,7 @@ public final class AjcMojo extends AbstractMojo {
             mholder
         );
         try {
-            FileUtils.copyDirectoryToDirectory(
-                this.tempDirectory,
-                this.classesDirectory
-            );
+            FileUtils.copyDirectory(this.tempDirectory, this.classesDirectory);
         } catch (IOException ex) {
             throw new MojoFailureException("failed to copy files back", ex);
         }

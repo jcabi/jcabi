@@ -71,6 +71,7 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
     /**
      * AjcMojo can weave class files with aspects.
      * @throws Exception If something is wrong
+     * @checkstyle ExecutableStatementCount (50 lines)
      */
     public void testClassFilesWeaving() throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
@@ -83,10 +84,11 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
         this.setVariableValueToObject(mojo, "classesDirectory", classes);
         this.setVariableValueToObject(mojo, "aspectDirectories", new File[] {});
         this.setVariableValueToObject(mojo, "tempDirectory", temps);
-        final File java = new File(javas, "Foo.java");
+        final File java = new File(javas, "sample/Foo.java");
         FileUtils.write(
             java,
-            "import com.jcabi.aspects.Immutable; @Immutable class Foo {}"
+            // @checkstyle LineLength (1 line)
+            "package sample; import com.jcabi.aspects.Immutable; @Immutable class Foo {}"
         );
         final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         final StandardJavaFileManager mgr = compiler.getStandardFileManager(
@@ -97,11 +99,14 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
             mgr.getJavaFileObjectsFromFiles(Arrays.asList(java))
         ).call();
         mgr.close();
-        FileUtils.copyFileToDirectory(new File(javas, "Foo.class"), classes);
+        final String name = "sample/Foo.class";
+        final File binary = new File(classes, name);
+        FileUtils.copyFile(new File(javas, name), binary);
+        final long size = binary.length();
         mojo.execute();
         MatcherAssert.assertThat(
-            temps.listFiles(),
-            Matchers.not(Matchers.emptyArray())
+            binary.length(),
+            Matchers.not(Matchers.equalTo(size))
         );
     }
 
