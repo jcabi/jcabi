@@ -71,7 +71,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
 @MojoGoal("ajc")
 @MojoPhase("process-classes")
 @ToString
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = false, of = { "project", "scopes" })
 @Loggable(Loggable.DEBUG)
 @SuppressWarnings({ "PMD.TooManyMethods", "PMD.ExcessiveImports" })
 public final class AjcMojo extends AbstractMojo {
@@ -195,8 +195,10 @@ public final class AjcMojo extends AbstractMojo {
         }
         Logger.info(
             this,
-            "ajc result: %d file(s), %d error(s), %d warning(s)",
+            // @checkstyle LineLength (1 line)
+            "ajc result: %d file(s) processed, %d pointcut(s) woven, %d error(s), %d warning(s)",
             AjcMojo.files(this.tempDirectory).size(),
+            mholder.numMessages(IMessage.WEAVEINFO, false),
             mholder.numMessages(IMessage.ERROR, true),
             mholder.numMessages(IMessage.WARNING, false)
         );
@@ -210,6 +212,7 @@ public final class AjcMojo extends AbstractMojo {
      * @return Classpath
      */
     @Cacheable(forever = true)
+    @Loggable(value = Loggable.INFO, trim = false)
     private String classpath() {
         Collection<String> scps;
         if (this.scopes == null) {
@@ -362,9 +365,10 @@ public final class AjcMojo extends AbstractMojo {
                 Logger.error(AjcMojo.class, msg.getMessage());
             } else if (msg.getKind().equals(IMessage.WARNING)) {
                 Logger.warn(AjcMojo.class, msg.getMessage());
-            } else if (msg.getKind().equals(IMessage.WEAVEINFO)
-                || msg.getKind().equals(IMessage.INFO)) {
-                Logger.info(AjcMojo.class, msg.getMessage());
+            } else if (msg.getKind().equals(IMessage.WEAVEINFO)) {
+                Logger.debug(AjcMojo.class, msg.getMessage());
+            } else if (msg.getKind().equals(IMessage.INFO)) {
+                Logger.debug(AjcMojo.class, msg.getMessage());
             } else {
                 Logger.debug(AjcMojo.class, msg.getMessage());
             }

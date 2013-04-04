@@ -69,7 +69,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @see Aether
  */
 @ToString
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = false, of = { "project", "aether", "scopes" })
 @Loggable(Loggable.DEBUG)
 public final class Classpath extends AbstractSet<File> implements Set<File> {
 
@@ -184,7 +184,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     private Set<Artifact> artifacts() {
         final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
-        for (RootArtifact root : this.roots()) {
+        for (RootArtifact root : this.roots(this.project.getDependencies())) {
             for (Artifact dep : this.deps(root)) {
                 boolean found = false;
                 for (Artifact exists : artifacts) {
@@ -208,36 +208,42 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     }
 
     /**
-     * Set of unique root artifacts.
+     * Convert dependencies to root artifacts.
      *
      * <p>The method is getting a list of artifacts from Maven Project, without
      * their transitive dependencies (that's why they are called "root"
      * artifacts).
      *
+     * @param deps Dependencies
      * @return The set of root artifacts
-     * @see #artifacts()
      */
-    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
-    private Set<RootArtifact> roots() {
+    private Set<RootArtifact> roots(final Collection<Dependency> deps) {
         final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
-        for (Dependency dep : this.project.getDependencies()) {
+        for (Dependency dep : deps) {
             if (!this.scopes.contains(dep.getScope())) {
                 continue;
             }
-            roots.add(
-                new RootArtifact(
-                    new DefaultArtifact(
-                        dep.getGroupId(),
-                        dep.getArtifactId(),
-                        dep.getClassifier(),
-                        dep.getType(),
-                        dep.getVersion()
-                    ),
-                    dep.getExclusions()
-                )
-            );
+            roots.add(this.root(dep));
         }
         return roots;
+    }
+
+    /**
+     * Convert dependency to root artifact.
+     * @param dep Dependency
+     * @return Root artifact
+     */
+    private RootArtifact root(final Dependency dep) {
+        return new RootArtifact(
+            new DefaultArtifact(
+                dep.getGroupId(),
+                dep.getArtifactId(),
+                dep.getClassifier(),
+                dep.getType(),
+                dep.getVersion()
+            ),
+            dep.getExclusions()
+        );
     }
 
     /**
@@ -249,7 +255,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private Collection<Artifact> deps(final RootArtifact root) {
         Collection<Artifact> deps;
         try {
-            deps = this.aether.resolve(root.artifact(), JavaScopes.RUNTIME);
+            deps = this.aether.resolve(root.artifact(), JavaScopes.COMPILE);
         } catch (DependencyResolutionException ex) {
             throw new IllegalStateException(
                 String.format("Failed to resolve '%s'", root),

@@ -78,7 +78,7 @@ import org.sonatype.aether.util.filter.DependencyFilterUtils;
  *  properties from RemoteRepository.
  */
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(of = { "remotes", "localRepo" })
 @Loggable(Loggable.DEBUG)
 public final class Aether {
 
