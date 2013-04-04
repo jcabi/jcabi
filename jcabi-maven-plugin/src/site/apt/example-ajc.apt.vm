@@ -1,12 +1,13 @@
  ------
- Versionalize Java packages
+ AspectJ Compiler after APT Processing
  ------
  Yegor Bugayenko
  ------
- 2013-03-29
+ 2013-04-04
  ------
 
 ~~
+~~ #set($sign="$")
 ~~ Copyright (c) 2012-2013, JCabi.com
 ~~ All rights reserved.
 ~~
@@ -36,10 +37,10 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Versionalize Java packages
+AspectJ Compiler after APT Processing
 
-  This goal adds simple text file to every Java package
-  in your source directory:
+  This goal weaves Java class files in binary form, which
+  guarantees that APT processor modifications stay untouched:
 
 +--
 <project>
@@ -52,8 +53,14 @@ Versionalize Java packages
         <executions>
           <execution>
             <goals>
-              <goal>versionalize</goal>
+              <goal>ajc</goal>
             </goals>
+            <configuration>
+              <classesDirectory>${sign}{project.build.outputDirectory}</classesDirectory>
+              <aspectsDirectories>
+                <directory>${sign}{project.basedir}/src/main/aspect</directory>
+              </aspectsDirectories>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -61,3 +68,5 @@ Versionalize Java packages
   </build>
 </project>
 +--
+
+
