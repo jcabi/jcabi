@@ -28,7 +28,5 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-def file = new File(basedir, 'target/classes/com/jcabi/foo/com-jcabi-jcabi-test-jar.txt')
-assert file.text.contains('Project Version: 1.0')
-assert file.text.contains('Sample.class')
-assert file.text.contains('Sample.txt')
+def file = new File(basedir, 'target/jcabi-ajc/com/jcabi/foo/Sample.class')
+assert file.exists()

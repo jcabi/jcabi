@@ -30,10 +30,12 @@
 package com.jcabi.maven.plugin;
 
 import com.google.common.io.Files;
+import com.jcabi.aether.Classpath;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -42,7 +44,6 @@ import lombok.ToString;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.project.MavenProject;
@@ -53,6 +54,8 @@ import org.jfrog.maven.annomojo.annotations.MojoGoal;
 import org.jfrog.maven.annomojo.annotations.MojoParameter;
 import org.jfrog.maven.annomojo.annotations.MojoPhase;
 import org.slf4j.impl.StaticLoggerBinder;
+import org.sonatype.aether.RepositorySystemSession;
+import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * AspectJ compile CLASS files.
@@ -80,10 +83,19 @@ public final class AjcMojo extends AbstractMojo {
     @MojoParameter(
         expression = "${project}",
         required = true,
-        readonly = true,
-        description = "Maven project"
+        readonly = true
     )
     private transient MavenProject project;
+
+    /**
+     * Maven project.
+     */
+    @MojoParameter(
+        expression = "${repositorySystemSession}",
+        required = true,
+        readonly = true
+    )
+    private transient RepositorySystemSession session;
 
     /**
      * Compiled directory.
@@ -127,6 +139,7 @@ public final class AjcMojo extends AbstractMojo {
         this.tempDirectory.mkdirs();
         final Main main = new Main();
         final IMessageHolder mholder = new AjcMojo.MsgHolder();
+        final String jdk = "1.6";
         main.run(
             new String[] {
                 "-inpath",
@@ -140,9 +153,9 @@ public final class AjcMojo extends AbstractMojo {
                 "-aspectpath",
                 this.aspectpath(),
                 "-source",
-                "1.6",
+                jdk,
                 "-target",
-                "1.6",
+                jdk,
                 "-g:none",
                 "-encoding",
                 "UTF-8",
@@ -188,23 +201,25 @@ public final class AjcMojo extends AbstractMojo {
      * Get classpath for AJC.
      * @return Classpath
      */
-    @Loggable(value = Loggable.INFO, trim = false)
     private String classpath() {
-        try {
-            return StringUtils.join(
-                this.project.getCompileClasspathElements(),
-                AjcMojo.SEP
-            );
-        } catch (DependencyResolutionRequiredException ex) {
-            throw new IllegalStateException(ex);
-        }
+        return StringUtils.join(
+            new Classpath(
+                this.project,
+                this.session.getLocalRepository().getBasedir(),
+                Arrays.asList(
+                    JavaScopes.COMPILE,
+                    JavaScopes.PROVIDED,
+                    JavaScopes.SYSTEM
+                )
+            ),
+            AjcMojo.SEP
+        );
     }
 
     /**
      * Get locations of all aspect libraries for AJC.
      * @return Classpath
      */
-    @Loggable(value = Loggable.INFO, trim = false)
     private String aspectpath() {
         return System.getProperty("java.class.path");
     }
@@ -213,7 +228,6 @@ public final class AjcMojo extends AbstractMojo {
      * Get locations of all source roots (with aspects in source form).
      * @return Directories separated
      */
-    @Loggable(value = Loggable.INFO, trim = false)
     private String sourceroots() {
         String path;
         if (this.aspectDirectories == null
@@ -246,10 +260,10 @@ public final class AjcMojo extends AbstractMojo {
          */
         @Override
         public boolean hasAnyMessage(final IMessage.Kind kind,
-            final boolean orGreater) {
+            final boolean greater) {
             boolean has = false;
             for (IMessage msg : this.messages) {
-                has = msg.getKind().equals(kind) || orGreater
+                has = msg.getKind().equals(kind) || greater
                     && IMessage.Kind.COMPARATOR
                     .compare(msg.getKind(), kind) > 0;
                 if (has) {
@@ -263,10 +277,10 @@ public final class AjcMojo extends AbstractMojo {
          */
         @Override
         public int numMessages(final IMessage.Kind kind,
-            final boolean orGreater) {
+            final boolean greater) {
             int num = 0;
             for (IMessage msg : this.messages) {
-                final boolean has = msg.getKind().equals(kind) || orGreater
+                final boolean has = msg.getKind().equals(kind) || greater
                     && IMessage.Kind.COMPARATOR
                     .compare(msg.getKind(), kind) > 0;
                 if (has) {
@@ -280,7 +294,7 @@ public final class AjcMojo extends AbstractMojo {
          */
         @Override
         public IMessage[] getMessages(final IMessage.Kind kind,
-            final boolean orGreater) {
+            final boolean greater) {
             throw new UnsupportedOperationException();
         }
         /**

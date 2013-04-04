@@ -44,6 +44,8 @@ import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
+import org.sonatype.aether.RepositorySystemSession;
+import org.sonatype.aether.repository.LocalRepository;
 
 /**
  * Test case for {@link AjcMojo}.
@@ -63,7 +65,6 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
      */
     @Override
     protected void setUp() throws Exception {
-//        super.setUp();
         this.temp.create();
     }
 
@@ -72,20 +73,13 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
      * @throws Exception If something is wrong
      */
     public void testClassFilesWeaving() throws Exception {
-//        final AjcMojo mojo = AjcMojo.class.cast(
-//            this.lookupMojo(
-//                "ajc",
-//                this.getClass().getResource("ajc-pom.xml").getFile()
-//            )
-//        );
-        final AjcMojo mojo = new AjcMojo();
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(new ArrayList<String>())
             .when(project).getCompileClasspathElements();
+        final AjcMojo mojo = this.mojo(project);
         final File temps = this.temp.newFolder();
         final File classes = this.temp.newFolder();
         final File javas = this.temp.newFolder();
-        this.setVariableValueToObject(mojo, "project", project);
         this.setVariableValueToObject(mojo, "classesDirectory", classes);
         this.setVariableValueToObject(mojo, "aspectDirectories", new File[] {});
         this.setVariableValueToObject(mojo, "tempDirectory", temps);
@@ -109,6 +103,23 @@ public final class AjcMojoTest extends AbstractMojoTestCase {
             temps.listFiles(),
             Matchers.not(Matchers.emptyArray())
         );
+    }
+
+    /**
+     * Make a mojo.
+     * @param project With this project
+     * @return The mojo to test
+     * @throws Exception If something is wrong
+     */
+    private AjcMojo mojo(final MavenProject project) throws Exception {
+        final AjcMojo mojo = new AjcMojo();
+        final RepositorySystemSession session =
+            Mockito.mock(RepositorySystemSession.class);
+        Mockito.doReturn(new LocalRepository(this.temp.newFolder()))
+            .when(session).getLocalRepository();
+        this.setVariableValueToObject(mojo, "project", project);
+        this.setVariableValueToObject(mojo, "session", session);
+        return mojo;
     }
 
 }

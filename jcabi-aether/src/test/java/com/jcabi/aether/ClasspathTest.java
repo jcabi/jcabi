@@ -84,7 +84,7 @@ public final class ClasspathTest {
         );
         Mockito.doReturn(repos).when(project).getRemoteProjectRepositories();
         MatcherAssert.assertThat(
-            new Classpath(project, local.getPath(), JavaScopes.TEST),
+            new Classpath(project, local, JavaScopes.TEST),
             Matchers.<File>hasItems(
                 Matchers.hasToString(Matchers.endsWith("/as/directory")),
                 Matchers.hasToString(Matchers.endsWith("junit-4.10.jar")),

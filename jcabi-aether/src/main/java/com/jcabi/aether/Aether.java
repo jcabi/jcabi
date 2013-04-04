@@ -31,6 +31,7 @@ package com.jcabi.aether;
 
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -88,7 +89,7 @@ public final class Aether {
     /**
      * Location of local repo.
      */
-    private final transient String localRepo;
+    private final transient File localRepo;
 
     /**
      * Public ctor, requires information about all remote repos and one
@@ -96,7 +97,7 @@ public final class Aether {
      * @param prj The Maven project
      * @param repo Local repository location (directory path)
      */
-    public Aether(@NotNull final MavenProject prj, @NotNull final String repo) {
+    public Aether(@NotNull final MavenProject prj, @NotNull final File repo) {
         this.remotes = prj.getRemoteProjectRepositories()
             .toArray(new RemoteRepository[] {});
         this.localRepo = repo;

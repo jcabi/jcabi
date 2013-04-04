@@ -33,7 +33,9 @@ import com.jcabi.aspects.Cacheable;
 import com.jcabi.aspects.Loggable;
 import java.io.File;
 import java.util.AbstractSet;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -80,9 +82,9 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private final transient Aether aether;
 
     /**
-     * Artifacts scope.
+     * Artifact scopes to include.
      */
-    private final transient String scope;
+    private final transient Set<String> scopes;
 
     /**
      * Public ctor.
@@ -91,11 +93,22 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * @param scp The scope to use, e.g. "runtime" or "compile"
      */
     public Classpath(@NotNull final MavenProject prj,
-        @NotNull final String repo, @NotNull final String scp) {
+        @NotNull final File repo, @NotNull final String scp) {
+        this(prj, repo, Arrays.asList(scp));
+    }
+
+    /**
+     * Public ctor.
+     * @param prj The Maven project
+     * @param repo Local repository location (directory path)
+     * @param scps All scopes to include
+     */
+    public Classpath(@NotNull final MavenProject prj,
+        @NotNull final File repo, @NotNull final Collection<String> scps) {
         super();
         this.project = prj;
         this.aether = new Aether(prj, repo);
-        this.scope = scp;
+        this.scopes = new HashSet<String>(scps);
     }
 
     /**
@@ -140,11 +153,11 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private Collection<String> elements() {
         Collection<String> elements;
         try {
-            if (this.scope.equals(JavaScopes.TEST)) {
+            if (this.scopes.contains(JavaScopes.TEST)) {
                 elements = this.project.getTestClasspathElements();
-            } else if (this.scope.equals(JavaScopes.RUNTIME)) {
+            } else if (this.scopes.contains(JavaScopes.RUNTIME)) {
                 elements = this.project.getRuntimeClasspathElements();
-            } else if (this.scope.equals(JavaScopes.SYSTEM)) {
+            } else if (this.scopes.contains(JavaScopes.SYSTEM)) {
                 elements = this.project.getSystemClasspathElements();
             } else {
                 elements = this.project.getCompileClasspathElements();
@@ -202,7 +215,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private Set<RootArtifact> roots() {
         final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
         for (Dependency dep : this.project.getDependencies()) {
-            if (!this.scope.equals(dep.getScope())) {
+            if (!this.scopes.contains(dep.getScope())) {
                 continue;
             }
             roots.add(
