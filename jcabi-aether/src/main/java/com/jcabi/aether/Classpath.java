@@ -30,7 +30,7 @@
 package com.jcabi.aether;
 
 import com.jcabi.aspects.Cacheable;
-import com.jcabi.log.Logger;
+import com.jcabi.aspects.Loggable;
 import java.io.File;
 import java.util.AbstractSet;
 import java.util.Collection;
@@ -66,6 +66,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  */
 @ToString
 @EqualsAndHashCode(callSuper = false)
+@Loggable(Loggable.DEBUG)
 public final class Classpath extends AbstractSet<File> implements Set<File> {
 
     /**
@@ -74,9 +75,9 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     private final transient MavenProject project;
 
     /**
-     * Location of local repo.
+     * Aether to work with.
      */
-    private final transient String localRepo;
+    private final transient Aether aether;
 
     /**
      * Artifacts scope.
@@ -91,8 +92,9 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     public Classpath(@NotNull final MavenProject prj,
         @NotNull final String repo, @NotNull final String scp) {
+        super();
         this.project = prj;
-        this.localRepo = repo;
+        this.aether = new Aether(prj, repo);
         this.scope = scp;
     }
 
@@ -163,12 +165,8 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     private Set<Artifact> artifacts() {
         final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
-        final Aether aether = new Aether(this.project, this.localRepo);
-        final StringBuilder log = new StringBuilder();
-        log.append(String.format("#artifacts(): in '%s' scope:", this.scope));
         for (RootArtifact root : this.roots()) {
-            Logger.debug(this, "  %s", root);
-            for (Artifact dep : this.deps(aether, root)) {
+            for (Artifact dep : this.deps(root)) {
                 boolean found = false;
                 for (Artifact exists : artifacts) {
                     if (dep.getArtifactId().equals(exists.getArtifactId())
@@ -179,44 +177,14 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
                     }
                 }
                 if (found) {
-                    log.append(
-                        String.format(
-                            "\n    %s:%s:%s:%s (duplicate, ignored)",
-                            dep.getGroupId(),
-                            dep.getArtifactId(),
-                            dep.getClassifier(),
-                            dep.getVersion()
-                        )
-                    );
                     continue;
                 }
                 if (root.excluded(dep)) {
-                    log.append(
-                        String.format(
-                            "\n    %s:%s:%s:%s (excluded)",
-                            dep.getGroupId(),
-                            dep.getArtifactId(),
-                            dep.getClassifier(),
-                            dep.getVersion()
-                        )
-                    );
                     continue;
                 }
-                log.append(
-                    String.format(
-                        "\n    %s:%s:%s:%s",
-                        dep.getGroupId(),
-                        dep.getArtifactId(),
-                        dep.getClassifier(),
-                        dep.getVersion()
-                    )
-                );
-                if (!artifacts.add(dep)) {
-                    log.append(" (duplicate)");
-                }
+                artifacts.add(dep);
             }
         }
-        Logger.debug(this, log.toString());
         return artifacts;
     }
 
@@ -255,16 +223,14 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
 
     /**
      * Get all deps of a root artifact.
-     * @param aether The aether to use
      * @param root The root
      * @return The list of artifacts
      * @see #artifacts()
      */
-    private Collection<Artifact> deps(final Aether aether,
-        final RootArtifact root) {
+    private Collection<Artifact> deps(final RootArtifact root) {
         Collection<Artifact> deps;
         try {
-            deps = aether.resolve(root.artifact(), JavaScopes.RUNTIME);
+            deps = this.aether.resolve(root.artifact(), JavaScopes.RUNTIME);
         } catch (DependencyResolutionException ex) {
             throw new IllegalStateException(
                 String.format("Failed to resolve '%s'", root),
