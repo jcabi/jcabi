@@ -117,7 +117,7 @@ How to release new version to Maven Central:
     7. Deploy the product to Sonatype:
 
         rm -rf ~/.m2/repository/com/jcabi
-        mvn -Pqulice clean install -pl :parent
+        mvn -Pqulice clean install
         # update parent version in pom.xml
         mvn -Pqulice -Pjcabi -Psonatype clean deploy
 
