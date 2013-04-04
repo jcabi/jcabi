@@ -37,6 +37,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -95,6 +96,7 @@ public final class VersionalizeMojo extends AbstractMojo {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(value = Loggable.DEBUG, limit = 1, unit = TimeUnit.MINUTES)
     public void execute() throws MojoFailureException {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
         final File src = new File(this.project.getBuild().getSourceDirectory());

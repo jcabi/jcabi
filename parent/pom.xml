@@ -581,6 +581,7 @@
                                     <goal>ajc</goal>
                                 </goals>
                                 <configuration>
+                                    <tempDirectory>${project.build.directory}/jcabi-ajc</tempDirectory>
                                     <classesDirectory>${project.build.outputDirectory}</classesDirectory>
                                     <aspectsDirectories>
                                         <directory>${project.basedir}/src/main/aspect</directory>
@@ -594,6 +595,7 @@
                                     <goal>ajc</goal>
                                 </goals>
                                 <configuration>
+                                    <tempDirectory>${project.build.directory}/jcabi-ajc-test</tempDirectory>
                                     <classesDirectory>${project.build.testOutputDirectory}</classesDirectory>
                                     <aspectsDirectories>
                                         <directory>${project.basedir}/src/main/aspect</directory>

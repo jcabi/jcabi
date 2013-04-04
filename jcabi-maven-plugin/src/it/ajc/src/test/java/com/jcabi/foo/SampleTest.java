@@ -11,7 +11,7 @@ public final class SampleTest {
         MatcherAssert.assertThat(new Sample(), Matchers.equalTo(new Sample()));
     }
 
-    @Test
+    @Test(expected = javax.validation.ConstraintViolationException.class)
     public void aspectjAnnotationsWork() throws Exception {
         new Sample().notNull(null);
     }

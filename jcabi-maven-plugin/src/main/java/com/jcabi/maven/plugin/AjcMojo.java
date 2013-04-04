@@ -31,14 +31,17 @@ package com.jcabi.maven.plugin;
 
 import com.google.common.io.Files;
 import com.jcabi.aether.Classpath;
+import com.jcabi.aspects.Cacheable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.TimeUnit;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.apache.commons.io.FileUtils;
@@ -70,6 +73,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
 @ToString
 @EqualsAndHashCode(callSuper = false)
 @Loggable(Loggable.DEBUG)
+@SuppressWarnings({ "PMD.TooManyMethods", "PMD.ExcessiveImports" })
 public final class AjcMojo extends AbstractMojo {
 
     /**
@@ -133,6 +137,7 @@ public final class AjcMojo extends AbstractMojo {
      * {@inheritDoc}
      */
     @Override
+    @Loggable(value = Loggable.DEBUG, limit = 1, unit = TimeUnit.MINUTES)
     public void execute() throws MojoFailureException {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
         this.classesDirectory.mkdirs();
@@ -181,11 +186,7 @@ public final class AjcMojo extends AbstractMojo {
         Logger.info(
             this,
             "ajc result: %d file(s), %d error(s), %d warning(s)",
-            FileUtils.listFiles(
-                this.tempDirectory,
-                TrueFileFilter.INSTANCE,
-                TrueFileFilter.INSTANCE
-            ).size(),
+            AjcMojo.files(this.tempDirectory).size(),
             mholder.numMessages(IMessage.ERROR, true),
             mholder.numMessages(IMessage.WARNING, false)
         );
@@ -198,6 +199,8 @@ public final class AjcMojo extends AbstractMojo {
      * Get classpath for AJC.
      * @return Classpath
      */
+    @Loggable(value = Loggable.DEBUG, limit = 1, unit = TimeUnit.MINUTES)
+    @Cacheable(forever = true)
     private String classpath() {
         return StringUtils.join(
             new Classpath(
@@ -217,14 +220,20 @@ public final class AjcMojo extends AbstractMojo {
      * Get locations of all aspect libraries for AJC.
      * @return Classpath
      */
+    @Cacheable(forever = true)
     private String aspectpath() {
-        return System.getProperty("java.class.path");
+        return new StringBuilder()
+            .append(this.classpath())
+            .append(AjcMojo.SEP)
+            .append(System.getProperty("java.class.path"))
+            .toString();
     }
 
     /**
      * Get locations of all source roots (with aspects in source form).
      * @return Directories separated
      */
+    @Cacheable(forever = true)
     private String sourceroots() {
         String path;
         if (this.aspectDirectories == null
@@ -241,6 +250,24 @@ public final class AjcMojo extends AbstractMojo {
             path = StringUtils.join(this.aspectDirectories, AjcMojo.SEP);
         }
         return path;
+    }
+
+    /**
+     * Find all files in the directory.
+     * @param dir The directory
+     * @return List of them
+     */
+    private static Collection<File> files(final File dir) {
+        final Collection<File> files = new LinkedList<File>();
+        final Collection<File> all = FileUtils.listFiles(
+            dir, TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE
+        );
+        for (File file : all) {
+            if (file.isFile()) {
+                files.add(file);
+            }
+        }
+        return files;
     }
 
     /**
