@@ -8,6 +8,13 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 0.8: upcoming release
 
  * #197: `Classpath` class introduced (`jcabi-aether`)
+ * #193: `jcabi-maven-plugin:ajc' goal introduced
+ * #192: `@Loggable` throws for interrupted thread (`jcabi-aspects`)
+ * #189: `Runnable` cleans interrupted status (`jcabi-log`)
+ * #188: `@ScheduleWithFixedDelay` introduced (`jcabi-aspects`)
+ * #186: `@Timeable` annotation to terminate stuck methods (`jcabi-aspects`)
+ * #182: `@Loggable` logs long-running methods in process (`jcabi-aspects`)
+ * #179: `jcabi-maven-plugin` supplementary plugin created
  * #171: Java packages are versioned with text file (`parent`)
  * #151: silently ignore absence of Maven Log (`jcabi-maven-slf4j`)
  * #147: methods can be annotated with `@NotNull` (`jcabi-aspects`)
