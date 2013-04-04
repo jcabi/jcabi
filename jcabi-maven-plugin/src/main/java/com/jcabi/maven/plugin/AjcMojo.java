@@ -134,6 +134,16 @@ public final class AjcMojo extends AbstractMojo {
     private transient File tempDirectory;
 
     /**
+     * Scopes to take into account.
+     */
+    @MojoParameter(
+        required = false,
+        readonly = false,
+        description = "Scopes with aspects and libraries"
+    )
+    private transient String[] scopes;
+
+    /**
      * {@inheritDoc}
      */
     @Override
@@ -199,18 +209,24 @@ public final class AjcMojo extends AbstractMojo {
      * Get classpath for AJC.
      * @return Classpath
      */
-    @Loggable(value = Loggable.DEBUG, limit = 1, unit = TimeUnit.MINUTES)
     @Cacheable(forever = true)
     private String classpath() {
+        Collection<String> scps;
+        if (this.scopes == null) {
+            scps = Arrays.asList(
+                JavaScopes.COMPILE,
+                JavaScopes.PROVIDED,
+                JavaScopes.RUNTIME,
+                JavaScopes.SYSTEM
+            );
+        } else {
+            scps = Arrays.asList(this.scopes);
+        }
         return StringUtils.join(
             new Classpath(
                 this.project,
                 this.session.getLocalRepository().getBasedir(),
-                Arrays.asList(
-                    JavaScopes.COMPILE,
-                    JavaScopes.PROVIDED,
-                    JavaScopes.SYSTEM
-                )
+                scps
             ),
             AjcMojo.SEP
         );

@@ -46,7 +46,6 @@ import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.NotFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
@@ -68,6 +67,7 @@ import org.slf4j.impl.StaticLoggerBinder;
 @ToString
 @EqualsAndHashCode(callSuper = false)
 @Loggable(Loggable.DEBUG)
+@SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
 public final class VersionalizeMojo extends AbstractMojo {
 
     /**
@@ -121,13 +121,30 @@ public final class VersionalizeMojo extends AbstractMojo {
      * @return The text
      */
     private String text(@NotNull final File dir) {
-        return String.format(
-            "Project Version: %s\nBuild Number: %s\nBuild Date: %s\n\n%s",
-            this.project.getVersion(),
-            this.buildNumber,
-            DateFormatUtils.ISO_DATETIME_FORMAT.format(new Date()),
-            StringUtils.join(VersionalizeMojo.files(dir, "*"), "\n")
-        );
+        final StringBuilder text = new StringBuilder()
+            .append(String.format("Build Number: %s\n", this.buildNumber))
+            .append(
+                String.format(
+                    "Project Version: %s\n",
+                    this.project.getVersion()
+                )
+            )
+            .append(
+                String.format(
+                    "Build Date: %s\n\n",
+                    DateFormatUtils.ISO_DATETIME_FORMAT.format(new Date())
+                )
+            );
+        for (String name : VersionalizeMojo.files(dir, "*")) {
+            final File file = new File(dir, name);
+            if (file.isFile()) {
+                text.append(name)
+                    .append(": ")
+                    .append(file.length())
+                    .append("\n");
+            }
+        }
+        return text.toString();
     }
 
     /**
@@ -136,7 +153,6 @@ public final class VersionalizeMojo extends AbstractMojo {
      * @param dest Destination
      * @throws IOException If some IO problem
      */
-    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     private void versionalize(@NotNull final File src, @NotNull final File dest)
         throws IOException {
         final Collection<File> dirs = FileUtils.listFilesAndDirs(
