@@ -69,8 +69,9 @@ public final class ClasspathTest {
         Mockito.doReturn(Arrays.asList("/some/path/as/directory"))
             .when(project).getTestClasspathElements();
         final Dependency dep = new Dependency();
-        dep.setGroupId("junit");
-        dep.setArtifactId("junit");
+        final String group = "junit";
+        dep.setGroupId(group);
+        dep.setArtifactId(group);
         dep.setVersion("4.10");
         dep.setScope(JavaScopes.TEST);
         Mockito.doReturn(Arrays.asList(dep)).when(project).getDependencies();
