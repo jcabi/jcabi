@@ -83,7 +83,7 @@ public class RunMojo extends AbstractMojo {
         StaticLoggerBinder.getSingleton().setMavenLog(this.getLog());
         final Aether aether = new Aether(
             this.project,
-            this.session.getLocalRepository().getBasedir().getPath()
+            this.session.getLocalRepository().getBasedir()
         );
         for (String coord : this.coordinates) {
             Logger.info(this, "%s:", coord);
