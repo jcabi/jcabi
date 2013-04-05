@@ -115,8 +115,7 @@ final class RootArtifact {
     }
 
     /**
-     * Get all deps of a root artifact.
-     * @param root The root
+     * Get all deps of this root artifact.
      * @return The list of artifacts
      */
     public Collection<Artifact> children() {

@@ -152,7 +152,6 @@ public final class Aether {
         final List<Artifact> deps = new LinkedList<Artifact>();
         deps.addAll(
             this.fetch(
-                this.system,
                 this.session(this.system),
                 new DependencyRequest(crq, filter)
             )
@@ -162,7 +161,6 @@ public final class Aether {
 
     /**
      * Fetch dependencies.
-     * @param system The system to read from
      * @param session The session
      * @param dreq Dependency request
      * @return The list of dependencies
@@ -172,14 +170,13 @@ public final class Aether {
      *  I can do at the moment in order to protect clients of the class.
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
-    private List<Artifact> fetch(final RepositorySystem system,
-        final RepositorySystemSession session,
+    private List<Artifact> fetch(final RepositorySystemSession session,
         final DependencyRequest dreq) throws DependencyResolutionException {
         final List<Artifact> deps = new LinkedList<Artifact>();
         try {
             Collection<ArtifactResult> results;
             synchronized (this.localRepo) {
-                results = system
+                results = this.system
                     .resolveDependencies(session, dreq)
                     .getArtifactResults();
             }
