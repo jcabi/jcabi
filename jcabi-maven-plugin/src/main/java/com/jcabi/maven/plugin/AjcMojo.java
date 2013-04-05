@@ -164,7 +164,7 @@ public final class AjcMojo extends AbstractMojo {
                 "-d",
                 this.tempDirectory.getAbsolutePath(),
                 "-classpath",
-                this.classpath(),
+                StringUtils.join(this.classpath(), AjcMojo.SEP),
                 "-aspectpath",
                 this.aspectpath(),
                 "-source",
@@ -212,8 +212,12 @@ public final class AjcMojo extends AbstractMojo {
      * @return Classpath
      */
     @Cacheable(forever = true)
-    @Loggable(value = Loggable.INFO, trim = false)
-    private String classpath() {
+    @Loggable(
+        value = Loggable.DEBUG,
+        limit = 1, unit = TimeUnit.MINUTES,
+        trim = false
+    )
+    private Classpath classpath() {
         Collection<String> scps;
         if (this.scopes == null) {
             scps = Arrays.asList(
@@ -225,13 +229,10 @@ public final class AjcMojo extends AbstractMojo {
         } else {
             scps = Arrays.asList(this.scopes);
         }
-        return StringUtils.join(
-            new Classpath(
-                this.project,
-                this.session.getLocalRepository().getBasedir(),
-                scps
-            ),
-            AjcMojo.SEP
+        return new Classpath(
+            this.project,
+            this.session.getLocalRepository().getBasedir(),
+            scps
         );
     }
 
@@ -242,7 +243,7 @@ public final class AjcMojo extends AbstractMojo {
     @Cacheable(forever = true)
     private String aspectpath() {
         return new StringBuilder()
-            .append(this.classpath())
+            .append(StringUtils.join(this.classpath(), AjcMojo.SEP))
             .append(AjcMojo.SEP)
             .append(System.getProperty("java.class.path"))
             .toString();

@@ -31,11 +31,14 @@ package com.jcabi.aether;
 
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
+import java.util.Collection;
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import org.apache.maven.model.Exclusion;
 import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.resolution.DependencyResolutionException;
+import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * One root artifact found in the project.
@@ -47,6 +50,12 @@ import org.sonatype.aether.artifact.Artifact;
 @EqualsAndHashCode(of = "art")
 @Loggable(Loggable.DEBUG)
 final class RootArtifact {
+
+    /**
+     * The aether for finding children.
+     */
+    @NotNull
+    private final transient Aether aether;
 
     /**
      * The artifact.
@@ -62,11 +71,13 @@ final class RootArtifact {
 
     /**
      * Ctor.
+     * @param aeth Aether for finding children
      * @param artifact The artifact
      * @param excl Exclusions
      */
-    public RootArtifact(@NotNull final Artifact artifact,
-        @NotNull final List<Exclusion> excl) {
+    public RootArtifact(@NotNull final Aether aeth,
+        @NotNull final Artifact artifact, @NotNull final List<Exclusion> excl) {
+        this.aether = aeth;
         this.art = artifact;
         this.exclusions = excl;
     }
@@ -76,13 +87,23 @@ final class RootArtifact {
      */
     @Override
     public String toString() {
-        return Logger.format(
-            "%s:%s:%s (%d exclusions)",
-            this.art.getGroupId(),
-            this.art.getArtifactId(),
-            this.art.getVersion(),
-            this.exclusions.size()
+        final StringBuilder text = new StringBuilder();
+        text.append(
+            Logger.format(
+                "%s:%s:%s:",
+                this.art.getGroupId(),
+                this.art.getArtifactId(),
+                this.art.getVersion(),
+                this.exclusions.size()
+            )
         );
+        for (Artifact child : this.children()) {
+            text.append("\n  ").append(child);
+            if (this.excluded(child)) {
+                text.append(" (excluded)");
+            }
+        }
+        return text.toString();
     }
 
     /**
@@ -91,6 +112,24 @@ final class RootArtifact {
      */
     public Artifact artifact() {
         return this.art;
+    }
+
+    /**
+     * Get all deps of a root artifact.
+     * @param root The root
+     * @return The list of artifacts
+     */
+    public Collection<Artifact> children() {
+        Collection<Artifact> deps;
+        try {
+            deps = this.aether.resolve(this.artifact(), JavaScopes.COMPILE);
+        } catch (DependencyResolutionException ex) {
+            throw new IllegalStateException(
+                String.format("Failed to resolve '%s'", this),
+                ex
+            );
+        }
+        return deps;
     }
 
     /**

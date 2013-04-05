@@ -93,6 +93,12 @@ public final class Aether {
     private final transient File localRepo;
 
     /**
+     * Repository system.
+     */
+    private final RepositorySystem system =
+        new RepositorySystemBuilder().build();
+
+        /**
      * Public ctor, requires information about all remote repos and one
      * local.
      * @param prj The Maven project
@@ -143,12 +149,11 @@ public final class Aether {
         throws DependencyResolutionException {
         final Dependency rdep = new Dependency(root, scope);
         final CollectRequest crq = this.request(rdep);
-        final RepositorySystem system = new RepositorySystemBuilder().build();
         final List<Artifact> deps = new LinkedList<Artifact>();
         deps.addAll(
             this.fetch(
-                system,
-                this.session(system),
+                this.system,
+                this.session(this.system),
                 new DependencyRequest(crq, filter)
             )
         );

@@ -42,12 +42,11 @@ import java.util.LinkedList;
 import java.util.Set;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
 import org.sonatype.aether.artifact.Artifact;
-import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
 import org.sonatype.aether.util.artifact.JavaScopes;
 
@@ -63,12 +62,16 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  *   System.getProperty("path.separator")
  * );</pre>
  *
+ * <p>Important to notice that this class resolves artifacts from repositories
+ * only once per instance. It means that once resolved the list of files
+ * is cached and never flushes. In order to resolve again (if you think that
+ * content of repositories is changed), make a new instance of the class.
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.7.16
  * @see Aether
  */
-@ToString
 @EqualsAndHashCode(callSuper = false, of = { "project", "aether", "scopes" })
 @Loggable(Loggable.DEBUG)
 public final class Classpath extends AbstractSet<File> implements Set<File> {
@@ -117,6 +120,15 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * {@inheritDoc}
      */
     @Override
+    @Cacheable(forever = true)
+    public String toString() {
+        return StringUtils.join(this.roots(), "\n");
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Iterator<File> iterator() {
         return this.fetch().iterator();
     }
@@ -136,14 +148,12 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     @Cacheable(forever = true)
     public Set<File> fetch() {
-        final Set<String> paths = new LinkedHashSet<String>();
-        paths.addAll(this.elements());
-        for (Artifact artifact : this.artifacts()) {
-            paths.add(artifact.getFile().getPath());
-        }
         final Set<File> files = new LinkedHashSet<File>();
-        for (String path : paths) {
+        for (String path : this.elements()) {
             files.add(new File(path));
+        }
+        for (Artifact artifact : this.artifacts()) {
+            files.add(artifact.getFile());
         }
         return files;
     }
@@ -184,24 +194,15 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     private Set<Artifact> artifacts() {
         final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
-        for (RootArtifact root : this.roots(this.project.getDependencies())) {
-            for (Artifact dep : this.deps(root)) {
-                boolean found = false;
-                for (Artifact exists : artifacts) {
-                    if (dep.getArtifactId().equals(exists.getArtifactId())
-                        && dep.getGroupId().equals(exists.getGroupId())
-                        && dep.getClassifier().equals(exists.getClassifier())) {
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) {
+        for (RootArtifact root : this.roots()) {
+            for (Artifact child : root.children()) {
+                if (Classpath.contains(child, artifacts)) {
                     continue;
                 }
-                if (root.excluded(dep)) {
+                if (root.excluded(child)) {
                     continue;
                 }
-                artifacts.add(dep);
+                artifacts.add(child);
             }
         }
         return artifacts;
@@ -214,12 +215,11 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * their transitive dependencies (that's why they are called "root"
      * artifacts).
      *
-     * @param deps Dependencies
      * @return The set of root artifacts
      */
-    private Set<RootArtifact> roots(final Collection<Dependency> deps) {
+    private Set<RootArtifact> roots() {
         final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
-        for (Dependency dep : deps) {
+        for (Dependency dep : this.project.getDependencies()) {
             if (!this.scopes.contains(dep.getScope())) {
                 continue;
             }
@@ -235,6 +235,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     private RootArtifact root(final Dependency dep) {
         return new RootArtifact(
+            this.aether,
             new DefaultArtifact(
                 dep.getGroupId(),
                 dep.getArtifactId(),
@@ -247,22 +248,23 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
     }
 
     /**
-     * Get all deps of a root artifact.
-     * @param root The root
-     * @return The list of artifacts
-     * @see #artifacts()
+     * Artifact exists in collection?
+     * @param artifact The artifact
+     * @param artifacts Collection of them
+     * @return TRUE if it is already there
      */
-    private Collection<Artifact> deps(final RootArtifact root) {
-        Collection<Artifact> deps;
-        try {
-            deps = this.aether.resolve(root.artifact(), JavaScopes.COMPILE);
-        } catch (DependencyResolutionException ex) {
-            throw new IllegalStateException(
-                String.format("Failed to resolve '%s'", root),
-                ex
-            );
+    private static boolean contains(final Artifact artifact,
+        final Collection<Artifact> artifacts) {
+        boolean contains = false;
+        for (Artifact exists : artifacts) {
+            if (artifact.getArtifactId().equals(exists.getArtifactId())
+                && artifact.getGroupId().equals(exists.getGroupId())
+                && artifact.getClassifier().equals(exists.getClassifier())) {
+                contains = true;
+                break;
+            }
         }
-        return deps;
+        return contains;
     }
 
 }
