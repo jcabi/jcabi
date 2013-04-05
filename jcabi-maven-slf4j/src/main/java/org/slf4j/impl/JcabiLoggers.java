@@ -29,57 +29,49 @@
  */
 package org.slf4j.impl;
 
-import org.apache.maven.monitor.logging.DefaultLog;
-import org.codehaus.plexus.logging.Logger;
-import org.codehaus.plexus.logging.console.ConsoleLogger;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import org.apache.maven.plugin.logging.Log;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
 
 /**
- * Test case for {@link Loggers}.
+ * Implementation of {@link ILoggerFactory} returning the appropriate
+ * named {@link Slf4jAdapter} instance.
+ *
+ * <p>The class is thread-safe.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
+ * @since 0.1.6
+ * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
-public final class LoggersTest {
+@ToString
+@EqualsAndHashCode(of = "adapter")
+final class JcabiLoggers implements ILoggerFactory {
 
     /**
-     * Initialize loggers.
-     * @throws Exception If something wrong inside
+     * The adapter between SLF4J and Maven.
      */
-    @BeforeClass
-    public static void init() throws Exception {
-        StaticLoggerBinder.getSingleton().setMavenLog(
-            new DefaultLog(
-                new ConsoleLogger(
-                    Logger.LEVEL_DEBUG,
-                    LoggersTest.class.getName()
-                )
-            )
-        );
+    private final transient Slf4jAdapter adapter = new Slf4jAdapter();
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Logger getLogger(final String name) {
+        if (name == null) {
+            throw new IllegalArgumentException("logger name can't be NULL");
+        }
+        return this.adapter;
     }
 
     /**
-     * Loggers can create and return logger.
-     * @throws Exception If something wrong inside
+     * Set Maven log.
+     * @param log The log to set
      */
-    @Test
-    public void retrievesLoggerByName() throws Exception {
-        MatcherAssert.assertThat(
-            new Loggers().getLogger("root"),
-            Matchers.instanceOf(Slf4jAdapter.class)
-        );
-    }
-
-    /**
-     * Loggers can create and return logger.
-     * @throws Exception If something wrong inside
-     */
-    @Test(expected = IllegalArgumentException.class)
-    public void throwsWhenLoggerNameIsNull() throws Exception {
-        new Loggers().getLogger(null);
+    public void setMavenLog(final Log log) {
+        this.adapter.setMavenLog(log);
     }
 
 }

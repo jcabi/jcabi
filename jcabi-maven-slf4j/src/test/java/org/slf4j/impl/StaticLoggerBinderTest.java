@@ -69,7 +69,7 @@ public final class StaticLoggerBinderTest {
     public void createsLoggerFactoryOfCustomClass() throws Exception {
         MatcherAssert.assertThat(
             StaticLoggerBinder.getSingleton().getLoggerFactory(),
-            Matchers.instanceOf(Loggers.class)
+            Matchers.instanceOf(JcabiLoggers.class)
         );
     }
 
@@ -81,7 +81,7 @@ public final class StaticLoggerBinderTest {
     public void retrievesLoggerFactoryString() throws Exception {
         MatcherAssert.assertThat(
             StaticLoggerBinder.getSingleton().getLoggerFactoryClassStr(),
-            Matchers.equalTo("org.slf4j.impl.Loggers")
+            Matchers.equalTo(JcabiLoggers.class.getName())
         );
     }
 

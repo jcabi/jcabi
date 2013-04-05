@@ -29,49 +29,57 @@
  */
 package org.slf4j.impl;
 
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-import org.apache.maven.plugin.logging.Log;
-import org.slf4j.ILoggerFactory;
-import org.slf4j.Logger;
+import org.apache.maven.monitor.logging.DefaultLog;
+import org.codehaus.plexus.logging.Logger;
+import org.codehaus.plexus.logging.console.ConsoleLogger;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
- * Implementation of {@link ILoggerFactory} returning the appropriate
- * named {@link Slf4jAdapter} instance.
- *
- * <p>The class is thread-safe.
+ * Test case for {@link JcabiLoggers}.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
- * @since 0.1.6
- * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
-@ToString
-@EqualsAndHashCode(of = "adapter")
-final class Loggers implements ILoggerFactory {
+public final class JcabiLoggersTest {
 
     /**
-     * The adapter between SLF4J and Maven.
+     * Initialize loggers.
+     * @throws Exception If something wrong inside
      */
-    private final transient Slf4jAdapter adapter = new Slf4jAdapter();
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Logger getLogger(final String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("logger name can't be NULL");
-        }
-        return this.adapter;
+    @BeforeClass
+    public static void init() throws Exception {
+        StaticLoggerBinder.getSingleton().setMavenLog(
+            new DefaultLog(
+                new ConsoleLogger(
+                    Logger.LEVEL_DEBUG,
+                    JcabiLoggersTest.class.getName()
+                )
+            )
+        );
     }
 
     /**
-     * Set Maven log.
-     * @param log The log to set
+     * JcabiLoggers can create and return logger.
+     * @throws Exception If something wrong inside
      */
-    public void setMavenLog(final Log log) {
-        this.adapter.setMavenLog(log);
+    @Test
+    public void retrievesLoggerByName() throws Exception {
+        MatcherAssert.assertThat(
+            new JcabiLoggers().getLogger("root"),
+            Matchers.instanceOf(Slf4jAdapter.class)
+        );
+    }
+
+    /**
+     * JcabiLoggers can create and return logger.
+     * @throws Exception If something wrong inside
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void throwsWhenLoggerNameIsNull() throws Exception {
+        new JcabiLoggers().getLogger(null);
     }
 
 }

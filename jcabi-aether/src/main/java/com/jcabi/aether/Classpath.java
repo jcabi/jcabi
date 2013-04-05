@@ -40,6 +40,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import org.apache.commons.lang3.StringUtils;
@@ -73,7 +74,11 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @see Aether
  */
 @EqualsAndHashCode(callSuper = false, of = { "project", "aether", "scopes" })
-@Loggable(Loggable.DEBUG)
+@Loggable(
+    value = Loggable.DEBUG,
+    limit = 1, unit = TimeUnit.MINUTES,
+    trim = false
+)
 public final class Classpath extends AbstractSet<File> implements Set<File> {
 
     /**

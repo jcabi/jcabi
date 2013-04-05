@@ -83,7 +83,7 @@ public final class StaticLoggerBinder implements LoggerFactoryBinder {
      * {@link #getLoggerFactory()} method should always be
      * the same object.
      */
-    private final transient Loggers loggers = new Loggers();
+    private final transient JcabiLoggers loggers = new JcabiLoggers();
 
     /**
      * Private ctor to avoid direct instantiation of the class.

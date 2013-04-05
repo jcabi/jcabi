@@ -217,7 +217,7 @@ public final class AjcMojo extends AbstractMojo {
         limit = 1, unit = TimeUnit.MINUTES,
         trim = false
     )
-    private Classpath classpath() {
+    private Collection<File> classpath() {
         Collection<String> scps;
         if (this.scopes == null) {
             scps = Arrays.asList(
