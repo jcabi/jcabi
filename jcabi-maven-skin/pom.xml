@@ -55,6 +55,15 @@
         <plugins>
             <plugin>
                 <artifactId>maven-invoker-plugin</artifactId>
+                <!--
+                Latest version of the plugin (1.8) is based on Groovy 2.0.1,
+                which is based on ASM 4.0, while Jersey is still using ASM 3.x.
+                This version mismatch leads to an exception in runtime,
+                explained in http://stackoverflow.com/questions/11738732/
+                That's why we downgrade the version here to 1.6, which is
+                based on Groovy 1.8.6, which is using ASM 3.2.
+                -->
+                <version>1.6</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.rexsl</groupId>
