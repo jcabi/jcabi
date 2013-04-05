@@ -118,8 +118,10 @@ How to release new version to Maven Central:
 
         rm -rf ~/.m2/repository/com/jcabi
         mvn -Pqulice clean install
-        # update parent version in pom.xml
-        mvn -Pqulice -Pjcabi -Psonatype clean deploy
+
+        update parent version in pom.xml
+
+        mvn -Pjcabi -Psonatype -DskipTests -Dinvoker.skip=true clean deploy
 
         Make sure that you have this profile in ~/.m2/settings.xml:
 

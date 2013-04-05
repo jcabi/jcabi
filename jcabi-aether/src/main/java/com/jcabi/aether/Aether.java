@@ -95,7 +95,7 @@ public final class Aether {
     /**
      * Repository system.
      */
-    private final RepositorySystem system =
+    private final transient RepositorySystem system =
         new RepositorySystemBuilder().build();
 
         /**
@@ -152,7 +152,7 @@ public final class Aether {
         final List<Artifact> deps = new LinkedList<Artifact>();
         deps.addAll(
             this.fetch(
-                this.session(this.system),
+                this.session(),
                 new DependencyRequest(crq, filter)
             )
         );
@@ -250,15 +250,14 @@ public final class Aether {
 
     /**
      * Create RepositorySystemSession.
-     * @param system The repository system to work with
      * @return The session
      */
-    private RepositorySystemSession session(final RepositorySystem system) {
+    private RepositorySystemSession session() {
         final LocalRepository local = new LocalRepository(this.localRepo);
         final MavenRepositorySystemSession session =
             new MavenRepositorySystemSession();
         session.setLocalRepositoryManager(
-            system.newLocalRepositoryManager(local)
+            this.system.newLocalRepositoryManager(local)
         );
         session.setTransferListener(new LogTransferListener());
         return session;
