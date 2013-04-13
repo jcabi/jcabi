@@ -1,5 +1,5 @@
  ------
- AspectJ Compiler after APT Processing
+ Weave Binaries with AspectJ Aspects after APT Processing
  ------
  Yegor Bugayenko
  ------
@@ -37,10 +37,12 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-AspectJ Compiler after APT Processing
+Weave Binaries with AspectJ Aspects after APT Processing
 
-  This goal weaves Java class files in binary form, which
-  guarantees that APT processor modifications stay untouched:
+  This goal weaves Java <<<.class>>> binary files with AspectJ aspects.
+  Comparing to AspectJ compiling of <<<.java>>> files, this approach
+  guarantees that APT processor modifications stay untouched. To use the
+  plugin add this configuration to your <<<pom.xml>>>:
 
 +--
 <project>
@@ -55,12 +57,6 @@ AspectJ Compiler after APT Processing
             <goals>
               <goal>ajc</goal>
             </goals>
-            <configuration>
-              <classesDirectory>${sign}{project.build.outputDirectory}</classesDirectory>
-              <aspectsDirectories>
-                <directory>${sign}{project.basedir}/src/main/aspect</directory>
-              </aspectsDirectories>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -69,4 +65,64 @@ AspectJ Compiler after APT Processing
 </project>
 +--
 
+  The plugin will find all AspectJ aspects available in the project compile
+  classpath and plugin class and weave <<<.class>>> files using them. By default,
+  the plugin finds binary <<<.class>>> files in <<<target/classes>>> and replaces
+  them with woven versions. It is possible to change the location of them
+  using <<<classesDirectory>>> parameter. For example, if you need to
+  weave test classes:
+
++--
+<execution>
+  <configuration>
+    <classesDirectory>target/test-classes</classesDirectory>
+  </configuration>
+  [...]
+</execution>
++--
+
+  It is also possible to tell the plugin to use additional not yet compiled
+  AspectJ aspects in source <<<.java>>> or <<<.aj>>> format. Add the list
+  of directories where these aspects are located to the plugin configuration:
+
++--
+<execution>
+  <configuration>
+    <aspectsDirectories>
+      <directory>src/main/aspect</directory>
+    </aspectsDirectories>
+  </configuration>
+  [...]
+</execution>
++--
+
+  Another alternative is {{{http://mojo.codehaus.org/aspectj-maven-plugin/}<<<aspectj-maven-plugin>>>}},
+  but it can't weave binaries,
+  as {{{http://stackoverflow.com/questions/3660547/apt-and-aop-in-the-same-project-using-maven}explained here}}.
+
+* Cutting Edge Version
+
+  If you want to use current version of the plugin, you can do it with
+  this configuration in your <<<pom.xml>>>:
+
++--
+<pluginRepositories>
+  <pluginRepository>
+    <id>oss.sonatype.org</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+  </pluginRepository>
+</pluginRepositories>
+<project>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.jcabi</groupId>
+        <artifactId>jcabi-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        [...]
+      </plugin>
+    </plugins>
+  </build>
+</project>
++--
 
