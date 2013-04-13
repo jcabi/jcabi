@@ -9,7 +9,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
  * #201: `@RetryOnFailure` shows full text of chained exceptions (`jcabi-aspects`)
  * #197: `Classpath` class introduced (`jcabi-aether`)
- * #193: `jcabi-maven-plugin:ajc' goal introduced
+ * #193: `jcabi-maven-plugin:ajc` goal introduced
  * #192: `@Loggable` throws for interrupted thread (`jcabi-aspects`)
  * #189: `Runnable` cleans interrupted status (`jcabi-log`)
  * #188: `@ScheduleWithFixedDelay` introduced (`jcabi-aspects`)
