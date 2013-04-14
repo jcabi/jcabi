@@ -52,16 +52,24 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
-            <groupId>com.jcabi</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>jcabi-log</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-aspects</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <!-- Forward all calls to SLF4J to Maven log. -->
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-maven-slf4j</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-aspects</artifactId>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -117,11 +125,6 @@
                     <artifactId>sisu-inject-plexus</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <!-- Forward all calls to SLF4J to Maven log. -->
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-maven-slf4j</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

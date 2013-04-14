@@ -52,14 +52,32 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
-            <groupId>com.jcabi</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>jcabi-aspects</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.jcabi</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>jcabi-manifests</artifactId>
+            <version>${project.version}</version>
             <!-- for invoker tests only -->
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-log</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-velocity</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <!-- Forward all calls to SLF4J to Maven log. -->
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-maven-slf4j</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -80,14 +98,6 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-log</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-velocity</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.rexsl</groupId>
             <artifactId>rexsl-test</artifactId>
             <version>0.4.10</version>
@@ -95,7 +105,6 @@
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
-            <version>2.0.2</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -143,11 +152,6 @@
                     <artifactId>sisu-inject-plexus</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <!-- Forward all calls to SLF4J to Maven log. -->
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-maven-slf4j</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

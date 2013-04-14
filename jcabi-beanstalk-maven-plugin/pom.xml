@@ -52,13 +52,20 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-log</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <!-- Forward all calls to SLF4J to Maven log. -->
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-maven-slf4j</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
             <version>1.4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-log</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -109,11 +116,6 @@
                     <artifactId>maven-compat</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <!-- Forward all calls to SLF4J to Maven log. -->
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-maven-slf4j</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>

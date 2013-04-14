@@ -40,8 +40,14 @@
     <name>jcabi-aether</name>
     <dependencies>
         <dependency>
-            <groupId>com.jcabi</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>jcabi-aspects</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>jcabi-log</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -55,10 +61,6 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-log</artifactId>
         </dependency>
         <dependency>
             <groupId>org.kuali.maven.wagons</groupId>
@@ -209,12 +211,12 @@
                         </executions>
                         <dependencies>
                             <dependency>
-                                <groupId>com.jcabi</groupId>
+                                <groupId>${project.groupId}</groupId>
                                 <artifactId>jcabi-maven-slf4j</artifactId>
                                 <version>${project.version}</version>
                             </dependency>
                             <dependency>
-                                <groupId>com.jcabi</groupId>
+                                <groupId>${project.groupId}</groupId>
                                 <artifactId>jcabi-log</artifactId>
                                 <version>${project.version}</version>
                             </dependency>
