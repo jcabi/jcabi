@@ -44,7 +44,12 @@ Static Reader of META-INF/MANIFEST.MF Files
 
 +--
 import com.jcabi.manifests.Manifests;
-String version = Manifests.read("JCabi-Version");
+public class Main {
+  public static void main(String[] args) {
+    String version = Manifests.read("JCabi-Version");
+    System.out.println("version is " + version);
+  }
+}
 +--
 
   As {{{http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html}Oracle documentation}}
@@ -79,7 +84,11 @@ Created-By: 1.6.0_26-b03-384-10M3425 (Apple Inc.)
   {{{./apidocs-${project.version}/com/jcabi/manifests/Manifests.html}<<<Manifests>>>}}:
 
 +--
-System.out.println("My JAR was created by " + Manifests.read("Created-By"));
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("JAR was created by " + Manifests.read("Created-By"));
+  }
+}
 +--
 
   To put information into your manifest

@@ -45,9 +45,13 @@ Uniform Resource Name (URN)
 
 +--
 import com.jcabi.urn.URN;
-URN urn = new URN("urn:test:my-example");
-assert urn.nid().equals("test");
-assert urn.nss().equals("my-example");
+public class Main {
+  public static void main(String[] args) {
+    URN urn = new URN("urn:test:my-example");
+    assert urn.nid().equals("test");
+    assert urn.nss().equals("my-example");
+  }
+}
 +--
 
   The only dependency you need is

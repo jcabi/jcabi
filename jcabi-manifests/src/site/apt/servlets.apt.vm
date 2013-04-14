@@ -46,8 +46,13 @@ Appending <<<ServletContext>>> Manifests to the Registry
   classpath:
 
 +--
-ClassLoader loader = Thread.currentThread().getContextClassLoader();
-Enumeration<URL> resources = loader.getResources("META-INF/MANIFEST.MF");
+public class Manifests {
+  public static void load() {
+    // ...
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    Enumeration<URL> resources = loader.getResources("META-INF/MANIFEST.MF");
+  }
+}
 +--
 
   Context

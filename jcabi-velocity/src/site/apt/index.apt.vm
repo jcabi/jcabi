@@ -43,11 +43,15 @@ Primitive Wrapper for Apache Velocity
 
 +--
 import com.jcabi.velocity.VelocityPage;
-String text = new VelocityPage("com/foo/template.vm")
-  .set("name", "John Doe")
-  .set("file", file)
-  .set("document", doc)
-  .toString();
+public class Main {
+  public static void main(String[] args) {
+    String text = new VelocityPage("com/foo/template.vm")
+      .set("name", "John Doe")
+      .set("file", file)
+      .set("document", doc)
+      .toString();
+  }
+}
 +--
 
   The only dependency you need is
