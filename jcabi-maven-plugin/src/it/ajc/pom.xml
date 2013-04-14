@@ -35,6 +35,9 @@
     <name>test</name>
     <version>1.0</version>
     <packaging>jar</packaging>
+    <properties>
+        <jcabi.version>0.7.16</jcabi.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -45,7 +48,7 @@
         <dependency>
             <groupId>com.jcabi</groupId>
             <artifactId>jcabi-aspects</artifactId>
-            <version>@project.version@</version>
+            <version>${jcabi.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -93,13 +96,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.jcabi</groupId>
-                        <artifactId>jcabi-aspects</artifactId>
-                        <version>@project.version@</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
