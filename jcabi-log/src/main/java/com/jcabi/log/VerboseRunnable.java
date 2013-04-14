@@ -79,6 +79,11 @@ public final class VerboseRunnable implements Runnable {
     private final transient boolean swallow;
 
     /**
+     * Shall we report a full stacktrace?
+     */
+    private final transient boolean verbose;
+
+    /**
      * Default constructor, doesn't swallow exceptions.
      * @param runnable Runnable to wrap
      */
@@ -87,48 +92,99 @@ public final class VerboseRunnable implements Runnable {
     }
 
     /**
+     * Default constructor, doesn't swallow exceptions.
+     * @param callable Callable to wrap
+     * @since 0.7.17
+     */
+    public VerboseRunnable(@NotNull final Callable<?> callable) {
+        this(callable, false);
+    }
+
+    /**
+     * Default constructor, doesn't swallow exceptions.
+     * @param callable Callable to wrap
+     * @param swallowexceptions Shall we swallow exceptions
+     *  ({@code TRUE}) or re-throw
+     *  ({@code FALSE})? Exception swallowing means that {@link #run()}
+     *  will never throw any exceptions (in any case all exceptions are logged
+     *  using {@link Logger}.
+     * @since 0.1.10
+     */
+    public VerboseRunnable(@NotNull final Callable<?> callable,
+        final boolean swallowexceptions) {
+        this(callable, swallowexceptions, true);
+    }
+
+    /**
+     * Default constructor.
+     * @param callable Callable to wrap
+     * @param swallowexceptions Shall we swallow exceptions
+     *  ({@code TRUE}) or re-throw
+     *  ({@code FALSE})? Exception swallowing means that {@link #run()}
+     *  will never throw any exceptions (in any case all exceptions are logged
+     *  using {@link Logger}.
+     * @param fullstacktrace Shall we report the entire
+     *  stacktrace of the exception
+     *  ({@code TRUE}) or just its message in one line ({@code FALSE})
+     * @since 0.7.17
+     */
+    @SuppressWarnings("PMD.AvoidCatchingGenericException")
+    public VerboseRunnable(@NotNull final Callable<?> callable,
+        final boolean swallowexceptions, final boolean fullstacktrace) {
+        this(
+            new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        callable.call();
+                    // @checkstyle IllegalCatch (1 line)
+                    } catch (Exception ex) {
+                        throw new IllegalArgumentException(ex);
+                    }
+                }
+                @Override
+                public String toString() {
+                    return callable.toString();
+                }
+            },
+            swallowexceptions,
+            fullstacktrace
+        );
+    }
+
+    /**
      * Default constructor, with configurable behavior for exceptions.
      * @param runnable Runnable to wrap
-     * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
+     * @param swallowexceptions Shall we swallow exceptions
+     *  ({@code TRUE}) or re-throw
      *  ({@code FALSE})? Exception swallowing means that {@link #run()}
      *  will never throw any exceptions (in any case all exceptions are logged
      *  using {@link Logger}.
      * @since 0.1.4
      */
     public VerboseRunnable(@NotNull final Runnable runnable,
-        final boolean swlw) {
-        this.origin = runnable;
-        this.swallow = swlw;
+        final boolean swallowexceptions) {
+        this(runnable, swallowexceptions, true);
     }
 
     /**
-     * Default constructor.
-     * @param callable Callable to wrap
-     * @param swlw Shall we swallow exceptions ({@code TRUE}) or re-throw
+     * Default constructor, with fully configurable behavior.
+     * @param runnable Runnable to wrap
+     * @param swallowexceptions Shall we swallow exceptions
+     *  ({@code TRUE}) or re-throw
      *  ({@code FALSE})? Exception swallowing means that {@link #run()}
      *  will never throw any exceptions (in any case all exceptions are logged
      *  using {@link Logger}.
-     * @since 0.1.10
+     * @param fullstacktrace Shall we report the entire
+     *  stacktrace of the exception
+     *  ({@code TRUE}) or just its message in one line ({@code FALSE})
+     * @since 0.7.17
      */
-    @SuppressWarnings("PMD.AvoidCatchingGenericException")
-    public VerboseRunnable(@NotNull final Callable<?> callable,
-        final boolean swlw) {
-        this.origin = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    callable.call();
-                // @checkstyle IllegalCatch (1 line)
-                } catch (Exception ex) {
-                    throw new IllegalArgumentException(ex);
-                }
-            }
-            @Override
-            public String toString() {
-                return callable.toString();
-            }
-        };
-        this.swallow = swlw;
+    public VerboseRunnable(@NotNull final Runnable runnable,
+        final boolean swallowexceptions, final boolean fullstacktrace) {
+        this.origin = runnable;
+        this.swallow = swallowexceptions;
+        this.verbose = fullstacktrace;
     }
 
     /**
@@ -148,30 +204,30 @@ public final class VerboseRunnable implements Runnable {
             if (!this.swallow) {
                 Logger.warn(
                     this,
-                    "escalated exception: %[exception]s",
-                    ex
+                    "escalated exception: %s",
+                    this.tail(ex)
                 );
                 throw ex;
             }
             Logger.warn(
                 this,
-                "swallowed exception: %[exception]s",
-                ex
+                "swallowed exception: %s",
+                this.tail(ex)
             );
         // @checkstyle IllegalCatch (1 line)
         } catch (Error error) {
             if (!this.swallow) {
                 Logger.error(
                     this,
-                    "escalated error: %[exception]s",
-                    error
+                    "escalated error: %s",
+                    this.tail(error)
                 );
                 throw error;
             }
             Logger.error(
                 this,
-                "swallowed error: %[exception]s",
-                error
+                "swallowed error: %s",
+                this.tail(error)
             );
         }
         if (this.swallow) {
@@ -185,6 +241,25 @@ public final class VerboseRunnable implements Runnable {
                 );
             }
         }
+    }
+
+    /**
+     * Make a tail of the error/warning message, using the exception thrown.
+     * @param throwable The exception/error caught
+     * @return The message to show in logs
+     */
+    private String tail(final Throwable throwable) {
+        String tail;
+        if (this.verbose) {
+            tail = Logger.format("%[exception]s", throwable);
+        } else {
+            tail = Logger.format(
+                "%[type]s('%s')",
+                throwable,
+                throwable.getMessage()
+            );
+        }
+        return tail;
     }
 
 }

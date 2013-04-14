@@ -103,11 +103,15 @@ public final class DataDecor implements Formattable {
 
 +--
 import com.jcabi.log.Logger;
-Logger.debug(
-  this,
-  "bar(%d): show some data: %[com.example.DataDecor]s",
-  value,
-  data
-);
+public class Main {
+  public int main(String[] args) {
+    Logger.debug(
+      this,
+      "bar(%d): show some data: %[com.example.DataDecor]s",
+      value,
+      data
+    );
+  }
+}
 +--
 

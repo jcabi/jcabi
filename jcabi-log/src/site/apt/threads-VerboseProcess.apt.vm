@@ -44,9 +44,14 @@ Process That Logs And Consumes Output
   and consumes its output at the same time, for example:
 
 +--
-String name = new VerboseProcess(
-  new ProcessBuilder("who", "am", "i")
-).stdout();
+public class Main {
+  public int main(String[] args) {
+    String name = new VerboseProcess(
+      new ProcessBuilder("who", "am", "i")
+    ).stdout();
+    System.out.println("I am: " + name);
+  }
+}
 +--
 
   {{{./apidocs-${project.version}/com/jcabi/log/VerboseProcess.html}<<<VerboseProcess>>>}}

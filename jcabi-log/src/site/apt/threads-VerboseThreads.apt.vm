@@ -50,16 +50,20 @@ Thread Factory that Logs Exceptions
   console once they die because of a runtime exception, for example:
 
 +--
-Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-  new Runnable() {
-    @Override
-    public void run() {
-      // some sensitive operation that may throw
-      // a runtime exception
-    },
-    1L, 1L, TimeUnit.SECONDS
+public class Main {
+  public int main(String[] args) {
+    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
+      new Runnable() {
+        @Override
+        public void run() {
+          // some sensitive operation that may throw
+          // a runtime exception
+        },
+        1L, 1L, TimeUnit.SECONDS
+      }
+    );
   }
-);
+}
 +--
 
   The exception in this example will never be caught by nobody. It will
@@ -74,17 +78,21 @@ Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
   {{{./apidocs-${project.version}/com/jcabi/log/VerboseThreads.html}<<<VerboseThreads>>>}}:
 
 +--
-ThreadFactory factory = new VerboseThreads();
-Executors.newScheduledThreadPool(2, factory).scheduleAtFixedRate(
-  new Runnable() {
-    @Override
-    public void run() {
-      // the same sensitive operation that may throw
-      // a runtime exception
-    },
-    1L, 1L, TimeUnit.SECONDS
+public class Main {
+  public int main(String[] args) {
+    ThreadFactory factory = new VerboseThreads();
+    Executors.newScheduledThreadPool(2, factory).scheduleAtFixedRate(
+      new Runnable() {
+        @Override
+        public void run() {
+          // the same sensitive operation that may throw
+          // a runtime exception
+        },
+        1L, 1L, TimeUnit.SECONDS
+      }
+    );
   }
-);
+}
 +--
 
   Now, every runtime exception that is not caught inside your

@@ -43,18 +43,22 @@ Runnable That Logs Runtime Exceptions
   with scheduled executor, for example:
 
 +--
-Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-  new VerboseRunnable(
-    new Runnable() {
-      @Override
-      public void run() {
-        // some operation that may lead to a runtime
-        // exception, which we want to log through SLF4J
-      }
-    }
-  ),
-  1L, 1L, TimeUnit.SECONDS
-)
+public class Main {
+  public int main(String[] args) {
+    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
+      new VerboseRunnable(
+        new Runnable() {
+          @Override
+          public void run() {
+            // some operation that may lead to a runtime
+            // exception, which we want to log through SLF4J
+          }
+        }
+      ),
+      1L, 1L, TimeUnit.SECONDS
+    );
+  }
+}
 +--
 
   Now, every runtime exception that is not caught inside your
