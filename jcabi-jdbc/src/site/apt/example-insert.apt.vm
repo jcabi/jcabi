@@ -1,9 +1,9 @@
  ------
- Runnable That Logs Runtime Exceptions
+ Inserting SQL Records Through JDBC
  ------
  Yegor Bugayenko
  ------
- 2012-12-16
+ 2013-04-14
  ------
 
 ~~
@@ -36,51 +36,20 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Runnable That Logs Runtime Exceptions
+Inserting SQL Records Through JDBC
 
-  You can use
-  {{{./apidocs-${project.version}/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}}:
-  with scheduled executor, for example:
+  Data insertion <<<INSERT>>> operations can be done through <<<JdbcSession>>>:
 
 +--
 public class Main {
   public static void main(String[] args) {
-    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-      new VerboseRunnable(
-        new Runnable() {
-          @Override
-          public void run() {
-            // some operation that may lead to a runtime
-            // exception, which we want to log through SLF4J
-          }
-        }
-      ),
-      1L, 1L, TimeUnit.SECONDS
-    );
+    final long id = new JdbcSession(/* JDBC data source */)
+      .sql("INSERT INTO employee (name, salary) VALUES (?, ?)")
+      .set("Jeff Lebowski")
+      .set(35000)
+      .update(new SingleHandler<Long>(Long.class));
   }
 }
 +--
 
-  Now, every runtime exception that is not caught inside your
-  {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html}<<<Runnable>>>}}
-  will be reported to log (using
-  {{{./apidocs-${project.version}/com/jcabi/log/Logger.html}<<<Logger>>>}}).
-
-  Two-arguments constructor can be used when you need to instruct the class
-  about what to do with the exception: either swallow it or escalate.
-  Sometimes it's very important to swallow exceptions. Otherwise an entire
-  thread may get stuck (like in the example above).
-
-  The only dependency you need is
-  (you can also download
-  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
-  and add it to the classpath):
-
-+--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-log</artifactId>
-  <version>${project.version}</version>
-</dependency>
-+--
-
+  In this example, <<<id>>> will contain the primary key of the inserted row.

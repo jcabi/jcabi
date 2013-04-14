@@ -45,7 +45,7 @@ Process That Logs And Consumes Output
 
 +--
 public class Main {
-  public int main(String[] args) {
+  public static void main(String[] args) {
     String name = new VerboseProcess(
       new ProcessBuilder("who", "am", "i")
     ).stdout();

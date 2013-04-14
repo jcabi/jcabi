@@ -1,9 +1,9 @@
  ------
- Runnable That Logs Runtime Exceptions
+ Maintaining SQL Transactions Through JDBC
  ------
  Yegor Bugayenko
  ------
- 2012-12-16
+ 2013-04-14
  ------
 
 ~~
@@ -36,51 +36,31 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Runnable That Logs Runtime Exceptions
+Maintaining SQL Transactions Through JDBC
 
-  You can use
-  {{{./apidocs-${project.version}/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}}:
-  with scheduled executor, for example:
+  Say, you want to make a few operations in one ACID transaction, where
+  the first one is deletion and the second one is inserting:
 
 +--
 public class Main {
   public static void main(String[] args) {
-    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-      new VerboseRunnable(
-        new Runnable() {
-          @Override
-          public void run() {
-            // some operation that may lead to a runtime
-            // exception, which we want to log through SLF4J
-          }
-        }
-      ),
-      1L, 1L, TimeUnit.SECONDS
-    );
+    new JdbcSession(/* JDBC data source */)
+      .autocommit(false)
+      .sql("START TRANSACTION")
+      .update()
+      .sql("DELETE FROM employee WHERE name = ?")
+      .set("Jeff Lebowski")
+      .update()
+      .sql("INSERT INTO employee VALUES (?)")
+      .set("Walter Sobchak")
+      .insert(new VoidHandler())
+      .commit();
   }
 }
 +--
 
-  Now, every runtime exception that is not caught inside your
-  {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html}<<<Runnable>>>}}
-  will be reported to log (using
-  {{{./apidocs-${project.version}/com/jcabi/log/Logger.html}<<<Logger>>>}}).
+  In this example, <<<autocommit(false)>>> turns off autocommit mechanism,
+  which happens by default after every call to <<<update()>>> or <<<insert()>>>.
 
-  Two-arguments constructor can be used when you need to instruct the class
-  about what to do with the exception: either swallow it or escalate.
-  Sometimes it's very important to swallow exceptions. Otherwise an entire
-  thread may get stuck (like in the example above).
-
-  The only dependency you need is
-  (you can also download
-  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
-  and add it to the classpath):
-
-+--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-log</artifactId>
-  <version>${project.version}</version>
-</dependency>
-+--
-
+  The last statement should be a call to <<<commit()>>>, which translates
+  to the native transaction commit SQL statement.

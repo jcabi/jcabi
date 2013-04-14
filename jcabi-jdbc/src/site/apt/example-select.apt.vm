@@ -1,9 +1,9 @@
  ------
- Runnable That Logs Runtime Exceptions
+ Selecting SQL Rows Through JDBC
  ------
  Yegor Bugayenko
  ------
- 2012-12-16
+ 2013-04-14
  ------
 
 ~~
@@ -36,51 +36,43 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Runnable That Logs Runtime Exceptions
+Selecting SQL Rows Through JDBC
 
-  You can use
-  {{{./apidocs-${project.version}/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}}:
-  with scheduled executor, for example:
+  This is how you fetch all rows from an SQL <<<SELECT>>> query:
 
 +--
 public class Main {
   public static void main(String[] args) {
-    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-      new VerboseRunnable(
-        new Runnable() {
+    Collection<String> names = new JdbcSession(/* JDBC data source */)
+      .sql("SELECT name FROM employee WHERE salary > 35000")
+      .select(
+        new JdbcSession.Handler<Collection<String>>() {
           @Override
-          public void run() {
-            // some operation that may lead to a runtime
-            // exception, which we want to log through SLF4J
+          public Collection<String> handle(ResultSet rset) throws SQLException {
+            final Collection<String> names = new LinkedList<String>();
+            while (rset.next()) {
+              names.add(rset.getString(1));
+            }
+            return names;
           }
         }
-      ),
-      1L, 1L, TimeUnit.SECONDS
-    );
+      );
   }
 }
 +--
 
-  Now, every runtime exception that is not caught inside your
-  {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html}<<<Runnable>>>}}
-  will be reported to log (using
-  {{{./apidocs-${project.version}/com/jcabi/log/Logger.html}<<<Logger>>>}}).
-
-  Two-arguments constructor can be used when you need to instruct the class
-  about what to do with the exception: either swallow it or escalate.
-  Sometimes it's very important to swallow exceptions. Otherwise an entire
-  thread may get stuck (like in the example above).
-
-  The only dependency you need is
-  (you can also download
-  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
-  and add it to the classpath):
+  There is an off-the-shelf <<<SingleHandler>>> handler, which can be used
+  if you interested in the first value of the first row of the <<<SELECT>>>
+  query result set:
 
 +--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-log</artifactId>
-  <version>${project.version}</version>
-</dependency>
+public class Main {
+  public static void main(String[] args) {
+    String name = new JdbcSession(/* JDBC data source */)
+      .sql("SELECT name FROM employee WHERE name = ?")
+      .set("Jeff Bridges")
+      .select(new SingleHandler<String>(String.class));
+  }
+}
 +--
 

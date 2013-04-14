@@ -45,10 +45,14 @@ Fluent wrapper around JDBC
 
 +--
 import com.jcabi.jdbc.JdbcSession;
-String name = new JdbcSession(/* JDBC data source */)
-  .sql("SELECT name FROM foo WHERE id = ?")
-  .set(123)
-  .select(new SingleHandler<String>(String.class));
+public class Main {
+  public static void main(String[] args) {
+    String name = new JdbcSession(/* JDBC data source */)
+      .sql("SELECT name FROM foo WHERE id = ?")
+      .set(123)
+      .select(new SingleHandler<String>(String.class));
+  }
+}
 +--
 
   The only dependency you need is

@@ -6,7 +6,7 @@
  2012-04-04
  ------
 
-~~
+~~ #set($sign="$")
 ~~ Copyright (c) 2012-2013, JCabi.com
 ~~ All rights reserved.
 ~~
@@ -48,12 +48,12 @@ Retrieving Maven Plugin Classpath in Runtime
 +--
 public class MyMojo extends AbstractMojo {
   /**
-   * @parameter default-value="${project}"
+   * @parameter default-value="${sign}{project}"
    * @readonly
    */
   private MavenProject project;
   /**
-   * @parameter default-value="${repositorySystemSession}"
+   * @parameter default-value="${sign}{repositorySystemSession}"
    * @readonly
    */
   private RepositorySystemSession session;
@@ -72,4 +72,4 @@ public class MyMojo extends AbstractMojo {
   uses {{{./apidocs-${project.version}/com/jcabi/aether/Aether.html}<<<Aether>>>}}
   to collect required information and resolve all transitive dependencies. It
   also takes into account
-  {{{http://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html}exclusions}}.
+  {{{http://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html}dependency exclusions}}.

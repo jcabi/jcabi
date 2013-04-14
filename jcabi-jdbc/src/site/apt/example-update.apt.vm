@@ -1,9 +1,9 @@
  ------
- Runnable That Logs Runtime Exceptions
+ Updating SQL Records Through JDBC
  ------
  Yegor Bugayenko
  ------
- 2012-12-16
+ 2013-04-14
  ------
 
 ~~
@@ -36,51 +36,32 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Runnable That Logs Runtime Exceptions
+Updating SQL Records Through JDBC
 
-  You can use
-  {{{./apidocs-${project.version}/com/jcabi/log/VerboseRunnable.html}<<<VerboseRunnable>>>}}:
-  with scheduled executor, for example:
+  <<<UPDATE>>> or any other data manipulation queries can be done
+  through <<<JdbcSession>>>:
 
 +--
 public class Main {
   public static void main(String[] args) {
-    Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
-      new VerboseRunnable(
-        new Runnable() {
-          @Override
-          public void run() {
-            // some operation that may lead to a runtime
-            // exception, which we want to log through SLF4J
-          }
-        }
-      ),
-      1L, 1L, TimeUnit.SECONDS
-    );
+    new JdbcSession(/* JDBC data source */)
+      .sql("UPDATE employee SET salary = 35000 WHERE name = ?")
+      .set("Jeff Lebowski")
+      .update();
   }
 }
 +--
 
-  Now, every runtime exception that is not caught inside your
-  {{{http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html}<<<Runnable>>>}}
-  will be reported to log (using
-  {{{./apidocs-${project.version}/com/jcabi/log/Logger.html}<<<Logger>>>}}).
-
-  Two-arguments constructor can be used when you need to instruct the class
-  about what to do with the exception: either swallow it or escalate.
-  Sometimes it's very important to swallow exceptions. Otherwise an entire
-  thread may get stuck (like in the example above).
-
-  The only dependency you need is
-  (you can also download
-  {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-log/${project.version}/jcabi-log-${project.version}.jar}<<<jcabi-log-${project.version}.jar>>>}}
-  and add it to the classpath):
+  You can also run a stored procedure (for example, in Oracle):
 
 +--
-<dependency>
-  <groupId>com.jcabi</groupId>
-  <artifactId>jcabi-log</artifactId>
-  <version>${project.version}</version>
-</dependency>
+public class Main {
+  public static void main(String[] args) {
+    new JdbcSession(/* JDBC data source */)
+      .sql("CALL db.set_salary(?, ?)")
+      .set("Jeff Lebowski")
+      .set(35000)
+      .update();
+  }
+}
 +--
-

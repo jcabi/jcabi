@@ -51,7 +51,7 @@ Thread Factory that Logs Exceptions
 
 +--
 public class Main {
-  public int main(String[] args) {
+  public static void main(String[] args) {
     Executors.newScheduledThreadPool(2).scheduleAtFixedRate(
       new Runnable() {
         @Override
@@ -79,7 +79,7 @@ public class Main {
 
 +--
 public class Main {
-  public int main(String[] args) {
+  public static void main(String[] args) {
     ThreadFactory factory = new VerboseThreads();
     Executors.newScheduledThreadPool(2, factory).scheduleAtFixedRate(
       new Runnable() {
