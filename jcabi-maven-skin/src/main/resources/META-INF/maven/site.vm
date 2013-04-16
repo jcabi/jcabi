@@ -103,9 +103,16 @@
             #end
         </ul>
         <div id="content">
-            <a href="${decoration.bannerLeft.href}" title="${decoration.bannerLeft.name}">
+            <a href="${decoration.bannerLeft.href}" title="${decoration.bannerLeft.title}">
                 <img src="${decoration.bannerLeft.src}"
-                    alt="${decoration.bannerLeft.name}"/>
+                    alt="${decoration.bannerLeft.name}"
+                    #if (${decoration.bannerLeft.width})
+                        width="${decoration.bannerLeft.width}"
+                    #end
+                    #if (${decoration.bannerLeft.height})
+                        height="${decoration.bannerLeft.height}"
+                    #end
+                />
             </a>
             #if (${decoration.body.breadcrumbs} && ${decoration.body.breadcrumbs.size()} > 1)
                 <ul id="breadcrumbs">
