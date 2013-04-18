@@ -32,7 +32,6 @@ package org.slf4j.impl;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.apache.maven.plugin.logging.Log;
-import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;
@@ -65,20 +64,22 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     /**
      * The log to use.
      */
-    private transient Log mlog;
+    private final transient Log mlog;
 
     /**
-     * Set Maven log.
-     *
-     * <p>Class variable is used as a synchronization lock, mostly because
-     * only one instance of this class may exist.
-     *
-     * @param log The log to set
+     * The name of the log.
      */
-    public void setMavenLog(final Log log) {
-        synchronized (Slf4jAdapter.class) {
-            this.mlog = log;
-        }
+    private final transient String label;
+
+    /**
+     * Public ctor.
+     * @param log The log to use
+     * @param name The label of the logger
+     */
+    public Slf4jAdapter(final Log log, final String name) {
+        super();
+        this.mlog = log;
+        this.label = name;
     }
 
     /**
@@ -102,7 +103,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void trace(final String msg) {
-        this.log().debug(msg);
+        this.mlog.debug(this.decorate(msg));
     }
 
     /**
@@ -110,7 +111,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void trace(final String format, final Object arg) {
-        this.log().debug(this.format(format, arg));
+        this.mlog.debug(this.decorate(this.format(format, arg)));
     }
 
     /**
@@ -119,7 +120,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     @Override
     public void trace(final String format, final Object first,
         final Object second) {
-        this.log().debug(this.format(format, first, second));
+        this.mlog.debug(this.decorate(this.format(format, first, second)));
     }
 
     /**
@@ -127,7 +128,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void trace(final String format, final Object... array) {
-        this.log().debug(this.format(format, array));
+        this.mlog.debug(this.decorate(this.format(format, array)));
     }
 
     /**
@@ -135,7 +136,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void trace(final String msg, final Throwable thr) {
-        this.log().debug(msg, thr);
+        this.mlog.debug(this.decorate(msg), thr);
     }
 
     /**
@@ -143,7 +144,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public boolean isDebugEnabled() {
-        return this.log().isDebugEnabled();
+        return this.mlog.isDebugEnabled();
     }
 
     /**
@@ -151,7 +152,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void debug(final String msg) {
-        this.log().debug(msg);
+        this.mlog.debug(this.decorate(msg));
     }
 
     /**
@@ -159,7 +160,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void debug(final String format, final Object arg) {
-        this.log().debug(this.format(format, arg));
+        this.mlog.debug(this.decorate(this.format(format, arg)));
     }
 
     /**
@@ -168,7 +169,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     @Override
     public void debug(final String format, final Object first,
         final Object second) {
-        this.log().debug(this.format(format, first, second));
+        this.mlog.debug(this.decorate(this.format(format, first, second)));
     }
 
     /**
@@ -176,7 +177,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void debug(final String format, final Object... array) {
-        this.log().debug(this.format(format, array));
+        this.mlog.debug(this.decorate(this.format(format, array)));
     }
 
     /**
@@ -184,7 +185,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void debug(final String msg, final Throwable thr) {
-        this.log().debug(msg, thr);
+        this.mlog.debug(this.decorate(msg), thr);
     }
 
     /**
@@ -200,7 +201,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void info(final String msg) {
-        this.log().info(msg);
+        this.mlog.info(msg);
     }
 
     /**
@@ -208,7 +209,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void info(final String format, final Object arg) {
-        this.log().info(this.format(format, arg));
+        this.mlog.info(this.format(format, arg));
     }
 
     /**
@@ -217,7 +218,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     @Override
     public void info(final String format, final Object first,
         final Object second) {
-        this.log().info(this.format(format, first, second));
+        this.mlog.info(this.format(format, first, second));
     }
 
     /**
@@ -225,7 +226,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void info(final String format, final Object... array) {
-        this.log().info(this.format(format, array));
+        this.mlog.info(this.format(format, array));
     }
 
     /**
@@ -233,7 +234,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void info(final String msg, final Throwable thr) {
-        this.log().info(msg, thr);
+        this.mlog.info(msg, thr);
     }
 
     /**
@@ -249,7 +250,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void warn(final String msg) {
-        this.log().warn(msg);
+        this.mlog.warn(msg);
     }
 
     /**
@@ -257,7 +258,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void warn(final String format, final Object arg) {
-        this.log().warn(this.format(format, arg));
+        this.mlog.warn(this.format(format, arg));
     }
 
     /**
@@ -265,7 +266,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void warn(final String format, final Object... array) {
-        this.log().warn(this.format(format, array));
+        this.mlog.warn(this.format(format, array));
     }
 
     /**
@@ -274,7 +275,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     @Override
     public void warn(final String format, final Object first,
         final Object second) {
-        this.log().warn(this.format(format, first, second));
+        this.mlog.warn(this.format(format, first, second));
     }
 
     /**
@@ -282,7 +283,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void warn(final String msg, final Throwable thr) {
-        this.log().warn(msg, thr);
+        this.mlog.warn(msg, thr);
     }
 
     /**
@@ -298,7 +299,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void error(final String msg) {
-        this.log().error(msg);
+        this.mlog.error(msg);
     }
 
     /**
@@ -306,7 +307,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void error(final String format, final Object arg) {
-        this.log().error(this.format(format, arg));
+        this.mlog.error(this.format(format, arg));
     }
 
     /**
@@ -315,7 +316,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
     @Override
     public void error(final String format, final Object first,
         final Object second) {
-        this.log().error(this.format(format, first, second));
+        this.mlog.error(this.format(format, first, second));
     }
 
     /**
@@ -323,7 +324,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void error(final String format, final Object... array) {
-        this.log().error(this.format(format, array));
+        this.mlog.error(this.format(format, array));
     }
 
     /**
@@ -331,20 +332,7 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      */
     @Override
     public void error(final String msg, final Throwable thr) {
-        this.log().error(msg, thr);
-    }
-
-    /**
-     * Get Maven Log.
-     * @return The log from Maven plugin
-     */
-    private Log log() {
-        synchronized (Slf4jAdapter.class) {
-            if (this.mlog == null) {
-                this.mlog = new SystemStreamLog();
-            }
-        }
-        return this.mlog;
+        this.mlog.error(msg, thr);
     }
 
     /**
@@ -383,6 +371,15 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
         final FormattingTuple tuple =
             MessageFormatter.format(format, array);
         return tuple.getMessage();
+    }
+
+    /**
+     * Decorate a message with a label prefix.
+     * @param msg The text to decorate
+     * @return The message decorated
+     */
+    private String decorate(final String msg) {
+        return String.format("%s: %s", this.label, msg);
     }
 
 }

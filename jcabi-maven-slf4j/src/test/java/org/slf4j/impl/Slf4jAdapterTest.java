@@ -52,14 +52,14 @@ public final class Slf4jAdapterTest {
      */
     @Test
     public void sendsLogMessagesThrough() throws Exception {
-        final Slf4jAdapter logger = new Slf4jAdapter();
-        logger.setMavenLog(
+        final Slf4jAdapter logger = new Slf4jAdapter(
             new DefaultLog(
                 new ConsoleLogger(
                     Logger.LEVEL_DEBUG,
                     Slf4jAdapterTest.class.getName()
                 )
-            )
+            ),
+            "com.jcabi.test"
         );
         logger.isTraceEnabled();
         logger.isDebugEnabled();
@@ -95,16 +95,6 @@ public final class Slf4jAdapterTest {
         logger.error("error-test {}", "error-message");
         logger.error("error-test {} {}", "error-1", "error-2");
         logger.error("error-test-2 {} {}", "err-1", "err-2");
-    }
-
-    /**
-     * Slf4jAdapter can work without injected Maven Log.
-     * @throws Exception If something wrong inside
-     */
-    @Test
-    public void worksWithoutMavenLog() throws Exception {
-        final Slf4jAdapter logger = new Slf4jAdapter();
-        logger.info("this message should be visible in system stream");
     }
 
 }

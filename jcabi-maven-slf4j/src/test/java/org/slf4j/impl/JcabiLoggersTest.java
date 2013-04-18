@@ -82,4 +82,15 @@ public final class JcabiLoggersTest {
         new JcabiLoggers().getLogger(null);
     }
 
+    /**
+     * JcabiLoggers can work without injected Maven Log.
+     * @throws Exception If something wrong inside
+     */
+    @Test
+    public void worksWithoutMavenLog() throws Exception {
+        new JcabiLoggers().getLogger("test").info(
+            "this message should be visible in system stream"
+        );
+    }
+
 }

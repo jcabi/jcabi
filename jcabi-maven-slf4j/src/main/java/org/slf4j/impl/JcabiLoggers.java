@@ -32,6 +32,7 @@ package org.slf4j.impl;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.apache.maven.plugin.logging.Log;
+import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 
@@ -47,13 +48,13 @@ import org.slf4j.Logger;
  * @see <a href="http://www.slf4j.org/faq.html#slf4j_compatible">SLF4J FAQ</a>
  */
 @ToString
-@EqualsAndHashCode(of = "adapter")
+@EqualsAndHashCode
 final class JcabiLoggers implements ILoggerFactory {
 
     /**
-     * The adapter between SLF4J and Maven.
+     * Maven log.
      */
-    private final transient Slf4jAdapter adapter = new Slf4jAdapter();
+    private transient Log mlog = new SystemStreamLog();
 
     /**
      * {@inheritDoc}
@@ -63,7 +64,7 @@ final class JcabiLoggers implements ILoggerFactory {
         if (name == null) {
             throw new IllegalArgumentException("logger name can't be NULL");
         }
-        return this.adapter;
+        return new Slf4jAdapter(this.mlog, name);
     }
 
     /**
@@ -71,7 +72,9 @@ final class JcabiLoggers implements ILoggerFactory {
      * @param log The log to set
      */
     public void setMavenLog(final Log log) {
-        this.adapter.setMavenLog(log);
+        synchronized (JcabiLoggers.class) {
+            this.mlog = log;
+        }
     }
 
 }
