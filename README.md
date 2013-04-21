@@ -1,6 +1,6 @@
 <img src="http://img.jcabi.com/logo.png" width="200px" height="48px" />
 
-jcabi.com, Simple Useful Java Components
+Simple Useful Java Components
 =====
 
 See [www.jcabi.com](http://www.jcabi.com/) website for more details.
