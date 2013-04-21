@@ -1,3 +1,5 @@
+<img src="http://img.jcabi.com/logo.png" style="width: 200px; height: 48px;" />
+
 jcabi.com, Simple Useful Java Components
 =====
 
