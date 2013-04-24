@@ -32,6 +32,7 @@ package com.jcabi.aether;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
@@ -83,8 +84,15 @@ public final class ClasspathTest {
             )
         );
         Mockito.doReturn(repos).when(project).getRemoteProjectRepositories();
+        final Set<File> classpath = new Classpath(
+            project, local, JavaScopes.TEST
+        );
         MatcherAssert.assertThat(
-            new Classpath(project, local, JavaScopes.TEST),
+            classpath,
+            Matchers.hasToString(Matchers.containsString("junit:junit:4.10"))
+        );
+        MatcherAssert.assertThat(
+            classpath,
             Matchers.<File>hasItems(
                 Matchers.hasToString(Matchers.endsWith("/as/directory")),
                 Matchers.hasToString(Matchers.endsWith("junit-4.10.jar")),

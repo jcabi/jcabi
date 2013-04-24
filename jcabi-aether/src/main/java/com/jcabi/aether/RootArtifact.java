@@ -29,7 +29,6 @@
  */
 package com.jcabi.aether;
 
-import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.List;
@@ -48,7 +47,6 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @since 0.7.16
  */
 @EqualsAndHashCode(of = "art")
-@Loggable(Loggable.DEBUG)
 final class RootArtifact {
 
     /**
