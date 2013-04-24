@@ -125,7 +125,6 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * {@inheritDoc}
      */
     @Override
-    @Cacheable(forever = true)
     public String toString() {
         return StringUtils.join(this.roots(), "\n");
     }
@@ -152,7 +151,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     @Cacheable(forever = true)
-    public Set<File> fetch() {
+    private Set<File> fetch() {
         final Set<File> files = new LinkedHashSet<File>();
         for (String path : this.elements()) {
             files.add(new File(path));
@@ -222,6 +221,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      *
      * @return The set of root artifacts
      */
+    @Cacheable(forever = true)
     private Set<RootArtifact> roots() {
         final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
         for (Dependency dep : this.project.getDependencies()) {
