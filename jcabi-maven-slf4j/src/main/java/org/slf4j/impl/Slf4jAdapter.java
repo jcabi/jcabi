@@ -379,7 +379,12 @@ final class Slf4jAdapter extends MarkerIgnoringBase {
      * @return The message decorated
      */
     private String decorate(final String msg) {
-        return String.format("%s: %s", this.label, msg);
+        return String.format(
+            "%s %s: %s",
+            Thread.currentThread().getName(),
+            this.label,
+            msg
+        );
     }
 
 }
