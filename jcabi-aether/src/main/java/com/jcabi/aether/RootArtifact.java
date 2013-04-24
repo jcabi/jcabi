@@ -119,10 +119,10 @@ final class RootArtifact {
     public Collection<Artifact> children() {
         Collection<Artifact> deps;
         try {
-            deps = this.aether.resolve(this.artifact(), JavaScopes.COMPILE);
+            deps = this.aether.resolve(this.art, JavaScopes.COMPILE);
         } catch (DependencyResolutionException ex) {
             throw new IllegalStateException(
-                String.format("Failed to resolve '%s'", this),
+                String.format("Failed to resolve '%s'", this.art),
                 ex
             );
         }

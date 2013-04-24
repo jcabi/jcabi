@@ -33,7 +33,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.apache.maven.model.Dependency;
 import org.apache.maven.model.Exclusion;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
@@ -45,7 +44,6 @@ import org.mockito.Mockito;
 import org.sonatype.aether.artifact.Artifact;
 import org.sonatype.aether.repository.RemoteRepository;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
-import org.sonatype.aether.util.artifact.JavaScopes;
 
 /**
  * Test case for {@link RootArtifact}.
@@ -70,6 +68,7 @@ public final class RootArtifactTest {
     public void resolvesRootArtifact() throws Exception {
         final RootArtifact root = new RootArtifact(
             this.aether(),
+            // @checkstyle MultipleStringLiterals (1 line)
             new DefaultArtifact("junit", "junit", "", "jar", "4.10"),
             new ArrayList<Exclusion>()
         );
@@ -90,12 +89,11 @@ public final class RootArtifactTest {
      * RootArtifact can gracefully resolve a root artifact.
      * @throws Exception If there is some problem inside
      */
-    @Test
-    @SuppressWarnings("unchecked")
+    @Test(expected = IllegalStateException.class)
     public void gracefullyResolvesBrokenRootArtifact() throws Exception {
         final RootArtifact root = new RootArtifact(
             this.aether(),
-            new DefaultArtifact("junit", "junit-absent", "", "", "1.0"),
+            new DefaultArtifact("junit-broken", "junit-absent", "", "", "1.0"),
             new ArrayList<Exclusion>()
         );
         MatcherAssert.assertThat(
