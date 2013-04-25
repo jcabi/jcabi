@@ -49,6 +49,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
+@SuppressWarnings("unchecked")
 public final class ClasspathTest {
 
     /**
@@ -63,18 +64,53 @@ public final class ClasspathTest {
      * @throws Exception If there is some problem inside
      */
     @Test
-    @SuppressWarnings("unchecked")
     public void buildsClasspath() throws Exception {
-        final File local = this.temp.newFolder();
-        final MavenProject project = Mockito.mock(MavenProject.class);
-        Mockito.doReturn(Arrays.asList("/some/path/as/directory"))
-            .when(project).getTestClasspathElements();
         final Dependency dep = new Dependency();
         final String group = "junit";
         dep.setGroupId(group);
         dep.setArtifactId(group);
         dep.setVersion("4.10");
         dep.setScope(JavaScopes.TEST);
+        MatcherAssert.assertThat(
+            new Classpath(
+               this.project(dep), this.temp.newFolder(), JavaScopes.TEST
+            ),
+            Matchers.<File>hasItems(
+                Matchers.hasToString(Matchers.endsWith("/as/directory")),
+                Matchers.hasToString(Matchers.endsWith("junit-4.10.jar")),
+                Matchers.hasToString(Matchers.endsWith("hamcrest-core-1.1.jar"))
+            )
+        );
+    }
+
+    /**
+     * Classpath can return a string.
+     * @throws Exception If there is some problem inside
+     */
+    @Test
+    public void hasToString() throws Exception {
+        final Dependency dep = new Dependency();
+        dep.setGroupId("junit-broken");
+        dep.setArtifactId("junit-absent");
+        dep.setVersion("1.0");
+        dep.setScope(JavaScopes.TEST);
+        MatcherAssert.assertThat(
+            new Classpath(
+                this.project(dep), this.temp.newFolder(), JavaScopes.TEST
+            ),
+            Matchers.hasToString(Matchers.containsString("junit:junit:4.10"))
+        );
+    }
+
+    /**
+     * Creates project with this dependency.
+     * @throws Exception If there is some problem inside
+     */
+    private MavenProject project(final Dependency dep) throws Exception {
+        final MavenProject project = Mockito.mock(MavenProject.class);
+        Mockito.doReturn(Arrays.asList("/some/path/as/directory"))
+            .when(project).getTestClasspathElements();
+        final String group = "junit";
         Mockito.doReturn(Arrays.asList(dep)).when(project).getDependencies();
         final List<RemoteRepository> repos = Arrays.asList(
             new RemoteRepository(
@@ -84,21 +120,7 @@ public final class ClasspathTest {
             )
         );
         Mockito.doReturn(repos).when(project).getRemoteProjectRepositories();
-        final Set<File> classpath = new Classpath(
-            project, local, JavaScopes.TEST
-        );
-        MatcherAssert.assertThat(
-            classpath,
-            Matchers.hasToString(Matchers.containsString("junit:junit:4.10"))
-        );
-        MatcherAssert.assertThat(
-            classpath,
-            Matchers.<File>hasItems(
-                Matchers.hasToString(Matchers.endsWith("/as/directory")),
-                Matchers.hasToString(Matchers.endsWith("junit-4.10.jar")),
-                Matchers.hasToString(Matchers.endsWith("hamcrest-core-1.1.jar"))
-            )
-        );
+        return project;
     }
 
 }
