@@ -29,6 +29,7 @@
  */
 package com.jcabi.aether;
 
+import com.jcabi.aspects.Cacheable;
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.List;
@@ -46,7 +47,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @version $Id$
  * @since 0.7.16
  */
-@EqualsAndHashCode(of = "art")
+@EqualsAndHashCode(of = { "aether", "art", "exclusions" })
 final class RootArtifact {
 
     /**
@@ -95,11 +96,15 @@ final class RootArtifact {
                 this.exclusions.size()
             )
         );
-        for (Artifact child : this.children()) {
-            text.append("\n  ").append(child);
-            if (this.excluded(child)) {
-                text.append(" (excluded)");
+        try {
+            for (Artifact child : this.children()) {
+                text.append("\n  ").append(child);
+                if (this.excluded(child)) {
+                    text.append(" (excluded)");
+                }
             }
+        } catch (DependencyResolutionException ex) {
+            text.append(' ').append(ex);
         }
         return text.toString();
     }
@@ -115,18 +120,12 @@ final class RootArtifact {
     /**
      * Get all deps of this root artifact.
      * @return The list of artifacts
+     * @throws DependencyResolutionException If fails to resolve
      */
-    public Collection<Artifact> children() {
-        Collection<Artifact> deps;
-        try {
-            deps = this.aether.resolve(this.art, JavaScopes.COMPILE);
-        } catch (DependencyResolutionException ex) {
-            throw new IllegalStateException(
-                String.format("Failed to resolve '%s'", this.art),
-                ex
-            );
-        }
-        return deps;
+    @Cacheable(forever = true)
+    public Collection<Artifact> children()
+        throws DependencyResolutionException {
+        return this.aether.resolve(this.art, JavaScopes.COMPILE);
     }
 
     /**

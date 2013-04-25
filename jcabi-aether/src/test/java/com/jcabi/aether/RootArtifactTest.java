@@ -89,7 +89,7 @@ public final class RootArtifactTest {
      * RootArtifact can gracefully resolve a root artifact.
      * @throws Exception If there is some problem inside
      */
-    @Test(expected = IllegalStateException.class)
+    @Test
     public void gracefullyResolvesBrokenRootArtifact() throws Exception {
         final RootArtifact root = new RootArtifact(
             this.aether(),
@@ -98,7 +98,9 @@ public final class RootArtifactTest {
         );
         MatcherAssert.assertThat(
             root,
-            Matchers.hasToString(Matchers.notNullValue())
+            Matchers.hasToString(
+                Matchers.containsString("failed to load 'junit-broken:")
+            )
         );
     }
 

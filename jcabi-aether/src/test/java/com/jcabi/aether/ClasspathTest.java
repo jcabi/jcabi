@@ -32,7 +32,6 @@ package com.jcabi.aether;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
 import org.hamcrest.MatcherAssert;
@@ -73,7 +72,7 @@ public final class ClasspathTest {
         dep.setScope(JavaScopes.TEST);
         MatcherAssert.assertThat(
             new Classpath(
-               this.project(dep), this.temp.newFolder(), JavaScopes.TEST
+                this.project(dep), this.temp.newFolder(), JavaScopes.TEST
             ),
             Matchers.<File>hasItems(
                 Matchers.hasToString(Matchers.endsWith("/as/directory")),
@@ -84,33 +83,58 @@ public final class ClasspathTest {
     }
 
     /**
-     * Classpath can return a string.
+     * Classpath can return a string when a dependency is broken.
      * @throws Exception If there is some problem inside
      */
     @Test
-    public void hasToString() throws Exception {
+    public void hasToStringWithBrokenDependency() throws Exception {
         final Dependency dep = new Dependency();
         dep.setGroupId("junit-broken");
         dep.setArtifactId("junit-absent");
         dep.setVersion("1.0");
         dep.setScope(JavaScopes.TEST);
+        final Classpath classpath = new Classpath(
+            this.project(dep), this.temp.newFolder(), JavaScopes.TEST
+        );
         MatcherAssert.assertThat(
-            new Classpath(
-                this.project(dep), this.temp.newFolder(), JavaScopes.TEST
-            ),
-            Matchers.hasToString(Matchers.containsString("junit:junit:4.10"))
+            classpath.toString(),
+            Matchers.containsString(
+                "failed to load 'junit-broken:junit-absent:jar:1.0 (compile)'"
+            )
+        );
+    }
+
+    /**
+     * Classpath can be compared to another classpath.
+     * @throws Exception If there is some problem inside
+     */
+    @Test
+    public void comparesToAnotherClasspath() throws Exception {
+        final Dependency dep = new Dependency();
+        dep.setGroupId("org.apache.commons");
+        dep.setArtifactId("commons-lang3-absent");
+        dep.setVersion("3.0");
+        dep.setScope(JavaScopes.COMPILE);
+        final Classpath classpath = new Classpath(
+            this.project(dep), this.temp.newFolder(), JavaScopes.TEST
+        );
+        MatcherAssert.assertThat(classpath, Matchers.equalTo(classpath));
+        MatcherAssert.assertThat(
+            classpath.canEqual(classpath),
+            Matchers.is(true)
         );
     }
 
     /**
      * Creates project with this dependency.
+     * @param dep Dependency to add to the project
+     * @return Maven project mocked
      * @throws Exception If there is some problem inside
      */
     private MavenProject project(final Dependency dep) throws Exception {
         final MavenProject project = Mockito.mock(MavenProject.class);
         Mockito.doReturn(Arrays.asList("/some/path/as/directory"))
             .when(project).getTestClasspathElements();
-        final String group = "junit";
         Mockito.doReturn(Arrays.asList(dep)).when(project).getDependencies();
         final List<RemoteRepository> repos = Arrays.asList(
             new RemoteRepository(

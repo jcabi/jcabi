@@ -29,7 +29,6 @@
  */
 package com.jcabi.aether;
 
-import com.jcabi.aspects.Cacheable;
 import com.jcabi.aspects.Loggable;
 import java.io.File;
 import java.util.AbstractSet;
@@ -48,6 +47,7 @@ import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.project.MavenProject;
 import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.resolution.DependencyResolutionException;
 import org.sonatype.aether.util.artifact.DefaultArtifact;
 import org.sonatype.aether.util.artifact.JavaScopes;
 
@@ -72,6 +72,7 @@ import org.sonatype.aether.util.artifact.JavaScopes;
  * @version $Id$
  * @since 0.7.16
  * @see Aether
+ * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 @EqualsAndHashCode(callSuper = false, of = { "project", "aether", "scopes" })
 @Loggable(
@@ -134,7 +135,11 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @Override
     public Iterator<File> iterator() {
-        return this.fetch().iterator();
+        try {
+            return this.fetch().iterator();
+        } catch (DependencyResolutionException ex) {
+            throw new IllegalStateException(ex);
+        }
     }
 
     /**
@@ -142,16 +147,20 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @Override
     public int size() {
-        return this.fetch().size();
+        try {
+            return this.fetch().size();
+        } catch (DependencyResolutionException ex) {
+            throw new IllegalStateException(ex);
+        }
     }
 
     /**
      * Fetch all files found (JAR, ZIP, directories, etc).
      * @return Set of files
+     * @throws DependencyResolutionException If can't resolve
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
-    @Cacheable(forever = true)
-    private Set<File> fetch() {
+    private Set<File> fetch() throws DependencyResolutionException {
         final Set<File> files = new LinkedHashSet<File>();
         for (String path : this.elements()) {
             files.add(new File(path));
@@ -195,8 +204,9 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * including their transitive dependencies.
      *
      * @return The set of artifacts
+     * @throws DependencyResolutionException If can't resolve some of them
      */
-    private Set<Artifact> artifacts() {
+    private Set<Artifact> artifacts() throws DependencyResolutionException {
         final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
         for (RootArtifact root : this.roots()) {
             for (Artifact child : root.children()) {
@@ -221,7 +231,6 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      *
      * @return The set of root artifacts
      */
-    @Cacheable(forever = true)
     private Set<RootArtifact> roots() {
         final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
         for (Dependency dep : this.project.getDependencies()) {
