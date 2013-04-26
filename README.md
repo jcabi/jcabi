@@ -9,6 +9,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #234: `@Cacheable.FlushBefore` and `@Cacheable.FlushAfter` (`jcabi-aspects`)
  * #201: `@RetryOnFailure` shows full text of chained exceptions (`jcabi-aspects`)
  * #197: `Classpath` class introduced (`jcabi-aether`)
  * #193: `jcabi-maven-plugin:ajc` goal introduced
