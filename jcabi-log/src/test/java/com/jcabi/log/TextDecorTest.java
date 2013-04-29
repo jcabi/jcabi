@@ -32,6 +32,11 @@ package com.jcabi.log;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Formattable;
+import java.util.Formatter;
+import org.apache.commons.lang3.StringUtils;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -72,6 +77,25 @@ public final class TextDecorTest extends AbstractDecorTest {
                 {null, "NULL", 0, 0, 0},
                 {"\u0433!", "\\u0433!", 0, 0, 0},
             }
+        );
+    }
+
+    /**
+     * Test for a long text.
+     */
+    @Test
+    public void compressesLongText() {
+        final int len = 1000;
+        final String text = StringUtils.repeat('x', len);
+        final Formattable fmt = new TextDecor(text);
+        final StringBuilder output = new StringBuilder();
+        fmt.formatTo(new Formatter(output), 0, 0, 0);
+        MatcherAssert.assertThat(
+            output.toString().length(),
+            Matchers.describedAs(
+                output.toString(),
+                Matchers.equalTo(TextDecor.MAX)
+            )
         );
     }
 

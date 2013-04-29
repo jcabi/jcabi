@@ -55,7 +55,7 @@ final class TextDecor implements Formattable {
     /**
      * Maximum length to show.
      */
-    private static final int MAX = 100;
+    public static final int MAX = 100;
 
     /**
      * The object.
@@ -94,12 +94,17 @@ final class TextDecor implements Formattable {
         if (text.length() < TextDecor.MAX) {
             result = text;
         } else {
-            result = String.format(
-                "%s...%s (%d chars)",
-                text.substring(0, (TextDecor.MAX / 2) - 2),
-                text.substring(text.length() - (TextDecor.MAX / 2) + 1),
-                text.length()
+            final int skip = text.length() - TextDecor.MAX;
+            final StringBuilder output = new StringBuilder()
+                .append(text.substring(0, (text.length() - skip) / 2))
+                // @checkstyle MultipleStringLiterals (1 line)
+                .append("..")
+                .append(skip)
+                .append("..");
+            output.append(
+                text.substring(text.length() - TextDecor.MAX + output.length())
             );
+            result = output.toString();
         }
         return StringEscapeUtils.escapeJava(result);
     }
