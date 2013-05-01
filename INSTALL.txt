@@ -77,7 +77,7 @@ Continuous Integration Configuration
 
     At the moment the following goal is defined in our CI server:
 
-        mvn clean deploy -e -Pqulice --settings ../../closures/settings.xml
+        mvn clean deploy -e -U -Pqulice --settings ../../closures/settings.xml
 
 
 How to release new version to Maven Central:
