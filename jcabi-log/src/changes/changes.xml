@@ -31,6 +31,13 @@
  -->
 <document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <body>
+        <release version="0.7.18" date="1 May 2013" description="Logger compresses texts nicer">
+            <action dev="yegor" issue="236" type="add">
+                Logger compresses long texts nicely, removing
+                extra characters from the middle and replacing them
+                with the number
+            </action>
+        </release>
         <release version="0.7.17" date="14 Apr 2013" description="new constructors in VerboseRunnable">
             <action dev="yegor" issue="202" type="add">
                 VerboseRunnable got a few new constructors
