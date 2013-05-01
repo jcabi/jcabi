@@ -818,7 +818,7 @@
             src/test/java directory in the project. It will add junit, hamcrest,
             and mockito artifacts to the classpath ("test" scope).
             -->
-            <id>jcabi-unit-tests</id>
+            <id>jcabi-junit</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/test/java</exists>
@@ -855,13 +855,18 @@
             LOG4J during testing time. The profile will add required bindings
             to the classpath.
             -->
-            <id>jcabi-slf4j-to-log4j</id>
+            <id>jcabi-slf4j</id>
             <activation>
                 <file>
                     <exists>${basedir}/src/test/resources/log4j.properties</exists>
                 </file>
             </activation>
             <dependencies>
+                <dependency>
+                    <groupId>com.jcabi</groupId>
+                    <artifactId>jcabi-log</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
                 <dependency>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>

@@ -1,12 +1,13 @@
  ------
- Universal Maven Parent POM
+ Antlr3 Grammar Generator
  ------
  Yegor Bugayenko
  ------
- 2012-04-29
+ 2013-05-01
  ------
 
 ~~
+~~ #set($sign="$")
 ~~ Copyright (c) 2012-2013, JCabi.com
 ~~ All rights reserved.
 ~~
@@ -36,33 +37,26 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Universal Maven Parent POM
+Antlr3 Grammar Generator
 
-  Base your Maven projects on this artifact and you will get
-  many pre-configuration benefits, including up-to-date
-  <<<dependencies>>>, <<<plugins>>>, build <<<extensions>>>,
-  <<<repositories>>>, and more. All that you need to do is to
-  define our artifact as a parent of your project:
+  The profile is activated automatically when
+  you have a <<<src/main/antlr3>>> directory.
+  {{{http://www.antlr.org/wiki/display/ANTLR3/ANTLR+3+Wiki+Home}<<<org.antlr:antlr-runtime>>>}}
+  dependency gets added to classpath
+  and {{{http://mojo.codehaus.org/antlr-maven-plugin/}<<<antlr3-maven-plugin>>>}}
+  is executed in <<<generate-sources>>> phase.
+
+  Don't forget to add the dependency explicitly
+  to your list of dependencies into <<<runtime>>> scope
+  (you don't need to specify <<<version>>> since it is already defined
+  in parent <<<pom.xml>>>):
 
 +--
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.jcabi</groupId>
-    <artifactId>parent</artifactId>
-    <version>${project.version}</version>
-  </parent>
-  <groupId>your-group-id</groupId>
-  <artifactId>your-artifact-id</artifactId>
-  <version>1.2.3-SNAPSHOT</version>
-  [...]
-</project>
+<dependencies>
+  <dependency>
+    <groupId>org.antlr</groupId>
+    <artifactId>antlr-runtime</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+</dependencies>
 +--
-
-  This is what we have in our
-  {{{https://github.com/yegor256/jcabi/blob/master/parent/pom.xml}<<<pom.xml>>>}}.
-
-  Take a look at the
-  {{{https://github.com/yegor256/jcabi/blob/master/pom.xml}<<<pom.xml>>>}}
-  of jcabi itself, as a good example of
-  how <<<com.jcabi:parent>>> can be effectively used to minimize XML duplication.

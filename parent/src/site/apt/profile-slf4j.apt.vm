@@ -1,12 +1,13 @@
  ------
- Universal Maven Parent POM
+ SLF4J and LOG4J Logging
  ------
  Yegor Bugayenko
  ------
- 2012-04-29
+ 2013-05-01
  ------
 
 ~~
+~~ #set($sign="$")
 ~~ Copyright (c) 2012-2013, JCabi.com
 ~~ All rights reserved.
 ~~
@@ -36,33 +37,34 @@
 ~~ OF THE POSSIBILITY OF SUCH DAMAGE.
 ~~
 
-Universal Maven Parent POM
+SLF4J and LOG4J Logging
 
-  Base your Maven projects on this artifact and you will get
-  many pre-configuration benefits, including up-to-date
-  <<<dependencies>>>, <<<plugins>>>, build <<<extensions>>>,
-  <<<repositories>>>, and more. All that you need to do is to
-  define our artifact as a parent of your project:
+  The profile is activated automatically when
+  <<<src/test/resources/log4j.properties>>> file exists in your
+  project. The following two dependencies become available in classpath
+  (in <<<test>>> scope):
+  <<<org.slf4j:slf4j-log4j12>>> and <<<log4j:log4j>>>.
+
+  A good practice is
+  1) to annotate your methods/classes with
+  {{{../jcabi-aspects/annotation-loggable.html}<<<@Loggable>>>}},
+  2) activate
+  {{{./profile-aspectj.html}<<<aspectj>>>}} profile, and
+  3) create <<<src/test/resources/log4j.properties>>> file with LOG4J configuration
+  for unit testing.
+
+  This page explains the format of log4j.properties:
+  {{{http://logging.apache.org/log4j/1.2/manual.html}Short introduction to log4j: Ceki Gülcü, March 2002}}.
+  This is a short example that works:
 
 +--
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.jcabi</groupId>
-    <artifactId>parent</artifactId>
-    <version>${project.version}</version>
-  </parent>
-  <groupId>your-group-id</groupId>
-  <artifactId>your-artifact-id</artifactId>
-  <version>1.2.3-SNAPSHOT</version>
-  [...]
-</project>
+log4j.rootLogger=INFO, CONSOLE
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.layout=com.jcabi.log.MulticolorLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=[%color{%p}] %t %c: %m%n
 +--
 
-  This is what we have in our
-  {{{https://github.com/yegor256/jcabi/blob/master/parent/pom.xml}<<<pom.xml>>>}}.
-
-  Take a look at the
-  {{{https://github.com/yegor256/jcabi/blob/master/pom.xml}<<<pom.xml>>>}}
-  of jcabi itself, as a good example of
-  how <<<com.jcabi:parent>>> can be effectively used to minimize XML duplication.
+  In this example we use
+  {{{../jcabi-log/multicolor.html}<<<MulticolorLayout>>>}} from
+  {{{../jcabi-log/index.html}<<<jcabi-log>>>}},
+  which colors log output depending on log priorities.

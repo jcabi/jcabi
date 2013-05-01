@@ -41,7 +41,7 @@ Pre-Defined Maven Dependencies
   <<<com.jcabi:parent>>> POM declares a number of most useful
   artifacts in its <<<dependencyManagement>>> section. You can use
   them without specifying <<<version>>>. Thus, you don't need to worry
-  about keeping versions up to date. When you're ready to upgrade just
+  about keeping versions up to date. When you're ready to upgrade, just
   change the version of our parent POM and all dependencies will
   be upgraded automatically.
 
@@ -55,52 +55,16 @@ Pre-Defined Maven Dependencies
      {{{http://commons.apache.org/lang/}<<<commons-lang>>>}},
      and almost all other {{{http://commons.apache.org/}Apache commons}}.
 
+   * {{{https://code.google.com/p/guava-libraries/}<<<com.google.guava:guava>>>}}.
+
+   * <<<xml-apis:xml-apis>>>.
+
+   * {{{http://projectlombok.org/}<<<org.projectlombok:lombok>>>}}.
+
+   * <<<org.slf4j:slf4j-log4j12>>> and <<<log4j:log4j>>>.
+
+   * {{{http://www.antlr.org/wiki/display/ANTLR3/ANTLR+3+Wiki+Home}<<<org.antlr:antlr-runtime>>>}}.
+
   Check out
   {{{https://github.com/yegor256/jcabi/blob/master/parent/pom.xml}<<<pom.xml>>>}}
-  for a complete list of dependencies.
-
-* JUnit, Hamcrest, and Mockito
-
-  When <<<src/test/java>>> directory exists in the project these artifacts
-  are automatically added to the list of <<<dependencies>>> (in "test" scope,
-  of course):
-
-   * {{{https://github.com/kentbeck/junit/wiki}<<<junit:junit>>>}}:
-     unit testing framework;
-
-   * {{{http://code.google.com/p/hamcrest/}<<<org.hamcrest:hamcrest-core>>>}}
-     and {{{http://code.google.com/p/hamcrest/}<<<org.hamcrest:hamcrest-library>>>}}:
-     assertion framework;
-
-   * {{{http://code.google.com/p/mockito/}<<<org.mockito:mockito-core>>>}}:
-     mocking framework.
-
-* Antlr3 Grammar Generator
-
-  When you have a <<<src/main/antlr3>>> directory
-  {{{http://www.antlr.org/wiki/display/ANTLR3/ANTLR+3+Wiki+Home}<<<org.antlr:antlr-runtime>>>}}
-  dependency goes into classpath
-  and {{{http://mojo.codehaus.org/antlr-maven-plugin/}<<<antlr3-maven-plugin>>>}}
-  is executed in
-  <<<generate-sources>>> phase. Don't forget to add it explicitly to your
-  list of dependencies in runtime scope:
-
-+--
-<dependencies>
-  <dependency>
-    <groupId>org.antlr</groupId>
-    <artifactId>antlr-runtime</artifactId>
-    <scope>runtime</scope>
-  </dependency>
-</dependencies>
-
-+--
-
-* SLF4J and LOG4J Logging
-
-  When <<<src/test/resources/log4j.properties>>> file exists in your
-  project the following two dependencies become available in classpath
-  ("test" scope):
-  <<<org.slf4j:slf4j-log4j12>>>
-  and <<<log4j:log4j>>>.
-
+  for a complete list of dependencies, we update it every month.
