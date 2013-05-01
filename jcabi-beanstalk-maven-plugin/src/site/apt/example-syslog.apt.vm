@@ -141,3 +141,10 @@ commands:
   {{{https://papertrailapp.com/?thank=9e5dc6}papertrailapp.com}}
   as a collector of log events. We recommend to use
   this platform as one of the best in the market.
+
+  Update: You can also specify host name and port right inside you <<<log4j.properties>>>,
+  which is a more elegant and preferred way:
+
++--
+log4j.appender.SYSLOG.syslogHost=localhost:55555
++--
