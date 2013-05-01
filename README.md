@@ -9,8 +9,17 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #236: `Logger.format()` compresses texts in a nicer way (`jcabi-log`)
+ * #235: format of log output of `@Loggable` optimized (`jcabi-aspects`)
  * #234: `@Cacheable.FlushBefore` and `@Cacheable.FlushAfter` (`jcabi-aspects`)
+ * #233: `ant-contrib` added as a plugin dependency for `maven-antrun-plugin` (`parent`)
+ * #227: `@Loggable` reports full stack of a stuck thread (`jcabi-aspects`)
+ * #222: class name is reported when DEBUG or TRACE (`jcabi-maven-slf4j`)
+ * #209: thread name is reported when waiting (`jcabi-aspects`)
+ * #207: default time limit for `@Loggable` set to one minute (`jcabi-aspects`)
+ * #202: verbosity flag in VerboseRunnable (`jcabi-log`)
  * #201: `@RetryOnFailure` shows full text of chained exceptions (`jcabi-aspects`)
+ * #200: `ignore` attribute in `@Loggable` annotation (`jcabi-aspects`)
  * #197: `Classpath` class introduced (`jcabi-aether`)
  * #193: `jcabi-maven-plugin:ajc` goal introduced
  * #192: `@Loggable` throws for interrupted thread (`jcabi-aspects`)
