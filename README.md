@@ -9,6 +9,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #240: `skipArgs` and `skipResult` arguments of `@Loggable` (`jcabi-aspects`)
  * #239: `@Valid` ignores NULL references (`jcabi-aspects`)
  * #236: `Logger.format()` compresses texts in a nicer way (`jcabi-log`)
  * #235: format of log output of `@Loggable` optimized (`jcabi-aspects`)
