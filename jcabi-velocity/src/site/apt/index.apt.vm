@@ -45,7 +45,7 @@ Primitive Wrapper for Apache Velocity
 import com.jcabi.velocity.VelocityPage;
 public class Main {
   public static void main(String[] args) {
-    String text = new VelocityPage("com/foo/template.vm")
+    String text = new VelocityPage("/com/foo/template.vm")
       .set("name", "John Doe")
       .set("file", file)
       .set("document", doc)
@@ -53,6 +53,10 @@ public class Main {
   }
 }
 +--
+
+  The only argument of the constructor should be an absolute
+  path of a classpath resource that contains a Velocity template. Be aware
+  that an absolute resource path always starts with a slash.
 
   The only dependency you need is
   (you can also download
