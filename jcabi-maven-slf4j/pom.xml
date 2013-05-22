@@ -38,6 +38,15 @@
     <artifactId>jcabi-maven-slf4j</artifactId>
     <packaging>jar</packaging>
     <name>jcabi-maven-slf4j</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <!--

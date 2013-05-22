@@ -38,6 +38,15 @@
     <artifactId>jcabi-jdbc</artifactId>
     <packaging>jar</packaging>
     <name>jcabi-jdbc</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
