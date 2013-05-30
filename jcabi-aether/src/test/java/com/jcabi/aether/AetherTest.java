@@ -166,12 +166,12 @@ public final class AetherTest {
     }
 
     /**
-     * Aether can reject NULL maven project.
+     * Aether can reject NULL Maven project.
      * @throws Exception If there is some problem inside
      */
     @Test(expected = javax.validation.ConstraintViolationException.class)
     public void rejectsNullMavenProject() throws Exception {
-        new Aether(null, this.temp.newFolder());
+        new Aether((MavenProject) null, this.temp.newFolder());
     }
 
     /**

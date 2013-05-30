@@ -98,20 +98,31 @@ public final class Aether {
     private final transient RepositorySystem system =
         new RepositorySystemBuilder().build();
 
-        /**
-     * Public ctor, requires information about all remote repos and one
+    /**
+     * Public ctor, requires information about all remote repositories and one
      * local.
      * @param prj The Maven project
      * @param repo Local repository location (directory path)
      */
     public Aether(@NotNull final MavenProject prj, @NotNull final File repo) {
-        this.remotes = prj.getRemoteProjectRepositories()
-            .toArray(new RemoteRepository[] {});
+        this(prj.getRemoteProjectRepositories(), repo);
+    }
+
+    /**
+     * Public ctor, requires information about all remote repositories and one
+     * local.
+     * @param repos Collection of remote repositories
+     * @param repo Local repository location (directory path)
+     * @since 0.8
+     */
+    public Aether(@NotNull final Collection<RemoteRepository> repos,
+        @NotNull final File repo) {
+        this.remotes = repos.toArray(new RemoteRepository[] {});
         this.localRepo = repo;
     }
 
     /**
-     * List of transitive deps of the artifact.
+     * List of transitive dependencies of the artifact.
      * @param root The artifact to work with
      * @param scope The scope to work with ("runtime", "test", etc.)
      * @return The list of dependencies

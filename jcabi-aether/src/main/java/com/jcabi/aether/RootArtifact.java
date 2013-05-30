@@ -32,7 +32,6 @@ package com.jcabi.aether;
 import com.jcabi.aspects.Cacheable;
 import com.jcabi.log.Logger;
 import java.util.Collection;
-import java.util.List;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import org.apache.maven.model.Exclusion;
@@ -66,7 +65,7 @@ final class RootArtifact {
      * Exclusions.
      */
     @NotNull
-    private final transient List<Exclusion> exclusions;
+    private final transient Collection<Exclusion> exclusions;
 
     /**
      * Ctor.
@@ -74,8 +73,9 @@ final class RootArtifact {
      * @param artifact The artifact
      * @param excl Exclusions
      */
-    public RootArtifact(@NotNull final Aether aeth,
-        @NotNull final Artifact artifact, @NotNull final List<Exclusion> excl) {
+    protected RootArtifact(@NotNull final Aether aeth,
+        @NotNull final Artifact artifact,
+        @NotNull final Collection<Exclusion> excl) {
         this.aether = aeth;
         this.art = artifact;
         this.exclusions = excl;
@@ -118,7 +118,7 @@ final class RootArtifact {
     }
 
     /**
-     * Get all deps of this root artifact.
+     * Get all dependencies of this root artifact.
      * @return The list of artifacts
      * @throws DependencyResolutionException If fails to resolve
      */

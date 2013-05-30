@@ -91,18 +91,15 @@ import org.sonatype.aether.util.artifact.DefaultArtifact;
 
 public class Main {
   public static void main(String[] args) {
-    File repo = new File("/tmp/local-repository");
-    MavenProject project = new MavenProject();
-    project.setRemoteProjectRepositories(
-      Arrays.asList(
-        new RemoteRepository(
-          "maven-central",
-          "default",
-          "http://repo1.maven.org/maven2/"
-        )
+    File local = new File("/tmp/local-repository");
+    Collection<RemoteRepository> remotes = Arrays.asList(
+      new RemoteRepository(
+        "maven-central",
+        "default",
+        "http://repo1.maven.org/maven2/"
       )
     );
-    Collection<Artifact> deps = new Aether(project, repo).resolve(
+    Collection<Artifact> deps = new Aether(remotes, local).resolve(
       new DefaultArtifact("junit", "junit-dep", "", "jar", "4.10"),
       "runtime"
     );

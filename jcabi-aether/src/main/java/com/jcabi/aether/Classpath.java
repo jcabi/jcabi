@@ -161,7 +161,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      */
     @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     private Set<File> fetch() throws DependencyResolutionException {
-        final Set<File> files = new LinkedHashSet<File>();
+        final Set<File> files = new LinkedHashSet<File>(0);
         for (String path : this.elements()) {
             files.add(new File(path));
         }
@@ -207,7 +207,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * @throws DependencyResolutionException If can't resolve some of them
      */
     private Set<Artifact> artifacts() throws DependencyResolutionException {
-        final Set<Artifact> artifacts = new LinkedHashSet<Artifact>();
+        final Set<Artifact> artifacts = new LinkedHashSet<Artifact>(0);
         for (RootArtifact root : this.roots()) {
             for (Artifact child : root.children()) {
                 if (Classpath.contains(child, artifacts)) {
@@ -232,7 +232,7 @@ public final class Classpath extends AbstractSet<File> implements Set<File> {
      * @return The set of root artifacts
      */
     private Set<RootArtifact> roots() {
-        final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>();
+        final Set<RootArtifact> roots = new LinkedHashSet<RootArtifact>(0);
         for (Dependency dep : this.project.getDependencies()) {
             if (!this.scopes.contains(dep.getScope())) {
                 continue;
