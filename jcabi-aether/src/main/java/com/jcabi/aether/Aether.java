@@ -88,7 +88,7 @@ public final class Aether {
     private final transient RemoteRepository[] remotes;
 
     /**
-     * Location of local repo.
+     * Location of local repository.
      */
     private final transient File localRepo;
 
@@ -135,8 +135,7 @@ public final class Aether {
      *  do a proper testing and reproduce this defect in a test.
      */
     public List<Artifact> resolve(@NotNull final Artifact root,
-        @NotNull final String scope)
-        throws DependencyResolutionException {
+        @NotNull final String scope) throws DependencyResolutionException {
         final DependencyFilter filter =
             DependencyFilterUtils.classpathFilter(scope);
         if (filter == null) {
@@ -148,7 +147,7 @@ public final class Aether {
     }
 
     /**
-     * List of transitive deps of the artifact.
+     * List of transitive dependencies of the artifact.
      * @param root The artifact to work with
      * @param scope The scope to work with ("runtime", "test", etc.)
      * @param filter The dependency filter to work with
@@ -176,8 +175,8 @@ public final class Aether {
      * @param dreq Dependency request
      * @return The list of dependencies
      * @throws DependencyResolutionException If can't fetch it
-     * @todo #51 This catch of NPE is a temprorary measure. I don't know why
-     *  Aether throws NPE in case of unresolveable artifact. This is the best
+     * @todo #51 This catch of NPE is a temporary measure. I don't know why
+     *  Aether throws NPE in case of non-resolvable artifact. This is the best
      *  I can do at the moment in order to protect clients of the class.
      */
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
