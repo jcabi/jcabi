@@ -76,7 +76,7 @@ public interface Credentials {
          */
         private final transient String region;
         /**
-         * Public ctor.
+         * Public ctor, with "us-east-1" region.
          * @param akey AWS key
          * @param scrt Secret
          */

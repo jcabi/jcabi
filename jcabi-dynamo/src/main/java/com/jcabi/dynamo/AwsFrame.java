@@ -110,7 +110,8 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
             this.credentials,
             this,
             this.name,
-            this.conditions
+            this.conditions,
+            this.tbl.keys()
         );
     }
 

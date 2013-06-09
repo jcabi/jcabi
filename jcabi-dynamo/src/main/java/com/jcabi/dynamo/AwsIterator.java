@@ -40,9 +40,11 @@ import com.jcabi.aspects.Loggable;
 import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicReference;
 import lombok.ToString;
 
@@ -79,6 +81,11 @@ final class AwsIterator implements Iterator<Item> {
     private final transient String name;
 
     /**
+     * List of primary keys in the table.
+     */
+    private final transient Collection<String> keys;
+
+    /**
      * Last scan result (mutable).
      */
     private final transient AtomicReference<ScanResult> result =
@@ -87,7 +94,7 @@ final class AwsIterator implements Iterator<Item> {
     /**
      * Position inside the scan result, last seen, starts with -1 (mutable).
      */
-    private transient int position;
+    private transient int position = -1;
 
     /**
      * Public ctor.
@@ -95,14 +102,17 @@ final class AwsIterator implements Iterator<Item> {
      * @param frm Frame object
      * @param label Table name
      * @param conds Conditions
+     * @param primary Primary keys of the table
      * @checkstyle ParameterNumber (5 lines)
      */
     protected AwsIterator(final Credentials creds, final AwsFrame frm,
-        final String label, final Conditions conds) {
+        final String label, final Conditions conds,
+        final Collection<String> primary) {
         this.credentials = creds;
         this.frame = frm;
         this.name = label;
         this.conditions = conds;
+        this.keys = primary;
     }
 
     /**
@@ -121,6 +131,15 @@ final class AwsIterator implements Iterator<Item> {
     @Override
     public Item next() {
         synchronized (this.result) {
+            if (!this.hasNext()) {
+                throw new NoSuchElementException(
+                    String.format(
+                        "no more items in the frame, position=%d, size=%d",
+                        this.position,
+                        this.items().size()
+                    )
+                );
+            }
             ++this.position;
             final Item item = new AwsItem(
                 this.credentials,
@@ -136,6 +155,7 @@ final class AwsIterator implements Iterator<Item> {
      * {@inheritDoc}
      */
     @Override
+    @SuppressWarnings("PMD.UseConcurrentHashMap")
     public void remove() {
         synchronized (this.result) {
             final AmazonDynamoDB aws = this.credentials.aws();
@@ -143,10 +163,14 @@ final class AwsIterator implements Iterator<Item> {
                 new ArrayList<Map<String, AttributeValue>>(
                     this.result.get().getItems()
                 );
+            final Map<String, AttributeValue> item =
+                items.remove(this.position);
             final DeleteItemResult res = aws.deleteItem(
-                new DeleteItemRequest().withExpected(
-                    new Attributes(items.remove(this.position)).asKeys()
-                )
+                new DeleteItemRequest()
+                    .withTableName(this.name)
+                    .withKey(new Attributes(item).only(this.keys))
+                    .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
+                    .withExpected(new Attributes(item).asKeys())
             );
             aws.shutdown();
             this.result.get().setItems(items);
@@ -180,7 +204,7 @@ final class AwsIterator implements Iterator<Item> {
         final AmazonDynamoDB aws = this.credentials.aws();
         final ScanRequest request = new ScanRequest()
             .withTableName(this.name)
-            .withAttributesToGet(AwsTable.class.cast(this.frame.table()).keys())
+            .withAttributesToGet(this.keys)
             .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
             .withScanFilter(this.conditions)
             .withLimit(Tv.HUNDRED);

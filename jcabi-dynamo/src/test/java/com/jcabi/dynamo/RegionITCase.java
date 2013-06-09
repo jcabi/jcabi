@@ -32,8 +32,6 @@ package com.jcabi.dynamo;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.model.AttributeDefinition;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
-import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
-import com.amazonaws.services.dynamodbv2.model.Condition;
 import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DeleteTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DescribeTableRequest;
@@ -44,6 +42,7 @@ import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
 import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
 import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.hamcrest.MatcherAssert;
@@ -175,13 +174,11 @@ public final class RegionITCase {
                 .with(attr, value)
         );
         final Frame frame = table.frame().where(
-            attr,
-            new Condition()
-                .withAttributeValueList(new AttributeValue(value))
-                .withComparisonOperator(ComparisonOperator.EQ)
+            attr, Conditions.equalTo(value)
         );
         MatcherAssert.assertThat(frame.size(), Matchers.equalTo(1));
-        final Item item = frame.iterator().next();
+        final Iterator<Item> items = frame.iterator();
+        final Item item = items.next();
         MatcherAssert.assertThat(
             item.get(attr).getS(),
             Matchers.equalTo(value)
@@ -191,6 +188,7 @@ public final class RegionITCase {
             item.get(attr).getS(),
             Matchers.not(Matchers.equalTo(value))
         );
+        items.remove();
     }
 
     /**
