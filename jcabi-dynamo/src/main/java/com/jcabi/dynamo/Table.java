@@ -29,7 +29,9 @@
  */
 package com.jcabi.dynamo;
 
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.jcabi.aspects.Immutable;
+import java.util.Map;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -47,11 +49,16 @@ public interface Table {
 
     /**
      * Put new item there.
+     *
+     * <p>It is recommended to use {@link Attributes} supplementary class,
+     * instead of a raw {@link Map}.
+     *
      * @param attributes Attributes to save
      * @return Item just created
+     * @see Attributes
      */
     @NotNull
-    Item put(@NotNull Attributes attributes);
+    Item put(@NotNull Map<String, AttributeValue> attributes);
 
     /**
      * Make a new frame, in order to retrieve items.

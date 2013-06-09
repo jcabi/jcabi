@@ -32,6 +32,7 @@ package com.jcabi.dynamo;
 import com.amazonaws.services.dynamodbv2.model.Condition;
 import com.jcabi.aspects.Immutable;
 import java.util.Collection;
+import java.util.Map;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -67,6 +68,19 @@ public interface Frame extends Collection<Item> {
      */
     @NotNull
     Frame where(@NotNull String name, @NotNull Condition condition);
+
+    /**
+     * Refine using these conditions.
+     *
+     * <p>It is recommended to use {@link Conditions} supplementary class
+     * instead of a raw {@link Map}.
+     *
+     * @param conditions The conditions
+     * @return New frame
+     * @see Conditions
+     */
+    @NotNull
+    Frame where(@NotNull Map<String, Condition> conditions);
 
     /**
      * Get back to the table this frame came from.

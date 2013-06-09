@@ -72,14 +72,14 @@ public final class Conditions implements Map<String, Condition> {
     private final transient Object[][] pairs;
 
     /**
-     * Private ctor.
+     * Public ctor.
      */
     public Conditions() {
         this(new HashMap<String, Condition>(0));
     }
 
     /**
-     * Private ctor.
+     * Public ctor.
      * @param map Map of them
      */
     public Conditions(@NotNull final Map<String, Condition> map) {
@@ -96,6 +96,7 @@ public final class Conditions implements Map<String, Condition> {
      * @param value The value to equal to
      * @return The condition just created
      */
+    @NotNull
     public static Condition equalTo(@NotNull final Object value) {
         return new Condition()
             .withAttributeValueList(new AttributeValue(value.toString()))
@@ -103,11 +104,12 @@ public final class Conditions implements Map<String, Condition> {
     }
 
     /**
-     * With this attribute.
+     * With this condition.
      * @param name Attribute name
-     * @param value The value
-     * @return Attributes
+     * @param value The condition
+     * @return New map of conditions
      */
+    @NotNull
     public Conditions with(@NotNull final String name,
         @NotNull final Condition value) {
         final ConcurrentMap<String, Condition> map =
@@ -116,6 +118,22 @@ public final class Conditions implements Map<String, Condition> {
             );
         map.putAll(this);
         map.put(name, value);
+        return new Conditions(map);
+    }
+
+    /**
+     * With these conditions.
+     * @param conds The conditions
+     * @return New map of conditions
+     */
+    @NotNull
+    public Conditions with(@NotNull final Map<String, Condition> conds) {
+        final ConcurrentMap<String, Condition> map =
+            new ConcurrentHashMap<String, Condition>(
+                this.pairs.length + conds.size()
+            );
+        map.putAll(this);
+        map.putAll(conds);
         return new Conditions(map);
     }
 

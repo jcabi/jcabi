@@ -30,6 +30,7 @@
 package com.jcabi.dynamo;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.DescribeTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DescribeTableResult;
 import com.amazonaws.services.dynamodbv2.model.KeySchemaElement;
@@ -42,6 +43,7 @@ import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Map;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -89,7 +91,7 @@ final class AwsTable implements Table {
      * {@inheritDoc}
      */
     @Override
-    public Item put(final Attributes attributes) {
+    public Item put(final Map<String, AttributeValue> attributes) {
         final AmazonDynamoDB aws = this.credentials.aws();
         final PutItemRequest request = new PutItemRequest();
         request.setTableName(this.name);
@@ -109,7 +111,7 @@ final class AwsTable implements Table {
             this.credentials,
             this.frame(),
             this.name,
-            attributes.only(this.keys())
+            new Attributes(attributes).only(this.keys())
         );
     }
 

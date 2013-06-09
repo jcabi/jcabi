@@ -35,6 +35,8 @@ import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import java.util.AbstractCollection;
 import java.util.Iterator;
+import java.util.Map;
+import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -127,7 +129,9 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
      * {@inheritDoc}
      */
     @Override
-    public Frame where(final String attr, final Condition condition) {
+    @NotNull
+    public Frame where(@NotNull final String attr,
+        @NotNull final Condition condition) {
         return new AwsFrame(
             this.credentials,
             this.tbl,
@@ -140,6 +144,21 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
      * {@inheritDoc}
      */
     @Override
+    @NotNull
+    public Frame where(@NotNull final Map<String, Condition> conditions) {
+        return new AwsFrame(
+            this.credentials,
+            this.tbl,
+            this.name,
+            this.conditions.with(conditions)
+        );
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @NotNull
     public Table table() {
         return this.tbl;
     }

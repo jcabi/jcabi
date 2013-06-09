@@ -49,8 +49,12 @@ import lombok.ToString;
 public interface Credentials {
 
     /**
-     * Build AWS credentials object.
-     * @return Credentials
+     * Build AWS client.
+     *
+     * <p>Don't forget to shut it down after use,
+     * using {@link AmazonDynamoDB#shutdown()}.
+     *
+     * @return Amazon Dynamo DB client
      */
     @NotNull
     AmazonDynamoDB aws();
