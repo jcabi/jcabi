@@ -30,6 +30,7 @@
 package com.jcabi.dynamo;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
  * Test case for {@link Region}.
@@ -39,12 +40,16 @@ import org.junit.Test;
 public final class RegionTest {
 
     /**
-     * Region.Simple can work with AWS.
+     * Region.Prefixed can add prefix to table names.
      * @throws Exception If some problem inside
      */
     @Test
-    public void worksWithRegion() throws Exception {
-        // nothing yet...
+    public void appendsPrefixesToTableNames() throws Exception {
+        final Table table = Mockito.mock(Table.class);
+        final Region region = Mockito.mock(Region.class);
+        Mockito.doReturn(table).when(region).table(Mockito.anyString());
+        new Region.Prefixed(region, "foo-").table("test");
+        Mockito.verify(region).table("foo-test");
     }
 
 }
