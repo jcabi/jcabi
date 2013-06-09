@@ -145,12 +145,12 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
      */
     @Override
     @NotNull
-    public Frame where(@NotNull final Map<String, Condition> conditions) {
+    public Frame where(@NotNull final Map<String, Condition> conds) {
         return new AwsFrame(
             this.credentials,
             this.tbl,
             this.name,
-            this.conditions.with(conditions)
+            this.conditions.with(conds)
         );
     }
 
