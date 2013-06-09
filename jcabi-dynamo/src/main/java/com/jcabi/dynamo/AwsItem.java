@@ -37,7 +37,6 @@ import com.amazonaws.services.dynamodbv2.model.PutItemRequest;
 import com.amazonaws.services.dynamodbv2.model.PutItemResult;
 import com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity;
 import com.amazonaws.services.dynamodbv2.model.ReturnValue;
-import com.jcabi.aspects.Cacheable;
 import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
@@ -97,7 +96,6 @@ final class AwsItem implements Item {
      * {@inheritDoc}
      */
     @Override
-    @Cacheable
     public AttributeValue get(final String attr) {
         AttributeValue value = this.keys.get(attr);
         if (value == null) {
@@ -126,7 +124,6 @@ final class AwsItem implements Item {
      * {@inheritDoc}
      */
     @Override
-    @Cacheable.FlushAfter
     public void put(final String attr, final AttributeValue value) {
         final AmazonDynamoDB aws = this.credentials.aws();
         final PutItemRequest request = new PutItemRequest();

@@ -47,8 +47,13 @@ Amazon Dynamo DB Object Layer
 +--
 public class Main {
   public static void main(String[] args) {
-    Region region = new Region("AWS key", "AWS secret");
-    region
+    Credentials credentials = new Credentials.Simple("AWS key", "AWS secret");
+    Region region = new Region.Simple(credentials);
+    Table table = region.table("foo");
+    Collection<Item> items = table.frame().where("id", Conditions.equalTo(123));
+    for (Item item : items) {
+      System.out.println(item.get("name").getS());
+    }
   }
 }
 +--
