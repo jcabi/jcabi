@@ -58,6 +58,26 @@ public class Main {
 }
 +--
 
+  You can put an item using
+  {{{./apidocs-${project.version}/com/jcabi/dynamo/Table.html}<<<Table#put()>>>}} method:
+
++--
+public class Main {
+  public static void main(String[] args) {
+    Table table = region.table("foo");
+    table.put(
+      new Attributes()
+        .with("id", 123)
+        .with("name", "Jeff Lebowski")
+        .with("salary", 0.69d)
+    );
+  }
+}
++--
+
+  Read {{{./apidocs-${project.version}/com/jcabi/dynamo/index.html}JavaDoc}}
+  for more information and examples.
+
   The only dependency you need is
   (you can also download
   {{{http://repo1.maven.org/maven2/com/jcabi/jcabi-urn/${project.version}/jcabi-dynamo-${project.version}.jar}<<<jcabi-dynamo-${project.version}.jar>>>}}
