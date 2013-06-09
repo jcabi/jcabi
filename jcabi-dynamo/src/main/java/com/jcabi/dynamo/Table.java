@@ -35,6 +35,10 @@ import javax.validation.constraints.NotNull;
 /**
  * DynamoDB table.
  *
+ * <p>To get data from the table use {@link Table#frame()} method. To
+ * create a new item in the table (or replace the existing one) use
+ * {@link Table#put(Attributes)} method.
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
@@ -47,10 +51,10 @@ public interface Table {
      * @return Item just created
      */
     @NotNull
-    Item put(Attributes attributes);
+    Item put(@NotNull Attributes attributes);
 
     /**
-     * Make a new frame.
+     * Make a new frame, in order to retrieve items.
      * @return Frame
      */
     @NotNull

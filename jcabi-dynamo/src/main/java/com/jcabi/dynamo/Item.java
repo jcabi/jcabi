@@ -43,19 +43,19 @@ import javax.validation.constraints.NotNull;
 public interface Item {
 
     /**
-     * Get one attribute.
+     * Get one attribute, fetching directly from AWS.
      * @param name Attribute name
      * @return Value
      */
     @NotNull
-    AttributeValue get(String name);
+    AttributeValue get(@NotNull String name);
 
     /**
-     * Change one attribute.
+     * Change one attribute, immediately saving it to AWS.
      * @param name Attribute name
      * @param value Value to save
      */
-    void put(String name, AttributeValue value);
+    void put(@NotNull String name, @NotNull AttributeValue value);
 
     /**
      * Get back to the frame it is from.

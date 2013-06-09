@@ -50,10 +50,10 @@ public interface Region {
      * @return Table
      */
     @NotNull
-    Table table(String name);
+    Table table(@NotNull String name);
 
     /**
-     * Prefixed.
+     * Simple region, basic implementation.
      */
     @Immutable
     @Loggable(Loggable.DEBUG)
@@ -68,17 +68,31 @@ public interface Region {
          * Public ctor.
          * @param creds Credentials
          */
-        public Simple(final Credentials creds) {
+        public Simple(@NotNull final Credentials creds) {
             this.credentials = creds;
         }
         @Override
-        public Table table(final String name) {
+        @NotNull
+        public Table table(@NotNull final String name) {
             return new AwsTable(this.credentials, this, name);
         }
     }
 
     /**
-     * Prefixed.
+     * All tables have a prefix in front of their names.
+     *
+     * <p>The region has to be used in combination with another region,
+     * for example {@link Region.Simple}:
+     *
+     * <pre>Region region = new Region.Prefixed(
+     *   new Region.Simple(creds),
+     *   "foo-"
+     * );</pre>
+     *
+     * <p>Now, {@code region.table("test")} will return a {@link Table}
+     * instance pointing to the Dynamo DB table named {@code "foo-test"}. Could
+     * be a convenient mechanism when you have many tables for different
+     * projects in the same region.
      */
     @Immutable
     @Loggable(Loggable.DEBUG)
@@ -98,12 +112,14 @@ public interface Region {
          * @param region Original region
          * @param pfx Prefix to add to all tables
          */
-        public Prefixed(final Region region, final String pfx) {
+        public Prefixed(@NotNull final Region region,
+            @NotNull final String pfx) {
             this.origin = region;
             this.prefix = pfx;
         }
         @Override
-        public Table table(final String name) {
+        @NotNull
+        public Table table(@NotNull final String name) {
             return this.origin.table(
                 new StringBuilder(this.prefix).append(name).toString()
             );

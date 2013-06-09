@@ -35,26 +35,42 @@ import java.util.Collection;
 import javax.validation.constraints.NotNull;
 
 /**
- * DynamoDB frame.
+ * DynamoDB frame (subset of a table).
+ *
+ * <p>{@link Frame} is a subset of a Dynamo table, and is used to retrieve items
+ * and remove them. {@link Frame} acts as an iterable immutable collection of
+ * items. You can't use {@link Frame#remove(Object)} method directly. Instead,
+ * find the right item using iterator and than remove it with
+ * {@link Iterator#remove()}.
+ *
+ * <p>To fetch items from Dynamo DB, {@link Frame} uses
+ * {@code Scan} operation.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
+ * @see Item
+ * @see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html">Query and Scan</a>
  */
 @Immutable
 public interface Frame extends Collection<Item> {
 
     /**
      * Refine using this condition.
+     *
+     * <p>It is recommended to use a utility static method
+     * {@link Conditions.equalTo(Object)}, when condition is simply an
+     * equation to a plain string value.
+     *
      * @param name Attribute name
      * @param condition The condition
      * @return New frame
      */
     @NotNull
-    Frame where(String name, Condition condition);
+    Frame where(@NotNull String name, @NotNull Condition condition);
 
     /**
-     * Get back to the table it is from.
-     * @return Table
+     * Get back to the table this frame came from.
+     * @return The table
      */
     @NotNull
     Table table();
