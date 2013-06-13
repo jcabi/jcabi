@@ -118,7 +118,7 @@ final class NanoDecor implements Formattable {
             title = "ns";
         } else if (this.nano < 1000L * 1000) {
             number = this.nano / 1000L;
-            title = "mcs";
+            title = "µs";
         } else if (this.nano < 1000L * 1000 * 1000) {
             number = this.nano / (1000L * 1000);
             title = "ms";
