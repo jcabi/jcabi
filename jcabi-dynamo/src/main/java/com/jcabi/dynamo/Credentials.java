@@ -38,6 +38,7 @@ import com.jcabi.aspects.Loggable;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.apache.commons.lang3.Validate;
 
 /**
  * Amazon DynamoDB credentials.
@@ -95,8 +96,20 @@ public interface Credentials {
          */
         public Simple(@NotNull final String akey, @NotNull final String scrt,
             @NotNull final String reg) {
+            Validate.matchesPattern(
+                akey, "[A-Z0-9]{20}",
+                "Invalid AWS key '%s'", akey
+            );
             this.key = akey;
+            Validate.matchesPattern(
+                scrt, "[a-zA-Z0-9+/=]{40}",
+                "Invalid AWS secret key '%s'", scrt
+            );
             this.secret = scrt;
+            Validate.matchesPattern(
+                reg, "[-a-z0-9]+",
+                "Invalid AWS region name '%s'", reg
+            );
             this.region = reg;
         }
         /**
