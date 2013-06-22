@@ -30,6 +30,8 @@
 package com.jcabi.log;
 
 import com.jcabi.aspects.Immutable;
+import java.io.IOException;
+import java.io.OutputStream;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.slf4j.LoggerFactory;
@@ -258,7 +260,7 @@ public final class Logger {
      * this particular logger.
      * @param source The source of the logging operation
      * @return Is it enabled?
-     * @since 1.0.5
+     * @since 0.5
      */
     public static boolean isInfoEnabled(final Object source) {
         return Logger.logger(source).isInfoEnabled();
@@ -269,10 +271,25 @@ public final class Logger {
      * this particular logger.
      * @param source The source of the logging operation
      * @return Is it enabled?
-     * @since 1.0.5
+     * @since 0.5
      */
     public static boolean isWarnEnabled(final Object source) {
         return Logger.logger(source).isWarnEnabled();
+    }
+
+    /**
+     * Returns an {@link OutputStream}, which converts all incoming data
+     * into logging lines.
+     * @return Output stream directly pointed to the logging facility
+     * @since 0.8
+     */
+    public static OutputStream stream() {
+        return new OutputStream() {
+            @Override
+            public void write(final int data) throws IOException {
+                throw new UnsupportedOperationException();
+            }
+        };
     }
 
     /**

@@ -29,6 +29,8 @@
  */
 package com.jcabi.log;
 
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -77,6 +79,16 @@ public final class LoggerTest {
             Logger.format("array: %[list]s", new Object[] {"hi", 1}),
             Matchers.not(Matchers.equalTo("array: [\"hi\", \"1\"]"))
         );
+    }
+
+    /**
+     * Logger can provide an output stream.
+     * @throws Exception If something goes wrong
+     */
+    @Test
+    public void providesOutputStream() throws Exception {
+        final OutputStream stream = Logger.stream();
+        new PrintWriter(stream).print("hello, how are you?");
     }
 
 }
