@@ -9,6 +9,7 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 0.8: upcoming release
 
+ * #257: `Logger.stream()` and `Logger.log()` methods introduced (`jcabi-log`)
  * #252: `jcabi-dynamo` introduced
  * #250: `Aether(Collection<RemoteRepository>, File)` constructor added (`jcabi-aether`)
  * #240: `skipArgs` and `skipResult` arguments of `@Loggable` (`jcabi-aspects`)
