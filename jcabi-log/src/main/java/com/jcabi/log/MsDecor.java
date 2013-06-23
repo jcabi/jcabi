@@ -107,20 +107,29 @@ final class MsDecor implements Formattable {
      * Create text.
      * @param precision The precision
      * @return The text
+     * @checkstyle MagicNumber (50 lines)
      */
     private String toText(final int precision) {
         double number;
         String title;
-        // @checkstyle MagicNumber (15 lines)
         if (this.millis < 1000L) {
             number = this.millis;
             title = "ms";
         } else if (this.millis < 1000 * 60) {
             number = this.millis / 1000;
             title = "s";
-        } else {
+        } else if (this.millis < 1000 * 60 * 60) {
             number = this.millis / (1000 * 60);
             title = "min";
+        } else if (this.millis < 1000 * 60 * 60 * 24) {
+            number = this.millis / (1000 * 60 * 60);
+            title = "hr";
+        } else if (this.millis < 1000 * 60 * 60 * 24 * 30) {
+            number = this.millis / (1000 * 60 * 60 * 24);
+            title = "days";
+        } else {
+            number = this.millis / (1000 * 60 * 60 * 24 * 30);
+            title = "mon";
         }
         String format;
         if (precision >= 0) {
