@@ -31,6 +31,7 @@ package com.jcabi.log;
 
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.logging.Level;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -87,8 +88,11 @@ public final class LoggerTest {
      */
     @Test
     public void providesOutputStream() throws Exception {
-        final OutputStream stream = Logger.stream();
-        new PrintWriter(stream).print("hello, how are you?");
+        final OutputStream stream = Logger.stream(Level.INFO, this);
+        final PrintWriter writer = new PrintWriter(stream);
+        writer.print("hello, \u20ac, how're you?\nI'm fine, thanks, друг!\n");
+        writer.flush();
+        writer.close();
     }
 
 }

@@ -30,8 +30,10 @@
 package com.jcabi.log;
 
 import com.jcabi.aspects.Immutable;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.logging.Level;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.slf4j.LoggerFactory;
@@ -278,16 +280,53 @@ public final class Logger {
     }
 
     /**
+     * Log one line using the logging level specified.
+     * @param level The level of logging
+     * @param source The source of the logging operation
+     * @param msg The text message to be logged
+     * @param args Optional arguments for string formatting
+     * @since 0.8
+     * @checkstyle ParameterNumber (4 lines)
+     */
+    public static void log(final Level level, final Object source,
+        final String msg, final Object... args) {
+        if (level.equals(Level.SEVERE)) {
+            Logger.error(source, msg, args);
+        } else if (level.equals(Level.WARNING)) {
+            Logger.warn(source, msg, args);
+        } else if (level.equals(Level.INFO) || level.equals(Level.CONFIG)) {
+            Logger.info(source, msg, args);
+        } else if (level.equals(Level.FINE) || level.equals(Level.ALL)) {
+            Logger.debug(source, msg, args);
+        } else if (level.equals(Level.FINER) || level.equals(Level.FINEST)) {
+            Logger.trace(source, msg, args);
+        }
+    }
+
+    /**
      * Returns an {@link OutputStream}, which converts all incoming data
-     * into logging lines.
+     * into logging lines (separated by {@code \x0A} in UTF-8).
+     * @param level The level of logging
+     * @param source The source of the logging operation
      * @return Output stream directly pointed to the logging facility
      * @since 0.8
+     * @todo #257 I think that this implementation is very ineffective
+     *  time-consuming wise. I believe it has to be improved, but I don't
+     *  know how. See http://stackoverflow.com/questions/17258325
      */
-    public static OutputStream stream() {
+    public static OutputStream stream(final Level level, final Object source) {
         return new OutputStream() {
+            private final transient ByteArrayOutputStream buffer =
+                new ByteArrayOutputStream();
             @Override
             public void write(final int data) throws IOException {
-                throw new UnsupportedOperationException();
+                this.buffer.write(data);
+                final String text = this.buffer.toString("UTF-8");
+                final int length = text.length();
+                if (length > 0 && text.charAt(length - 1) == '\n') {
+                    Logger.log(level, source, text.substring(0, length - 1));
+                    this.buffer.reset();
+                }
             }
         };
     }
