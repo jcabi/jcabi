@@ -90,7 +90,7 @@ public final class LoggerTest {
     public void providesOutputStream() throws Exception {
         final OutputStream stream = Logger.stream(Level.INFO, this);
         final PrintWriter writer = new PrintWriter(stream);
-        writer.print("hello, \u20ac, how're you?\nI'm fine, thanks, друг!\n");
+        writer.print("hello, \u20ac, how're\u040a?\nI'm fine, thanks, друг!\n");
         writer.flush();
         writer.close();
     }

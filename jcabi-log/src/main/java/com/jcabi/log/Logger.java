@@ -310,9 +310,7 @@ public final class Logger {
      * @param source The source of the logging operation
      * @return Output stream directly pointed to the logging facility
      * @since 0.8
-     * @todo #257 I think that this implementation is very ineffective
-     *  time-consuming wise. I believe it has to be improved, but I don't
-     *  know how. See http://stackoverflow.com/questions/17258325
+     * @see <a href="http://stackoverflow.com/questions/17258325">some discussion</a>
      */
     public static OutputStream stream(final Level level, final Object source) {
         return new OutputStream() {
@@ -320,12 +318,11 @@ public final class Logger {
                 new ByteArrayOutputStream();
             @Override
             public void write(final int data) throws IOException {
-                this.buffer.write(data);
-                final String text = this.buffer.toString("UTF-8");
-                final int length = text.length();
-                if (length > 0 && text.charAt(length - 1) == '\n') {
-                    Logger.log(level, source, text.substring(0, length - 1));
+                if (data == '\n') {
+                    Logger.log(level, source, this.buffer.toString("UTF-8"));
                     this.buffer.reset();
+                } else {
+                    this.buffer.write(data);
                 }
             }
         };
