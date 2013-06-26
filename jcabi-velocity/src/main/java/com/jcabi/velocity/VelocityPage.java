@@ -31,6 +31,7 @@ package com.jcabi.velocity;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.Map;
 import javax.validation.constraints.NotNull;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
@@ -94,6 +95,21 @@ public final class VelocityPage {
     public VelocityPage set(@NotNull final String prop, final Object value) {
         synchronized (this.context) {
             this.context.put(prop, value);
+        }
+        return this;
+    }
+
+    /**
+     * Set all names in one go.
+     * @param args Map of arguments
+     * @return This object
+     * @since 0.8
+     */
+    public VelocityPage set(@NotNull final Map<String, Object> args) {
+        synchronized (this.context) {
+            for (Map.Entry<String, Object> entry : args.entrySet()) {
+                this.context.put(entry.getKey(), entry.getValue());
+            }
         }
         return this;
     }
