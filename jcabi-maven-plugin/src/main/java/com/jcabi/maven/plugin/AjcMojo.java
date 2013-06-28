@@ -157,6 +157,7 @@ public final class AjcMojo extends AbstractMojo {
         final String jdk = "1.6";
         main.run(
             new String[] {
+                "-Xset:avoidFinal=true",
                 "-inpath",
                 this.classesDirectory.getAbsolutePath(),
                 "-sourceroots",
