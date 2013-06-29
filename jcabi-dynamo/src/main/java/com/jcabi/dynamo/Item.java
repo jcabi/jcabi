@@ -43,12 +43,20 @@ import javax.validation.constraints.NotNull;
 public interface Item {
 
     /**
-     * Get one attribute, fetching directly from AWS.
+     * Get one attribute, fetching directly from AWS (runtime exception if
+     * the attribute is absent, use {@link #has(String)} first).
      * @param name Attribute name
      * @return Value
      */
     @NotNull
     AttributeValue get(@NotNull String name);
+
+    /**
+     * Does this attribute exist?
+     * @param name Attribute name
+     * @return TRUE if it exists
+     */
+    boolean has(@NotNull String name);
 
     /**
      * Change one attribute, immediately saving it to AWS (all other attributes

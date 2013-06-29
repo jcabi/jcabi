@@ -41,6 +41,7 @@ import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -97,27 +98,66 @@ final class AwsItem implements Item {
      * {@inheritDoc}
      */
     @Override
+    public boolean has(@NotNull final String attr) {
+        boolean has = this.keys.containsKey(attr);
+        if (!has) {
+            final AmazonDynamoDB aws = this.credentials.aws();
+            try {
+                final GetItemRequest request = new GetItemRequest();
+                request.setTableName(this.name);
+                request.setAttributesToGet(Arrays.asList(attr));
+                request.setKey(this.keys);
+                request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
+                request.setConsistentRead(true);
+                final GetItemResult result = aws.getItem(request);
+                has = result.getItem().get(attr) != null;
+                Logger.debug(
+                    this,
+                    "#has('%s'): %B from DynamoDB, %.2f units",
+                    attr,
+                    has,
+                    result.getConsumedCapacity().getCapacityUnits()
+                );
+            } finally {
+                aws.shutdown();
+            }
+        }
+        return has;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     @NotNull
     public AttributeValue get(@NotNull final String attr) {
         AttributeValue value = this.keys.get(attr);
         if (value == null) {
             final AmazonDynamoDB aws = this.credentials.aws();
-            final GetItemRequest request = new GetItemRequest();
-            request.setTableName(this.name);
-            request.setAttributesToGet(Arrays.asList(attr));
-            request.setKey(this.keys);
-            request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
-            request.setConsistentRead(true);
-            final GetItemResult result = aws.getItem(request);
-            aws.shutdown();
-            value = result.getItem().get(attr);
-            Logger.debug(
-                this,
-                "#get('%s'): loaded '%[text]s' from DynamoDB, %.2f units",
-                attr,
-                value,
-                result.getConsumedCapacity().getCapacityUnits()
-            );
+            try {
+                final GetItemRequest request = new GetItemRequest();
+                request.setTableName(this.name);
+                request.setAttributesToGet(Arrays.asList(attr));
+                request.setKey(this.keys);
+                request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
+                request.setConsistentRead(true);
+                final GetItemResult result = aws.getItem(request);
+                value = result.getItem().get(attr);
+                if (value == null) {
+                    throw new NoSuchElementException(
+                        String.format("attribute %s not found", attr)
+                    );
+                }
+                Logger.debug(
+                    this,
+                    "#get('%s'): loaded '%[text]s' from DynamoDB, %.2f units",
+                    attr,
+                    value,
+                    result.getConsumedCapacity().getCapacityUnits()
+                );
+            } finally {
+                aws.shutdown();
+            }
         }
         return value;
     }
@@ -137,20 +177,23 @@ final class AwsItem implements Item {
     @Override
     public void put(@NotNull final Attributes attrs) {
         final AmazonDynamoDB aws = this.credentials.aws();
-        final PutItemRequest request = new PutItemRequest();
-        request.setTableName(this.name);
-        request.setExpected(this.keys.asKeys());
-        request.setItem(new Attributes(this.keys).with(attrs));
-        request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
-        request.setReturnValues(ReturnValue.NONE);
-        final PutItemResult result = aws.putItem(request);
-        aws.shutdown();
-        Logger.debug(
-            this,
-            "#put('%s'): saved item to DynamoDB, %.2f units",
-            attrs,
-            result.getConsumedCapacity().getCapacityUnits()
-        );
+        try {
+            final PutItemRequest request = new PutItemRequest();
+            request.setTableName(this.name);
+            request.setExpected(this.keys.asKeys());
+            request.setItem(new Attributes(this.keys).with(attrs));
+            request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
+            request.setReturnValues(ReturnValue.NONE);
+            final PutItemResult result = aws.putItem(request);
+            Logger.debug(
+                this,
+                "#put('%s'): saved item to DynamoDB, %.2f units",
+                attrs,
+                result.getConsumedCapacity().getCapacityUnits()
+            );
+        } finally {
+            aws.shutdown();
+        }
     }
 
     /**

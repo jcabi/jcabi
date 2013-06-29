@@ -159,27 +159,32 @@ final class AwsIterator implements Iterator<Item> {
     public void remove() {
         synchronized (this.result) {
             final AmazonDynamoDB aws = this.credentials.aws();
-            final List<Map<String, AttributeValue>> items =
-                new ArrayList<Map<String, AttributeValue>>(
-                    this.result.get().getItems()
+            try {
+                final List<Map<String, AttributeValue>> items =
+                    new ArrayList<Map<String, AttributeValue>>(
+                        this.result.get().getItems()
+                    );
+                final Map<String, AttributeValue> item =
+                    items.remove(this.position);
+                final DeleteItemResult res = aws.deleteItem(
+                    new DeleteItemRequest()
+                        .withTableName(this.name)
+                        .withKey(new Attributes(item).only(this.keys))
+                        .withReturnConsumedCapacity(
+                            ReturnConsumedCapacity.TOTAL
+                        )
+                        .withExpected(new Attributes(item).asKeys())
                 );
-            final Map<String, AttributeValue> item =
-                items.remove(this.position);
-            final DeleteItemResult res = aws.deleteItem(
-                new DeleteItemRequest()
-                    .withTableName(this.name)
-                    .withKey(new Attributes(item).only(this.keys))
-                    .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
-                    .withExpected(new Attributes(item).asKeys())
-            );
-            aws.shutdown();
-            this.result.get().setItems(items);
-            Logger.debug(
-                this,
-                "#remove(): item #%d removed from DynamoDB, %.2f units",
-                this.position,
-                res.getConsumedCapacity().getCapacityUnits()
-            );
+                this.result.get().setItems(items);
+                Logger.debug(
+                    this,
+                    "#remove(): item #%d removed from DynamoDB, %.2f units",
+                    this.position,
+                    res.getConsumedCapacity().getCapacityUnits()
+                );
+            } finally {
+                aws.shutdown();
+            }
         }
     }
 
@@ -202,29 +207,33 @@ final class AwsIterator implements Iterator<Item> {
      */
     private void reload() {
         final AmazonDynamoDB aws = this.credentials.aws();
-        final ScanRequest request = new ScanRequest()
-            .withTableName(this.name)
-            .withAttributesToGet(this.keys)
-            .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
-            .withScanFilter(this.conditions)
-            .withLimit(Tv.HUNDRED);
-        if (this.result.get() != null
-            && this.result.get().getLastEvaluatedKey() != null) {
-            request.setExclusiveStartKey(
-                this.result.get().getLastEvaluatedKey()
+        try {
+            final ScanRequest request = new ScanRequest()
+                .withTableName(this.name)
+                .withAttributesToGet(this.keys)
+                .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
+                .withScanFilter(this.conditions)
+                .withLimit(Tv.HUNDRED);
+            if (this.result.get() != null
+                && this.result.get().getLastEvaluatedKey() != null) {
+                request.setExclusiveStartKey(
+                    this.result.get().getLastEvaluatedKey()
+                );
+            }
+            this.result.set(aws.scan(request));
+            this.position = -1;
+            Logger.debug(
+                this,
+                // @checkstyle LineLength (1 line)
+                "#reload(): loaded %d item(s) from '%s', %.2f units, %d scanned",
+                this.result.get().getCount(),
+                this.name,
+                this.result.get().getConsumedCapacity().getCapacityUnits(),
+                this.result.get().getScannedCount()
             );
+        } finally {
+            aws.shutdown();
         }
-        this.result.set(aws.scan(request));
-        this.position = -1;
-        aws.shutdown();
-        Logger.debug(
-            this,
-            "#reload(): loaded %d item(s) from '%s', %.2f units, %d scanned",
-            this.result.get().getCount(),
-            this.name,
-            this.result.get().getConsumedCapacity().getCapacityUnits(),
-            this.result.get().getScannedCount()
-        );
     }
 
 }
