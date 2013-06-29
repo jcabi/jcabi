@@ -51,11 +51,18 @@ public interface Item {
     AttributeValue get(@NotNull String name);
 
     /**
-     * Change one attribute, immediately saving it to AWS.
+     * Change one attribute, immediately saving it to AWS (all other attributes
+     * will be set to NULL, except primary keys).
      * @param name Attribute name
      * @param value Value to save
      */
     void put(@NotNull String name, @NotNull AttributeValue value);
+
+    /**
+     * Change all attributes.
+     * @param attrs Attributes
+     */
+    void put(@NotNull Attributes attrs);
 
     /**
      * Get back to the frame it is from.

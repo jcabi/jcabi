@@ -41,6 +41,7 @@ import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.log.Logger;
 import java.util.Arrays;
+import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -96,7 +97,8 @@ final class AwsItem implements Item {
      * {@inheritDoc}
      */
     @Override
-    public AttributeValue get(final String attr) {
+    @NotNull
+    public AttributeValue get(@NotNull final String attr) {
         AttributeValue value = this.keys.get(attr);
         if (value == null) {
             final AmazonDynamoDB aws = this.credentials.aws();
@@ -124,21 +126,29 @@ final class AwsItem implements Item {
      * {@inheritDoc}
      */
     @Override
-    public void put(final String attr, final AttributeValue value) {
+    public void put(@NotNull final String attr,
+        @NotNull final AttributeValue value) {
+        this.put(new Attributes().with(attr, value));
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void put(@NotNull final Attributes attrs) {
         final AmazonDynamoDB aws = this.credentials.aws();
         final PutItemRequest request = new PutItemRequest();
         request.setTableName(this.name);
         request.setExpected(this.keys.asKeys());
-        request.setItem(new Attributes(this.keys).with(attr, value));
+        request.setItem(new Attributes(this.keys).with(attrs));
         request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
         request.setReturnValues(ReturnValue.NONE);
         final PutItemResult result = aws.putItem(request);
         aws.shutdown();
         Logger.debug(
             this,
-            "#put('%s', '%[text]s'): saved item to DynamoDB, %.2f units",
-            attr,
-            value,
+            "#put('%s'): saved item to DynamoDB, %.2f units",
+            attrs,
             result.getConsumedCapacity().getCapacityUnits()
         );
     }

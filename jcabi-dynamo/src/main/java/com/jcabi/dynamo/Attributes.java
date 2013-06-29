@@ -108,6 +108,21 @@ public final class Attributes implements Map<String, AttributeValue> {
     }
 
     /**
+     * With these attributes.
+     * @param attrs Attributes to add
+     * @return Attributes
+     */
+    public Attributes with(@NotNull final Attributes attrs) {
+        final ConcurrentMap<String, AttributeValue> map =
+            new ConcurrentHashMap<String, AttributeValue>(
+                this.pairs.length + 1
+            );
+        map.putAll(this);
+        map.putAll(attrs);
+        return new Attributes(map);
+    }
+
+    /**
      * Convert them to a map of expected values.
      * @return Expected values
      */
