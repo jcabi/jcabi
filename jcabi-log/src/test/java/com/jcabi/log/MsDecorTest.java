@@ -77,6 +77,8 @@ public final class MsDecorTest extends AbstractDecorTest {
                 {6001L, "6.0010s", 0, 0, 4},
                 {122001L, "  2MIN", FormattableFlags.UPPERCASE, 6, 0},
                 {3789003L, "1hr", 0, 0, 0},
+                {86400000L, "1days", 0, 0, 0},
+                {864000000L, "10days", 0, 0, 0},
             }
         );
     }
