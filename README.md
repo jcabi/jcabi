@@ -5,6 +5,23 @@ Simple Useful Java Components
 
 See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
+## Questions?
+
+If you have any questions about the framework, or something doesn't work as expected, 
+please [submit an issue here](https://github.com/yegor256/jcabi/issues/new). 
+If you want to discuss, please use our [Google Group](https://groups.google.com/forum/#!forum/jcabi).
+
+## How to contribute?
+
+Fork the repository, make changes, submit a pull request. We promise to review your changes same day and apply to
+master branch, if they look correct.
+
+Importat to remember to run full build before submitting a pull request:
+
+```
+$ mvn clean install -Pqulice
+```
+
 ## Release Notes ##
 
 0.8: upcoming release
