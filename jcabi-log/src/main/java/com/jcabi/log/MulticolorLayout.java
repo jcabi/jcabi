@@ -36,6 +36,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.apache.log4j.EnhancedPatternLayout;
 import org.apache.log4j.Level;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.spi.LoggingEvent;
@@ -85,7 +86,7 @@ import org.apache.log4j.spi.LoggingEvent;
 @ToString
 @EqualsAndHashCode(callSuper = false)
 @SuppressWarnings("PMD.NonStaticInitializer")
-public final class MulticolorLayout extends PatternLayout {
+public final class MulticolorLayout extends EnhancedPatternLayout {
 
     /**
      * Control sequence indicator.
