@@ -94,6 +94,7 @@ final class DomDecor implements Formattable {
             try {
                 final Transformer trans = DomDecor.FACTORY.newTransformer();
                 trans.setOutputProperty(OutputKeys.INDENT, "yes");
+                trans.setOutputProperty(OutputKeys.STANDALONE, "no");
                 trans.transform(
                     new DOMSource(this.node),
                     new StreamResult(writer)
