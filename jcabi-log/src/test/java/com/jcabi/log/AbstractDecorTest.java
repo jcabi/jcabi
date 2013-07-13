@@ -86,6 +86,7 @@ public abstract class AbstractDecorTest {
         this.flags = flgs;
         this.width = wdt;
         this.precision = prcs;
+        Locale.setDefault(Locale.US);
     }
 
     /**
