@@ -38,6 +38,15 @@
     <artifactId>jcabi-log</artifactId>
     <packaging>jar</packaging>
     <name>jcabi-log</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <!-- for MulticolorLayout -->
