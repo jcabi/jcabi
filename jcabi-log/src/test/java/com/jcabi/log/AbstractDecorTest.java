@@ -32,6 +32,7 @@ package com.jcabi.log;
 import java.util.Formattable;
 import java.util.FormattableFlags;
 import java.util.Formatter;
+import java.util.Locale;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
@@ -86,6 +87,7 @@ public abstract class AbstractDecorTest {
         this.flags = flgs;
         this.width = wdt;
         this.precision = prcs;
+        Locale.setDefault(Locale.US);
     }
 
     /**
