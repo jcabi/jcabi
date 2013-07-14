@@ -6,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>${title}</title>
         <link media="all" rel="stylesheet" type="text/css" href="${relativePath}/css/jcabi.css"/>
         #foreach ($author in $authors)
@@ -36,9 +37,9 @@
                 #end
             #end
         #end
-        <link rel="stylesheet" href="css/highlight.css" />
-        <script src="js/jquery-1.8.3.min.js"></script>
-        <script src="js/highlight-7.3.min.js"></script>
+        <link rel="stylesheet" href="${relativePath}/css/highlight.css" />
+        <script src="${relativePath}/js/jquery-1.8.3.min.js"></script>
+        <script src="${relativePath}/js/highlight-7.3.min.js"></script>
         <script>
             $(document).ready(
                 function() {
@@ -103,6 +104,13 @@
             #end
         </ul>
         <div id="content">
+            #if ($project.scm.url.contains('github.com'))
+                <a href="${project.scm.url}">
+                    <img style="position: absolute; top: 0; right: 0; border: 0; width: 100px; height: 100px;"
+                        src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+                        alt="Fork me on GitHub" />
+                </a>
+            #end
             <a href="${decoration.bannerLeft.href}" title="${decoration.bannerLeft.title}">
                 <img src="${decoration.bannerLeft.src}"
                     alt="${decoration.bannerLeft.name}"
@@ -123,9 +131,12 @@
             #end
             <p>
                 $dateFormat.applyPattern('dd-MMM-yyyy')
-                ${dateFormat.format($currentDate)} ${project.version}
+                ${dateFormat.format($currentDate)}
+                ${project.version}
             </p>
-            ${bodyContent}
+            <article>
+                ${bodyContent}
+            </article>
             <p style="margin-bottom: 3em; margin-top: 2em;">
                 Copyright &#169;
                 #set ($currentYear = ${currentDate.year} + 1900)
