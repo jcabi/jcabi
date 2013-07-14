@@ -172,7 +172,7 @@ public final class TableMocker {
                 );
                 break;
             }
-            TimeUnit.SECONDS.sleep(Tv.FIVE);
+            TimeUnit.SECONDS.sleep(Tv.TEN);
             Logger.info(
                 this,
                 "waiting for DynamoDB table '%s': %s",
