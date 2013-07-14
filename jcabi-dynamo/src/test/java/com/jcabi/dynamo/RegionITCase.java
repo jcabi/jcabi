@@ -29,21 +29,15 @@
  */
 package com.jcabi.dynamo;
 
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.model.AttributeDefinition;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
-import com.amazonaws.services.dynamodbv2.model.DeleteTableRequest;
-import com.amazonaws.services.dynamodbv2.model.DescribeTableRequest;
-import com.amazonaws.services.dynamodbv2.model.DescribeTableResult;
 import com.amazonaws.services.dynamodbv2.model.KeySchemaElement;
 import com.amazonaws.services.dynamodbv2.model.KeyType;
 import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
 import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
 import com.jcabi.aspects.Tv;
-import com.jcabi.log.Logger;
 import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -85,6 +79,16 @@ public final class RegionITCase {
     private static final String HASH = "id";
 
     /**
+     * Region.
+     */
+    private static Region region;
+
+    /**
+     * Table mocker.
+     */
+    private static TableMocker table;
+
+    /**
      * Before the test.
      * @throws Exception If fails
      */
@@ -102,8 +106,13 @@ public final class RegionITCase {
         if (RegionITCase.KEY == null) {
             return;
         }
-        final AmazonDynamoDB aws = RegionITCase.aws();
-        aws.createTable(
+        RegionITCase.region = new Region.Simple(
+            new Credentials.Simple(
+                RegionITCase.KEY, RegionITCase.SECRET
+            )
+        );
+        RegionITCase.table = new TableMocker(
+            RegionITCase.region,
             new CreateTableRequest()
                 .withTableName(RegionITCase.TABLE)
                 .withProvisionedThroughput(
@@ -122,21 +131,7 @@ public final class RegionITCase {
                         .withKeyType(KeyType.HASH)
                 )
         );
-        final DescribeTableRequest request = new DescribeTableRequest()
-            .withTableName(RegionITCase.TABLE);
-        while (true) {
-            final DescribeTableResult result = aws.describeTable(request);
-            if ("ACTIVE".equals(result.getTable().getTableStatus())) {
-                Logger.info(RegionITCase.class, "Dynamo table is ready");
-                break;
-            }
-            TimeUnit.SECONDS.sleep(Tv.FIVE);
-            Logger.info(
-                RegionITCase.class,
-                "waiting for Dynamo: %s",
-                result.getTable().getTableStatus()
-            );
-        }
+        RegionITCase.table.create();
     }
 
     /**
@@ -147,12 +142,7 @@ public final class RegionITCase {
         if (RegionITCase.KEY == null) {
             return;
         }
-        final AmazonDynamoDB aws = RegionITCase.aws();
-        aws.deleteTable(
-            new DeleteTableRequest()
-                .withTableName(RegionITCase.TABLE)
-        );
-        Logger.info(RegionITCase.class, "Dynamo table deleted");
+        RegionITCase.table.drop();
     }
 
     /**
@@ -161,19 +151,15 @@ public final class RegionITCase {
      */
     @Test
     public void worksWithAmazon() throws Exception {
-        final Credentials creds = new Credentials.Simple(
-            RegionITCase.KEY, RegionITCase.SECRET
-        );
-        final Region region = new Region.Simple(creds);
-        final Table table = region.table(RegionITCase.TABLE);
+        final Table tbl = RegionITCase.region.table(RegionITCase.TABLE);
         final String attr = RandomStringUtils.randomAlphabetic(Tv.EIGHT);
         final String value = RandomStringUtils.randomAlphanumeric(Tv.TEN);
-        table.put(
+        tbl.put(
             new Attributes()
                 .with(RegionITCase.HASH, "first-hash")
                 .with(attr, value)
         );
-        final Frame frame = table.frame().where(
+        final Frame frame = tbl.frame().where(
             attr, Conditions.equalTo(value)
         );
         MatcherAssert.assertThat(frame.size(), Matchers.equalTo(1));
@@ -189,17 +175,6 @@ public final class RegionITCase {
             Matchers.not(Matchers.equalTo(value))
         );
         items.remove();
-    }
-
-    /**
-     * Make AWS client.
-     * @return The client
-     */
-    private static AmazonDynamoDB aws() {
-        final Credentials creds = new Credentials.Simple(
-            RegionITCase.KEY, RegionITCase.SECRET
-        );
-        return creds.aws();
     }
 
 }

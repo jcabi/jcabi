@@ -29,7 +29,7 @@
  */
 
 /**
- * Amazon Dynamo DB Object Layer.
+ * Amazon Dynamo DB Object Layer, mocks.
  *
  * <p>The only dependency you need is (check our latest version available
  * at <a href="http://www.jcabi.com">www.jcabi.com</a>):
@@ -37,6 +37,7 @@
  * <pre>&lt;depedency&gt;
  *   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
  *   &lt;artifactId&gt;jcabi-dynamo&lt;/artifactId&gt;
+ *   &lt;classifier&gt;mock&lt;/classifier&gt;
  * &lt;/dependency&gt;</pre>
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)

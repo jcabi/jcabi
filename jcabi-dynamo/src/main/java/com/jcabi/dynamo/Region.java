@@ -29,6 +29,7 @@
  */
 package com.jcabi.dynamo;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import javax.validation.constraints.NotNull;
@@ -45,11 +46,18 @@ import lombok.ToString;
 public interface Region {
 
     /**
+     * Get DynamoDB client.
+     * @return The client
+     */
+    @NotNull(message = "AWS DynamoDB client is never NULL")
+    AmazonDynamoDB aws();
+
+    /**
      * Get one table.
      * @param name Table name
      * @return Table
      */
-    @NotNull
+    @NotNull(message = "table is never NULL")
     Table table(@NotNull String name);
 
     /**
@@ -70,6 +78,11 @@ public interface Region {
          */
         public Simple(@NotNull final Credentials creds) {
             this.credentials = creds;
+        }
+        @Override
+        @NotNull
+        public AmazonDynamoDB aws() {
+            return this.credentials.aws();
         }
         @Override
         @NotNull
@@ -116,6 +129,11 @@ public interface Region {
             @NotNull final String pfx) {
             this.origin = region;
             this.prefix = pfx;
+        }
+        @Override
+        @NotNull
+        public AmazonDynamoDB aws() {
+            return this.origin.aws();
         }
         @Override
         @NotNull
