@@ -136,9 +136,10 @@ public final class RegionITCase {
 
     /**
      * After the test.
+     * @throws Exception If fails
      */
     @AfterClass
-    public static void after() {
+    public static void after() throws Exception {
         if (RegionITCase.KEY == null) {
             return;
         }

@@ -56,7 +56,7 @@ import lombok.ToString;
 @Immutable
 @Loggable(Loggable.DEBUG)
 @ToString
-@EqualsAndHashCode(of = { "credentials", "reg", "name" })
+@EqualsAndHashCode(of = { "credentials", "reg", "self" })
 final class AwsTable implements Table {
 
     /**
@@ -72,7 +72,7 @@ final class AwsTable implements Table {
     /**
      * Table name.
      */
-    private final transient String name;
+    private final transient String self;
 
     /**
      * Public ctor.
@@ -84,7 +84,7 @@ final class AwsTable implements Table {
         final String table) {
         this.credentials = creds;
         this.reg = region;
-        this.name = table;
+        this.self = table;
     }
 
     /**
@@ -94,7 +94,7 @@ final class AwsTable implements Table {
     public Item put(final Map<String, AttributeValue> attributes) {
         final AmazonDynamoDB aws = this.credentials.aws();
         final PutItemRequest request = new PutItemRequest();
-        request.setTableName(this.name);
+        request.setTableName(this.self);
         request.setItem(attributes);
         request.setReturnValues(ReturnValue.NONE);
         request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
@@ -104,13 +104,13 @@ final class AwsTable implements Table {
             this,
             "#put('%[text]s'): created item in '%s', %.2f units",
             attributes,
-            this.name,
+            this.self,
             result.getConsumedCapacity().getCapacityUnits()
         );
         return new AwsItem(
             this.credentials,
             this.frame(),
-            this.name,
+            this.self,
             new Attributes(attributes).only(this.keys())
         );
     }
@@ -128,7 +128,15 @@ final class AwsTable implements Table {
      */
     @Override
     public AwsFrame frame() {
-        return new AwsFrame(this.credentials, this, this.name);
+        return new AwsFrame(this.credentials, this, this.self);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String name() {
+        return this.self;
     }
 
     /**
@@ -138,7 +146,7 @@ final class AwsTable implements Table {
     public Collection<String> keys() {
         final AmazonDynamoDB aws = this.credentials.aws();
         final DescribeTableResult request = aws.describeTable(
-            new DescribeTableRequest().withTableName(this.name)
+            new DescribeTableRequest().withTableName(this.self)
         );
         final Collection<String> keys = new LinkedList<String>();
         for (KeySchemaElement key : request.getTable().getKeySchema()) {

@@ -140,9 +140,9 @@ public final class TableMocker {
 
     /**
      * Create table.
-     * @throws Exception If something fails
+     * @throws InterruptedException If something fails
      */
-    public void create() throws Exception {
+    public void create() throws InterruptedException {
         final AmazonDynamoDB aws = this.region.aws();
         final String name = this.request.getTableName();
         final ListTablesResult list = aws.listTables(
@@ -184,11 +184,28 @@ public final class TableMocker {
 
     /**
      * Create table.
+     * @throws InterruptedException If something fails
      */
-    public void drop() {
+    public void drop() throws InterruptedException {
         final AmazonDynamoDB aws = this.region.aws();
         final String name = this.request.getTableName();
         aws.deleteTable(new DeleteTableRequest().withTableName(name));
+        Logger.info(this, "DynamoDB table '%s' deletion requested", name);
+        final ListTablesRequest req = new ListTablesRequest()
+            .withExclusiveStartTableName(name)
+            .withLimit(1);
+        while (true) {
+            final ListTablesResult list = aws.listTables(req);
+            if (!list.getTableNames().contains(name)) {
+                break;
+            }
+            Logger.info(
+                this,
+                "DynamoDB table '%s' still exists",
+                name
+            );
+            TimeUnit.SECONDS.sleep(Tv.TEN);
+        }
         Logger.info(this, "DynamoDB table '%s' deleted", name);
     }
 

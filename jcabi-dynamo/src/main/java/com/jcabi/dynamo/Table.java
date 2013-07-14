@@ -57,21 +57,28 @@ public interface Table {
      * @return Item just created
      * @see Attributes
      */
-    @NotNull
+    @NotNull(message = "item is never NULL")
     Item put(@NotNull Map<String, AttributeValue> attributes);
 
     /**
      * Make a new frame, in order to retrieve items.
      * @return Frame
      */
-    @NotNull
+    @NotNull(message = "frame is never NULL")
     Frame frame();
 
     /**
      * Get back to the entire region.
      * @return Region
      */
-    @NotNull
+    @NotNull(message = "region is never NULL")
     Region region();
+
+    /**
+     * Get real table name.
+     * @return Actual name of DynamoDB table
+     */
+    @NotNull(message = "table name is never NULL")
+    String name();
 
 }
