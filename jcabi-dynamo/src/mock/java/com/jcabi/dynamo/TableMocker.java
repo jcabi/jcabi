@@ -94,6 +94,24 @@ import java.util.concurrent.TimeUnit;
  *   }
  * }</pre>
  *
+ * <p>You IAM user policy would look like this (XXXXX should be replaced
+ * by your AWS account number):
+ *
+ * <pre>{
+ *   "Statement": [
+ *     {
+ *       "Action": "dynamodb:*",
+ *       "Effect": "Allow",
+ *       "Resource": "arn:aws:dynamodb:us-east-1:XXXXX:table/test-*"
+ *     },
+ *     {
+ *       "Action": "dynamodb:ListTables",
+ *       "Effect": "Allow",
+ *       "Resource": "*"
+ *     }
+ *   ]
+ * }</pre>
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  * @since 0.8
@@ -132,14 +150,14 @@ public final class TableMocker {
                 .withExclusiveStartTableName(name)
                 .withLimit(1)
         );
-        if (list.getTableNames().isEmpty()) {
-            aws.createTable(this.request);
-        } else {
+        if (list.getTableNames().contains(name)) {
             Logger.info(
                 this,
                 "DynamoDB table '%s' already exists",
                 name
             );
+        } else {
+            aws.createTable(this.request);
         }
         final DescribeTableRequest req = new DescribeTableRequest()
             .withTableName(name);
