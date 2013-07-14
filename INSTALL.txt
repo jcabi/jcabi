@@ -94,12 +94,7 @@ How to release new version to Maven Central:
 
         git checkout -b 87
 
-    3. Update versions:
-
-        mvn versions:use-latest-versions
-        git commit -am '#87: versions automatically updated'
-
-    4. Set the right version:
+    3. Set the right version:
 
         mvn versions:set
 
@@ -109,14 +104,17 @@ How to release new version to Maven Central:
 
         Change parent pom version in main pom.xml
 
-    5. Commit your changes
-
         git commit -am '#87: version set to 0.5.4'
 
-    6. Explain this new release in changes/changes.xml release notes,
+    4. Update versions:
+
+        mvn versions:use-latest-versions
+        git commit -am '#87: versions automatically updated'
+
+    5. Explain this new release in changes/changes.xml release notes,
         and in README.md
 
-    7. Deploy the product to Sonatype:
+    6. Deploy the product to Sonatype:
 
         rm -rf ~/.m2/repository/com/jcabi
         mvn -Pqulice -Psonatype -Pjcabi clean deploy
@@ -132,32 +130,32 @@ How to release new version to Maven Central:
             </properties>
         </profile>
 
-    8. Tag the branch
+    7. Tag the branch
 
         git tag -a jcabi-0.5.4 -m '#87: version 0.1.2 released to Maven Central'
         git push origin jcabi-0.5.4
 
-    9. Revert version back to SNAPSHOT:
+    8. Revert version back to SNAPSHOT:
 
         mvn versions:set
         change them manually in PARENT module
         git commit -am '#87: version back to SNAPSHOT'
 
-    10. Merge the branch to 'master':
+    9. Merge the branch to 'master':
 
         git checkout master && git merge 87 && git push origin master && git branch -D 87
 
-    11. In 4 hours, when the artifact is available in Maven Central,
+    10. In 4 hours, when the artifact is available in Maven Central,
         checkout the tag and deploy the site to Amazon S3:
 
             git checkout jcabi-0.5.4
             mvn -Psite clean install site-deploy
 
-    12. Announce the release in Google Groups:
+    11. Announce the release in Google Groups:
         https://groups.google.com/forum/?fromgroups#!forum/jcabi
 
-    13. Announce the release in Twitter/Facebook/everywhere :)
+    12. Announce the release in Twitter/Facebook/everywhere :)
 
-    14. Close the issue as "fixed" in Github
+    13. Close the issue as "fixed" in Github
 
     That's it
