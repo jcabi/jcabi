@@ -34,6 +34,8 @@ import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DeleteTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DescribeTableRequest;
 import com.amazonaws.services.dynamodbv2.model.DescribeTableResult;
+import com.amazonaws.services.dynamodbv2.model.ListTablesRequest;
+import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
 import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
 import java.util.concurrent.TimeUnit;
@@ -125,19 +127,37 @@ public final class TableMocker {
     public void create() throws Exception {
         final AmazonDynamoDB aws = this.region.aws();
         final String name = this.request.getTableName();
-        aws.createTable(this.request);
+        final ListTablesResult list = aws.listTables(
+            new ListTablesRequest()
+                .withExclusiveStartTableName(name)
+                .withLimit(1)
+        );
+        if (list.getTableNames().isEmpty()) {
+            aws.createTable(this.request);
+        } else {
+            Logger.info(
+                this,
+                "DynamoDB table '%s' already exists",
+                name
+            );
+        }
         final DescribeTableRequest req = new DescribeTableRequest()
             .withTableName(name);
         while (true) {
             final DescribeTableResult result = aws.describeTable(req);
             if ("ACTIVE".equals(result.getTable().getTableStatus())) {
-                Logger.info(this, "DynamoDB table '%s' is ready", name);
+                Logger.info(
+                    this,
+                    "DynamoDB table '%s' is %s",
+                    name,
+                    result.getTable().getTableStatus()
+                );
                 break;
             }
             TimeUnit.SECONDS.sleep(Tv.FIVE);
             Logger.info(
                 this,
-                "waiting for DynamoDB table '%s' creating: %s",
+                "waiting for DynamoDB table '%s': %s",
                 name,
                 result.getTable().getTableStatus()
             );
