@@ -245,6 +245,30 @@
                     </plugin>
                     <plugin>
                         <!--
+                        This plugin finds dependencies that are not used but
+                        declared, and the ones that are not declared but
+                        are used.
+                        @see http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html
+                        -->
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>jcabi-check</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>analyze-only</goal>
+                                    <goal>analyze-dep-mgt</goal>
+                                    <goal>analyze-duplicate</goal>
+                                </goals>
+                                <configuration>
+                                    <ignoreNonCompile>true</ignoreNonCompile>
+                                    <failOnWarning>true</failOnWarning>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <!--
                         This plugin finds duplicated resources and classes
                         and reports them. Very useful tool to avoid dependencies
                         overriding and overlapping.
@@ -266,30 +290,6 @@
                                     <ignoredResources>
                                         <ignoredResource>META-INF/.*</ignoredResource>
                                     </ignoredResources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <!--
-                        This plugin finds dependencies that are not used but
-                        declared, and the ones that are not declared but
-                        are used.
-                        @see http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html
-                        -->
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>jcabi-check</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>analyze-only</goal>
-                                    <goal>analyze-dep-mgt</goal>
-                                    <goal>analyze-duplicate</goal>
-                                </goals>
-                                <configuration>
-                                    <ignoreNonCompile>true</ignoreNonCompile>
-                                    <failOnWarning>true</failOnWarning>
                                 </configuration>
                             </execution>
                         </executions>
