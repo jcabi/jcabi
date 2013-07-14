@@ -156,26 +156,13 @@
                 </pluginManagement>
                 <plugins>
                     <plugin>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.jcabi</groupId>
-                                <artifactId>jcabi-assembly</artifactId>
-                                <version>0.7</version>
-                            </dependency>
-                        </dependencies>
+                        <artifactId>maven-source-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>jcabi-sources</id>
-                                <phase>package</phase>
                                 <goals>
-                                    <goal>single</goal>
+                                    <goal>jar</goal>
                                 </goals>
-                                <configuration>
-                                    <descriptorRefs>
-                                        <descriptorRef>jcabi-sources</descriptorRef>
-                                    </descriptorRefs>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
