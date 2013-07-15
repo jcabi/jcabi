@@ -49,6 +49,14 @@ import lombok.ToString;
 /**
  * DynamoDB query conditions.
  *
+ * <p>It's a convenient immutable builder of a map of conditions for
+ * DynamoDB query/scan operations. Use it like this:
+ *
+ * <pre>Map&lt;String, Condition&gt; conditions = new Conditions()
+ *   .with("hash", Conditions.equalTo("some value"))
+ *   .with("range", Conditions.equalTo(12345));
+ * </pre>
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
@@ -57,7 +65,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @SuppressWarnings({
-    "PMD.TooManyMethods", "PMD.AvoidInstantiatingObjectsInLoops"
+    "PMD.TooManyMethods",
+    "PMD.AvoidInstantiatingObjectsInLoops"
 })
 public final class Conditions implements Map<String, Condition> {
 

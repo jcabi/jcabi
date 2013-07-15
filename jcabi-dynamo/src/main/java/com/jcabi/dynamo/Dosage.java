@@ -31,64 +31,51 @@ package com.jcabi.dynamo;
 
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.jcabi.aspects.Immutable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import javax.validation.constraints.NotNull;
 
 /**
- * Amazon DynamoDB table abstraction.
- *
- * <p>To get data from the table use {@link Table#frame()} method. To
- * create a new item in the table (or replace the existing one) use
- * {@link Table#put(Attributes)} method. For example:
- *
- * <pre> Region region = new Region.Simple(...);
- * Table table = region.table("employees");
- * table.put(new Attributes().with("name", "John Smith"));
- * for (Item item : table.frame()) {
- *   System.out.println("Name: " + item.get("name").getS());
- * }
- * table.frame()
- *   .where("name", Conditions.equalTo("John Smith"))
- *   .iterator().next().remove();</pre>
+ * Dosage of items retrieved from table.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
 @Immutable
-public interface Table {
+public interface Dosage {
 
     /**
-     * Put new item there.
-     *
-     * <p>It is recommended to use {@link Attributes} supplementary class,
-     * instead of a raw {@link Map}.
-     *
-     * @param attributes Attributes to save
-     * @return Item just created
-     * @see Attributes
+     * Items.
+     * @return List of items
      */
-    @NotNull(message = "item is never NULL")
-    Item put(@NotNull Map<String, AttributeValue> attributes);
+    @NotNull(message = "list of items is never NULL")
+    List<Map<String, AttributeValue>> items();
 
     /**
-     * Make a new frame, in order to retrieve items.
-     * @return Frame
+     * Fetch next dosage.
+     * @return The dosage
      */
-    @NotNull(message = "frame is never NULL")
-    Frame frame();
+    Dosage next();
 
     /**
-     * Get back to the entire region.
-     * @return Region
+     * Always empty.
      */
-    @NotNull(message = "region is never NULL")
-    Region region();
-
-    /**
-     * Get real table name.
-     * @return Actual name of DynamoDB table
-     */
-    @NotNull(message = "table name is never NULL")
-    String name();
+    final class Empty implements Dosage {
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public List<Map<String, AttributeValue>> items() {
+            return new ArrayList<Map<String, AttributeValue>>(0);
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public Dosage next() {
+            return new Dosage.Empty();
+        }
+    }
 
 }

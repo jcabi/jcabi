@@ -45,7 +45,13 @@ import javax.validation.constraints.NotNull;
  * {@link Iterator#remove()}.
  *
  * <p>To fetch items from Dynamo DB, {@link Frame} uses
- * {@code Scan} operation.
+ * {@code Query} operation, with "consistent read" mode turned ON. It fetches
+ * twenty items on every request.
+ *
+ * <p>Keep in mind that Frame object provides a very limited functionality
+ * and is intended to be used in most cases, but not in all of them. When
+ * you need something specific, just get an Amazon DynamoDB client from
+ * a {@link Region} and use Amazon SDK methods directly.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
@@ -66,7 +72,7 @@ public interface Frame extends Collection<Item> {
      * @param condition The condition
      * @return New frame
      */
-    @NotNull
+    @NotNull(message = "frame is never NULL")
     Frame where(@NotNull String name, @NotNull Condition condition);
 
     /**
@@ -79,14 +85,23 @@ public interface Frame extends Collection<Item> {
      * @return New frame
      * @see Conditions
      */
-    @NotNull
+    @NotNull(message = "frame is never NULL")
     Frame where(@NotNull Map<String, Condition> conditions);
 
     /**
      * Get back to the table this frame came from.
      * @return The table
      */
-    @NotNull
+    @NotNull(message = "table is never NULL")
     Table table();
+
+    /**
+     * Change valve for items fetching.
+     * @param valve The valve to go through
+     * @return New frame
+     * @since 0.7.21
+     */
+    @NotNull(message = "frame is never NULL")
+    Frame through(@NotNull Valve valve);
 
 }

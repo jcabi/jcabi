@@ -76,6 +76,11 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
     private final transient Conditions conditions;
 
     /**
+     * Valve with items.
+     */
+    private final transient Valve valve;
+
+    /**
      * Public ctor.
      * @param creds Credentials
      * @param table Table
@@ -83,7 +88,7 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
      */
     protected AwsFrame(final Credentials creds, final AwsTable table,
         final String label) {
-        this(creds, table, label, new Conditions());
+        this(creds, table, label, new Conditions(), new ScanValve());
     }
 
     /**
@@ -92,15 +97,17 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
      * @param table Table
      * @param label Table name
      * @param conds Conditions
+     * @param vlv Valve
      * @checkstyle ParameterNumber (5 lines)
      */
     protected AwsFrame(final Credentials creds, final AwsTable table,
-        final String label, final Conditions conds) {
+        final String label, final Conditions conds, final Valve vlv) {
         super();
         this.credentials = creds;
         this.tbl = table;
         this.name = label;
         this.conditions = conds;
+        this.valve = vlv;
     }
 
     /**
@@ -113,7 +120,8 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
             this,
             this.name,
             this.conditions,
-            this.tbl.keys()
+            this.tbl.keys(),
+            this.valve
         );
     }
 
@@ -136,7 +144,8 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
             this.credentials,
             this.tbl,
             this.name,
-            this.conditions.with(attr, condition)
+            this.conditions.with(attr, condition),
+            this.valve
         );
     }
 
@@ -150,7 +159,23 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
             this.credentials,
             this.tbl,
             this.name,
-            this.conditions.with(conds)
+            this.conditions.with(conds),
+            this.valve
+        );
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @NotNull
+    public Frame through(@NotNull final Valve vlv) {
+        return new AwsFrame(
+            this.credentials,
+            this.tbl,
+            this.name,
+            this.conditions,
+            vlv
         );
     }
 

@@ -48,6 +48,14 @@ import lombok.ToString;
 /**
  * DynamoDB item attributes.
  *
+ * <p>It's a convenient immutable builder of a map of attribute values for
+ * DynamoDB put operation. Use it like this:
+ *
+ * <pre>Map&lt;String, AttributeValue&gt; attributes = new Attributes()
+ *   .with("hash", "some value")
+ *   .with("range", 12345);
+ * </pre>
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
@@ -56,7 +64,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @SuppressWarnings({
-    "PMD.TooManyMethods", "PMD.AvoidInstantiatingObjectsInLoops"
+    "PMD.TooManyMethods",
+    "PMD.AvoidInstantiatingObjectsInLoops"
 })
 public final class Attributes implements Map<String, AttributeValue> {
 

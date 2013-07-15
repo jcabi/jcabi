@@ -162,7 +162,7 @@ public final class RegionITCase {
         );
         final Frame frame = tbl.frame().where(
             attr, Conditions.equalTo(value)
-        );
+        ).through(new ScanValve().withLimit(1));
         MatcherAssert.assertThat(frame.size(), Matchers.equalTo(1));
         final Iterator<Item> items = frame.iterator();
         final Item item = items.next();

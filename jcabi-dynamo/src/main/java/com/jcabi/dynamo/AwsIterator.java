@@ -34,10 +34,7 @@ import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.DeleteItemRequest;
 import com.amazonaws.services.dynamodbv2.model.DeleteItemResult;
 import com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity;
-import com.amazonaws.services.dynamodbv2.model.ScanRequest;
-import com.amazonaws.services.dynamodbv2.model.ScanResult;
 import com.jcabi.aspects.Loggable;
-import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -86,10 +83,15 @@ final class AwsIterator implements Iterator<Item> {
     private final transient Collection<String> keys;
 
     /**
+     * Valve that loads dosages of items.
+     */
+    private final transient Valve valve;
+
+    /**
      * Last scan result (mutable).
      */
-    private final transient AtomicReference<ScanResult> result =
-        new AtomicReference<ScanResult>();
+    private final transient AtomicReference<Dosage> dosage =
+        new AtomicReference<Dosage>();
 
     /**
      * Position inside the scan result, last seen, starts with -1 (mutable).
@@ -103,16 +105,18 @@ final class AwsIterator implements Iterator<Item> {
      * @param label Table name
      * @param conds Conditions
      * @param primary Primary keys of the table
+     * @param vlv Valve with items
      * @checkstyle ParameterNumber (5 lines)
      */
     protected AwsIterator(final Credentials creds, final AwsFrame frm,
         final String label, final Conditions conds,
-        final Collection<String> primary) {
+        final Collection<String> primary, final Valve vlv) {
         this.credentials = creds;
         this.frame = frm;
         this.name = label;
         this.conditions = conds;
         this.keys = primary;
+        this.valve = vlv;
     }
 
     /**
@@ -120,7 +124,7 @@ final class AwsIterator implements Iterator<Item> {
      */
     @Override
     public boolean hasNext() {
-        synchronized (this.result) {
+        synchronized (this.dosage) {
             return this.items().size() - this.position > 1;
         }
     }
@@ -130,7 +134,7 @@ final class AwsIterator implements Iterator<Item> {
      */
     @Override
     public Item next() {
-        synchronized (this.result) {
+        synchronized (this.dosage) {
             if (!this.hasNext()) {
                 throw new NoSuchElementException(
                     String.format(
@@ -157,13 +161,12 @@ final class AwsIterator implements Iterator<Item> {
     @Override
     @SuppressWarnings("PMD.UseConcurrentHashMap")
     public void remove() {
-        synchronized (this.result) {
+        synchronized (this.dosage) {
             final AmazonDynamoDB aws = this.credentials.aws();
             try {
+                final Dosage prev = this.dosage.get();
                 final List<Map<String, AttributeValue>> items =
-                    new ArrayList<Map<String, AttributeValue>>(
-                        this.result.get().getItems()
-                    );
+                    new ArrayList<Map<String, AttributeValue>>(prev.items());
                 final Map<String, AttributeValue> item =
                     items.remove(this.position);
                 final DeleteItemResult res = aws.deleteItem(
@@ -175,7 +178,18 @@ final class AwsIterator implements Iterator<Item> {
                         )
                         .withExpected(new Attributes(item).asKeys())
                 );
-                this.result.get().setItems(items);
+                this.dosage.set(
+                    new Dosage() {
+                        @Override
+                        public List<Map<String, AttributeValue>> items() {
+                            return items;
+                        }
+                        @Override
+                        public Dosage next() {
+                            return prev.next();
+                        }
+                    }
+                );
                 Logger.debug(
                     this,
                     "#remove(): item #%d removed from DynamoDB, %.2f units",
@@ -193,47 +207,22 @@ final class AwsIterator implements Iterator<Item> {
      * @return List of items
      */
     private List<Map<String, AttributeValue>> items() {
-        if (this.result.get() == null) {
-            this.reload();
-        }
-        if (this.position >= this.result.get().getCount()) {
-            this.reload();
-        }
-        return this.result.get().getItems();
-    }
-
-    /**
-     * Re-load new portion of data, no matter what we have now.
-     */
-    private void reload() {
-        final AmazonDynamoDB aws = this.credentials.aws();
-        try {
-            final ScanRequest request = new ScanRequest()
-                .withTableName(this.name)
-                .withAttributesToGet(this.keys)
-                .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
-                .withScanFilter(this.conditions)
-                .withLimit(Tv.HUNDRED);
-            if (this.result.get() != null
-                && this.result.get().getLastEvaluatedKey() != null) {
-                request.setExclusiveStartKey(
-                    this.result.get().getLastEvaluatedKey()
-                );
-            }
-            this.result.set(aws.scan(request));
-            this.position = -1;
-            Logger.debug(
-                this,
-                // @checkstyle LineLength (1 line)
-                "#reload(): loaded %d item(s) from '%s', %.2f units, %d scanned",
-                this.result.get().getCount(),
-                this.name,
-                this.result.get().getConsumedCapacity().getCapacityUnits(),
-                this.result.get().getScannedCount()
+        if (this.dosage.get() == null) {
+            this.dosage.set(
+                this.valve.fetch(
+                    this.credentials,
+                    this.name,
+                    this.conditions,
+                    this.keys
+                )
             );
-        } finally {
-            aws.shutdown();
+            this.position = -1;
         }
+        if (this.position >= this.dosage.get().items().size()) {
+            this.dosage.set(this.dosage.get().next());
+            this.position = -1;
+        }
+        return this.dosage.get().items();
     }
 
 }

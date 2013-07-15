@@ -37,7 +37,12 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
- * DynamoDB region.
+ * Amazon DynamoDB region.
+ *
+ * <p>It is recommended to use {@link Region.Simple} in most cases.
+ *
+ * <p>You can use {@link #aws()} method to get access to Amazon DynamoDB
+ * client directly.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$

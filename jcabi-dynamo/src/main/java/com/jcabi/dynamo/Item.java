@@ -34,7 +34,7 @@ import com.jcabi.aspects.Immutable;
 import javax.validation.constraints.NotNull;
 
 /**
- * DynamoDB item.
+ * Amazon DynamoDB item.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$

@@ -47,7 +47,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
- * Single item/row in a Dynamo table.
+ * Single item/row in a DynamoDB table.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$

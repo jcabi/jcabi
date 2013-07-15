@@ -43,6 +43,8 @@ import org.apache.commons.lang3.Validate;
 /**
  * Amazon DynamoDB credentials.
  *
+ * <p>It is recommended to use {@link Credentials.Simple} in most cases.
+ *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
