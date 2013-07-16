@@ -62,6 +62,16 @@ import javax.validation.constraints.NotNull;
 public interface Frame extends Collection<Item> {
 
     /**
+     * Refine using this EQ condition argument.
+     * @param name Attribute name
+     * @param value String value expected
+     * @return New frame
+     * @since 0.7.21
+     */
+    @NotNull(message = "frame is never NULL")
+    Frame where(@NotNull String name, @NotNull String value);
+
+    /**
      * Refine using this condition.
      *
      * <p>It is recommended to use a utility static method
@@ -72,7 +82,7 @@ public interface Frame extends Collection<Item> {
      * @param condition The condition
      * @return New frame
      */
-    @NotNull(message = "frame is never NULL")
+    @NotNull(message = "new frame is never NULL")
     Frame where(@NotNull String name, @NotNull Condition condition);
 
     /**

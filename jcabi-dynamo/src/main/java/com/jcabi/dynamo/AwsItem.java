@@ -55,7 +55,7 @@ import lombok.ToString;
 @Immutable
 @Loggable(Loggable.DEBUG)
 @ToString
-@EqualsAndHashCode(of = { "credentials", "frm", "name", "keys" })
+@EqualsAndHashCode(of = { "credentials", "frm", "name", "attributes" })
 final class AwsItem implements Item {
 
     /**
@@ -74,16 +74,16 @@ final class AwsItem implements Item {
     private final transient String name;
 
     /**
-     * Primary keys and their values.
+     * Pre-loaded attributes and their values.
      */
-    private final transient Attributes keys;
+    private final transient Attributes attributes;
 
     /**
      * Public ctor.
      * @param creds Credentials
      * @param frame Frame
      * @param table Table name
-     * @param attrs Attributes of primary keys (with values)
+     * @param attrs Loaded already attributes with values
      * @checkstyle ParameterNumber (5 lines)
      */
     protected AwsItem(final Credentials creds, final AwsFrame frame,
@@ -91,7 +91,7 @@ final class AwsItem implements Item {
         this.credentials = creds;
         this.frm = frame;
         this.name = table;
-        this.keys = attrs;
+        this.attributes = attrs;
     }
 
     /**
@@ -99,14 +99,14 @@ final class AwsItem implements Item {
      */
     @Override
     public boolean has(@NotNull final String attr) {
-        boolean has = this.keys.containsKey(attr);
+        boolean has = this.attributes.containsKey(attr);
         if (!has) {
             final AmazonDynamoDB aws = this.credentials.aws();
             try {
                 final GetItemRequest request = new GetItemRequest();
                 request.setTableName(this.name);
                 request.setAttributesToGet(Arrays.asList(attr));
-                request.setKey(this.keys);
+                request.setKey(this.attributes);
                 request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
                 request.setConsistentRead(true);
                 final GetItemResult result = aws.getItem(request);
@@ -131,14 +131,14 @@ final class AwsItem implements Item {
     @Override
     @NotNull
     public AttributeValue get(@NotNull final String attr) {
-        AttributeValue value = this.keys.get(attr);
+        AttributeValue value = this.attributes.get(attr);
         if (value == null) {
             final AmazonDynamoDB aws = this.credentials.aws();
             try {
                 final GetItemRequest request = new GetItemRequest();
                 request.setTableName(this.name);
                 request.setAttributesToGet(Arrays.asList(attr));
-                request.setKey(this.keys);
+                request.setKey(this.attributes);
                 request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
                 request.setConsistentRead(true);
                 final GetItemResult result = aws.getItem(request);
@@ -180,8 +180,8 @@ final class AwsItem implements Item {
         try {
             final PutItemRequest request = new PutItemRequest();
             request.setTableName(this.name);
-            request.setExpected(this.keys.asKeys());
-            request.setItem(new Attributes(this.keys).with(attrs));
+            request.setExpected(this.attributes.asKeys());
+            request.setItem(new Attributes(this.attributes).with(attrs));
             request.setReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL);
             request.setReturnValues(ReturnValue.NONE);
             final PutItemResult result = aws.putItem(request);

@@ -172,7 +172,7 @@ public final class RegionITCase {
             tbl.put(
                 new Attributes()
                     .with(RegionITCase.HASH, hash)
-                    .with(RegionITCase.RANGE, System.currentTimeMillis())
+                    .with(RegionITCase.RANGE, idx)
                     .with(attr, value)
             );
         }
@@ -182,19 +182,29 @@ public final class RegionITCase {
                 .through(new QueryValve().withLimit(1)),
             Matchers.hasSize(Tv.FIVE)
         );
-        final Frame frame = tbl.frame().where(
-            attr, Conditions.equalTo(value)
-        ).through(new ScanValve().withLimit(1));
+        final Frame frame = tbl.frame()
+            .where(attr, Conditions.equalTo(value))
+            .through(
+                new ScanValve()
+                    .withLimit(1)
+                    .withAttributeToGet(attr)
+            );
         MatcherAssert.assertThat(frame, Matchers.hasSize(Tv.FIVE));
         final Iterator<Item> items = frame.iterator();
         final Item item = items.next();
+        final String range = item.get(RegionITCase.RANGE).getS();
         MatcherAssert.assertThat(
             item.get(attr).getS(),
             Matchers.equalTo(value)
         );
         item.put(attr, new AttributeValue("empty"));
         MatcherAssert.assertThat(
-            item.get(attr).getS(),
+            tbl.frame()
+                .where(RegionITCase.HASH, hash)
+                .where(RegionITCase.RANGE, range)
+                .through(new ScanValve())
+                .iterator().next()
+                .get(attr).getS(),
             Matchers.not(Matchers.equalTo(value))
         );
         items.remove();

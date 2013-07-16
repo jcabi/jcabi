@@ -195,7 +195,9 @@ final class AwsIterator implements Iterator<Item> {
                         .withReturnConsumedCapacity(
                             ReturnConsumedCapacity.TOTAL
                         )
-                        .withExpected(new Attributes(item).asKeys())
+                        .withExpected(
+                            new Attributes(item).only(this.keys).asKeys()
+                        )
                 );
                 this.dosage.set(
                     new Dosage() {

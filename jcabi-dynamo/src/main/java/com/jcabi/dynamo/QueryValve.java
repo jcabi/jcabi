@@ -35,13 +35,18 @@ import com.amazonaws.services.dynamodbv2.model.Condition;
 import com.amazonaws.services.dynamodbv2.model.QueryRequest;
 import com.amazonaws.services.dynamodbv2.model.QueryResult;
 import com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity;
+import com.google.common.collect.Iterables;
 import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -68,20 +73,28 @@ public final class QueryValve implements Valve {
     private final transient boolean forward;
 
     /**
+     * Attributes to fetch.
+     */
+    private final transient String[] attributes;
+
+    /**
      * Public ctor.
      */
     public QueryValve() {
-        this(Tv.TWENTY, true);
+        this(Tv.TWENTY, true, new ArrayList<String>(0));
     }
 
     /**
      * Public ctor.
      * @param lmt Limit
      * @param fwd Forward
+     * @param attrs Names of attributes to pre-fetch
      */
-    public QueryValve(final int lmt, final boolean fwd) {
+    private QueryValve(final int lmt, final boolean fwd,
+        final Iterable<String> attrs) {
         this.limit = lmt;
         this.forward = fwd;
+        this.attributes = Iterables.toArray(attrs, String.class);
     }
 
     /**
@@ -94,9 +107,13 @@ public final class QueryValve implements Valve {
         final Collection<String> keys) {
         final AmazonDynamoDB aws = credentials.aws();
         try {
+            final Set<String> attrs = new HashSet<String>(
+                Arrays.asList(this.attributes)
+            );
+            attrs.addAll(keys);
             final QueryRequest request = new QueryRequest()
                 .withTableName(table)
-                .withAttributesToGet(keys)
+                .withAttributesToGet(attrs)
                 .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
                 .withKeyConditions(conditions)
                 .withConsistentRead(true)
@@ -123,7 +140,10 @@ public final class QueryValve implements Valve {
      * @return New query valve
      */
     public QueryValve withLimit(final int lmt) {
-        return new QueryValve(lmt, this.forward);
+        return new QueryValve(
+            lmt, this.forward,
+            Arrays.asList(this.attributes)
+        );
     }
 
     /**
@@ -132,12 +152,48 @@ public final class QueryValve implements Valve {
      * @return New query valve
      */
     public QueryValve withScanIndexForward(final boolean fwd) {
-        return new QueryValve(this.limit, fwd);
+        return new QueryValve(
+            this.limit, fwd,
+            Arrays.asList(this.attributes)
+        );
+    }
+
+    /**
+     * With this extra attribute to pre-fetch.
+     * @param name Name of attribute to pre-load
+     * @return New query valve
+     */
+    public QueryValve withAttributeToGet(final String name) {
+        return new QueryValve(
+            this.limit, this.forward,
+            Iterables.concat(
+                Arrays.asList(this.attributes),
+                Arrays.asList(name)
+            )
+        );
+    }
+
+    /**
+     * With these extra attributes to pre-fetch.
+     * @param names Name of attributes to pre-load
+     * @return New query valve
+     */
+    public QueryValve withAttributesToGet(final String... names) {
+        return new QueryValve(
+            this.limit, this.forward,
+            Iterables.concat(
+                Arrays.asList(this.attributes),
+                Arrays.asList(names)
+            )
+        );
     }
 
     /**
      * Next dosage.
      */
+    @ToString
+    @Loggable(Loggable.DEBUG)
+    @EqualsAndHashCode(of = { "credentials", "request", "result" })
     private final class NextDosage implements Dosage {
         /**
          * AWS client.

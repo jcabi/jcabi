@@ -35,13 +35,18 @@ import com.amazonaws.services.dynamodbv2.model.Condition;
 import com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity;
 import com.amazonaws.services.dynamodbv2.model.ScanRequest;
 import com.amazonaws.services.dynamodbv2.model.ScanResult;
+import com.google.common.collect.Iterables;
 import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import com.jcabi.aspects.Tv;
 import com.jcabi.log.Logger;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -63,18 +68,25 @@ public final class ScanValve implements Valve {
     private final transient int limit;
 
     /**
+     * Attributes to fetch.
+     */
+    private final transient String[] attributes;
+
+    /**
      * Public ctor.
      */
     public ScanValve() {
-        this(Tv.HUNDRED);
+        this(Tv.HUNDRED, new ArrayList<String>(0));
     }
 
     /**
      * Public ctor.
      * @param lmt Limit
+     * @param attrs Attributes to pre-load
      */
-    public ScanValve(final int lmt) {
+    private ScanValve(final int lmt, final Iterable<String> attrs) {
         this.limit = lmt;
+        this.attributes = Iterables.toArray(attrs, String.class);
     }
 
     /**
@@ -87,9 +99,13 @@ public final class ScanValve implements Valve {
         final Collection<String> keys) {
         final AmazonDynamoDB aws = credentials.aws();
         try {
+            final Set<String> attrs = new HashSet<String>(
+                Arrays.asList(this.attributes)
+            );
+            attrs.addAll(keys);
             final ScanRequest request = new ScanRequest()
                 .withTableName(table)
-                .withAttributesToGet(keys)
+                .withAttributesToGet(attrs)
                 .withReturnConsumedCapacity(ReturnConsumedCapacity.TOTAL)
                 .withScanFilter(conditions)
                 .withLimit(ScanValve.this.limit);
@@ -114,12 +130,45 @@ public final class ScanValve implements Valve {
      * @return New query valve
      */
     public ScanValve withLimit(final int lmt) {
-        return new ScanValve(lmt);
+        return new ScanValve(lmt, Arrays.asList(this.attributes));
+    }
+
+    /**
+     * With this extra attribute to pre-fetch.
+     * @param name Name of attribute to pre-load
+     * @return New query valve
+     */
+    public ScanValve withAttributeToGet(final String name) {
+        return new ScanValve(
+            this.limit,
+            Iterables.concat(
+                Arrays.asList(this.attributes),
+                Arrays.asList(name)
+            )
+        );
+    }
+
+    /**
+     * With these extra attributes to pre-fetch.
+     * @param names Name of attributes to pre-load
+     * @return New query valve
+     */
+    public ScanValve withAttributeToGet(final String... names) {
+        return new ScanValve(
+            this.limit,
+            Iterables.concat(
+                Arrays.asList(this.attributes),
+                Arrays.asList(names)
+            )
+        );
     }
 
     /**
      * Next dosage.
      */
+    @ToString
+    @Loggable(Loggable.DEBUG)
+    @EqualsAndHashCode(of = { "credentials", "request", "result" })
     private final class NextDosage implements Dosage {
         /**
          * AWS client.

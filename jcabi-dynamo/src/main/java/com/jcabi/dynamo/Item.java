@@ -34,7 +34,12 @@ import com.jcabi.aspects.Immutable;
 import javax.validation.constraints.NotNull;
 
 /**
- * Amazon DynamoDB item.
+ * Immutable Amazon DynamoDB item.
+ *
+ * <p>The class is immutable, which means that every call to
+ * {@link #put(String,AttributeValue)} or {@link #put(Attributes)} changes
+ * data in Amazon, but doesn't change the object. The object will contain
+ * dirty data right after PUT operation, and should not be used any more.
  *
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
@@ -61,13 +66,21 @@ public interface Item {
     /**
      * Change one attribute, immediately saving it to AWS (all other attributes
      * will be set to NULL, except primary keys).
+     *
+     * <p>Data in memory will become out of sync right after a successful
+     * execution of the method.
+     *
      * @param name Attribute name
      * @param value Value to save
      */
     void put(@NotNull String name, @NotNull AttributeValue value);
 
     /**
-     * Change all attributes.
+     * Change all attributes in one call.
+     *
+     * <p>Data in memory will become out of sync right after a successful
+     * execution of the method.
+     *
      * @param attrs Attributes
      */
     void put(@NotNull Attributes attrs);

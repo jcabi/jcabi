@@ -139,6 +139,16 @@ final class AwsFrame extends AbstractCollection<Item> implements Frame {
     @Override
     @NotNull
     public Frame where(@NotNull final String attr,
+        @NotNull final String value) {
+        return this.where(attr, Conditions.equalTo(value));
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @NotNull
+    public Frame where(@NotNull final String attr,
         @NotNull final Condition condition) {
         return new AwsFrame(
             this.credentials,
