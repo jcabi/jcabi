@@ -29,74 +29,54 @@
  */
 package com.jcabi.dynamo;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
-import com.jcabi.aspects.Immutable;
-import com.jcabi.aspects.Loggable;
+import com.amazonaws.services.dynamodbv2.model.ConsumedCapacity;
+import com.amazonaws.services.dynamodbv2.model.ScanRequest;
+import com.amazonaws.services.dynamodbv2.model.ScanResult;
+import com.google.common.collect.ImmutableMap;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Map;
-import javax.validation.constraints.NotNull;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
- * Dosage of items retrieved from table.
- *
+ * Test case for {@link ScanValve}.
  * @author Yegor Bugayenko (yegor@tpc2.com)
  * @version $Id$
  */
-@Immutable
-public interface Dosage {
+public final class ScanValveTest {
 
     /**
-     * Items.
-     * @return List of items
+     * ScanValve can fetch data from AWS.
+     * @throws Exception If some problem inside
      */
-    @NotNull(message = "list of items is never NULL")
-    List<Map<String, AttributeValue>> items();
-
-    /**
-     * Has next dosage?
-     * @return TRUE if next storage is avaiable
-     */
-    boolean hasNext();
-
-    /**
-     * Fetch next dosage.
-     * @return The dosage
-     */
-    @NotNull(message = "next dosage is never NULL")
-    Dosage next();
-
-    /**
-     * Always empty.
-     */
-    @Immutable
-    @Loggable(Loggable.DEBUG)
-    @ToString
-    @EqualsAndHashCode
-    final class Empty implements Dosage {
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public List<Map<String, AttributeValue>> items() {
-            return new ArrayList<Map<String, AttributeValue>>(0);
-        }
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public Dosage next() {
-            throw new IllegalStateException();
-        }
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public boolean hasNext() {
-            return false;
-        }
+    @Test
+    @SuppressWarnings("unchecked")
+    public void fetchesData() throws Exception {
+        final ScanValve valve = new ScanValve();
+        final Credentials credentials = Mockito.mock(Credentials.class);
+        final ImmutableMap<String, AttributeValue> item =
+            new ImmutableMap.Builder<String, AttributeValue>()
+                .build();
+        final AmazonDynamoDB aws = Mockito.mock(AmazonDynamoDB.class);
+        Mockito.doReturn(aws).when(credentials).aws();
+        Mockito.doReturn(
+            new ScanResult()
+                .withItems(Arrays.<Map<String, AttributeValue>>asList(item))
+                .withConsumedCapacity(
+                    new ConsumedCapacity().withCapacityUnits(1d)
+                )
+        ).when(aws).scan(Mockito.any(ScanRequest.class));
+        final Dosage dosage = valve.fetch(
+            credentials, "table",
+            new Conditions(), new ArrayList<String>(0)
+        );
+        MatcherAssert.assertThat(dosage.hasNext(), Matchers.is(false));
+        MatcherAssert.assertThat(dosage.items(), Matchers.hasItem(item));
     }
 
 }

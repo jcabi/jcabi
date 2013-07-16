@@ -51,7 +51,7 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode(
     callSuper = false,
-    of = { "credentials", "tbl", "name", "conditions" }
+    of = { "credentials", "tbl", "name", "conditions", "valve" }
 )
 final class AwsFrame extends AbstractCollection<Item> implements Frame {
 

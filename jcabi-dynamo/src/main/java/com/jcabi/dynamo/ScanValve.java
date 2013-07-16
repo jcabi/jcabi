@@ -54,7 +54,7 @@ import lombok.ToString;
 @Immutable
 @ToString
 @Loggable(Loggable.DEBUG)
-@EqualsAndHashCode
+@EqualsAndHashCode(of = { "limit" })
 public final class ScanValve implements Valve {
 
     /**
@@ -96,9 +96,10 @@ public final class ScanValve implements Valve {
             final ScanResult result = aws.scan(request);
             Logger.debug(
                 this,
-                "#items(): loaded %d item(s) from '%s', %.2f units",
+                "#items(): loaded %d item(s) from '%s' using %s, %.2f units",
                 result.getCount(),
                 table,
+                conditions,
                 result.getConsumedCapacity().getCapacityUnits()
             );
             return new ScanValve.NextDosage(credentials, request, result);
@@ -155,32 +156,36 @@ public final class ScanValve implements Valve {
          * {@inheritDoc}
          */
         @Override
+        public boolean hasNext() {
+            return this.result.getLastEvaluatedKey() != null;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
         public Dosage next() {
-            final Dosage dosage;
-            if (this.result.getLastEvaluatedKey() == null) {
-                dosage = new Dosage.Empty();
-            } else {
-                final AmazonDynamoDB aws = this.credentials.aws();
-                try {
-                    final ScanRequest rqst = this.request.withExclusiveStartKey(
-                        this.result.getLastEvaluatedKey()
-                    );
-                    final ScanResult rslt = aws.scan(rqst);
-                    Logger.debug(
-                        this,
-                        "#next(): loaded %d item(s) from '%s', %.2f units",
-                        rslt.getCount(),
-                        rqst.getTableName(),
-                        rslt.getConsumedCapacity().getCapacityUnits()
-                    );
-                    dosage = new ScanValve.NextDosage(
-                        this.credentials, rqst, rslt
-                    );
-                } finally {
-                    aws.shutdown();
-                }
+            if (!this.hasNext()) {
+                throw new IllegalStateException();
             }
-            return dosage;
+            final AmazonDynamoDB aws = this.credentials.aws();
+            try {
+                final ScanRequest rqst = this.request.withExclusiveStartKey(
+                    this.result.getLastEvaluatedKey()
+                );
+                final ScanResult rslt = aws.scan(rqst);
+                Logger.debug(
+                    this,
+                    // @checkstyle LineLength (1 line)
+                    "#next(): loaded %d item(s) from '%s' using %s, %.2f units",
+                    rslt.getCount(),
+                    rqst.getTableName(),
+                    rqst.getScanFilter(),
+                    rslt.getConsumedCapacity().getCapacityUnits()
+                );
+                return new ScanValve.NextDosage(this.credentials, rqst, rslt);
+            } finally {
+                aws.shutdown();
+            }
         }
     }
 

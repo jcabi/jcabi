@@ -37,7 +37,6 @@ import com.jcabi.aspects.Immutable;
 import com.jcabi.aspects.Loggable;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -67,7 +66,6 @@ public interface Credentials {
      */
     @Immutable
     @Loggable(Loggable.DEBUG)
-    @ToString
     @EqualsAndHashCode(of = { "key", "secret", "region" })
     final class Simple implements Credentials {
         /**
@@ -113,6 +111,13 @@ public interface Credentials {
                 "Invalid AWS region name '%s'", reg
             );
             this.region = reg;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public String toString() {
+            return String.format("%s/%s", this.region, this.key);
         }
         /**
          * {@inheritDoc}

@@ -43,7 +43,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * DynamoDB item attributes.
@@ -61,8 +61,7 @@ import lombok.ToString;
  */
 @Immutable
 @Loggable(Loggable.DEBUG)
-@ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "pairs")
 @SuppressWarnings({
     "PMD.TooManyMethods",
     "PMD.AvoidInstantiatingObjectsInLoops"
@@ -174,6 +173,25 @@ public final class Attributes implements Map<String, AttributeValue> {
             }
         }
         return new Attributes(map);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        final Collection<String> terms =
+            new ArrayList<String>(this.pairs.length);
+        for (Object[] pair : this.pairs) {
+            terms.add(
+                String.format(
+                    "%s=%s",
+                    pair[0],
+                    pair[1]
+                )
+            );
+        }
+        return StringUtils.join(terms, "; ");
     }
 
     /**

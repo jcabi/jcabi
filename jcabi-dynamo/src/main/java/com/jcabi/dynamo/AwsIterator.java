@@ -43,6 +43,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicReference;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
@@ -55,6 +56,9 @@ import lombok.ToString;
  */
 @Loggable(Loggable.DEBUG)
 @ToString
+@EqualsAndHashCode(
+    of = { "credentials", "conditions", "frame", "name", "keys", "valve" }
+)
 final class AwsIterator implements Iterator<Item> {
 
     /**
@@ -125,7 +129,23 @@ final class AwsIterator implements Iterator<Item> {
     @Override
     public boolean hasNext() {
         synchronized (this.dosage) {
-            return this.items().size() - this.position > 1;
+            if (this.dosage.get() == null) {
+                this.dosage.set(
+                    this.valve.fetch(
+                        this.credentials,
+                        this.name,
+                        this.conditions,
+                        this.keys
+                    )
+                );
+                this.position = -1;
+            }
+            if (this.dosage.get().hasNext()
+                && this.position + 1 >= this.dosage.get().items().size()) {
+                this.dosage.set(this.dosage.get().next());
+                this.position = -1;
+            }
+            return this.dosage.get().items().size() - this.position > 1;
         }
     }
 
@@ -138,9 +158,8 @@ final class AwsIterator implements Iterator<Item> {
             if (!this.hasNext()) {
                 throw new NoSuchElementException(
                     String.format(
-                        "no more items in the frame, position=%d, size=%d",
-                        this.position,
-                        this.items().size()
+                        "no more items in the frame, position=%d",
+                        this.position
                     )
                 );
             }
@@ -149,7 +168,7 @@ final class AwsIterator implements Iterator<Item> {
                 this.credentials,
                 this.frame,
                 this.name,
-                new Attributes(this.items().get(this.position))
+                new Attributes(this.dosage.get().items().get(this.position))
             );
             return item;
         }
@@ -188,6 +207,10 @@ final class AwsIterator implements Iterator<Item> {
                         public Dosage next() {
                             return prev.next();
                         }
+                        @Override
+                        public boolean hasNext() {
+                            return prev.hasNext();
+                        }
                     }
                 );
                 Logger.debug(
@@ -200,29 +223,6 @@ final class AwsIterator implements Iterator<Item> {
                 aws.shutdown();
             }
         }
-    }
-
-    /**
-     * Get items available for iteration.
-     * @return List of items
-     */
-    private List<Map<String, AttributeValue>> items() {
-        if (this.dosage.get() == null) {
-            this.dosage.set(
-                this.valve.fetch(
-                    this.credentials,
-                    this.name,
-                    this.conditions,
-                    this.keys
-                )
-            );
-            this.position = -1;
-        }
-        if (this.position >= this.dosage.get().items().size()) {
-            this.dosage.set(this.dosage.get().next());
-            this.position = -1;
-        }
-        return this.dosage.get().items();
     }
 
 }

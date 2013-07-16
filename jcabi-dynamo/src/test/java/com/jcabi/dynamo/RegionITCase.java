@@ -76,7 +76,12 @@ public final class RegionITCase {
     /**
      * Dynamo table hash key.
      */
-    private static final String HASH = "id";
+    private static final String HASH = "hash-key";
+
+    /**
+     * Dynamo table range key.
+     */
+    private static final String RANGE = "range-key";
 
     /**
      * Region.
@@ -123,12 +128,18 @@ public final class RegionITCase {
                 .withAttributeDefinitions(
                     new AttributeDefinition()
                         .withAttributeName(RegionITCase.HASH)
+                        .withAttributeType(ScalarAttributeType.S),
+                    new AttributeDefinition()
+                        .withAttributeName(RegionITCase.RANGE)
                         .withAttributeType(ScalarAttributeType.S)
                 )
                 .withKeySchema(
                     new KeySchemaElement()
                         .withAttributeName(RegionITCase.HASH)
-                        .withKeyType(KeyType.HASH)
+                        .withKeyType(KeyType.HASH),
+                    new KeySchemaElement()
+                        .withAttributeName(RegionITCase.RANGE)
+                        .withKeyType(KeyType.RANGE)
                 )
         );
         RegionITCase.table.create();
@@ -151,19 +162,30 @@ public final class RegionITCase {
      * @throws Exception If some problem inside
      */
     @Test
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void worksWithAmazon() throws Exception {
         final Table tbl = RegionITCase.region.table(RegionITCase.TABLE);
         final String attr = RandomStringUtils.randomAlphabetic(Tv.EIGHT);
         final String value = RandomStringUtils.randomAlphanumeric(Tv.TEN);
-        tbl.put(
-            new Attributes()
-                .with(RegionITCase.HASH, "first-hash")
-                .with(attr, value)
+        final String hash = RandomStringUtils.randomAlphanumeric(Tv.TEN);
+        for (int idx = 0; idx < Tv.FIVE; ++idx) {
+            tbl.put(
+                new Attributes()
+                    .with(RegionITCase.HASH, hash)
+                    .with(RegionITCase.RANGE, System.currentTimeMillis())
+                    .with(attr, value)
+            );
+        }
+        MatcherAssert.assertThat(
+            tbl.frame()
+                .where(RegionITCase.HASH, Conditions.equalTo(hash))
+                .through(new QueryValve().withLimit(1)),
+            Matchers.hasSize(Tv.FIVE)
         );
         final Frame frame = tbl.frame().where(
             attr, Conditions.equalTo(value)
         ).through(new ScanValve().withLimit(1));
-        MatcherAssert.assertThat(frame.size(), Matchers.equalTo(1));
+        MatcherAssert.assertThat(frame, Matchers.hasSize(Tv.FIVE));
         final Iterator<Item> items = frame.iterator();
         final Item item = items.next();
         MatcherAssert.assertThat(

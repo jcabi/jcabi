@@ -1,0 +1,79 @@
+ ------
+ Query vs. Scan
+ ------
+ Yegor Bugayenko
+ ------
+ 2013-07-16
+ ------
+
+~~
+~~ Copyright (c) 2012-2013, JCabi.com
+~~ All rights reserved.
+~~
+~~ Redistribution and use in source and binary forms, with or without
+~~ modification, are permitted provided that the following conditions
+~~ are met: 1) Redistributions of source code must retain the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer. 2) Redistributions in binary form must reproduce the above
+~~ copyright notice, this list of conditions and the following
+~~ disclaimer in the documentation and/or other materials provided
+~~ with the distribution. 3) Neither the name of the jcabi.com nor
+~~ the names of its contributors may be used to endorse or promote
+~~ products derived from this software without specific prior written
+~~ permission.
+~~
+~~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+~~ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+~~ NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+~~ FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+~~ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+~~ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+~~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+~~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+~~ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+~~ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+~~ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+~~ OF THE POSSIBILITY OF SUCH DAMAGE.
+~~
+
+Query vs. Scan
+
+  There are two possible ways to retrieve items from a DynamoDB table:
+  {{{http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html}query and scan}}.
+  Scan works on any table, no matter what is the structure of its keys, and
+  goes through all items filtering out what's not relevant. Performance will
+  seriously suffer if the table is big, but for small tables such operation
+  is acceptable:
+
++--
+public class MyData {
+  public Collection<Item> items() {
+    return this.region.table()
+      .frame()
+      .where("name", Conditions.equalTo("John Doe"))
+      .through(new ScanValve().withLimit(50));
+  }
+}
++--
+
+  By providing an instance of
+  {{{./apidocs-${project.version}/com/jcabi/dynamo/ScanValve.html}<<<ScanValve>>>}}
+  to the
+  {{{./apidocs-${project.version}/com/jcabi/dynamo/Frame.html}<<<Frame>>>}}
+  we instruct it which strategy to use for fetching items from the DynamoDB table.
+
+  Query operation requires a table to have hash/range key schema
+  and demands at least hash to be mentioned in the query conditions. For example:
+
++--
+public class MyData {
+  public Collection<Item> items() {
+    return this.region.table()
+      .frame()
+      .where("hash", Conditions.equalTo(83788322))
+      .through(new QueryValve().withScanIndexForward(false));
+  }
+}
++--
+
+  This example will fetch items from the table in a backward order.

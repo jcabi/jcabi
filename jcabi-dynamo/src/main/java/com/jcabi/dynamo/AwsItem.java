@@ -55,7 +55,7 @@ import lombok.ToString;
 @Immutable
 @Loggable(Loggable.DEBUG)
 @ToString
-@EqualsAndHashCode(of = { "credentials", "name", "keys" })
+@EqualsAndHashCode(of = { "credentials", "frm", "name", "keys" })
 final class AwsItem implements Item {
 
     /**

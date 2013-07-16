@@ -44,7 +44,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * DynamoDB query conditions.
@@ -62,8 +62,7 @@ import lombok.ToString;
  */
 @Immutable
 @Loggable(Loggable.DEBUG)
-@ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "pairs")
 @SuppressWarnings({
     "PMD.TooManyMethods",
     "PMD.AvoidInstantiatingObjectsInLoops"
@@ -144,6 +143,27 @@ public final class Conditions implements Map<String, Condition> {
         map.putAll(this);
         map.putAll(conds);
         return new Conditions(map);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        final Collection<String> terms =
+            new ArrayList<String>(this.pairs.length);
+        for (Object[] pair : this.pairs) {
+            final Condition condition = Condition.class.cast(pair[1]);
+            terms.add(
+                String.format(
+                    "%s %s %s",
+                    pair[0],
+                    condition.getComparisonOperator(),
+                    condition.getAttributeValueList()
+                )
+            );
+        }
+        return StringUtils.join(terms, " AND ");
     }
 
     /**

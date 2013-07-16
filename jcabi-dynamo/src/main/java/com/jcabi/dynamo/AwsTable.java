@@ -145,11 +145,11 @@ final class AwsTable implements Table {
      */
     public Collection<String> keys() {
         final AmazonDynamoDB aws = this.credentials.aws();
-        final DescribeTableResult request = aws.describeTable(
+        final DescribeTableResult result = aws.describeTable(
             new DescribeTableRequest().withTableName(this.self)
         );
         final Collection<String> keys = new LinkedList<String>();
-        for (KeySchemaElement key : request.getTable().getKeySchema()) {
+        for (KeySchemaElement key : result.getTable().getKeySchema()) {
             keys.add(key.getAttributeName());
         }
         return keys;
