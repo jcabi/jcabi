@@ -87,7 +87,7 @@ public interface Credentials {
          * @param scrt Secret
          */
         public Simple(@NotNull final String akey, @NotNull final String scrt) {
-            this(akey, scrt, Regions.US_EAST_1.toString());
+            this(akey, scrt, Regions.US_EAST_1.getName());
         }
         /**
          * Public ctor.
@@ -151,7 +151,7 @@ public interface Credentials {
          * Public ctor.
          */
         public Assumed() {
-            this(Regions.US_EAST_1.toString());
+            this(Regions.US_EAST_1.getName());
         }
         /**
          * Public ctor.
