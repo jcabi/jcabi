@@ -31,6 +31,7 @@ package com.jcabi.dynamo;
 
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.RegionUtils;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.jcabi.aspects.Immutable;
@@ -86,7 +87,7 @@ public interface Credentials {
          * @param scrt Secret
          */
         public Simple(@NotNull final String akey, @NotNull final String scrt) {
-            this(akey, scrt, "us-east-1");
+            this(akey, scrt, Regions.US_EAST_1.toString());
         }
         /**
          * Public ctor.
@@ -128,6 +129,56 @@ public interface Credentials {
             final AmazonDynamoDB aws = new AmazonDynamoDBClient(
                 new BasicAWSCredentials(this.key, this.secret)
             );
+            aws.setRegion(RegionUtils.getRegion(this.region));
+            return aws;
+        }
+    }
+
+    /**
+     * Assumed AWS IAM role.
+     *
+     * @see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/role-usecase-ec2app.html">Granting Applications that Run on Amazon EC2 Instances Access to AWS Resources</a>
+     */
+    @Immutable
+    @Loggable(Loggable.DEBUG)
+    @EqualsAndHashCode(of = "region")
+    final class Assumed implements Credentials {
+        /**
+         * Region name.
+         */
+        private final transient String region;
+        /**
+         * Public ctor.
+         */
+        public Assumed() {
+            this(Regions.US_EAST_1.toString());
+        }
+        /**
+         * Public ctor.
+         * @param reg Region
+         */
+        public Assumed(@NotNull(message = "DynamoDB region can't be NULL")
+            final String reg) {
+            Validate.matchesPattern(
+                reg, "[-0-9a-z]+",
+                "Invalid AWS region name: '%s'", reg
+            );
+            this.region = reg;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public String toString() {
+            return this.region;
+        }
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        @NotNull
+        public AmazonDynamoDB aws() {
+            final AmazonDynamoDB aws = new AmazonDynamoDBClient();
             aws.setRegion(RegionUtils.getRegion(this.region));
             return aws;
         }
