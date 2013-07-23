@@ -7,8 +7,8 @@ See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
 ## Questions?
 
-If you have any questions about the framework, or something doesn't work as expected, 
-please [submit an issue here](https://github.com/yegor256/jcabi/issues/new). 
+If you have any questions about the framework, or something doesn't work as expected,
+please [submit an issue here](https://github.com/yegor256/jcabi/issues/new).
 If you want to discuss, please use our [Google Group](https://groups.google.com/forum/#!forum/jcabi).
 
 ## How to contribute?
@@ -26,6 +26,7 @@ $ mvn clean install -Pqulice
 
 0.8: upcoming release
 
+ * #274: `com.jcabi.immutable` classes added to `jcabi-aspects`
  * #257: `Logger.stream()` and `Logger.log()` methods introduced (`jcabi-log`)
  * #252: `jcabi-dynamo` introduced
  * #250: `Aether(Collection<RemoteRepository>, File)` constructor added (`jcabi-aether`)
