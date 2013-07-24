@@ -27,6 +27,7 @@ $ mvn clean install -Pqulice
 0.8: upcoming release
 
  * #274: `com.jcabi.immutable` classes added to `jcabi-aspects`
+ * #270: `QueryValve` and `ScanValve` (`jcabi-dynamo`)
  * #257: `Logger.stream()` and `Logger.log()` methods introduced (`jcabi-log`)
  * #252: `jcabi-dynamo` introduced
  * #250: `Aether(Collection<RemoteRepository>, File)` constructor added (`jcabi-aether`)
