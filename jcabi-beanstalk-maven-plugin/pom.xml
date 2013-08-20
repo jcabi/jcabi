@@ -65,7 +65,7 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
-            <version>1.5.0</version>
+            <version>1.5.4</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
-            <version>3.0.5</version>
+            <version>${maven.version}</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -92,13 +92,13 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-settings</artifactId>
-            <version>3.0.5</version>
+            <version>${maven.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-artifact</artifactId>
-            <version>3.0.5</version>
+            <version>${maven.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
