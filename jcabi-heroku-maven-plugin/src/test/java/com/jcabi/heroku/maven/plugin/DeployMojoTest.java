@@ -31,16 +31,29 @@ package com.jcabi.heroku.maven.plugin;
 
 import com.jcabi.velocity.VelocityPage;
 import com.rexsl.test.XhtmlMatchers;
+
+import java.io.StringReader;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.DefaultArtifact;
 import org.apache.maven.model.Build;
 import org.apache.maven.model.Extension;
+import org.apache.maven.model.Model;
+import org.apache.maven.model.building.DefaultModelBuilder;
+import org.apache.maven.model.building.DefaultModelBuilderFactory;
+import org.apache.maven.model.building.ModelBuildingRequest;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Test case for {@link DeployMojo} (more detailed test is in maven invoker).
@@ -49,6 +62,9 @@ import org.junit.Test;
  * @checkstyle ClassDataAbstractionCoupling (500 lines)
  */
 public final class DeployMojoTest {
+
+    /** @component */
+    private org.apache.maven.artifact.factory.ArtifactFactory artifactFactory;
 
     /**
      * DeployMojo can skip execution when flag is set.
@@ -59,6 +75,20 @@ public final class DeployMojoTest {
         final DeployMojo mojo = new DeployMojo();
         mojo.setSkip(true);
         mojo.execute();
+    }
+
+    /**
+     * DeployMojo can generate correct system.properties file.
+     * @throws Exception If something is wrong
+     */
+    @Test
+    public void velocityTemplateCorrectlyBuildsSystemPropertiesFile() throws Exception {
+        final Map<String,String> systemProperties = new HashMap<String,String>();
+        systemProperties.put("java.runtime.version", "1.7");
+        StringReader r = new StringReader(new VelocityPage("com/jcabi/heroku/maven/plugin/system.properties.vm").set("systemProperties", systemProperties).toString());
+        Properties properties = new Properties();
+        properties.load(r);
+        assertEquals("1.7", properties.getProperty("java.runtime.version"));
     }
 
     /**
