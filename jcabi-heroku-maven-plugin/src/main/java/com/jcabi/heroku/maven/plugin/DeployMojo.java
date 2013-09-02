@@ -35,7 +35,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.DefaultArtifact;
 import org.apache.maven.plugin.AbstractMojo;
@@ -133,9 +132,9 @@ public final class DeployMojo extends AbstractMojo {
      */
     @MojoParameter(
         required = false,
-        description = "Configure settings for Heroku environment, e.g. `java.runtime.version`"
+        description = "Configure Heroku environment"
     )
-    private transient Map<String,String> systemProperties;
+    private transient Map<String, String> systemProperties;
 
     /**
      * Set skip option.
@@ -164,8 +163,8 @@ public final class DeployMojo extends AbstractMojo {
             repo.add(
                 "system.properties",
                     new VelocityPage(
-                            "com/jcabi/heroku/maven/plugin/system.properties.vm"
-                    ).set("systemProperties", this.systemProperties).toString()
+                    "com/jcabi/heroku/maven/plugin/system.properties.vm"
+                ).set("systemProperties", this.systemProperties).toString()
             );
             repo.add(
                 "settings.xml",
