@@ -31,7 +31,11 @@ package com.jcabi.heroku.maven.plugin;
 
 import com.jcabi.velocity.VelocityPage;
 import com.rexsl.test.XhtmlMatchers;
+import java.io.StringReader;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 import org.apache.maven.artifact.DefaultArtifact;
 import org.apache.maven.model.Build;
 import org.apache.maven.model.Extension;
@@ -40,6 +44,7 @@ import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -59,6 +64,32 @@ public final class DeployMojoTest {
         final DeployMojo mojo = new DeployMojo();
         mojo.setSkip(true);
         mojo.execute();
+    }
+
+    /**
+     * DeployMojo can generate correct system.properties file.
+     * @throws Exception If something is wrong
+     */
+    @Test
+    @SuppressWarnings("PMD.UseConcurrentHashMap")
+    public void velocityTemplateCorrectlyBuildsSysProps() throws Exception {
+        final String expectedKey = "java.runtime.version";
+        final String expectedVal = "1.7";
+        final Map<String, String> sysProps = new HashMap<String, String>();
+        sysProps.put(
+            expectedKey,
+            expectedVal
+        );
+        final StringReader stringReader = new StringReader(
+            new VelocityPage(
+                "com/jcabi/heroku/maven/plugin/system.properties.vm")
+                .set("systemProperties", sysProps).toString());
+        final Properties properties = new Properties();
+        properties.load(stringReader);
+        Assert.assertEquals(
+            expectedVal,
+            properties.getProperty(expectedKey)
+        );
     }
 
     /**
