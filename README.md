@@ -24,7 +24,7 @@ $ mvn clean install -Pqulice
 
 ## Release Notes ##
 
-0.8: upcoming release
+All modules migrated to their own repositories in version 0.8.
 
  * #274: `com.jcabi.immutable` classes added to `jcabi-aspects`
  * #270: `QueryValve` and `ScanValve` (`jcabi-dynamo`)
