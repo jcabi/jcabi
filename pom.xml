@@ -43,7 +43,6 @@
     <modules>
         <module>jcabi-beanstalk-maven-plugin</module>
         <module>jcabi-heroku-maven-plugin</module>
-        <module>jcabi-ssl-maven-plugin</module>
     </modules>
     <description><![CDATA[
         JCabi is a set of useful open source Java components.
@@ -95,8 +94,8 @@
         <url>https://github.com/yegor256/jcabi/issues</url>
     </issueManagement>
     <ciManagement>
-        <system>jenkins</system>
-        <url>http://ci.jcabi.com:8080/job/jcabi/</url>
+        <system>rultor</system>
+        <url>http://www.rultor.com/s/jcabi</url>
     </ciManagement>
     <scm>
         <connection>scm:git:github.com:yegor256/jcabi.git</connection>
