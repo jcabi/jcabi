@@ -16,7 +16,7 @@ If you want to discuss, please use our [Google Group](https://groups.google.com/
 Fork the repository, make changes, submit a pull request. We promise to review your changes same day and apply to
 master branch, if they look correct.
 
-Importat to remember to run full build before submitting a pull request:
+Important to remember to run full build before submitting a pull request:
 
 ```
 $ mvn clean install -Pqulice
