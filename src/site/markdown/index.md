@@ -10,13 +10,13 @@ components in alphabetic order:
 [jcabi-aether](./jcabi-aether/index.html) —
 wrapper of [Sonatype Aether](https://docs.sonatype.org/display/AETHER/Home).
 
-[jcabi-aspects](./jcabi-aspects/index.html) —
+[jcabi-aspects](http://aspects.jcabi.com/index.html) —
 useful AOP aspects, incl. JSR-303.
 
 [jcabi-beanstalk-maven-plugin](./jcabi-beanstalk-maven-plugin/index.html) —
 AWS Elastic Beanstalk deployment.
 
-[jcabi-dynamo](./jcabi-dynamo/index.html) —
+[jcabi-dynamo](http://dynamo.jcabi.com/index.html) —
 Amazon DynamoDB Object Layer.
 
 [jcabi-dynamodb-maven-plugin](./jcabi-dynamodb-maven-plugin/index.html) —
@@ -31,7 +31,7 @@ SSL keystore generator Maven reactor.
 [jcabi-jdbc](./jcabi-jdbc/index.html) —
 fluent wrapper of [JDBC](http://en.wikipedia.org/wiki/Java_Database_Connectivity).
 
-[jcabi-log](./jcabi-log/index.html) —
+[jcabi-log](http://log.jcabi.com/index.html) —
 wrapper of [SLF4J](http://www.slf4j.org/) logging facility.
 
 [jcabi-manifests](./jcabi-manifests/index.html) —
@@ -58,11 +58,11 @@ Java implementation of Uniform Resource Name (URN).
 [jcabi-velocity](./jcabi-velocity/index.html) —
 simple wrapper of [Apache Velocity](http://velocity.apache.org/).
 
-[jcabi-xml](./jcabi-xml/index.html) —
+[jcabi-xml](http://xml.jcabi.com/index.html) —
 XML Parsing and Printing made easy.
 
 Besides that,
-[com.jcabi:parent](./parent/index.html)
+[com.jcabi:parent](http://parent.jcabi.com/index.html)
 is a very useful generic parent Maven `pom.xml`.
 
 <a href="http://www.yourkit.com/">
@@ -71,3 +71,12 @@ is a very useful generic parent Maven `pom.xml`.
 [YourKit](http://www.yourkit.com/) is kindly supporting
 us with its full-featured Java Profiler. We highly recommend to use
 it for profiling of your Java apps.
+
+Also, there are a few projects in incubator now:
+
+[xembly](http://www.xembly.org/index.html) —
+Imperative Assembly-like XML modification language and library.
+
+[phandom](http://www.phandom.org/index.html) —
+Java DOM manipulations powered by PhantomJS.
+
