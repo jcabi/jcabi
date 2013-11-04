@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2012-2013, JCabi.com
+ * All rights reserved.
+ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jcabi-log - Surefire Report</title>
+        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
+                            <script>
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-1963507-23']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+                                                                                                                
+<link rel="shortcut icon" href="http://img.jcabi.com/favicon.ico"/>
+                                                                                                                
+<link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author"/>
+                                            <link rel="stylesheet" href="./css/highlight.css" />
+        <script src="./js/jquery-1.8.3.min.js"></script>
+        <script src="./js/highlight-7.3.min.js"></script>
+        <script>
+            $(document).ready(
+                function() {
+                    $('div.source pre').each(
+                        function (idx, element) {
+                            hljs.highlightBlock(element);
+                        }
+                    );
+                }
+            );
+        </script>
+    </head>
+    <body>
+                <ul id="menu">
+                                                    <li>
+                    Parent Project
+                                            <ul>
+                                                                            <li>
+                                                                    <a href="../parent/index.html" title="parent">parent</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                            <li>
+                    Overview
+                                            <ul>
+                                                                            <li>
+                                                                    <a href="index.html" title="Introduction">Introduction</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="apidocs-0.10/index.html" title="API 0.10 (JavaDoc)">API 0.10 (JavaDoc)</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="cobertura/index.html" title="Test coverage">Test coverage</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="changes-report.html" title="Release History">Release History</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                            <li>
+                    Logging
+                                            <ul>
+                                                                            <li>
+                                                                    <a href="decors.html" title="Logging Decors">Logging Decors</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="multicolor.html" title="Multicolor Layout for LOG4J">Multicolor Layout for LOG4J</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                            <li>
+                    Verbose Threads
+                                            <ul>
+                                                                            <li>
+                                                                    <a href="threads-VerboseThreads.html" title="VerboseThreads">VerboseThreads</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="threads-VerboseRunnable.html" title="VerboseRunnable">VerboseRunnable</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="threads-VerboseProcess.html" title="VerboseProcess">VerboseProcess</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                            <li>
+                    Project Documentation
+                                            <ul>
+                                                                            <li>
+                                                                    <a href="project-info.html" title="Project Information">Project Information</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
+                                                                                        <li>
+                                                                    <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul>
+                                                                            <li>
+                                                                    <a href="xref/index.html" title="Source Xref">Source Xref</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="xref-test/index.html" title="Test Source Xref">Test Source Xref</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                            <strong>                        <a href="surefire-report.html" title="Surefire Report">Surefire Report</a>
+        </strong>
+                                                                                                                <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="changelog.html" title="Change Log">Change Log</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="dev-activity.html" title="Developer Activity">Developer Activity</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="file-activity.html" title="File Activity">File Activity</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="dependency-updates-report.html" title="Dependency Updates Report">Dependency Updates Report</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="plugin-updates-report.html" title="Plugin Updates Report">Plugin Updates Report</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="apidocs-0.10/index.html" title="JavaDocs">JavaDocs</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="testapidocs-0.10/index.html" title="Test JavaDocs">Test JavaDocs</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                                        <li>
+                                                                    <a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a>
+                                                                                                                        <ul>
+                                                    </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                                                                </ul>
+                                    </li>
+                    </ul>
+        <div id="content">
+                            <a href="https://github.com/jcabi/jcabi-log">
+                    <img style="position: absolute; top: 0; right: 0; border: 0; width: 100px; height: 100px;"
+                        src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+                        alt="Fork me on GitHub" />
+                </a>
+                        <a href="../../" title="${decoration.bannerLeft.title}">
+                <img src="http://img.jcabi.com/logo.png"
+                    alt="jcabi"
+                                            width="200"
+                                                                height="48"
+                                    />
+            </a>
+                        <p>
+                
+                20-Oct-2013
+                0.10
+            </p>
+            <article>
+                <script type="text/javascript">
+//<![CDATA[
+function toggleDisplay(elementId) {
+ var elm = document.getElementById(elementId + 'error');
+ if (elm && typeof elm.style != "undefined") {
+ if (elm.style.display == "none") {
+ elm.style.display = "";
+ document.getElementById(elementId + 'off').style.display = "none";
+ document.getElementById(elementId + 'on').style.display = "inline";
+ } else if (elm.style.display == "") { elm.style.display = "none";
+ document.getElementById(elementId + 'off').style.display = "inline";
+ document.getElementById(elementId + 'on').style.display = "none";
+ } 
+ } 
+ }
+//]]>
+</script>
+<div class="section">
+<h2>Surefire Report<a name="Surefire_Report"></a></h2></div>
+<div class="section">
+<h2>Summary<a name="Summary"></a></h2><a name="Summary"></a>
+<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
+<table border="1" class="bodyTable">
+<tr class="a">
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td>131</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>6.695</td></tr></table><br />
+<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
+<div class="section">
+<h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
+<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
+<table border="1" class="bodyTable">
+<tr class="a">
+<th>Package</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#com.jcabi.log">com.jcabi.log</a></td>
+<td>131</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>6.695</td></tr></table><br />
+<p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
+<div class="section">
+<h3>com.jcabi.log<a name="com.jcabi.log"></a></h3><a name="com.jcabi.log"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logDecorsManagerTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logDecorsManagerTest">DecorsManagerTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logDomDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logDomDecorTest">DomDecorTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.062</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logExceptionDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logExceptionDecorTest">ExceptionDecorTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.018</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logListDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logListDecorTest">ListDecorTest</a></td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.011</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logLoggerTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logLoggerTest">LoggerTest</a></td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.004</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logMsDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logMsDecorTest">MsDecorTest</a></td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.778</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logMulticolorLayoutTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logMulticolorLayoutTest">MulticolorLayoutTest</a></td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.033</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logNanoDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logNanoDecorTest">NanoDecorTest</a></td>
+<td>38</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.036</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logObjectDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logObjectDecorTest">ObjectDecorTest</a></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logPreFormatterTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logPreFormatterTest">PreFormatterTest</a></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.005</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logSecretDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logSecretDecorTest">SecretDecorTest</a></td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.012</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logSizeDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logSizeDecorTest">SizeDecorTest</a></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logTextDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logTextDecorTest">TextDecorTest</a></td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.042</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logTypeDecorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logTypeDecorTest">TypeDecorTest</a></td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logVerboseProcessTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logVerboseProcessTest">VerboseProcessTest</a></td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>3.108</td></tr>
+<tr class="a">
+<td><a href="#com.jcabi.logVerboseRunnableTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logVerboseRunnableTest">VerboseRunnableTest</a></td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.554</td></tr>
+<tr class="b">
+<td><a href="#com.jcabi.logVerboseThreadsTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.jcabi.logVerboseThreadsTest">VerboseThreadsTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>2.03</td></tr></table></div><br /></div>
+<div class="section">
+<h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
+<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
+<div class="section">
+<h3>DecorsManagerTest<a name="DecorsManagerTest"></a></h3><a name="com.jcabi.logDecorsManagerTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>hasBuiltInDecors</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>throwsExceptionForAbsentDecor</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>DomDecorTest<a name="DomDecorTest"></a></h3><a name="com.jcabi.logDomDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsNullToText</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDocumentToText</td>
+<td>0.06</td></tr></table></div>
+<div class="section">
+<h3>ExceptionDecorTest<a name="ExceptionDecorTest"></a></h3><a name="com.jcabi.logExceptionDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsNullToText</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsExceptionToText</td>
+<td>0.018</td></tr></table></div>
+<div class="section">
+<h3>ListDecorTest<a name="ListDecorTest"></a></h3><a name="com.jcabi.logListDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[3]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[3]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[4]</td>
+<td>0.004</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[4]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[5]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[5]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[6]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[6]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[7]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[7]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[8]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[8]</td>
+<td>0.001</td></tr></table></div>
+<div class="section">
+<h3>LoggerTest<a name="LoggerTest"></a></h3><a name="com.jcabi.logLoggerTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>doesntFormatArraysSinceTheyAreVarArgs</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>detectsNameOfStaticSource</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>setsLoggingLevel</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>detectsLoggerNameCorrectly</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>providesOutputStream</td>
+<td>0.002</td></tr></table></div>
+<div class="section">
+<h3>MsDecorTest<a name="MsDecorTest"></a></h3><a name="com.jcabi.logMsDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0.745</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[3]</td>
+<td>0.003</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[3]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[4]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[4]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[5]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[5]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[6]</td>
+<td>0.014</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[6]</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[7]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[7]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[8]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[8]</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>MulticolorLayoutTest<a name="MulticolorLayoutTest"></a></h3><a name="com.jcabi.logMulticolorLayoutTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>overwriteCustomConstantColor</td>
+<td>0.028</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>transformsLoggingEventToText</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>rendersCustomConstantColor</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>overwriteDefaultColor</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>throwsOnIllegalColorName</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>rendersAnsiConstantColor</td>
+<td>0.002</td></tr></table></div>
+<div class="section">
+<h3>NanoDecorTest<a name="NanoDecorTest"></a></h3><a name="com.jcabi.logNanoDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0.006</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[3]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[3]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[4]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[4]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[5]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[5]</td>
+<td>0.007</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[6]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[6]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[7]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[7]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[8]</td>
+<td>0.01</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[8]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[9]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[9]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[10]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[10]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[11]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[11]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[12]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[12]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[13]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[13]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[14]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[14]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[15]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[15]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[16]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[16]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[17]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[17]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[18]</td>
+<td>0.004</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[18]</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>PreFormatterTest<a name="PreFormatterTest"></a></h3><a name="com.jcabi.logPreFormatterTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>formatsEvenWithMissedDecors</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>decoratesArguments</td>
+<td>0.005</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>formatsWithDirectlyProvidedDecors</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>SecretDecorTest<a name="SecretDecorTest"></a></h3><a name="com.jcabi.logSecretDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0.004</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[3]</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[3]</td>
+<td>0.001</td></tr></table></div>
+<div class="section">
+<h3>TextDecorTest<a name="TextDecorTest"></a></h3><a name="com.jcabi.logTextDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>compressesLongText[0]</td>
+<td>0.03</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>compressesLongText[1]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0.006</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>compressesLongText[2]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0.001</td></tr></table></div>
+<div class="section">
+<h3>TypeDecorTest<a name="TypeDecorTest"></a></h3><a name="com.jcabi.logTypeDecorTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[0]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[0]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[1]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[1]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormats[2]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>convertsDifferentFormatsViaLogger[2]</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>VerboseProcessTest<a name="VerboseProcessTest"></a></h3><a name="com.jcabi.logVerboseProcessTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>runsACommandLineScriptWithException</td>
+<td>0.043</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>handlesLongRunningCommand</td>
+<td>2.024</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>runsACommandLineScript</td>
+<td>0.021</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>rejectsNullProcesses</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>quietlyTerminatesLongRunningProcess</td>
+<td>1.02</td></tr></table></div>
+<div class="section">
+<h3>VerboseRunnableTest<a name="VerboseRunnableTest"></a></h3><a name="com.jcabi.logVerboseRunnableTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>swallowsInterruptedExceptions</td>
+<td>0.434</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>swallowsExceptionsInCallable</td>
+<td>0.01</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>swallowsInterruptedExceptionsWithRunnable</td>
+<td>0.003</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>swallowsExceptionsInRunnable</td>
+<td>0.043</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>translatesToStringFromUnderlyingCallable</td>
+<td>0.007</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>logsExceptionsInRunnable</td>
+<td>0.056</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>translatesToStringFromUnderlyingRunnable</td>
+<td>0.001</td></tr></table></div>
+<div class="section">
+<h3>VerboseThreadsTest<a name="VerboseThreadsTest"></a></h3><a name="com.jcabi.logVerboseThreadsTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>instantiatesThreadsOnDemand</td>
+<td>1.025</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>logsWhenThreadsAreNotDying</td>
+<td>1.005</td></tr></table></div><br /></div>
+            </article>
+            <p style="margin-bottom: 3em; margin-top: 2em;">
+                Copyright &#169;
+                                                    2012-2013
+                                jcabi.com, All Rights Reserved.
+                <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+            </p>
+            <a href="http://maven.apache.org" title="site is built by Apache Maven"
+                style='position: absolute; bottom: 1em; right: 1em;'>
+                <img src='images/built-by-maven.png' style='width: 50px; height: 17px;'
+                    alt='site is built by Apache Maven'/>
+            </a>
+        </div>
+    </body>
+</html>
