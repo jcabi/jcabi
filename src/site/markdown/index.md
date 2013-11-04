@@ -28,7 +28,7 @@ Heroku deployment.
 [jcabi-ssl-maven-plugin](./jcabi-ssl-maven-plugin/index.html) —
 SSL keystore generator Maven reactor.
 
-[jcabi-jdbc](./jcabi-jdbc/index.html) —
+[jcabi-jdbc](http://jdbc.jcabi.com/index.html) —
 fluent wrapper of [JDBC](http://en.wikipedia.org/wiki/Java_Database_Connectivity).
 
 [jcabi-log](http://log.jcabi.com/index.html) —
@@ -39,6 +39,9 @@ utility class reading `META-INF/MANIFEST.MF` files.
 
 [jcabi-maven-plugin](./jcabi-maven-plugin/index.html) —
 supplementary Maven plugin.
+
+[jcabi-s3](http://s3.jcabi.com/index.html) —
+Object Layer on top of AWS S3 SDK.
 
 [jcabi-maven-skin](./jcabi-maven-skin/index.html) —
 Maven Skin, used in this website and many others.
