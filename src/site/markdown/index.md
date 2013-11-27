@@ -22,6 +22,9 @@ Amazon DynamoDB Object Layer.
 [jcabi-dynamodb-maven-plugin](./jcabi-dynamodb-maven-plugin/index.html) —
 DynamoDB Maven testing plugin.
 
+[jcabi-github](./jcabi-github/index.html) —
+Object-Oriented Github API.
+
 [jcabi-heroku-maven-plugin](./jcabi-heroku-maven-plugin/index.html) —
 Heroku deployment.
 
