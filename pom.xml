@@ -37,7 +37,7 @@
     </parent>
     <groupId>com.jcabi</groupId>
     <artifactId>jcabi</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
     <name>jcabi</name>
     <description><![CDATA[
@@ -196,43 +196,6 @@
                                     <goal>execute</goal>
                                 </goals>
                                 <configuration>
-                                    <classpath>
-                                        <element>
-                                            <groupId>com.jcabi</groupId>
-                                            <artifactId>jcabi-s3</artifactId>
-                                            <version>0.4</version>
-                                        </element>
-                                        <element>
-                                            <groupId>com.jcabi</groupId>
-                                            <artifactId>jcabi-aspects</artifactId>
-                                            <version>0.12</version>
-                                        </element>
-                                        <element>
-                                            <groupId>commons-io</groupId>
-                                            <artifactId>commons-io</artifactId>
-                                            <version>2.4</version>
-                                        </element>
-                                        <element>
-                                            <groupId>com.jcabi</groupId>
-                                            <artifactId>jcabi-log</artifactId>
-                                            <version>0.8</version>
-                                        </element>
-                                        <element>
-                                            <groupId>javax.validation</groupId>
-                                            <artifactId>validation-api</artifactId>
-                                            <version>1.1.0.Final</version>
-                                        </element>
-                                        <element>
-                                            <groupId>com.amazonaws</groupId>
-                                            <artifactId>aws-java-sdk</artifactId>
-                                            <version>1.6.3</version>
-                                        </element>
-                                        <element>
-                                            <groupId>org.aspectj</groupId>
-                                            <artifactId>aspectjrt</artifactId>
-                                            <version>1.7.3</version>
-                                        </element>
-                                    </classpath>
                                     <source><![CDATA[
                                         import com.jcabi.s3.Bucket
                                         import com.jcabi.s3.Ocket
@@ -248,6 +211,13 @@
                                 </configuration>
                             </execution>
                         </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.jcabi</groupId>
+                                <artifactId>jcabi-s3</artifactId>
+                                <version>0.4</version>
+                            </dependency>
+                        </dependencies>
                     </plugin>
                 </plugins>
             </build>
