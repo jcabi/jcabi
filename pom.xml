@@ -156,7 +156,7 @@
                                         def file = new File(project.basedir, 'target/site/rempl/com.rempl.pdd.SummaryReport/index.xml')
                                         def region = new Region.Simple(project.properties['pdd.s3.key'], project.properties['pdd.s3.secret'])
                                         def bucket = region.bucket(project.properties['pdd.s3.bucket'])
-                                        def ocket = bucket.ocket('jcabi-github.xml')
+                                        def ocket = bucket.ocket('${project.artifactId}.xml')
                                         new Ocket.Text(ocket).write(file.text)
                                         log.info('Uploaded successfully')
                                     ]]></source>
