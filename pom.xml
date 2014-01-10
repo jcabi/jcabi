@@ -157,34 +157,34 @@
                             </dependency>
                         </dependencies>
                     </plugin>
-                        <plugin>
-                            <artifactId>maven-site-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>pdd-site</id>
-                                    <phase>process-resources</phase>
-                                    <goals>
-                                        <goal>site</goal>
-                                    </goals>
-                                    <configuration>
-                                        <generateProjectInfo>false</generateProjectInfo>
-                                        <reportPlugins combine.self="override">
-                                            <plugin>
-                                                <groupId>com.rempl.plugins</groupId>
-                                                <artifactId>rempl-maven-plugin</artifactId>
-                                                <configuration>
-                                                    <reports>
-                                                        <report>
-                                                            <type>com.rempl.pdd.SummaryReport</type>
-                                                        </report>
-                                                    </reports>
-                                                </configuration>
-                                            </plugin>
-                                        </reportPlugins>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
+                    <plugin>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>pdd-site</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <configuration>
+                                    <generateProjectInfo>false</generateProjectInfo>
+                                    <reportPlugins combine.self="override">
+                                        <plugin>
+                                            <groupId>com.rempl.plugins</groupId>
+                                            <artifactId>rempl-maven-plugin</artifactId>
+                                            <configuration>
+                                                <reports>
+                                                    <report>
+                                                        <type>com.rempl.pdd.SummaryReport</type>
+                                                    </report>
+                                                </reports>
+                                            </configuration>
+                                        </plugin>
+                                    </reportPlugins>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
                     <plugin>
                         <groupId>org.codehaus.gmaven</groupId>
                         <artifactId>gmaven-plugin</artifactId>

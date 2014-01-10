@@ -7,7 +7,7 @@ in [Github](https://github.com/jcabi)
 (you're welcome to fork it and submit your pull requests). Full list of
 components in alphabetic order:
 
-[jcabi-aether](./jcabi-aether/index.html) —
+[jcabi-aether](http://aether.jcabi.com/index.html) —
 wrapper of [Sonatype Aether](https://docs.sonatype.org/display/AETHER/Home).
 
 [jcabi-aspects](http://aspects.jcabi.com/index.html) —
@@ -22,7 +22,7 @@ Amazon DynamoDB Object Layer.
 [jcabi-dynamodb-maven-plugin](./jcabi-dynamodb-maven-plugin/index.html) —
 DynamoDB Maven testing plugin.
 
-[jcabi-github](./jcabi-github/index.html) —
+[jcabi-github](http://github.jcabi.com/index.html) —
 Object-Oriented Github API.
 
 [jcabi-heroku-maven-plugin](./jcabi-heroku-maven-plugin/index.html) —
