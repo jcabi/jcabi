@@ -19,7 +19,7 @@ AWS Elastic Beanstalk deployment.
 [jcabi-dynamo](http://dynamo.jcabi.com/index.html) —
 Amazon DynamoDB Object Layer.
 
-[jcabi-dynamodb-maven-plugin](./jcabi-dynamodb-maven-plugin/index.html) —
+[jcabi-dynamodb-maven-plugin](http://dynamodb.jcabi.com/index.html) —
 DynamoDB Maven testing plugin.
 
 [jcabi-http](http://http.jcabi.com/index.html) —
@@ -55,7 +55,7 @@ Maven Skin, used in this website and many others.
 [jcabi-maven-slf4j](./jcabi-maven-slf4j/index.html) —
 Maven Log binding for SLF4J.
 
-[jcabi-mysql-maven-plugin](./jcabi-mysql-maven-plugin/index.html) —
+[jcabi-mysql-maven-plugin](http://mysql.jcabi.com/index.html) —
 Maven Plugin for MySQL Integration Testing.
 
 [jcabi-simpledb](./jcabi-simpledb/index.html) —
