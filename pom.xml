@@ -37,7 +37,7 @@
     </parent>
     <groupId>com.jcabi</groupId>
     <artifactId>jcabi</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>pom</packaging>
     <name>jcabi</name>
     <description><![CDATA[
@@ -186,38 +186,25 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.codehaus.gmaven</groupId>
-                        <artifactId>gmaven-plugin</artifactId>
-                        <version>1.5</version>
+                        <groupId>com.bazaarvoice.maven.plugins</groupId>
+                        <artifactId>s3-upload-maven-plugin</artifactId>
+                        <version>1.2</version>
                         <executions>
                             <execution>
-                                <phase>deploy</phase>
+                                <id>pdd-deploy</id>
+                                <phase>install</phase>
                                 <goals>
-                                    <goal>execute</goal>
+                                    <goal>s3-upload</goal>
                                 </goals>
                                 <configuration>
-                                    <source><![CDATA[
-                                        import com.jcabi.s3.Bucket
-                                        import com.jcabi.s3.Ocket
-                                        import com.jcabi.s3.Region
-                                        log.info('Uploading PDD report to S3...')
-                                        def file = new File(project.build.directory, 'site/rempl/com.rempl.pdd.SummaryReport/index.xml')
-                                        def region = new Region.Simple(project.properties['pdd.s3.key'], project.properties['pdd.s3.secret'])
-                                        def bucket = region.bucket(project.properties['pdd.s3.bucket'])
-                                        def ocket = bucket.ocket('${project.artifactId}.xml')
-                                        new Ocket.Text(ocket).write(file.text)
-                                        log.info('Uploaded successfully')
-                                    ]]></source>
+                                    <bucketName>${pdd.s3.bucket}</bucketName>
+                                    <accessKey>${pdd.s3.key}</accessKey>
+                                    <secretKey>${pdd.s3.secret}</secretKey>
+                                    <source>${project.build.directory}/site/rempl/com.rempl.pdd.SummaryReport/index.xml</source>
+                                    <destination>${project.artifactId}.xml</destination>
                                 </configuration>
                             </execution>
                         </executions>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.jcabi</groupId>
-                                <artifactId>jcabi-s3</artifactId>
-                                <version>0.4</version>
-                            </dependency>
-                        </dependencies>
                     </plugin>
                 </plugins>
             </build>
