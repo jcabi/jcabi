@@ -26,6 +26,7 @@
                                             <link rel="stylesheet" href="./css/highlight.css" />
         <script src="./js/jquery-1.8.3.min.js"></script>
         <script src="./js/highlight-7.3.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
         <script>
             $(document).ready(
                 function() {
@@ -34,55 +35,98 @@
                             hljs.highlightBlock(element);
                         }
                     );
+                    $(".menu-button").click(
+                        function() {
+                            if ($("#here-goes-menu").attr("class") == "menu-off") {
+                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
+                                $("#here-goes-menu").attr("class", "menu-on");
+                            } else {
+                                $(".mobile-menu").hide();
+                                $("#here-goes-menu").attr("class", "menu-off");
+                            }
+                        }
+                    );
                 }
             );
         </script>
+        <style>
+            @import url("./css/wide.css") (min-width: 1200px) and (max-width:5000px);
+            @import url("./css/900-1199.css") (min-width: 900px) and (max-width:1199px);
+            @import url("./css/600-899.css") (min-width: 600px) and (max-width:899px);
+            @import url("./css/100-599.css") (min-width: 100px) and (max-width:599px);
+        </style>
     </head>
-    <body>
+    <body style="background: url('./images/background.png') fixed;">
+                <div class="page">
+            <div class="menu-section">
                 <ul id="menu">
-                                                    <li>
-                    Overview
-                                            <ul>
-                                                                            <li>
-                                            <strong>                        <a href="index.html" title="What is it?">What is it?</a>
+                                                                                    <li>
+                            Overview
+                                                            <ul>
+                                                                                                    <li>
+                                                            <strong>                        <a href="index.html" title="What is it?">What is it?</a>
         </strong>
-                                                                                                                <ul>
-                                                    </ul>
-                                    </li>
-                                                                </ul>
-                                    </li>
-                            <li>
-                    Project Documentation
-                                            <ul>
-                                                                            <li>
-                                                                    <a href="project-info.html" title="Project Information">Project Information</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                        <li>
-                                                                    <a href="project-reports.html" title="Project Reports">Project Reports</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                </ul>
-                                    </li>
-                    </ul>
-        <div id="content">
-                            <a href="https://github.com/jcabi/jcabi">
-                    <img style="position: absolute; top: 0; right: 0; border: 0; width: 100px; height: 100px;"
-                        src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
-                        alt="Fork me on GitHub" />
-                </a>
+                                                                                                                                                                <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                            <li>
+                            Project Documentation
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="project-info.html" title="Project Information">Project Information</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
+                                                                                                                        <li>
+                                                                                    <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
+                                                                                        </ul>
+                                                    </li>
+                                    </ul>
+            </div>
+            <div id="right-side">
+                <div id="content">
+                    <i class="menu-button fa fa-align-justify"></i>
+                    <div class="logo-section">
                         <a href="./" title="${decoration.bannerLeft.title}">
-                <img src="http://img.jcabi.com/logo.png"
-                    alt="jcabi"
-                                            width="200"
-                                                                height="48"
-                                    />
-            </a>
-                        <p>
-                
-                03-Feb-2014
-                1.1
-            </p>
-            <article>
-                <h1>Small Useful Java Components</h1>
+                            <img src="http://img.jcabi.com/logo.png"
+                                alt="jcabi"
+                                                                    width="200"
+                                                                                                    height="48"
+                                                            />
+                        </a>
+                    </div>
+                    <div class="date">
+                        <div class="date-numbers">
+                            
+                            01-Mar-2014
+                            1.2
+                        </div>
+                                                                            <div class="github">
+                                <iframe
+                                    class="github-large"
+                                    src="http://ghbtns.com/github-btn.html?user=jcabi&amp;repo=jcabi&amp;type=watch&amp;count=true&amp;size=large"
+                                    allowtransparency="true"
+                                    frameborder="0"
+                                    scrolling="0"
+                                    width="170"
+                                    height="30">
+                                </iframe>
+                                <iframe
+                                    class="github-small"
+                                    src="http://ghbtns.com/github-btn.html?user=jcabi&amp;repo=jcabi&amp;type=watch&amp;count=true&amp;size=small"
+                                    allowtransparency="true"
+                                    frameborder="0"
+                                    scrolling="0"
+                                    width="170"
+                                    height="30">
+                                </iframe>
+                            </div>
+                                            </div>
+                    <div id="here-goes-menu"></div>
+                    <article>
+                        <div class="section">
+                            <h1>Small Useful Java Components</h1>
 <p>JCabi is a collection of small and useful Java components, which are not big enough to make their own projects. The project is maintained by <a class="externalLink" href="https://plus.google.com/u/0/114792568016408327418?rel=author">Yegor Bugayenko</a> in <a class="externalLink" href="https://github.com/jcabi">Github</a> (you&#x2019;re welcome to fork it and submit your pull requests). Full list of components in alphabetic order:</p>
 <p><a class="externalLink" href="http://aether.jcabi.com/index.html">jcabi-aether</a> &#x2014; wrapper of <a class="externalLink" href="https://docs.sonatype.org/display/AETHER/Home">Sonatype Aether</a>.</p>
 <p><a class="externalLink" href="http://aspects.jcabi.com/index.html">jcabi-aspects</a> &#x2014; useful AOP aspects, incl. JSR-303.</p>
@@ -110,18 +154,21 @@
 <p>Also, there are a few projects in incubator now:</p>
 <p><a class="externalLink" href="http://www.xembly.org/index.html">xembly</a> &#x2014; Imperative Assembly-like XML modification language and library.</p>
 <p><a class="externalLink" href="http://www.phandom.org/index.html">phandom</a> &#x2014; Java DOM manipulations powered by PhantomJS.</p>
-            </article>
-            <p style="margin-bottom: 3em; margin-top: 2em;">
-                Copyright &#169;
-                                                    2012-2014
-                                jcabi.com, All Rights Reserved.
-                <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
-            </p>
-            <a href="http://maven.apache.org" title="site is built by Apache Maven"
-                style='position: absolute; bottom: 1em; right: 1em;'>
-                <img src='images/built-by-maven.png' style='width: 50px; height: 17px;'
-                    alt='site is built by Apache Maven'/>
-            </a>
+                        </div>
+                    </article>
+                    <img class="maven-mobile" src="./images/built-by-maven.png" style="float:right" width="80px"/>
+                </div>
+                <div class="legal-notes">
+                    <div class="copyright">
+                        Copyright &#169;
+                                                                            2012-2014
+                                                <br/>
+                        jcabi.com, All Rights Reserved.
+                        <br/>
+                        <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
