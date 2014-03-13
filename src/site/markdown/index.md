@@ -43,13 +43,13 @@ wrapper of [SLF4J](http://www.slf4j.org/) logging facility.
 [jcabi-manifests](./jcabi-manifests/index.html) —
 utility class reading `META-INF/MANIFEST.MF` files.
 
-[jcabi-maven-plugin](./jcabi-maven-plugin/index.html) —
+[jcabi-maven-plugin](http://plugin.jcabi.com/index.html) —
 supplementary Maven plugin.
 
 [jcabi-s3](http://s3.jcabi.com/index.html) —
 Object Layer on top of AWS S3 SDK.
 
-[jcabi-maven-skin](./jcabi-maven-skin/index.html) —
+[jcabi-maven-skin](http://skin.jcabi.com/index.html) —
 Maven Skin, used in this website and many others.
 
 [jcabi-maven-slf4j](./jcabi-maven-slf4j/index.html) —
