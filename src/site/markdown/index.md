@@ -40,7 +40,7 @@ fluent wrapper of [JDBC](http://en.wikipedia.org/wiki/Java_Database_Connectivity
 [jcabi-log](http://log.jcabi.com/index.html) —
 wrapper of [SLF4J](http://www.slf4j.org/) logging facility.
 
-[jcabi-manifests](./jcabi-manifests/index.html) —
+[jcabi-manifests](http://manifests.jcabi.com/index.html) —
 utility class reading `META-INF/MANIFEST.MF` files.
 
 [jcabi-maven-plugin](http://plugin.jcabi.com/index.html) —
@@ -88,4 +88,3 @@ Imperative Assembly-like XML modification language and library.
 
 [phandom](http://www.phandom.org/index.html) —
 Java DOM manipulations powered by PhantomJS.
-
