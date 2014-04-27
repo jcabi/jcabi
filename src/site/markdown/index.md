@@ -43,6 +43,9 @@ wrapper of [SLF4J](http://www.slf4j.org/) logging facility.
 [jcabi-manifests](http://manifests.jcabi.com/index.html) —
 utility class reading `META-INF/MANIFEST.MF` files.
 
+[jcabi-matchers](http://matchers.jcabi.com/index.html) —
+Hamcrest matchers for XML and XHTML.
+
 [jcabi-maven-plugin](http://plugin.jcabi.com/index.html) —
 supplementary Maven plugin.
 
@@ -66,6 +69,9 @@ Java implementation of Uniform Resource Name (URN).
 
 [jcabi-velocity](./jcabi-velocity/index.html) —
 simple wrapper of [Apache Velocity](http://velocity.apache.org/).
+
+[jcabi-w3c](http://w3c.jcabi.com/index.html) —
+adapters to W3C online HTML/CSS validation service.
 
 [jcabi-xml](http://xml.jcabi.com/index.html) —
 XML Parsing and Printing made easy.
