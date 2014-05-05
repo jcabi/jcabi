@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
- * Copyright (c) 2012-2013, JCabi.com
+ * Copyright (c) 2012-2014, jcabi.com
  * All rights reserved.
  -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,19 +23,12 @@
 <link rel="shortcut icon" href="http://img.jcabi.com/favicon.ico"/>
                                                                                                                 
 <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author"/>
-                                            <link rel="stylesheet" href="./css/highlight.css" />
-        <script src="./js/jquery-1.8.3.min.js"></script>
-        <script src="./js/highlight-7.3.min.js"></script>
+                                            <script src="./js/jquery-1.8.3.min.js"></script>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
         <link href="./css/jcabi.css" rel="stylesheet"/>
         <script>
             $(document).ready(
                 function() {
-                    $('div.source pre').each(
-                        function (idx, element) {
-                            hljs.highlightBlock(element);
-                        }
-                    );
                     $(".menu-button").click(
                         function() {
                             if ($("#here-goes-menu").attr("class") == "menu-off") {
@@ -52,8 +45,8 @@
         </script>
     </head>
     <body>
-                <div class="page">
-            <div class="menu-section">
+                <section class="page">
+            <nav class="menu-section">
                 <ul id="menu">
                                                                                     <li>
                             Overview
@@ -78,7 +71,7 @@
                                                                                         </ul>
                                                     </li>
                                     </ul>
-            </div>
+            </nav>
             <div id="right-side">
                 <div id="content">
                     <i class="menu-button fa fa-align-justify"></i>
@@ -86,16 +79,16 @@
                         <a href="./" title="${decoration.bannerLeft.title}">
                             <img src="http://img.jcabi.com/logo-square.png"
                                 alt="jcabi"
-                                                                    width="48"
-                                                                                                    height="48"
+                                                                    width="64"
+                                                                                                    height="64"
                                                             />
                         </a>
                     </div>
                     <div class="date">
                         <div class="date-numbers">
-                            <strong>1.5.1</strong>
+                            <strong>1.6</strong>
                             
-                            13-Mar-2014
+                            05-May-2014
                         </div>
                                                                             <div class="github">
                                 <iframe
@@ -120,9 +113,8 @@
                                             </div>
                     <div id="here-goes-menu" class="menu-off"></div>
                     <article>
-                        <div class="section">
-                            <h1>Small Useful Java Components</h1>
-<p>JCabi is a collection of small and useful Java components, which are not big enough to make their own projects. The project is maintained by <a class="externalLink" href="https://plus.google.com/u/0/114792568016408327418?rel=author">Yegor Bugayenko</a> in <a class="externalLink" href="https://github.com/jcabi">Github</a> (you&#x2019;re welcome to fork it and submit your pull requests). Full list of components in alphabetic order:</p>
+                        <h1>Small Useful Java Components</h1>
+<p>jcabi is a collection of small and useful Java components, which are not big enough to make their own projects. The project is maintained in <a class="externalLink" href="https://github.com/jcabi">Github</a> (you&#x2019;re welcome to fork it and submit your pull requests). Full list of components in alphabetic order:</p>
 <p><a class="externalLink" href="http://aether.jcabi.com/index.html">jcabi-aether</a> &#x2014; wrapper of <a class="externalLink" href="https://docs.sonatype.org/display/AETHER/Home">Sonatype Aether</a>.</p>
 <p><a class="externalLink" href="http://aspects.jcabi.com/index.html">jcabi-aspects</a> &#x2014; useful AOP aspects, incl. JSR-303.</p>
 <p><a href="./jcabi-beanstalk-maven-plugin/index.html">jcabi-beanstalk-maven-plugin</a> &#x2014; AWS Elastic Beanstalk deployment.</p>
@@ -134,7 +126,8 @@
 <p><a href="./jcabi-ssl-maven-plugin/index.html">jcabi-ssl-maven-plugin</a> &#x2014; SSL keystore generator Maven reactor.</p>
 <p><a class="externalLink" href="http://jdbc.jcabi.com/index.html">jcabi-jdbc</a> &#x2014; fluent wrapper of <a class="externalLink" href="http://en.wikipedia.org/wiki/Java_Database_Connectivity">JDBC</a>.</p>
 <p><a class="externalLink" href="http://log.jcabi.com/index.html">jcabi-log</a> &#x2014; wrapper of <a class="externalLink" href="http://www.slf4j.org/">SLF4J</a> logging facility.</p>
-<p><a href="./jcabi-manifests/index.html">jcabi-manifests</a> &#x2014; utility class reading <tt>META-INF/MANIFEST.MF</tt> files.</p>
+<p><a class="externalLink" href="http://manifests.jcabi.com/index.html">jcabi-manifests</a> &#x2014; utility class reading <tt>META-INF/MANIFEST.MF</tt> files.</p>
+<p><a class="externalLink" href="http://matchers.jcabi.com/index.html">jcabi-matchers</a> &#x2014; Hamcrest matchers for XML and XHTML.</p>
 <p><a class="externalLink" href="http://plugin.jcabi.com/index.html">jcabi-maven-plugin</a> &#x2014; supplementary Maven plugin.</p>
 <p><a class="externalLink" href="http://s3.jcabi.com/index.html">jcabi-s3</a> &#x2014; Object Layer on top of AWS S3 SDK.</p>
 <p><a class="externalLink" href="http://skin.jcabi.com/index.html">jcabi-maven-skin</a> &#x2014; Maven Skin, used in this website and many others.</p>
@@ -143,28 +136,25 @@
 <p><a href="./jcabi-simpledb/index.html">jcabi-simpledb</a> &#x2014; Object Layer on top of AWS SimpleDB.</p>
 <p><a href="./jcabi-urn/index.html">jcabi-urn</a> &#x2014; Java implementation of Uniform Resource Name (URN).</p>
 <p><a href="./jcabi-velocity/index.html">jcabi-velocity</a> &#x2014; simple wrapper of <a class="externalLink" href="http://velocity.apache.org/">Apache Velocity</a>.</p>
+<p><a class="externalLink" href="http://w3c.jcabi.com/index.html">jcabi-w3c</a> &#x2014; adapters to W3C online HTML/CSS validation service.</p>
 <p><a class="externalLink" href="http://xml.jcabi.com/index.html">jcabi-xml</a> &#x2014; XML Parsing and Printing made easy.</p>
 <p>Besides that, <a class="externalLink" href="http://parent.jcabi.com/index.html">com.jcabi:parent</a> is a very useful generic parent Maven <tt>pom.xml</tt>.</p>
 <p><a class="externalLink" href="http://www.yourkit.com/"> <img src="http://img.jcabi.com/yourkit.png" style="float:left; margin-right: 1em;" alt="" /> </a> <a class="externalLink" href="http://www.yourkit.com/">YourKit</a> is kindly supporting us with its full-featured Java Profiler. We highly recommend to use it for profiling of your Java apps.</p>
 <p>Also, there are a few projects in incubator now:</p>
 <p><a class="externalLink" href="http://www.xembly.org/index.html">xembly</a> &#x2014; Imperative Assembly-like XML modification language and library.</p>
 <p><a class="externalLink" href="http://www.phandom.org/index.html">phandom</a> &#x2014; Java DOM manipulations powered by PhantomJS.</p>
-                        </div>
                     </article>
-                    <img class="maven-mobile" src="./images/built-by-maven.png"
-                        alt="built by maven" style="float:right" width="80"/>
+                    <img class="maven-mobile" src="./images/built-by-maven.png" alt="built by maven"/>
                 </div>
-                <div class="legal-notes">
-                    <div class="copyright">
-                        Copyright &#169;
-                                                                            2012-2014
-                                                <br/>
-                        jcabi.com, All Rights Reserved.
-                        <br/>
-                        <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
-                    </div>
-                </div>
+                <footer class="legal-notes">
+                    Copyright &#169;
+                                                                2012-2014
+                                        <br/>
+                    jcabi.com, All Rights Reserved.
+                    <br/>
+                    <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+                </footer>
             </div>
-        </div>
+        </section>
     </body>
 </html>
