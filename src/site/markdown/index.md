@@ -1,8 +1,7 @@
 # Small Useful Java Components
 
-JCabi is a collection of small and useful Java components, which
-are not big enough to make their own projects. The project is maintained by
-[Yegor Bugayenko](https://plus.google.com/u/0/114792568016408327418?rel=author)
+jcabi is a collection of small and useful Java components, which
+are not big enough to make their own projects. The project is maintained
 in [Github](https://github.com/jcabi)
 (you're welcome to fork it and submit your pull requests). Full list of
 components in alphabetic order:
