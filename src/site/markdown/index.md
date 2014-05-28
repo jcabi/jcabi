@@ -48,6 +48,9 @@ Hamcrest matchers for XML and XHTML.
 [jcabi-maven-plugin](http://plugin.jcabi.com/index.html) —
 supplementary Maven plugin.
 
+[jcabi-odesk](http://odesk.jcabi.com/index.html) —
+Object-oriented Adapter of Odesk RESTful API.
+
 [jcabi-s3](http://s3.jcabi.com/index.html) —
 Object Layer on top of AWS S3 SDK.
 
