@@ -82,6 +82,13 @@ Besides that,
 [com.jcabi:parent](http://parent.jcabi.com/index.html)
 is a very useful generic parent Maven `pom.xml`.
 
+<a href="http://www.jetbrains.com/">
+<img src="http://img.jcabi.com/intellijidea.png" style="float:left; margin-right: 1em; width:100px; height:100px;"/>
+</a>
+[IntelliJ IDEA](http://www.jetbrains.com/) is supporting
+us with its powerful IDE. We highly recommend to use IntelliJ IDEA
+for Java development.
+
 <a href="http://www.yourkit.com/">
 <img src="http://img.jcabi.com/yourkit.png" style="float:left; margin-right: 1em;"/>
 </a>
