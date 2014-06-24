@@ -118,6 +118,30 @@
                     </archive>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <archive>
+                    <manifestEntries>
+                        <JCabi-Version>${project.version}</JCabi-Version>
+                        <JCabi-Build>${buildNumber}</JCabi-Build>
+                        <JCabi-Date>${maven.build.timestamp}</JCabi-Date>
+                    </manifestEntries>
+                </archive>
+                <executions>
+                    <execution>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <profiles>
