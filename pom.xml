@@ -120,13 +120,15 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <archive>
-                    <manifestEntries>
-                        <JCabi-Version>${project.version}</JCabi-Version>
-                        <JCabi-Build>${buildNumber}</JCabi-Build>
-                        <JCabi-Date>${maven.build.timestamp}</JCabi-Date>
-                    </manifestEntries>
-                </archive>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <JCabi-Version>${project.version}</JCabi-Version>
+                            <JCabi-Build>${buildNumber}</JCabi-Build>
+                            <JCabi-Date>${maven.build.timestamp}</JCabi-Date>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
                 <executions>
                     <execution>
                         <id>assemble-all</id>
