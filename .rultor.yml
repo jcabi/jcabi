@@ -1,0 +1,23 @@
+assets:
+  settings.xml: "yegor256/home#assets/jcabi/settings.xml"
+
+merge:
+  env:
+    MAVEN_OPTS: "-XX:MaxPermSize=256m -Xmx1g"
+  script: 
+    - "mvn clean install -Pqulice --settings ../settings.xml"
+
+deploy:
+  env:
+    MAVEN_OPTS: "-XX:MaxPermSize=256m -Xmx1g"
+  script: 
+    - "mvn clean deploy -Psonatype -Pjcabi -Pqulice --settings ../settings.xml"
+
+release:
+  env:
+    MAVEN_OPTS: "-XX:MaxPermSize=256m -Xmx1g"
+  script: 
+    - "mvn versions:set \"-DnewVersion=${tag}\""
+    - "git commit -am \"${tag}\""
+    - "mvn clean deploy -Pqulice -Psonatype -Pjcabi"
+    - "mvn clean site-deploy -Psite -Prempl --settings ../settings.xml"
