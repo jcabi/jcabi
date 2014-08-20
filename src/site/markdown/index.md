@@ -12,7 +12,7 @@ wrapper of [Sonatype Aether](https://docs.sonatype.org/display/AETHER/Home).
 [jcabi-aspects](http://aspects.jcabi.com/index.html) —
 useful AOP aspects, incl. JSR-303.
 
-[jcabi-beanstalk-maven-plugin](./jcabi-beanstalk-maven-plugin/index.html) —
+[jcabi-beanstalk-maven-plugin](http://beanstalk.jcabi.com/index.html) —
 AWS Elastic Beanstalk deployment.
 
 [jcabi-dynamo](http://dynamo.jcabi.com/index.html) —
@@ -27,10 +27,10 @@ Fluent and Immutable HTTP Client.
 [jcabi-github](http://github.jcabi.com/index.html) —
 Object-Oriented Github API.
 
-[jcabi-heroku-maven-plugin](./jcabi-heroku-maven-plugin/index.html) —
+[jcabi-heroku-maven-plugin](http://heroku.jcabi.com/index.html) —
 Heroku deployment.
 
-[jcabi-ssl-maven-plugin](./jcabi-ssl-maven-plugin/index.html) —
+[jcabi-ssl-maven-plugin](http://ssl.jcabi.com/index.html) —
 SSL keystore generator Maven reactor.
 
 [jcabi-jdbc](http://jdbc.jcabi.com/index.html) —
@@ -57,19 +57,19 @@ Object Layer on top of AWS S3 SDK.
 [jcabi-maven-skin](http://skin.jcabi.com/index.html) —
 Maven Skin, used in this website and many others.
 
-[jcabi-maven-slf4j](./jcabi-maven-slf4j/index.html) —
+[jcabi-maven-slf4j](http://slf4j.jcabi.com/index.html) —
 Maven Log binding for SLF4J.
 
 [jcabi-mysql-maven-plugin](http://mysql.jcabi.com/index.html) —
 Maven Plugin for MySQL Integration Testing.
 
-[jcabi-simpledb](./jcabi-simpledb/index.html) —
+[jcabi-simpledb](http://simpledb.jcabi.com/index.html) —
 Object Layer on top of AWS SimpleDB.
 
-[jcabi-urn](./jcabi-urn/index.html) —
+[jcabi-urn](http://urn.jcabi.com/index.html) —
 Java implementation of Uniform Resource Name (URN).
 
-[jcabi-velocity](./jcabi-velocity/index.html) —
+[jcabi-velocity](http://velocity.jcabi.com/index.html) —
 simple wrapper of [Apache Velocity](http://velocity.apache.org/).
 
 [jcabi-w3c](http://w3c.jcabi.com/index.html) —
