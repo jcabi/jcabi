@@ -30,6 +30,9 @@ Object-Oriented Github API.
 [jcabi-heroku-maven-plugin](http://heroku.jcabi.com/index.html) —
 Heroku deployment.
 
+[jcabi-ssh](http://ssh.jcabi.com/index.html) —
+Simple SSH Client.
+
 [jcabi-ssl-maven-plugin](http://ssl.jcabi.com/index.html) —
 SSL keystore generator Maven reactor.
 
