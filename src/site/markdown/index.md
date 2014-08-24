@@ -30,12 +30,6 @@ Object-Oriented Github API.
 [jcabi-heroku-maven-plugin](http://heroku.jcabi.com/index.html) —
 Heroku deployment.
 
-[jcabi-ssh](http://ssh.jcabi.com/index.html) —
-Simple SSH Client.
-
-[jcabi-ssl-maven-plugin](http://ssl.jcabi.com/index.html) —
-SSL keystore generator Maven reactor.
-
 [jcabi-jdbc](http://jdbc.jcabi.com/index.html) —
 fluent wrapper of [JDBC](http://en.wikipedia.org/wiki/Java_Database_Connectivity).
 
@@ -56,6 +50,12 @@ Object-oriented Adapter of Odesk RESTful API.
 
 [jcabi-s3](http://s3.jcabi.com/index.html) —
 Object Layer on top of AWS S3 SDK.
+
+[jcabi-ssh](http://ssh.jcabi.com/index.html) —
+Simple SSH Client.
+
+[jcabi-ssl-maven-plugin](http://ssl.jcabi.com/index.html) —
+SSL keystore generator Maven reactor.
 
 [jcabi-maven-skin](http://skin.jcabi.com/index.html) —
 Maven Skin, used in this website and many others.
