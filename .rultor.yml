@@ -13,13 +13,6 @@ merge:
     mvn clean install -Pqulice --errors --settings ../settings.xml
     pdd --source=$(pwd) --verbose --file=/dev/null
   commanders:
-  - caarlos0
-  - carlosmiranda
-  - darkled
-  - ggajos
-  - krzyk
-  - longtimeago
-  - pinaf
   - yegor256
 deploy:
   script: |-
