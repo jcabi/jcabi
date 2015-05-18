@@ -11,8 +11,7 @@ merge:
   script: |-
     mvn clean install -Pqulice --errors --settings ../settings.xml
     pdd --source=$(pwd) --verbose --file=/dev/null
-  commanders:
-  - yegor256
+  commanders: []
 deploy:
   script: |-
     mvn clean deploy -Pqulice --errors --settings ../settings.xml
