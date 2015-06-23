@@ -21,6 +21,9 @@ Amazon DynamoDB Object Layer.
 [jcabi-dynamodb-maven-plugin](http://dynamodb.jcabi.com/index.html) —
 DynamoDB Maven testing plugin.
 
+[jcabi-email](http://email.jcabi.com/index.html) —
+Email sending client.
+
 [jcabi-http](http://http.jcabi.com/index.html) —
 Fluent and Immutable HTTP Client.
 
