@@ -6,8 +6,8 @@
 [![Build Status](https://travis-ci.org/jcabi/jcabi.svg?branch=master)](https://travis-ci.org/jcabi/jcabi)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi)
 
-Simple Useful Java Components
-=====
+This project is just a parent POM for all other
+Java projects in "jcabi family".
 
 See [www.jcabi.com](http://www.jcabi.com/) website for more details.
 
