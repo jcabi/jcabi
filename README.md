@@ -8,7 +8,7 @@
 [![mvn](https://github.com/jcabi/jcabi/actions/workflows/mvn.yml/badge.svg)](https://github.com/jcabi/jcabi/actions/workflows/mvn.yml)
 [![PDD status](http://www.0pdd.com/svg?name=jcabi/jcabi)](http://www.0pdd.com/p?name=jcabi/jcabi)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi)
-[![Dependencies](https://www.versioneye.com/user/projects/561aa030a193340f280010b2/badge.svg?style=flat)](https://www.versioneye.com/user/projects/561aa030a193340f280010b2)
+[![codecov](https://codecov.io/gh/jcabi/jcabi/branch/master/graph/badge.svg)](https://codecov.io/gh/jcabi/jcabi)
 
 This project is just a parent POM for all other
 Java projects in "jcabi family".
