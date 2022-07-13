@@ -33,7 +33,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
   <parent>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <version>0.58.0</version>
+    <version>0.59.0</version>
   </parent>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi</artifactId>
@@ -41,7 +41,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
   <packaging>pom</packaging>
   <name>jcabi</name>
   <description><![CDATA[
-    jcabi is a set of useful open source Java components.
+    Jcabi is a set of useful open source Java components.
     More details you can find at www.jcabi.com.
     ]]></description>
   <url>https://www.jcabi.com</url>
@@ -151,7 +151,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
           <plugin>
             <groupId>com.qulice</groupId>
             <artifactId>qulice-maven-plugin</artifactId>
-            <version>0.19.4</version>
             <configuration>
               <excludes combine.children="append">
                 <exclude>checkstyle:/src/site/resources/.*</exclude>
