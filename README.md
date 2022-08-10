@@ -8,7 +8,6 @@
 [![PDD status](http://www.0pdd.com/svg?name=jcabi/jcabi)](http://www.0pdd.com/p?name=jcabi/jcabi)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.jcabi/jcabi)
 [![codecov](https://codecov.io/gh/jcabi/jcabi/branch/master/graph/badge.svg)](https://codecov.io/gh/jcabi/jcabi)
-
 [![Hits-of-Code](https://hitsofcode.com/github/jcabi/jcabi)](https://hitsofcode.com/view/github/jcabi/jcabi)
 ![Lines of code](https://img.shields.io/tokei/lines/github/jcabi/jcabi)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/jcabi/jcabi/blob/master/LICENSE.txt)
