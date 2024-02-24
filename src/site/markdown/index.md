@@ -88,18 +88,10 @@ Besides that,
 [com.jcabi:parent](http://parent.jcabi.com/index.html)
 is a very useful generic parent Maven `pom.xml`.
 
-<a href="http://www.jetbrains.com/" style="border: none">
-<img src="http://img.jcabi.com/intellijidea.png" style="width:100px; height:100px;"/>
-</a>
-
 [JetBrains](http://www.jetbrains.com/) is supporting
 us with its powerful IDE.
 We highly recommend to use [IntelliJ IDEA](http://www.jetbrains.com/)
 for Java development.
-
-<a href="http://www.yourkit.com/" style="border: none">
-<img src="http://img.jcabi.com/yourkit.png" style="width:132px; height:43px;"/>
-</a>
 
 [YourKit](http://www.yourkit.com/) is kindly supporting
 us with its full-featured Java Profiler. We highly recommend to use
