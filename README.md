@@ -14,4 +14,3 @@ This project is just a parent POM for all other
 Java projects in "jcabi family".
 
 See [www.jcabi.com](http://www.jcabi.com/) website for more details.
-
