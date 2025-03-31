@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: Copyright (c) 2012-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+# yamllint disable rule:line-length
+name: zerocracy
+'on':
+  schedule:
+    - cron: '0 * * * *'
+concurrency:
+  group: zerocracy
+  cancel-in-progress: false
+jobs:
+  zerocracy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: zerocracy/judges-action@0.0.74
+        with:
+          token: ${{ secrets.ZEROCRACY_TOKEN }}
+          verbose: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repositories: jcabi/*
+          factbase: jcabi.fb
+          cycles: 1
+      - uses: zerocracy/pages-action@0.0.48
+        with:
+          options: |
+            github_token=${{ secrets.GITHUB_TOKEN }}
+          verbose: true
+          factbase: jcabi.fb
+          output: pages
+      - uses: JamesIves/github-pages-deploy-action@v4.7.3
+        with:
+          folder: pages
+          clean: false
