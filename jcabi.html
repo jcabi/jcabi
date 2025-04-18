@@ -63,7 +63,7 @@
           <tbody>
             <tr>
               <td>
-                <span class="T">2025-04-18T11:09:13Z</span>
+                <span class="T">2025-04-18T12:17:53Z</span>
               </td>
               <td>
                 <span class="S">judges-summary</span>
@@ -80,7 +80,7 @@
               <td>
                 <span class=""/>
               </td>
-              <td> added:<span class="I">8</span> cycles:<span class="I">1</span> deleted:<span class="I">8</span> inserted:<span class="I">8</span> seconds:<span class="F">38.118427626</span> version:<span class="S">0.39.2</span>  </td>
+              <td> added:<span class="I">8</span> cycles:<span class="I">1</span> deleted:<span class="I">8</span> inserted:<span class="I">8</span> seconds:<span class="F">27.797313583</span> version:<span class="S">0.39.2</span>  </td>
             </tr>
             <tr>
               <td>
@@ -3315,35 +3315,6 @@
                 <span class=""/>
               </td>
               <td> <span class="hidden" title="13358">_id</span> <span class="hidden" title="2025-04-06T22:08:58Z">_time</span> <span class="hidden" title="0.9.10/0.39.2/">_version</span> total_active_contributors:<span class="I">5</span> total_commits:<span class="I">17838</span> total_contributors:<span class="I">116</span> total_files:<span class="I">2159</span> total_forks:<span class="I">969</span> total_issues:<span class="I">2848</span> total_pulls:<span class="I">4859</span> total_releases:<span class="I">665</span> total_repositories:<span class="I">31</span> total_stars:<span class="I">2190</span>  </td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">pmp</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="14940">_id</span> _job:<span class="I">17052</span> <span class="hidden" title="2025-04-07T15:10:51Z">_time</span> <span class="hidden" title="0.9.10/0.39.2/0.3.0">_version</span> area:<span class="S">hr</span> bad_branch_name_was_punished:<span class="S">(award (explain 'If a branch has a name that doesn\\\'t obey the convention, a penalty is given to the author') (aka (let fee -12) (give fee 'as a basis') 'deduct ${fee} points'))</span> bug_report_was_rewarded:<span class="S">(award (explain 'When a bug is reported and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a basis') 'award ${bonus} points'))</span> code_contribution_was_rewarded:<span class="S">(award (explain 'When a code contribution is made, the author receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in reviews 'the number of reviews provided') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold 200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold) (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k} points for each
-      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-      but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc 'for too many hits-of-code (${hoc} &gt;= ${hoc_threshold})') 'deduct ${many_hoc_fee} points if more than ${hoc_threshold}
-      [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for way too many hits-of-code (${hoc} &gt;= ${hoc_threshold2})') 'deduct ${many_hoc_fee2} points if more than ${hoc_threshold2}
-      [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review') 'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k 0.2) (let comments_max -16) (let comments_min -4) (set bonus_for_comments (times comments (times -1 comments_k))) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (give bonus_for_comments 'for too many (${comments}) comments that were made during review') 'deduct ${comments_k} points for every comment made during review, but not more than ${comments_max} points') (aka (let few_comments_fee 4) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted by reviewers') 'deduct ${silence_fee} points if there were absolutely no comments made by reviewers during the review') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> code_review_was_rewarded:<span class="S">(award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
-      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-      but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> days_of_running_balance:<span class="I">56</span> days_to_reward:<span class="I">14</span> dud_was_punished:<span class="S">(award (explain 'When an issue is submitted but then rejected by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as a basis') 'deduct ${fee} points'))</span> enhancement_suggestion_was_rewarded:<span class="S">(award (explain 'When an enhancement is suggested and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a basis') 'award ${bonus} points'))</span> long_pull_was_punished:<span class="S">(award (explain 'Oversized pull requests get penalized') (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))</span> master_punish_days:<span class="I">4</span> published_release_was_rewarded:<span class="S">(award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
-      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-      but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> push_to_master_was_punished:<span class="S">(award (explain 'When someone pushes directly to the default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis') '${fee} points'))</span> resolved_bug_was_rewarded:<span class="S">(award (explain 'When a bug is resolved, the person who was assigned to it receives a bonus') (in hours 'how many hours it took to resolve the bug') (in self '1 if the bug was reported and resolved by the same person, otherwise zero') (set days (div hours 24)) (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24) (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug reported by you earlier') 'deduct ${self_fee} points if they resolved the bug earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2 'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay, but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> </td>
             </tr>
             <tr>
               <td>
@@ -11138,27 +11109,6 @@
             </tr>
             <tr>
               <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">13359002</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34339">_id</span> <span class="hidden" title="2025-04-18T06:14:29Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
                 <span class="T">2025-04-18T05:10:56Z</span>
               </td>
               <td>
@@ -11177,27 +11127,6 @@
                 <span class=""/>
               </td>
               <td> <span class="hidden" title="34397">_id</span> <span class="hidden" title="2025-04-18T07:10:40Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> total_active_contributors:<span class="I">5</span> total_commits:<span class="I">17885</span> total_contributors:<span class="I">117</span> total_files:<span class="I">2160</span> total_forks:<span class="I">971</span> total_issues:<span class="I">2851</span> total_pulls:<span class="I">4879</span> total_releases:<span class="I">666</span> total_repositories:<span class="I">31</span> total_stars:<span class="I">2190</span>  </td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591138</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34438">_id</span> <span class="hidden" title="2025-04-18T07:10:49Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -11252,90 +11181,6 @@
                 <span class=""/>
               </td>
               <td>
-                <span class="I">12589424</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34512">_id</span> <span class="hidden" title="2025-04-18T08:13:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12587702</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34516">_id</span> <span class="hidden" title="2025-04-18T08:13:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591382</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34591">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591356</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34593">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
                 <span class="I">12591339</span>
               </td>
               <td>
@@ -11345,132 +11190,6 @@
                 <span class=""/>
               </td>
               <td> <span class="hidden" title="34595">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591347</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34597">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">19194304</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34599">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">13624455</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34600">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12587970</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34603">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">20635353</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34606">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">14204295</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34607">_id</span> <span class="hidden" title="2025-04-18T10:10:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -12125,426 +11844,6 @@
             </tr>
             <tr>
               <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">19194296</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34641">_id</span> <span class="hidden" title="2025-04-18T11:08:48Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48800635579</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">23238769</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34642">_id</span> <span class="hidden" title="2025-04-18T11:08:48Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48512628997</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">510979198</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34643">_id</span> <span class="hidden" title="2025-04-18T11:08:49Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">20635353</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34644">_id</span> <span class="hidden" title="2025-04-18T11:08:49Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">47970143643</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12590813</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34645">_id</span> <span class="hidden" title="2025-04-18T11:08:49Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48811677295</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">14204295</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34646">_id</span> <span class="hidden" title="2025-04-18T11:08:50Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606643890</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591339</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34647">_id</span> <span class="hidden" title="2025-04-18T11:08:50Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48594388147</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12590126</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34648">_id</span> <span class="hidden" title="2025-04-18T11:08:50Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607203787</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12587702</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34649">_id</span> <span class="hidden" title="2025-04-18T11:08:51Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48644559112</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">13359002</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34650">_id</span> <span class="hidden" title="2025-04-18T11:08:51Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418129030</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12589687</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34651">_id</span> <span class="hidden" title="2025-04-18T11:08:51Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607294605</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12584841</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34652">_id</span> <span class="hidden" title="2025-04-18T11:08:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418119853</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591382</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34653">_id</span> <span class="hidden" title="2025-04-18T11:08:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48558929760</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">14093966</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34654">_id</span> <span class="hidden" title="2025-04-18T11:08:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48676701992</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591356</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34655">_id</span> <span class="hidden" title="2025-04-18T11:08:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48612534599</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">25780072</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34656">_id</span> <span class="hidden" title="2025-04-18T11:08:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418124968</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12262782</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34657">_id</span> <span class="hidden" title="2025-04-18T11:08:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48604272267</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">16312153</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34658">_id</span> <span class="hidden" title="2025-04-18T11:08:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48799557146</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">19194304</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34659">_id</span> <span class="hidden" title="2025-04-18T11:08:54Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607638535</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">13717355</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34660">_id</span> <span class="hidden" title="2025-04-18T11:08:54Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48801187097</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
                 <span class="T">2025-04-18T10:50:19Z</span>
               </td>
               <td>
@@ -12590,258 +11889,6 @@
                 <span class=""/>
               </td>
               <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">4174608</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34663">_id</span> <span class="hidden" title="2025-04-18T11:09:09Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48825776695</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591371</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34664">_id</span> <span class="hidden" title="2025-04-18T11:09:09Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48521971086</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12589424</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34665">_id</span> <span class="hidden" title="2025-04-18T11:09:09Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418124123</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">13624455</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34666">_id</span> <span class="hidden" title="2025-04-18T11:09:10Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606489246</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591347</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34667">_id</span> <span class="hidden" title="2025-04-18T11:09:10Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12591138</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34668">_id</span> <span class="hidden" title="2025-04-18T11:09:10Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607224659</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12590128</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34669">_id</span> <span class="hidden" title="2025-04-18T11:09:11Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48154398831</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">16403286</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34670">_id</span> <span class="hidden" title="2025-04-18T11:09:11Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418128296</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12587970</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34671">_id</span> <span class="hidden" title="2025-04-18T11:09:11Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12947626</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34672">_id</span> <span class="hidden" title="2025-04-18T11:09:11Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606770032</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">events-were-scanned</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">15208785</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34673">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48466020643</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12590128</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34674">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
                 <span class="S">min-issue-was-found</span>
               </td>
               <td>
@@ -12857,90 +11904,6 @@
                 <span class=""/>
               </td>
               <td> <span class="hidden" title="34675">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">4174608</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34676">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12262782</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34677">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">16312153</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34678">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12590813</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34679">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -12974,7 +11937,7 @@
                 <span class=""/>
               </td>
               <td>
-                <span class="I">12591371</span>
+                <span class="I">25780072</span>
               </td>
               <td>
                 <span class=""/>
@@ -12982,20 +11945,14 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34681">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34690">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
                 <span class=""/>
               </td>
               <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">510979198</span>
+                <span class="S">pmp</span>
               </td>
               <td>
                 <span class=""/>
@@ -13003,77 +11960,49 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34682">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34692">_id</span> _job:<span class="I">17915</span> <span class="hidden" title="2025-04-18T11:09:30Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/0.4.0">_version</span> area:<span class="S">hr</span> bad_branch_name_was_punished:<span class="S">(award (explain 'If a branch has a name that doesn\\\'t obey the convention, a penalty is given to the author') (aka (let fee -12) (give fee 'as a basis') 'deduct ${fee} points'))</span> bug_report_was_rewarded:<span class="S">(award (explain 'When a bug is reported and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a basis') 'award ${bonus} points'))</span> code_contribution_was_rewarded:<span class="S">(award (explain 'When a code contribution is made, the author receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in reviews 'the number of reviews provided') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold 200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold) (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k} points for each
+      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+      but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc 'for too many hits-of-code (${hoc} &gt;= ${hoc_threshold})') 'deduct ${many_hoc_fee} points if more than ${hoc_threshold}
+      [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for way too many hits-of-code (${hoc} &gt;= ${hoc_threshold2})') 'deduct ${many_hoc_fee2} points if more than ${hoc_threshold2}
+      [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review') 'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k 0.2) (let comments_max -16) (let comments_min -4) (set bonus_for_comments (times comments (times -1 comments_k))) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (give bonus_for_comments 'for too many (${comments}) comments that were made during review') 'deduct ${comments_k} points for every comment made during review, but not more than ${comments_max} points') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> code_review_was_rewarded:<span class="S">(award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
+      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+      but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> days_of_running_balance:<span class="I">56</span> days_to_reward:<span class="I">14</span> dud_was_punished:<span class="S">(award (explain 'When an issue is submitted but then rejected by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as a basis') 'deduct ${fee} points'))</span> enhancement_suggestion_was_rewarded:<span class="S">(award (explain 'When an enhancement is suggested and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a basis') 'award ${bonus} points'))</span> long_pull_was_punished:<span class="S">(award (explain 'Oversized pull requests get penalized') (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))</span> master_punish_days:<span class="I">4</span> published_release_was_rewarded:<span class="S">(award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
+      [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+      but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> push_to_master_was_punished:<span class="S">(award (explain 'When someone pushes directly to the default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis') '${fee} points'))</span> resolved_bug_was_rewarded:<span class="S">(award (explain 'When a bug is resolved, the person who was assigned to it receives a bonus') (in hours 'how many hours it took to resolve the bug') (in self '1 if the bug was reported and resolved by the same person, otherwise zero') (set days (div hours 24)) (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24) (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug reported by you earlier') 'deduct ${self_fee} points if they resolved the bug earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2 'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay, but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))</span> </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="T">2025-04-18T10:50:19Z</span>
+              </td>
+              <td>
+                <span class="S">code-was-contributed</span>
+              </td>
+              <td>
+                <span class="I">29139614</span>
+              </td>
+              <td>
+                <span class="I">4174608</span>
+              </td>
+              <td>
+                <span class="I">384</span>
+              </td>
+              <td>
+                <span class="S">The pull request jcabi/jcabi#384 with 2 HoC created by @renovate[bot] was merged by @rultor after 38m53s of being in review and 2 comments.</span>
+              </td>
+              <td> <span class="hidden" title="34693">_id</span> _job:<span class="I">17915</span> <span class="hidden" title="2025-04-18T11:09:30Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/0.4.0">_version</span> comments:<span class="I">2</span>  hoc:<span class="I">2</span> is_human:<span class="I">0</span>  merger:<span class="I">8086956</span>  review_comments:<span class="I">0</span> seconds:<span class="I">2334</span>   where:<span class="S">github</span> </td>
             </tr>
             <tr>
               <td>
                 <span class=""/>
               </td>
               <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">15208785</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34683">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">14093966</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34684">_id</span> <span class="hidden" title="2025-04-18T11:09:12Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="I">12947626</span>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class=""/>
-              </td>
-              <td> <span class="hidden" title="34685">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class=""/>
-              </td>
-              <td>
-                <span class="S">min-issue-was-found</span>
+                <span class="S">events-were-scanned</span>
               </td>
               <td>
                 <span class=""/>
@@ -13087,14 +12016,497 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34686">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34694">_id</span> <span class="hidden" title="2025-04-18T12:17:36Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418119853</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
                 <span class=""/>
               </td>
               <td>
-                <span class="S">min-issue-was-found</span>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12589424</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34695">_id</span> <span class="hidden" title="2025-04-18T12:17:37Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418124123</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12590813</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34696">_id</span> <span class="hidden" title="2025-04-18T12:17:37Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48811677295</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">510979198</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34697">_id</span> <span class="hidden" title="2025-04-18T12:17:38Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591347</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34698">_id</span> <span class="hidden" title="2025-04-18T12:17:38Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12587702</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34699">_id</span> <span class="hidden" title="2025-04-18T12:17:39Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48644559112</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">14093966</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34700">_id</span> <span class="hidden" title="2025-04-18T12:17:40Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48676701992</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">4174608</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34701">_id</span> <span class="hidden" title="2025-04-18T12:17:41Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48826150433</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">25780072</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34702">_id</span> <span class="hidden" title="2025-04-18T12:17:42Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418124968</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">13359002</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34703">_id</span> <span class="hidden" title="2025-04-18T12:17:42Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418129030</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12262782</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34704">_id</span> <span class="hidden" title="2025-04-18T12:17:43Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48604272267</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591339</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34705">_id</span> <span class="hidden" title="2025-04-18T12:17:43Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48594388147</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">19194296</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34706">_id</span> <span class="hidden" title="2025-04-18T12:17:44Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48800635579</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12947626</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34707">_id</span> <span class="hidden" title="2025-04-18T12:17:44Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606770032</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">14204295</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34708">_id</span> <span class="hidden" title="2025-04-18T12:17:45Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606643890</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12587970</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34709">_id</span> <span class="hidden" title="2025-04-18T12:17:45Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591138</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34710">_id</span> <span class="hidden" title="2025-04-18T12:17:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607224659</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591371</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34711">_id</span> <span class="hidden" title="2025-04-18T12:17:46Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48521971086</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">13624455</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34712">_id</span> <span class="hidden" title="2025-04-18T12:17:47Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48606489246</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591382</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34713">_id</span> <span class="hidden" title="2025-04-18T12:17:47Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48558929760</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12590126</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34714">_id</span> <span class="hidden" title="2025-04-18T12:17:48Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607203787</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">16312153</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34715">_id</span> <span class="hidden" title="2025-04-18T12:17:48Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48799557146</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">15208785</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34716">_id</span> <span class="hidden" title="2025-04-18T12:17:48Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48466020643</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">13717355</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34717">_id</span> <span class="hidden" title="2025-04-18T12:17:49Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48801187097</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
               </td>
               <td>
                 <span class=""/>
@@ -13108,7 +12520,196 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34687">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34718">_id</span> <span class="hidden" title="2025-04-18T12:17:50Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48418128296</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">19194304</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34719">_id</span> <span class="hidden" title="2025-04-18T12:17:50Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607638535</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">23238769</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34720">_id</span> <span class="hidden" title="2025-04-18T12:17:51Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48512628997</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591356</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34721">_id</span> <span class="hidden" title="2025-04-18T12:17:51Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48612534599</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12589687</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34722">_id</span> <span class="hidden" title="2025-04-18T12:17:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48607294605</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">20635353</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34723">_id</span> <span class="hidden" title="2025-04-18T12:17:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">47970143643</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">events-were-scanned</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12590128</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34724">_id</span> <span class="hidden" title="2025-04-18T12:17:52Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">48154398831</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591371</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34725">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12587970</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34726">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12590813</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34727">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -13129,7 +12730,91 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34688">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34728">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12589424</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34729">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">16312153</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34730">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">19194304</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34731">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591382</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34732">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -13150,7 +12835,7 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34689">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34733">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -13163,7 +12848,7 @@
                 <span class=""/>
               </td>
               <td>
-                <span class="I">25780072</span>
+                <span class="I">15208785</span>
               </td>
               <td>
                 <span class=""/>
@@ -13171,7 +12856,343 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34690">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34734">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">20635353</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34735">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">14093966</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34736">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12584841</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34737">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12587702</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34738">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">13624455</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34739">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591347</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34740">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">14204295</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34741">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">4174608</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34742">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12947626</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34743">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591138</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34744">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12590128</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34745">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">16403286</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34746">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">13359002</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34747">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12262782</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34748">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">12591356</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34749">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="S">min-issue-was-found</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class="I">510979198</span>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td>
+                <span class=""/>
+              </td>
+              <td> <span class="hidden" title="34750">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">0</span>   where:<span class="S">github</span></td>
             </tr>
             <tr>
               <td>
@@ -13192,13 +13213,13 @@
               <td>
                 <span class=""/>
               </td>
-              <td> <span class="hidden" title="34691">_id</span> <span class="hidden" title="2025-04-18T11:09:13Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">1</span>   where:<span class="S">github</span></td>
+              <td> <span class="hidden" title="34751">_id</span> <span class="hidden" title="2025-04-18T12:17:53Z">_time</span> <span class="hidden" title="0.10.0/0.39.2/">_version</span> latest:<span class="I">1</span>   where:<span class="S">github</span></td>
             </tr>
           </tbody>
         </table>
       </article>
       <footer class="smaller">
-        <p>The page was generated by the <a href="https://github.com/yegor256/judges">judges</a> tool (0.38.1) on 2025-04-18T11:09:17Z.<br/>Properties with columns: when,what,who,repository,issue,details<br/>Hidden properties: _id,_time,_version<br/><a href="https://github.com/yegor256/factbase">Factbase</a>: 625 facts, 189882 bytes, version 0.9.6.<br/><span id="current-time">Loading current time...</span></p>
+        <p>The page was generated by the <a href="https://github.com/yegor256/judges">judges</a> tool (0.38.1) on 2025-04-18T12:17:58Z.<br/>Properties with columns: when,what,who,repository,issue,details<br/>Hidden properties: _id,_time,_version<br/><a href="https://github.com/yegor256/factbase">Factbase</a>: 626 facts, 189561 bytes, version 0.9.6.<br/><span id="current-time">Loading current time...</span></p>
       </footer>
     </section>
     <script type="text/javascript">
