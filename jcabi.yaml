@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 17.766084494
+  seconds: 31.150456563
   version: 0.41.0
   what: judges-summary
-  when: 2025-04-23 06:14:52.272762096 Z
+  when: 2025-04-23 07:14:09.621388085 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -7816,64 +7816,6 @@
   when: 2025-04-18 10:11:25.000000000 Z
   where: github
   who: 29139614
-- _id: 34692
-  _job: 17915
-  _time: 2025-04-18 11:09:30.493785156 Z
-  _version: 0.10.0/0.39.2/0.4.0
-  area: hr
-  bad_branch_name_was_punished: "(award (explain 'If a branch has a name that doesn\\\\\\'t
-    obey the convention, a penalty is given to the author') (aka (let fee -12) (give
-    fee 'as a basis') 'deduct ${fee} points'))"
-  bug_report_was_rewarded: "(award (explain 'When a bug is reported and accepted by
-    the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a
-    basis') 'award ${bonus} points'))"
-  code_contribution_was_rewarded: |-
-    (award (explain 'When a code contribution is made, the author receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in reviews 'the number of reviews provided') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold 200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold) (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc 'for too many hits-of-code (${hoc} >= ${hoc_threshold})') 'deduct ${many_hoc_fee} points if more than ${hoc_threshold}
-          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for way too many hits-of-code (${hoc} >= ${hoc_threshold2})') 'deduct ${many_hoc_fee2} points if more than ${hoc_threshold2}
-          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review') 'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k 0.2) (let comments_max -16) (let comments_min -4) (set bonus_for_comments (times comments (times -1 comments_k))) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (give bonus_for_comments 'for too many (${comments}) comments that were made during review') 'deduct ${comments_k} points for every comment made during review, but not more than ${comments_max} points') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  code_review_was_rewarded: |-
-    (award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  days_of_running_balance: 56
-  days_to_reward: 14
-  dud_was_punished: "(award (explain 'When an issue is submitted but then rejected
-    by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as
-    a basis') 'deduct ${fee} points'))"
-  enhancement_suggestion_was_rewarded: "(award (explain 'When an enhancement is suggested
-    and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give
-    bonus 'as a basis') 'award ${bonus} points'))"
-  long_pull_was_punished: "(award (explain 'Oversized pull requests get penalized')
-    (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))"
-  master_punish_days: 4
-  published_release_was_rewarded: |-
-    (award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  push_to_master_was_punished: "(award (explain 'When someone pushes directly to the
-    default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis')
-    '${fee} points'))"
-  resolved_bug_was_rewarded: "(award (explain 'When a bug is resolved, the person
-    who was assigned to it receives a bonus') (in hours 'how many hours it took to
-    resolve the bug') (in self '1 if the bug was reported and resolved by the same
-    person, otherwise zero') (set days (div hours 24)) (aka (let basis 4) (give basis
-    'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24)
-    (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less
-    than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than
-    ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq
-    self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug
-    reported by you earlier') 'deduct ${self_fee} points if they resolved the bug
-    earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times
-    days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2
-    'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay,
-    but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt
-    (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let
-    min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to
-    give you at least something') 'make sure the reward is not larger than ${max}
-    points and not smaller than ${min} points'))"
-  what: pmp
 - _id: 34693
   _job: 17915
   _time: 2025-04-18 11:09:30.652965376 Z
@@ -8236,27 +8178,6 @@
   repository: 13624455
   what: min-issue-was-found
   where: github
-- _id: 41626
-  _time: 2025-04-23 05:11:13.428521253 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 13359002
-  what: min-issue-was-found
-  where: github
-- _id: 41627
-  _time: 2025-04-23 05:11:13.443446418 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12589687
-  what: min-issue-was-found
-  where: github
-- _id: 41628
-  _time: 2025-04-23 05:11:13.456504088 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12262782
-  what: min-issue-was-found
-  where: github
 - _id: 41629
   _time: 2025-04-23 05:11:13.468573949 Z
   _version: 0.10.0/0.41.0/
@@ -8269,34 +8190,6 @@
   _version: 0.10.0/0.41.0/
   latest: 0
   repository: 12584841
-  what: min-issue-was-found
-  where: github
-- _id: 41634
-  _time: 2025-04-23 05:11:13.533429536 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 14204295
-  what: min-issue-was-found
-  where: github
-- _id: 41637
-  _time: 2025-04-23 05:11:13.572036893 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591382
-  what: min-issue-was-found
-  where: github
-- _id: 41638
-  _time: 2025-04-23 05:11:13.584684496 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 14093966
-  what: min-issue-was-found
-  where: github
-- _id: 41640
-  _time: 2025-04-23 05:11:13.610893063 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591138
   what: min-issue-was-found
   where: github
 - _id: 41642
@@ -8318,13 +8211,6 @@
   _version: 0.10.0/0.41.0/
   latest: 0
   repository: 12591339
-  what: min-issue-was-found
-  where: github
-- _id: 41647
-  _time: 2025-04-23 05:11:13.702153694 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 25780072
   what: min-issue-was-found
   where: github
 - _id: 41649
@@ -8586,13 +8472,6 @@
   repository: 4174608
   what: min-issue-was-found
   where: github
-- _id: 41688
-  _time: 2025-04-23 06:14:43.173666522 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 19194296
-  what: min-issue-was-found
-  where: github
 - _id: 41689
   _time: 2025-04-23 06:14:43.186360921 Z
   _version: 0.10.0/0.41.0/
@@ -8642,227 +8521,353 @@
   repository: 12589424
   what: min-issue-was-found
   where: github
-- _id: 41696
-  _time: 2025-04-23 06:14:43.707122283 Z
-  _version: 0.10.0/0.41.0/
-  latest: 1
-  repository: 13717355
-  what: min-issue-was-found
-  where: github
-- _id: 41697
-  _time: 2025-04-23 06:14:44.237910654 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 13624455
-  what: labels-were-scanned
-  where: github
-- _id: 41698
-  _time: 2025-04-23 06:14:44.250123620 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 25780072
-  what: labels-were-scanned
-  where: github
-- _id: 41699
-  _time: 2025-04-23 06:14:44.263661852 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12584841
-  what: labels-were-scanned
-  where: github
-- _id: 41700
-  _time: 2025-04-23 06:14:44.277693258 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12589424
-  what: labels-were-scanned
-  where: github
-- _id: 41702
-  _time: 2025-04-23 06:14:44.581662685 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12590813
-  what: labels-were-scanned
-  where: github
-- _id: 41703
-  _time: 2025-04-23 06:14:44.594229588 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591371
-  what: labels-were-scanned
-  where: github
-- _id: 41704
-  _time: 2025-04-23 06:14:44.607490266 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 15208785
-  what: labels-were-scanned
-  where: github
-- _id: 41705
-  _time: 2025-04-23 06:14:44.619437179 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 23238769
-  what: labels-were-scanned
-  where: github
-- _id: 41706
-  _time: 2025-04-23 06:14:44.632731590 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12589687
-  what: labels-were-scanned
-  where: github
-- _id: 41707
-  _time: 2025-04-23 06:14:44.644837037 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12590126
-  what: labels-were-scanned
-  where: github
-- _id: 41708
-  _time: 2025-04-23 06:14:44.658711562 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591339
-  what: labels-were-scanned
-  where: github
-- _id: 41709
-  _time: 2025-04-23 06:14:44.670373047 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 14093966
-  what: labels-were-scanned
-  where: github
-- _id: 41710
-  _time: 2025-04-23 06:14:44.684536357 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591138
-  what: labels-were-scanned
-  where: github
-- _id: 41711
-  _time: 2025-04-23 06:14:44.696283110 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12587702
-  what: labels-were-scanned
-  where: github
-- _id: 41712
-  _time: 2025-04-23 06:14:44.710306511 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591347
-  what: labels-were-scanned
-  where: github
-- _id: 41713
-  _time: 2025-04-23 06:14:44.723785212 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 4174608
-  what: labels-were-scanned
-  where: github
-- _id: 41714
-  _time: 2025-04-23 06:14:44.736405113 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 510979198
-  what: labels-were-scanned
-  where: github
-- _id: 41715
-  _time: 2025-04-23 06:14:44.749797705 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 20635353
-  what: labels-were-scanned
-  where: github
-- _id: 41716
-  _time: 2025-04-23 06:14:44.762179795 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 14204295
-  what: labels-were-scanned
-  where: github
-- _id: 41717
-  _time: 2025-04-23 06:14:44.775962620 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12947626
-  what: labels-were-scanned
-  where: github
-- _id: 41718
-  _time: 2025-04-23 06:14:44.787767671 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12591356
-  what: labels-were-scanned
-  where: github
-- _id: 41719
-  _time: 2025-04-23 06:14:44.801686429 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12587970
-  what: labels-were-scanned
-  where: github
-- _id: 41720
-  _time: 2025-04-23 06:14:44.814198379 Z
+- _id: 41729
+  _job: 18324
+  _time: 2025-04-23 06:15:05.745086303 Z
+  _version: 0.10.0/0.41.0/0.6.0
+  area: hr
+  bad_branch_name_was_punished: "(award (explain 'If a branch has a name that doesn\\\\\\'t
+    obey the convention, a penalty is given to the author') (aka (let fee -12) (give
+    fee 'as a basis') 'deduct ${fee} points'))"
+  bug_report_was_rewarded: "(award (explain 'When a bug is reported and accepted by
+    the team, the reporter receives a bonus') (aka (let bonus 8) (give bonus 'as a
+    basis') 'award ${bonus} points'))"
+  code_contribution_was_rewarded: |-
+    (award (explain 'When a code contribution is made, the author receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in reviews 'the number of reviews provided') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold 200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold) (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k} points for each
+          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+          but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc 'for too many hits-of-code (${hoc} >= ${hoc_threshold})') 'deduct ${many_hoc_fee} points if more than ${hoc_threshold}
+          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for way too many hits-of-code (${hoc} >= ${hoc_threshold2})') 'deduct ${many_hoc_fee2} points if more than ${hoc_threshold2}
+          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review') 'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k 0.2) (let comments_max -16) (let comments_min -4) (let comments_threshold 8) (set bonus_for_comments (if (gt comments comments_threshold) (times comments (times -1 comments_k)) 0)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (give bonus_for_comments 'for too many (${comments} > ${comments_threshold}) comments that were made during review') 'deduct ${comments_k} points for every comment above ${comments_threshold} made during review, but not more than ${comments_max} points') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
+  code_review_was_rewarded: |-
+    (award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 4) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
+          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+          but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
+  days_of_running_balance: 56
+  days_to_reward: 14
+  dud_was_punished: "(award (explain 'When an issue is submitted but then rejected
+    by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as
+    a basis') 'deduct ${fee} points'))"
+  enhancement_suggestion_was_rewarded: "(award (explain 'When an enhancement is suggested
+    and accepted by the team, the reporter receives a bonus') (aka (let bonus 8) (give
+    bonus 'as a basis') 'award ${bonus} points'))"
+  long_pull_was_punished: "(award (explain 'Oversized pull requests get penalized')
+    (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))"
+  master_punish_days: 4
+  published_release_was_rewarded: |-
+    (award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
+          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+          but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
+  push_to_master_was_punished: "(award (explain 'When someone pushes directly to the
+    default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis')
+    '${fee} points'))"
+  resolved_bug_was_rewarded: "(award (explain 'When a bug is resolved, the person
+    who was assigned to it receives a bonus') (in hours 'how many hours it took to
+    resolve the bug') (in self '1 if the bug was reported and resolved by the same
+    person, otherwise zero') (set days (div hours 24)) (aka (let basis 4) (give basis
+    'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24)
+    (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less
+    than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than
+    ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq
+    self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug
+    reported by you earlier') 'deduct ${self_fee} points if they resolved the bug
+    earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times
+    days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2
+    'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay,
+    but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt
+    (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let
+    min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to
+    give you at least something') 'make sure the reward is not larger than ${max}
+    points and not smaller than ${min} points'))"
+  what: pmp
+- _id: 41730
+  _time: 2025-04-23 07:13:48.154524163 Z
   _version: 0.10.0/0.41.0/
   latest: 0
   repository: 12591382
   what: labels-were-scanned
   where: github
-- _id: 41721
-  _time: 2025-04-23 06:14:44.826435721 Z
+- _id: 41731
+  _time: 2025-04-23 07:13:48.171697919 Z
   _version: 0.10.0/0.41.0/
   latest: 0
-  repository: 13359002
+  repository: 13624455
   what: labels-were-scanned
   where: github
-- _id: 41722
-  _time: 2025-04-23 06:14:44.839913110 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 16403286
-  what: labels-were-scanned
-  where: github
-- _id: 41723
-  _time: 2025-04-23 06:14:44.852742178 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 16312153
-  what: labels-were-scanned
-  where: github
-- _id: 41724
-  _time: 2025-04-23 06:14:44.865607944 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12590128
-  what: labels-were-scanned
-  where: github
-- _id: 41725
-  _time: 2025-04-23 06:14:44.878901032 Z
-  _version: 0.10.0/0.41.0/
-  latest: 0
-  repository: 12262782
-  what: labels-were-scanned
-  where: github
-- _id: 41726
-  _time: 2025-04-23 06:14:44.891811080 Z
+- _id: 41733
+  _time: 2025-04-23 07:13:48.608365502 Z
   _version: 0.10.0/0.41.0/
   latest: 0
   repository: 19194296
   what: labels-were-scanned
   where: github
-- _id: 41727
-  _time: 2025-04-23 06:14:44.904488317 Z
+- _id: 41734
+  _time: 2025-04-23 07:13:48.621763949 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 4174608
+  what: labels-were-scanned
+  where: github
+- _id: 41735
+  _time: 2025-04-23 07:13:48.633701574 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 23238769
+  what: labels-were-scanned
+  where: github
+- _id: 41736
+  _time: 2025-04-23 07:13:48.647036453 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12587970
+  what: labels-were-scanned
+  where: github
+- _id: 41737
+  _time: 2025-04-23 07:13:48.659315433 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 510979198
+  what: labels-were-scanned
+  where: github
+- _id: 41738
+  _time: 2025-04-23 07:13:48.671040611 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591347
+  what: labels-were-scanned
+  where: github
+- _id: 41739
+  _time: 2025-04-23 07:13:48.684008766 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591339
+  what: labels-were-scanned
+  where: github
+- _id: 41740
+  _time: 2025-04-23 07:13:48.696249115 Z
   _version: 0.10.0/0.41.0/
   latest: 0
   repository: 19194304
   what: labels-were-scanned
   where: github
-- _id: 41728
-  _time: 2025-04-23 06:14:52.249713493 Z
+- _id: 41741
+  _time: 2025-04-23 07:13:48.707752509 Z
   _version: 0.10.0/0.41.0/
-  latest: 54
+  latest: 0
+  repository: 14204295
+  what: labels-were-scanned
+  where: github
+- _id: 41742
+  _time: 2025-04-23 07:13:48.720712509 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12584841
+  what: labels-were-scanned
+  where: github
+- _id: 41743
+  _time: 2025-04-23 07:13:48.733776162 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591371
+  what: labels-were-scanned
+  where: github
+- _id: 41744
+  _time: 2025-04-23 07:13:48.746719701 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 25780072
+  what: labels-were-scanned
+  where: github
+- _id: 41745
+  _time: 2025-04-23 07:13:48.759422331 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12262782
+  what: labels-were-scanned
+  where: github
+- _id: 41746
+  _time: 2025-04-23 07:13:48.771369072 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12947626
+  what: labels-were-scanned
+  where: github
+- _id: 41747
+  _time: 2025-04-23 07:13:48.784267317 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12589424
+  what: labels-were-scanned
+  where: github
+- _id: 41748
+  _time: 2025-04-23 07:13:48.797063351 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591138
+  what: labels-were-scanned
+  where: github
+- _id: 41749
+  _time: 2025-04-23 07:13:48.809758868 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 16312153
+  what: labels-were-scanned
+  where: github
+- _id: 41750
+  _time: 2025-04-23 07:13:48.822935972 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 16403286
+  what: labels-were-scanned
+  where: github
+- _id: 41751
+  _time: 2025-04-23 07:13:48.846271765 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 20635353
+  what: labels-were-scanned
+  where: github
+- _id: 41752
+  _time: 2025-04-23 07:13:48.860492925 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12590126
+  what: labels-were-scanned
+  where: github
+- _id: 41753
+  _time: 2025-04-23 07:13:48.872584817 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 14093966
+  what: labels-were-scanned
+  where: github
+- _id: 41754
+  _time: 2025-04-23 07:13:48.885428861 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 13359002
+  what: labels-were-scanned
+  where: github
+- _id: 41755
+  _time: 2025-04-23 07:13:48.897093997 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12590813
+  what: labels-were-scanned
+  where: github
+- _id: 41756
+  _time: 2025-04-23 07:13:48.909512958 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 15208785
+  what: labels-were-scanned
+  where: github
+- _id: 41757
+  _time: 2025-04-23 07:13:48.921864694 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12590128
+  what: labels-were-scanned
+  where: github
+- _id: 41758
+  _time: 2025-04-23 07:13:48.933026421 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12589687
+  what: labels-were-scanned
+  where: github
+- _id: 41759
+  _time: 2025-04-23 07:13:48.946437532 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591356
+  what: labels-were-scanned
+  where: github
+- _id: 41760
+  _time: 2025-04-23 07:13:48.958588043 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12587702
+  what: labels-were-scanned
+  where: github
+- _id: 41761
+  _time: 2025-04-23 07:13:59.227522977 Z
+  _version: 0.10.0/0.41.0/
+  latest: 99
   repository: 13717355
   what: labels-were-scanned
   where: github
+- _id: 41762
+  _time: 2025-04-23 07:14:08.051880002 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12262782
+  what: min-issue-was-found
+  where: github
+- _id: 41763
+  _time: 2025-04-23 07:14:08.066026165 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 14093966
+  what: min-issue-was-found
+  where: github
+- _id: 41764
+  _time: 2025-04-23 07:14:08.080845793 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12589687
+  what: min-issue-was-found
+  where: github
+- _id: 41765
+  _time: 2025-04-23 07:14:08.095189594 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591138
+  what: min-issue-was-found
+  where: github
+- _id: 41766
+  _time: 2025-04-23 07:14:08.109350404 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 25780072
+  what: min-issue-was-found
+  where: github
+- _id: 41767
+  _time: 2025-04-23 07:14:08.124650808 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 19194296
+  what: min-issue-was-found
+  where: github
+- _id: 41768
+  _time: 2025-04-23 07:14:08.139485985 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 12591382
+  what: min-issue-was-found
+  where: github
+- _id: 41769
+  _time: 2025-04-23 07:14:08.154155834 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 13359002
+  what: min-issue-was-found
+  where: github
+- _id: 41770
+  _time: 2025-04-23 07:14:08.168687385 Z
+  _version: 0.10.0/0.41.0/
+  latest: 0
+  repository: 14204295
+  what: min-issue-was-found
+  where: github
+- _id: 41771
+  _time: 2025-04-23 07:14:09.147933988 Z
+  _version: 0.10.0/0.41.0/
+  latest: 1
+  repository: 13717355
+  what: min-issue-was-found
+  where: github
+- _id: 41772
+  _time: 2025-04-23 07:14:09.493466713 Z
+  _version: 0.10.0/0.41.0/
+  what: dimensions-of-terrain
+  when: 2025-04-23 07:14:09.493609448 Z
