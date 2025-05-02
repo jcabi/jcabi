@@ -2,14 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error:
-  - 'Judge github-events stopped by timeout after 3m0s: execution expired'
-  - 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
+  error: 'Judge github-events stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 387.995967018
+  seconds: 354.35899878
   version: 0.42.0
   what: judges-summary
-  when: 2025-05-02 15:16:47.197515628 Z
+  when: 2025-05-02 16:18:05.490537101 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -12212,23 +12210,6 @@
   when: &104 2025-05-01 13:49:23.000000000 Z
   where: github
   who: 8086956
-- _id: 56343
-  _time: 2025-05-01 18:18:28.235692634 Z
-  _version: 0.10.1/0.42.0/
-  average_build_duration: 924.516290726817
-  average_build_mttr: 0
-  average_build_success_rate: 0.8145363408521303
-  average_pull_files_size: 1.125
-  average_pull_hoc_size: 3.5
-  average_release_commits_size: 0
-  average_release_hoc_size: 0
-  average_review_size: 0.0547945205479452
-  average_review_time: 89833.0
-  average_reviewers_per_pull: 0.0410958904109589
-  average_reviews_per_pull: 0.0547945205479452
-  since: 2025-03-24 17:09:19.042747741 Z
-  what: quality-of-service
-  when: 2025-03-31 17:09:19.042711463 Z
 - _id: 56358
   _time: 2025-05-01 21:09:55.416636867 Z
   _version: 0.10.1/0.42.0/
@@ -14069,60 +14050,11 @@
   repository: 16403286
   what: events-were-scanned
   where: github
-- _id: 57462
-  _time: 2025-05-02 14:10:25.501845939 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49257899876
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 57463
-  _time: 2025-05-02 14:10:26.066659225 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48558929760
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 57465
-  _time: 2025-05-02 14:10:27.042616437 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
-- _id: 57467
-  _time: 2025-05-02 14:10:28.409436960 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48607203787
-  repository: 12590126
-  what: events-were-scanned
-  where: github
-- _id: 57472
-  _time: 2025-05-02 14:10:31.183237423 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48892323386
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 57474
-  _time: 2025-05-02 14:10:32.271499845 Z
-  _version: 0.10.1/0.42.0/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
 - _id: 57477
   _time: 2025-05-02 14:10:34.393416873 Z
   _version: 0.10.1/0.42.0/
   latest: 48521971086
   repository: 12591371
-  what: events-were-scanned
-  where: github
-- _id: 57478
-  _time: 2025-05-02 14:10:35.127522651 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49192346351
-  repository: 12587702
   what: events-were-scanned
   where: github
 - _id: 57480
@@ -14153,13 +14085,6 @@
   repository: 12584841
   what: events-were-scanned
   where: github
-- _id: 57488
-  _time: 2025-05-02 14:10:42.302195071 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48466020643
-  repository: 15208785
-  what: events-were-scanned
-  where: github
 - _id: 57559
   _time: 2025-05-02 14:14:56.475802899 Z
   _version: 0.10.1/0.42.0/
@@ -14178,13 +14103,6 @@
   repository: 14204295
   what: events-were-scanned
   where: github
-- _id: 57561
-  _time: 2025-05-02 15:10:27.506180936 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49255852585
-  repository: 14093966
-  what: events-were-scanned
-  where: github
 - _id: 57562
   _time: 2025-05-02 15:10:27.852226241 Z
   _version: 0.10.1/0.42.0/
@@ -14192,46 +14110,11 @@
   repository: 510979198
   what: events-were-scanned
   where: github
-- _id: 57563
-  _time: 2025-05-02 15:10:28.202595158 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48604272267
-  repository: 12262782
-  what: events-were-scanned
-  where: github
 - _id: 57564
   _time: 2025-05-02 15:10:28.590011170 Z
   _version: 0.10.1/0.42.0/
   latest: 48936377303
   repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 57565
-  _time: 2025-05-02 15:10:28.951550686 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 57566
-  _time: 2025-05-02 15:10:29.313809446 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49256369632
-  repository: 12589687
-  what: events-were-scanned
-  where: github
-- _id: 57567
-  _time: 2025-05-02 15:10:30.650243985 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49301251978
-  repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 57568
-  _time: 2025-05-02 15:10:31.023782700 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48800635579
-  repository: 19194296
   what: events-were-scanned
   where: github
 - _id: 57569
@@ -14274,13 +14157,6 @@
   _version: 0.10.1/0.42.0/
   latest: 48418129030
   repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 57575
-  _time: 2025-05-02 15:10:33.860384864 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48607224659
-  repository: 12591138
   what: events-were-scanned
   where: github
 - _id: 57576
@@ -14353,7 +14229,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 13:49:19.000000000 Z
+  when: &121 2025-05-02 13:49:19.000000000 Z
   where: github
   who: 8086956
 - _id: 57580
@@ -14377,7 +14253,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 13:37:36.000000000 Z
+  when: &122 2025-05-02 13:37:36.000000000 Z
   where: github
   who: 8086956
 - _id: 57581
@@ -14450,7 +14326,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 12:46:41.000000000 Z
+  when: &123 2025-05-02 12:46:41.000000000 Z
   where: github
   who: 8086956
 - _id: 57585
@@ -14523,7 +14399,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 11:38:56.000000000 Z
+  when: &124 2025-05-02 11:38:56.000000000 Z
   where: github
   who: 8086956
 - _id: 57589
@@ -14799,3 +14675,232 @@
   since: 2025-04-24 02:43:13.574977701 Z
   what: quality-of-service
   when: 2025-05-01 02:43:13.574940221 Z
+- _id: 57655
+  _job: 19025
+  _time: 2025-05-02 15:17:05.580485100 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#367 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h2m of being in review and 2 comments.
+  hoc: 4
+  issue: 367
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3730
+  what: code-was-contributed
+  when: *121
+  where: github
+  who: 29139614
+- _id: 57656
+  _job: 19025
+  _time: 2025-05-02 15:17:05.814387325 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#368 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 50m21s of being in review and 2 comments.
+  hoc: 2
+  issue: 368
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3022
+  what: code-was-contributed
+  when: *122
+  where: github
+  who: 29139614
+- _id: 57657
+  _job: 19025
+  _time: 2025-05-02 15:17:05.821487397 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#365 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h7m of being in review and 2 comments.
+  hoc: 4
+  issue: 365
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4033
+  what: code-was-contributed
+  when: *123
+  where: github
+  who: 29139614
+- _id: 57658
+  _job: 19025
+  _time: 2025-05-02 15:17:05.827828208 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#364 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 58m19s of being in review and 2 comments.
+  hoc: 4
+  issue: 364
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3500
+  what: code-was-contributed
+  when: *124
+  where: github
+  who: 29139614
+- _id: 57659
+  _time: 2025-05-02 16:12:22.938766919 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/net.sf.saxon-saxon-he-12.x
+  details: The pull request jcabi/jcabi-matchers#130 has been opened by @renovate[bot].
+  event_id: 49303906867
+  event_type: PullRequestEvent
+  issue: 130
+  repository: 19194296
+  what: pull-was-opened
+  when: 2025-05-02 15:31:08.000000000 Z
+  where: github
+  who: 29139614
+- _id: 57660
+  _time: 2025-05-02 16:12:23.207275513 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49303906867
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 57661
+  _time: 2025-05-02 16:12:23.811896934 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48607224659
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 57662
+  _time: 2025-05-02 16:12:24.404079454 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48466020643
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 57663
+  _time: 2025-05-02 16:12:24.996363670 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48604272267
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 57664
+  _time: 2025-05-02 16:12:25.702223933 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48892323386
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 57665
+  _time: 2025-05-02 16:12:27.494078211 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49303431597
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 57666
+  _time: 2025-05-02 16:12:28.075567173 Z
+  _version: 0.10.1/0.42.0/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 57667
+  _time: 2025-05-02 16:12:28.666833868 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49256369632
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 57668
+  _time: 2025-05-02 16:12:29.268109596 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48558929760
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 57669
+  _time: 2025-05-02 16:12:29.846571151 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12587970
+  what: events-were-scanned
+  where: github
+- _id: 57670
+  _time: 2025-05-02 16:12:30.455906757 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 57671
+  _time: 2025-05-02 16:12:31.095370079 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49255852585
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 57672
+  _time: 2025-05-02 16:12:31.731901258 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49257899876
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 57673
+  _time: 2025-05-02 16:12:32.370700972 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48607203787
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 57674
+  _time: 2025-05-02 16:12:33.141824959 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49192346351
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 57675
+  _time: 2025-05-02 16:12:38.705454561 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#362 has been closed by @rultor, with 4
+    HoC and 2 comments.
+  event_id: 49294514754
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 362
+  repository: 13717355
+  succeeded_builds: 13
+  what: pull-was-merged
+  when: 2025-05-02 10:40:08.000000000 Z
+  where: github
+  who: 8086956
+- _id: 57676
+  _time: 2025-05-02 16:18:05.471007315 Z
+  _version: 0.10.1/0.42.0/
+  average_build_duration: 924.516290726817
+  average_build_mttr: 0
+  average_build_success_rate: 0.8145363408521303
+  average_issue_lifetime: 96534.0
+  average_pull_files_size: 1.125
+  average_pull_hoc_size: 3.5
+  average_pull_lifetime: 2054713.1416666666
+  average_release_commits_size: 0
+  average_release_hoc_size: 0
+  average_release_interval: 0
+  average_review_size: 0.0547945205479452
+  average_review_time: 89833.0
+  average_reviewers_per_pull: 0.0410958904109589
+  average_reviews_per_pull: 0.0547945205479452
+  since: 2025-03-24 17:09:19.042747741 Z
+  what: quality-of-service
+  when: 2025-03-31 17:09:19.042711463 Z
