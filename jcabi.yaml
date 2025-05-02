@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 195.708843342
+  seconds: 349.940118114
   version: 0.42.0
   what: judges-summary
-  when: 2025-05-02 08:17:04.906259982 Z
+  when: 2025-05-02 09:16:44.175531200 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -13257,7 +13258,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-01 23:36:48.000000000 Z
+  when: &112 2025-05-01 23:36:48.000000000 Z
   where: github
   who: 8086956
 - _id: 57000
@@ -13320,7 +13321,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-01 21:53:45.000000000 Z
+  when: &113 2025-05-01 21:53:45.000000000 Z
   where: github
   who: 8086956
 - _id: 57003
@@ -13420,7 +13421,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 02:25:37.000000000 Z
+  when: &114 2025-05-02 02:25:37.000000000 Z
   where: github
   who: 8086956
 - _id: 57032
@@ -13497,7 +13498,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 01:14:49.000000000 Z
+  when: &115 2025-05-02 01:14:49.000000000 Z
   where: github
   who: 8086956
 - _id: 57106
@@ -13530,25 +13531,11 @@
   repository: 12947626
   what: events-were-scanned
   where: github
-- _id: 57110
-  _time: 2025-05-02 08:14:02.076686730 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48558929760
-  repository: 12591382
-  what: events-were-scanned
-  where: github
 - _id: 57111
   _time: 2025-05-02 08:14:02.686429206 Z
   _version: 0.10.1/0.42.0/
   latest: 48466020643
   repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 57112
-  _time: 2025-05-02 08:14:03.291421543 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49257899876
-  repository: 13624455
   what: events-were-scanned
   where: github
 - _id: 57113
@@ -13653,23 +13640,9 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 04:02:04.000000000 Z
+  when: &116 2025-05-02 04:02:04.000000000 Z
   where: github
   who: 8086956
-- _id: 57121
-  _time: 2025-05-02 08:14:33.501460791 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49284727109
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 57122
-  _time: 2025-05-02 08:14:34.052817175 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48418119853
-  repository: 12584841
-  what: events-were-scanned
-  where: github
 - _id: 57123
   _time: 2025-05-02 08:14:34.608990252 Z
   _version: 0.10.1/0.42.0/
@@ -13682,13 +13655,6 @@
   _version: 0.10.1/0.42.0/
   latest: 48418129030
   repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 57125
-  _time: 2025-05-02 08:14:35.760988897 Z
-  _version: 0.10.1/0.42.0/
-  latest: 47970143643
-  repository: 20635353
   what: events-were-scanned
   where: github
 - _id: 57126
@@ -13761,25 +13727,11 @@
   repository: 12590813
   what: events-were-scanned
   where: github
-- _id: 57136
-  _time: 2025-05-02 08:14:42.441124018 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48418128296
-  repository: 16403286
-  what: events-were-scanned
-  where: github
 - _id: 57137
   _time: 2025-05-02 08:14:43.159761839 Z
   _version: 0.10.1/0.42.0/
   latest: 48892323386
   repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 57138
-  _time: 2025-05-02 08:14:43.745991226 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48612534599
-  repository: 12591356
   what: events-were-scanned
   where: github
 - _id: 57139
@@ -13801,13 +13753,6 @@
   _version: 0.10.1/0.42.0/
   latest: 49288629639
   repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 57142
-  _time: 2025-05-02 08:14:47.444102705 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48154398831
-  repository: 12590128
   what: events-were-scanned
   where: github
 - _id: 57143
@@ -14099,4 +14044,212 @@
   latest: 1
   repository: 13717355
   what: min-issue-was-found
+  where: github
+- _id: 57222
+  _job: 18991
+  _time: 2025-05-02 08:17:21.477211279 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#350 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 55m8s of being in review and 2 comments.
+  hoc: 4
+  is_human: 0
+  issue: 350
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3309
+  what: code-was-contributed
+  when: *112
+  where: github
+  who: 29139614
+- _id: 57223
+  _job: 18991
+  _time: 2025-05-02 08:17:21.699980139 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#347 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h9m of being in review and 2 comments.
+  hoc: 4
+  is_human: 0
+  issue: 347
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4161
+  what: code-was-contributed
+  when: *113
+  where: github
+  who: 29139614
+- _id: 57224
+  _job: 18991
+  _time: 2025-05-02 08:17:21.706662459 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#353 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h10m of being in review and 2 comments.
+  hoc: 4
+  is_human: 0
+  issue: 353
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4217
+  what: code-was-contributed
+  when: *114
+  where: github
+  who: 29139614
+- _id: 57225
+  _job: 18991
+  _time: 2025-05-02 08:17:21.713009919 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#352 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h37m of being in review and 2 comments.
+  hoc: 4
+  is_human: 0
+  issue: 352
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 5836
+  what: code-was-contributed
+  when: *115
+  where: github
+  who: 29139614
+- _id: 57226
+  _job: 18991
+  _time: 2025-05-02 08:17:21.719290639 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#355 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h35m of being in review and 2 comments.
+  hoc: 4
+  is_human: 0
+  issue: 355
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 5760
+  what: code-was-contributed
+  when: *116
+  where: github
+  who: 29139614
+- _id: 57227
+  _time: 2025-05-02 09:11:04.555946157 Z
+  _version: 0.10.1/0.42.0/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 57228
+  _time: 2025-05-02 09:11:05.025162010 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48558929760
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 57229
+  _time: 2025-05-02 09:11:05.477697088 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49257899876
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 57230
+  _time: 2025-05-02 09:11:05.989746855 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48418128296
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 57231
+  _time: 2025-05-02 09:11:06.509780537 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48418119853
+  repository: 12584841
+  what: events-were-scanned
+  where: github
+- _id: 57232
+  _time: 2025-05-02 09:11:07.050763445 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 57233
+  _time: 2025-05-02 09:11:08.049811861 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 57234
+  _time: 2025-05-02 09:11:11.788466293 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#305 has been closed by @renovate[bot],
+    with 4 HoC and 3 comments.
+  event_id: 49286387215
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  is_human: 0
+  issue: 305
+  repository: 13717355
+  succeeded_builds: 247
+  what: pull-was-closed
+  when: 2025-05-02 05:37:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 57235
+  _time: 2025-05-02 09:13:26.714770317 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-replacement
+  details: The pull request jcabi/jcabi-xml#358 has been opened by @renovate[bot].
+  event_id: 49286386368
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 358
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-02 05:37:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 57236
+  _time: 2025-05-02 09:13:26.740322918 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#356 has been closed by @rultor, with 4
+    HoC and 2 comments.
+  event_id: 49286379488
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  is_human: 0
+  issue: 356
+  repository: 13717355
+  succeeded_builds: 13
+  what: pull-was-merged
+  when: 2025-05-02 05:37:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 57237
+  _time: 2025-05-02 09:13:44.093482064 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49287814879
+  repository: 13717355
+  what: events-were-scanned
   where: github
