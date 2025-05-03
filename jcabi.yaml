@@ -2,12 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge github-events stopped by timeout after 3m0s: execution expired'
+  error:
+  - 'Judge github-events stopped by timeout after 3m0s: execution expired'
+  - 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 306.809262315
+  seconds: 360.066530657
   version: 0.42.0
   what: judges-summary
-  when: 2025-05-03 21:13:51.167140663 Z
+  when: 2025-05-03 22:15:06.886468372 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -16779,13 +16781,6 @@
   repository: 12589424
   what: events-were-scanned
   where: github
-- _id: 59242
-  _time: 2025-05-03 19:07:36.389043543 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49303906867
-  repository: 19194296
-  what: events-were-scanned
-  where: github
 - _id: 59245
   _time: 2025-05-03 19:07:37.261420472 Z
   _version: 0.10.1/0.42.0/
@@ -16812,13 +16807,6 @@
   _version: 0.10.1/0.42.0/
   latest: 49192346351
   repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 59257
-  _time: 2025-05-03 19:07:41.011384894 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49254632298
-  repository: 16312153
   what: events-were-scanned
   where: github
 - _id: 59259
@@ -16895,7 +16883,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-03 18:48:57.000000000 Z
+  when: &150 2025-05-03 18:48:57.000000000 Z
   where: github
   who: 8086956
 - _id: 59263
@@ -16958,7 +16946,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-03 17:46:11.000000000 Z
+  when: &151 2025-05-03 17:46:11.000000000 Z
   where: github
   who: 8086956
 - _id: 59266
@@ -17017,13 +17005,6 @@
   repository: 12590126
   what: events-were-scanned
   where: github
-- _id: 59342
-  _time: 2025-05-03 21:08:53.025220769 Z
-  _version: 0.10.1/0.42.0/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
 - _id: 59343
   _time: 2025-05-03 21:08:53.358640336 Z
   _version: 0.10.1/0.42.0/
@@ -17064,13 +17045,6 @@
   _version: 0.10.1/0.42.0/
   latest: 48945608508
   repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 59349
-  _time: 2025-05-03 21:08:56.351777950 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48418129030
-  repository: 13359002
   what: events-were-scanned
   where: github
 - _id: 59350
@@ -17432,3 +17406,65 @@
   since: 2025-04-20 00:51:12.841629525 Z
   what: quality-of-service
   when: 2025-04-27 00:51:12.841580524 Z
+- _id: 59432
+  _job: 19163
+  _time: 2025-05-03 21:14:14.516298451 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#407 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h2m of being in review and 2 comments.
+  hoc: 4
+  issue: 407
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3739
+  what: code-was-contributed
+  when: *150
+  where: github
+  who: 29139614
+- _id: 59433
+  _job: 19163
+  _time: 2025-05-03 21:14:14.731607811 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#405 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 57m11s of being in review and 2 comments.
+  hoc: 4
+  issue: 405
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3432
+  what: code-was-contributed
+  when: *151
+  where: github
+  who: 29139614
+- _id: 59434
+  _time: 2025-05-03 22:09:18.174174601 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49303906867
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 59435
+  _time: 2025-05-03 22:09:18.735156644 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49254632298
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 59436
+  _time: 2025-05-03 22:09:19.301342976 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48418129030
+  repository: 13359002
+  what: events-were-scanned
+  where: github
+- _id: 59437
+  _time: 2025-05-03 22:09:19.937453605 Z
+  _version: 0.10.1/0.42.0/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
