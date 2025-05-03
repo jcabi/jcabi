@@ -2,12 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge github-events stopped by timeout after 3m0s: execution expired'
+  error:
+  - 'Judge github-events stopped by timeout after 3m0s: execution expired'
+  - 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 304.966805686
+  seconds: 360.042026117
   version: 0.42.0
   what: judges-summary
-  when: 2025-05-03 00:50:46.478655269 Z
+  when: 2025-05-03 05:16:04.205858100 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -15124,7 +15126,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 20:41:48.000000000 Z
+  when: &131 2025-05-02 20:41:48.000000000 Z
   where: github
   who: 8086956
 - _id: 58188
@@ -15324,7 +15326,7 @@
   review_comments: 0
   succeeded_builds: 13
   what: pull-was-merged
-  when: 2025-05-02 23:41:57.000000000 Z
+  when: &132 2025-05-02 23:41:57.000000000 Z
   where: github
   who: 8086956
 - _id: 58214
@@ -15655,3 +15657,246 @@
   since: 2025-04-01 20:10:47.343633009 Z
   what: quality-of-service
   when: 2025-04-08 20:10:47.343584248 Z
+- _id: 58289
+  _job: 19072
+  _time: 2025-05-03 00:51:08.761645995 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#377 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 42m31s of being in review and 2 comments.
+  hoc: 4
+  issue: 377
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 2552
+  what: code-was-contributed
+  when: *131
+  where: github
+  who: 29139614
+- _id: 58290
+  _job: 19072
+  _time: 2025-05-03 00:51:09.001041069 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#381 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h2m of being in review and 2 comments.
+  hoc: 4
+  issue: 381
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3749
+  what: code-was-contributed
+  when: *132
+  where: github
+  who: 29139614
+- _id: 58291
+  _time: 2025-05-03 05:10:12.208834504 Z
+  _version: 0.10.1/0.42.0/
+  branch: up
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#388 has been closed by @github-actions[bot],
+    with 4 HoC and 0 comments.
+  event_id: 49318583254
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 388
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2025-05-03 03:55:16.000000000 Z
+  where: github
+  who: 41898282
+- _id: 58292
+  _time: 2025-05-03 05:10:19.850907084 Z
+  _version: 0.10.1/0.42.0/
+  branch: up
+  details: The pull request jcabi/jcabi-xml#388 has been opened by @github-actions[bot].
+  event_id: 49318582768
+  event_type: PullRequestEvent
+  issue: 388
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-03 03:55:13.000000000 Z
+  where: github
+  who: 41898282
+- _id: 58293
+  _time: 2025-05-03 05:10:19.925342514 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-2.x
+  details: The pull request jcabi/jcabi-xml#387 has been opened by @renovate[bot].
+  event_id: 49318581142
+  event_type: PullRequestEvent
+  issue: 387
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-03 03:55:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 58294
+  _time: 2025-05-03 05:10:20.093303918 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#386 has been closed by @rultor, with 4
+    HoC and 2 comments.
+  event_id: 49318577436
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 386
+  repository: 13717355
+  succeeded_builds: 13
+  what: pull-was-merged
+  when: 2025-05-03 03:54:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 58295
+  _time: 2025-05-03 05:10:29.348197851 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#305 has been closed by @renovate[bot],
+    with 4 HoC and 3 comments.
+  event_id: 49317562060
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 305
+  repository: 13717355
+  succeeded_builds: 364
+  what: pull-was-closed
+  when: 2025-05-03 02:08:18.000000000 Z
+  where: github
+  who: 29139614
+- _id: 58296
+  _time: 2025-05-03 05:12:24.079976181 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-replacement
+  details: The pull request jcabi/jcabi-xml#386 has been opened by @renovate[bot].
+  event_id: 49317561358
+  event_type: PullRequestEvent
+  issue: 386
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-03 02:08:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 58297
+  _time: 2025-05-03 05:12:24.112318796 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#384 has been closed by @rultor, with 4
+    HoC and 2 comments.
+  event_id: 49317556358
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 384
+  repository: 13717355
+  succeeded_builds: 13
+  what: pull-was-merged
+  when: 2025-05-03 02:07:43.000000000 Z
+  where: github
+  who: 8086956
+- _id: 58298
+  _time: 2025-05-03 05:12:33.552173278 Z
+  _version: 0.10.1/0.42.0/
+  branch: up
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#385 has been closed by @github-actions[bot],
+    with 4 HoC and 0 comments.
+  event_id: 49316907466
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 385
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2025-05-03 01:06:24.000000000 Z
+  where: github
+  who: 41898282
+- _id: 58299
+  _time: 2025-05-03 05:12:34.221009065 Z
+  _version: 0.10.1/0.42.0/
+  branch: up
+  details: The pull request jcabi/jcabi-xml#385 has been opened by @github-actions[bot].
+  event_id: 49316905029
+  event_type: PullRequestEvent
+  issue: 385
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-03 01:06:14.000000000 Z
+  where: github
+  who: 41898282
+- _id: 58300
+  _time: 2025-05-03 05:12:34.267299784 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-2.x
+  details: The pull request jcabi/jcabi-xml#384 has been opened by @renovate[bot].
+  event_id: 49316902953
+  event_type: PullRequestEvent
+  issue: 384
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-03 01:06:00.000000000 Z
+  where: github
+  who: 29139614
+- _id: 58301
+  _time: 2025-05-03 05:12:34.384302372 Z
+  _version: 0.10.1/0.42.0/
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#383 has been closed by @rultor, with 4
+    HoC and 2 comments.
+  event_id: 49316897129
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 4
+  issue: 383
+  repository: 13717355
+  succeeded_builds: 13
+  what: pull-was-merged
+  when: 2025-05-03 01:05:30.000000000 Z
+  where: github
+  who: 8086956
+- _id: 58302
+  _time: 2025-05-03 05:13:04.204198837 Z
+  _version: 0.10.1/0.42.0/
+  since: 2025-04-26 05:13:04.204355520 Z
+  what: quality-of-service
+  when: 2025-05-03 05:13:04.204319062 Z
