@@ -2,12 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 257.776159832
+  seconds: 106.550753681
   version: 0.42.0
   what: judges-summary
-  when: 2025-05-04 18:16:44.448047384 Z
+  when: 2025-05-04 19:09:22.000609974 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -14677,20 +14676,6 @@
   when: &131 2025-05-02 20:41:48.000000000 Z
   where: github
   who: 8086956
-- _id: 58195
-  _time: 2025-05-02 23:13:01.886024643 Z
-  _version: 0.10.1/0.42.0/
-  average_issue_lifetime: 0
-  average_pull_files_size: 1.9090909090909092
-  average_pull_hoc_size: 6.090909090909091
-  average_pull_lifetime: 2105.4285714285716
-  average_pull_rejection_rate: 0.23893805309734514
-  average_release_commits_size: 0
-  average_release_hoc_size: 0
-  average_release_interval: 0
-  since: 2025-03-30 20:10:41.001799409 Z
-  what: quality-of-service
-  when: 2025-04-06 20:10:41.001767298 Z
 - _id: 58211
   _time: 2025-05-03 00:45:54.958065203 Z
   _version: 0.10.1/0.42.0/
@@ -17412,13 +17397,6 @@
   when: *159
   where: github
   who: 29139614
-- _id: 59950
-  _time: 2025-05-04 06:16:57.013453141 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12589687
-  what: min-issue-was-found
-  where: github
 - _id: 60106
   _time: 2025-05-04 10:10:28.540511384 Z
   _version: 0.10.1/0.42.0/
@@ -17589,53 +17567,11 @@
   repository: 15208785
   what: min-issue-was-found
   where: github
-- _id: 60200
-  _time: 2025-05-04 10:13:28.827939484 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12262782
-  what: min-issue-was-found
-  where: github
 - _id: 60201
   _time: 2025-05-04 10:13:28.854177106 Z
   _version: 0.10.1/0.42.0/
   latest: 0
   repository: 16403286
-  what: min-issue-was-found
-  where: github
-- _id: 60207
-  _time: 2025-05-04 10:13:29.000058447 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12590126
-  what: min-issue-was-found
-  where: github
-- _id: 60208
-  _time: 2025-05-04 10:13:29.021601296 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 4174608
-  what: min-issue-was-found
-  where: github
-- _id: 60209
-  _time: 2025-05-04 10:13:29.043328352 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591339
-  what: min-issue-was-found
-  where: github
-- _id: 60210
-  _time: 2025-05-04 10:13:29.065003811 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 25780072
-  what: min-issue-was-found
-  where: github
-- _id: 60212
-  _time: 2025-05-04 10:13:29.102458766 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 19194304
   what: min-issue-was-found
   where: github
 - _id: 60215
@@ -19064,13 +19000,6 @@
   repository: 510979198
   what: min-issue-was-found
   where: github
-- _id: 60457
-  _time: 2025-05-04 15:11:55.842028558 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12584841
-  what: min-issue-was-found
-  where: github
 - _id: 60459
   _time: 2025-05-04 15:11:55.885464831 Z
   _version: 0.10.1/0.42.0/
@@ -19090,121 +19019,6 @@
   when: 2025-05-04 13:08:29.000000000 Z
   where: github
   who: 526301
-- _id: 60531
-  _job: 19233
-  _time: 2025-05-04 15:12:32.364219102 Z
-  _version: 0.10.1/0.42.0/0.7.0
-  award: -16
-  commit: b810764209b158ddf88f686a267ecffaa89ad296
-  default_branch: master
-  details: It's time to punish @yegor256 for pushing to the default branch 'master'
-    in jcabi/jcabi-dynamo, the penalty amount is -16.
-  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
-    to push directly to the default branch `master`. You''ve earned -16 points. Next
-    time, create a new branch, push your changes over there, then make a pull request
-    and merge it. Even if you are flying solo, contributing via pull requests is a
-    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
-    Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
-  href: https://github.com/jcabi/jcabi-dynamo/commit/b810764209b158ddf88f686a267ecffaa89ad296/#commitcomment-156360632
-  is_human: 1
-  repository: 12589687
-  what: push-to-master-was-punished
-  when: 2025-05-04 15:12:32.367515694 Z
-  where: github
-  who: 526301
-  why: Pushed b81076420 to the default branch 'master' in jcabi/jcabi-dynamo
-- _id: 60532
-  _job: 19233
-  _time: 2025-05-04 15:12:32.668639537 Z
-  _version: 0.10.1/0.42.0/0.7.0
-  award: -16
-  commit: abeb5e1eb517400703f2d2ff566d39c845251bbe
-  default_branch: master
-  details: It's time to punish @yegor256 for pushing to the default branch 'master'
-    in jcabi/jcabi, the penalty amount is -16.
-  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
-    to push directly to the default branch `master`. You''ve earned -16 points. Next
-    time, create a new branch, push your changes over there, then make a pull request
-    and merge it. Even if you are flying solo, contributing via pull requests is a
-    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
-    Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
-  href: https://github.com/jcabi/jcabi/commit/abeb5e1eb517400703f2d2ff566d39c845251bbe/#commitcomment-156360635
-  is_human: 1
-  repository: 4174608
-  what: push-to-master-was-punished
-  when: 2025-05-04 15:12:32.683305503 Z
-  where: github
-  who: 526301
-  why: Pushed abeb5e1eb to the default branch 'master' in jcabi/jcabi
-- _id: 60533
-  _job: 19233
-  _time: 2025-05-04 15:12:32.882202822 Z
-  _version: 0.10.1/0.42.0/0.7.0
-  award: -16
-  commit: 899f84a82c93fa959778f759ac6118d7eb4b30df
-  default_branch: master
-  details: It's time to punish @yegor256 for pushing to the default branch 'master'
-    in jcabi/jcabi-maven-plugin, the penalty amount is -16.
-  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
-    to push directly to the default branch `master`. You''ve earned -16 points. Next
-    time, create a new branch, push your changes over there, then make a pull request
-    and merge it. Even if you are flying solo, contributing via pull requests is a
-    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
-    Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
-  href: https://github.com/jcabi/jcabi-maven-plugin/commit/899f84a82c93fa959778f759ac6118d7eb4b30df/#commitcomment-156360638
-  is_human: 1
-  repository: 12591138
-  what: push-to-master-was-punished
-  when: 2025-05-04 15:12:32.931612964 Z
-  where: github
-  who: 526301
-  why: Pushed 899f84a82 to the default branch 'master' in jcabi/jcabi-maven-plugin
-- _id: 60534
-  _job: 19233
-  _time: 2025-05-04 15:12:33.080987860 Z
-  _version: 0.10.1/0.42.0/0.7.0
-  award: -16
-  commit: 871af13481ce3350a7200ec4437ecc304b046618
-  default_branch: master
-  details: It's time to punish @yegor256 for pushing to the default branch 'master'
-    in jcabi/jcabi-jdbc, the penalty amount is -16.
-  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
-    to push directly to the default branch `master`. You''ve earned -16 points. Next
-    time, create a new branch, push your changes over there, then make a pull request
-    and merge it. Even if you are flying solo, contributing via pull requests is a
-    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
-    Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
-  href: https://github.com/jcabi/jcabi-jdbc/commit/871af13481ce3350a7200ec4437ecc304b046618/#commitcomment-156360639
-  is_human: 1
-  repository: 12587702
-  what: push-to-master-was-punished
-  when: 2025-05-04 15:12:33.084715862 Z
-  where: github
-  who: 526301
-  why: Pushed 871af1348 to the default branch 'master' in jcabi/jcabi-jdbc
-- _id: 60535
-  _job: 19233
-  _time: 2025-05-04 15:12:33.243501942 Z
-  _version: 0.10.1/0.42.0/0.7.0
-  award: -16
-  commit: 9c888837d2650d8d0bf0668fbbd20508fe1fc01d
-  default_branch: master
-  details: It's time to punish @yegor256 for pushing to the default branch 'master'
-    in jcabi/jcabi-immutable, the penalty amount is -16.
-  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
-    to push directly to the default branch `master`. You''ve earned -16 points. Next
-    time, create a new branch, push your changes over there, then make a pull request
-    and merge it. Even if you are flying solo, contributing via pull requests is a
-    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
-    Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
-  href: https://github.com/jcabi/jcabi-immutable/commit/9c888837d2650d8d0bf0668fbbd20508fe1fc01d/#commitcomment-156360641
-  is_human: 1
-  repository: 16403286
-  what: push-to-master-was-punished
-  when: 2025-05-04 15:12:33.261289621 Z
-  where: github
-  who: 526301
-  why: Pushed 9c888837d to the default branch 'master' in jcabi/jcabi-immutable
 - _id: 60536
   _job: 19233
   _time: 2025-05-04 15:12:33.382063564 Z
@@ -19220,6 +19034,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-immutable/commit/95a3f319c2fa0c3508d16e2308d07d7214a27b33/#commitcomment-156364808
   is_human: 1
   repository: 16403286
   what: push-to-master-was-punished
@@ -19242,6 +19057,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-github/commit/fbdb90eeb55ee3d0fc4ca51cd4644393e28b215c/#commitcomment-156364810
   is_human: 1
   repository: 14204295
   what: push-to-master-was-punished
@@ -19264,6 +19080,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-github/commit/e6ca897d333cf2ef80a86278f4184166250d1b46/#commitcomment-156364812
   is_human: 1
   repository: 14204295
   what: push-to-master-was-punished
@@ -19286,6 +19103,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-jdbc/commit/bbcef8e5784c1bd83ba2fb52c82138ef02552167/#commitcomment-156364881
   is_human: 1
   repository: 12587702
   what: push-to-master-was-punished
@@ -19308,6 +19126,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/e1629315329038b51fe26bc91d75f49432cfae04/#commitcomment-156364882
   is_human: 1
   repository: 12589687
   what: push-to-master-was-punished
@@ -19330,6 +19149,7 @@
     and merge it. Even if you are flying solo, contributing via pull requests is a
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running balance is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  href: https://github.com/jcabi/jcabi-odesk/commit/4b2097aa2788a66a38ab4f7ccd479941ca0767c8/#commitcomment-156364884
   is_human: 1
   repository: 15208785
   what: push-to-master-was-punished
@@ -20165,13 +19985,6 @@
   when: &166 2025-05-04 15:53:57.000000000 Z
   where: github
   who: 8086956
-- _id: 60645
-  _time: 2025-05-04 16:12:16.729543851 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 23238769
-  what: min-issue-was-found
-  where: github
 - _id: 60651
   _job: 19238
   _time: 2025-05-04 16:12:46.803204277 Z
@@ -20236,13 +20049,6 @@
   when: 2025-05-04 16:00:23.000000000 Z
   where: github
   who: 29139614
-- _id: 60686
-  _time: 2025-05-04 17:08:37.918630949 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591371
-  what: min-issue-was-found
-  where: github
 - _id: 60687
   _time: 2025-05-04 17:08:37.945478001 Z
   _version: 0.10.1/0.42.0/
@@ -20250,88 +20056,11 @@
   repository: 13359002
   what: min-issue-was-found
   where: github
-- _id: 60688
-  _time: 2025-05-04 17:08:37.967204463 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591356
-  what: min-issue-was-found
-  where: github
-- _id: 60689
-  _time: 2025-05-04 17:08:38.002106972 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591138
-  what: min-issue-was-found
-  where: github
-- _id: 60690
-  _time: 2025-05-04 17:08:38.032515933 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 14204295
-  what: min-issue-was-found
-  where: github
-- _id: 60691
-  _time: 2025-05-04 17:08:38.058860323 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591347
-  what: min-issue-was-found
-  where: github
-- _id: 60692
-  _time: 2025-05-04 17:08:38.082705195 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 13624455
-  what: min-issue-was-found
-  where: github
-- _id: 60693
-  _time: 2025-05-04 17:08:38.104218681 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12947626
-  what: min-issue-was-found
-  where: github
 - _id: 60694
   _time: 2025-05-04 17:08:38.136760380 Z
   _version: 0.10.1/0.42.0/
   latest: 0
   repository: 14093966
-  what: min-issue-was-found
-  where: github
-- _id: 60695
-  _time: 2025-05-04 17:08:38.161692309 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587702
-  what: min-issue-was-found
-  where: github
-- _id: 60696
-  _time: 2025-05-04 17:08:38.186372661 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12590128
-  what: min-issue-was-found
-  where: github
-- _id: 60697
-  _time: 2025-05-04 17:08:38.207680997 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 16312153
-  what: min-issue-was-found
-  where: github
-- _id: 60698
-  _time: 2025-05-04 17:08:38.238009980 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587970
-  what: min-issue-was-found
-  where: github
-- _id: 60699
-  _time: 2025-05-04 17:08:38.263199477 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 19194296
   what: min-issue-was-found
   where: github
 - _id: 60700
@@ -20347,132 +20076,6 @@
   latest: 1
   repository: 12590813
   what: min-issue-was-found
-  where: github
-- _id: 60702
-  _time: 2025-05-04 18:12:34.106467811 Z
-  _version: 0.10.1/0.42.0/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
-- _id: 60703
-  _time: 2025-05-04 18:12:34.464825990 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336962087
-  repository: 12591371
-  what: events-were-scanned
-  where: github
-- _id: 60704
-  _time: 2025-05-04 18:12:34.806632681 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336486840
-  repository: 12590126
-  what: events-were-scanned
-  where: github
-- _id: 60705
-  _time: 2025-05-04 18:12:35.195313688 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336506946
-  repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 60706
-  _time: 2025-05-04 18:12:36.425254043 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341235299
-  repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 60707
-  _time: 2025-05-04 18:12:36.835111875 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341235780
-  repository: 12591138
-  what: events-were-scanned
-  where: github
-- _id: 60708
-  _time: 2025-05-04 18:12:37.318899431 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336536811
-  repository: 23238769
-  what: events-were-scanned
-  where: github
-- _id: 60709
-  _time: 2025-05-04 18:12:37.725324658 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48604272267
-  repository: 12262782
-  what: events-were-scanned
-  where: github
-- _id: 60710
-  _time: 2025-05-04 18:12:38.118367335 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48154398831
-  repository: 12590128
-  what: events-were-scanned
-  where: github
-- _id: 60711
-  _time: 2025-05-04 18:12:38.446617529 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 60712
-  _time: 2025-05-04 18:12:38.781640959 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48612534599
-  repository: 12591356
-  what: events-were-scanned
-  where: github
-- _id: 60713
-  _time: 2025-05-04 18:12:39.152782096 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336521057
-  repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 60714
-  _time: 2025-05-04 18:12:39.549097352 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336534153
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 60715
-  _time: 2025-05-04 18:12:39.916063623 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341236436
-  repository: 16403286
-  what: events-were-scanned
-  where: github
-- _id: 60716
-  _time: 2025-05-04 18:12:40.316370759 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49339267863
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 60717
-  _time: 2025-05-04 18:12:40.692687476 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336530734
-  repository: 14093966
-  what: events-were-scanned
-  where: github
-- _id: 60718
-  _time: 2025-05-04 18:12:41.023208575 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336524085
-  repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 60719
-  _time: 2025-05-04 18:12:41.436742121 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336495310
-  repository: 12947626
-  what: events-were-scanned
   where: github
 - _id: 60720
   _time: 2025-05-04 18:12:42.766906187 Z
@@ -20496,7 +20099,7 @@
   review_comments: 0
   succeeded_builds: 12
   what: pull-was-merged
-  when: 2025-05-04 17:51:16.000000000 Z
+  when: &167 2025-05-04 17:51:16.000000000 Z
   where: github
   who: 8086956
 - _id: 60721
@@ -20545,34 +20148,6 @@
   when: 2025-05-04 17:11:30.000000000 Z
   where: github
   who: 526301
-- _id: 60724
-  _time: 2025-05-04 18:12:58.370588616 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49342008644
-  repository: 12590813
-  what: events-were-scanned
-  where: github
-- _id: 60725
-  _time: 2025-05-04 18:12:58.765165387 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336515054
-  repository: 12584841
-  what: events-were-scanned
-  where: github
-- _id: 60726
-  _time: 2025-05-04 18:12:59.131360816 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49337684187
-  repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 60727
-  _time: 2025-05-04 18:12:59.456011254 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49339679569
-  repository: 12591347
-  what: events-were-scanned
-  where: github
 - _id: 60728
   _time: 2025-05-04 18:12:59.843898610 Z
   _version: 0.10.1/0.42.0/
@@ -20591,41 +20166,6 @@
   when: 2025-05-04 17:11:15.000000000 Z
   where: github
   who: 526301
-- _id: 60729
-  _time: 2025-05-04 18:13:00.024768882 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341266877
-  repository: 19194296
-  what: events-were-scanned
-  where: github
-- _id: 60730
-  _time: 2025-05-04 18:13:00.385126108 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336539463
-  repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 60731
-  _time: 2025-05-04 18:13:00.740558853 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49336498030
-  repository: 25780072
-  what: events-were-scanned
-  where: github
-- _id: 60732
-  _time: 2025-05-04 18:13:01.110396489 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49340108107
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 60733
-  _time: 2025-05-04 18:13:01.506422669 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 510979198
-  what: events-were-scanned
-  where: github
 - _id: 60734
   _time: 2025-05-04 18:13:03.305155205 Z
   _version: 0.10.1/0.42.0/
@@ -20644,34 +20184,6 @@
   when: 2025-05-04 17:11:48.000000000 Z
   where: github
   who: 526301
-- _id: 60735
-  _time: 2025-05-04 18:13:03.466326959 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341268836
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 60736
-  _time: 2025-05-04 18:13:03.977100388 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341236104
-  repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 60737
-  _time: 2025-05-04 18:13:04.366094933 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49341234950
-  repository: 12589687
-  what: events-were-scanned
-  where: github
-- _id: 60738
-  _time: 2025-05-04 18:13:04.721316804 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
 - _id: 60739
   _time: 2025-05-04 18:16:18.898826510 Z
   _version: 0.10.1/0.42.0/
@@ -20889,8 +20401,545 @@
   repository: 13717355
   what: labels-were-scanned
   where: github
-- _id: 60808
-  _time: 2025-05-04 18:16:44.423710986 Z
+- _id:
+  - 60809
+  - 60531
+  _job:
+  - 19248
+  - 19233
+  _time:
+  - 2025-05-04 18:17:01.236915402 Z
+  - 2025-05-04 15:12:32.364219102 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: b810764209b158ddf88f686a267ecffaa89ad296
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-dynamo, the penalty amount is -16.
+  href: https://github.com/jcabi/jcabi-dynamo/commit/b810764209b158ddf88f686a267ecffaa89ad296/#commitcomment-156360632
+  is_human: 1
+  repository: 12589687
+  what: push-to-master-was-punished
+  when: 2025-05-04 15:12:32.367515694 Z
+  where: github
+  who: 526301
+  why: Pushed b81076420 to the default branch 'master' in jcabi/jcabi-dynamo
+- _id:
+  - 60810
+  - 60532
+  _job:
+  - 19248
+  - 19233
+  _time:
+  - 2025-05-04 18:17:01.291722761 Z
+  - 2025-05-04 15:12:32.668639537 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: abeb5e1eb517400703f2d2ff566d39c845251bbe
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi, the penalty amount is -16.
+  href: https://github.com/jcabi/jcabi/commit/abeb5e1eb517400703f2d2ff566d39c845251bbe/#commitcomment-156360635
+  is_human: 1
+  repository: 4174608
+  what: push-to-master-was-punished
+  when: 2025-05-04 15:12:32.683305503 Z
+  where: github
+  who: 526301
+  why: Pushed abeb5e1eb to the default branch 'master' in jcabi/jcabi
+- _id:
+  - 60811
+  - 60533
+  _job:
+  - 19248
+  - 19233
+  _time:
+  - 2025-05-04 18:17:01.309170972 Z
+  - 2025-05-04 15:12:32.882202822 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: 899f84a82c93fa959778f759ac6118d7eb4b30df
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-maven-plugin, the penalty amount is -16.
+  href: https://github.com/jcabi/jcabi-maven-plugin/commit/899f84a82c93fa959778f759ac6118d7eb4b30df/#commitcomment-156360638
+  is_human: 1
+  repository: 12591138
+  what: push-to-master-was-punished
+  when: 2025-05-04 15:12:32.931612964 Z
+  where: github
+  who: 526301
+  why: Pushed 899f84a82 to the default branch 'master' in jcabi/jcabi-maven-plugin
+- _id:
+  - 60812
+  - 60534
+  _job:
+  - 19248
+  - 19233
+  _time:
+  - 2025-05-04 18:17:01.327317675 Z
+  - 2025-05-04 15:12:33.080987860 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: 871af13481ce3350a7200ec4437ecc304b046618
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-jdbc, the penalty amount is -16.
+  href: https://github.com/jcabi/jcabi-jdbc/commit/871af13481ce3350a7200ec4437ecc304b046618/#commitcomment-156360639
+  is_human: 1
+  repository: 12587702
+  what: push-to-master-was-punished
+  when: 2025-05-04 15:12:33.084715862 Z
+  where: github
+  who: 526301
+  why: Pushed 871af1348 to the default branch 'master' in jcabi/jcabi-jdbc
+- _id:
+  - 60813
+  - 60535
+  _job:
+  - 19248
+  - 19233
+  _time:
+  - 2025-05-04 18:17:01.348125888 Z
+  - 2025-05-04 15:12:33.243501942 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: 9c888837d2650d8d0bf0668fbbd20508fe1fc01d
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-immutable, the penalty amount is -16.
+  href: https://github.com/jcabi/jcabi-immutable/commit/9c888837d2650d8d0bf0668fbbd20508fe1fc01d/#commitcomment-156360641
+  is_human: 1
+  repository: 16403286
+  what: push-to-master-was-punished
+  when: 2025-05-04 15:12:33.261289621 Z
+  where: github
+  who: 526301
+  why: Pushed 9c888837d to the default branch 'master' in jcabi/jcabi-immutable
+- _id: 60814
+  _job: 19248
+  _time: 2025-05-04 18:17:15.233207966 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  award: -16
+  commit: bc9c703c0261bd27f3db8edc1a6efb90376e97c3
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-matchers, the penalty amount is -16.
+  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
+    to push directly to the default branch `master`. You''ve earned -16 points. Next
+    time, create a new branch, push your changes over there, then make a pull request
+    and merge it. Even if you are flying solo, contributing via pull requests is a
+    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
+    Your running balance is [-976](https://jcabi.github.io/jcabi/jcabi-vitals.html). '
+  is_human: 1
+  repository: 19194296
+  what: push-to-master-was-punished
+  when: 2025-05-04 18:17:15.237413621 Z
+  where: github
+  who: 526301
+  why: Pushed bc9c703c0 to the default branch 'master' in jcabi/jcabi-matchers
+- _id: 60815
+  _job: 19248
+  _time: 2025-05-04 18:17:17.753765938 Z
+  _version: 0.10.1/0.42.0/0.7.0
+  comments: 2
+  details: The pull request jcabi/jcabi-parent#599 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 38m53s of being in review and 2 comments.
+  hoc: 2
+  is_human: 0
+  issue: 599
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2334
+  what: code-was-contributed
+  when: *167
+  where: github
+  who: 29139614
+- _id: 60816
+  _time: 2025-05-04 19:07:42.604302560 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336962087
+  repository: 12591371
+  what: events-were-scanned
+  where: github
+- _id: 60817
+  _time: 2025-05-04 19:07:42.944776496 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49339679569
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 60818
+  _time: 2025-05-04 19:07:43.349790925 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342069614
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 60819
+  _time: 2025-05-04 19:07:43.680215181 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 60820
+  _time: 2025-05-04 19:07:44.034994290 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342071550
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 60821
+  _time: 2025-05-04 19:07:44.402766015 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336498030
+  repository: 25780072
+  what: events-were-scanned
+  where: github
+- _id: 60822
+  _time: 2025-05-04 19:07:44.801122720 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336530734
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 60823
+  _time: 2025-05-04 19:07:45.307122963 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48604272267
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 60824
+  _time: 2025-05-04 19:07:45.627110853 Z
+  _version: 0.10.1/0.42.0/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 60825
+  _time: 2025-05-04 19:07:46.117584147 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336536811
+  repository: 23238769
+  what: events-were-scanned
+  where: github
+- _id: 60826
+  _time: 2025-05-04 19:07:46.476620123 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342071206
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 60827
+  _time: 2025-05-04 19:07:46.854927108 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336486840
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 60828
+  _time: 2025-05-04 19:07:47.260669122 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342070367
+  repository: 14204295
+  what: events-were-scanned
+  where: github
+- _id: 60829
+  _time: 2025-05-04 19:07:48.517852324 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342068708
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 60830
+  _time: 2025-05-04 19:07:48.822808503 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12587970
+  what: events-were-scanned
+  where: github
+- _id: 60831
+  _time: 2025-05-04 19:07:50.591829131 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49341268836
+  repository: 13717355
+  what: events-were-scanned
+  where: github
+- _id: 60832
+  _time: 2025-05-04 19:07:50.906369083 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 510979198
+  what: events-were-scanned
+  where: github
+- _id: 60833
+  _time: 2025-05-04 19:07:51.228443934 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49340108107
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 60834
+  _time: 2025-05-04 19:07:51.601331006 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336515054
+  repository: 12584841
+  what: events-were-scanned
+  where: github
+- _id: 60835
+  _time: 2025-05-04 19:07:51.992982281 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336495310
+  repository: 12947626
+  what: events-were-scanned
+  where: github
+- _id: 60836
+  _time: 2025-05-04 19:07:52.376915189 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 60837
+  _time: 2025-05-04 19:07:52.804573680 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49339267863
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 60838
+  _time: 2025-05-04 19:07:53.170663478 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336534153
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 60839
+  _time: 2025-05-04 19:07:54.192300709 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342069634
+  repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 60840
+  _time: 2025-05-04 19:07:54.561432063 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49341235780
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 60841
+  _time: 2025-05-04 19:07:54.950700303 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49341266877
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 60842
+  _time: 2025-05-04 19:07:55.437215796 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49342070814
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 60843
+  _time: 2025-05-04 19:07:55.785687246 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336539463
+  repository: 12589424
+  what: events-were-scanned
+  where: github
+- _id: 60844
+  _time: 2025-05-04 19:07:56.172909043 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336506946
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 60845
+  _time: 2025-05-04 19:07:56.587960955 Z
+  _version: 0.10.1/0.42.0/
+  latest: 49336521057
+  repository: 13359002
+  what: events-were-scanned
+  where: github
+- _id: 60846
+  _time: 2025-05-04 19:07:56.968577884 Z
+  _version: 0.10.1/0.42.0/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 60847
+  _time: 2025-05-04 19:09:07.225689695 Z
+  _version: 0.10.1/0.42.0/
+  average_issue_lifetime: 0
+  average_pull_files_size: 1.9090909090909092
+  average_pull_hoc_size: 6.090909090909091
+  average_pull_lifetime: 2105.4285714285716
+  average_pull_rejection_rate: 0.23893805309734514
+  average_release_commits_size: 0
+  average_release_hoc_size: 0
+  average_release_interval: 0
+  average_review_size: 0.031007751937984496
+  average_review_time: 89833.0
+  average_reviewers_per_pull: 0.023255813953488372
+  average_reviews_per_pull: 0.031007751937984496
+  since: 2025-03-30 20:10:41.001799409 Z
+  what: quality-of-service
+  when: 2025-04-06 20:10:41.001767298 Z
+- _id: 60848
+  _time: 2025-05-04 19:09:20.937800171 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12589687
+  what: min-issue-was-found
+  where: github
+- _id: 60849
+  _time: 2025-05-04 19:09:20.963599010 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12591371
+  what: min-issue-was-found
+  where: github
+- _id: 60850
+  _time: 2025-05-04 19:09:20.988428690 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12587702
+  what: min-issue-was-found
+  where: github
+- _id: 60851
+  _time: 2025-05-04 19:09:21.015656964 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 25780072
+  what: min-issue-was-found
+  where: github
+- _id: 60852
+  _time: 2025-05-04 19:09:21.039281255 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 16312153
+  what: min-issue-was-found
+  where: github
+- _id: 60853
+  _time: 2025-05-04 19:09:21.059696209 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12591347
+  what: min-issue-was-found
+  where: github
+- _id: 60854
+  _time: 2025-05-04 19:09:21.085446306 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12587970
+  what: min-issue-was-found
+  where: github
+- _id: 60855
+  _time: 2025-05-04 19:09:21.109378522 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 4174608
+  what: min-issue-was-found
+  where: github
+- _id: 60856
+  _time: 2025-05-04 19:09:21.131335763 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12591339
+  what: min-issue-was-found
+  where: github
+- _id: 60857
+  _time: 2025-05-04 19:09:21.154909890 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12590128
+  what: min-issue-was-found
+  where: github
+- _id: 60858
+  _time: 2025-05-04 19:09:21.179752554 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12947626
+  what: min-issue-was-found
+  where: github
+- _id: 60859
+  _time: 2025-05-04 19:09:21.202946272 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 19194304
+  what: min-issue-was-found
+  where: github
+- _id: 60860
+  _time: 2025-05-04 19:09:21.223463908 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 23238769
+  what: min-issue-was-found
+  where: github
+- _id: 60861
+  _time: 2025-05-04 19:09:21.249786593 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12590126
+  what: min-issue-was-found
+  where: github
+- _id: 60862
+  _time: 2025-05-04 19:09:21.273465005 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 19194296
+  what: min-issue-was-found
+  where: github
+- _id: 60863
+  _time: 2025-05-04 19:09:21.294835862 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 14204295
+  what: min-issue-was-found
+  where: github
+- _id: 60864
+  _time: 2025-05-04 19:09:21.319485606 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 13624455
+  what: min-issue-was-found
+  where: github
+- _id: 60865
+  _time: 2025-05-04 19:09:21.343360815 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12591356
+  what: min-issue-was-found
+  where: github
+- _id: 60866
+  _time: 2025-05-04 19:09:21.366066072 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12262782
+  what: min-issue-was-found
+  where: github
+- _id: 60867
+  _time: 2025-05-04 19:09:21.388783581 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12591138
+  what: min-issue-was-found
+  where: github
+- _id: 60868
+  _time: 2025-05-04 19:09:21.414134664 Z
+  _version: 0.10.1/0.42.0/
+  latest: 0
+  repository: 12584841
+  what: min-issue-was-found
+  where: github
+- _id: 60869
+  _time: 2025-05-04 19:09:21.978900865 Z
   _version: 0.10.1/0.42.0/
   latest: 1
   repository: 13717355
