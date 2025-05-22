@@ -1,15 +1,19 @@
 ---
 - added: 8
-  cycles: 1
+  cycles: 2
   deleted: 8
-  error: 'GET https://api.github.com/user/927387: 403 - API rate limit exceeded for
-    20.42.17.79. (But here''s the good news: Authenticated requests get a higher rate
-    limit. Check out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
+  error:
+  - 'GET https://api.github.com/user/534657: 403 - API rate limit exceeded for 172.183.133.167.
+    (But here''s the good news: Authenticated requests get a higher rate limit. Check
+    out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
+  - 'GET https://api.github.com/user/526301: 403 - API rate limit exceeded for 172.183.133.167.
+    (But here''s the good news: Authenticated requests get a higher rate limit. Check
+    out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
   inserted: 8
-  seconds: 225.112471368
+  seconds: 182.622833309
   version: 0.43.0
   what: judges-summary
-  when: 2025-05-22 21:37:39.206583388 Z
+  when: 2025-05-22 22:42:44.699532378 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -26506,13 +26510,6 @@
   repository: 12587702
   what: events-were-scanned
   where: github
-- _id: 88956
-  _time: 2025-05-22 03:37:16.351198325 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49924798250
-  repository: 12590126
-  what: events-were-scanned
-  where: github
 - _id: 88957
   _time: 2025-05-22 03:37:16.705457938 Z
   _version: 0.10.1/0.42.0/
@@ -26728,3 +26725,10 @@
   _version: 0.10.2/0.43.0/
   what: dimensions-of-terrain
   when: 2025-05-22 21:37:39.048109848 Z
+- _id: 88996
+  _time: 2025-05-22 22:39:47.368464794 Z
+  _version: 0.10.2/0.43.0/
+  latest: 49924798250
+  repository: 12590126
+  what: events-were-scanned
+  where: github
