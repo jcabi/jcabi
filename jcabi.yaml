@@ -1,19 +1,19 @@
 ---
 - added: 8
-  cycles: 1
+  cycles: 2
   deleted: 8
   error:
-  - 'GET https://api.github.com/user/5467276: 403 - API rate limit exceeded for 52.160.165.192.
+  - 'GET https://api.github.com/user/440768: 403 - API rate limit exceeded for 23.98.188.233.
     (But here''s the good news: Authenticated requests get a higher rate limit. Check
     out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
-  - 'GET https://api.github.com/user/526301: 403 - API rate limit exceeded for 52.160.165.192.
+  - 'GET https://api.github.com/user/29793349: 403 - API rate limit exceeded for 23.98.188.233.
     (But here''s the good news: Authenticated requests get a higher rate limit. Check
     out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
   inserted: 8
-  seconds: 133.351985752
+  seconds: 237.26692658
   version: 0.43.0
   what: judges-summary
-  when: 2025-05-22 17:40:10.432700847 Z
+  when: 2025-05-22 18:49:47.342287527 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -26482,13 +26482,6 @@
   repository: 4174608
   what: events-were-scanned
   where: github
-- _id: 88950
-  _time: 2025-05-22 03:37:12.499019148 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49344635182
-  repository: 12591382
-  what: events-were-scanned
-  where: github
 - _id: 88951
   _time: 2025-05-22 03:37:12.871453853 Z
   _version: 0.10.1/0.42.0/
@@ -26706,13 +26699,6 @@
   repository: 13717355
   what: min-issue-was-found
   where: github
-- _id: 88987
-  _time: 2025-05-22 10:42:28.525605043 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49887352597
-  repository: 12589687
-  what: events-were-scanned
-  where: github
 - _id: 88988
   _time: 2025-05-22 10:42:28.740891247 Z
   _version: 0.10.2/0.43.0/
@@ -26725,5 +26711,19 @@
   _version: 0.10.2/0.43.0/
   latest: 49947694817
   repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 88990
+  _time: 2025-05-22 18:45:57.622102794 Z
+  _version: 0.10.2/0.43.0/
+  latest: 49887352597
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 88991
+  _time: 2025-05-22 18:45:57.977282244 Z
+  _version: 0.10.2/0.43.0/
+  latest: 49344635182
+  repository: 12591382
   what: events-were-scanned
   where: github
