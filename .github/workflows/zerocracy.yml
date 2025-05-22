@@ -5,7 +5,9 @@
 name: zerocracy
 'on':
   schedule:
-    - cron: '0 * * * *'
+    - cron: '27 * * * *'
+permissions:
+  contents: write
 concurrency:
   group: zerocracy
   cancel-in-progress: false
@@ -18,16 +20,10 @@ jobs:
       - uses: zerocracy/judges-action@0.8.2
         with:
           token: ${{ secrets.ZEROCRACY_TOKEN }}
-          verbose: false
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           repositories: jcabi/*
           factbase: jcabi.fb
-          cycles: 1
-      - uses: zerocracy/pages-action@0.0.48
+      - uses: zerocracy/pages-action@0.1.0
         with:
-          options: |
-            github_token=${{ secrets.GITHUB_TOKEN }}
-          verbose: true
           factbase: jcabi.fb
           output: pages
       - uses: JamesIves/github-pages-deploy-action@v4.7.3
