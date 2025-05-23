@@ -20,6 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: zerocracy/judges-action@master
         with:
+          dry-run: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ secrets.ZEROCRACY_TOKEN }}
           repositories: jcabi/*
