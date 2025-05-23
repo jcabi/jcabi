@@ -1,12 +1,19 @@
 ---
 - added: 8
-  cycles: 1
+  cycles: 2
   deleted: 8
+  error:
+  - 'GET https://api.github.com/user/1388994: 403 - API rate limit exceeded for 20.42.51.68.
+    (But here''s the good news: Authenticated requests get a higher rate limit. Check
+    out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
+  - 'GET https://api.github.com/user/29139614: 403 - API rate limit exceeded for 20.42.51.68.
+    (But here''s the good news: Authenticated requests get a higher rate limit. Check
+    out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting'
   inserted: 8
-  seconds: 9.877606486
+  seconds: 223.62737414
   version: 0.43.0
   what: judges-summary
-  when: 2025-05-23 04:42:13.834718571 Z
+  when: 2025-05-23 05:43:38.862516919 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -26468,13 +26475,6 @@
   repository: 12590813
   what: labels-were-scanned
   where: github
-- _id: 88949
-  _time: 2025-05-22 03:37:12.167440067 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49972991279
-  repository: 4174608
-  what: events-were-scanned
-  where: github
 - _id: 88951
   _time: 2025-05-22 03:37:12.871453853 Z
   _version: 0.10.1/0.42.0/
@@ -26580,13 +26580,6 @@
   repository: 16312153
   what: events-were-scanned
   where: github
-- _id: 88971
-  _time: 2025-05-22 03:37:23.072370345 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 510979198
-  what: events-were-scanned
-  where: github
 - _id: 88972
   _time: 2025-05-22 03:37:23.464586390 Z
   _version: 0.10.1/0.42.0/
@@ -26678,13 +26671,6 @@
   repository: 12590813
   what: events-were-scanned
   where: github
-- _id: 88990
-  _time: 2025-05-22 18:45:57.622102794 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49887352597
-  repository: 12589687
-  what: events-were-scanned
-  where: github
 - _id: 88991
   _time: 2025-05-22 18:45:57.977282244 Z
   _version: 0.10.2/0.43.0/
@@ -26723,5 +26709,43 @@
   _version: 0.10.2/0.43.0/
   latest: 49924798250
   repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 88997
+  _time: 2025-05-23 05:40:00.067256754 Z
+  _version: 0.10.2/0.43.0/
+  commit: 9c90f3bf2b280a7452631cbf6e4937bafe9627df
+  default_branch: master
+  details: 'A new Git push #24466246622 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50055668025
+  event_type: PushEvent
+  push_id: 24466246622
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 05:14:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 88998
+  _time: 2025-05-23 05:40:00.687012531 Z
+  _version: 0.10.2/0.43.0/
+  latest: 50055668025
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 88999
+  _time: 2025-05-23 05:40:00.943948429 Z
+  _version: 0.10.2/0.43.0/
+  latest: 49887352597
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 89000
+  _time: 2025-05-23 05:40:01.119068702 Z
+  _version: 0.10.2/0.43.0/
+  latest: 0
+  repository: 510979198
   what: events-were-scanned
   where: github

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fb version="0.10.2" size="569463">
+<fb version="0.10.2" size="570576">
   <f>
     <added t="I">8</added>
-    <cycles t="I">1</cycles>
+    <cycles t="I">2</cycles>
     <deleted t="I">8</deleted>
+    <error>
+      <v t="S">GET https://api.github.com/user/1388994: 403 - API rate limit exceeded for 20.42.51.68. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting</v>
+      <v t="S">GET https://api.github.com/user/29139614: 403 - API rate limit exceeded for 20.42.51.68. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.) // See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting</v>
+    </error>
     <inserted t="I">8</inserted>
-    <seconds t="F">9.877606486</seconds>
+    <seconds t="F">223.62737414</seconds>
     <version t="S">0.43.0</version>
     <what t="S">judges-summary</what>
-    <when t="T">2025-05-23T04:42:13Z</when>
+    <when t="T">2025-05-23T05:43:38Z</when>
   </f>
   <f>
     <_id t="I">1</_id>
@@ -29317,15 +29321,6 @@
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">88949</_id>
-    <_time t="T">2025-05-22T03:37:12Z</_time>
-    <_version t="S">0.10.1/0.42.0/</_version>
-    <latest t="I">49972991279</latest>
-    <repository t="I">4174608</repository>
-    <what t="S">events-were-scanned</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">88951</_id>
     <_time t="T">2025-05-22T03:37:12Z</_time>
     <_version t="S">0.10.1/0.42.0/</_version>
@@ -29461,15 +29456,6 @@
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">88971</_id>
-    <_time t="T">2025-05-22T03:37:23Z</_time>
-    <_version t="S">0.10.1/0.42.0/</_version>
-    <latest t="I">0</latest>
-    <repository t="I">510979198</repository>
-    <what t="S">events-were-scanned</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">88972</_id>
     <_time t="T">2025-05-22T03:37:23Z</_time>
     <_version t="S">0.10.1/0.42.0/</_version>
@@ -29587,15 +29573,6 @@
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">88990</_id>
-    <_time t="T">2025-05-22T18:45:57Z</_time>
-    <_version t="S">0.10.2/0.43.0/</_version>
-    <latest t="I">49887352597</latest>
-    <repository t="I">12589687</repository>
-    <what t="S">events-were-scanned</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">88991</_id>
     <_time t="T">2025-05-22T18:45:57Z</_time>
     <_version t="S">0.10.2/0.43.0/</_version>
@@ -29644,6 +29621,51 @@
     <_version t="S">0.10.2/0.43.0/</_version>
     <latest t="I">49924798250</latest>
     <repository t="I">12590126</repository>
+    <what t="S">events-were-scanned</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">88997</_id>
+    <_time t="T">2025-05-23T05:40:00Z</_time>
+    <_version t="S">0.10.2/0.43.0/</_version>
+    <commit t="S">9c90f3bf2b280a7452631cbf6e4937bafe9627df</commit>
+    <default_branch t="S">master</default_branch>
+    <details t="S">A new Git push #24466246622 has arrived to jcabi/jcabi, made by @yegor256 (default branch is 'master'), not associated with any pull request.</details>
+    <event_id t="I">50055668025</event_id>
+    <event_type t="S">PushEvent</event_type>
+    <push_id t="I">24466246622</push_id>
+    <ref t="S">refs/heads/master</ref>
+    <repository t="I">4174608</repository>
+    <to_master t="I">1</to_master>
+    <what t="S">git-was-pushed</what>
+    <when t="T">2025-05-23T05:14:18Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">88998</_id>
+    <_time t="T">2025-05-23T05:40:00Z</_time>
+    <_version t="S">0.10.2/0.43.0/</_version>
+    <latest t="I">50055668025</latest>
+    <repository t="I">4174608</repository>
+    <what t="S">events-were-scanned</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">88999</_id>
+    <_time t="T">2025-05-23T05:40:00Z</_time>
+    <_version t="S">0.10.2/0.43.0/</_version>
+    <latest t="I">49887352597</latest>
+    <repository t="I">12589687</repository>
+    <what t="S">events-were-scanned</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">89000</_id>
+    <_time t="T">2025-05-23T05:40:01Z</_time>
+    <_version t="S">0.10.2/0.43.0/</_version>
+    <latest t="I">0</latest>
+    <repository t="I">510979198</repository>
     <what t="S">events-were-scanned</what>
     <where t="S">github</where>
   </f>
