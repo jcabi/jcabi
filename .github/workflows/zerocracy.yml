@@ -4,6 +4,7 @@
 # yamllint disable rule:line-length
 name: zerocracy
 'on':
+  push:
   schedule:
     - cron: '27 * * * *'
 permissions:
