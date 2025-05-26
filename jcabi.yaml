@@ -2,20 +2,21 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Non-unique fact: [ _id: [58215], _time: [2025-05-03 00:48:23.37745667 UTC],
-    _version: ["0.10.1/0.42.0/"], where: ["github"], event_id: [49315031242], when:
-    [2025-05-02 22:39:50 UTC], event_type: ["PullRequestEvent"], repository: [13717355],
-    who: [41898282], issue: [382], what: ["pull-was-closed"], hoc: [0], comments:
-    [0], comments_to_code: [0], comments_by_author: [0], comments_by_reviewers: [0],
-    comments_appreciated: [0], comments_resolved: [0], succeeded_builds: [13], failed_builds:
-    [0], branch: ["up"], details: ["The pull request jcabi/jcabi-xml#382 has been
-    closed by @github-actions[bot], with 0 HoC and 0 comments."], is_human: [0] ]
-    + {}'
+  error:
+  - 'Non-unique fact: [ _id: [58215], _time: [2025-05-03 00:48:23.37745667 UTC], _version:
+    ["0.10.1/0.42.0/"], where: ["github"], event_id: [49315031242], when: [2025-05-02
+    22:39:50 UTC], event_type: ["PullRequestEvent"], repository: [13717355], who:
+    [41898282], issue: [382], what: ["pull-was-closed"], hoc: [0], comments: [0],
+    comments_to_code: [0], comments_by_author: [0], comments_by_reviewers: [0], comments_appreciated:
+    [0], comments_resolved: [0], succeeded_builds: [13], failed_builds: [0], branch:
+    ["up"], details: ["The pull request jcabi/jcabi-xml#382 has been closed by @github-actions[bot],
+    with 0 HoC and 0 comments."], is_human: [0] ] + {}'
+  - 'Judge quantity-of-deliverables stopped by timeout after 3m0s: execution expired'
   inserted: 8
-  seconds: 5.309680487
+  seconds: 6.475305197
   version: 0.43.0
   what: judges-summary
-  when: 2025-05-26 10:44:55.237336551 Z
+  when: 2025-05-26 11:32:31.841238648 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -26091,13 +26092,6 @@
   when: *208
   where: github
   who: 29139614
-- _id: 88265
-  _time: 2025-05-21 17:10:00.297063179 Z
-  _version: 0.10.1/0.42.0/
-  latest: 1
-  repository: 12587702
-  what: min-issue-was-found
-  where: github
 - _id: 88349
   _time: 2025-05-21 17:11:26.247805253 Z
   _version: 0.10.1/0.42.0/
@@ -26190,13 +26184,6 @@
   repository: 12584841
   what: min-issue-was-found
   where: github
-- _id: 88855
-  _time: 2025-05-22 02:29:28.170349758 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591339
-  what: min-issue-was-found
-  where: github
 - _id: 88856
   _time: 2025-05-22 02:29:28.200967586 Z
   _version: 0.10.1/0.42.0/
@@ -26260,370 +26247,6 @@
   repository: 4174608
   what: min-issue-was-found
   where: github
-- _id: 88866
-  _time: 2025-05-22 02:29:48.504258019 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 14204295
-  what: labels-were-scanned
-  where: github
-- _id: 88867
-  _time: 2025-05-22 02:29:48.530767665 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591339
-  what: labels-were-scanned
-  where: github
-- _id: 88868
-  _time: 2025-05-22 02:29:48.572936246 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587970
-  what: labels-were-scanned
-  where: github
-- _id: 88869
-  _time: 2025-05-22 02:29:48.609539501 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591371
-  what: labels-were-scanned
-  where: github
-- _id: 88870
-  _time: 2025-05-22 02:29:48.638511778 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591138
-  what: labels-were-scanned
-  where: github
-- _id: 88871
-  _time: 2025-05-22 02:29:48.666682561 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 4174608
-  what: labels-were-scanned
-  where: github
-- _id: 88872
-  _time: 2025-05-22 02:29:48.695525809 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 13359002
-  what: labels-were-scanned
-  where: github
-- _id: 88873
-  _time: 2025-05-22 02:29:48.719917526 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 15208785
-  what: labels-were-scanned
-  where: github
-- _id: 88874
-  _time: 2025-05-22 02:29:48.748031703 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12589424
-  what: labels-were-scanned
-  where: github
-- _id: 88875
-  _time: 2025-05-22 02:29:48.775572031 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 19194296
-  what: labels-were-scanned
-  where: github
-- _id: 88876
-  _time: 2025-05-22 02:29:48.803775816 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12590128
-  what: labels-were-scanned
-  where: github
-- _id: 88877
-  _time: 2025-05-22 02:29:48.830139139 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 25780072
-  what: labels-were-scanned
-  where: github
-- _id: 88878
-  _time: 2025-05-22 02:29:48.857057257 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 20635353
-  what: labels-were-scanned
-  where: github
-- _id: 88879
-  _time: 2025-05-22 02:29:48.886297854 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 16403286
-  what: labels-were-scanned
-  where: github
-- _id: 88880
-  _time: 2025-05-22 02:29:48.912970364 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12947626
-  what: labels-were-scanned
-  where: github
-- _id: 88881
-  _time: 2025-05-22 02:29:48.939538359 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12584841
-  what: labels-were-scanned
-  where: github
-- _id: 88882
-  _time: 2025-05-22 02:29:48.963702031 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 19194304
-  what: labels-were-scanned
-  where: github
-- _id: 88883
-  _time: 2025-05-22 02:29:48.992882597 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591347
-  what: labels-were-scanned
-  where: github
-- _id: 88885
-  _time: 2025-05-22 02:29:49.525678469 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 23238769
-  what: labels-were-scanned
-  where: github
-- _id: 88887
-  _time: 2025-05-22 02:29:50.042276401 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591382
-  what: labels-were-scanned
-  where: github
-- _id: 88888
-  _time: 2025-05-22 02:29:50.066963659 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12590126
-  what: labels-were-scanned
-  where: github
-- _id: 88889
-  _time: 2025-05-22 02:29:50.097537132 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 16312153
-  what: labels-were-scanned
-  where: github
-- _id: 88890
-  _time: 2025-05-22 02:29:50.124559654 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 510979198
-  what: labels-were-scanned
-  where: github
-- _id: 88891
-  _time: 2025-05-22 02:29:50.152014483 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 13624455
-  what: labels-were-scanned
-  where: github
-- _id: 88892
-  _time: 2025-05-22 02:29:50.176424227 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12589687
-  what: labels-were-scanned
-  where: github
-- _id: 88893
-  _time: 2025-05-22 02:29:50.205520332 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12591356
-  what: labels-were-scanned
-  where: github
-- _id: 88895
-  _time: 2025-05-22 02:29:50.759169535 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12262782
-  what: labels-were-scanned
-  where: github
-- _id: 88896
-  _time: 2025-05-22 02:29:50.788943573 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 14093966
-  what: labels-were-scanned
-  where: github
-- _id: 88937
-  _time: 2025-05-22 02:30:12.351751409 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587702
-  what: labels-were-scanned
-  where: github
-- _id: 88947
-  _time: 2025-05-22 02:30:17.717956047 Z
-  _version: 0.10.1/0.42.0/
-  latest: 29
-  repository: 13717355
-  what: labels-were-scanned
-  where: github
-- _id: 88948
-  _time: 2025-05-22 02:30:18.641467883 Z
-  _version: 0.10.1/0.42.0/
-  latest: 79
-  repository: 12590813
-  what: labels-were-scanned
-  where: github
-- _id: 88951
-  _time: 2025-05-22 03:37:12.871453853 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49884522077
-  repository: 19194296
-  what: events-were-scanned
-  where: github
-- _id: 88953
-  _time: 2025-05-22 03:37:13.659118070 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49926019750
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 88954
-  _time: 2025-05-22 03:37:15.489766078 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49879197634
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 88955
-  _time: 2025-05-22 03:37:15.945773476 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49887347888
-  repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 88957
-  _time: 2025-05-22 03:37:16.705457938 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49882308672
-  repository: 12947626
-  what: events-were-scanned
-  where: github
-- _id: 88958
-  _time: 2025-05-22 03:37:17.040628915 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48612534599
-  repository: 12591356
-  what: events-were-scanned
-  where: github
-- _id: 88959
-  _time: 2025-05-22 03:37:17.403221091 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49887349789
-  repository: 12584841
-  what: events-were-scanned
-  where: github
-- _id: 88960
-  _time: 2025-05-22 03:37:17.787388549 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49882306803
-  repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 88962
-  _time: 2025-05-22 03:37:18.508461673 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49882307787
-  repository: 16403286
-  what: events-were-scanned
-  where: github
-- _id: 88963
-  _time: 2025-05-22 03:37:18.870364051 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49939649414
-  repository: 12591138
-  what: events-were-scanned
-  where: github
-- _id: 88964
-  _time: 2025-05-22 03:37:19.259073071 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49879196796
-  repository: 23238769
-  what: events-were-scanned
-  where: github
-- _id: 88966
-  _time: 2025-05-22 03:37:20.019371908 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49882306000
-  repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 88967
-  _time: 2025-05-22 03:37:20.352305583 Z
-  _version: 0.10.1/0.42.0/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
-- _id: 88969
-  _time: 2025-05-22 03:37:22.269588547 Z
-  _version: 0.10.1/0.42.0/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
-- _id: 88970
-  _time: 2025-05-22 03:37:22.645019522 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49884497484
-  repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 88972
-  _time: 2025-05-22 03:37:23.464586390 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49887350858
-  repository: 25780072
-  what: events-were-scanned
-  where: github
-- _id: 88973
-  _time: 2025-05-22 03:37:23.917031408 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49339267863
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 88976
-  _time: 2025-05-22 03:37:25.702575565 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 88977
-  _time: 2025-05-22 03:37:26.050747444 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49634320588
-  repository: 12591347
-  what: events-were-scanned
-  where: github
-- _id: 88978
-  _time: 2025-05-22 03:37:26.428953032 Z
-  _version: 0.10.1/0.42.0/
-  latest: 49342071550
-  repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 88979
-  _time: 2025-05-22 03:37:26.909095850 Z
-  _version: 0.10.1/0.42.0/
-  latest: 48154398831
-  repository: 12590128
-  what: events-were-scanned
-  where: github
 - _id: 88980
   _time: 2025-05-22 03:40:43.023591381 Z
   _version: 0.10.1/0.42.0/
@@ -26659,60 +26282,11 @@
   repository: 13717355
   what: min-issue-was-found
   where: github
-- _id: 88988
-  _time: 2025-05-22 10:42:28.740891247 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49890067994
-  repository: 14093966
-  what: events-were-scanned
-  where: github
-- _id: 88989
-  _time: 2025-05-22 10:42:30.016118673 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49947694817
-  repository: 12590813
-  what: events-were-scanned
-  where: github
-- _id: 88991
-  _time: 2025-05-22 18:45:57.977282244 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49344635182
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 88992
-  _time: 2025-05-22 19:30:30.491973953 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49952583311
-  repository: 12262782
-  what: events-were-scanned
-  where: github
-- _id: 88993
-  _time: 2025-05-22 19:30:30.664857931 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49884498095
-  repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 88994
-  _time: 2025-05-22 19:30:30.839084203 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49345256772
-  repository: 12591371
-  what: events-were-scanned
-  where: github
 - _id: 88995
   _time: 2025-05-22 21:37:39.047982971 Z
   _version: 0.10.2/0.43.0/
   what: dimensions-of-terrain
   when: 2025-05-22 21:37:39.048109848 Z
-- _id: 88996
-  _time: 2025-05-22 22:39:47.368464794 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49924798250
-  repository: 12590126
-  what: events-were-scanned
-  where: github
 - _id: 88997
   _time: 2025-05-23 05:40:00.067256754 Z
   _version: 0.10.2/0.43.0/
@@ -26722,6 +26296,7 @@
     (default branch is ''master''), not associated with any pull request.'
   event_id: 50055668025
   event_type: PushEvent
+  is_human: 1
   push_id: 24466246622
   ref: refs/heads/master
   repository: 4174608
@@ -26730,24 +26305,888 @@
   when: 2025-05-23 05:14:18.000000000 Z
   where: github
   who: 526301
-- _id: 88998
-  _time: 2025-05-23 05:40:00.687012531 Z
-  _version: 0.10.2/0.43.0/
-  latest: 50055668025
-  repository: 4174608
+- _id: 89001
+  _time: 2025-05-26 13:01:32.652863617 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-manifests#75 has been opened by @renovate[bot].
+  event_id: 50140190162
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 75
+  repository: 12584841
+  what: pull-was-opened
+  when: 2025-05-26 10:09:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89002
+  _time: 2025-05-26 13:01:32.805108658 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50140190162
+  repository: 12584841
   what: events-were-scanned
   where: github
-- _id: 88999
-  _time: 2025-05-23 05:40:00.943948429 Z
-  _version: 0.10.2/0.43.0/
-  latest: 49887352597
-  repository: 12589687
+- _id: 89003
+  _time: 2025-05-26 13:01:33.144001317 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49884498095
+  repository: 13359002
   what: events-were-scanned
   where: github
-- _id: 89000
-  _time: 2025-05-23 05:40:01.119068702 Z
-  _version: 0.10.2/0.43.0/
+- _id: 89004
+  _time: 2025-05-26 13:01:33.407063451 Z
+  _version: 0.10.2/0.44.0/
   latest: 0
   repository: 510979198
   what: events-were-scanned
   where: github
+- _id: 89005
+  _time: 2025-05-26 13:01:33.696488847 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49884497484
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 89006
+  _time: 2025-05-26 13:01:34.696855141 Z
+  _version: 0.10.2/0.44.0/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 89007
+  _time: 2025-05-26 13:01:35.984501684 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#395 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 50143746791
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 395
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-05-26 11:39:06.000000000 Z
+  where: github
+  who: 8086956
+- _id: 89008
+  _time: 2025-05-26 13:01:49.989761253 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#396 has been opened by @renovate[bot].
+  event_id: 50143491896
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 396
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-05-26 11:32:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89009
+  _time: 2025-05-26 13:01:50.121012827 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi#395 has been opened by @renovate[bot].
+  event_id: 50139699048
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 395
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-05-26 09:58:00.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89010
+  _time: 2025-05-26 13:01:51.407522984 Z
+  _version: 0.10.2/0.44.0/
+  commit: 723828b164ce365824b903a9f43133ae8afd659f
+  default_branch: master
+  details: 'A new Git push #24479689524 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50083102745
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24479689524
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 17:35:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 89011
+  _time: 2025-05-26 13:01:51.667567312 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/zerocracy-pages-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#394 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 50079382310
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 394
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-05-23 15:44:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 89012
+  _time: 2025-05-26 13:02:03.590562510 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/zerocracy-pages-action-0.x
+  details: The pull request jcabi/jcabi#394 has been opened by @renovate[bot].
+  event_id: 50076863197
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 394
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-05-23 14:41:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89013
+  _time: 2025-05-26 13:02:03.713799564 Z
+  _version: 0.10.2/0.44.0/
+  commit: 5e0002bc9598c4b2378a4ea2c7ac0fdb109e2f73
+  default_branch: master
+  details: 'A new Git push #24474765264 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50073018953
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24474765264
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 13:13:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 89014
+  _time: 2025-05-26 13:02:03.938530375 Z
+  _version: 0.10.2/0.44.0/
+  commit: a6cf0f83c188ee3a41108fe9e87cd39810661f5d
+  default_branch: master
+  details: 'A new Git push #24474730090 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50072947660
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24474730090
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 13:11:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 89015
+  _time: 2025-05-26 13:02:04.153607983 Z
+  _version: 0.10.2/0.44.0/
+  commit: e746a631fb23f03afab59f84be1295de59f783a1
+  default_branch: master
+  details: 'A new Git push #24473507307 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50070510873
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24473507307
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 12:11:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 89016
+  _time: 2025-05-26 13:02:04.402384269 Z
+  _version: 0.10.2/0.44.0/
+  commit: d9c2759dfe9a86f937ad7dc89d1c578338e25e6a
+  default_branch: master
+  details: 'A new Git push #24473354477 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50070199508
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24473354477
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 12:03:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 89017
+  _time: 2025-05-26 13:02:04.603981089 Z
+  _version: 0.10.2/0.44.0/
+  commit: ae1dbcdd3b942304f274d466ba73808f6c29f50d
+  default_branch: master
+  details: 'A new Git push #24473264318 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50070018964
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24473264318
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 11:58:46.000000000 Z
+  where: github
+  who: 526301
+- _id: 89018
+  _time: 2025-05-26 13:02:04.803389223 Z
+  _version: 0.10.2/0.44.0/
+  commit: e76d95d01c4e400db39684ff8d496232f22c8615
+  default_branch: master
+  details: 'A new Git push #24472863183 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50069204628
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24472863183
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 11:36:05.000000000 Z
+  where: github
+  who: 526301
+- _id: 89019
+  _time: 2025-05-26 13:02:05.001516621 Z
+  _version: 0.10.2/0.44.0/
+  commit: 0f3ffc2a29d55399c12e28f4ac7e1958ed8478a3
+  default_branch: master
+  details: 'A new Git push #24472044299 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50067552073
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24472044299
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 10:50:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 89020
+  _time: 2025-05-26 13:02:05.259398329 Z
+  _version: 0.10.2/0.44.0/
+  commit: 437839103feded45100e85590465d3978b8359fa
+  default_branch: master
+  details: 'A new Git push #24472033459 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50067529827
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24472033459
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 10:49:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 89021
+  _time: 2025-05-26 13:02:05.465147202 Z
+  _version: 0.10.2/0.44.0/
+  commit: 4f506cf39963f2f538669d47344d99d01ecb22ea
+  default_branch: master
+  details: 'A new Git push #24470593314 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50064598921
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24470593314
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 09:34:25.000000000 Z
+  where: github
+  who: 526301
+- _id: 89022
+  _time: 2025-05-26 13:02:05.657674897 Z
+  _version: 0.10.2/0.44.0/
+  commit: dd92ce33eefd8741613f8706655bcddea757f68d
+  default_branch: master
+  details: 'A new Git push #24470142077 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is ''master''), not associated with any pull request.'
+  event_id: 50063662809
+  event_type: PushEvent
+  is_human: 1
+  push_id: 24470142077
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2025-05-23 09:11:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 89023
+  _time: 2025-05-26 13:02:05.918461866 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50146310389
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 89024
+  _time: 2025-05-26 13:02:06.288918520 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50064642122
+  repository: 14204295
+  what: events-were-scanned
+  where: github
+- _id: 89025
+  _time: 2025-05-26 13:02:06.734320392 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-ssh#247 has been opened by @renovate[bot].
+  event_id: 50139372862
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 247
+  repository: 23238769
+  what: pull-was-opened
+  when: 2025-05-26 09:50:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89026
+  _time: 2025-05-26 13:02:06.770302833 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50139372862
+  repository: 23238769
+  what: events-were-scanned
+  where: github
+- _id: 89027
+  _time: 2025-05-26 13:02:07.071026834 Z
+  _version: 0.10.2/0.44.0/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 89028
+  _time: 2025-05-26 13:02:07.382077139 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49890067994
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 89029
+  _time: 2025-05-26 13:02:07.755948199 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49634320588
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 89030
+  _time: 2025-05-26 13:02:09.359921772 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#427 has been closed by @rultor, with 2
+    HoC and 2 comments.
+  event_id: 50144576948
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 427
+  repository: 13717355
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-05-26 11:59:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 89031
+  _time: 2025-05-26 13:02:20.357208731 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-xml#427 has been opened by @renovate[bot].
+  event_id: 50139627660
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 427
+  repository: 13717355
+  what: pull-was-opened
+  when: 2025-05-26 09:56:18.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89032
+  _time: 2025-05-26 13:02:20.404673641 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50144576948
+  repository: 13717355
+  what: events-were-scanned
+  where: github
+- _id: 89033
+  _time: 2025-05-26 13:02:20.720347223 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49882306803
+  repository: 12589424
+  what: events-were-scanned
+  where: github
+- _id: 89034
+  _time: 2025-05-26 13:02:21.060717889 Z
+  _version: 0.10.2/0.44.0/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 89035
+  _time: 2025-05-26 13:02:21.465882036 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49342071550
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 89036
+  _time: 2025-05-26 13:02:21.765072357 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49952583311
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 89037
+  _time: 2025-05-26 13:02:22.088064154 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49924798250
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 89038
+  _time: 2025-05-26 13:02:22.420201304 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49339267863
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 89039
+  _time: 2025-05-26 13:02:22.744543203 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49344635182
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 89040
+  _time: 2025-05-26 13:02:23.031047156 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49926019750
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 89041
+  _time: 2025-05-26 13:02:23.483389985 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49887347888
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 89042
+  _time: 2025-05-26 13:02:23.784539607 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49345256772
+  repository: 12591371
+  what: events-were-scanned
+  where: github
+- _id: 89043
+  _time: 2025-05-26 13:02:24.167180531 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49939649414
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 89044
+  _time: 2025-05-26 13:02:24.599629821 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-dynamo#417 has been opened by @renovate[bot].
+  event_id: 50141182395
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 417
+  repository: 12589687
+  what: pull-was-opened
+  when: 2025-05-26 10:33:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89045
+  _time: 2025-05-26 13:02:24.635991228 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50141182395
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 89046
+  _time: 2025-05-26 13:02:26.142157344 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49947694817
+  repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 89047
+  _time: 2025-05-26 13:02:26.453506029 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12587970
+  what: events-were-scanned
+  where: github
+- _id: 89048
+  _time: 2025-05-26 13:02:26.763654400 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-velocity#36 has been opened by @renovate[bot].
+  event_id: 50141668673
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 36
+  repository: 12590128
+  what: pull-was-opened
+  when: 2025-05-26 10:45:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89049
+  _time: 2025-05-26 13:02:27.048538873 Z
+  _version: 0.10.2/0.44.0/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 89050
+  _time: 2025-05-26 13:02:27.404211280 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-email#93 has been opened by @renovate[bot].
+  event_id: 50139502530
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 93
+  repository: 25780072
+  what: pull-was-opened
+  when: 2025-05-26 09:53:20.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89051
+  _time: 2025-05-26 13:02:27.448248458 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50139502530
+  repository: 25780072
+  what: events-were-scanned
+  where: github
+- _id: 89052
+  _time: 2025-05-26 13:02:27.788349921 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-matchers#131 has been opened by @renovate[bot].
+  event_id: 50139319985
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 131
+  repository: 19194296
+  what: pull-was-opened
+  when: 2025-05-26 09:49:01.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89053
+  _time: 2025-05-26 13:02:27.823295444 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50139319985
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 89054
+  _time: 2025-05-26 13:02:28.167763470 Z
+  _version: 0.10.2/0.44.0/
+  branch: renovate/yegor256-copyrights-action-0.x
+  details: The pull request jcabi/jcabi-immutable#68 has been opened by @renovate[bot].
+  event_id: 50141461664
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 68
+  repository: 16403286
+  what: pull-was-opened
+  when: 2025-05-26 10:40:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 89055
+  _time: 2025-05-26 13:02:28.197606250 Z
+  _version: 0.10.2/0.44.0/
+  latest: 50141461664
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 89056
+  _time: 2025-05-26 13:02:28.695382101 Z
+  _version: 0.10.2/0.44.0/
+  latest: 49882308672
+  repository: 12947626
+  what: events-were-scanned
+  where: github
+- _id: 89057
+  _time: 2025-05-26 13:02:33.728496904 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 16403286
+  what: labels-were-scanned
+  where: github
+- _id: 89058
+  _time: 2025-05-26 13:02:33.758809815 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591347
+  what: labels-were-scanned
+  where: github
+- _id: 89059
+  _time: 2025-05-26 13:02:33.787926645 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12262782
+  what: labels-were-scanned
+  where: github
+- _id: 89060
+  _time: 2025-05-26 13:02:33.815875644 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591356
+  what: labels-were-scanned
+  where: github
+- _id: 89061
+  _time: 2025-05-26 13:02:33.844520973 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 13624455
+  what: labels-were-scanned
+  where: github
+- _id: 89063
+  _time: 2025-05-26 13:02:34.184436968 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591138
+  what: labels-were-scanned
+  where: github
+- _id: 89064
+  _time: 2025-05-26 13:02:34.210079883 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 19194304
+  what: labels-were-scanned
+  where: github
+- _id: 89065
+  _time: 2025-05-26 13:02:34.235521342 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 16312153
+  what: labels-were-scanned
+  where: github
+- _id: 89066
+  _time: 2025-05-26 13:02:34.278235983 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 14093966
+  what: labels-were-scanned
+  where: github
+- _id: 89067
+  _time: 2025-05-26 13:02:34.315420331 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12590126
+  what: labels-were-scanned
+  where: github
+- _id: 89068
+  _time: 2025-05-26 13:02:34.345178186 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12589687
+  what: labels-were-scanned
+  where: github
+- _id: 89069
+  _time: 2025-05-26 13:02:34.373428258 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591382
+  what: labels-were-scanned
+  where: github
+- _id: 89070
+  _time: 2025-05-26 13:02:34.402910960 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 23238769
+  what: labels-were-scanned
+  where: github
+- _id: 89071
+  _time: 2025-05-26 13:02:34.432455087 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 13359002
+  what: labels-were-scanned
+  where: github
+- _id: 89072
+  _time: 2025-05-26 13:02:34.463070073 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 15208785
+  what: labels-were-scanned
+  where: github
+- _id: 89073
+  _time: 2025-05-26 13:02:34.492064604 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12589424
+  what: labels-were-scanned
+  where: github
+- _id: 89074
+  _time: 2025-05-26 13:02:34.518126881 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 20635353
+  what: labels-were-scanned
+  where: github
+- _id: 89075
+  _time: 2025-05-26 13:02:34.543838043 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591371
+  what: labels-were-scanned
+  where: github
+- _id: 89077
+  _time: 2025-05-26 13:02:34.973953694 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 25780072
+  what: labels-were-scanned
+  where: github
+- _id: 89078
+  _time: 2025-05-26 13:02:35.004690708 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 19194296
+  what: labels-were-scanned
+  where: github
+- _id: 89080
+  _time: 2025-05-26 13:02:35.377474554 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 4174608
+  what: labels-were-scanned
+  where: github
+- _id: 89081
+  _time: 2025-05-26 13:02:35.406488174 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12947626
+  what: labels-were-scanned
+  where: github
+- _id: 89082
+  _time: 2025-05-26 13:02:35.435365696 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12587970
+  what: labels-were-scanned
+  where: github
+- _id: 89083
+  _time: 2025-05-26 13:02:35.461699190 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 14204295
+  what: labels-were-scanned
+  where: github
+- _id: 89084
+  _time: 2025-05-26 13:02:35.487033599 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591339
+  what: labels-were-scanned
+  where: github
+- _id: 89085
+  _time: 2025-05-26 13:02:35.512118943 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12584841
+  what: labels-were-scanned
+  where: github
+- _id: 89086
+  _time: 2025-05-26 13:02:35.537349138 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 510979198
+  what: labels-were-scanned
+  where: github
+- _id: 89087
+  _time: 2025-05-26 13:02:35.566496074 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12590128
+  what: labels-were-scanned
+  where: github
+- _id: 89142
+  _time: 2025-05-26 13:02:58.060694067 Z
+  _version: 0.10.2/0.44.0/
+  latest: 29
+  repository: 12587702
+  what: labels-were-scanned
+  where: github
+- _id: 89143
+  _time: 2025-05-26 13:02:58.300148355 Z
+  _version: 0.10.2/0.44.0/
+  latest: 115
+  repository: 12590813
+  what: labels-were-scanned
+  where: github
+- _id: 89144
+  _time: 2025-05-26 13:02:58.790025920 Z
+  _version: 0.10.2/0.44.0/
+  latest: 54
+  repository: 13717355
+  what: labels-were-scanned
+  where: github
+- _id: 89145
+  _time: 2025-05-26 13:04:04.132657587 Z
+  _version: 0.10.2/0.44.0/
+  average_triage_time: 0
+  since: 2025-05-19 13:02:58.814703886 Z
+  what: quality-of-service
+  when: 2025-05-26 13:02:58.814668780 Z
+- _id: 89146
+  _time: 2025-05-26 13:04:17.003309063 Z
+  _version: 0.10.2/0.44.0/
+  latest: 0
+  repository: 12591339
+  what: min-issue-was-found
+  where: github
+- _id: 89147
+  _time: 2025-05-26 13:04:17.523998552 Z
+  _version: 0.10.2/0.44.0/
+  latest: 1
+  repository: 12587702
+  what: min-issue-was-found
+  where: github
+- _id: 89148
+  _time: 2025-05-26 13:04:17.748513645 Z
+  _version: 0.10.2/0.44.0/
+  since: 2025-05-19 13:04:17.750977583 Z
+  what: quantity-of-deliverables
+  when: 2025-05-26 13:04:17.750646784 Z
