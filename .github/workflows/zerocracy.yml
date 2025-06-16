@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: zerocracy/judges-action@0.14.4
+      - uses: zerocracy/judges-action@0.14.5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ secrets.ZEROCRACY_TOKEN }}
