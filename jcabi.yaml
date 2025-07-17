@@ -1,13 +1,15 @@
 ---
 - added: 8
-  cycles: 2
+  cycles: 1
   deleted: 8
-  error: 'Judge quality-of-service stopped by timeout after 3m0s: execution expired'
+  error:
+  - 'Judge github-events stopped by timeout after 10m0s: execution expired'
+  - 'Judge quantity-of-deliverables stopped by timeout after 10m0s: execution expired'
   inserted: 8
-  seconds: 321.430401823
-  version: 0.46.0
+  seconds: 1385.82233924
+  version: 0.51.1
   what: judges-summary
-  when: 2025-06-06 09:43:51.437040550 Z
+  when: 2025-07-17 14:14:58.285490866 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -34129,223 +34131,6 @@
   repository: 16312153
   what: min-issue-was-found
   where: github
-- _id: 136513
-  _time: 2025-06-06 08:46:21.193349673 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 23238769
-  what: types-were-scanned
-  where: github
-- _id: 136514
-  _time: 2025-06-06 08:46:21.247024261 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 13359002
-  what: types-were-scanned
-  where: github
-- _id: 136515
-  _time: 2025-06-06 08:46:21.292352520 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 510979198
-  what: types-were-scanned
-  where: github
-- _id: 136516
-  _time: 2025-06-06 08:46:21.332553871 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591382
-  what: types-were-scanned
-  where: github
-- _id: 136517
-  _time: 2025-06-06 08:46:21.378613153 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591347
-  what: types-were-scanned
-  where: github
-- _id: 136518
-  _time: 2025-06-06 08:46:21.418260652 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591138
-  what: types-were-scanned
-  where: github
-- _id: 136519
-  _time: 2025-06-06 08:46:21.456307988 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 4174608
-  what: types-were-scanned
-  where: github
-- _id: 136520
-  _time: 2025-06-06 08:46:21.499613506 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12587970
-  what: types-were-scanned
-  where: github
-- _id: 136521
-  _time: 2025-06-06 08:46:21.539237982 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591371
-  what: types-were-scanned
-  where: github
-- _id: 136522
-  _time: 2025-06-06 08:46:21.576217788 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 14204295
-  what: types-were-scanned
-  where: github
-- _id: 136523
-  _time: 2025-06-06 08:46:21.617759558 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 19194296
-  what: types-were-scanned
-  where: github
-- _id: 136526
-  _time: 2025-06-06 08:46:22.703889541 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12590126
-  what: types-were-scanned
-  where: github
-- _id: 136527
-  _time: 2025-06-06 08:46:22.744870618 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12589687
-  what: types-were-scanned
-  where: github
-- _id: 136528
-  _time: 2025-06-06 08:46:22.781341996 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 20635353
-  what: types-were-scanned
-  where: github
-- _id: 136529
-  _time: 2025-06-06 08:46:22.824035454 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591356
-  what: types-were-scanned
-  where: github
-- _id: 136530
-  _time: 2025-06-06 08:46:22.863500172 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 14093966
-  what: types-were-scanned
-  where: github
-- _id: 136531
-  _time: 2025-06-06 08:46:22.899304677 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12589424
-  what: types-were-scanned
-  where: github
-- _id: 136533
-  _time: 2025-06-06 08:46:23.414936726 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 19194304
-  what: types-were-scanned
-  where: github
-- _id: 136536
-  _time: 2025-06-06 08:46:24.123652635 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 16403286
-  what: types-were-scanned
-  where: github
-- _id: 136537
-  _time: 2025-06-06 08:46:24.164381661 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12591339
-  what: types-were-scanned
-  where: github
-- _id: 136538
-  _time: 2025-06-06 08:46:24.202169494 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 13624455
-  what: types-were-scanned
-  where: github
-- _id: 136539
-  _time: 2025-06-06 08:46:24.244789925 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 15208785
-  what: types-were-scanned
-  where: github
-- _id: 136540
-  _time: 2025-06-06 08:46:24.284441902 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12947626
-  what: types-were-scanned
-  where: github
-- _id: 136541
-  _time: 2025-06-06 08:46:24.320460857 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 25780072
-  what: types-were-scanned
-  where: github
-- _id: 136542
-  _time: 2025-06-06 08:46:24.363975485 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12584841
-  what: types-were-scanned
-  where: github
-- _id: 136543
-  _time: 2025-06-06 08:46:24.404199990 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12590128
-  what: types-were-scanned
-  where: github
-- _id: 136548
-  _time: 2025-06-06 08:46:26.401630890 Z
-  _version: 0.11.0/0.46.0/
-  latest: 0
-  repository: 12262782
-  what: types-were-scanned
-  where: github
-- _id: 136617
-  _time: 2025-06-06 08:46:56.468669263 Z
-  _version: 0.11.0/0.46.0/
-  latest: 154
-  repository: 13717355
-  what: types-were-scanned
-  where: github
-- _id: 136618
-  _time: 2025-06-06 08:46:56.760403529 Z
-  _version: 0.11.0/0.46.0/
-  latest: 29
-  repository: 12587702
-  what: types-were-scanned
-  where: github
-- _id: 136619
-  _time: 2025-06-06 08:46:57.146624077 Z
-  _version: 0.11.0/0.46.0/
-  latest: 63
-  repository: 16312153
-  what: types-were-scanned
-  where: github
-- _id: 136620
-  _time: 2025-06-06 08:46:57.675926421 Z
-  _version: 0.11.0/0.46.0/
-  latest: 140
-  repository: 12590813
-  what: types-were-scanned
-  where: github
 - _id: 136760
   _time: 2025-06-06 08:48:41.107010887 Z
   _version: 0.11.0/0.46.0/
@@ -34507,25 +34292,11 @@
   repository: 12590128
   what: events-were-scanned
   where: github
-- _id: 136784
-  _time: 2025-06-06 09:38:45.583481159 Z
-  _version: 0.11.0/0.46.0/
-  latest: 50582453404
-  repository: 4174608
-  what: events-were-scanned
-  where: github
 - _id: 136785
   _time: 2025-06-06 09:38:45.973674740 Z
   _version: 0.11.0/0.46.0/
   latest: 50163308058
   repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 136786
-  _time: 2025-06-06 09:38:46.278882081 Z
-  _version: 0.11.0/0.46.0/
-  latest: 50466965619
-  repository: 12591347
   what: events-were-scanned
   where: github
 - _id: 136787
@@ -34865,3 +34636,582 @@
   when: 2025-06-05 22:14:49.000000000 Z
   where: github
   who: 29139614
+- _id: 136894
+  _time: 2025-07-17 13:52:03.311611308 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50466965619
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 136895
+  _time: 2025-07-17 13:52:04.284786019 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#428 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 52020738186
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 428
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-07-13 10:13:34.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136896
+  _time: 2025-07-17 13:53:24.425479508 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-parent-0.x
+  details: The pull request jcabi/jcabi#430 has been opened by @renovate[bot].
+  event_id: 51574113833
+  event_type: PullRequestEvent
+  issue: 430
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-07-01 19:36:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136897
+  _time: 2025-07-17 13:53:24.730215888 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull request jcabi/jcabi#429 has been opened by @renovate[bot].
+  event_id: 51522147608
+  event_type: PullRequestEvent
+  issue: 429
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-30 19:32:11.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136898
+  _time: 2025-07-17 13:53:24.888699925 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#428 has been opened by @renovate[bot].
+  event_id: 51290028798
+  event_type: PullRequestEvent
+  issue: 428
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-24 17:49:11.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136899
+  _time: 2025-07-17 13:53:25.010283346 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#427 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51232407668
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 427
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-23 15:46:15.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136900
+  _time: 2025-07-17 13:58:17.567536324 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#427 has been opened by @renovate[bot].
+  event_id: 51229262522
+  event_type: PullRequestEvent
+  issue: 427
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-23 14:41:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136901
+  _time: 2025-07-17 13:58:17.829524006 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#426 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51229233956
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 426
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-23 14:41:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136902
+  _time: 2025-07-17 13:58:37.700338245 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#426 has been opened by @renovate[bot].
+  event_id: 51226909518
+  event_type: PullRequestEvent
+  issue: 426
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-23 13:56:13.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136903
+  _time: 2025-07-17 13:58:37.839564314 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#425 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51194056605
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 425
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-22 17:29:31.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136904
+  _time: 2025-07-17 13:59:08.244951489 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#425 has been opened by @renovate[bot].
+  event_id: 51193742951
+  event_type: PullRequestEvent
+  issue: 425
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-22 17:06:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136905
+  _time: 2025-07-17 13:59:08.415472164 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#424 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51162618592
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 424
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-20 21:04:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136906
+  _time: 2025-07-17 13:59:51.876004123 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#424 has been opened by @renovate[bot].
+  event_id: 51161870365
+  event_type: PullRequestEvent
+  issue: 424
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-20 20:33:54.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136907
+  _time: 2025-07-17 13:59:52.230311474 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#423 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51146076722
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 423
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-20 12:44:11.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136908
+  _time: 2025-07-17 14:00:16.707549864 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#423 has been opened by @renovate[bot].
+  event_id: 51145467828
+  event_type: PullRequestEvent
+  issue: 423
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-20 12:28:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136909
+  _time: 2025-07-17 14:00:16.847723953 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#422 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51105289644
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 422
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-19 12:54:44.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136910
+  _time: 2025-07-17 14:00:49.471034446 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#422 has been opened by @renovate[bot].
+  event_id: 51102505054
+  event_type: PullRequestEvent
+  issue: 422
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-19 11:47:24.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136911
+  _time: 2025-07-17 14:00:49.667013220 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi#421 has been closed by @rultor, with 2 HoC
+    and 2 comments.
+  event_id: 51039654928
+  event_type: PullRequestEvent
+  failed_builds: 0
+  hoc: 2
+  issue: 421
+  repository: 4174608
+  succeeded_builds: 14
+  what: pull-was-merged
+  when: 2025-06-18 06:53:36.000000000 Z
+  where: github
+  who: 8086956
+- _id: 136912
+  _time: 2025-07-17 14:01:28.249727540 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The pull request jcabi/jcabi#421 has been opened by @renovate[bot].
+  event_id: 51037815973
+  event_type: PullRequestEvent
+  issue: 421
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-06-18 06:08:32.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136913
+  _time: 2025-07-17 14:02:21.680105830 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/junit5-monorepo
+  details: jcabi/jcabi-jdbc#299 has been opened by @renovate[bot].
+  issue: 299
+  repository: 12587702
+  what: pull-was-opened
+  when: 2024-12-16 17:25:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136914
+  _time: 2025-07-17 14:02:22.666454273 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-jcabi-1.x
+  details: jcabi/jcabi-w3c#103 has been opened by @renovate[bot].
+  issue: 103
+  repository: 19194304
+  what: pull-was-opened
+  when: 2024-02-23 13:39:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136915
+  _time: 2025-07-17 14:02:23.697693652 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-jcabi-1.x
+  details: jcabi/jcabi-maven-slf4j#53 has been opened by @renovate[bot].
+  issue: 53
+  repository: 12591339
+  what: pull-was-opened
+  when: 2024-02-23 13:40:13.000000000 Z
+  where: github
+  who: 29139614
+- _id: 136916
+  _time: 2025-07-17 14:02:34.650975954 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: types-were-scanned
+  where: github
+- _id: 136917
+  _time: 2025-07-17 14:02:34.713013559 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: types-were-scanned
+  where: github
+- _id: 136918
+  _time: 2025-07-17 14:02:34.768984718 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: types-were-scanned
+  where: github
+- _id: 136919
+  _time: 2025-07-17 14:02:34.824378408 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: types-were-scanned
+  where: github
+- _id: 136920
+  _time: 2025-07-17 14:02:34.900171384 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: types-were-scanned
+  where: github
+- _id: 136921
+  _time: 2025-07-17 14:02:34.967429897 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: types-were-scanned
+  where: github
+- _id: 136922
+  _time: 2025-07-17 14:02:35.028535942 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: types-were-scanned
+  where: github
+- _id: 136923
+  _time: 2025-07-17 14:02:35.089275972 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: types-were-scanned
+  where: github
+- _id: 136924
+  _time: 2025-07-17 14:02:35.147689130 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: types-were-scanned
+  where: github
+- _id: 136926
+  _time: 2025-07-17 14:02:35.786589320 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: types-were-scanned
+  where: github
+- _id: 136929
+  _time: 2025-07-17 14:02:36.920881254 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: types-were-scanned
+  where: github
+- _id: 136930
+  _time: 2025-07-17 14:02:36.977060765 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: types-were-scanned
+  where: github
+- _id: 136931
+  _time: 2025-07-17 14:02:37.043220273 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: types-were-scanned
+  where: github
+- _id: 136932
+  _time: 2025-07-17 14:02:37.105724354 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: types-were-scanned
+  where: github
+- _id: 136933
+  _time: 2025-07-17 14:02:37.166423014 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: types-were-scanned
+  where: github
+- _id: 136935
+  _time: 2025-07-17 14:02:38.793221125 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: types-were-scanned
+  where: github
+- _id: 136936
+  _time: 2025-07-17 14:02:38.853047446 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: types-were-scanned
+  where: github
+- _id: 136937
+  _time: 2025-07-17 14:02:38.911631527 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: types-were-scanned
+  where: github
+- _id: 136938
+  _time: 2025-07-17 14:02:38.966414911 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: types-were-scanned
+  where: github
+- _id: 136940
+  _time: 2025-07-17 14:02:39.550855787 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: types-were-scanned
+  where: github
+- _id: 136941
+  _time: 2025-07-17 14:02:39.607754892 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: types-were-scanned
+  where: github
+- _id: 136942
+  _time: 2025-07-17 14:02:39.663974327 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: types-were-scanned
+  where: github
+- _id: 136943
+  _time: 2025-07-17 14:02:39.730415110 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: types-were-scanned
+  where: github
+- _id: 136944
+  _time: 2025-07-17 14:02:40.083788812 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: types-were-scanned
+  where: github
+- _id: 136945
+  _time: 2025-07-17 14:02:40.144173667 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: types-were-scanned
+  where: github
+- _id: 136946
+  _time: 2025-07-17 14:02:40.204422747 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: types-were-scanned
+  where: github
+- _id: 136949
+  _time: 2025-07-17 14:02:41.375993013 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: types-were-scanned
+  where: github
+- _id: 137037
+  _time: 2025-07-17 14:03:33.328700065 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: types-were-scanned
+  where: github
+- _id: 137092
+  _time: 2025-07-17 14:04:09.085195025 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13717355
+  what: types-were-scanned
+  where: github
+- _id: 137119
+  _time: 2025-07-17 14:04:24.720935949 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: types-were-scanned
+  where: github
+- _id: 137120
+  _time: 2025-07-17 14:04:58.226364289 Z
+  _version: 0.13.0/0.51.1/
+  latest: 223
+  repository: 16312153
+  what: types-were-scanned
+  where: github
+- _id: 137121
+  _time: 2025-07-17 14:05:18.391094595 Z
+  _version: 0.13.0/0.51.1/
+  since: 2025-07-10 14:04:58.273048390 Z
+  total_commits_pushed: 3
+  total_hoc_committed: 6
+  what: quantity-of-deliverables
+  when: 2025-07-17 14:04:58.273002464 Z
