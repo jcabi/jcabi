@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge quality-of-service stopped by timeout after 10m0s: execution expired'
   inserted: 8
-  seconds: 930.605239686
+  seconds: 921.341099885
   version: 0.51.1
   what: judges-summary
-  when: 2025-07-20 22:57:07.423441862 Z
+  when: 2025-07-20 23:54:04.112232548 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -77015,7 +77016,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2020-12-01 22:38:45.000000000 Z
+  when: &850 2020-12-01 22:38:45.000000000 Z
   where: github
   who: 8086956
 - _id: 179103
@@ -77037,7 +77038,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-05-08 00:43:01.000000000 Z
+  when: &851 2022-05-08 00:43:01.000000000 Z
   where: github
   who: 8086956
 - _id: 179106
@@ -77059,7 +77060,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2024-02-25 11:42:58.000000000 Z
+  when: &852 2024-02-25 11:42:58.000000000 Z
   where: github
   who: 8086956
 - _id: 179108
@@ -77081,7 +77082,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-22 02:07:33.000000000 Z
+  when: &853 2023-06-22 02:07:33.000000000 Z
   where: github
   who: 8086956
 - _id: 179111
@@ -77103,7 +77104,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-11-17 23:56:16.000000000 Z
+  when: &854 2022-11-17 23:56:16.000000000 Z
   where: github
   who: 8086956
 - _id: 179126
@@ -77125,7 +77126,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2020-12-01 22:17:31.000000000 Z
+  when: &855 2020-12-01 22:17:31.000000000 Z
   where: github
   who: 8086956
 - _id: 179132
@@ -77147,7 +77148,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-21 14:58:41.000000000 Z
+  when: &856 2022-06-21 14:58:41.000000000 Z
   where: github
   who: 8086956
 - _id: 179135
@@ -77169,7 +77170,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-07-28 05:42:30.000000000 Z
+  when: &857 2023-07-28 05:42:30.000000000 Z
   where: github
   who: 8086956
 - _id: 179137
@@ -77191,7 +77192,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-23 02:09:12.000000000 Z
+  when: &858 2023-06-23 02:09:12.000000000 Z
   where: github
   who: 8086956
 - _id: 179139
@@ -77213,7 +77214,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-11-25 15:48:10.000000000 Z
+  when: &859 2022-11-25 15:48:10.000000000 Z
   where: github
   who: 8086956
 - _id: 179151
@@ -77256,7 +77257,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-21 15:03:32.000000000 Z
+  when: &860 2022-06-21 15:03:32.000000000 Z
   where: github
   who: 8086956
 - _id: 179159
@@ -77278,7 +77279,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-01 08:40:35.000000000 Z
+  when: &861 2023-08-01 08:40:35.000000000 Z
   where: github
   who: 8086956
 - _id: 179161
@@ -77300,7 +77301,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-23 21:33:20.000000000 Z
+  when: &862 2023-06-23 21:33:20.000000000 Z
   where: github
   who: 8086956
 - _id: 179163
@@ -77322,7 +77323,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-11-29 23:35:08.000000000 Z
+  when: &863 2022-11-29 23:35:08.000000000 Z
   where: github
   who: 8086956
 - _id: 179165
@@ -77359,7 +77360,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2020-12-03 22:41:10.000000000 Z
+  when: &864 2020-12-03 22:41:10.000000000 Z
   where: github
   who: 8086956
 - _id: 179212
@@ -77381,7 +77382,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-21 14:53:47.000000000 Z
+  when: &865 2022-06-21 14:53:47.000000000 Z
   where: github
   who: 8086956
 - _id: 179225
@@ -77403,7 +77404,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-01 12:38:14.000000000 Z
+  when: &866 2022-12-01 12:38:14.000000000 Z
   where: github
   who: 8086956
 - _id: 179228
@@ -77425,7 +77426,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-23 22:35:08.000000000 Z
+  when: &867 2023-06-23 22:35:08.000000000 Z
   where: github
   who: 8086956
 - _id: 179231
@@ -77447,7 +77448,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-07 20:44:04.000000000 Z
+  when: &868 2023-08-07 20:44:04.000000000 Z
   where: github
   who: 8086956
 - _id: 179238
@@ -77469,7 +77470,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2020-12-03 23:44:28.000000000 Z
+  when: &869 2020-12-03 23:44:28.000000000 Z
   where: github
   who: 8086956
 - _id: 179242
@@ -77491,7 +77492,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-21 15:08:06.000000000 Z
+  when: &870 2022-06-21 15:08:06.000000000 Z
   where: github
   who: 8086956
 - _id: 179252
@@ -77513,7 +77514,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-02 00:38:50.000000000 Z
+  when: &871 2022-12-02 00:38:50.000000000 Z
   where: github
   who: 8086956
 - _id: 179255
@@ -77535,7 +77536,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-28 02:11:43.000000000 Z
+  when: &872 2023-06-28 02:11:43.000000000 Z
   where: github
   who: 8086956
 - _id: 179258
@@ -77557,7 +77558,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-09 16:01:12.000000000 Z
+  when: &873 2023-08-09 16:01:12.000000000 Z
   where: github
   who: 8086956
 - _id: 179264
@@ -77579,7 +77580,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-01-18 09:03:42.000000000 Z
+  when: &874 2021-01-18 09:03:42.000000000 Z
   where: github
   who: 8086956
 - _id: 179268
@@ -77601,7 +77602,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-23 18:11:25.000000000 Z
+  when: &875 2022-06-23 18:11:25.000000000 Z
   where: github
   who: 8086956
 - _id: 179276
@@ -77623,7 +77624,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-13 16:45:29.000000000 Z
+  when: &876 2022-12-13 16:45:29.000000000 Z
   where: github
   who: 8086956
 - _id: 179502
@@ -77842,223 +77843,6 @@
   latest: 164
   repository: 16312153
   what: assignees-were-scanned
-  where: github
-- _id: 179930
-  _time: 2025-07-20 22:41:44.688834420 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50299289288
-  repository: 19194296
-  what: events-were-scanned
-  where: github
-- _id: 179931
-  _time: 2025-07-20 22:41:45.139768617 Z
-  _version: 0.13.0/0.51.1/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
-- _id: 179932
-  _time: 2025-07-20 22:41:46.008126390 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52314346249
-  repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 179933
-  _time: 2025-07-20 22:41:46.409993339 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49342071550
-  repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 179934
-  _time: 2025-07-20 22:41:47.454352849 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577399249
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 179935
-  _time: 2025-07-20 22:41:47.895642339 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49345256772
-  repository: 12591371
-  what: events-were-scanned
-  where: github
-- _id: 179936
-  _time: 2025-07-20 22:41:48.446424454 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48612534599
-  repository: 12591356
-  what: events-were-scanned
-  where: github
-- _id: 179937
-  _time: 2025-07-20 22:41:49.454546612 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50477404854
-  repository: 12947626
-  what: events-were-scanned
-  where: github
-- _id: 179938
-  _time: 2025-07-20 22:41:49.961473932 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50427137745
-  repository: 25780072
-  what: events-were-scanned
-  where: github
-- _id: 179939
-  _time: 2025-07-20 22:41:50.471562761 Z
-  _version: 0.13.0/0.51.1/
-  latest: 51992607859
-  repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 179940
-  _time: 2025-07-20 22:41:51.190790056 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50163308058
-  repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 179941
-  _time: 2025-07-20 22:41:52.015280639 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50367374034
-  repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 179942
-  _time: 2025-07-20 22:41:52.981008750 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577325928
-  repository: 12591138
-  what: events-were-scanned
-  where: github
-- _id: 179943
-  _time: 2025-07-20 22:41:53.336968592 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: events-were-scanned
-  where: github
-- _id: 179944
-  _time: 2025-07-20 22:41:54.045145383 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50324195939
-  repository: 12590126
-  what: events-were-scanned
-  where: github
-- _id: 179945
-  _time: 2025-07-20 22:41:54.506176014 Z
-  _version: 0.13.0/0.51.1/
-  latest: 51998028329
-  repository: 12262782
-  what: events-were-scanned
-  where: github
-- _id: 179946
-  _time: 2025-07-20 22:41:55.699201451 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50476549509
-  repository: 14093966
-  what: events-were-scanned
-  where: github
-- _id: 179947
-  _time: 2025-07-20 22:41:56.071535789 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
-- _id: 179948
-  _time: 2025-07-20 22:41:57.031164987 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50423569553
-  repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 179949
-  _time: 2025-07-20 22:42:10.694287845 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50326391764
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 179950
-  _time: 2025-07-20 22:42:11.763750696 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49884498095
-  repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 179951
-  _time: 2025-07-20 22:42:12.202741899 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50466965619
-  repository: 12591347
-  what: events-were-scanned
-  where: github
-- _id: 179952
-  _time: 2025-07-20 22:42:13.591773970 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426009798
-  repository: 23238769
-  what: events-were-scanned
-  where: github
-- _id: 179953
-  _time: 2025-07-20 22:42:19.485408581 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50496302309
-  repository: 12590813
-  what: events-were-scanned
-  where: github
-- _id: 179954
-  _time: 2025-07-20 22:42:19.925636776 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48154398831
-  repository: 12590128
-  what: events-were-scanned
-  where: github
-- _id: 179955
-  _time: 2025-07-20 22:42:20.817093750 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50478877191
-  repository: 12589687
-  what: events-were-scanned
-  where: github
-- _id: 179956
-  _time: 2025-07-20 22:42:21.230028505 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50429299091
-  repository: 12584841
-  what: events-were-scanned
-  where: github
-- _id: 179957
-  _time: 2025-07-20 22:42:22.578578999 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426456784
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 179958
-  _time: 2025-07-20 22:42:23.041704010 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50359868790
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 179959
-  _time: 2025-07-20 22:42:23.886706690 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 179960
-  _time: 2025-07-20 22:42:24.351402079 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50421752226
-  repository: 16403286
-  what: events-were-scanned
   where: github
 - _id: 179961
   _time: 2025-07-20 22:42:30.789456981 Z
@@ -78514,12 +78298,13 @@
   details: Apparently, jcabi/jcabi-jdbc#163 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 163
   repository: 12587702
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-23 18:17:28.000000000 Z
+  when: &877 2022-06-23 18:17:28.000000000 Z
   where: github
   who: 8086956
 - _id: 180026
@@ -78535,12 +78320,13 @@
   details: Apparently, jcabi/jcabi-parent#209 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 209
   repository: 12590813
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-14 11:35:41.000000000 Z
+  when: &878 2022-12-14 11:35:41.000000000 Z
   where: github
   who: 8086956
 - _id: 180029
@@ -78563,12 +78349,13 @@
   details: Apparently, jcabi/jcabi-s3#229 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 229
   repository: 14093966
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-28 23:36:51.000000000 Z
+  when: &879 2023-06-28 23:36:51.000000000 Z
   where: github
   who: 8086956
 - _id: 180034
@@ -78591,6 +78378,7 @@
   details: Apparently, jcabi/jcabi-http#240 has been 'pull-was-closed'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 240
   repository: 16312153
   succeeded_builds: 0
@@ -78646,12 +78434,13 @@
   details: Apparently, jcabi/jcabi-xml#222 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 222
   repository: 13717355
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-09-03 20:43:44.000000000 Z
+  when: &880 2023-09-03 20:43:44.000000000 Z
   where: github
   who: 8086956
 - _id: 180059
@@ -78667,12 +78456,13 @@
   details: Apparently, jcabi/jcabi-jdbc#164 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 164
   repository: 12587702
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-06-23 18:22:51.000000000 Z
+  when: &881 2022-06-23 18:22:51.000000000 Z
   where: github
   who: 8086956
 - _id: 180061
@@ -78688,12 +78478,13 @@
   details: Apparently, jcabi/jcabi-parent#210 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 210
   repository: 12590813
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-15 02:14:43.000000000 Z
+  when: &882 2022-12-15 02:14:43.000000000 Z
   where: github
   who: 8086956
 - _id: 180064
@@ -78709,12 +78500,13 @@
   details: Apparently, jcabi/jcabi-s3#230 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 230
   repository: 14093966
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-29 20:40:15.000000000 Z
+  when: &883 2023-06-29 20:40:15.000000000 Z
   where: github
   who: 8086956
 - _id: 180066
@@ -78758,12 +78550,13 @@
   details: Apparently, jcabi/jcabi-http#242 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 23
+  is_human: 0
   issue: 242
   repository: 16312153
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-03-09 07:38:15.000000000 Z
+  when: &884 2021-03-09 07:38:15.000000000 Z
   where: github
   who: 8086956
 - _id: 180071
@@ -78856,12 +78649,13 @@
   details: Apparently, jcabi/jcabi-xml#223 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 8
+  is_human: 0
   issue: 223
   repository: 13717355
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-09-04 15:55:45.000000000 Z
+  when: &885 2023-09-04 15:55:45.000000000 Z
   where: github
   who: 8086956
 - _id: 180083
@@ -78905,12 +78699,13 @@
   details: Apparently, jcabi/jcabi-jdbc#166 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 166
   repository: 12587702
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-08-30 09:50:01.000000000 Z
+  when: &886 2022-08-30 09:50:01.000000000 Z
   where: github
   who: 8086956
 - _id: 180088
@@ -78933,12 +78728,13 @@
   details: Apparently, jcabi/jcabi-parent#211 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 211
   repository: 12590813
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-12-15 13:34:48.000000000 Z
+  when: &887 2022-12-15 13:34:48.000000000 Z
   where: github
   who: 8086956
 - _id: 180090
@@ -78968,12 +78764,13 @@
   details: Apparently, jcabi/jcabi-s3#231 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 231
   repository: 14093966
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-29 23:41:24.000000000 Z
+  when: &888 2023-06-29 23:41:24.000000000 Z
   where: github
   who: 8086956
 - _id: 180093
@@ -79200,220 +78997,1141 @@
   repository: 12590813
   what: types-were-scanned
   where: github
-- _id: 180501
-  _time: 2025-07-20 22:54:04.399659885 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: labels-were-scanned
+- _id: 180796
+  _job: 29590
+  _time: 2025-07-20 22:57:55.560209800 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-http#232 with 2 HoC created by @dependabot-preview[bot]
+    was merged by @rultor after 3h0m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 232
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 10827
+  stale: 'user #27856297'
+  what: code-was-contributed
+  when: *850
   where: github
-- _id: 180503
-  _time: 2025-07-20 22:54:05.179386538 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: labels-were-scanned
+  who: 27856297
+- _id: 180797
+  _job: 29590
+  _time: 2025-07-20 22:57:55.993680343 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#157 with 8 HoC created by @dependabot[bot]
+    was merged by @rultor after 5m50s of being in review and 3 comments.
+  hoc: 8
+  is_human: 0
+  issue: 157
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 351
+  what: code-was-contributed
+  when: *851
   where: github
-- _id: 180504
-  _time: 2025-07-20 22:54:05.313213761 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: labels-were-scanned
-  where: github
-- _id: 180506
-  _time: 2025-07-20 22:54:06.211636279 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: labels-were-scanned
-  where: github
-- _id: 180508
-  _time: 2025-07-20 22:54:07.029996346 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: labels-were-scanned
-  where: github
-- _id: 180511
-  _time: 2025-07-20 22:54:08.155999254 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: labels-were-scanned
-  where: github
-- _id: 180512
-  _time: 2025-07-20 22:54:08.289871033 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: labels-were-scanned
-  where: github
-- _id: 180514
-  _time: 2025-07-20 22:54:09.080428771 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: labels-were-scanned
-  where: github
-- _id: 180515
-  _time: 2025-07-20 22:54:09.218741333 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: labels-were-scanned
-  where: github
-- _id: 180516
-  _time: 2025-07-20 22:54:09.354754214 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: labels-were-scanned
-  where: github
-- _id: 180517
-  _time: 2025-07-20 22:54:09.494441251 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: labels-were-scanned
-  where: github
-- _id: 180518
-  _time: 2025-07-20 22:54:09.827077071 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
+  who: 49699333
+- _id: 180798
+  _job: 29590
+  _time: 2025-07-20 22:57:56.359162262 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#217 with 8 HoC created by @renovate[bot]
+    was merged by @rultor after 30w6d of being in review and 3 comments.
+  hoc: 8
+  is_human: 0
+  issue: 217
+  merger: 8086956
   repository: 13717355
-  what: labels-were-scanned
+  review_comments: 0
+  seconds: 18742212
+  what: code-was-contributed
+  when: *852
   where: github
-- _id: 180519
-  _time: 2025-07-20 22:54:09.958451813 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: labels-were-scanned
-  where: github
-- _id: 180520
-  _time: 2025-07-20 22:54:10.165250260 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
+  who: 29139614
+- _id: 180799
+  _job: 29590
+  _time: 2025-07-20 22:57:56.733680757 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#224 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h14m of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 224
+  merger: 8086956
   repository: 14093966
-  what: labels-were-scanned
+  review_comments: 0
+  seconds: 4443
+  what: code-was-contributed
+  when: *853
   where: github
-- _id: 180521
-  _time: 2025-07-20 22:54:10.296978737 Z
+  who: 29139614
+- _id: 180800
+  _job: 29590
+  _time: 2025-07-20 22:57:57.013256110 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#203 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h2m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 203
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 3767
+  what: code-was-contributed
+  when: *854
+  where: github
+  who: 29139614
+- _id: 180801
+  _job: 29590
+  _time: 2025-07-20 22:57:57.280222966 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-http#233 with 2 HoC created by @dependabot-preview[bot]
+    was merged by @rultor after 2h38m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 233
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 9530
+  stale: 'user #27856297'
+  what: code-was-contributed
+  when: *855
+  where: github
+  who: 27856297
+- _id: 180802
+  _job: 29590
+  _time: 2025-07-20 22:57:57.383936784 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 4
+  details: The pull request jcabi/jcabi-jdbc#158 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 4w4d of being in review and 4 comments.
+  hoc: 2
+  is_human: 0
+  issue: 158
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2810517
+  what: code-was-contributed
+  when: *856
+  where: github
+  who: 49699333
+- _id: 180803
+  _job: 29590
+  _time: 2025-07-20 22:57:57.488122018 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#218 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 50m15s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 218
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3016
+  what: code-was-contributed
+  when: *857
+  where: github
+  who: 29139614
+- _id: 180804
+  _job: 29590
+  _time: 2025-07-20 22:57:57.591912394 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#225 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 36m49s of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 225
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 2210
+  what: code-was-contributed
+  when: *858
+  where: github
+  who: 29139614
+- _id: 180805
+  _job: 29590
+  _time: 2025-07-20 22:57:57.694345201 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 5
+  details: The pull request jcabi/jcabi-parent#204 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 35m10s of being in review and 5 comments.
+  hoc: 2
+  is_human: 0
+  issue: 204
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2111
+  what: code-was-contributed
+  when: *859
+  where: github
+  who: 29139614
+- _id: 180806
+  _job: 29590
+  _time: 2025-07-20 22:57:57.795040840 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 4
+  details: The pull request jcabi/jcabi-jdbc#159 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 4w4d of being in review and 4 comments.
+  hoc: 2
+  is_human: 0
+  issue: 159
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2810804
+  what: code-was-contributed
+  when: *860
+  where: github
+  who: 49699333
+- _id: 180807
+  _job: 29590
+  _time: 2025-07-20 22:57:57.897214171 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#219 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 32m21s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 219
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 1942
+  what: code-was-contributed
+  when: *861
+  where: github
+  who: 29139614
+- _id: 180808
+  _job: 29590
+  _time: 2025-07-20 22:57:57.999630980 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#226 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 16m53s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 226
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 1014
+  what: code-was-contributed
+  when: *862
+  where: github
+  who: 29139614
+- _id: 180809
+  _job: 29590
+  _time: 2025-07-20 22:57:58.102405500 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#205 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 19m53s of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 205
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 1194
+  what: code-was-contributed
+  when: *863
+  where: github
+  who: 29139614
+- _id: 180810
+  _job: 29590
+  _time: 2025-07-20 22:57:58.204239398 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-http#236 with 4 HoC created by @andreoss was
+    merged by @rultor after 14m8s of being in review and 3 comments.
+  hoc: 4
+  is_human: 1
+  issue: 236
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 849
+  what: code-was-contributed
+  when: *864
+  where: github
+  who: 49783909
+- _id: 180811
+  _job: 29590
+  _time: 2025-07-20 22:57:58.387425369 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 4
+  details: The pull request jcabi/jcabi-jdbc#160 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 4w4d of being in review and 4 comments.
+  hoc: 2
+  is_human: 0
+  issue: 160
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2810215
+  what: code-was-contributed
+  when: *865
+  where: github
+  who: 49699333
+- _id: 180812
+  _job: 29590
+  _time: 2025-07-20 22:57:58.490195930 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#206 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 57m21s of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 206
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 3442
+  what: code-was-contributed
+  when: *866
+  where: github
+  who: 29139614
+- _id: 180813
+  _job: 29590
+  _time: 2025-07-20 22:57:58.593254228 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#227 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h1m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 227
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 3694
+  what: code-was-contributed
+  when: *867
+  where: github
+  who: 29139614
+- _id: 180814
+  _job: 29590
+  _time: 2025-07-20 22:57:58.695883664 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-xml#220 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h8m of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 220
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4116
+  what: code-was-contributed
+  when: *868
+  where: github
+  who: 29139614
+- _id: 180815
+  _job: 29590
+  _time: 2025-07-20 22:57:58.798399115 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-http#237 with 155 HoC created by @andreoss
+    was merged by @rultor after 1h9m of being in review and 3 comments.
+  hoc: 155
+  is_human: 1
+  issue: 237
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 4195
+  what: code-was-contributed
+  when: *869
+  where: github
+  who: 49783909
+- _id: 180816
+  _job: 29590
+  _time: 2025-07-20 22:57:58.901330682 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#161 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 4w4d of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 161
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2811071
+  what: code-was-contributed
+  when: *870
+  where: github
+  who: 49699333
+- _id: 180817
+  _job: 29590
+  _time: 2025-07-20 22:57:59.005094891 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#207 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 31m46s of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 207
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 1907
+  what: code-was-contributed
+  when: *871
+  where: github
+  who: 29139614
+- _id: 180818
+  _job: 29590
+  _time: 2025-07-20 22:57:59.108611037 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#228 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1d3h of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 228
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 99611
+  what: code-was-contributed
+  when: *872
+  where: github
+  who: 29139614
+- _id: 180819
+  _job: 29590
+  _time: 2025-07-20 22:57:59.212563964 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-xml#221 with 6 HoC created by @renovate[bot]
+    was merged by @rultor after 1h34m of being in review and 6 comments.
+  hoc: 6
+  is_human: 0
+  issue: 221
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 5682
+  what: code-was-contributed
+  when: *873
+  where: github
+  who: 29139614
+- _id: 180820
+  _job: 29590
+  _time: 2025-07-20 22:57:59.316478147 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 4
+  details: The pull request jcabi/jcabi-http#239 with 86 HoC created by @andreoss
+    was merged by @rultor after 11m45s of being in review and 4 comments.
+  hoc: 86
+  is_human: 1
+  issue: 239
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 706
+  what: code-was-contributed
+  when: *874
+  where: github
+  who: 49783909
+- _id: 180821
+  _job: 29590
+  _time: 2025-07-20 22:57:59.421149067 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#162 with 4 HoC created by @dependabot[bot]
+    was merged by @rultor after 2d3h of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 162
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 184635
+  what: code-was-contributed
+  when: *875
+  where: github
+  who: 49699333
+- _id: 180822
+  _job: 29590
+  _time: 2025-07-20 22:57:59.525066036 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#208 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 16h25m of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 208
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 59151
+  what: code-was-contributed
+  when: *876
+  where: github
+  who: 29139614
+- _id: 180823
+  _job: 29590
+  _time: 2025-07-20 22:57:59.628946341 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#163 with 4 HoC created by @dependabot[bot]
+    was merged by @rultor after 2d3h of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 163
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 184702
+  what: code-was-contributed
+  when: *877
+  where: github
+  who: 49699333
+- _id: 180824
+  _job: 29590
+  _time: 2025-07-20 22:57:59.733327975 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#209 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 2h34m of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 209
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 9255
+  what: code-was-contributed
+  when: *878
+  where: github
+  who: 29139614
+- _id: 180825
+  _job: 29590
+  _time: 2025-07-20 22:57:59.838223841 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#229 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 22m27s of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 229
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 1348
+  what: code-was-contributed
+  when: *879
+  where: github
+  who: 29139614
+- _id: 180826
+  _job: 29590
+  _time: 2025-07-20 22:57:59.941805232 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-xml#222 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h17m of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 222
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4666
+  what: code-was-contributed
+  when: *880
+  where: github
+  who: 29139614
+- _id: 180827
+  _job: 29590
+  _time: 2025-07-20 22:58:00.046699824 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-jdbc#164 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 1d16h of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 164
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 144138
+  what: code-was-contributed
+  when: *881
+  where: github
+  who: 49699333
+- _id: 180828
+  _job: 29590
+  _time: 2025-07-20 22:58:00.151699295 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#210 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 4h17m of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 210
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 15437
+  what: code-was-contributed
+  when: *882
+  where: github
+  who: 29139614
+- _id: 180829
+  _job: 29590
+  _time: 2025-07-20 22:58:00.256303076 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#230 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 45m36s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 230
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 2737
+  what: code-was-contributed
+  when: *883
+  where: github
+  who: 29139614
+- _id: 180830
+  _job: 29590
+  _time: 2025-07-20 22:58:00.416788778 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 5
+  details: The pull request jcabi/jcabi-http#242 with 23 HoC created by @andreoss
+    was merged by @rultor after 1d4h of being in review and 5 comments.
+  hoc: 23
+  is_human: 1
+  issue: 242
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 101890
+  what: code-was-contributed
+  when: *884
+  where: github
+  who: 49783909
+- _id: 180831
+  _job: 29590
+  _time: 2025-07-20 22:58:00.521162684 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-xml#223 with 8 HoC created by @renovate[bot]
+    was merged by @rultor after 1h21m of being in review and 6 comments.
+  hoc: 8
+  is_human: 0
+  issue: 223
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 4861
+  what: code-was-contributed
+  when: *885
+  where: github
+  who: 29139614
+- _id: 180832
+  _job: 29590
+  _time: 2025-07-20 22:58:00.625074942 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 5
+  details: The pull request jcabi/jcabi-jdbc#166 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 8w5d of being in review and 5 comments.
+  hoc: 2
+  is_human: 0
+  issue: 166
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 5297376
+  what: code-was-contributed
+  when: *886
+  where: github
+  who: 49699333
+- _id: 180833
+  _job: 29590
+  _time: 2025-07-20 22:58:00.729977600 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 6
+  details: The pull request jcabi/jcabi-parent#211 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 29m7s of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 211
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 1748
+  what: code-was-contributed
+  when: *887
+  where: github
+  who: 29139614
+- _id: 180834
+  _job: 29590
+  _time: 2025-07-20 22:58:00.835292846 Z
+  _version: 0.13.0/0.51.1/0.14.27
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#231 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 31m16s of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 231
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 1877
+  what: code-was-contributed
+  when: *888
+  where: github
+  who: 29139614
+- _id: 180835
+  _time: 2025-07-20 23:38:54.763610517 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50163308058
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 180836
+  _time: 2025-07-20 23:38:55.425494491 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50421752226
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 180837
+  _time: 2025-07-20 23:38:56.619463385 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577325928
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 180838
+  _time: 2025-07-20 23:38:57.279816822 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 180839
+  _time: 2025-07-20 23:38:58.494644796 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49884498095
+  repository: 13359002
+  what: events-were-scanned
+  where: github
+- _id: 180840
+  _time: 2025-07-20 23:38:59.227481367 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50427137745
+  repository: 25780072
+  what: events-were-scanned
+  where: github
+- _id: 180841
+  _time: 2025-07-20 23:38:59.982185656 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50466965619
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 180842
+  _time: 2025-07-20 23:39:00.707487270 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50359868790
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 180843
+  _time: 2025-07-20 23:39:18.801065229 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50326391764
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 180844
+  _time: 2025-07-20 23:39:19.496158904 Z
+  _version: 0.13.0/0.51.1/
+  latest: 51992607859
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 180845
+  _time: 2025-07-20 23:39:20.688408964 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50478877191
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 180846
+  _time: 2025-07-20 23:39:21.261785168 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12591371
-  what: labels-were-scanned
+  repository: 510979198
+  what: events-were-scanned
   where: github
-- _id: 180522
-  _time: 2025-07-20 22:54:10.433234031 Z
+- _id: 180847
+  _time: 2025-07-20 23:39:22.222141593 Z
   _version: 0.13.0/0.51.1/
-  latest: 0
+  latest: 50299289288
   repository: 19194296
-  what: labels-were-scanned
+  what: events-were-scanned
   where: github
-- _id: 180523
-  _time: 2025-07-20 22:54:10.566902297 Z
+- _id: 180848
+  _time: 2025-07-20 23:39:22.913729651 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49345256772
+  repository: 12591371
+  what: events-were-scanned
+  where: github
+- _id: 180849
+  _time: 2025-07-20 23:39:23.595790009 Z
+  _version: 0.13.0/0.51.1/
+  latest: 51998028329
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 180850
+  _time: 2025-07-20 23:39:25.141985506 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577399249
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 180851
+  _time: 2025-07-20 23:39:25.851636373 Z
+  _version: 0.13.0/0.51.1/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 180852
+  _time: 2025-07-20 23:39:26.493640945 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12591339
-  what: labels-were-scanned
+  repository: 12587970
+  what: events-were-scanned
   where: github
-- _id: 180524
-  _time: 2025-07-20 22:54:10.698854171 Z
+- _id: 180853
+  _time: 2025-07-20 23:39:27.811964826 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50476549509
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 180854
+  _time: 2025-07-20 23:39:28.755460219 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50324195939
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 180855
+  _time: 2025-07-20 23:39:29.459933595 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50429299091
+  repository: 12584841
+  what: events-were-scanned
+  where: github
+- _id: 180856
+  _time: 2025-07-20 23:39:31.411995016 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426009798
+  repository: 23238769
+  what: events-were-scanned
+  where: github
+- _id: 180857
+  _time: 2025-07-20 23:39:32.402720716 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50367374034
+  repository: 14204295
+  what: events-were-scanned
+  where: github
+- _id: 180858
+  _time: 2025-07-20 23:39:33.500039808 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50423569553
+  repository: 12589424
+  what: events-were-scanned
+  where: github
+- _id: 180859
+  _time: 2025-07-20 23:39:40.163495054 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50496302309
+  repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 180860
+  _time: 2025-07-20 23:39:41.255772106 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 180861
+  _time: 2025-07-20 23:39:42.855993336 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426456784
+  repository: 13717355
+  what: events-were-scanned
+  where: github
+- _id: 180862
+  _time: 2025-07-20 23:39:44.065099807 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52315090544
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 180863
+  _time: 2025-07-20 23:39:45.378803648 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50477404854
+  repository: 12947626
+  what: events-were-scanned
+  where: github
+- _id: 180864
+  _time: 2025-07-20 23:39:46.058552790 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49342071550
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 180865
+  _time: 2025-07-20 23:39:46.800609655 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 180866
+  _time: 2025-07-20 23:51:42.394717166 Z
   _version: 0.13.0/0.51.1/
   latest: 0
   repository: 12589687
   what: labels-were-scanned
   where: github
-- _id: 180525
-  _time: 2025-07-20 22:54:10.831707627 Z
+- _id: 180869
+  _time: 2025-07-20 23:51:43.963973106 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12587970
+  repository: 12591382
   what: labels-were-scanned
   where: github
-- _id: 180528
-  _time: 2025-07-20 22:54:11.955691899 Z
+- _id: 180870
+  _time: 2025-07-20 23:51:44.103688690 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 510979198
+  repository: 12947626
   what: labels-were-scanned
   where: github
-- _id: 180530
-  _time: 2025-07-20 22:54:12.671038028 Z
+- _id: 180871
+  _time: 2025-07-20 23:51:44.240992679 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 16403286
+  repository: 13624455
   what: labels-were-scanned
   where: github
-- _id: 180531
-  _time: 2025-07-20 22:54:12.804893828 Z
+- _id: 180872
+  _time: 2025-07-20 23:51:44.379312832 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: labels-were-scanned
+  where: github
+- _id: 180874
+  _time: 2025-07-20 23:51:45.315910003 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: labels-were-scanned
+  where: github
+- _id: 180876
+  _time: 2025-07-20 23:51:46.050999041 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: labels-were-scanned
+  where: github
+- _id: 180877
+  _time: 2025-07-20 23:51:46.190574523 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: labels-were-scanned
+  where: github
+- _id: 180878
+  _time: 2025-07-20 23:51:46.397184318 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: labels-were-scanned
+  where: github
+- _id: 180879
+  _time: 2025-07-20 23:51:46.536239625 Z
   _version: 0.13.0/0.51.1/
   latest: 0
   repository: 25780072
   what: labels-were-scanned
   where: github
-- _id: 180534
-  _time: 2025-07-20 22:54:14.318750770 Z
+- _id: 180880
+  _time: 2025-07-20 23:51:46.672767116 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12591138
+  repository: 16403286
   what: labels-were-scanned
   where: github
-- _id: 180535
-  _time: 2025-07-20 22:54:14.628631479 Z
+- _id: 180883
+  _time: 2025-07-20 23:51:48.512597686 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12590126
+  repository: 14204295
   what: labels-were-scanned
   where: github
-- _id: 180536
-  _time: 2025-07-20 22:54:14.943211676 Z
+- _id: 180884
+  _time: 2025-07-20 23:51:48.647351924 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 19194304
+  repository: 20635353
   what: labels-were-scanned
   where: github
-- _id: 180538
-  _time: 2025-07-20 22:54:15.945049251 Z
+- _id: 180886
+  _time: 2025-07-20 23:51:49.395282546 Z
   _version: 0.13.0/0.51.1/
   latest: 0
-  repository: 12590128
+  repository: 4174608
   what: labels-were-scanned
   where: github
-- _id: 180539
-  _time: 2025-07-20 22:54:16.261916745 Z
+- _id: 180887
+  _time: 2025-07-20 23:51:49.527081753 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: labels-were-scanned
+  where: github
+- _id: 180888
+  _time: 2025-07-20 23:51:49.663758390 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: labels-were-scanned
+  where: github
+- _id: 180889
+  _time: 2025-07-20 23:51:49.801811076 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: labels-were-scanned
+  where: github
+- _id: 180890
+  _time: 2025-07-20 23:51:49.937081159 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: labels-were-scanned
+  where: github
+- _id: 180892
+  _time: 2025-07-20 23:51:50.647610240 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: labels-were-scanned
+  where: github
+- _id: 180894
+  _time: 2025-07-20 23:51:51.363210739 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: labels-were-scanned
+  where: github
+- _id: 180895
+  _time: 2025-07-20 23:51:51.499728831 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: labels-were-scanned
+  where: github
+- _id: 180901
+  _time: 2025-07-20 23:51:55.431451787 Z
   _version: 0.13.0/0.51.1/
   latest: 0
   repository: 23238769
   what: labels-were-scanned
   where: github
-- _id: 180556
-  _time: 2025-07-20 22:54:26.782828358 Z
+- _id: 180903
+  _time: 2025-07-20 23:51:56.377922568 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: labels-were-scanned
+  where: github
+- _id: 180904
+  _time: 2025-07-20 23:51:56.699713031 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: labels-were-scanned
+  where: github
+- _id: 180905
+  _time: 2025-07-20 23:51:57.017245939 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: labels-were-scanned
+  where: github
+- _id: 180906
+  _time: 2025-07-20 23:51:57.338881084 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: labels-were-scanned
+  where: github
+- _id: 180921
+  _time: 2025-07-20 23:52:08.208622518 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: labels-were-scanned
+  where: github
+- _id: 180923
+  _time: 2025-07-20 23:52:09.259232320 Z
   _version: 0.13.0/0.51.1/
   latest: 0
   repository: 12262782
   what: labels-were-scanned
   where: github
-- _id: 180708
-  _time: 2025-07-20 22:56:07.923862574 Z
+- _id: 180925
+  _time: 2025-07-20 23:52:10.300542244 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16312153
+  what: labels-were-scanned
+  where: github
+- _id: 181026
+  _time: 2025-07-20 23:53:29.053208363 Z
   _version: 0.13.0/0.51.1/
   latest: 0
   repository: 12587702
   what: labels-were-scanned
   where: github
-- _id: 180794
-  _time: 2025-07-20 22:57:06.594382508 Z
+- _id: 181027
+  _time: 2025-07-20 23:54:04.001703456 Z
   _version: 0.13.0/0.51.1/
-  latest: 337
-  repository: 16312153
-  what: labels-were-scanned
-  where: github
-- _id: 180795
-  _time: 2025-07-20 22:57:07.311325425 Z
-  _version: 0.13.0/0.51.1/
-  latest: 608
-  repository: 12590813
+  latest: 424
+  repository: 13717355
   what: labels-were-scanned
   where: github
