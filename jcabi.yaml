@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: The value of 'who' can't be nil
+  error: 'Judge quality-of-service stopped by timeout after 10m0s: execution expired'
   inserted: 8
-  seconds: 1031.297295196
+  seconds: 1313.811055363
   version: 0.51.1
   what: judges-summary
-  when: 2025-07-22 21:56:10.434998529 Z
+  when: 2025-07-22 23:03:55.526146818 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -3191,7 +3191,7 @@
   issue: 169
   repository: 13717355
   what: issue-was-opened
-  when: 2022-08-22 05:46:07.000000000 Z
+  when: &1064 2022-08-22 05:46:07.000000000 Z
   where: github
   who: 33983579
 - _id: 31578
@@ -3257,7 +3257,7 @@
   issue: 162
   repository: 13717355
   what: issue-was-opened
-  when: 2021-09-16 16:14:01.000000000 Z
+  when: &1065 2021-09-16 16:14:01.000000000 Z
   where: github
   who: 5004037
 - _id: 31584
@@ -3279,7 +3279,7 @@
   issue: 154
   repository: 13717355
   what: issue-was-opened
-  when: 2020-03-05 15:37:15.000000000 Z
+  when: &1066 2020-03-05 15:37:15.000000000 Z
   where: github
   who: 9504395
 - _id: 31586
@@ -3290,7 +3290,7 @@
   issue: 153
   repository: 13717355
   what: issue-was-opened
-  when: 2020-02-06 08:51:32.000000000 Z
+  when: &1067 2020-02-06 08:51:32.000000000 Z
   where: github
   who: 298504
 - _id: 31587
@@ -3312,7 +3312,7 @@
   issue: 151
   repository: 13717355
   what: issue-was-opened
-  when: 2019-02-18 16:20:52.000000000 Z
+  when: &1068 2019-02-18 16:20:52.000000000 Z
   where: github
   who: 1405237
 - _id: 31589
@@ -3323,7 +3323,7 @@
   issue: 149
   repository: 13717355
   what: issue-was-opened
-  when: 2019-01-11 23:07:11.000000000 Z
+  when: &1069 2019-01-11 23:07:11.000000000 Z
   where: github
   who: 502372
 - _id: 31590
@@ -3477,7 +3477,7 @@
   issue: 133
   repository: 13717355
   what: issue-was-opened
-  when: 2017-04-28 16:05:00.000000000 Z
+  when: &1070 2017-04-28 16:05:00.000000000 Z
   where: github
   who: 1714171
 - _id: 31604
@@ -3499,7 +3499,7 @@
   issue: 130
   repository: 13717355
   what: issue-was-opened
-  when: 2017-03-17 12:41:44.000000000 Z
+  when: &1071 2017-03-17 12:41:44.000000000 Z
   where: github
   who: 7222462
 - _id: 31606
@@ -3620,7 +3620,7 @@
   issue: 113
   repository: 13717355
   what: issue-was-opened
-  when: 2016-02-19 00:00:58.000000000 Z
+  when: &1072 2016-02-19 00:00:58.000000000 Z
   where: github
   who: 984052
 - _id: 31617
@@ -3642,7 +3642,7 @@
   issue: 107
   repository: 13717355
   what: issue-was-opened
-  when: 2016-01-16 06:38:42.000000000 Z
+  when: &1073 2016-01-16 06:38:42.000000000 Z
   where: github
   who: 9972909
 - _id: 31619
@@ -3653,7 +3653,7 @@
   issue: 106
   repository: 13717355
   what: issue-was-opened
-  when: 2016-01-10 11:54:57.000000000 Z
+  when: &1074 2016-01-10 11:54:57.000000000 Z
   where: github
   who: 1405237
 - _id: 31620
@@ -3686,7 +3686,7 @@
   issue: 102
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-25 07:31:19.000000000 Z
+  when: &1075 2015-12-25 07:31:19.000000000 Z
   where: github
   who: 1405237
 - _id: 31623
@@ -3697,7 +3697,7 @@
   issue: 101
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-24 08:13:50.000000000 Z
+  when: &1076 2015-12-24 08:13:50.000000000 Z
   where: github
   who: 1405237
 - _id: 31624
@@ -3708,7 +3708,7 @@
   issue: 100
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-23 07:13:42.000000000 Z
+  when: &1077 2015-12-23 07:13:42.000000000 Z
   where: github
   who: 1405237
 - _id: 31625
@@ -3818,7 +3818,7 @@
   issue: 68
   repository: 13717355
   what: issue-was-opened
-  when: 2015-06-23 12:57:10.000000000 Z
+  when: &1078 2015-06-23 12:57:10.000000000 Z
   where: github
   who: 4637784
 - _id: 31635
@@ -3829,7 +3829,7 @@
   issue: 66
   repository: 13717355
   what: issue-was-opened
-  when: 2015-06-10 10:43:03.000000000 Z
+  when: &1079 2015-06-10 10:43:03.000000000 Z
   where: github
   who: 1667699
 - _id: 31636
@@ -3895,7 +3895,7 @@
   issue: 60
   repository: 13717355
   what: issue-was-opened
-  when: 2015-02-26 07:46:03.000000000 Z
+  when: &1080 2015-02-26 07:46:03.000000000 Z
   where: github
   who: 898997
 - _id: 31642
@@ -3906,7 +3906,7 @@
   issue: 58
   repository: 13717355
   what: issue-was-opened
-  when: 2015-02-24 17:51:55.000000000 Z
+  when: &1081 2015-02-24 17:51:55.000000000 Z
   where: github
   who: 898997
 - _id: 31643
@@ -3950,7 +3950,7 @@
   issue: 53
   repository: 13717355
   what: issue-was-opened
-  when: 2015-02-12 06:55:34.000000000 Z
+  when: &1082 2015-02-12 06:55:34.000000000 Z
   where: github
   who: 534657
 - _id: 31647
@@ -3972,7 +3972,7 @@
   issue: 50
   repository: 13717355
   what: issue-was-opened
-  when: 2015-01-21 23:01:33.000000000 Z
+  when: &1083 2015-01-21 23:01:33.000000000 Z
   where: github
   who: 569536
 - _id: 31649
@@ -4016,7 +4016,7 @@
   issue: 44
   repository: 13717355
   what: issue-was-opened
-  when: 2015-01-14 16:31:09.000000000 Z
+  when: &1084 2015-01-14 16:31:09.000000000 Z
   where: github
   who: 1054771
 - _id: 31653
@@ -4038,7 +4038,7 @@
   issue: 41
   repository: 13717355
   what: issue-was-opened
-  when: 2015-01-08 16:33:14.000000000 Z
+  when: &1085 2015-01-08 16:33:14.000000000 Z
   where: github
   who: 569536
 - _id: 31655
@@ -6634,7 +6634,7 @@
   issue: 228
   repository: 12590813
   what: issue-was-opened
-  when: 2023-01-17 08:20:47.000000000 Z
+  when: &1086 2023-01-17 08:20:47.000000000 Z
   where: github
   who: 40247101
 - _id: 46180
@@ -6810,7 +6810,7 @@
   issue: 132
   repository: 12590813
   what: issue-was-opened
-  when: 2021-12-27 01:13:15.000000000 Z
+  when: &1087 2021-12-27 01:13:15.000000000 Z
   where: github
   who: 49783909
 - _id: 46196
@@ -6843,7 +6843,7 @@
   issue: 128
   repository: 12590813
   what: issue-was-opened
-  when: 2021-12-12 05:44:19.000000000 Z
+  when: &1088 2021-12-12 05:44:19.000000000 Z
   where: github
   who: 49783909
 - _id: 46199
@@ -6887,7 +6887,7 @@
   issue: 124
   repository: 12590813
   what: issue-was-opened
-  when: 2021-09-09 18:08:06.000000000 Z
+  when: &1089 2021-09-09 18:08:06.000000000 Z
   where: github
   who: 49783909
 - _id: 46203
@@ -6964,7 +6964,7 @@
   issue: 115
   repository: 12590813
   what: issue-was-opened
-  when: 2020-12-13 04:50:00.000000000 Z
+  when: &1090 2020-12-13 04:50:00.000000000 Z
   where: github
   who: 49783909
 - _id: 46210
@@ -6986,7 +6986,7 @@
   issue: 107
   repository: 12590813
   what: issue-was-opened
-  when: 2020-11-23 20:54:59.000000000 Z
+  when: &1091 2020-11-23 20:54:59.000000000 Z
   where: github
   who: 1964562
 - _id: 46212
@@ -7074,7 +7074,7 @@
   issue: 98
   repository: 12590813
   what: issue-was-opened
-  when: 2020-07-06 10:11:16.000000000 Z
+  when: &1092 2020-07-06 10:11:16.000000000 Z
   where: github
   who: 1524988
 - _id: 46220
@@ -7096,7 +7096,7 @@
   issue: 94
   repository: 12590813
   what: issue-was-opened
-  when: 2020-02-18 10:10:45.000000000 Z
+  when: &1093 2020-02-18 10:10:45.000000000 Z
   where: github
   who: 2956255
 - _id: 46222
@@ -7118,7 +7118,7 @@
   issue: 88
   repository: 12590813
   what: issue-was-opened
-  when: 2019-05-08 03:26:25.000000000 Z
+  when: &1094 2019-05-08 03:26:25.000000000 Z
   where: github
   who: 34595022
 - _id: 46224
@@ -7129,7 +7129,7 @@
   issue: 87
   repository: 12590813
   what: issue-was-opened
-  when: 2019-05-07 11:19:31.000000000 Z
+  when: &1095 2019-05-07 11:19:31.000000000 Z
   where: github
   who: 34595022
 - _id: 46225
@@ -7140,7 +7140,7 @@
   issue: 86
   repository: 12590813
   what: issue-was-opened
-  when: 2019-01-13 05:00:40.000000000 Z
+  when: &1096 2019-01-13 05:00:40.000000000 Z
   where: github
   who: 1964562
 - _id: 46226
@@ -7151,7 +7151,7 @@
   issue: 84
   repository: 12590813
   what: issue-was-opened
-  when: 2018-11-11 05:12:53.000000000 Z
+  when: &1097 2018-11-11 05:12:53.000000000 Z
   where: github
   who: 1964562
 - _id: 46227
@@ -7195,7 +7195,7 @@
   issue: 78
   repository: 12590813
   what: issue-was-opened
-  when: 2018-03-27 05:39:56.000000000 Z
+  when: &1098 2018-03-27 05:39:56.000000000 Z
   where: github
   who: 440768
 - _id: 46231
@@ -7294,7 +7294,7 @@
   issue: 65
   repository: 12590813
   what: issue-was-opened
-  when: 2016-12-01 20:32:52.000000000 Z
+  when: &1099 2016-12-01 20:32:52.000000000 Z
   where: github
   who: 6490959
 - _id: 46240
@@ -7360,7 +7360,7 @@
   issue: 56
   repository: 12590813
   what: issue-was-opened
-  when: 2016-05-18 20:56:18.000000000 Z
+  when: &1100 2016-05-18 20:56:18.000000000 Z
   where: github
   who: 1618116
 - _id: 46246
@@ -7371,7 +7371,7 @@
   issue: 55
   repository: 12590813
   what: issue-was-opened
-  when: 2016-05-13 18:45:06.000000000 Z
+  when: &1101 2016-05-13 18:45:06.000000000 Z
   where: github
   who: 1618116
 - _id: 46247
@@ -7382,7 +7382,7 @@
   issue: 54
   repository: 12590813
   what: issue-was-opened
-  when: 2016-03-09 06:42:21.000000000 Z
+  when: &1102 2016-03-09 06:42:21.000000000 Z
   where: github
   who: 1388994
 - _id: 46248
@@ -7415,7 +7415,7 @@
   issue: 50
   repository: 12590813
   what: issue-was-opened
-  when: 2016-01-22 23:38:49.000000000 Z
+  when: &1103 2016-01-22 23:38:49.000000000 Z
   where: github
   who: 5467276
 - _id: 46251
@@ -7426,7 +7426,7 @@
   issue: 49
   repository: 12590813
   what: issue-was-opened
-  when: 2016-01-22 10:45:07.000000000 Z
+  when: &1104 2016-01-22 10:45:07.000000000 Z
   where: github
   who: 7703204
 - _id: 46252
@@ -7437,7 +7437,7 @@
   issue: 48
   repository: 12590813
   what: issue-was-opened
-  when: 2016-01-12 05:05:01.000000000 Z
+  when: &1105 2016-01-12 05:05:01.000000000 Z
   where: github
   who: 5570433
 - _id: 46253
@@ -7448,7 +7448,7 @@
   issue: 47
   repository: 12590813
   what: issue-was-opened
-  when: 2016-01-04 02:55:21.000000000 Z
+  when: &1106 2016-01-04 02:55:21.000000000 Z
   where: github
   who: 1917892
 - _id: 46254
@@ -7459,7 +7459,7 @@
   issue: 46
   repository: 12590813
   what: issue-was-opened
-  when: 2015-12-13 14:16:39.000000000 Z
+  when: &1107 2015-12-13 14:16:39.000000000 Z
   where: github
   who: 105730
 - _id: 46255
@@ -7470,7 +7470,7 @@
   issue: 45
   repository: 12590813
   what: issue-was-opened
-  when: 2015-12-13 14:04:22.000000000 Z
+  when: &1108 2015-12-13 14:04:22.000000000 Z
   where: github
   who: 105730
 - _id: 46256
@@ -7558,7 +7558,7 @@
   issue: 37
   repository: 12590813
   what: issue-was-opened
-  when: 2015-07-19 18:23:47.000000000 Z
+  when: &1109 2015-07-19 18:23:47.000000000 Z
   where: github
   who: 4467948
 - _id: 46264
@@ -18150,7 +18150,7 @@
   issue: 102
   repository: 12587702
   what: issue-was-opened
-  when: 2021-04-20 05:16:01.000000000 Z
+  when: &1110 2021-04-20 05:16:01.000000000 Z
   where: github
   who: 7813046
 - _id: 68433
@@ -18172,7 +18172,7 @@
   issue: 100
   repository: 12587702
   what: issue-was-opened
-  when: 2021-04-07 14:29:43.000000000 Z
+  when: &1111 2021-04-07 14:29:43.000000000 Z
   where: github
   who: 9504395
 - _id: 68435
@@ -18260,7 +18260,7 @@
   issue: 80
   repository: 12587702
   what: issue-was-opened
-  when: 2020-02-11 12:27:37.000000000 Z
+  when: &1112 2020-02-11 12:27:37.000000000 Z
   where: github
   who: 45224442
 - _id: 68443
@@ -18271,7 +18271,7 @@
   issue: 79
   repository: 12587702
   what: issue-was-opened
-  when: 2019-12-19 11:27:43.000000000 Z
+  when: &1113 2019-12-19 11:27:43.000000000 Z
   where: github
   who: 8526099
 - _id: 68444
@@ -18293,7 +18293,7 @@
   issue: 76
   repository: 12587702
   what: issue-was-opened
-  when: 2019-11-20 15:53:31.000000000 Z
+  when: &1114 2019-11-20 15:53:31.000000000 Z
   where: github
   who: 26636262
 - _id: 68446
@@ -18304,7 +18304,7 @@
   issue: 74
   repository: 12587702
   what: issue-was-opened
-  when: 2019-10-25 12:43:14.000000000 Z
+  when: &1115 2019-10-25 12:43:14.000000000 Z
   where: github
   who: 8526099
 - _id: 68447
@@ -18315,7 +18315,7 @@
   issue: 73
   repository: 12587702
   what: issue-was-opened
-  when: 2019-07-12 12:01:27.000000000 Z
+  when: &1116 2019-07-12 12:01:27.000000000 Z
   where: github
   who: 7326295
 - _id: 68448
@@ -18326,7 +18326,7 @@
   issue: 71
   repository: 12587702
   what: issue-was-opened
-  when: 2019-05-15 12:23:01.000000000 Z
+  when: &1117 2019-05-15 12:23:01.000000000 Z
   where: github
   who: 45224442
 - _id: 68449
@@ -18348,7 +18348,7 @@
   issue: 68
   repository: 12587702
   what: issue-was-opened
-  when: 2018-11-08 17:10:20.000000000 Z
+  when: &1118 2018-11-08 17:10:20.000000000 Z
   where: github
   who: 9504395
 - _id: 68451
@@ -18359,7 +18359,7 @@
   issue: 67
   repository: 12587702
   what: issue-was-opened
-  when: 2018-09-10 21:52:35.000000000 Z
+  when: &1119 2018-09-10 21:52:35.000000000 Z
   where: github
   who: 15959667
 - _id: 68452
@@ -18414,7 +18414,7 @@
   issue: 57
   repository: 12587702
   what: issue-was-opened
-  when: 2017-01-31 07:59:41.000000000 Z
+  when: &1120 2017-01-31 07:59:41.000000000 Z
   where: github
   who: 661340
 - _id: 68457
@@ -18469,7 +18469,7 @@
   issue: 50
   repository: 12587702
   what: issue-was-opened
-  when: 2016-04-11 20:12:12.000000000 Z
+  when: &1121 2016-04-11 20:12:12.000000000 Z
   where: github
   who: 1702423
 - _id: 68462
@@ -18480,7 +18480,7 @@
   issue: 49
   repository: 12587702
   what: issue-was-opened
-  when: 2016-03-09 20:49:26.000000000 Z
+  when: &1122 2016-03-09 20:49:26.000000000 Z
   where: github
   who: 3864307
 - _id: 68463
@@ -18502,7 +18502,7 @@
   issue: 46
   repository: 12587702
   what: issue-was-opened
-  when: 2016-01-18 04:33:27.000000000 Z
+  when: &1123 2016-01-18 04:33:27.000000000 Z
   where: github
   who: 1964562
 - _id: 68465
@@ -18535,7 +18535,7 @@
   issue: 43
   repository: 12587702
   what: issue-was-opened
-  when: 2015-06-10 10:47:16.000000000 Z
+  when: &1124 2015-06-10 10:47:16.000000000 Z
   where: github
   who: 1667699
 - _id: 68468
@@ -22248,7 +22248,7 @@
   issue: 170
   repository: 16312153
   what: issue-was-opened
-  when: 2017-12-18 18:46:37.000000000 Z
+  when: &1125 2017-12-18 18:46:37.000000000 Z
   where: github
   who: 4144769
 - _id: 91195
@@ -22314,7 +22314,7 @@
   issue: 160
   repository: 16312153
   what: issue-was-opened
-  when: 2017-04-25 14:38:15.000000000 Z
+  when: &1126 2017-04-25 14:38:15.000000000 Z
   where: github
   who: 1359384
 - _id: 91201
@@ -22325,7 +22325,7 @@
   issue: 159
   repository: 16312153
   what: issue-was-opened
-  when: 2017-04-25 13:11:50.000000000 Z
+  when: &1127 2017-04-25 13:11:50.000000000 Z
   where: github
   who: 1359384
 - _id: 91202
@@ -22347,7 +22347,7 @@
   issue: 156
   repository: 16312153
   what: issue-was-opened
-  when: 2017-03-18 18:55:42.000000000 Z
+  when: &1128 2017-03-18 18:55:42.000000000 Z
   where: github
   who: 1805417
 - _id: 91204
@@ -22402,7 +22402,7 @@
   issue: 148
   repository: 16312153
   what: issue-was-opened
-  when: 2016-11-11 15:22:15.000000000 Z
+  when: &1129 2016-11-11 15:22:15.000000000 Z
   where: github
   who: 87088
 - _id: 91209
@@ -22413,7 +22413,7 @@
   issue: 147
   repository: 16312153
   what: issue-was-opened
-  when: 2016-11-11 15:15:51.000000000 Z
+  when: &1130 2016-11-11 15:15:51.000000000 Z
   where: github
   who: 87088
 - _id: 91210
@@ -22512,7 +22512,7 @@
   issue: 132
   repository: 16312153
   what: issue-was-opened
-  when: 2016-05-04 10:31:31.000000000 Z
+  when: &1131 2016-05-04 10:31:31.000000000 Z
   where: github
   who: 6305156
 - _id: 91219
@@ -22523,7 +22523,7 @@
   issue: 131
   repository: 16312153
   what: issue-was-opened
-  when: 2016-04-11 18:37:14.000000000 Z
+  when: &1132 2016-04-11 18:37:14.000000000 Z
   where: github
   who: 2061944
 - _id: 91220
@@ -22666,7 +22666,7 @@
   issue: 111
   repository: 16312153
   what: issue-was-opened
-  when: 2015-09-15 13:15:07.000000000 Z
+  when: &1133 2015-09-15 13:15:07.000000000 Z
   where: github
   who: 12834398
 - _id: 91233
@@ -22677,7 +22677,7 @@
   issue: 109
   repository: 16312153
   what: issue-was-opened
-  when: 2015-08-31 16:56:55.000000000 Z
+  when: &1134 2015-08-31 16:56:55.000000000 Z
   where: github
   who: 4368287
 - _id: 91234
@@ -22688,7 +22688,7 @@
   issue: 108
   repository: 16312153
   what: issue-was-opened
-  when: 2015-08-28 17:56:22.000000000 Z
+  when: &1135 2015-08-28 17:56:22.000000000 Z
   where: github
   who: 1054771
 - _id: 91235
@@ -22699,7 +22699,7 @@
   issue: 106
   repository: 16312153
   what: issue-was-opened
-  when: 2015-08-21 19:34:03.000000000 Z
+  when: &1136 2015-08-21 19:34:03.000000000 Z
   where: github
   who: 1054771
 - _id: 91236
@@ -22721,7 +22721,7 @@
   issue: 104
   repository: 16312153
   what: issue-was-opened
-  when: 2015-08-04 12:28:26.000000000 Z
+  when: &1137 2015-08-04 12:28:26.000000000 Z
   where: github
   who: 1667699
 - _id: 91238
@@ -22732,7 +22732,7 @@
   issue: 102
   repository: 16312153
   what: issue-was-opened
-  when: 2015-07-08 11:53:47.000000000 Z
+  when: &1138 2015-07-08 11:53:47.000000000 Z
   where: github
   who: 209396
 - _id: 91239
@@ -22754,7 +22754,7 @@
   issue: 97
   repository: 16312153
   what: issue-was-opened
-  when: 2015-06-18 16:19:40.000000000 Z
+  when: &1139 2015-06-18 16:19:40.000000000 Z
   where: github
   who: 95550
 - _id: 91241
@@ -22886,7 +22886,7 @@
   issue: 81
   repository: 16312153
   what: issue-was-opened
-  when: 2015-04-07 20:31:10.000000000 Z
+  when: &1140 2015-04-07 20:31:10.000000000 Z
   where: github
   who: 511167
 - _id: 91253
@@ -22952,7 +22952,7 @@
   issue: 75
   repository: 16312153
   what: issue-was-opened
-  when: 2015-03-30 16:48:31.000000000 Z
+  when: &1141 2015-03-30 16:48:31.000000000 Z
   where: github
   who: 1388994
 - _id: 91259
@@ -22963,7 +22963,7 @@
   issue: 74
   repository: 16312153
   what: issue-was-opened
-  when: 2015-03-30 11:58:49.000000000 Z
+  when: &1142 2015-03-30 11:58:49.000000000 Z
   where: github
   who: 1388994
 - _id: 91260
@@ -23007,7 +23007,7 @@
   issue: 70
   repository: 16312153
   what: issue-was-opened
-  when: 2015-01-25 18:58:18.000000000 Z
+  when: &1143 2015-01-25 18:58:18.000000000 Z
   where: github
   who: 1143055
 - _id: 91264
@@ -23040,7 +23040,7 @@
   issue: 67
   repository: 16312153
   what: issue-was-opened
-  when: 2015-01-23 20:54:22.000000000 Z
+  when: &1144 2015-01-23 20:54:22.000000000 Z
   where: github
   who: 10676186
 - _id: 91267
@@ -23051,7 +23051,7 @@
   issue: 66
   repository: 16312153
   what: issue-was-opened
-  when: 2015-01-21 23:03:59.000000000 Z
+  when: &1145 2015-01-21 23:03:59.000000000 Z
   where: github
   who: 569536
 - _id: 91268
@@ -23106,7 +23106,7 @@
   issue: 59
   repository: 16312153
   what: issue-was-opened
-  when: 2015-01-08 16:35:56.000000000 Z
+  when: &1146 2015-01-08 16:35:56.000000000 Z
   where: github
   who: 569536
 - _id: 91273
@@ -85977,7 +85977,7 @@
   review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
-  when: 2025-07-22 15:52:27.000000000 Z
+  when: &1147 2025-07-22 15:52:27.000000000 Z
   where: github
   who: 526301
 - _id: 196702
@@ -85999,7 +85999,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-15 00:46:23.000000000 Z
+  when: &1148 2023-08-15 00:46:23.000000000 Z
   where: github
   who: 8086956
 - _id: 196708
@@ -86021,7 +86021,7 @@
   review_comments: 0
   succeeded_builds: 8
   what: pull-was-merged
-  when: 2024-10-28 14:00:02.000000000 Z
+  when: &1149 2024-10-28 14:00:02.000000000 Z
   where: github
   who: 8086956
 - _id: 196717
@@ -86043,7 +86043,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-01-19 12:45:27.000000000 Z
+  when: &1150 2023-01-19 12:45:27.000000000 Z
   where: github
   who: 8086956
 - _id: 196719
@@ -86065,7 +86065,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-14 14:41:52.000000000 Z
+  when: &1151 2023-03-14 14:41:52.000000000 Z
   where: github
   who: 8086956
 - _id: 196727
@@ -86087,7 +86087,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-12-29 13:37:00.000000000 Z
+  when: &1152 2021-12-29 13:37:00.000000000 Z
   where: github
   who: 8086956
 - _id: 196729
@@ -86109,7 +86109,7 @@
   review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
-  when: 2025-07-22 15:52:18.000000000 Z
+  when: &1153 2025-07-22 15:52:18.000000000 Z
   where: github
   who: 526301
 - _id: 196739
@@ -86131,7 +86131,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-15 23:38:33.000000000 Z
+  when: &1154 2023-08-15 23:38:33.000000000 Z
   where: github
   who: 8086956
 - _id: 196743
@@ -86153,7 +86153,7 @@
   review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
-  when: 2024-10-29 10:06:06.000000000 Z
+  when: &1155 2024-10-29 10:06:06.000000000 Z
   where: github
   who: 8086956
 - _id: 196749
@@ -86175,7 +86175,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-02-03 05:45:44.000000000 Z
+  when: &1156 2023-02-03 05:45:44.000000000 Z
   where: github
   who: 8086956
 - _id: 196751
@@ -86197,7 +86197,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-17 05:36:30.000000000 Z
+  when: &1157 2023-03-17 05:36:30.000000000 Z
   where: github
   who: 8086956
 - _id: 196757
@@ -87847,223 +87847,6 @@
   when: *1061
   where: github
   who: 4467948
-- _id: 197319
-  _time: 2025-07-22 19:36:45.085086219 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: types-were-scanned
-  where: github
-- _id: 197320
-  _time: 2025-07-22 19:36:45.221317467 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: types-were-scanned
-  where: github
-- _id: 197322
-  _time: 2025-07-22 19:36:45.981056248 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: types-were-scanned
-  where: github
-- _id: 197324
-  _time: 2025-07-22 19:36:47.113437226 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: types-were-scanned
-  where: github
-- _id: 197325
-  _time: 2025-07-22 19:36:47.245770404 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: types-were-scanned
-  where: github
-- _id: 197326
-  _time: 2025-07-22 19:36:47.374046213 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: types-were-scanned
-  where: github
-- _id: 197329
-  _time: 2025-07-22 19:36:48.692728614 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: types-were-scanned
-  where: github
-- _id: 197331
-  _time: 2025-07-22 19:36:49.704600219 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: types-were-scanned
-  where: github
-- _id: 197333
-  _time: 2025-07-22 19:36:50.602670856 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: types-were-scanned
-  where: github
-- _id: 197335
-  _time: 2025-07-22 19:36:51.574763056 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14093966
-  what: types-were-scanned
-  where: github
-- _id: 197336
-  _time: 2025-07-22 19:36:51.707119745 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: types-were-scanned
-  where: github
-- _id: 197337
-  _time: 2025-07-22 19:36:51.837392497 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: types-were-scanned
-  where: github
-- _id: 197338
-  _time: 2025-07-22 19:36:51.973653343 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: types-were-scanned
-  where: github
-- _id: 197339
-  _time: 2025-07-22 19:36:52.104777601 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: types-were-scanned
-  where: github
-- _id: 197342
-  _time: 2025-07-22 19:36:53.444460991 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: types-were-scanned
-  where: github
-- _id: 197343
-  _time: 2025-07-22 19:36:53.578662126 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: types-were-scanned
-  where: github
-- _id: 197344
-  _time: 2025-07-22 19:36:53.709745607 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: types-were-scanned
-  where: github
-- _id: 197347
-  _time: 2025-07-22 19:36:55.017227109 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: types-were-scanned
-  where: github
-- _id: 197348
-  _time: 2025-07-22 19:36:55.146299028 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: types-were-scanned
-  where: github
-- _id: 197349
-  _time: 2025-07-22 19:36:55.278551991 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: types-were-scanned
-  where: github
-- _id: 197350
-  _time: 2025-07-22 19:36:55.598078124 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: types-were-scanned
-  where: github
-- _id: 197353
-  _time: 2025-07-22 19:36:57.261632840 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: types-were-scanned
-  where: github
-- _id: 197358
-  _time: 2025-07-22 19:37:00.264250845 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: types-were-scanned
-  where: github
-- _id: 197359
-  _time: 2025-07-22 19:37:00.586118619 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: types-were-scanned
-  where: github
-- _id: 197360
-  _time: 2025-07-22 19:37:00.907840810 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591138
-  what: types-were-scanned
-  where: github
-- _id: 197392
-  _time: 2025-07-22 19:37:24.171991474 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12262782
-  what: types-were-scanned
-  where: github
-- _id: 197451
-  _time: 2025-07-22 19:38:12.259652320 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: types-were-scanned
-  where: github
-- _id: 197674
-  _time: 2025-07-22 19:41:11.258033396 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587702
-  what: types-were-scanned
-  where: github
-- _id: 197718
-  _time: 2025-07-22 19:41:43.901144148 Z
-  _version: 0.13.0/0.51.1/
-  latest: 127
-  repository: 12590813
-  what: types-were-scanned
-  where: github
-- _id: 197719
-  _time: 2025-07-22 19:41:44.834362415 Z
-  _version: 0.13.0/0.51.1/
-  latest: 131
-  repository: 16312153
-  what: types-were-scanned
-  where: github
-- _id: 197720
-  _time: 2025-07-22 19:41:45.717041190 Z
-  _version: 0.13.0/0.51.1/
-  latest: 143
-  repository: 13717355
-  what: types-were-scanned
-  where: github
 - _id: 198483
   _time: 2025-07-22 20:54:44.539988095 Z
   _version: 0.13.0/0.51.1/
@@ -88125,7 +87908,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-17 21:44:40.000000000 Z
+  when: &1158 2023-03-17 21:44:40.000000000 Z
   where: github
   who: 8086956
 - _id: 198513
@@ -88147,7 +87930,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-16 08:40:03.000000000 Z
+  when: &1159 2023-08-16 08:40:03.000000000 Z
   where: github
   who: 8086956
 - _id: 198519
@@ -88169,7 +87952,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-06-09 03:13:13.000000000 Z
+  when: &1160 2023-06-09 03:13:13.000000000 Z
   where: github
   who: 8086956
 - _id: 198524
@@ -88191,7 +87974,7 @@
   review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
-  when: 2025-07-22 15:52:09.000000000 Z
+  when: &1161 2025-07-22 15:52:09.000000000 Z
   where: github
   who: 526301
 - _id: 198533
@@ -88213,7 +87996,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-12-30 01:04:40.000000000 Z
+  when: &1162 2021-12-30 01:04:40.000000000 Z
   where: github
   who: 8086956
 - _id: 198539
@@ -88235,7 +88018,7 @@
   review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
-  when: 2024-10-29 16:08:53.000000000 Z
+  when: &1163 2024-10-29 16:08:53.000000000 Z
   where: github
   who: 526301
 - _id: 198544
@@ -88257,7 +88040,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-18 10:36:20.000000000 Z
+  when: &1164 2023-03-18 10:36:20.000000000 Z
   where: github
   who: 8086956
 - _id: 198547
@@ -88279,7 +88062,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-17 02:41:08.000000000 Z
+  when: &1165 2023-08-17 02:41:08.000000000 Z
   where: github
   who: 8086956
 - _id: 198552
@@ -88301,7 +88084,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-04-04 15:43:41.000000000 Z
+  when: &1166 2023-04-04 15:43:41.000000000 Z
   where: github
   who: 8086956
 - _id: 198560
@@ -88323,7 +88106,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-12-31 20:33:44.000000000 Z
+  when: &1167 2021-12-31 20:33:44.000000000 Z
   where: github
   who: 8086956
 - _id: 198565
@@ -88345,7 +88128,7 @@
   review_comments: 0
   succeeded_builds: 4
   what: pull-was-merged
-  when: 2024-11-07 10:31:38.000000000 Z
+  when: &1168 2024-11-07 10:31:38.000000000 Z
   where: github
   who: 526301
 - _id: 198570
@@ -88367,7 +88150,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-20 12:43:32.000000000 Z
+  when: &1169 2023-03-20 12:43:32.000000000 Z
   where: github
   who: 8086956
 - _id: 198572
@@ -88389,7 +88172,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-17 23:35:29.000000000 Z
+  when: &1170 2023-08-17 23:35:29.000000000 Z
   where: github
   who: 8086956
 - _id: 198576
@@ -88411,7 +88194,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-04-04 22:40:14.000000000 Z
+  when: &1171 2023-04-04 22:40:14.000000000 Z
   where: github
   who: 8086956
 - _id: 198578
@@ -88444,223 +88227,6 @@
   when: *1063
   where: github
   who: 569536
-- _id: 198580
-  _time: 2025-07-22 21:39:06.851787968 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50367374034
-  repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 198581
-  _time: 2025-07-22 21:39:07.725976577 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50423569553
-  repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 198582
-  _time: 2025-07-22 21:39:08.242460823 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52334117174
-  repository: 12262782
-  what: events-were-scanned
-  where: github
-- _id: 198583
-  _time: 2025-07-22 21:39:15.128709240 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50496302309
-  repository: 12590813
-  what: events-were-scanned
-  where: github
-- _id: 198584
-  _time: 2025-07-22 21:39:15.732766568 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50163308058
-  repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 198585
-  _time: 2025-07-22 21:39:16.157619325 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: events-were-scanned
-  where: github
-- _id: 198586
-  _time: 2025-07-22 21:39:16.983448732 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50477404854
-  repository: 12947626
-  what: events-were-scanned
-  where: github
-- _id: 198587
-  _time: 2025-07-22 21:39:17.472216050 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52351242091
-  repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 198588
-  _time: 2025-07-22 21:39:17.783830701 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49345256772
-  repository: 12591371
-  what: events-were-scanned
-  where: github
-- _id: 198589
-  _time: 2025-07-22 21:39:18.239589378 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50427137745
-  repository: 25780072
-  what: events-were-scanned
-  where: github
-- _id: 198590
-  _time: 2025-07-22 21:39:18.621174771 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49342071550
-  repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 198591
-  _time: 2025-07-22 21:39:19.056916135 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
-- _id: 198592
-  _time: 2025-07-22 21:39:19.533740933 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50429299091
-  repository: 12584841
-  what: events-were-scanned
-  where: github
-- _id: 198593
-  _time: 2025-07-22 21:39:20.449967043 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49884498095
-  repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 198594
-  _time: 2025-07-22 21:39:21.157521978 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50299289288
-  repository: 19194296
-  what: events-were-scanned
-  where: github
-- _id: 198595
-  _time: 2025-07-22 21:39:22.352467085 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50476549509
-  repository: 14093966
-  what: events-were-scanned
-  where: github
-- _id: 198596
-  _time: 2025-07-22 21:39:22.778968602 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50466965619
-  repository: 12591347
-  what: events-were-scanned
-  where: github
-- _id: 198597
-  _time: 2025-07-22 21:39:23.529021581 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 198598
-  _time: 2025-07-22 21:39:24.315438808 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577325928
-  repository: 12591138
-  what: events-were-scanned
-  where: github
-- _id: 198599
-  _time: 2025-07-22 21:39:25.157500380 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52387338836
-  repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 198600
-  _time: 2025-07-22 21:39:25.620929997 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48154398831
-  repository: 12590128
-  what: events-were-scanned
-  where: github
-- _id: 198601
-  _time: 2025-07-22 21:39:26.545966646 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50478877191
-  repository: 12589687
-  what: events-were-scanned
-  where: github
-- _id: 198602
-  _time: 2025-07-22 21:39:27.051582117 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48612534599
-  repository: 12591356
-  what: events-were-scanned
-  where: github
-- _id: 198603
-  _time: 2025-07-22 21:39:28.372269648 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426456784
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 198604
-  _time: 2025-07-22 21:39:29.714910028 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426009798
-  repository: 23238769
-  what: events-were-scanned
-  where: github
-- _id: 198605
-  _time: 2025-07-22 21:39:30.147244448 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50359868790
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 198606
-  _time: 2025-07-22 21:39:30.907271955 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50324195939
-  repository: 12590126
-  what: events-were-scanned
-  where: github
-- _id: 198607
-  _time: 2025-07-22 21:39:31.562860217 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52283769866
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 198608
-  _time: 2025-07-22 21:39:32.008784575 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50421752226
-  repository: 16403286
-  what: events-were-scanned
-  where: github
-- _id: 198609
-  _time: 2025-07-22 21:39:32.952986654 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577399249
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 198610
-  _time: 2025-07-22 21:39:33.390078487 Z
-  _version: 0.13.0/0.51.1/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
 - _id: 198612
   _time: 2025-07-22 21:39:34.790005754 Z
   _version: 0.13.0/0.51.1/
@@ -88687,7 +88253,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-19 00:43:17.000000000 Z
+  when: &1172 2023-08-19 00:43:17.000000000 Z
   where: github
   who: 8086956
 - _id: 198615
@@ -88744,7 +88310,7 @@
   review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
-  when: 2024-11-14 23:52:22.000000000 Z
+  when: &1173 2024-11-14 23:52:22.000000000 Z
   where: github
   who: 8086956
 - _id: 198627
@@ -88766,7 +88332,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-21 16:40:48.000000000 Z
+  when: &1174 2023-03-21 16:40:48.000000000 Z
   where: github
   who: 8086956
 - _id: 198631
@@ -88795,7 +88361,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-04-18 22:40:53.000000000 Z
+  when: &1175 2023-04-18 22:40:53.000000000 Z
   where: github
   who: 8086956
 - _id: 198637
@@ -88831,7 +88397,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2021-12-31 20:42:12.000000000 Z
+  when: &1176 2021-12-31 20:42:12.000000000 Z
   where: github
   who: 8086956
 - _id: 198643
@@ -88874,7 +88440,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-21 22:40:55.000000000 Z
+  when: &1177 2023-08-21 22:40:55.000000000 Z
   where: github
   who: 8086956
 - _id: 198652
@@ -88903,7 +88469,7 @@
   review_comments: 0
   succeeded_builds: 4
   what: pull-was-merged
-  when: 2024-12-01 13:11:28.000000000 Z
+  when: &1178 2024-12-01 13:11:28.000000000 Z
   where: github
   who: 526301
 - _id: 198657
@@ -88925,7 +88491,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-23 12:43:23.000000000 Z
+  when: &1179 2023-03-23 12:43:23.000000000 Z
   where: github
   who: 8086956
 - _id: 198659
@@ -88961,7 +88527,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-04-26 08:50:31.000000000 Z
+  when: &1180 2023-04-26 08:50:31.000000000 Z
   where: github
   who: 8086956
 - _id: 198662
@@ -89025,7 +88591,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2022-01-11 17:10:08.000000000 Z
+  when: &1181 2022-01-11 17:10:08.000000000 Z
   where: github
   who: 8086956
 - _id: 198669
@@ -89068,7 +88634,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-08-22 22:41:52.000000000 Z
+  when: &1182 2023-08-22 22:41:52.000000000 Z
   where: github
   who: 8086956
 - _id: 198673
@@ -89125,7 +88691,7 @@
   review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
-  when: 2024-12-05 12:38:31.000000000 Z
+  when: &1183 2024-12-05 12:38:31.000000000 Z
   where: github
   who: 526301
 - _id: 198679
@@ -89154,7 +88720,7 @@
   review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
-  when: 2023-03-24 11:39:20.000000000 Z
+  when: &1184 2023-03-24 11:39:20.000000000 Z
   where: github
   who: 8086956
 - _id: 198681
@@ -89175,20 +88741,6 @@
   when: 2015-01-16 19:36:27.000000000 Z
   where: github
   who: 105730
-- _id: 198684
-  _time: 2025-07-22 21:44:52.509562498 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591138
-  what: issues-were-scanned
-  where: github
-- _id: 198685
-  _time: 2025-07-22 21:44:52.649427207 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: issues-were-scanned
-  where: github
 - _id: 198686
   _time: 2025-07-22 21:44:53.123770644 Z
   _version: 0.13.0/0.51.1/
@@ -89211,55 +88763,6 @@
   when: 2014-07-28 22:06:41.000000000 Z
   where: github
   who: 1917892
-- _id: 198690
-  _time: 2025-07-22 21:44:53.927226262 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: issues-were-scanned
-  where: github
-- _id: 198691
-  _time: 2025-07-22 21:44:54.066598227 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: issues-were-scanned
-  where: github
-- _id: 198692
-  _time: 2025-07-22 21:44:54.202579062 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: issues-were-scanned
-  where: github
-- _id: 198693
-  _time: 2025-07-22 21:44:54.484425890 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: issues-were-scanned
-  where: github
-- _id: 198694
-  _time: 2025-07-22 21:44:54.623668172 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: issues-were-scanned
-  where: github
-- _id: 198695
-  _time: 2025-07-22 21:44:54.760020755 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: issues-were-scanned
-  where: github
-- _id: 198696
-  _time: 2025-07-22 21:44:54.899937411 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: issues-were-scanned
-  where: github
 - _id: 198697
   _time: 2025-07-22 21:44:55.558025151 Z
   _version: 0.13.0/0.51.1/
@@ -89271,118 +88774,6 @@
   when: 2015-06-04 07:53:31.000000000 Z
   where: github
   who: 5993843
-- _id: 198699
-  _time: 2025-07-22 21:44:55.701880471 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: issues-were-scanned
-  where: github
-- _id: 198700
-  _time: 2025-07-22 21:44:55.844829193 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: issues-were-scanned
-  where: github
-- _id: 198701
-  _time: 2025-07-22 21:44:55.978674405 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: issues-were-scanned
-  where: github
-- _id: 198702
-  _time: 2025-07-22 21:44:56.393258056 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: issues-were-scanned
-  where: github
-- _id: 198703
-  _time: 2025-07-22 21:44:56.531520151 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: issues-were-scanned
-  where: github
-- _id: 198704
-  _time: 2025-07-22 21:44:56.675730268 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: issues-were-scanned
-  where: github
-- _id: 198705
-  _time: 2025-07-22 21:44:56.813940354 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: issues-were-scanned
-  where: github
-- _id: 198706
-  _time: 2025-07-22 21:44:56.953379613 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: issues-were-scanned
-  where: github
-- _id: 198707
-  _time: 2025-07-22 21:44:57.090900748 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: issues-were-scanned
-  where: github
-- _id: 198708
-  _time: 2025-07-22 21:44:57.369131988 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: issues-were-scanned
-  where: github
-- _id: 198709
-  _time: 2025-07-22 21:44:57.619710952 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: issues-were-scanned
-  where: github
-- _id: 198710
-  _time: 2025-07-22 21:44:57.929971331 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: issues-were-scanned
-  where: github
-- _id: 198711
-  _time: 2025-07-22 21:44:58.066952533 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: issues-were-scanned
-  where: github
-- _id: 198713
-  _time: 2025-07-22 21:44:58.817918443 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: issues-were-scanned
-  where: github
-- _id: 198714
-  _time: 2025-07-22 21:44:58.954382757 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: issues-were-scanned
-  where: github
-- _id: 198715
-  _time: 2025-07-22 21:44:59.372094261 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12262782
-  what: issues-were-scanned
-  where: github
 - _id: 198717
   _time: 2025-07-22 21:45:00.551323455 Z
   _version: 0.13.0/0.51.1/
@@ -89559,13 +88950,6 @@
   when: 2015-12-15 19:53:18.000000000 Z
   where: github
   who: 526301
-- _id: 198755
-  _time: 2025-07-22 21:45:10.707779090 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14093966
-  what: issues-were-scanned
-  where: github
 - _id: 198757
   _time: 2025-07-22 21:45:11.910338111 Z
   _version: 0.13.0/0.51.1/
@@ -89640,7 +89024,7 @@
   issue: 54
   repository: 16312153
   what: issue-was-closed
-  when: 2014-11-10 10:58:45.000000000 Z
+  when: &1185 2014-11-10 10:58:45.000000000 Z
   where: github
   who: 1388994
 - _id: 198772
@@ -89816,7 +89200,7 @@
   issue: 51
   repository: 12587702
   what: issue-was-closed
-  when: 2016-11-22 07:48:25.000000000 Z
+  when: &1186 2016-11-22 07:48:25.000000000 Z
   where: github
   who: 20211331
 - _id: 198810
@@ -89970,7 +89354,7 @@
   issue: 51
   repository: 12590813
   what: issue-was-closed
-  when: 2016-02-15 08:40:15.000000000 Z
+  when: &1187 2016-02-15 08:40:15.000000000 Z
   where: github
   who: 5467276
 - _id: 198841
@@ -90160,13 +89544,6 @@
   when: 2018-11-08 16:37:44.000000000 Z
   where: github
   who: 9504395
-- _id: 198880
-  _time: 2025-07-22 21:45:44.872604910 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: issues-were-scanned
-  where: github
 - _id: 198881
   _time: 2025-07-22 21:45:45.351807762 Z
   _version: 0.13.0/0.51.1/
@@ -90175,7 +89552,7 @@
   issue: 61
   repository: 13717355
   what: issue-was-closed
-  when: 2022-08-09 04:24:10.000000000 Z
+  when: &1188 2022-08-09 04:24:10.000000000 Z
   where: github
   who: 526301
 - _id: 198883
@@ -90186,7 +89563,7 @@
   issue: 57
   repository: 12590813
   what: issue-was-closed
-  when: 2016-08-03 05:12:30.000000000 Z
+  when: &1189 2016-08-03 05:12:30.000000000 Z
   where: github
   who: 105730
 - _id: 198885
@@ -90219,7 +89596,7 @@
   issue: 62
   repository: 13717355
   what: issue-was-closed
-  when: 2015-06-12 01:52:53.000000000 Z
+  when: &1190 2015-06-12 01:52:53.000000000 Z
   where: github
   who: 526301
 - _id: 198891
@@ -90604,7 +89981,7 @@
   issue: 74
   repository: 13717355
   what: issue-was-closed
-  when: 2016-11-21 19:21:09.000000000 Z
+  when: &1191 2016-11-21 19:21:09.000000000 Z
   where: github
   who: 526301
 - _id: 198962
@@ -90648,7 +90025,7 @@
   issue: 94
   repository: 13717355
   what: issue-was-closed
-  when: 2016-01-06 01:24:38.000000000 Z
+  when: &1192 2016-01-06 01:24:38.000000000 Z
   where: github
   who: 1917892
 - _id: 198970
@@ -90692,7 +90069,7 @@
   issue: 96
   repository: 13717355
   what: issue-was-closed
-  when: 2016-03-02 06:30:54.000000000 Z
+  when: &1193 2016-03-02 06:30:54.000000000 Z
   where: github
   who: 1405237
 - _id: 198978
@@ -90780,7 +90157,7 @@
   issue: 98
   repository: 13717355
   what: issue-was-closed
-  when: 2016-01-30 07:33:08.000000000 Z
+  when: &1194 2016-01-30 07:33:08.000000000 Z
   where: github
   who: 1405237
 - _id: 198994
@@ -90813,7 +90190,7 @@
   issue: 99
   repository: 13717355
   what: issue-was-closed
-  when: 2016-01-26 06:52:24.000000000 Z
+  when: &1195 2016-01-26 06:52:24.000000000 Z
   where: github
   who: 1405237
 - _id: 199001
@@ -90835,7 +90212,7 @@
   issue: 85
   repository: 16312153
   what: issue-was-closed
-  when: 2015-09-09 08:35:40.000000000 Z
+  when: &1196 2015-09-09 08:35:40.000000000 Z
   where: github
   who: 6581896
 - _id: 199005
@@ -90901,7 +90278,7 @@
   issue: 87
   repository: 16312153
   what: issue-was-closed
-  when: 2016-11-21 20:32:17.000000000 Z
+  when: &1197 2016-11-21 20:32:17.000000000 Z
   where: github
   who: 1054771
 - _id: 199019
@@ -90945,7 +90322,7 @@
   issue: 89
   repository: 16312153
   what: issue-was-closed
-  when: 2016-01-26 04:33:32.000000000 Z
+  when: &1198 2016-01-26 04:33:32.000000000 Z
   where: github
   who: 419884
 - _id: 199027
@@ -90978,7 +90355,7 @@
   issue: 90
   repository: 16312153
   what: issue-was-closed
-  when: 2016-01-16 09:39:06.000000000 Z
+  when: &1199 2016-01-16 09:39:06.000000000 Z
   where: github
   who: 419884
 - _id: 199034
@@ -91322,13 +90699,6 @@
   when: 2015-09-11 07:59:49.000000000 Z
   where: github
   who: 526301
-- _id: 199109
-  _time: 2025-07-22 21:46:46.108515747 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587702
-  what: issues-were-scanned
-  where: github
 - _id: 199110
   _time: 2025-07-22 21:46:46.721425300 Z
   _version: 0.13.0/0.51.1/
@@ -91876,7 +91246,7 @@
   issue: 137
   repository: 16312153
   what: issue-was-closed
-  when: 2018-01-10 21:22:54.000000000 Z
+  when: &1200 2018-01-10 21:22:54.000000000 Z
   where: github
   who: 5598124
 - _id: 199218
@@ -91898,7 +91268,7 @@
   issue: 138
   repository: 16312153
   what: issue-was-closed
-  when: 2021-06-28 02:46:49.000000000 Z
+  when: &1201 2021-06-28 02:46:49.000000000 Z
   where: github
   who: 49783909
 - _id: 199222
@@ -92426,7 +91796,7 @@
   issue: 185
   repository: 13717355
   what: issue-was-closed
-  when: 2022-11-03 15:25:34.000000000 Z
+  when: &1202 2022-11-03 15:25:34.000000000 Z
   where: github
   who: 40247101
 - _id: 199329
@@ -92459,7 +91829,7 @@
   issue: 171
   repository: 16312153
   what: issue-was-closed
-  when: 2020-06-29 04:50:38.000000000 Z
+  when: &1203 2020-06-29 04:50:38.000000000 Z
   where: github
   who: 526301
 - _id: 199336
@@ -92473,20 +91843,6 @@
   when: 2022-12-23 12:13:27.000000000 Z
   where: github
   who: 526301
-- _id: 199337
-  _time: 2025-07-22 21:47:47.757900207 Z
-  _version: 0.13.0/0.51.1/
-  latest: 193
-  repository: 13717355
-  what: issues-were-scanned
-  where: github
-- _id: 199338
-  _time: 2025-07-22 21:47:48.067436724 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590813
-  what: issues-were-scanned
-  where: github
 - _id: 199339
   _time: 2025-07-22 21:47:48.696827249 Z
   _version: 0.13.0/0.51.1/
@@ -92496,235 +91852,6 @@
   what: issue-was-closed
   when: 2018-04-05 16:13:36.000000000 Z
   where: github
-- _id: 199341
-  _time: 2025-07-22 21:48:26.474081250 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: assignees-were-scanned
-  where: github
-- _id: 199342
-  _time: 2025-07-22 21:48:26.620625451 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: assignees-were-scanned
-  where: github
-- _id: 199346
-  _time: 2025-07-22 21:48:28.979492802 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: assignees-were-scanned
-  where: github
-- _id: 199348
-  _time: 2025-07-22 21:48:29.804840213 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: assignees-were-scanned
-  where: github
-- _id: 199349
-  _time: 2025-07-22 21:48:29.949533072 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: assignees-were-scanned
-  where: github
-- _id: 199351
-  _time: 2025-07-22 21:48:30.827147781 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: assignees-were-scanned
-  where: github
-- _id: 199352
-  _time: 2025-07-22 21:48:30.969688286 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: assignees-were-scanned
-  where: github
-- _id: 199354
-  _time: 2025-07-22 21:48:31.837766222 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: assignees-were-scanned
-  where: github
-- _id: 199355
-  _time: 2025-07-22 21:48:31.986936047 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: assignees-were-scanned
-  where: github
-- _id: 199357
-  _time: 2025-07-22 21:48:32.894819418 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: assignees-were-scanned
-  where: github
-- _id: 199358
-  _time: 2025-07-22 21:48:33.123603227 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14093966
-  what: assignees-were-scanned
-  where: github
-- _id: 199359
-  _time: 2025-07-22 21:48:33.268483077 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: assignees-were-scanned
-  where: github
-- _id: 199360
-  _time: 2025-07-22 21:48:33.410242005 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: assignees-were-scanned
-  where: github
-- _id: 199361
-  _time: 2025-07-22 21:48:33.560432554 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: assignees-were-scanned
-  where: github
-- _id: 199362
-  _time: 2025-07-22 21:48:33.705862565 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: assignees-were-scanned
-  where: github
-- _id: 199364
-  _time: 2025-07-22 21:48:34.538348791 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: assignees-were-scanned
-  where: github
-- _id: 199365
-  _time: 2025-07-22 21:48:34.685720474 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: assignees-were-scanned
-  where: github
-- _id: 199366
-  _time: 2025-07-22 21:48:34.913631675 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: assignees-were-scanned
-  where: github
-- _id: 199369
-  _time: 2025-07-22 21:48:36.324631232 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: assignees-were-scanned
-  where: github
-- _id: 199370
-  _time: 2025-07-22 21:48:36.471209615 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: assignees-were-scanned
-  where: github
-- _id: 199371
-  _time: 2025-07-22 21:48:36.805160518 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: assignees-were-scanned
-  where: github
-- _id: 199375
-  _time: 2025-07-22 21:48:38.986227832 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: assignees-were-scanned
-  where: github
-- _id: 199376
-  _time: 2025-07-22 21:48:39.322892474 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591138
-  what: assignees-were-scanned
-  where: github
-- _id: 199377
-  _time: 2025-07-22 21:48:39.656034069 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: assignees-were-scanned
-  where: github
-- _id: 199379
-  _time: 2025-07-22 21:48:40.554965337 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: assignees-were-scanned
-  where: github
-- _id: 199400
-  _time: 2025-07-22 21:48:52.946636838 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12262782
-  what: assignees-were-scanned
-  where: github
-- _id: 199459
-  _time: 2025-07-22 21:49:28.717798580 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590813
-  what: assignees-were-scanned
-  where: github
-- _id: 199465
-  _time: 2025-07-22 21:49:32.419507398 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: assignees-were-scanned
-  where: github
-- _id: 199477
-  _time: 2025-07-22 21:49:39.768264162 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13717355
-  what: assignees-were-scanned
-  where: github
-- _id: 199544
-  _time: 2025-07-22 21:50:19.421476469 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16312153
-  what: assignees-were-scanned
-  where: github
-- _id: 199545
-  _time: 2025-07-22 21:50:30.030863769 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587702
-  what: assignees-were-scanned
-  where: github
-- _id: 199546
-  _time: 2025-07-22 21:51:47.623205806 Z
-  _version: 0.13.0/0.51.1/
-  total_active_contributors: 5
-  total_commits: 18366
-  total_contributors: 117
-  total_files: 2203
-  total_issues: 2869
-  total_pulls: 5194
-  total_repositories: 31
-  what: dimensions-of-terrain
-  when: 2025-07-22 20:42:57.754029233 Z
 - _id: 199548
   _time: 2025-07-22 21:54:00.851901994 Z
   _version: 0.13.0/0.51.1/
@@ -92942,3 +92069,3740 @@
   repository: 13717355
   what: labels-were-scanned
   where: github
+- _id: 199710
+  _job: 29870
+  _time: 2025-07-22 21:56:58.436689178 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #33983579 submitted the issue #169
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 169
+  repository: 13717355
+  what: dud-was-closed
+  when: *1064
+  where: github
+  who: 33983579
+- _id: 199711
+  _job: 29870
+  _time: 2025-07-22 21:56:58.609888534 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #5004037 submitted the issue #162
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 162
+  repository: 13717355
+  what: dud-was-closed
+  when: *1065
+  where: github
+  who: 5004037
+- _id: 199712
+  _job: 29870
+  _time: 2025-07-22 21:56:58.738740342 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #9504395 submitted the issue #154
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 154
+  repository: 13717355
+  what: dud-was-closed
+  when: *1066
+  where: github
+  who: 9504395
+- _id: 199713
+  _job: 29870
+  _time: 2025-07-22 21:56:58.856502006 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #298504 submitted the issue #153
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 153
+  repository: 13717355
+  what: dud-was-closed
+  when: *1067
+  where: github
+  who: 298504
+- _id: 199714
+  _job: 29870
+  _time: 2025-07-22 21:56:58.969780988 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #151
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 151
+  repository: 13717355
+  what: dud-was-closed
+  when: *1068
+  where: github
+  who: 1405237
+- _id: 199715
+  _job: 29870
+  _time: 2025-07-22 21:56:59.087479126 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #502372 submitted the issue #149
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 149
+  repository: 13717355
+  what: dud-was-closed
+  when: *1069
+  where: github
+  who: 502372
+- _id: 199716
+  _job: 29870
+  _time: 2025-07-22 21:56:59.203218989 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1714171 submitted the issue #133
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 133
+  repository: 13717355
+  what: dud-was-closed
+  when: *1070
+  where: github
+  who: 1714171
+- _id: 199717
+  _job: 29870
+  _time: 2025-07-22 21:56:59.319027610 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #7222462 submitted the issue #130
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 130
+  repository: 13717355
+  what: dud-was-closed
+  when: *1071
+  where: github
+  who: 7222462
+- _id: 199718
+  _job: 29870
+  _time: 2025-07-22 21:56:59.435582345 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #984052 submitted the issue #113
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 113
+  repository: 13717355
+  what: dud-was-closed
+  when: *1072
+  where: github
+  who: 984052
+- _id: 199719
+  _job: 29870
+  _time: 2025-07-22 21:56:59.550590444 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #9972909 submitted the issue #107
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 107
+  repository: 13717355
+  what: dud-was-closed
+  when: *1073
+  where: github
+  who: 9972909
+- _id: 199720
+  _job: 29870
+  _time: 2025-07-22 21:56:59.665679533 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #106
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 106
+  repository: 13717355
+  what: dud-was-closed
+  when: *1074
+  where: github
+  who: 1405237
+- _id: 199721
+  _job: 29870
+  _time: 2025-07-22 21:56:59.781247465 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #102
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 102
+  repository: 13717355
+  what: dud-was-closed
+  when: *1075
+  where: github
+  who: 1405237
+- _id: 199722
+  _job: 29870
+  _time: 2025-07-22 21:56:59.897220936 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #101
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 101
+  repository: 13717355
+  what: dud-was-closed
+  when: *1076
+  where: github
+  who: 1405237
+- _id: 199723
+  _job: 29870
+  _time: 2025-07-22 21:57:00.013604103 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #100
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 100
+  repository: 13717355
+  what: dud-was-closed
+  when: *1077
+  where: github
+  who: 1405237
+- _id: 199724
+  _job: 29870
+  _time: 2025-07-22 21:57:00.129452279 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #4637784 submitted the issue #68
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 68
+  repository: 13717355
+  what: dud-was-closed
+  when: *1078
+  where: github
+  who: 4637784
+- _id: 199725
+  _job: 29870
+  _time: 2025-07-22 21:57:00.247578739 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1667699 submitted the issue #66
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 66
+  repository: 13717355
+  what: dud-was-closed
+  when: *1079
+  where: github
+  who: 1667699
+- _id: 199726
+  _job: 29870
+  _time: 2025-07-22 21:57:00.363898386 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #898997 submitted the issue #60
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 60
+  repository: 13717355
+  what: dud-was-closed
+  when: *1080
+  where: github
+  who: 898997
+- _id: 199727
+  _job: 29870
+  _time: 2025-07-22 21:57:00.483108953 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #898997 submitted the issue #58
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 58
+  repository: 13717355
+  what: dud-was-closed
+  when: *1081
+  where: github
+  who: 898997
+- _id: 199728
+  _job: 29870
+  _time: 2025-07-22 21:57:00.599217580 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #534657 submitted the issue #53
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 53
+  repository: 13717355
+  what: dud-was-closed
+  when: *1082
+  where: github
+  who: 534657
+- _id: 199729
+  _job: 29870
+  _time: 2025-07-22 21:57:00.717653630 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #569536 submitted the issue #50
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 50
+  repository: 13717355
+  what: dud-was-closed
+  when: *1083
+  where: github
+  who: 569536
+- _id: 199730
+  _job: 29870
+  _time: 2025-07-22 21:57:00.835018479 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #1054771 submitted the issue #44
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 44
+  repository: 13717355
+  what: dud-was-closed
+  when: *1084
+  where: github
+  who: 1054771
+- _id: 199731
+  _job: 29870
+  _time: 2025-07-22 21:57:00.952807351 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #13717355, the user #569536 submitted the issue #41
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 41
+  repository: 13717355
+  what: dud-was-closed
+  when: *1085
+  where: github
+  who: 569536
+- _id: 199732
+  _job: 29870
+  _time: 2025-07-22 21:57:01.070853759 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #40247101 submitted the issue #228
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 228
+  repository: 12590813
+  what: dud-was-closed
+  when: *1086
+  where: github
+  who: 40247101
+- _id: 199733
+  _job: 29870
+  _time: 2025-07-22 21:57:01.188567977 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #49783909 submitted the issue #132
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 132
+  repository: 12590813
+  what: dud-was-closed
+  when: *1087
+  where: github
+  who: 49783909
+- _id: 199734
+  _job: 29870
+  _time: 2025-07-22 21:57:01.307427394 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #49783909 submitted the issue #128
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 128
+  repository: 12590813
+  what: dud-was-closed
+  when: *1088
+  where: github
+  who: 49783909
+- _id: 199735
+  _job: 29870
+  _time: 2025-07-22 21:57:01.426783579 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #49783909 submitted the issue #124
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 124
+  repository: 12590813
+  what: dud-was-closed
+  when: *1089
+  where: github
+  who: 49783909
+- _id: 199736
+  _job: 29870
+  _time: 2025-07-22 21:57:01.544924843 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #49783909 submitted the issue #115
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 115
+  repository: 12590813
+  what: dud-was-closed
+  when: *1090
+  where: github
+  who: 49783909
+- _id: 199737
+  _job: 29870
+  _time: 2025-07-22 21:57:01.663378227 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1964562 submitted the issue #107
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 107
+  repository: 12590813
+  what: dud-was-closed
+  when: *1091
+  where: github
+  who: 1964562
+- _id: 199738
+  _job: 29870
+  _time: 2025-07-22 21:57:01.784351921 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1524988 submitted the issue #98
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 98
+  repository: 12590813
+  what: dud-was-closed
+  when: *1092
+  where: github
+  who: 1524988
+- _id: 199739
+  _job: 29870
+  _time: 2025-07-22 21:57:01.901507835 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #2956255 submitted the issue #94
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 94
+  repository: 12590813
+  what: dud-was-closed
+  when: *1093
+  where: github
+  who: 2956255
+- _id: 199740
+  _job: 29870
+  _time: 2025-07-22 21:57:02.023355235 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #34595022 submitted the issue #88
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 88
+  repository: 12590813
+  what: dud-was-closed
+  when: *1094
+  where: github
+  who: 34595022
+- _id: 199741
+  _job: 29870
+  _time: 2025-07-22 21:57:02.144573466 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #34595022 submitted the issue #87
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 87
+  repository: 12590813
+  what: dud-was-closed
+  when: *1095
+  where: github
+  who: 34595022
+- _id: 199742
+  _job: 29870
+  _time: 2025-07-22 21:57:02.259864814 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1964562 submitted the issue #86
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 86
+  repository: 12590813
+  what: dud-was-closed
+  when: *1096
+  where: github
+  who: 1964562
+- _id: 199743
+  _job: 29870
+  _time: 2025-07-22 21:57:02.376504652 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1964562 submitted the issue #84
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 84
+  repository: 12590813
+  what: dud-was-closed
+  when: *1097
+  where: github
+  who: 1964562
+- _id: 199744
+  _job: 29870
+  _time: 2025-07-22 21:57:02.491739520 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #440768 submitted the issue #78
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 78
+  repository: 12590813
+  what: dud-was-closed
+  when: *1098
+  where: github
+  who: 440768
+- _id: 199745
+  _job: 29870
+  _time: 2025-07-22 21:57:02.607733391 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #6490959 submitted the issue #65
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 65
+  repository: 12590813
+  what: dud-was-closed
+  when: *1099
+  where: github
+  who: 6490959
+- _id: 199746
+  _job: 29870
+  _time: 2025-07-22 21:57:02.723198141 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1618116 submitted the issue #56
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 56
+  repository: 12590813
+  what: dud-was-closed
+  when: *1100
+  where: github
+  who: 1618116
+- _id: 199747
+  _job: 29870
+  _time: 2025-07-22 21:57:02.838997130 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1618116 submitted the issue #55
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 55
+  repository: 12590813
+  what: dud-was-closed
+  when: *1101
+  where: github
+  who: 1618116
+- _id: 199748
+  _job: 29870
+  _time: 2025-07-22 21:57:02.953895059 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1388994 submitted the issue #54
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 54
+  repository: 12590813
+  what: dud-was-closed
+  when: *1102
+  where: github
+  who: 1388994
+- _id: 199749
+  _job: 29870
+  _time: 2025-07-22 21:57:03.073390884 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #5467276 submitted the issue #50
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 50
+  repository: 12590813
+  what: dud-was-closed
+  when: *1103
+  where: github
+  who: 5467276
+- _id: 199750
+  _job: 29870
+  _time: 2025-07-22 21:57:03.188294739 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #7703204 submitted the issue #49
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 49
+  repository: 12590813
+  what: dud-was-closed
+  when: *1104
+  where: github
+  who: 7703204
+- _id: 199751
+  _job: 29870
+  _time: 2025-07-22 21:57:03.303843873 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #5570433 submitted the issue #48
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 48
+  repository: 12590813
+  what: dud-was-closed
+  when: *1105
+  where: github
+  who: 5570433
+- _id: 199752
+  _job: 29870
+  _time: 2025-07-22 21:57:03.420252610 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1917892 submitted the issue #47
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 47
+  repository: 12590813
+  what: dud-was-closed
+  when: *1106
+  where: github
+  who: 1917892
+- _id: 199753
+  _job: 29870
+  _time: 2025-07-22 21:57:03.537418496 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #105730 submitted the issue #46
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 46
+  repository: 12590813
+  what: dud-was-closed
+  when: *1107
+  where: github
+  who: 105730
+- _id: 199754
+  _job: 29870
+  _time: 2025-07-22 21:57:03.655036200 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #105730 submitted the issue #45
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 45
+  repository: 12590813
+  what: dud-was-closed
+  when: *1108
+  where: github
+  who: 105730
+- _id: 199755
+  _job: 29870
+  _time: 2025-07-22 21:57:03.772060214 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #4467948 submitted the issue #37
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 37
+  repository: 12590813
+  what: dud-was-closed
+  when: *1109
+  where: github
+  who: 4467948
+- _id: 199756
+  _job: 29870
+  _time: 2025-07-22 21:57:03.886698926 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #7813046 submitted the issue #102
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 102
+  repository: 12587702
+  what: dud-was-closed
+  when: *1110
+  where: github
+  who: 7813046
+- _id: 199757
+  _job: 29870
+  _time: 2025-07-22 21:57:04.003937187 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #9504395 submitted the issue #100
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 100
+  repository: 12587702
+  what: dud-was-closed
+  when: *1111
+  where: github
+  who: 9504395
+- _id: 199758
+  _job: 29870
+  _time: 2025-07-22 21:57:04.120710132 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #45224442 submitted the issue #80
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 80
+  repository: 12587702
+  what: dud-was-closed
+  when: *1112
+  where: github
+  who: 45224442
+- _id: 199759
+  _job: 29870
+  _time: 2025-07-22 21:57:04.247254275 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #8526099 submitted the issue #79
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 79
+  repository: 12587702
+  what: dud-was-closed
+  when: *1113
+  where: github
+  who: 8526099
+- _id: 199760
+  _job: 29870
+  _time: 2025-07-22 21:57:04.365891369 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #26636262 submitted the issue #76
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 76
+  repository: 12587702
+  what: dud-was-closed
+  when: *1114
+  where: github
+  who: 26636262
+- _id: 199761
+  _job: 29870
+  _time: 2025-07-22 21:57:04.485037651 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #8526099 submitted the issue #74
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 74
+  repository: 12587702
+  what: dud-was-closed
+  when: *1115
+  where: github
+  who: 8526099
+- _id: 199762
+  _job: 29870
+  _time: 2025-07-22 21:57:04.603110854 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #7326295 submitted the issue #73
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 73
+  repository: 12587702
+  what: dud-was-closed
+  when: *1116
+  where: github
+  who: 7326295
+- _id: 199763
+  _job: 29870
+  _time: 2025-07-22 21:57:04.724647038 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #45224442 submitted the issue #71
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 71
+  repository: 12587702
+  what: dud-was-closed
+  when: *1117
+  where: github
+  who: 45224442
+- _id: 199764
+  _job: 29870
+  _time: 2025-07-22 21:57:04.841926706 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #9504395 submitted the issue #68
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 68
+  repository: 12587702
+  what: dud-was-closed
+  when: *1118
+  where: github
+  who: 9504395
+- _id: 199765
+  _job: 29870
+  _time: 2025-07-22 21:57:04.959088836 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #15959667 submitted the issue #67
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 67
+  repository: 12587702
+  what: dud-was-closed
+  when: *1119
+  where: github
+  who: 15959667
+- _id: 199766
+  _job: 29870
+  _time: 2025-07-22 21:57:05.078112355 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #661340 submitted the issue #57
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 57
+  repository: 12587702
+  what: dud-was-closed
+  when: *1120
+  where: github
+  who: 661340
+- _id: 199767
+  _job: 29870
+  _time: 2025-07-22 21:57:05.199772015 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #1702423 submitted the issue #50
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 50
+  repository: 12587702
+  what: dud-was-closed
+  when: *1121
+  where: github
+  who: 1702423
+- _id: 199768
+  _job: 29870
+  _time: 2025-07-22 21:57:05.319150589 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #3864307 submitted the issue #49
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 49
+  repository: 12587702
+  what: dud-was-closed
+  when: *1122
+  where: github
+  who: 3864307
+- _id: 199769
+  _job: 29870
+  _time: 2025-07-22 21:57:05.439257254 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #12587702, the user #1964562 submitted the issue #46
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 46
+  repository: 12587702
+  what: dud-was-closed
+  when: *1123
+  where: github
+  who: 1964562
+- _id: 199770
+  _job: 29870
+  _time: 2025-07-22 21:57:05.556589605 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #1667699 submitted the issue #43
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 43
+  repository: 12587702
+  what: dud-was-closed
+  when: *1124
+  where: github
+  who: 1667699
+- _id: 199771
+  _job: 29870
+  _time: 2025-07-22 21:57:05.673424194 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #4144769 submitted the issue #170
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 170
+  repository: 16312153
+  what: dud-was-closed
+  when: *1125
+  where: github
+  who: 4144769
+- _id: 199772
+  _job: 29870
+  _time: 2025-07-22 21:57:05.788990712 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #1359384 submitted the issue #160
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 160
+  repository: 16312153
+  what: dud-was-closed
+  when: *1126
+  where: github
+  who: 1359384
+- _id: 199773
+  _job: 29870
+  _time: 2025-07-22 21:57:05.903518195 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #1359384 submitted the issue #159
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 159
+  repository: 16312153
+  what: dud-was-closed
+  when: *1127
+  where: github
+  who: 1359384
+- _id: 199774
+  _job: 29870
+  _time: 2025-07-22 21:57:06.017644280 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1805417 submitted the issue #156
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 156
+  repository: 16312153
+  what: dud-was-closed
+  when: *1128
+  where: github
+  who: 1805417
+- _id: 199775
+  _job: 29870
+  _time: 2025-07-22 21:57:06.134326293 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #87088 submitted the issue #148
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 148
+  repository: 16312153
+  what: dud-was-closed
+  when: *1129
+  where: github
+  who: 87088
+- _id: 199776
+  _job: 29870
+  _time: 2025-07-22 21:57:06.249008796 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #87088 submitted the issue #147
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 147
+  repository: 16312153
+  what: dud-was-closed
+  when: *1130
+  where: github
+  who: 87088
+- _id: 199777
+  _job: 29870
+  _time: 2025-07-22 21:57:06.365139696 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #6305156 submitted the issue #132
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 132
+  repository: 16312153
+  what: dud-was-closed
+  when: *1131
+  where: github
+  who: 6305156
+- _id: 199778
+  _job: 29870
+  _time: 2025-07-22 21:57:06.481821291 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #2061944 submitted the issue #131
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 131
+  repository: 16312153
+  what: dud-was-closed
+  when: *1132
+  where: github
+  who: 2061944
+- _id: 199779
+  _job: 29870
+  _time: 2025-07-22 21:57:06.598494855 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #12834398 submitted the issue #111
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 111
+  repository: 16312153
+  what: dud-was-closed
+  when: *1133
+  where: github
+  who: 12834398
+- _id: 199780
+  _job: 29870
+  _time: 2025-07-22 21:57:06.714110898 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #4368287 submitted the issue #109
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 109
+  repository: 16312153
+  what: dud-was-closed
+  when: *1134
+  where: github
+  who: 4368287
+- _id: 199781
+  _job: 29870
+  _time: 2025-07-22 21:57:06.830535915 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1054771 submitted the issue #108
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 108
+  repository: 16312153
+  what: dud-was-closed
+  when: *1135
+  where: github
+  who: 1054771
+- _id: 199782
+  _job: 29870
+  _time: 2025-07-22 21:57:06.946567234 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1054771 submitted the issue #106
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 106
+  repository: 16312153
+  what: dud-was-closed
+  when: *1136
+  where: github
+  who: 1054771
+- _id: 199783
+  _job: 29870
+  _time: 2025-07-22 21:57:07.062962205 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1667699 submitted the issue #104
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 104
+  repository: 16312153
+  what: dud-was-closed
+  when: *1137
+  where: github
+  who: 1667699
+- _id: 199784
+  _job: 29870
+  _time: 2025-07-22 21:57:07.178278822 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #209396 submitted the issue #102
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 102
+  repository: 16312153
+  what: dud-was-closed
+  when: *1138
+  where: github
+  who: 209396
+- _id: 199785
+  _job: 29870
+  _time: 2025-07-22 21:57:07.297899183 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #95550 submitted the issue #97 which
+    was later closed by the user #49783909 not becoming a bug or enhancement; this
+    means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 97
+  repository: 16312153
+  what: dud-was-closed
+  when: *1139
+  where: github
+  who: 95550
+- _id: 199786
+  _job: 29870
+  _time: 2025-07-22 21:57:07.422762024 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #511167 submitted the issue #81
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 81
+  repository: 16312153
+  what: dud-was-closed
+  when: *1140
+  where: github
+  who: 511167
+- _id: 199787
+  _job: 29870
+  _time: 2025-07-22 21:57:07.551083843 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1388994 submitted the issue #75
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 75
+  repository: 16312153
+  what: dud-was-closed
+  when: *1141
+  where: github
+  who: 1388994
+- _id: 199788
+  _job: 29870
+  _time: 2025-07-22 21:57:07.672388600 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1388994 submitted the issue #74
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 74
+  repository: 16312153
+  what: dud-was-closed
+  when: *1142
+  where: github
+  who: 1388994
+- _id: 199789
+  _job: 29870
+  _time: 2025-07-22 21:57:07.797050203 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #1143055 submitted the issue #70
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 70
+  repository: 16312153
+  what: dud-was-closed
+  when: *1143
+  where: github
+  who: 1143055
+- _id: 199790
+  _job: 29870
+  _time: 2025-07-22 21:57:07.920643592 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: 'In the repository #16312153, the user #10676186 submitted the issue #67
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 67
+  repository: 16312153
+  what: dud-was-closed
+  when: *1144
+  where: github
+  who: 10676186
+- _id: 199791
+  _job: 29870
+  _time: 2025-07-22 21:57:08.047601110 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #569536 submitted the issue #66
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 66
+  repository: 16312153
+  what: dud-was-closed
+  when: *1145
+  where: github
+  who: 569536
+- _id: 199792
+  _job: 29870
+  _time: 2025-07-22 21:57:08.172089052 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #16312153, the user #569536 submitted the issue #59
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 59
+  repository: 16312153
+  what: dud-was-closed
+  when: *1146
+  where: github
+  who: 569536
+- _id: 199793
+  _job: 29870
+  _time: 2025-07-22 21:57:10.771077483 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi#429 with 2 HoC created by @renovate[bot] was
+    merged by @yegor256 after 3w0d of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 429
+  merger: 526301
+  repository: 4174608
+  review_comments: 0
+  seconds: 1887616
+  what: code-was-contributed
+  when: *1147
+  where: github
+  who: 29139614
+- _id: 199794
+  _job: 29870
+  _time: 2025-07-22 21:57:11.299708273 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#269 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h16m of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 269
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 4593
+  what: code-was-contributed
+  when: *1148
+  where: github
+  who: 29139614
+- _id: 199795
+  _job: 29870
+  _time: 2025-07-22 21:57:11.693169277 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#268 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h1m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 268
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 3685
+  what: code-was-contributed
+  when: *1149
+  where: github
+  who: 29139614
+- _id: 199796
+  _job: 29870
+  _time: 2025-07-22 21:57:11.960931159 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#208 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 41m1s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 208
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2462
+  what: code-was-contributed
+  when: *1150
+  where: github
+  who: 29139614
+- _id: 199797
+  _job: 29870
+  _time: 2025-07-22 21:57:12.272462575 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#254 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 55m15s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 254
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 3316
+  what: code-was-contributed
+  when: *1151
+  where: github
+  who: 29139614
+- _id: 199798
+  _job: 29870
+  _time: 2025-07-22 21:57:12.552905510 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-http#299 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 14h36m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 299
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 52566
+  what: code-was-contributed
+  when: *1152
+  where: github
+  who: 49699333
+- _id: 199799
+  _job: 29870
+  _time: 2025-07-22 21:57:12.930492944 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi#430 with 2 HoC created by @renovate[bot] was
+    merged by @yegor256 after 2w6d of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 430
+  merger: 526301
+  repository: 4174608
+  review_comments: 0
+  seconds: 1800945
+  what: code-was-contributed
+  when: *1153
+  where: github
+  who: 29139614
+- _id: 199800
+  _job: 29870
+  _time: 2025-07-22 21:57:13.053514368 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#270 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h5m of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 270
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 3915
+  what: code-was-contributed
+  when: *1154
+  where: github
+  who: 29139614
+- _id: 199801
+  _job: 29870
+  _time: 2025-07-22 21:57:13.174983446 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 10
+  details: The pull request jcabi/jcabi-xml#269 with 72 HoC created by @maxonfjvipon
+    was merged by @rultor after 29m36s of being in review and 10 comments.
+  hoc: 72
+  is_human: 1
+  issue: 269
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 1777
+  what: code-was-contributed
+  when: *1155
+  where: github
+  who: 37025995
+- _id: 199802
+  _job: 29870
+  _time: 2025-07-22 21:57:13.384788599 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#209 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 13m49s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 209
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 830
+  what: code-was-contributed
+  when: *1156
+  where: github
+  who: 29139614
+- _id: 199803
+  _job: 29870
+  _time: 2025-07-22 21:57:13.508435258 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#255 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 51m27s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 255
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 3088
+  what: code-was-contributed
+  when: *1157
+  where: github
+  who: 29139614
+- _id: 199804
+  _job: 29870
+  _time: 2025-07-22 21:57:13.631825310 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#256 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h5m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 256
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 3928
+  what: code-was-contributed
+  when: *1158
+  where: github
+  who: 29139614
+- _id: 199805
+  _job: 29870
+  _time: 2025-07-22 21:57:13.754211106 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#271 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 29m3s of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 271
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 1744
+  what: code-was-contributed
+  when: *1159
+  where: github
+  who: 29139614
+- _id: 199806
+  _job: 29870
+  _time: 2025-07-22 21:57:13.883494515 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-jdbc#210 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 11w6d of being in review and 6 comments.
+  hoc: 2
+  is_human: 0
+  issue: 210
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 7193520
+  what: code-was-contributed
+  when: *1160
+  where: github
+  who: 29139614
+- _id: 199807
+  _job: 29870
+  _time: 2025-07-22 21:57:14.018453341 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 0
+  details: The pull request jcabi/jcabi#431 with 2 HoC created by @renovate[bot] was
+    merged by @yegor256 after 5h50m of being in review and 0 comments.
+  hoc: 2
+  is_human: 0
+  issue: 431
+  merger: 526301
+  repository: 4174608
+  review_comments: 0
+  seconds: 21036
+  what: code-was-contributed
+  when: *1161
+  where: github
+  who: 29139614
+- _id: 199808
+  _job: 29870
+  _time: 2025-07-22 21:57:14.142282622 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 12
+  details: The pull request jcabi/jcabi-http#301 with 46 HoC created by @andreoss
+    was merged by @rultor after 12m0s of being in review and 12 comments.
+  hoc: 46
+  is_human: 1
+  issue: 301
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 721
+  what: code-was-contributed
+  when: *1162
+  where: github
+  who: 49783909
+- _id: 199809
+  _job: 29870
+  _time: 2025-07-22 21:57:14.345053924 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 4
+  details: The pull request jcabi/jcabi-xml#270 with 173 HoC created by @maxonfjvipon
+    was merged by @yegor256 after 57m14s of being in review and 4 comments.
+  hoc: 173
+  is_human: 1
+  issue: 270
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 3435
+  what: code-was-contributed
+  when: *1163
+  where: github
+  who: 37025995
+- _id: 199810
+  _job: 29870
+  _time: 2025-07-22 21:57:14.469197615 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#257 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 24m37s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 257
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 1478
+  what: code-was-contributed
+  when: *1164
+  where: github
+  who: 29139614
+- _id: 199811
+  _job: 29870
+  _time: 2025-07-22 21:57:14.594183975 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#272 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 48m20s of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 272
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 2901
+  what: code-was-contributed
+  when: *1165
+  where: github
+  who: 29139614
+- _id: 199812
+  _job: 29870
+  _time: 2025-07-22 21:57:14.719604224 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#211 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 35m57s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 211
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 2158
+  what: code-was-contributed
+  when: *1166
+  where: github
+  who: 29139614
+- _id: 199813
+  _job: 29870
+  _time: 2025-07-22 21:57:14.843208748 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-http#302 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 21h33m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 302
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 77585
+  what: code-was-contributed
+  when: *1167
+  where: github
+  who: 49699333
+- _id: 199814
+  _job: 29870
+  _time: 2025-07-22 21:57:14.968072363 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 0
+  details: The pull request jcabi/jcabi-xml#271 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 2d14h of being in review and 0 comments.
+  hoc: 2
+  is_human: 0
+  issue: 271
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 225142
+  what: code-was-contributed
+  when: *1168
+  where: github
+  who: 29139614
+- _id: 199815
+  _job: 29870
+  _time: 2025-07-22 21:57:15.092677865 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#258 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 48m37s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 258
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2918
+  what: code-was-contributed
+  when: *1169
+  where: github
+  who: 29139614
+- _id: 199816
+  _job: 29870
+  _time: 2025-07-22 21:57:15.218394555 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#273 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 16m21s of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 273
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 982
+  what: code-was-contributed
+  when: *1170
+  where: github
+  who: 29139614
+- _id: 199817
+  _job: 29870
+  _time: 2025-07-22 21:57:15.343702586 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#212 with 8 HoC created by @renovate[bot]
+    was merged by @rultor after 1h48m of being in review and 3 comments.
+  hoc: 8
+  is_human: 0
+  issue: 212
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 6497
+  what: code-was-contributed
+  when: *1171
+  where: github
+  who: 29139614
+- _id: 199818
+  _job: 29870
+  _time: 2025-07-22 21:57:15.471470694 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#274 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1h11m of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 274
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 4305
+  what: code-was-contributed
+  when: *1172
+  where: github
+  who: 29139614
+- _id: 199819
+  _job: 29870
+  _time: 2025-07-22 21:57:15.615257010 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#274 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 34m48s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 274
+  merger: 8086956
+  repository: 13717355
+  review_comments: 0
+  seconds: 2089
+  what: code-was-contributed
+  when: *1173
+  where: github
+  who: 29139614
+- _id: 199820
+  _job: 29870
+  _time: 2025-07-22 21:57:15.741418375 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#259 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 45m28s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 259
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2729
+  what: code-was-contributed
+  when: *1174
+  where: github
+  who: 29139614
+- _id: 199821
+  _job: 29870
+  _time: 2025-07-22 21:57:15.868429379 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#213 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h0m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 213
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 3612
+  what: code-was-contributed
+  when: *1175
+  where: github
+  who: 29139614
+- _id: 199822
+  _job: 29870
+  _time: 2025-07-22 21:57:15.996456499 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-http#303 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 21h41m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 303
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 78079
+  what: code-was-contributed
+  when: *1176
+  where: github
+  who: 49699333
+- _id: 199823
+  _job: 29870
+  _time: 2025-07-22 21:57:16.136232000 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#275 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 11m51s of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 275
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 712
+  what: code-was-contributed
+  when: *1177
+  where: github
+  who: 29139614
+- _id: 199824
+  _job: 29870
+  _time: 2025-07-22 21:57:16.265289835 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 0
+  details: The pull request jcabi/jcabi-xml#275 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 2w1d of being in review and 0 comments.
+  hoc: 2
+  is_human: 0
+  issue: 275
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 1351337
+  what: code-was-contributed
+  when: *1178
+  where: github
+  who: 29139614
+- _id: 199825
+  _job: 29870
+  _time: 2025-07-22 21:57:16.392997983 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#260 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 39m1s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 260
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2342
+  what: code-was-contributed
+  when: *1179
+  where: github
+  who: 29139614
+- _id: 199826
+  _job: 29870
+  _time: 2025-07-22 21:57:16.522681444 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#214 with 10 HoC created by @renovate[bot]
+    was merged by @rultor after 26m37s of being in review and 3 comments.
+  hoc: 10
+  is_human: 0
+  issue: 214
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 1598
+  what: code-was-contributed
+  when: *1180
+  where: github
+  who: 29139614
+- _id: 199827
+  _job: 29870
+  _time: 2025-07-22 21:57:16.716103183 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-http#304 with 2 HoC created by @dependabot[bot]
+    was merged by @rultor after 1w0d of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 304
+  merger: 8086956
+  repository: 16312153
+  review_comments: 0
+  seconds: 670172
+  what: code-was-contributed
+  when: *1181
+  where: github
+  who: 49699333
+- _id: 199828
+  _job: 29870
+  _time: 2025-07-22 21:57:16.844697314 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 6
+  details: The pull request jcabi/jcabi-s3#276 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 54m55s of being in review and 6 comments.
+  hoc: 4
+  is_human: 0
+  issue: 276
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 3296
+  what: code-was-contributed
+  when: *1182
+  where: github
+  who: 29139614
+- _id: 199829
+  _job: 29870
+  _time: 2025-07-22 21:57:16.972471600 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#278 with 423 HoC created by @volodya-lombrozo
+    was merged by @yegor256 after 13m52s of being in review and 2 comments.
+  hoc: 423
+  is_human: 1
+  issue: 278
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 833
+  what: code-was-contributed
+  when: *1183
+  where: github
+  who: 51804353
+- _id: 199830
+  _job: 29870
+  _time: 2025-07-22 21:57:17.178466909 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#261 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 41m39s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 261
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 2500
+  what: code-was-contributed
+  when: *1184
+  where: github
+  who: 29139614
+- _id: 199831
+  _job: 29870
+  _time: 2025-07-22 21:57:30.093601172 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1388994
+  details: The bug/feature in the issue jcabi/jcabi-http#54 opened @longtimeago by
+    was resolved, after 2h6m of waiting, because it was closed by @longtimeago and
+    earlier it was assigned to @yegor256 and the label '#bug' was attached.
+  is_human: 1
+  issue: 54
+  label: bug
+  opener: 1388994
+  repository: 16312153
+  seconds: 7604
+  what: bug-was-resolved
+  when: *1185
+  where: github
+  who: 526301
+- _id: 199832
+  _job: 29870
+  _time: 2025-07-22 21:57:30.304891991 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 20211331
+  details: The bug/feature in the issue jcabi/jcabi-jdbc#51 opened @davdavid by was
+    resolved, after 15w1d of waiting, because it was closed by @davdavid and earlier
+    it was assigned to @amihaiemil and the label '#bug' was attached.
+  is_human: 1
+  issue: 51
+  label: bug
+  opener: 20211331
+  repository: 12587702
+  seconds: 9159735
+  what: bug-was-resolved
+  when: *1186
+  where: github
+  who: 6305156
+- _id: 199833
+  _job: 29870
+  _time: 2025-07-22 21:57:30.612895030 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 5467276
+  details: The bug/feature in the issue jcabi/jcabi-parent#51 opened @mkordas by was
+    resolved, after 1w0d of waiting, because it was closed by @mkordas and earlier
+    it was assigned to @amihaiemil and the label '#bug' was attached.
+  is_human: 1
+  issue: 51
+  label: bug
+  opener: 5467276
+  repository: 12590813
+  seconds: 605811
+  what: bug-was-resolved
+  when: *1187
+  where: github
+  who: 6305156
+- _id: 199834
+  _job: 29870
+  _time: 2025-07-22 21:57:30.808221151 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-xml#61 opened @yegor256 by was
+    resolved, after 357w3d of waiting, because it was closed by @yegor256 and earlier
+    it was assigned to @tmjee and the label '#bug' was attached.
+  is_human: 1
+  issue: 61
+  label: bug
+  opener: 526301
+  repository: 13717355
+  seconds: 216226264
+  what: bug-was-resolved
+  when: *1188
+  where: github
+  who: 1182139
+- _id: 199835
+  _job: 29870
+  _time: 2025-07-22 21:57:31.000050512 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 105730
+  details: The bug/feature in the issue jcabi/jcabi-parent#57 opened @krzyk by was
+    resolved, after 5w5d of waiting, because it was closed by @krzyk and earlier it
+    was assigned to @longtimeago and the label '#bug' was attached.
+  is_human: 1
+  issue: 57
+  label: bug
+  opener: 105730
+  repository: 12590813
+  seconds: 3528671
+  what: bug-was-resolved
+  when: *1189
+  where: github
+  who: 1388994
+- _id: 199836
+  _job: 29870
+  _time: 2025-07-22 21:57:31.200472444 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-xml#62 opened @yegor256 by was
+    resolved, after 6d17h of waiting, because it was closed by @yegor256 and earlier
+    it was assigned to @gvlasov and the label '#bug' was attached.
+  is_human: 1
+  issue: 62
+  label: bug
+  opener: 526301
+  repository: 13717355
+  seconds: 582977
+  what: bug-was-resolved
+  when: *1190
+  where: github
+  who: 4467948
+- _id: 199837
+  _job: 29870
+  _time: 2025-07-22 21:57:31.395597338 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-xml#74 opened @yegor256 by was
+    resolved, after 13w0d of waiting, because it was closed by @yegor256 and earlier
+    it was assigned to @amihaiemil and the label '#bug' was attached.
+  is_human: 1
+  issue: 74
+  label: bug
+  opener: 526301
+  repository: 13717355
+  seconds: 7900873
+  what: bug-was-resolved
+  when: *1191
+  where: github
+  who: 6305156
+- _id: 199838
+  _job: 29870
+  _time: 2025-07-22 21:57:31.523544764 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1917892
+  details: The bug/feature in the issue jcabi/jcabi-xml#94 opened @carlosmiranda by
+    was resolved, after 15h16m of waiting, because it was closed by @carlosmiranda
+    and earlier it was assigned to @dmzaytsev and the label '#bug' was attached.
+  is_human: 1
+  issue: 94
+  label: bug
+  opener: 1917892
+  repository: 13717355
+  seconds: 55003
+  what: bug-was-resolved
+  when: *1192
+  where: github
+  who: 9972909
+- _id: 199839
+  _job: 29870
+  _time: 2025-07-22 21:57:31.841393527 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1405237
+  details: The bug/feature in the issue jcabi/jcabi-xml#96 opened @simonjenga by was
+    resolved, after 3w1d of waiting, because it was closed by @simonjenga and earlier
+    it was assigned to @amihaiemil and the label '#bug' was attached.
+  is_human: 1
+  issue: 96
+  label: bug
+  opener: 1405237
+  repository: 13717355
+  seconds: 1981942
+  what: bug-was-resolved
+  when: *1193
+  where: github
+  who: 6305156
+- _id: 199840
+  _job: 29870
+  _time: 2025-07-22 21:57:32.046300461 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1405237
+  details: The bug/feature in the issue jcabi/jcabi-xml#98 opened @simonjenga by was
+    resolved, after 3d21h of waiting, because it was closed by @simonjenga and earlier
+    it was assigned to @piddubnyi and the label '#bug' was attached.
+  is_human: 1
+  issue: 98
+  label: bug
+  opener: 1405237
+  repository: 13717355
+  seconds: 335753
+  what: bug-was-resolved
+  when: *1194
+  where: github
+  who: 6010247
+- _id: 199841
+  _job: 29870
+  _time: 2025-07-22 21:57:32.238720079 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1405237
+  details: The bug/feature in the issue jcabi/jcabi-xml#99 opened @simonjenga by was
+    resolved, after 3w5d of waiting, because it was closed by @simonjenga and earlier
+    it was assigned to @ivanjunckes and the label '#bug' was attached.
+  is_human: 1
+  issue: 99
+  label: bug
+  opener: 1405237
+  repository: 13717355
+  seconds: 2314728
+  what: bug-was-resolved
+  when: *1195
+  where: github
+  who: 2260551
+- _id: 199842
+  _job: 29870
+  _time: 2025-07-22 21:57:32.502393111 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 6581896
+  details: The bug/feature in the issue jcabi/jcabi-http#85 opened @super132 by was
+    resolved, after 12w6d of waiting, because it was closed by @super132 and earlier
+    it was assigned to @yamstranger and the label '#bug' was attached.
+  is_human: 1
+  issue: 85
+  label: bug
+  opener: 6581896
+  repository: 16312153
+  seconds: 7850246
+  what: bug-was-resolved
+  when: *1196
+  where: github
+  who: 1667699
+- _id: 199843
+  _job: 29870
+  _time: 2025-07-22 21:57:32.773607855 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 1054771
+  details: The bug/feature in the issue jcabi/jcabi-http#87 opened @pinaf by was resolved,
+    after 42w0d of waiting, because it was closed by @pinaf and earlier it was assigned
+    to @nikoladespotoski and the label '#bug' was attached.
+  is_human: 1
+  issue: 87
+  label: bug
+  opener: 1054771
+  repository: 16312153
+  seconds: 25448923
+  what: bug-was-resolved
+  when: *1197
+  where: github
+  who: 1165195
+- _id: 199844
+  _job: 29870
+  _time: 2025-07-22 21:57:33.094936723 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 419884
+  details: The bug/feature in the issue jcabi/jcabi-http#89 opened @cvrebert by was
+    resolved, after 1w0d of waiting, because it was closed by @cvrebert and earlier
+    it was assigned to @idegtiarenko and the label '#bug' was attached.
+  is_human: 1
+  issue: 89
+  label: bug
+  opener: 419884
+  repository: 16312153
+  seconds: 680884
+  what: bug-was-resolved
+  when: *1198
+  where: github
+  who: 1331856
+- _id: 199845
+  _job: 29870
+  _time: 2025-07-22 21:57:33.384706019 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 419884
+  details: The bug/feature in the issue jcabi/jcabi-http#90 opened @cvrebert by was
+    resolved, after 13w2d of waiting, because it was closed by @cvrebert and earlier
+    it was assigned to @pecko and the label '#bug' was attached.
+  is_human: 1
+  issue: 90
+  label: bug
+  opener: 419884
+  repository: 16312153
+  seconds: 8040656
+  what: bug-was-resolved
+  when: *1199
+  where: github
+  who: 534584
+- _id: 199846
+  _job: 29870
+  _time: 2025-07-22 21:57:33.580183977 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 5598124
+  details: The bug/feature in the issue jcabi/jcabi-http#137 opened @pstorch by was
+    resolved, after 80w1d of waiting, because it was closed by @pstorch and earlier
+    it was assigned to @westonal and the label '#bug' was attached.
+  is_human: 1
+  issue: 137
+  label: bug
+  opener: 5598124
+  repository: 16312153
+  seconds: 48508907
+  what: bug-was-resolved
+  when: *1200
+  where: github
+  who: 6041352
+- _id: 199847
+  _job: 29870
+  _time: 2025-07-22 21:57:33.843061183 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 49783909
+  details: The bug/feature in the issue jcabi/jcabi-http#138 opened @yiyiwangru by
+    was resolved, after 260w5d of waiting, because it was closed by @andreoss and
+    earlier it was assigned to @westonal and the label '#bug' was attached.
+  is_human: 1
+  issue: 138
+  label: bug
+  opener: 11848650
+  repository: 16312153
+  seconds: 157737942
+  what: bug-was-resolved
+  when: *1201
+  where: github
+  who: 6041352
+- _id: 199848
+  _job: 29870
+  _time: 2025-07-22 21:57:34.034979733 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 40247101
+  details: The bug/feature in the issue jcabi/jcabi-xml#185 opened @mximp by was resolved,
+    after 10h45m of waiting, because it was closed by @mximp and earlier it was assigned
+    to @yegor256 and the label '#bug' was attached.
+  is_human: 1
+  issue: 185
+  label: bug
+  opener: 40247101
+  repository: 13717355
+  seconds: 38724
+  what: bug-was-resolved
+  when: *1202
+  where: github
+  who: 526301
+- _id: 199849
+  _job: 29870
+  _time: 2025-07-22 21:57:34.226417571 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-http#171 opened @yegor256 by was
+    resolved, after 131w5d of waiting, because it was closed by @yegor256 and earlier
+    it was assigned to @0crat and the label '#bug' was attached.
+  is_human: 1
+  issue: 171
+  label: bug
+  opener: 526301
+  repository: 16312153
+  seconds: 79712610
+  what: bug-was-resolved
+  when: *1203
+  where: github
+  who: 24387511
+- _id: 199850
+  _time: 2025-07-22 22:42:09.060277869 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49884498095
+  repository: 13359002
+  what: events-were-scanned
+  where: github
+- _id: 199851
+  _time: 2025-07-22 22:42:10.088367487 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577325928
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 199852
+  _time: 2025-07-22 22:42:10.542422458 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50359868790
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 199853
+  _time: 2025-07-22 22:42:11.102888322 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50427137745
+  repository: 25780072
+  what: events-were-scanned
+  where: github
+- _id: 199854
+  _time: 2025-07-22 22:42:11.981475328 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52389555529
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 199855
+  _time: 2025-07-22 22:42:12.917861042 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50478877191
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 199856
+  _time: 2025-07-22 22:42:13.720851193 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 199857
+  _time: 2025-07-22 22:42:14.269033987 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50466965619
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 199858
+  _time: 2025-07-22 22:42:14.780087670 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52351242091
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 199859
+  _time: 2025-07-22 22:42:15.262792156 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52283769866
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 199860
+  _time: 2025-07-22 22:42:16.030789713 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50367374034
+  repository: 14204295
+  what: events-were-scanned
+  where: github
+- _id: 199861
+  _time: 2025-07-22 22:42:17.451097049 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426456784
+  repository: 13717355
+  what: events-were-scanned
+  where: github
+- _id: 199862
+  _time: 2025-07-22 22:42:24.537991441 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50496302309
+  repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 199863
+  _time: 2025-07-22 22:42:25.091094078 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52334117174
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 199864
+  _time: 2025-07-22 22:42:25.441081474 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: events-were-scanned
+  where: github
+- _id: 199865
+  _time: 2025-07-22 22:42:25.777929495 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: events-were-scanned
+  where: github
+- _id: 199866
+  _time: 2025-07-22 22:42:26.202500064 Z
+  _version: 0.13.0/0.51.1/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 199867
+  _time: 2025-07-22 22:42:27.144062574 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50477404854
+  repository: 12947626
+  what: events-were-scanned
+  where: github
+- _id: 199868
+  _time: 2025-07-22 22:42:28.536369915 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426009798
+  repository: 23238769
+  what: events-were-scanned
+  where: github
+- _id: 199869
+  _time: 2025-07-22 22:42:29.696754558 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50476549509
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 199870
+  _time: 2025-07-22 22:42:30.032978817 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49342071550
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 199871
+  _time: 2025-07-22 22:42:30.730781279 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50299289288
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 199872
+  _time: 2025-07-22 22:42:31.729599071 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577399249
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 199873
+  _time: 2025-07-22 22:42:32.578324545 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50423569553
+  repository: 12589424
+  what: events-were-scanned
+  where: github
+- _id: 199874
+  _time: 2025-07-22 22:42:33.305943420 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50324195939
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 199875
+  _time: 2025-07-22 22:42:33.868594753 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 199876
+  _time: 2025-07-22 22:42:34.470376440 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50163308058
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 199877
+  _time: 2025-07-22 22:42:34.949459111 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 199878
+  _time: 2025-07-22 22:42:35.255824695 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49345256772
+  repository: 12591371
+  what: events-were-scanned
+  where: github
+- _id: 199879
+  _time: 2025-07-22 22:42:35.675630924 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50421752226
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 199880
+  _time: 2025-07-22 22:42:36.082276342 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50429299091
+  repository: 12584841
+  what: events-were-scanned
+  where: github
+- _id: 199881
+  _time: 2025-07-22 22:42:36.502371452 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: types-were-scanned
+  where: github
+- _id: 199883
+  _time: 2025-07-22 22:42:37.355721180 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: types-were-scanned
+  where: github
+- _id: 199884
+  _time: 2025-07-22 22:42:37.506110416 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: types-were-scanned
+  where: github
+- _id: 199885
+  _time: 2025-07-22 22:42:37.648489976 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: types-were-scanned
+  where: github
+- _id: 199886
+  _time: 2025-07-22 22:42:37.791545569 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: types-were-scanned
+  where: github
+- _id: 199889
+  _time: 2025-07-22 22:42:39.013717263 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: types-were-scanned
+  where: github
+- _id: 199892
+  _time: 2025-07-22 22:42:40.516173427 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: types-were-scanned
+  where: github
+- _id: 199893
+  _time: 2025-07-22 22:42:40.669220541 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: types-were-scanned
+  where: github
+- _id: 199894
+  _time: 2025-07-22 22:42:40.819020937 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: types-were-scanned
+  where: github
+- _id: 199897
+  _time: 2025-07-22 22:42:42.357982067 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: types-were-scanned
+  where: github
+- _id: 199899
+  _time: 2025-07-22 22:42:43.089303152 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: types-were-scanned
+  where: github
+- _id: 199901
+  _time: 2025-07-22 22:42:43.907266172 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: types-were-scanned
+  where: github
+- _id: 199902
+  _time: 2025-07-22 22:42:44.058789025 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: types-were-scanned
+  where: github
+- _id: 199903
+  _time: 2025-07-22 22:42:44.212011474 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: types-were-scanned
+  where: github
+- _id: 199904
+  _time: 2025-07-22 22:42:44.360395723 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: types-were-scanned
+  where: github
+- _id: 199906
+  _time: 2025-07-22 22:42:45.023655851 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: types-were-scanned
+  where: github
+- _id: 199908
+  _time: 2025-07-22 22:42:45.699287148 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: types-were-scanned
+  where: github
+- _id: 199909
+  _time: 2025-07-22 22:42:45.844193538 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: types-were-scanned
+  where: github
+- _id: 199910
+  _time: 2025-07-22 22:42:45.994028858 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: types-were-scanned
+  where: github
+- _id: 199911
+  _time: 2025-07-22 22:42:46.218010044 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: types-were-scanned
+  where: github
+- _id: 199913
+  _time: 2025-07-22 22:42:47.336342159 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: types-were-scanned
+  where: github
+- _id: 199914
+  _time: 2025-07-22 22:42:47.693340832 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: types-were-scanned
+  where: github
+- _id: 199919
+  _time: 2025-07-22 22:42:50.618897008 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: types-were-scanned
+  where: github
+- _id: 199921
+  _time: 2025-07-22 22:42:51.615767079 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: types-were-scanned
+  where: github
+- _id: 199922
+  _time: 2025-07-22 22:42:51.964336920 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: types-were-scanned
+  where: github
+- _id: 199957
+  _time: 2025-07-22 22:43:17.267116467 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: types-were-scanned
+  where: github
+- _id: 200011
+  _time: 2025-07-22 22:43:55.146580048 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: types-were-scanned
+  where: github
+- _id: 200076
+  _time: 2025-07-22 22:44:44.166786942 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: types-were-scanned
+  where: github
+- _id: 200128
+  _time: 2025-07-22 22:45:25.090685800 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13717355
+  what: types-were-scanned
+  where: github
+- _id: 200174
+  _time: 2025-07-22 22:45:57.826750873 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: types-were-scanned
+  where: github
+- _id: 200175
+  _time: 2025-07-22 22:46:04.213346571 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16312153
+  what: types-were-scanned
+  where: github
+- _id: 200176
+  _time: 2025-07-22 22:46:10.455759554 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: issues-were-scanned
+  where: github
+- _id: 200177
+  _time: 2025-07-22 22:46:10.614995278 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: issues-were-scanned
+  where: github
+- _id: 200179
+  _time: 2025-07-22 22:46:11.457389398 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: issues-were-scanned
+  where: github
+- _id: 200180
+  _time: 2025-07-22 22:46:11.613907564 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: issues-were-scanned
+  where: github
+- _id: 200181
+  _time: 2025-07-22 22:46:11.761621970 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: issues-were-scanned
+  where: github
+- _id: 200182
+  _time: 2025-07-22 22:46:12.378386061 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#196 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 196
+  repository: 13717355
+  what: issue-was-closed
+  when: 2023-01-15 18:23:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 200184
+  _time: 2025-07-22 22:46:12.531103356 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: issues-were-scanned
+  where: github
+- _id: 200185
+  _time: 2025-07-22 22:46:12.675215541 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: issues-were-scanned
+  where: github
+- _id: 200189
+  _time: 2025-07-22 22:46:14.953602894 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: issues-were-scanned
+  where: github
+- _id: 200190
+  _time: 2025-07-22 22:46:15.100811522 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: issues-were-scanned
+  where: github
+- _id: 200191
+  _time: 2025-07-22 22:46:15.429838444 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: issues-were-scanned
+  where: github
+- _id: 200192
+  _time: 2025-07-22 22:46:15.728200658 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: issues-were-scanned
+  where: github
+- _id: 200195
+  _time: 2025-07-22 22:46:16.995518084 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: issues-were-scanned
+  where: github
+- _id: 200196
+  _time: 2025-07-22 22:46:17.292340389 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: issues-were-scanned
+  where: github
+- _id: 200197
+  _time: 2025-07-22 22:46:17.440646520 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: issues-were-scanned
+  where: github
+- _id: 200199
+  _time: 2025-07-22 22:46:18.171122431 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: issues-were-scanned
+  where: github
+- _id: 200200
+  _time: 2025-07-22 22:46:18.316147770 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: issues-were-scanned
+  where: github
+- _id: 200201
+  _time: 2025-07-22 22:46:18.464065406 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: issues-were-scanned
+  where: github
+- _id: 200202
+  _time: 2025-07-22 22:46:18.609233673 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: issues-were-scanned
+  where: github
+- _id: 200203
+  _time: 2025-07-22 22:46:18.759728334 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: issues-were-scanned
+  where: github
+- _id: 200204
+  _time: 2025-07-22 22:46:18.909564835 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: issues-were-scanned
+  where: github
+- _id: 200205
+  _time: 2025-07-22 22:46:19.055482693 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: issues-were-scanned
+  where: github
+- _id: 200213
+  _time: 2025-07-22 22:46:22.799584025 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: issues-were-scanned
+  where: github
+- _id: 200214
+  _time: 2025-07-22 22:46:23.061447999 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: issues-were-scanned
+  where: github
+- _id: 200216
+  _time: 2025-07-22 22:46:23.799113919 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: issues-were-scanned
+  where: github
+- _id: 200217
+  _time: 2025-07-22 22:46:24.064729975 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: issues-were-scanned
+  where: github
+- _id: 200219
+  _time: 2025-07-22 22:46:24.968544335 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#206 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 206
+  repository: 13717355
+  what: issue-was-closed
+  when: 2023-06-03 01:10:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 200226
+  _time: 2025-07-22 22:46:27.832857530 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#211 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 211
+  repository: 13717355
+  what: issue-was-closed
+  when: 2023-07-18 17:36:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 200233
+  _time: 2025-07-22 22:46:30.720332571 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#213 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 213
+  repository: 13717355
+  what: issue-was-closed
+  when: 2023-07-19 13:37:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 200240
+  _time: 2025-07-22 22:46:33.668230502 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#215 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 215
+  repository: 13717355
+  what: issue-was-closed
+  when: 2023-07-21 07:56:49.000000000 Z
+  where: github
+  who: 8086956
+- _id: 200244
+  _time: 2025-07-22 22:46:34.863738707 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: issues-were-scanned
+  where: github
+- _id: 200252
+  _time: 2025-07-22 22:46:38.520269275 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#244 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 244
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-04-17 06:18:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 200262
+  _time: 2025-07-22 22:46:42.493713612 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: issues-were-scanned
+  where: github
+- _id: 200264
+  _time: 2025-07-22 22:46:43.223913242 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: issues-were-scanned
+  where: github
+- _id: 200265
+  _time: 2025-07-22 22:46:43.660177910 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#173 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 173
+  repository: 16312153
+  what: issue-was-closed
+  when: 2018-01-29 17:49:34.000000000 Z
+  where: github
+  who: 8086956
+- _id: 200268
+  _time: 2025-07-22 22:46:44.654224696 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#272 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 272
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-11-07 13:29:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 200270
+  _time: 2025-07-22 22:46:45.145988183 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#175 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 175
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-06-28 03:02:45.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200273
+  _time: 2025-07-22 22:46:46.076405169 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#273 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 273
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-12-24 17:59:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 200275
+  _time: 2025-07-22 22:46:46.547632717 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#176 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 176
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-12-04 07:40:07.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200278
+  _time: 2025-07-22 22:46:47.555590562 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#276 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 276
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-12-01 13:38:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 200282
+  _time: 2025-07-22 22:46:48.943555483 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#277 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 277
+  repository: 13717355
+  what: issue-was-closed
+  when: 2025-01-10 10:02:16.000000000 Z
+  where: github
+  who: 51804353
+- _id: 200286
+  _time: 2025-07-22 22:46:50.331839883 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#282 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 282
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-12-23 11:02:56.000000000 Z
+  where: github
+  who: 8086956
+- _id: 200290
+  _time: 2025-07-22 22:46:51.689809778 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#288 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 288
+  repository: 13717355
+  what: issue-was-closed
+  when: 2025-01-29 08:28:12.000000000 Z
+  where: github
+  who: 51804353
+- _id: 200292
+  _time: 2025-07-22 22:46:52.156361634 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#181 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 181
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-09 02:35:47.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200295
+  _time: 2025-07-22 22:46:53.089678872 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#289 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 289
+  repository: 13717355
+  what: issue-was-closed
+  when: 2025-01-10 09:58:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 200297
+  _time: 2025-07-22 22:46:53.545152887 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#182 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 182
+  repository: 16312153
+  what: issue-was-closed
+  when: 2019-10-10 09:13:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 200300
+  _time: 2025-07-22 22:46:54.479435652 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#290 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 290
+  repository: 13717355
+  what: issue-was-closed
+  when: 2025-01-29 08:27:09.000000000 Z
+  where: github
+  who: 51804353
+- _id: 200302
+  _time: 2025-07-22 22:46:54.936397323 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#185 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 185
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-11-09 23:09:58.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200305
+  _time: 2025-07-22 22:46:55.937721049 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#292 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 292
+  repository: 13717355
+  what: issue-was-closed
+  when: 2025-01-29 08:25:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 200307
+  _time: 2025-07-22 22:46:56.398341388 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#187 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 187
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 01:20:23.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200309
+  _time: 2025-07-22 22:46:56.675684842 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: issues-were-scanned
+  where: github
+- _id: 200313
+  _time: 2025-07-22 22:46:58.516643344 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#195 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 195
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-07 20:55:25.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200315
+  _time: 2025-07-22 22:46:58.827525262 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13717355
+  what: issues-were-scanned
+  where: github
+- _id: 200316
+  _time: 2025-07-22 22:46:59.267068101 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#199 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 199
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-09 01:45:14.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200317
+  _time: 2025-07-22 22:46:59.752680294 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#200 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 200
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 16:44:27.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200318
+  _time: 2025-07-22 22:47:00.848145923 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#203 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 203
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-20 05:24:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 200319
+  _time: 2025-07-22 22:47:01.337497227 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#206 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 206
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-10 17:32:22.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200320
+  _time: 2025-07-22 22:47:01.866797967 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#207 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 207
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-10 12:05:25.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200321
+  _time: 2025-07-22 22:47:02.372102248 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#210 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 210
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 13:01:22.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200322
+  _time: 2025-07-22 22:47:02.843428119 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#211 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 211
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 15:33:21.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200323
+  _time: 2025-07-22 22:47:03.337522413 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#215 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 215
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-08-28 14:30:09.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200324
+  _time: 2025-07-22 22:47:04.807667807 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#224 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 224
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-20 05:25:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 200325
+  _time: 2025-07-22 22:47:05.319704145 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#227 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 227
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-12-01 18:55:47.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200326
+  _time: 2025-07-22 22:47:05.859048967 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#235 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 235
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-12-03 22:44:34.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200327
+  _time: 2025-07-22 22:47:06.339933318 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#238 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 238
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-03-15 02:40:54.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200328
+  _time: 2025-07-22 22:47:06.835821244 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#241 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 241
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-03-09 12:31:12.000000000 Z
+  where: github
+  who: 66594914
+- _id: 200329
+  _time: 2025-07-22 22:47:07.337220360 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#243 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 243
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-04-26 06:56:49.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200330
+  _time: 2025-07-22 22:47:08.751253755 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#252 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 252
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-07-02 16:00:31.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200331
+  _time: 2025-07-22 22:47:11.649904603 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#265 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 265
+  repository: 16312153
+  what: issue-was-closed
+  when: 2023-10-29 09:16:52.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200332
+  _time: 2025-07-22 22:47:12.595019467 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#278 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 278
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-09-15 06:31:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 200333
+  _time: 2025-07-22 22:47:13.076598808 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#292 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 292
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-12-31 20:29:09.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200334
+  _time: 2025-07-22 22:47:13.718494319 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#293 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 293
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-12-31 20:29:17.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200335
+  _time: 2025-07-22 22:47:14.448458637 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#294 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 294
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-03 01:16:48.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200336
+  _time: 2025-07-22 22:47:15.420110435 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#323 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 323
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-03 01:48:56.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200337
+  _time: 2025-07-22 22:47:15.895834672 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#331 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 331
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-19 04:36:33.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200338
+  _time: 2025-07-22 22:47:16.369727236 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#332 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 332
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-19 04:36:38.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200339
+  _time: 2025-07-22 22:47:16.869576189 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#333 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 333
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-19 04:36:42.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200340
+  _time: 2025-07-22 22:47:17.358582697 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#334 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 334
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-19 04:36:47.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200341
+  _time: 2025-07-22 22:47:17.829039866 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#335 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 335
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-19 04:36:51.000000000 Z
+  where: github
+  who: 24456188
+- _id: 200342
+  _time: 2025-07-22 22:47:18.283282665 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#337 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 337
+  repository: 16312153
+  what: issue-was-closed
+  when: 2022-07-20 05:23:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 200343
+  _time: 2025-07-22 22:47:19.252523946 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#405 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 405
+  repository: 16312153
+  what: issue-was-closed
+  when: 2023-01-22 17:30:27.000000000 Z
+  where: github
+  who: 9504395
+- _id: 200344
+  _time: 2025-07-22 22:47:19.756394213 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#432 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 432
+  repository: 16312153
+  what: issue-was-closed
+  when: 2023-10-29 09:16:35.000000000 Z
+  where: github
+  who: 49783909
+- _id: 200345
+  _time: 2025-07-22 22:47:20.699037686 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#559 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 559
+  repository: 16312153
+  what: issue-was-closed
+  when: 2025-02-25 23:29:48.000000000 Z
+  where: github
+  who: 29793349
+- _id: 200346
+  _time: 2025-07-22 22:47:21.479538424 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16312153
+  what: issues-were-scanned
+  where: github
+- _id: 200349
+  _time: 2025-07-22 22:49:14.833656518 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: assignees-were-scanned
+  where: github
+- _id: 200351
+  _time: 2025-07-22 22:49:15.706088397 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: assignees-were-scanned
+  where: github
+- _id: 200352
+  _time: 2025-07-22 22:49:15.864707149 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: assignees-were-scanned
+  where: github
+- _id: 200353
+  _time: 2025-07-22 22:49:16.020520538 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: assignees-were-scanned
+  where: github
+- _id: 200354
+  _time: 2025-07-22 22:49:16.256040263 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: assignees-were-scanned
+  where: github
+- _id: 200357
+  _time: 2025-07-22 22:49:17.840528689 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: assignees-were-scanned
+  where: github
+- _id: 200359
+  _time: 2025-07-22 22:49:18.716426353 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: assignees-were-scanned
+  where: github
+- _id: 200361
+  _time: 2025-07-22 22:49:19.582851714 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: assignees-were-scanned
+  where: github
+- _id: 200362
+  _time: 2025-07-22 22:49:19.743091020 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: assignees-were-scanned
+  where: github
+- _id: 200364
+  _time: 2025-07-22 22:49:20.652800524 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: assignees-were-scanned
+  where: github
+- _id: 200365
+  _time: 2025-07-22 22:49:20.808691406 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: assignees-were-scanned
+  where: github
+- _id: 200366
+  _time: 2025-07-22 22:49:20.964706791 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: assignees-were-scanned
+  where: github
+- _id: 200368
+  _time: 2025-07-22 22:49:21.887271072 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: assignees-were-scanned
+  where: github
+- _id: 200369
+  _time: 2025-07-22 22:49:22.043012294 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: assignees-were-scanned
+  where: github
+- _id: 200370
+  _time: 2025-07-22 22:49:22.202204211 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: assignees-were-scanned
+  where: github
+- _id: 200371
+  _time: 2025-07-22 22:49:22.452947682 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: assignees-were-scanned
+  where: github
+- _id: 200372
+  _time: 2025-07-22 22:49:22.609089423 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: assignees-were-scanned
+  where: github
+- _id: 200375
+  _time: 2025-07-22 22:49:24.230580837 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: assignees-were-scanned
+  where: github
+- _id: 200376
+  _time: 2025-07-22 22:49:24.388805862 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: assignees-were-scanned
+  where: github
+- _id: 200377
+  _time: 2025-07-22 22:49:24.546801909 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: assignees-were-scanned
+  where: github
+- _id: 200378
+  _time: 2025-07-22 22:49:24.903974897 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: assignees-were-scanned
+  where: github
+- _id: 200379
+  _time: 2025-07-22 22:49:25.256453282 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: assignees-were-scanned
+  where: github
+- _id: 200381
+  _time: 2025-07-22 22:49:26.186076569 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: assignees-were-scanned
+  where: github
+- _id: 200382
+  _time: 2025-07-22 22:49:26.540079750 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: assignees-were-scanned
+  where: github
+- _id: 200386
+  _time: 2025-07-22 22:49:28.669738109 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: assignees-were-scanned
+  where: github
+- _id: 200408
+  _time: 2025-07-22 22:49:41.128967196 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: assignees-were-scanned
+  where: github
+- _id: 200474
+  _time: 2025-07-22 22:50:21.781785171 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: assignees-were-scanned
+  where: github
+- _id: 200693
+  _time: 2025-07-22 22:52:32.821070061 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: assignees-were-scanned
+  where: github
+- _id: 200772
+  _time: 2025-07-22 22:53:20.124221859 Z
+  _version: 0.13.0/0.51.1/
+  latest: 173
+  repository: 13717355
+  what: assignees-were-scanned
+  where: github
+- _id: 200773
+  _time: 2025-07-22 22:53:20.674442124 Z
+  _version: 0.13.0/0.51.1/
+  latest: 164
+  repository: 16312153
+  what: assignees-were-scanned
+  where: github
+- _id: 200774
+  _time: 2025-07-22 22:53:21.246856246 Z
+  _version: 0.13.0/0.51.1/
+  latest: 197
+  repository: 12590813
+  what: assignees-were-scanned
+  where: github
+- _id: 200775
+  _time: 2025-07-22 22:53:55.410497054 Z
+  _version: 0.13.0/0.51.1/
+  total_active_contributors: 5
+  total_commits: 18366
+  total_contributors: 117
+  total_files: 2203
+  total_forks: 973
+  total_issues: 2869
+  total_pulls: 5194
+  total_releases: 672
+  total_repositories: 31
+  total_stars: 2194
+  what: dimensions-of-terrain
+  when: 2025-07-22 20:42:57.754029233 Z
