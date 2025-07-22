@@ -2,14 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error:
-  - 'Judge quality-of-service stopped by timeout after 10m0s: execution expired'
-  - The value of 'who' can't be nil
+  error: The value of 'who' can't be nil
   inserted: 8
-  seconds: 1066.992485068
+  seconds: 1031.297295196
   version: 0.51.1
   what: judges-summary
-  when: 2025-07-22 21:00:03.211621960 Z
+  when: 2025-07-22 21:56:10.434998529 Z
 - _id: 1
   _time: 2025-03-31 16:14:32.469922302 Z
   _version: 0.9.10/0.38.1/
@@ -7571,7 +7569,7 @@
   issue: 31
   repository: 12590813
   what: issue-was-opened
-  when: 2015-06-10 10:48:30.000000000 Z
+  when: &1062 2015-06-10 10:48:30.000000000 Z
   where: github
   who: 1667699
 - _id: 46265
@@ -18581,7 +18579,7 @@
   issue: 37
   repository: 12587702
   what: issue-was-opened
-  when: 2015-01-21 22:51:51.000000000 Z
+  when: &1063 2015-01-21 22:51:51.000000000 Z
   where: github
   who: 569536
 - _id: 68472
@@ -85976,6 +85974,7 @@
   is_human: 1
   issue: 429
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
   when: 2025-07-22 15:52:27.000000000 Z
@@ -85997,6 +85996,7 @@
   is_human: 0
   issue: 269
   repository: 14093966
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-08-15 00:46:23.000000000 Z
@@ -86018,6 +86018,7 @@
   is_human: 0
   issue: 268
   repository: 13717355
+  review_comments: 0
   succeeded_builds: 8
   what: pull-was-merged
   when: 2024-10-28 14:00:02.000000000 Z
@@ -86039,6 +86040,7 @@
   is_human: 0
   issue: 208
   repository: 12587702
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-01-19 12:45:27.000000000 Z
@@ -86060,6 +86062,7 @@
   is_human: 0
   issue: 254
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-03-14 14:41:52.000000000 Z
@@ -86081,6 +86084,7 @@
   is_human: 0
   issue: 299
   repository: 16312153
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2021-12-29 13:37:00.000000000 Z
@@ -86102,6 +86106,7 @@
   is_human: 1
   issue: 430
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
   when: 2025-07-22 15:52:18.000000000 Z
@@ -86123,6 +86128,7 @@
   is_human: 0
   issue: 270
   repository: 14093966
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-08-15 23:38:33.000000000 Z
@@ -86144,6 +86150,7 @@
   is_human: 0
   issue: 269
   repository: 13717355
+  review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
   when: 2024-10-29 10:06:06.000000000 Z
@@ -86165,6 +86172,7 @@
   is_human: 0
   issue: 209
   repository: 12587702
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-02-03 05:45:44.000000000 Z
@@ -86186,6 +86194,7 @@
   is_human: 0
   issue: 255
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-03-17 05:36:30.000000000 Z
@@ -86650,6 +86659,7 @@
   _time: 2025-07-22 19:06:21.663717277 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#1 has been 'issue-was-closed'.
+  is_human: 1
   issue: 1
   repository: 12587702
   what: issue-was-closed
@@ -86660,47 +86670,29 @@
   _time: 2025-07-22 19:06:23.293723915 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#1 has been 'issue-was-closed'.
+  is_human: 1
   issue: 1
   repository: 12590813
   what: issue-was-closed
   when: 2013-10-08 07:44:45.000000000 Z
   where: github
   who: 526301
-- _id: 197044
-  _time: 2025-07-22 19:06:25.259772733 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: issues-were-scanned
-  where: github
 - _id: 197046
   _time: 2025-07-22 19:06:26.229445349 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#154 has been 'issue-was-closed'.
+  is_human: 1
   issue: 154
   repository: 12262782
   what: issue-was-closed
   when: 2023-04-04 23:40:15.000000000 Z
   where: github
   who: 526301
-- _id: 197048
-  _time: 2025-07-22 19:06:26.369333907 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: issues-were-scanned
-  where: github
-- _id: 197052
-  _time: 2025-07-22 19:06:27.574949590 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: issues-were-scanned
-  where: github
 - _id: 197055
   _time: 2025-07-22 19:06:28.748730670 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#1 has been 'issue-was-closed'.
+  is_human: 1
   issue: 1
   repository: 13717355
   what: issue-was-closed
@@ -86711,6 +86703,7 @@
   _time: 2025-07-22 19:06:29.602406978 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#1 has been 'issue-was-closed'.
+  is_human: 1
   issue: 1
   repository: 16312153
   what: issue-was-closed
@@ -86721,6 +86714,7 @@
   _time: 2025-07-22 19:06:31.007026678 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#3 has been 'issue-was-closed'.
+  is_human: 1
   issue: 3
   repository: 12587702
   what: issue-was-closed
@@ -86731,6 +86725,7 @@
   _time: 2025-07-22 19:06:31.598144670 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#2 has been 'issue-was-closed'.
+  is_human: 1
   issue: 2
   repository: 12590813
   what: issue-was-closed
@@ -86741,6 +86736,7 @@
   _time: 2025-07-22 19:06:33.279170310 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#174 has been 'issue-was-closed'.
+  is_human: 1
   issue: 174
   repository: 12262782
   what: issue-was-closed
@@ -86751,6 +86747,7 @@
   _time: 2025-07-22 19:06:34.068083744 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#2 has been 'issue-was-closed'.
+  is_human: 1
   issue: 2
   repository: 13717355
   what: issue-was-closed
@@ -86761,6 +86758,7 @@
   _time: 2025-07-22 19:06:34.670372018 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#3 has been 'issue-was-closed'.
+  is_human: 1
   issue: 3
   repository: 16312153
   what: issue-was-closed
@@ -86771,6 +86769,7 @@
   _time: 2025-07-22 19:06:35.761547497 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#4 has been 'issue-was-closed'.
+  is_human: 1
   issue: 4
   repository: 12587702
   what: issue-was-closed
@@ -86781,6 +86780,7 @@
   _time: 2025-07-22 19:06:36.328560657 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#3 has been 'issue-was-closed'.
+  is_human: 1
   issue: 3
   repository: 12590813
   what: issue-was-closed
@@ -86791,6 +86791,7 @@
   _time: 2025-07-22 19:06:37.937746422 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#175 has been 'issue-was-closed'.
+  is_human: 1
   issue: 175
   repository: 12262782
   what: issue-was-closed
@@ -86801,6 +86802,7 @@
   _time: 2025-07-22 19:06:38.505671765 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#3 has been 'issue-was-closed'.
+  is_human: 1
   issue: 3
   repository: 13717355
   what: issue-was-closed
@@ -86811,6 +86813,7 @@
   _time: 2025-07-22 19:06:39.106483192 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#5 has been 'issue-was-closed'.
+  is_human: 1
   issue: 5
   repository: 16312153
   what: issue-was-closed
@@ -86821,6 +86824,7 @@
   _time: 2025-07-22 19:06:39.677760316 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#5 has been 'issue-was-closed'.
+  is_human: 1
   issue: 5
   repository: 12587702
   what: issue-was-closed
@@ -86831,6 +86835,7 @@
   _time: 2025-07-22 19:06:40.318127652 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#4 has been 'issue-was-closed'.
+  is_human: 1
   issue: 4
   repository: 12590813
   what: issue-was-closed
@@ -86841,6 +86846,7 @@
   _time: 2025-07-22 19:06:41.955203099 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#196 has been 'issue-was-closed'.
+  is_human: 1
   issue: 196
   repository: 12262782
   what: issue-was-closed
@@ -86851,6 +86857,7 @@
   _time: 2025-07-22 19:06:42.820451128 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#4 has been 'issue-was-closed'.
+  is_human: 1
   issue: 4
   repository: 13717355
   what: issue-was-closed
@@ -86861,6 +86868,7 @@
   _time: 2025-07-22 19:06:43.438723569 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#7 has been 'issue-was-closed'.
+  is_human: 1
   issue: 7
   repository: 16312153
   what: issue-was-closed
@@ -86871,6 +86879,7 @@
   _time: 2025-07-22 19:06:44.079816829 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#6 has been 'issue-was-closed'.
+  is_human: 1
   issue: 6
   repository: 12587702
   what: issue-was-closed
@@ -86881,6 +86890,7 @@
   _time: 2025-07-22 19:06:44.645138776 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#5 has been 'issue-was-closed'.
+  is_human: 1
   issue: 5
   repository: 12590813
   what: issue-was-closed
@@ -86891,6 +86901,7 @@
   _time: 2025-07-22 19:06:46.263771923 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#204 has been 'issue-was-closed'.
+  is_human: 1
   issue: 204
   repository: 12262782
   what: issue-was-closed
@@ -86901,6 +86912,7 @@
   _time: 2025-07-22 19:06:46.844437835 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#5 has been 'issue-was-closed'.
+  is_human: 1
   issue: 5
   repository: 13717355
   what: issue-was-closed
@@ -86911,6 +86923,7 @@
   _time: 2025-07-22 19:06:47.400560110 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#9 has been 'issue-was-closed'.
+  is_human: 1
   issue: 9
   repository: 16312153
   what: issue-was-closed
@@ -86921,6 +86934,7 @@
   _time: 2025-07-22 19:06:47.978514807 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#7 has been 'issue-was-closed'.
+  is_human: 1
   issue: 7
   repository: 12587702
   what: issue-was-closed
@@ -86931,6 +86945,7 @@
   _time: 2025-07-22 19:06:48.555757922 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#6 has been 'issue-was-closed'.
+  is_human: 1
   issue: 6
   repository: 12590813
   what: issue-was-closed
@@ -86941,6 +86956,7 @@
   _time: 2025-07-22 19:06:49.904866041 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-log#205 has been 'issue-was-closed'.
+  is_human: 1
   issue: 205
   repository: 12262782
   what: issue-was-closed
@@ -86951,6 +86967,7 @@
   _time: 2025-07-22 19:06:50.469994474 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#6 has been 'issue-was-closed'.
+  is_human: 1
   issue: 6
   repository: 13717355
   what: issue-was-closed
@@ -86961,6 +86978,7 @@
   _time: 2025-07-22 19:06:51.412016540 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#10 has been 'issue-was-closed'.
+  is_human: 1
   issue: 10
   repository: 16312153
   what: issue-was-closed
@@ -86971,6 +86989,7 @@
   _time: 2025-07-22 19:06:51.955575483 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#9 has been 'issue-was-closed'.
+  is_human: 1
   issue: 9
   repository: 12587702
   what: issue-was-closed
@@ -86981,6 +87000,7 @@
   _time: 2025-07-22 19:06:52.543631776 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#7 has been 'issue-was-closed'.
+  is_human: 1
   issue: 7
   repository: 12590813
   what: issue-was-closed
@@ -86991,6 +87011,7 @@
   _time: 2025-07-22 19:06:54.146462783 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#7 has been 'issue-was-closed'.
+  is_human: 1
   issue: 7
   repository: 13717355
   what: issue-was-closed
@@ -87001,6 +87022,7 @@
   _time: 2025-07-22 19:06:54.750452099 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#11 has been 'issue-was-closed'.
+  is_human: 1
   issue: 11
   repository: 16312153
   what: issue-was-closed
@@ -87011,6 +87033,7 @@
   _time: 2025-07-22 19:06:55.301105124 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#11 has been 'issue-was-closed'.
+  is_human: 1
   issue: 11
   repository: 12587702
   what: issue-was-closed
@@ -87021,6 +87044,7 @@
   _time: 2025-07-22 19:06:55.879748359 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#9 has been 'issue-was-closed'.
+  is_human: 1
   issue: 9
   repository: 12590813
   what: issue-was-closed
@@ -87031,6 +87055,7 @@
   _time: 2025-07-22 19:06:57.537736320 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#8 has been 'issue-was-closed'.
+  is_human: 1
   issue: 8
   repository: 13717355
   what: issue-was-closed
@@ -87041,6 +87066,7 @@
   _time: 2025-07-22 19:06:58.200594478 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#12 has been 'issue-was-closed'.
+  is_human: 1
   issue: 12
   repository: 16312153
   what: issue-was-closed
@@ -87051,6 +87077,7 @@
   _time: 2025-07-22 19:06:58.987534009 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#12 has been 'issue-was-closed'.
+  is_human: 1
   issue: 12
   repository: 12587702
   what: issue-was-closed
@@ -87061,6 +87088,7 @@
   _time: 2025-07-22 19:06:59.603618719 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#10 has been 'issue-was-closed'.
+  is_human: 1
   issue: 10
   repository: 12590813
   what: issue-was-closed
@@ -87071,6 +87099,7 @@
   _time: 2025-07-22 19:07:00.735686552 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#9 has been 'issue-was-closed'.
+  is_human: 1
   issue: 9
   repository: 13717355
   what: issue-was-closed
@@ -87081,6 +87110,7 @@
   _time: 2025-07-22 19:07:01.348066756 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#13 has been 'issue-was-closed'.
+  is_human: 1
   issue: 13
   repository: 16312153
   what: issue-was-closed
@@ -87091,6 +87121,7 @@
   _time: 2025-07-22 19:07:01.921012379 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#13 has been 'issue-was-closed'.
+  is_human: 1
   issue: 13
   repository: 12587702
   what: issue-was-closed
@@ -87101,6 +87132,7 @@
   _time: 2025-07-22 19:07:02.467505554 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#11 has been 'issue-was-closed'.
+  is_human: 1
   issue: 11
   repository: 12590813
   what: issue-was-closed
@@ -87111,6 +87143,7 @@
   _time: 2025-07-22 19:07:03.626494503 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#10 has been 'issue-was-closed'.
+  is_human: 1
   issue: 10
   repository: 13717355
   what: issue-was-closed
@@ -87121,6 +87154,7 @@
   _time: 2025-07-22 19:07:04.226378257 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#18 has been 'issue-was-closed'.
+  is_human: 1
   issue: 18
   repository: 16312153
   what: issue-was-closed
@@ -87131,6 +87165,7 @@
   _time: 2025-07-22 19:07:04.863519320 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#15 has been 'issue-was-closed'.
+  is_human: 1
   issue: 15
   repository: 12587702
   what: issue-was-closed
@@ -87141,6 +87176,7 @@
   _time: 2025-07-22 19:07:05.470070384 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#12 has been 'issue-was-closed'.
+  is_human: 1
   issue: 12
   repository: 12590813
   what: issue-was-closed
@@ -87151,6 +87187,7 @@
   _time: 2025-07-22 19:07:06.618734022 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#11 has been 'issue-was-closed'.
+  is_human: 1
   issue: 11
   repository: 13717355
   what: issue-was-closed
@@ -87161,6 +87198,7 @@
   _time: 2025-07-22 19:07:07.211366733 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#19 has been 'issue-was-closed'.
+  is_human: 1
   issue: 19
   repository: 16312153
   what: issue-was-closed
@@ -87171,6 +87209,7 @@
   _time: 2025-07-22 19:07:07.752176066 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#17 has been 'issue-was-closed'.
+  is_human: 1
   issue: 17
   repository: 12587702
   what: issue-was-closed
@@ -87181,6 +87220,7 @@
   _time: 2025-07-22 19:07:08.344488675 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#13 has been 'issue-was-closed'.
+  is_human: 1
   issue: 13
   repository: 12590813
   what: issue-was-closed
@@ -87191,6 +87231,7 @@
   _time: 2025-07-22 19:07:09.532455525 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#12 has been 'issue-was-closed'.
+  is_human: 1
   issue: 12
   repository: 13717355
   what: issue-was-closed
@@ -87201,6 +87242,7 @@
   _time: 2025-07-22 19:07:10.122087985 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#21 has been 'issue-was-closed'.
+  is_human: 1
   issue: 21
   repository: 16312153
   what: issue-was-closed
@@ -87211,6 +87253,7 @@
   _time: 2025-07-22 19:07:10.689051205 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#21 has been 'issue-was-closed'.
+  is_human: 1
   issue: 21
   repository: 12587702
   what: issue-was-closed
@@ -87221,6 +87264,7 @@
   _time: 2025-07-22 19:07:11.313403074 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#14 has been 'issue-was-closed'.
+  is_human: 1
   issue: 14
   repository: 12590813
   what: issue-was-closed
@@ -87231,6 +87275,7 @@
   _time: 2025-07-22 19:07:12.472241264 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#13 has been 'issue-was-closed'.
+  is_human: 1
   issue: 13
   repository: 13717355
   what: issue-was-closed
@@ -87241,6 +87286,7 @@
   _time: 2025-07-22 19:07:13.042342591 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#24 has been 'issue-was-closed'.
+  is_human: 1
   issue: 24
   repository: 16312153
   what: issue-was-closed
@@ -87251,6 +87297,7 @@
   _time: 2025-07-22 19:07:13.666130715 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#23 has been 'issue-was-closed'.
+  is_human: 1
   issue: 23
   repository: 12587702
   what: issue-was-closed
@@ -87261,6 +87308,7 @@
   _time: 2025-07-22 19:07:14.443041465 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#15 has been 'issue-was-closed'.
+  is_human: 1
   issue: 15
   repository: 12590813
   what: issue-was-closed
@@ -87271,6 +87319,7 @@
   _time: 2025-07-22 19:07:15.927298895 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#14 has been 'issue-was-closed'.
+  is_human: 1
   issue: 14
   repository: 13717355
   what: issue-was-closed
@@ -87281,6 +87330,7 @@
   _time: 2025-07-22 19:07:16.876147865 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#25 has been 'issue-was-closed'.
+  is_human: 1
   issue: 25
   repository: 16312153
   what: issue-was-closed
@@ -87291,6 +87341,7 @@
   _time: 2025-07-22 19:07:17.456383894 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#24 has been 'issue-was-closed'.
+  is_human: 1
   issue: 24
   repository: 12587702
   what: issue-was-closed
@@ -87301,6 +87352,7 @@
   _time: 2025-07-22 19:07:18.313126145 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#16 has been 'issue-was-closed'.
+  is_human: 1
   issue: 16
   repository: 12590813
   what: issue-was-closed
@@ -87311,6 +87363,7 @@
   _time: 2025-07-22 19:07:19.710276133 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#16 has been 'issue-was-closed'.
+  is_human: 1
   issue: 16
   repository: 13717355
   what: issue-was-closed
@@ -87321,6 +87374,7 @@
   _time: 2025-07-22 19:07:20.281519535 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#28 has been 'issue-was-closed'.
+  is_human: 1
   issue: 28
   repository: 16312153
   what: issue-was-closed
@@ -87331,6 +87385,7 @@
   _time: 2025-07-22 19:07:20.855594621 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#25 has been 'issue-was-closed'.
+  is_human: 1
   issue: 25
   repository: 12587702
   what: issue-was-closed
@@ -87341,6 +87396,7 @@
   _time: 2025-07-22 19:07:21.431844090 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#17 has been 'issue-was-closed'.
+  is_human: 1
   issue: 17
   repository: 12590813
   what: issue-was-closed
@@ -87351,6 +87407,7 @@
   _time: 2025-07-22 19:07:22.509817902 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#19 has been 'issue-was-closed'.
+  is_human: 1
   issue: 19
   repository: 13717355
   what: issue-was-closed
@@ -87361,6 +87418,7 @@
   _time: 2025-07-22 19:07:23.111714569 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#29 has been 'issue-was-closed'.
+  is_human: 1
   issue: 29
   repository: 16312153
   what: issue-was-closed
@@ -87371,6 +87429,7 @@
   _time: 2025-07-22 19:07:23.680238984 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#26 has been 'issue-was-closed'.
+  is_human: 1
   issue: 26
   repository: 12587702
   what: issue-was-closed
@@ -87381,6 +87440,7 @@
   _time: 2025-07-22 19:07:24.519337057 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#19 has been 'issue-was-closed'.
+  is_human: 1
   issue: 19
   repository: 12590813
   what: issue-was-closed
@@ -87391,6 +87451,7 @@
   _time: 2025-07-22 19:07:25.928010588 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#22 has been 'issue-was-closed'.
+  is_human: 1
   issue: 22
   repository: 13717355
   what: issue-was-closed
@@ -87401,6 +87462,7 @@
   _time: 2025-07-22 19:07:26.554753010 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#31 has been 'issue-was-closed'.
+  is_human: 1
   issue: 31
   repository: 16312153
   what: issue-was-closed
@@ -87411,6 +87473,7 @@
   _time: 2025-07-22 19:07:27.104893213 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#27 has been 'issue-was-closed'.
+  is_human: 1
   issue: 27
   repository: 12587702
   what: issue-was-closed
@@ -87421,6 +87484,7 @@
   _time: 2025-07-22 19:07:27.689218243 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#22 has been 'issue-was-closed'.
+  is_human: 1
   issue: 22
   repository: 12590813
   what: issue-was-closed
@@ -87431,6 +87495,7 @@
   _time: 2025-07-22 19:07:29.092528789 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#23 has been 'issue-was-closed'.
+  is_human: 1
   issue: 23
   repository: 13717355
   what: issue-was-closed
@@ -87441,6 +87506,7 @@
   _time: 2025-07-22 19:07:29.720045079 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#32 has been 'issue-was-closed'.
+  is_human: 1
   issue: 32
   repository: 16312153
   what: issue-was-closed
@@ -87451,6 +87517,7 @@
   _time: 2025-07-22 19:07:30.291331965 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#28 has been 'issue-was-closed'.
+  is_human: 1
   issue: 28
   repository: 12587702
   what: issue-was-closed
@@ -87461,23 +87528,18 @@
   _time: 2025-07-22 19:07:30.880421441 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#23 has been 'issue-was-closed'.
+  is_human: 1
   issue: 23
   repository: 12590813
   what: issue-was-closed
   when: 2015-02-02 15:55:30.000000000 Z
   where: github
   who: 988790
-- _id: 197240
-  _time: 2025-07-22 19:07:31.135087280 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: issues-were-scanned
-  where: github
 - _id: 197241
   _time: 2025-07-22 19:07:31.865699915 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#27 has been 'issue-was-closed'.
+  is_human: 1
   issue: 27
   repository: 13717355
   what: issue-was-closed
@@ -87488,6 +87550,7 @@
   _time: 2025-07-22 19:07:32.465898823 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#34 has been 'issue-was-closed'.
+  is_human: 1
   issue: 34
   repository: 16312153
   what: issue-was-closed
@@ -87498,6 +87561,7 @@
   _time: 2025-07-22 19:07:33.010065340 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#29 has been 'issue-was-closed'.
+  is_human: 1
   issue: 29
   repository: 12587702
   what: issue-was-closed
@@ -87508,6 +87572,7 @@
   _time: 2025-07-22 19:07:33.658893525 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#25 has been 'issue-was-closed'.
+  is_human: 1
   issue: 25
   repository: 12590813
   what: issue-was-closed
@@ -87518,6 +87583,7 @@
   _time: 2025-07-22 19:07:34.268054521 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#29 has been 'issue-was-closed'.
+  is_human: 1
   issue: 29
   repository: 13717355
   what: issue-was-closed
@@ -87528,6 +87594,7 @@
   _time: 2025-07-22 19:07:34.841340619 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#36 has been 'issue-was-closed'.
+  is_human: 1
   issue: 36
   repository: 16312153
   what: issue-was-closed
@@ -87538,6 +87605,7 @@
   _time: 2025-07-22 19:07:36.008167228 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#30 has been 'issue-was-closed'.
+  is_human: 1
   issue: 30
   repository: 12587702
   what: issue-was-closed
@@ -87548,6 +87616,7 @@
   _time: 2025-07-22 19:07:36.622236915 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#26 has been 'issue-was-closed'.
+  is_human: 1
   issue: 26
   repository: 12590813
   what: issue-was-closed
@@ -87558,6 +87627,7 @@
   _time: 2025-07-22 19:07:37.234532536 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#30 has been 'issue-was-closed'.
+  is_human: 1
   issue: 30
   repository: 13717355
   what: issue-was-closed
@@ -87568,6 +87638,7 @@
   _time: 2025-07-22 19:07:37.838148072 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#37 has been 'issue-was-closed'.
+  is_human: 1
   issue: 37
   repository: 16312153
   what: issue-was-closed
@@ -87578,6 +87649,7 @@
   _time: 2025-07-22 19:07:38.392716900 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#31 has been 'issue-was-closed'.
+  is_human: 1
   issue: 31
   repository: 12587702
   what: issue-was-closed
@@ -87588,6 +87660,7 @@
   _time: 2025-07-22 19:07:38.971722274 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#27 has been 'issue-was-closed'.
+  is_human: 1
   issue: 27
   repository: 12590813
   what: issue-was-closed
@@ -87598,6 +87671,7 @@
   _time: 2025-07-22 19:07:39.528815619 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#31 has been 'issue-was-closed'.
+  is_human: 1
   issue: 31
   repository: 13717355
   what: issue-was-closed
@@ -87608,6 +87682,7 @@
   _time: 2025-07-22 19:07:40.120024572 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#39 has been 'issue-was-closed'.
+  is_human: 1
   issue: 39
   repository: 16312153
   what: issue-was-closed
@@ -87618,6 +87693,7 @@
   _time: 2025-07-22 19:07:40.686841275 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#33 has been 'issue-was-closed'.
+  is_human: 1
   issue: 33
   repository: 12587702
   what: issue-was-closed
@@ -87628,6 +87704,7 @@
   _time: 2025-07-22 19:07:41.271277482 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#28 has been 'issue-was-closed'.
+  is_human: 1
   issue: 28
   repository: 12590813
   what: issue-was-closed
@@ -87638,6 +87715,7 @@
   _time: 2025-07-22 19:07:41.879610292 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#32 has been 'issue-was-closed'.
+  is_human: 1
   issue: 32
   repository: 13717355
   what: issue-was-closed
@@ -87648,6 +87726,7 @@
   _time: 2025-07-22 19:07:42.472186339 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-http#40 has been 'issue-was-closed'.
+  is_human: 1
   issue: 40
   repository: 16312153
   what: issue-was-closed
@@ -87658,6 +87737,7 @@
   _time: 2025-07-22 19:07:43.100697447 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#34 has been 'issue-was-closed'.
+  is_human: 1
   issue: 34
   repository: 12587702
   what: issue-was-closed
@@ -87668,6 +87748,7 @@
   _time: 2025-07-22 19:07:43.722520276 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#29 has been 'issue-was-closed'.
+  is_human: 1
   issue: 29
   repository: 12590813
   what: issue-was-closed
@@ -87678,6 +87759,7 @@
   _time: 2025-07-22 19:07:44.380716278 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#33 has been 'issue-was-closed'.
+  is_human: 1
   issue: 33
   repository: 13717355
   what: issue-was-closed
@@ -87689,6 +87771,7 @@
   _version: 0.13.0/0.51.1/
   issue: 42
   repository: 16312153
+  stale: who
   what: issue-was-closed
   when: 2014-06-25 06:33:04.000000000 Z
   where: github
@@ -87700,6 +87783,7 @@
   details: The bug/feature in the issue jcabi/jcabi-log#196 opened @yegor256 by was
     resolved, after 1h8m of waiting, because it was closed by @yegor256 and earlier
     it was assigned to @yegor256 and the label '#enhancement' was attached.
+  is_human: 1
   issue: 196
   label: enhancement
   opener: 526301
@@ -87717,6 +87801,7 @@
   details: The bug/feature in the issue jcabi/jcabi-log#204 opened @yegor256 by was
     resolved, after 1h10m of waiting, because it was closed by @yegor256 and earlier
     it was assigned to @yegor256 and the label '#bug' was attached.
+  is_human: 1
   issue: 204
   label: bug
   opener: 526301
@@ -87734,6 +87819,7 @@
   details: The bug/feature in the issue jcabi/jcabi-parent#25 opened @carlosmiranda
     by was resolved, after 1d22h of waiting, because it was closed by @carlosmiranda
     and earlier it was assigned to @super132 and the label '#bug' was attached.
+  is_human: 1
   issue: 25
   label: bug
   opener: 1917892
@@ -87751,6 +87837,7 @@
   details: The bug/feature in the issue jcabi/jcabi-parent#29 opened @wholegroup by
     was resolved, after 1d22h of waiting, because it was closed by @wholegroup and
     earlier it was assigned to @gvlasov and the label '#bug' was attached.
+  is_human: 1
   issue: 29
   label: bug
   opener: 553191
@@ -87977,900 +88064,47 @@
   repository: 13717355
   what: types-were-scanned
   where: github
-- _id: 197721
-  _time: 2025-07-22 19:41:53.836304974 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: assignees-were-scanned
-  where: github
-- _id: 197722
-  _time: 2025-07-22 19:41:53.971800492 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: assignees-were-scanned
-  where: github
-- _id: 197723
-  _time: 2025-07-22 19:41:54.106872919 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: assignees-were-scanned
-  where: github
-- _id: 197725
-  _time: 2025-07-22 19:41:55.031890490 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: assignees-were-scanned
-  where: github
-- _id: 197726
-  _time: 2025-07-22 19:41:55.165290024 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: assignees-were-scanned
-  where: github
-- _id: 197727
-  _time: 2025-07-22 19:41:55.371731326 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14093966
-  what: assignees-were-scanned
-  where: github
-- _id: 197728
-  _time: 2025-07-22 19:41:55.504059875 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: assignees-were-scanned
-  where: github
-- _id: 197729
-  _time: 2025-07-22 19:41:55.638822170 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: assignees-were-scanned
-  where: github
-- _id: 197731
-  _time: 2025-07-22 19:41:56.537636246 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: assignees-were-scanned
-  where: github
-- _id: 197732
-  _time: 2025-07-22 19:41:56.671694108 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: assignees-were-scanned
-  where: github
-- _id: 197733
-  _time: 2025-07-22 19:41:56.802618220 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: assignees-were-scanned
-  where: github
-- _id: 197735
-  _time: 2025-07-22 19:41:57.727682206 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: assignees-were-scanned
-  where: github
-- _id: 197736
-  _time: 2025-07-22 19:41:57.860416721 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: assignees-were-scanned
-  where: github
-- _id: 197737
-  _time: 2025-07-22 19:41:57.996099817 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: assignees-were-scanned
-  where: github
-- _id: 197742
-  _time: 2025-07-22 19:42:01.472209854 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: assignees-were-scanned
-  where: github
-- _id: 197743
-  _time: 2025-07-22 19:42:01.607540448 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: assignees-were-scanned
-  where: github
-- _id: 197746
-  _time: 2025-07-22 19:42:03.421404204 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: assignees-were-scanned
-  where: github
-- _id: 197747
-  _time: 2025-07-22 19:42:03.557654897 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: assignees-were-scanned
-  where: github
-- _id: 197749
-  _time: 2025-07-22 19:42:04.564860326 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: assignees-were-scanned
-  where: github
-- _id: 197750
-  _time: 2025-07-22 19:42:04.701582467 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: assignees-were-scanned
-  where: github
-- _id: 197753
-  _time: 2025-07-22 19:42:06.538140733 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: assignees-were-scanned
-  where: github
-- _id: 197754
-  _time: 2025-07-22 19:42:06.847405700 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: assignees-were-scanned
-  where: github
-- _id: 197755
-  _time: 2025-07-22 19:42:07.155742736 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591138
-  what: assignees-were-scanned
-  where: github
-- _id: 197758
-  _time: 2025-07-22 19:42:08.670686949 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: assignees-were-scanned
-  where: github
-- _id: 197762
-  _time: 2025-07-22 19:42:10.957699851 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: assignees-were-scanned
-  where: github
-- _id: 197781
-  _time: 2025-07-22 19:42:22.113999237 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12262782
-  what: assignees-were-scanned
-  where: github
-- _id: 197850
-  _time: 2025-07-22 19:43:08.765530770 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: assignees-were-scanned
-  where: github
-- _id: 198065
-  _time: 2025-07-22 19:45:27.223983116 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587702
-  what: assignees-were-scanned
-  where: github
-- _id: 198146
-  _time: 2025-07-22 19:46:20.095132212 Z
-  _version: 0.13.0/0.51.1/
-  latest: 164
-  repository: 16312153
-  what: assignees-were-scanned
-  where: github
-- _id: 198147
-  _time: 2025-07-22 19:46:20.685371841 Z
-  _version: 0.13.0/0.51.1/
-  latest: 197
-  repository: 12590813
-  what: assignees-were-scanned
-  where: github
-- _id: 198148
-  _time: 2025-07-22 19:46:21.291652507 Z
-  _version: 0.13.0/0.51.1/
-  latest: 173
-  repository: 13717355
-  what: assignees-were-scanned
-  where: github
-- _id: 198149
-  _time: 2025-07-22 19:46:28.691914315 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: labels-were-scanned
-  where: github
-- _id: 198150
-  _time: 2025-07-22 19:46:28.827445415 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: labels-were-scanned
-  where: github
-- _id: 198151
-  _time: 2025-07-22 19:46:28.959213774 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: labels-were-scanned
-  where: github
-- _id: 198152
-  _time: 2025-07-22 19:46:29.096592523 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: labels-were-scanned
-  where: github
-- _id: 198154
-  _time: 2025-07-22 19:46:29.928073393 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: labels-were-scanned
-  where: github
-- _id: 198155
-  _time: 2025-07-22 19:46:30.058079413 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: labels-were-scanned
-  where: github
-- _id: 198156
-  _time: 2025-07-22 19:46:30.190507867 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: labels-were-scanned
-  where: github
-- _id: 198157
-  _time: 2025-07-22 19:46:30.324800530 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: labels-were-scanned
-  where: github
-- _id: 198158
-  _time: 2025-07-22 19:46:30.456516832 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: labels-were-scanned
-  where: github
-- _id: 198162
-  _time: 2025-07-22 19:46:32.616990512 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14093966
-  what: labels-were-scanned
-  where: github
-- _id: 198163
-  _time: 2025-07-22 19:46:32.760699288 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: labels-were-scanned
-  where: github
-- _id: 198164
-  _time: 2025-07-22 19:46:32.892014037 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: labels-were-scanned
-  where: github
-- _id: 198165
-  _time: 2025-07-22 19:46:33.025681791 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: labels-were-scanned
-  where: github
-- _id: 198167
-  _time: 2025-07-22 19:46:33.751929146 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: labels-were-scanned
-  where: github
-- _id: 198168
-  _time: 2025-07-22 19:46:34.099856814 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13717355
-  what: labels-were-scanned
-  where: github
-- _id: 198169
-  _time: 2025-07-22 19:46:34.232824538 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: labels-were-scanned
-  where: github
-- _id: 198170
-  _time: 2025-07-22 19:46:34.364694046 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: labels-were-scanned
-  where: github
-- _id: 198171
-  _time: 2025-07-22 19:46:34.718195075 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: labels-were-scanned
-  where: github
-- _id: 198172
-  _time: 2025-07-22 19:46:34.851289802 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591339
-  what: labels-were-scanned
-  where: github
-- _id: 198175
-  _time: 2025-07-22 19:46:36.337547673 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: labels-were-scanned
-  where: github
-- _id: 198176
-  _time: 2025-07-22 19:46:36.471401666 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: labels-were-scanned
-  where: github
-- _id: 198177
-  _time: 2025-07-22 19:46:36.600261382 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: labels-were-scanned
-  where: github
-- _id: 198181
-  _time: 2025-07-22 19:46:38.829783013 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591138
-  what: labels-were-scanned
-  where: github
-- _id: 198182
-  _time: 2025-07-22 19:46:39.148933826 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: labels-were-scanned
-  where: github
-- _id: 198184
-  _time: 2025-07-22 19:46:40.107951962 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: labels-were-scanned
-  where: github
-- _id: 198187
-  _time: 2025-07-22 19:46:41.722000397 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: labels-were-scanned
-  where: github
-- _id: 198188
-  _time: 2025-07-22 19:46:42.043515596 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: labels-were-scanned
-  where: github
-- _id: 198204
-  _time: 2025-07-22 19:46:53.555898841 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12262782
-  what: labels-were-scanned
-  where: github
-- _id: 198357
-  _time: 2025-07-22 19:48:52.942413679 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587702
-  what: labels-were-scanned
-  where: github
-- _id: 198442
-  _time: 2025-07-22 19:49:59.198258202 Z
-  _version: 0.13.0/0.51.1/
-  latest: 337
-  repository: 16312153
-  what: labels-were-scanned
-  where: github
-- _id: 198443
-  _time: 2025-07-22 19:49:59.950142229 Z
-  _version: 0.13.0/0.51.1/
-  latest: 608
-  repository: 12590813
-  what: labels-were-scanned
-  where: github
-- _id: 198444
-  _time: 2025-07-22 20:42:25.997213261 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577325928
-  repository: 12591138
-  what: events-were-scanned
-  where: github
-- _id: 198445
-  _time: 2025-07-22 20:42:26.592531221 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50359868790
-  repository: 12591382
-  what: events-were-scanned
-  where: github
-- _id: 198446
-  _time: 2025-07-22 20:42:28.150256434 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426456784
-  repository: 13717355
-  what: events-were-scanned
-  where: github
-- _id: 198447
-  _time: 2025-07-22 20:42:29.142281276 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49884498095
-  repository: 13359002
-  what: events-were-scanned
-  where: github
-- _id: 198448
-  _time: 2025-07-22 20:42:29.777230262 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50427137745
-  repository: 25780072
-  what: events-were-scanned
-  where: github
-- _id: 198449
-  _time: 2025-07-22 20:42:30.350383169 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50429299091
-  repository: 12584841
-  what: events-were-scanned
-  where: github
-- _id: 198450
-  _time: 2025-07-22 20:42:31.458252364 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50477404854
-  repository: 12947626
-  what: events-were-scanned
-  where: github
-- _id: 198451
-  _time: 2025-07-22 20:42:32.729341069 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50476549509
-  repository: 14093966
-  what: events-were-scanned
-  where: github
-- _id: 198452
-  _time: 2025-07-22 20:42:33.290444837 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50466965619
-  repository: 12591347
-  what: events-were-scanned
-  where: github
-- _id: 198453
-  _time: 2025-07-22 20:42:34.250030871 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50367374034
-  repository: 14204295
-  what: events-were-scanned
-  where: github
-- _id: 198454
-  _time: 2025-07-22 20:42:42.042870050 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50496302309
-  repository: 12590813
-  what: events-were-scanned
-  where: github
-- _id: 198455
-  _time: 2025-07-22 20:42:43.172064796 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50478877191
-  repository: 12589687
-  what: events-were-scanned
-  where: github
-- _id: 198456
-  _time: 2025-07-22 20:42:43.747506435 Z
-  _version: 0.13.0/0.51.1/
-  latest: 47970143643
-  repository: 20635353
-  what: events-were-scanned
-  where: github
-- _id: 198457
-  _time: 2025-07-22 20:42:44.358743020 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48612534599
-  repository: 12591356
-  what: events-were-scanned
-  where: github
-- _id: 198458
-  _time: 2025-07-22 20:42:44.843143596 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: events-were-scanned
-  where: github
-- _id: 198459
-  _time: 2025-07-22 20:42:45.390740568 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48154398831
-  repository: 12590128
-  what: events-were-scanned
-  where: github
-- _id: 198460
-  _time: 2025-07-22 20:42:46.268291245 Z
-  _version: 0.13.0/0.51.1/
-  latest: 48594388147
-  repository: 12591339
-  what: events-were-scanned
-  where: github
-- _id: 198461
-  _time: 2025-07-22 20:42:47.274142929 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50423569553
-  repository: 12589424
-  what: events-were-scanned
-  where: github
-- _id: 198462
-  _time: 2025-07-22 20:42:47.763332718 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49345256772
-  repository: 12591371
-  what: events-were-scanned
-  where: github
-- _id: 198463
-  _time: 2025-07-22 20:42:48.904891972 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50577399249
-  repository: 13624455
-  what: events-were-scanned
-  where: github
-- _id: 198464
-  _time: 2025-07-22 20:42:49.727671996 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50324195939
-  repository: 12590126
-  what: events-were-scanned
-  where: github
-- _id: 198465
-  _time: 2025-07-22 20:42:50.471994317 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50163308058
-  repository: 16312153
-  what: events-were-scanned
-  where: github
-- _id: 198466
-  _time: 2025-07-22 20:42:50.956048275 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: events-were-scanned
-  where: github
-- _id: 198467
-  _time: 2025-07-22 20:42:51.538551632 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52334117174
-  repository: 12262782
-  what: events-were-scanned
-  where: github
-- _id: 198468
-  _time: 2025-07-22 20:42:52.132403875 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52283769866
-  repository: 19194304
-  what: events-were-scanned
-  where: github
-- _id: 198469
-  _time: 2025-07-22 20:42:52.605091608 Z
-  _version: 0.13.0/0.51.1/
-  latest: 49342071550
-  repository: 15208785
-  what: events-were-scanned
-  where: github
-- _id: 198470
-  _time: 2025-07-22 20:42:53.154180886 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50421752226
-  repository: 16403286
-  what: events-were-scanned
-  where: github
-- _id: 198471
-  _time: 2025-07-22 20:42:53.837788546 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52351242091
-  repository: 12587702
-  what: events-were-scanned
-  where: github
-- _id: 198472
-  _time: 2025-07-22 20:42:54.951359869 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50299289288
-  repository: 19194296
-  what: events-were-scanned
-  where: github
-- _id: 198473
-  _time: 2025-07-22 20:42:56.491916585 Z
-  _version: 0.13.0/0.51.1/
-  latest: 50426009798
-  repository: 23238769
-  what: events-were-scanned
-  where: github
-- _id: 198474
-  _time: 2025-07-22 20:42:57.640505617 Z
-  _version: 0.13.0/0.51.1/
-  latest: 52387338836
-  repository: 4174608
-  what: events-were-scanned
-  where: github
-- _id: 198475
-  _time: 2025-07-22 20:43:34.230759430 Z
-  _version: 0.13.0/0.51.1/
-  total_commits: 18366
-  total_contributors: 117
-  total_issues: 2869
-  total_pulls: 5194
-  total_repositories: 31
-  what: dimensions-of-terrain
-  when: 2025-07-22 20:42:57.754029233 Z
-- _id: 198476
-  _time: 2025-07-22 20:54:42.361588558 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 23238769
-  what: issues-were-scanned
-  where: github
-- _id: 198477
-  _time: 2025-07-22 20:54:43.099915358 Z
-  _version: 0.13.0/0.51.1/
-  latest: 373
-  repository: 14093966
-  what: issues-were-scanned
-  where: github
-- _id: 198478
-  _time: 2025-07-22 20:54:43.237346603 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: issues-were-scanned
-  where: github
-- _id: 198479
-  _time: 2025-07-22 20:54:43.380911808 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: issues-were-scanned
-  where: github
-- _id: 198480
-  _time: 2025-07-22 20:54:43.518358803 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: issues-were-scanned
-  where: github
-- _id: 198481
-  _time: 2025-07-22 20:54:43.661077584 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: issues-were-scanned
-  where: github
-- _id: 198482
-  _time: 2025-07-22 20:54:43.797643458 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: issues-were-scanned
-  where: github
 - _id: 198483
   _time: 2025-07-22 20:54:44.539988095 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-jdbc#37 has been 'issue-was-closed'.
+  is_human: 1
   issue: 37
   repository: 12587702
   what: issue-was-closed
   when: 2015-06-16 00:38:20.000000000 Z
   where: github
   who: 526301
-- _id: 198484
-  _time: 2025-07-22 20:54:44.548390595 Z
-  _version: 0.13.0/0.51.1/
-  latest: 37
-  repository: 12587702
-  what: issues-were-scanned
-  where: github
-- _id: 198485
-  _time: 2025-07-22 20:54:45.284231463 Z
-  _version: 0.13.0/0.51.1/
-  latest: 414
-  repository: 12590126
-  what: issues-were-scanned
-  where: github
-- _id: 198486
-  _time: 2025-07-22 20:54:45.428702645 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: issues-were-scanned
-  where: github
-- _id: 198487
-  _time: 2025-07-22 20:54:45.565541652 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589687
-  what: issues-were-scanned
-  where: github
 - _id: 198488
   _time: 2025-07-22 20:54:46.323984199 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-parent#31 has been 'issue-was-closed'.
+  is_human: 1
   issue: 31
   repository: 12590813
   what: issue-was-closed
   when: 2015-06-22 22:54:38.000000000 Z
   where: github
   who: 526301
-- _id: 198489
-  _time: 2025-07-22 20:54:46.331938791 Z
-  _version: 0.13.0/0.51.1/
-  latest: 31
-  repository: 12590813
-  what: issues-were-scanned
-  where: github
-- _id: 198490
-  _time: 2025-07-22 20:54:46.467329453 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: issues-were-scanned
-  where: github
-- _id: 198491
-  _time: 2025-07-22 20:54:47.201204563 Z
-  _version: 0.13.0/0.51.1/
-  latest: 213
-  repository: 12262782
-  what: issues-were-scanned
-  where: github
-- _id: 198492
-  _time: 2025-07-22 20:54:47.492119813 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: issues-were-scanned
-  where: github
-- _id: 198493
-  _time: 2025-07-22 20:54:48.215481666 Z
-  _version: 0.13.0/0.51.1/
-  latest: 35
-  repository: 12590128
-  what: issues-were-scanned
-  where: github
-- _id: 198494
-  _time: 2025-07-22 20:54:48.359220233 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: issues-were-scanned
-  where: github
-- _id: 198495
-  _time: 2025-07-22 20:54:48.497938346 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194296
-  what: issues-were-scanned
-  where: github
-- _id: 198496
-  _time: 2025-07-22 20:54:48.642855181 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: issues-were-scanned
-  where: github
-- _id: 198497
-  _time: 2025-07-22 20:54:49.352932764 Z
-  _version: 0.13.0/0.51.1/
-  latest: 192
-  repository: 12591138
-  what: issues-were-scanned
-  where: github
-- _id: 198498
-  _time: 2025-07-22 20:54:49.499379802 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 25780072
-  what: issues-were-scanned
-  where: github
-- _id: 198499
-  _time: 2025-07-22 20:54:49.786294404 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: issues-were-scanned
-  where: github
 - _id: 198500
   _time: 2025-07-22 20:54:50.533264511 Z
   _version: 0.13.0/0.51.1/
   details: Apparently, jcabi/jcabi-xml#34 has been 'issue-was-closed'.
+  is_human: 1
   issue: 34
   repository: 13717355
   what: issue-was-closed
   when: 2014-09-12 22:16:06.000000000 Z
   where: github
   who: 526301
-- _id: 198501
-  _time: 2025-07-22 20:54:50.539760174 Z
-  _version: 0.13.0/0.51.1/
-  latest: 34
-  repository: 13717355
-  what: issues-were-scanned
-  where: github
-- _id: 198502
-  _time: 2025-07-22 20:54:50.681175030 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: issues-were-scanned
-  where: github
-- _id: 198503
-  _time: 2025-07-22 20:54:50.823103238 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: issues-were-scanned
-  where: github
-- _id: 198504
-  _time: 2025-07-22 20:54:50.966230721 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: issues-were-scanned
-  where: github
 - _id: 198505
   _time: 2025-07-22 20:54:51.764491600 Z
   _version: 0.13.0/0.51.1/
   issue: 43
   repository: 16312153
+  stale: who
   what: issue-was-closed
   when: 2014-06-24 16:15:22.000000000 Z
-  where: github
-- _id: 198506
-  _time: 2025-07-22 20:54:52.084702131 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591371
-  what: merges-were-scanned
-  where: github
-- _id: 198508
-  _time: 2025-07-22 20:54:53.652313174 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591356
-  what: merges-were-scanned
   where: github
 - _id: 198509
   _time: 2025-07-22 20:55:25.479951739 Z
@@ -88885,20 +88119,15 @@
   details: Apparently, jcabi/jcabi-parent#256 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 256
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-03-17 21:44:40.000000000 Z
   where: github
   who: 8086956
-- _id: 198511
-  _time: 2025-07-22 20:55:25.643091672 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12587970
-  what: merges-were-scanned
-  where: github
 - _id: 198513
   _time: 2025-07-22 20:55:40.908332770 Z
   _version: 0.13.0/0.51.1/
@@ -88912,20 +88141,15 @@
   details: Apparently, jcabi/jcabi-s3#271 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 271
   repository: 14093966
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-08-16 08:40:03.000000000 Z
   where: github
   who: 8086956
-- _id: 198518
-  _time: 2025-07-22 20:55:47.208513557 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591347
-  what: merges-were-scanned
-  where: github
 - _id: 198519
   _time: 2025-07-22 20:55:59.844331998 Z
   _version: 0.13.0/0.51.1/
@@ -88939,27 +88163,15 @@
   details: Apparently, jcabi/jcabi-jdbc#210 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 210
   repository: 12587702
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-06-09 03:13:13.000000000 Z
   where: github
   who: 8086956
-- _id: 198522
-  _time: 2025-07-22 20:56:01.764344825 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12584841
-  what: merges-were-scanned
-  where: github
-- _id: 198523
-  _time: 2025-07-22 20:56:02.120264191 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 15208785
-  what: merges-were-scanned
-  where: github
 - _id: 198524
   _time: 2025-07-22 20:56:10.538241075 Z
   _version: 0.13.0/0.51.1/
@@ -88973,34 +88185,15 @@
   details: Apparently, jcabi/jcabi#431 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 1
   issue: 431
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
   when: 2025-07-22 15:52:09.000000000 Z
   where: github
   who: 526301
-- _id: 198526
-  _time: 2025-07-22 20:56:10.922354956 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 510979198
-  what: merges-were-scanned
-  where: github
-- _id: 198529
-  _time: 2025-07-22 20:56:14.083419753 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13359002
-  what: merges-were-scanned
-  where: github
-- _id: 198532
-  _time: 2025-07-22 20:56:17.487796783 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 20635353
-  what: merges-were-scanned
-  where: github
 - _id: 198533
   _time: 2025-07-22 20:56:41.904865640 Z
   _version: 0.13.0/0.51.1/
@@ -89014,20 +88207,15 @@
   details: Apparently, jcabi/jcabi-http#301 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 46
+  is_human: 0
   issue: 301
   repository: 16312153
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2021-12-30 01:04:40.000000000 Z
   where: github
   who: 8086956
-- _id: 198536
-  _time: 2025-07-22 20:56:44.580969423 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 16403286
-  what: merges-were-scanned
-  where: github
 - _id: 198539
   _time: 2025-07-22 20:57:05.300043145 Z
   _version: 0.13.0/0.51.1/
@@ -89041,8 +88229,10 @@
   details: Apparently, jcabi/jcabi-xml#270 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 173
+  is_human: 1
   issue: 270
   repository: 13717355
+  review_comments: 0
   succeeded_builds: 10
   what: pull-was-merged
   when: 2024-10-29 16:08:53.000000000 Z
@@ -89061,20 +88251,15 @@
   details: Apparently, jcabi/jcabi-parent#257 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 257
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-03-18 10:36:20.000000000 Z
   where: github
   who: 8086956
-- _id: 198546
-  _time: 2025-07-22 20:57:41.693813425 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 19194304
-  what: merges-were-scanned
-  where: github
 - _id: 198547
   _time: 2025-07-22 20:57:56.161613449 Z
   _version: 0.13.0/0.51.1/
@@ -89088,20 +88273,15 @@
   details: Apparently, jcabi/jcabi-s3#272 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 272
   repository: 14093966
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-08-17 02:41:08.000000000 Z
   where: github
   who: 8086956
-- _id: 198551
-  _time: 2025-07-22 20:57:59.922242213 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 13624455
-  what: merges-were-scanned
-  where: github
 - _id: 198552
   _time: 2025-07-22 20:58:11.570098224 Z
   _version: 0.13.0/0.51.1/
@@ -89115,55 +88295,15 @@
   details: Apparently, jcabi/jcabi-jdbc#211 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 211
   repository: 12587702
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-04-04 15:43:41.000000000 Z
   where: github
   who: 8086956
-- _id: 198554
-  _time: 2025-07-22 20:58:12.846150140 Z
-  _version: 0.13.0/0.51.1/
-  latest: 133
-  repository: 19194296
-  what: merges-were-scanned
-  where: github
-- _id: 198555
-  _time: 2025-07-22 20:58:13.365393976 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 4174608
-  what: merges-were-scanned
-  where: github
-- _id: 198556
-  _time: 2025-07-22 20:58:13.878334515 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590128
-  what: merges-were-scanned
-  where: github
-- _id: 198557
-  _time: 2025-07-22 20:58:15.240769757 Z
-  _version: 0.13.0/0.51.1/
-  latest: 58
-  repository: 12591339
-  what: merges-were-scanned
-  where: github
-- _id: 198558
-  _time: 2025-07-22 20:58:16.800909210 Z
-  _version: 0.13.0/0.51.1/
-  latest: 416
-  repository: 12589687
-  what: merges-were-scanned
-  where: github
-- _id: 198559
-  _time: 2025-07-22 20:58:17.350204326 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12591382
-  what: merges-were-scanned
-  where: github
 - _id: 198560
   _time: 2025-07-22 20:58:39.503056141 Z
   _version: 0.13.0/0.51.1/
@@ -89177,41 +88317,15 @@
   details: Apparently, jcabi/jcabi-http#302 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 302
   repository: 16312153
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2021-12-31 20:33:44.000000000 Z
   where: github
   who: 8086956
-- _id: 198561
-  _time: 2025-07-22 20:58:39.511977965 Z
-  _version: 0.13.0/0.51.1/
-  latest: 302
-  repository: 16312153
-  what: merges-were-scanned
-  where: github
-- _id: 198562
-  _time: 2025-07-22 20:58:40.981111652 Z
-  _version: 0.13.0/0.51.1/
-  latest: 247
-  repository: 23238769
-  what: merges-were-scanned
-  where: github
-- _id: 198563
-  _time: 2025-07-22 20:58:41.480674132 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12590126
-  what: merges-were-scanned
-  where: github
-- _id: 198564
-  _time: 2025-07-22 20:58:42.926315771 Z
-  _version: 0.13.0/0.51.1/
-  latest: 94
-  repository: 25780072
-  what: merges-were-scanned
-  where: github
 - _id: 198565
   _time: 2025-07-22 20:59:00.213294002 Z
   _version: 0.13.0/0.51.1/
@@ -89225,41 +88339,15 @@
   details: Apparently, jcabi/jcabi-xml#271 has been 'pull-was-merged'.
   failed_builds: 6
   hoc: 2
+  is_human: 1
   issue: 271
   repository: 13717355
+  review_comments: 0
   succeeded_builds: 4
   what: pull-was-merged
   when: 2024-11-07 10:31:38.000000000 Z
   where: github
   who: 526301
-- _id: 198566
-  _time: 2025-07-22 20:59:00.221054420 Z
-  _version: 0.13.0/0.51.1/
-  latest: 271
-  repository: 13717355
-  what: merges-were-scanned
-  where: github
-- _id: 198567
-  _time: 2025-07-22 20:59:00.811998678 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12589424
-  what: merges-were-scanned
-  where: github
-- _id: 198568
-  _time: 2025-07-22 20:59:01.353388760 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 14204295
-  what: merges-were-scanned
-  where: github
-- _id: 198569
-  _time: 2025-07-22 20:59:02.555780272 Z
-  _version: 0.13.0/0.51.1/
-  latest: 194
-  repository: 12591138
-  what: merges-were-scanned
-  where: github
 - _id: 198570
   _time: 2025-07-22 20:59:34.392195801 Z
   _version: 0.13.0/0.51.1/
@@ -89273,20 +88361,15 @@
   details: Apparently, jcabi/jcabi-parent#258 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 2
+  is_human: 0
   issue: 258
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-03-20 12:43:32.000000000 Z
   where: github
   who: 8086956
-- _id: 198571
-  _time: 2025-07-22 20:59:34.399682237 Z
-  _version: 0.13.0/0.51.1/
-  latest: 258
-  repository: 12590813
-  what: merges-were-scanned
-  where: github
 - _id: 198572
   _time: 2025-07-22 20:59:48.743661738 Z
   _version: 0.13.0/0.51.1/
@@ -89300,34 +88383,15 @@
   details: Apparently, jcabi/jcabi-s3#273 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 4
+  is_human: 0
   issue: 273
   repository: 14093966
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-08-17 23:35:29.000000000 Z
   where: github
   who: 8086956
-- _id: 198573
-  _time: 2025-07-22 20:59:48.751601621 Z
-  _version: 0.13.0/0.51.1/
-  latest: 273
-  repository: 14093966
-  what: merges-were-scanned
-  where: github
-- _id: 198574
-  _time: 2025-07-22 20:59:50.764787940 Z
-  _version: 0.13.0/0.51.1/
-  latest: 208
-  repository: 12262782
-  what: merges-were-scanned
-  where: github
-- _id: 198575
-  _time: 2025-07-22 20:59:51.323629628 Z
-  _version: 0.13.0/0.51.1/
-  latest: 0
-  repository: 12947626
-  what: merges-were-scanned
-  where: github
 - _id: 198576
   _time: 2025-07-22 21:00:03.084909125 Z
   _version: 0.13.0/0.51.1/
@@ -89341,17 +88405,4540 @@
   details: Apparently, jcabi/jcabi-jdbc#212 has been 'pull-was-merged'.
   failed_builds: 0
   hoc: 8
+  is_human: 0
   issue: 212
   repository: 12587702
+  review_comments: 0
   succeeded_builds: 0
   what: pull-was-merged
   when: 2023-04-04 22:40:14.000000000 Z
   where: github
   who: 8086956
-- _id: 198577
-  _time: 2025-07-22 21:00:03.092346756 Z
+- _id: 198578
+  _job: 29865
+  _time: 2025-07-22 21:01:16.168270865 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12590813, the user #1667699 submitted the issue #31
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 31
+  repository: 12590813
+  what: dud-was-closed
+  when: *1062
+  where: github
+  who: 1667699
+- _id: 198579
+  _job: 29865
+  _time: 2025-07-22 21:01:16.310843593 Z
+  _version: 0.13.0/0.51.1/0.15.0
+  closer: 526301
+  details: 'In the repository #12587702, the user #569536 submitted the issue #37
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  is_human: 1
+  issue: 37
+  repository: 12587702
+  what: dud-was-closed
+  when: *1063
+  where: github
+  who: 569536
+- _id: 198580
+  _time: 2025-07-22 21:39:06.851787968 Z
   _version: 0.13.0/0.51.1/
-  latest: 212
+  latest: 50367374034
+  repository: 14204295
+  what: events-were-scanned
+  where: github
+- _id: 198581
+  _time: 2025-07-22 21:39:07.725976577 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50423569553
+  repository: 12589424
+  what: events-were-scanned
+  where: github
+- _id: 198582
+  _time: 2025-07-22 21:39:08.242460823 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52334117174
+  repository: 12262782
+  what: events-were-scanned
+  where: github
+- _id: 198583
+  _time: 2025-07-22 21:39:15.128709240 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50496302309
+  repository: 12590813
+  what: events-were-scanned
+  where: github
+- _id: 198584
+  _time: 2025-07-22 21:39:15.732766568 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50163308058
+  repository: 16312153
+  what: events-were-scanned
+  where: github
+- _id: 198585
+  _time: 2025-07-22 21:39:16.157619325 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: events-were-scanned
+  where: github
+- _id: 198586
+  _time: 2025-07-22 21:39:16.983448732 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50477404854
+  repository: 12947626
+  what: events-were-scanned
+  where: github
+- _id: 198587
+  _time: 2025-07-22 21:39:17.472216050 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52351242091
+  repository: 12587702
+  what: events-were-scanned
+  where: github
+- _id: 198588
+  _time: 2025-07-22 21:39:17.783830701 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49345256772
+  repository: 12591371
+  what: events-were-scanned
+  where: github
+- _id: 198589
+  _time: 2025-07-22 21:39:18.239589378 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50427137745
+  repository: 25780072
+  what: events-were-scanned
+  where: github
+- _id: 198590
+  _time: 2025-07-22 21:39:18.621174771 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49342071550
+  repository: 15208785
+  what: events-were-scanned
+  where: github
+- _id: 198591
+  _time: 2025-07-22 21:39:19.056916135 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: events-were-scanned
+  where: github
+- _id: 198592
+  _time: 2025-07-22 21:39:19.533740933 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50429299091
+  repository: 12584841
+  what: events-were-scanned
+  where: github
+- _id: 198593
+  _time: 2025-07-22 21:39:20.449967043 Z
+  _version: 0.13.0/0.51.1/
+  latest: 49884498095
+  repository: 13359002
+  what: events-were-scanned
+  where: github
+- _id: 198594
+  _time: 2025-07-22 21:39:21.157521978 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50299289288
+  repository: 19194296
+  what: events-were-scanned
+  where: github
+- _id: 198595
+  _time: 2025-07-22 21:39:22.352467085 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50476549509
+  repository: 14093966
+  what: events-were-scanned
+  where: github
+- _id: 198596
+  _time: 2025-07-22 21:39:22.778968602 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50466965619
+  repository: 12591347
+  what: events-were-scanned
+  where: github
+- _id: 198597
+  _time: 2025-07-22 21:39:23.529021581 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48594388147
+  repository: 12591339
+  what: events-were-scanned
+  where: github
+- _id: 198598
+  _time: 2025-07-22 21:39:24.315438808 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577325928
+  repository: 12591138
+  what: events-were-scanned
+  where: github
+- _id: 198599
+  _time: 2025-07-22 21:39:25.157500380 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52387338836
+  repository: 4174608
+  what: events-were-scanned
+  where: github
+- _id: 198600
+  _time: 2025-07-22 21:39:25.620929997 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48154398831
+  repository: 12590128
+  what: events-were-scanned
+  where: github
+- _id: 198601
+  _time: 2025-07-22 21:39:26.545966646 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50478877191
+  repository: 12589687
+  what: events-were-scanned
+  where: github
+- _id: 198602
+  _time: 2025-07-22 21:39:27.051582117 Z
+  _version: 0.13.0/0.51.1/
+  latest: 48612534599
+  repository: 12591356
+  what: events-were-scanned
+  where: github
+- _id: 198603
+  _time: 2025-07-22 21:39:28.372269648 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426456784
+  repository: 13717355
+  what: events-were-scanned
+  where: github
+- _id: 198604
+  _time: 2025-07-22 21:39:29.714910028 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50426009798
+  repository: 23238769
+  what: events-were-scanned
+  where: github
+- _id: 198605
+  _time: 2025-07-22 21:39:30.147244448 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50359868790
+  repository: 12591382
+  what: events-were-scanned
+  where: github
+- _id: 198606
+  _time: 2025-07-22 21:39:30.907271955 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50324195939
+  repository: 12590126
+  what: events-were-scanned
+  where: github
+- _id: 198607
+  _time: 2025-07-22 21:39:31.562860217 Z
+  _version: 0.13.0/0.51.1/
+  latest: 52283769866
+  repository: 19194304
+  what: events-were-scanned
+  where: github
+- _id: 198608
+  _time: 2025-07-22 21:39:32.008784575 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50421752226
+  repository: 16403286
+  what: events-were-scanned
+  where: github
+- _id: 198609
+  _time: 2025-07-22 21:39:32.952986654 Z
+  _version: 0.13.0/0.51.1/
+  latest: 50577399249
+  repository: 13624455
+  what: events-were-scanned
+  where: github
+- _id: 198610
+  _time: 2025-07-22 21:39:33.390078487 Z
+  _version: 0.13.0/0.51.1/
+  latest: 47970143643
+  repository: 20635353
+  what: events-were-scanned
+  where: github
+- _id: 198612
+  _time: 2025-07-22 21:39:34.790005754 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: merges-were-scanned
+  where: github
+- _id: 198613
+  _time: 2025-07-22 21:39:52.240748001 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#274 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  is_human: 0
+  issue: 274
+  repository: 14093966
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-19 00:43:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198615
+  _time: 2025-07-22 21:39:52.452266860 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: merges-were-scanned
+  where: github
+- _id: 198619
+  _time: 2025-07-22 21:39:55.100559510 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: merges-were-scanned
+  where: github
+- _id: 198622
+  _time: 2025-07-22 21:40:02.792725081 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: merges-were-scanned
+  where: github
+- _id: 198623
+  _time: 2025-07-22 21:40:03.292562126 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: merges-were-scanned
+  where: github
+- _id: 198624
+  _time: 2025-07-22 21:40:03.743912353 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: merges-were-scanned
+  where: github
+- _id: 198625
+  _time: 2025-07-22 21:40:22.957711349 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#274 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 274
+  repository: 13717355
+  review_comments: 0
+  succeeded_builds: 10
+  what: pull-was-merged
+  when: 2024-11-14 23:52:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198627
+  _time: 2025-07-22 21:40:55.571945554 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-jcabi-github-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#259 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 259
+  repository: 12590813
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-21 16:40:48.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198631
+  _time: 2025-07-22 21:40:58.263755736 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: merges-were-scanned
+  where: github
+- _id: 198632
+  _time: 2025-07-22 21:41:09.599560516 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/mysql-mysql-connector-java-8.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#213 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 213
+  repository: 12587702
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-18 22:40:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198637
+  _time: 2025-07-22 21:41:15.348248511 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: merges-were-scanned
+  where: github
+- _id: 198639
+  _time: 2025-07-22 21:41:18.476075321 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: merges-were-scanned
+  where: github
+- _id: 198641
+  _time: 2025-07-22 21:41:42.028643072 Z
+  _version: 0.13.0/0.51.1/
+  branch: dependabot/maven/org.owasp-dependency-check-maven-6.5.1
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#303 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 303
+  repository: 16312153
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2021-12-31 20:42:12.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198643
+  _time: 2025-07-22 21:41:42.384705642 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: merges-were-scanned
+  where: github
+- _id: 198644
+  _time: 2025-07-22 21:41:42.754588923 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: merges-were-scanned
+  where: github
+- _id: 198646
+  _time: 2025-07-22 21:41:45.730179000 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: merges-were-scanned
+  where: github
+- _id: 198648
+  _time: 2025-07-22 21:42:01.079336128 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#275 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  is_human: 0
+  issue: 275
+  repository: 14093966
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-21 22:40:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198652
+  _time: 2025-07-22 21:42:03.772021791 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: merges-were-scanned
+  where: github
+- _id: 198655
+  _time: 2025-07-22 21:42:22.632179962 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#275 has been 'pull-was-merged'.
+  failed_builds: 6
+  hoc: 2
+  is_human: 1
+  issue: 275
+  repository: 13717355
+  review_comments: 0
+  succeeded_builds: 4
+  what: pull-was-merged
+  when: 2024-12-01 13:11:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 198657
+  _time: 2025-07-22 21:42:55.025215669 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/com.jcabi-jcabi-github-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#260 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 260
+  repository: 12590813
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-23 12:43:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198659
+  _time: 2025-07-22 21:42:56.047050568 Z
+  _version: 0.13.0/0.51.1/
+  latest: 69
+  repository: 16403286
+  what: merges-were-scanned
+  where: github
+- _id: 198660
+  _time: 2025-07-22 21:42:57.201327563 Z
+  _version: 0.13.0/0.51.1/
+  latest: 76
+  repository: 12584841
+  what: merges-were-scanned
+  where: github
+- _id: 198661
+  _time: 2025-07-22 21:43:08.493858185 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/junit5-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#214 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 10
+  is_human: 0
+  issue: 214
+  repository: 12587702
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-26 08:50:31.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198662
+  _time: 2025-07-22 21:43:08.502092675 Z
+  _version: 0.13.0/0.51.1/
+  latest: 214
   repository: 12587702
   what: merges-were-scanned
+  where: github
+- _id: 198663
+  _time: 2025-07-22 21:43:09.761140361 Z
+  _version: 0.13.0/0.51.1/
+  latest: 418
+  repository: 12589687
+  what: merges-were-scanned
+  where: github
+- _id: 198664
+  _time: 2025-07-22 21:43:11.225670885 Z
+  _version: 0.13.0/0.51.1/
+  latest: 309
+  repository: 13624455
+  what: merges-were-scanned
+  where: github
+- _id: 198665
+  _time: 2025-07-22 21:43:12.864569871 Z
+  _version: 0.13.0/0.51.1/
+  latest: 42
+  repository: 12589424
+  what: merges-were-scanned
+  where: github
+- _id: 198666
+  _time: 2025-07-22 21:43:14.198646455 Z
+  _version: 0.13.0/0.51.1/
+  latest: 1802
+  repository: 14204295
+  what: merges-were-scanned
+  where: github
+- _id: 198667
+  _time: 2025-07-22 21:43:14.629978605 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: merges-were-scanned
+  where: github
+- _id: 198668
+  _time: 2025-07-22 21:43:36.696989272 Z
+  _version: 0.13.0/0.51.1/
+  branch: dependabot/maven/org.owasp-dependency-check-maven-6.5.2
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#304 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 304
+  repository: 16312153
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2022-01-11 17:10:08.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198669
+  _time: 2025-07-22 21:43:36.705921821 Z
+  _version: 0.13.0/0.51.1/
+  latest: 304
+  repository: 16312153
+  what: merges-were-scanned
+  where: github
+- _id: 198670
+  _time: 2025-07-22 21:43:38.851283803 Z
+  _version: 0.13.0/0.51.1/
+  latest: 115
+  repository: 19194304
+  what: merges-were-scanned
+  where: github
+- _id: 198671
+  _time: 2025-07-22 21:43:40.112827670 Z
+  _version: 0.13.0/0.51.1/
+  latest: 416
+  repository: 12590126
+  what: merges-were-scanned
+  where: github
+- _id: 198672
+  _time: 2025-07-22 21:43:54.050378591 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#276 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  is_human: 0
+  issue: 276
+  repository: 14093966
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-22 22:41:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198673
+  _time: 2025-07-22 21:43:54.057780609 Z
+  _version: 0.13.0/0.51.1/
+  latest: 276
+  repository: 14093966
+  what: merges-were-scanned
+  where: github
+- _id: 198674
+  _time: 2025-07-22 21:43:54.481207771 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: merges-were-scanned
+  where: github
+- _id: 198675
+  _time: 2025-07-22 21:43:55.588404243 Z
+  _version: 0.13.0/0.51.1/
+  latest: 37
+  repository: 12590128
+  what: merges-were-scanned
+  where: github
+- _id: 198676
+  _time: 2025-07-22 21:43:57.127086209 Z
+  _version: 0.13.0/0.51.1/
+  latest: 214
+  repository: 12262782
+  what: merges-were-scanned
+  where: github
+- _id: 198677
+  _time: 2025-07-22 21:43:58.269724660 Z
+  _version: 0.13.0/0.51.1/
+  latest: 288
+  repository: 12947626
+  what: merges-were-scanned
+  where: github
+- _id: 198678
+  _time: 2025-07-22 21:44:14.523756795 Z
+  _version: 0.13.0/0.51.1/
+  branch: 277_perfomance
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#278 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 423
+  is_human: 1
+  issue: 278
+  repository: 13717355
+  review_comments: 0
+  succeeded_builds: 10
+  what: pull-was-merged
+  when: 2024-12-05 12:38:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 198679
+  _time: 2025-07-22 21:44:14.531521075 Z
+  _version: 0.13.0/0.51.1/
+  latest: 278
+  repository: 13717355
+  what: merges-were-scanned
+  where: github
+- _id: 198680
+  _time: 2025-07-22 21:44:46.761708244 Z
+  _version: 0.13.0/0.51.1/
+  branch: renovate/org.apache.maven.plugins-maven-deploy-plugin-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#261 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 0
+  issue: 261
+  repository: 12590813
+  review_comments: 0
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-24 11:39:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 198681
+  _time: 2025-07-22 21:44:46.771398144 Z
+  _version: 0.13.0/0.51.1/
+  latest: 261
+  repository: 12590813
+  what: merges-were-scanned
+  where: github
+- _id: 198682
+  _time: 2025-07-22 21:44:52.255293222 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#35 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 35
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-16 19:36:27.000000000 Z
+  where: github
+  who: 105730
+- _id: 198684
+  _time: 2025-07-22 21:44:52.509562498 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: issues-were-scanned
+  where: github
+- _id: 198685
+  _time: 2025-07-22 21:44:52.649427207 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: issues-were-scanned
+  where: github
+- _id: 198686
+  _time: 2025-07-22 21:44:53.123770644 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#37 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 37
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-07-23 18:08:17.000000000 Z
+  where: github
+  who: 526301
+- _id: 198688
+  _time: 2025-07-22 21:44:53.779426874 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#46 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 46
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-07-28 22:06:41.000000000 Z
+  where: github
+  who: 1917892
+- _id: 198690
+  _time: 2025-07-22 21:44:53.927226262 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: issues-were-scanned
+  where: github
+- _id: 198691
+  _time: 2025-07-22 21:44:54.066598227 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: issues-were-scanned
+  where: github
+- _id: 198692
+  _time: 2025-07-22 21:44:54.202579062 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: issues-were-scanned
+  where: github
+- _id: 198693
+  _time: 2025-07-22 21:44:54.484425890 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: issues-were-scanned
+  where: github
+- _id: 198694
+  _time: 2025-07-22 21:44:54.623668172 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: issues-were-scanned
+  where: github
+- _id: 198695
+  _time: 2025-07-22 21:44:54.760020755 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: issues-were-scanned
+  where: github
+- _id: 198696
+  _time: 2025-07-22 21:44:54.899937411 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: issues-were-scanned
+  where: github
+- _id: 198697
+  _time: 2025-07-22 21:44:55.558025151 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#40 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 40
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-06-04 07:53:31.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198699
+  _time: 2025-07-22 21:44:55.701880471 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: issues-were-scanned
+  where: github
+- _id: 198700
+  _time: 2025-07-22 21:44:55.844829193 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: issues-were-scanned
+  where: github
+- _id: 198701
+  _time: 2025-07-22 21:44:55.978674405 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: issues-were-scanned
+  where: github
+- _id: 198702
+  _time: 2025-07-22 21:44:56.393258056 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: issues-were-scanned
+  where: github
+- _id: 198703
+  _time: 2025-07-22 21:44:56.531520151 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: issues-were-scanned
+  where: github
+- _id: 198704
+  _time: 2025-07-22 21:44:56.675730268 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: issues-were-scanned
+  where: github
+- _id: 198705
+  _time: 2025-07-22 21:44:56.813940354 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: issues-were-scanned
+  where: github
+- _id: 198706
+  _time: 2025-07-22 21:44:56.953379613 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: issues-were-scanned
+  where: github
+- _id: 198707
+  _time: 2025-07-22 21:44:57.090900748 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: issues-were-scanned
+  where: github
+- _id: 198708
+  _time: 2025-07-22 21:44:57.369131988 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: issues-were-scanned
+  where: github
+- _id: 198709
+  _time: 2025-07-22 21:44:57.619710952 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: issues-were-scanned
+  where: github
+- _id: 198710
+  _time: 2025-07-22 21:44:57.929971331 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: issues-were-scanned
+  where: github
+- _id: 198711
+  _time: 2025-07-22 21:44:58.066952533 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: issues-were-scanned
+  where: github
+- _id: 198713
+  _time: 2025-07-22 21:44:58.817918443 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: issues-were-scanned
+  where: github
+- _id: 198714
+  _time: 2025-07-22 21:44:58.954382757 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: issues-were-scanned
+  where: github
+- _id: 198715
+  _time: 2025-07-22 21:44:59.372094261 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: issues-were-scanned
+  where: github
+- _id: 198717
+  _time: 2025-07-22 21:45:00.551323455 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#36 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 36
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-11-04 19:06:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 198719
+  _time: 2025-07-22 21:45:01.001196268 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#38 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 38
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-08-20 09:49:14.000000000 Z
+  where: github
+  who: 4467948
+- _id: 198721
+  _time: 2025-07-22 21:45:01.565281216 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#47 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 47
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-07-23 11:30:19.000000000 Z
+  where: github
+  who: 1917892
+- _id: 198723
+  _time: 2025-07-22 21:45:02.042980186 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#41 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 41
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-06-04 07:53:31.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198727
+  _time: 2025-07-22 21:45:03.531567155 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#37 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 37
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-11-21 08:34:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 198729
+  _time: 2025-07-22 21:45:03.995256034 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#39 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 39
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-09-03 08:05:18.000000000 Z
+  where: github
+  who: 1388994
+- _id: 198731
+  _time: 2025-07-22 21:45:04.455739765 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#50 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 50
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-08-14 07:10:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 198733
+  _time: 2025-07-22 21:45:04.896909728 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#42 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 42
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-06-01 08:03:30.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198737
+  _time: 2025-07-22 21:45:06.280474854 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#38 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 38
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-15 12:54:41.000000000 Z
+  where: github
+  who: 1143055
+- _id: 198739
+  _time: 2025-07-22 21:45:06.759030681 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#40 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 40
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-09-16 12:28:44.000000000 Z
+  where: github
+  who: 11061
+- _id: 198741
+  _time: 2025-07-22 21:45:07.231565476 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#51 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 51
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-09-23 17:52:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 198743
+  _time: 2025-07-22 21:45:07.702446125 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#43 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 43
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-06-22 22:52:25.000000000 Z
+  where: github
+  who: 526301
+- _id: 198747
+  _time: 2025-07-22 21:45:09.031716262 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#39 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 39
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-06 08:55:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 198749
+  _time: 2025-07-22 21:45:09.493409491 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#41 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 41
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-09-27 01:20:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 198751
+  _time: 2025-07-22 21:45:09.983395790 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#52 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 52
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-09-23 20:30:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 198753
+  _time: 2025-07-22 21:45:10.438173959 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#44 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 44
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-12-15 19:53:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 198755
+  _time: 2025-07-22 21:45:10.707779090 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: issues-were-scanned
+  where: github
+- _id: 198757
+  _time: 2025-07-22 21:45:11.910338111 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#41 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 41
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-16 00:33:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 198759
+  _time: 2025-07-22 21:45:12.389763152 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#42 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 42
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-10-05 05:32:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 198761
+  _time: 2025-07-22 21:45:12.865756434 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#53 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 53
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-11-04 18:40:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 198763
+  _time: 2025-07-22 21:45:13.291715783 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#45 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 45
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-01-17 23:45:57.000000000 Z
+  where: github
+  who: 1964562
+- _id: 198766
+  _time: 2025-07-22 21:45:14.265167490 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#43 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 43
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-22 07:46:40.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198768
+  _time: 2025-07-22 21:45:14.973680892 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#43 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 43
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-11-11 08:15:02.000000000 Z
+  where: github
+  who: 1388994
+- _id: 198770
+  _time: 2025-07-22 21:45:15.465950524 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#54 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 54
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-11-10 10:58:45.000000000 Z
+  where: github
+  who: 1388994
+- _id: 198772
+  _time: 2025-07-22 21:45:15.928557950 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#46 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 46
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 04:15:44.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198775
+  _time: 2025-07-22 21:45:16.966532771 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#44 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 44
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-16 00:23:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 198777
+  _time: 2025-07-22 21:45:17.436122331 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#44 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 44
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-12-09 15:59:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 198779
+  _time: 2025-07-22 21:45:17.907946463 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#55 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 55
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-11-13 13:57:39.000000000 Z
+  where: github
+  who: 316217
+- _id: 198781
+  _time: 2025-07-22 21:45:18.368027007 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#48 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 48
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-02-16 18:26:05.000000000 Z
+  where: github
+  who: 10130692
+- _id: 198784
+  _time: 2025-07-22 21:45:19.348142437 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#46 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 46
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-19 21:15:47.000000000 Z
+  where: github
+  who: 569536
+- _id: 198786
+  _time: 2025-07-22 21:45:19.810599633 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#45 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 45
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 10:38:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 198788
+  _time: 2025-07-22 21:45:20.294048711 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#56 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 56
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-12-26 10:52:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 198790
+  _time: 2025-07-22 21:45:20.751287125 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#49 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 49
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 04:29:05.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198793
+  _time: 2025-07-22 21:45:21.705958946 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#47 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 47
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-28 08:37:23.000000000 Z
+  where: github
+  who: 569536
+- _id: 198795
+  _time: 2025-07-22 21:45:22.197289775 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#46 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 46
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-12-17 21:17:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 198797
+  _time: 2025-07-22 21:45:22.679277173 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#57 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 57
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-12-26 11:25:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 198799
+  _time: 2025-07-22 21:45:23.178729049 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#50 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 50
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 04:28:02.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198803
+  _time: 2025-07-22 21:45:24.589580912 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#47 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 47
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-01-05 14:33:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 198805
+  _time: 2025-07-22 21:45:25.098130028 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#58 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 58
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-12-26 21:56:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 198807
+  _time: 2025-07-22 21:45:25.560781147 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#51 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 51
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-11-22 07:48:25.000000000 Z
+  where: github
+  who: 20211331
+- _id: 198810
+  _time: 2025-07-22 21:45:26.503955183 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#50 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 50
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-16 00:23:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 198812
+  _time: 2025-07-22 21:45:26.984922267 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#48 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 48
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-01-10 15:14:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 198814
+  _time: 2025-07-22 21:45:27.520758272 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#59 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 59
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-03-30 18:23:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 198816
+  _time: 2025-07-22 21:45:27.979313573 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#52 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 52
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-11-23 16:05:56.000000000 Z
+  where: github
+  who: 3267621
+- _id: 198819
+  _time: 2025-07-22 21:45:28.927844230 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#52 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 52
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-25 18:33:14.000000000 Z
+  where: github
+  who: 1143055
+- _id: 198821
+  _time: 2025-07-22 21:45:29.517500604 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#49 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 49
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-01-26 04:47:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 198823
+  _time: 2025-07-22 21:45:29.969900264 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#60 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 60
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-21 15:52:26.000000000 Z
+  where: github
+  who: 8007616
+- _id: 198825
+  _time: 2025-07-22 21:45:30.411021832 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#54 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 54
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-11-23 08:15:03.000000000 Z
+  where: github
+  who: 13505986
+- _id: 198828
+  _time: 2025-07-22 21:45:31.321256821 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#53 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 53
+  repository: 13717355
+  what: issue-was-closed
+  when: 2024-11-12 08:36:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 198830
+  _time: 2025-07-22 21:45:31.817202361 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#50 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 50
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-02-03 23:30:02.000000000 Z
+  where: github
+  who: 526301
+- _id: 198832
+  _time: 2025-07-22 21:45:32.294509611 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#62 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 62
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-21 13:08:04.000000000 Z
+  where: github
+  who: 3440659
+- _id: 198834
+  _time: 2025-07-22 21:45:32.736135020 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#56 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 56
+  repository: 12587702
+  what: issue-was-closed
+  when: 2016-12-22 07:57:22.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198837
+  _time: 2025-07-22 21:45:33.652681522 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#54 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 54
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-02-24 22:04:19.000000000 Z
+  where: github
+  who: 534657
+- _id: 198839
+  _time: 2025-07-22 21:45:34.122455287 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#51 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 51
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-02-15 08:40:15.000000000 Z
+  where: github
+  who: 5467276
+- _id: 198841
+  _time: 2025-07-22 21:45:34.639586481 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#63 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 63
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-13 10:09:37.000000000 Z
+  where: github
+  who: 3440659
+- _id: 198843
+  _time: 2025-07-22 21:45:35.092058915 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#57 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 57
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 04:24:44.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198846
+  _time: 2025-07-22 21:45:36.070666677 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#55 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 55
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-02-20 00:31:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 198848
+  _time: 2025-07-22 21:45:36.519814631 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#52 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 52
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-02-03 21:59:41.000000000 Z
+  where: github
+  who: 526301
+- _id: 198850
+  _time: 2025-07-22 21:45:36.999026825 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#64 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 64
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-07 18:56:22.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198852
+  _time: 2025-07-22 21:45:37.455680555 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#60 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 60
+  repository: 12587702
+  what: issue-was-closed
+  when: 2017-04-25 14:21:57.000000000 Z
+  where: github
+  who: 187306
+- _id: 198855
+  _time: 2025-07-22 21:45:38.369264933 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#57 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 57
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-02-24 11:24:05.000000000 Z
+  where: github
+  who: 898997
+- _id: 198857
+  _time: 2025-07-22 21:45:38.831933631 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#54 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 54
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-03-15 04:14:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 198859
+  _time: 2025-07-22 21:45:39.323959623 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#66 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 66
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-03-30 18:20:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 198863
+  _time: 2025-07-22 21:45:40.674954981 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#58 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 58
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-03-02 07:25:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 198865
+  _time: 2025-07-22 21:45:41.157286008 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#55 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 55
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-06-16 03:47:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 198867
+  _time: 2025-07-22 21:45:41.640977644 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#67 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 67
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 00:58:42.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198869
+  _time: 2025-07-22 21:45:42.190594160 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#63 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 63
+  repository: 12587702
+  what: issue-was-closed
+  when: 2019-03-14 01:25:31.000000000 Z
+  where: github
+  who: 12568665
+- _id: 198872
+  _time: 2025-07-22 21:45:43.182701078 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#60 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 60
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-03-20 20:30:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 198874
+  _time: 2025-07-22 21:45:43.696737483 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#56 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 56
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-06-16 03:15:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 198876
+  _time: 2025-07-22 21:45:44.147945234 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#68 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 68
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-24 00:00:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 198878
+  _time: 2025-07-22 21:45:44.601989527 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#65 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 65
+  repository: 12587702
+  what: issue-was-closed
+  when: 2018-11-08 16:37:44.000000000 Z
+  where: github
+  who: 9504395
+- _id: 198880
+  _time: 2025-07-22 21:45:44.872604910 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: issues-were-scanned
+  where: github
+- _id: 198881
+  _time: 2025-07-22 21:45:45.351807762 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#61 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 61
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-09 04:24:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 198883
+  _time: 2025-07-22 21:45:46.118389692 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#57 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 57
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-08-03 05:12:30.000000000 Z
+  where: github
+  who: 105730
+- _id: 198885
+  _time: 2025-07-22 21:45:46.589907659 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#69 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 69
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-25 09:13:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 198887
+  _time: 2025-07-22 21:45:47.038483241 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#67 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 67
+  repository: 12587702
+  what: issue-was-closed
+  when: 2018-12-25 16:09:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 198889
+  _time: 2025-07-22 21:45:47.513830142 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#62 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 62
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-12 01:52:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 198891
+  _time: 2025-07-22 21:45:47.991514374 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#61 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 61
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-09-08 20:47:37.000000000 Z
+  where: github
+  who: 6490959
+- _id: 198893
+  _time: 2025-07-22 21:45:48.614866897 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#70 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 70
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-26 09:54:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 198895
+  _time: 2025-07-22 21:45:49.075233066 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#68 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 68
+  repository: 12587702
+  what: issue-was-closed
+  when: 2019-01-07 12:00:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 198897
+  _time: 2025-07-22 21:45:49.543721116 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#63 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 63
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-04 08:30:41.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198899
+  _time: 2025-07-22 21:45:50.021528455 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#62 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 62
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-11-23 12:26:31.000000000 Z
+  where: github
+  who: 7228633
+- _id: 198901
+  _time: 2025-07-22 21:45:50.483928445 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#71 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 71
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-29 08:32:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 198903
+  _time: 2025-07-22 21:45:51.131112253 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#70 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 70
+  repository: 12587702
+  what: issue-was-closed
+  when: 2023-06-10 05:30:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 198905
+  _time: 2025-07-22 21:45:51.626869875 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#64 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 64
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-04 08:30:41.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198907
+  _time: 2025-07-22 21:45:52.110838718 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#63 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 63
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-11-18 18:49:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 198909
+  _time: 2025-07-22 21:45:52.626735796 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#72 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 72
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-01-29 14:02:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 198911
+  _time: 2025-07-22 21:45:53.060410757 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#71 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 71
+  repository: 12587702
+  what: issue-was-closed
+  when: 2019-07-04 13:10:50.000000000 Z
+  where: github
+  who: 526301
+- _id: 198913
+  _time: 2025-07-22 21:45:53.555283197 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#65 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 65
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-01 07:32:55.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198915
+  _time: 2025-07-22 21:45:53.997130509 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#64 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 64
+  repository: 12590813
+  what: issue-was-closed
+  when: 2016-11-19 07:39:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 198917
+  _time: 2025-07-22 21:45:54.635695649 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#73 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 73
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-05-22 05:42:03.000000000 Z
+  where: github
+  who: 1917892
+- _id: 198919
+  _time: 2025-07-22 21:45:55.318407296 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#73 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 73
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-07-10 00:33:54.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198921
+  _time: 2025-07-22 21:45:55.808481414 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#66 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 66
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-16 22:14:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 198923
+  _time: 2025-07-22 21:45:56.282387074 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#65 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 65
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-01-10 15:14:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 198925
+  _time: 2025-07-22 21:45:56.758342220 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#74 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 74
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-03-30 18:17:55.000000000 Z
+  where: github
+  who: 526301
+- _id: 198927
+  _time: 2025-07-22 21:45:57.233718287 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#74 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 74
+  repository: 12587702
+  what: issue-was-closed
+  when: 2019-12-16 20:15:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 198929
+  _time: 2025-07-22 21:45:57.736397104 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#68 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 68
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-06-29 04:20:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 198931
+  _time: 2025-07-22 21:45:58.200790724 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#66 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 66
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-01-10 16:21:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 198933
+  _time: 2025-07-22 21:45:58.695669548 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#75 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 75
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-03-30 18:23:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 198935
+  _time: 2025-07-22 21:45:59.174940133 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#76 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 76
+  repository: 12587702
+  what: issue-was-closed
+  when: 2019-12-16 21:24:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 198937
+  _time: 2025-07-22 21:45:59.639305991 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#70 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 70
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-10-08 19:53:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 198939
+  _time: 2025-07-22 21:46:00.086380193 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#67 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 67
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-01-10 16:50:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 198941
+  _time: 2025-07-22 21:46:00.591036377 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#76 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 76
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-12 12:14:47.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198944
+  _time: 2025-07-22 21:46:01.722785897 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#72 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 72
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-09-08 12:20:13.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198946
+  _time: 2025-07-22 21:46:02.202311359 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#69 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 69
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 10:39:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 198948
+  _time: 2025-07-22 21:46:02.659224693 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#77 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 77
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-04 07:42:29.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198950
+  _time: 2025-07-22 21:46:03.168210525 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#79 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 79
+  repository: 12587702
+  what: issue-was-closed
+  when: 2021-01-01 23:57:58.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198952
+  _time: 2025-07-22 21:46:03.685490435 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#73 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 73
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-11-05 07:17:25.000000000 Z
+  where: github
+  who: 105730
+- _id: 198954
+  _time: 2025-07-22 21:46:04.217056150 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#70 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 70
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-06-21 16:04:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 198956
+  _time: 2025-07-22 21:46:04.708031457 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#78 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 78
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-04 07:42:29.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198958
+  _time: 2025-07-22 21:46:05.176414815 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#80 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 80
+  repository: 12587702
+  what: issue-was-closed
+  when: 2023-06-10 06:24:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 198960
+  _time: 2025-07-22 21:46:05.669426352 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#74 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 74
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-11-21 19:21:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 198962
+  _time: 2025-07-22 21:46:06.128070502 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#73 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 73
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-08-25 08:17:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 198964
+  _time: 2025-07-22 21:46:06.597804237 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#79 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 79
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-01 07:18:46.000000000 Z
+  where: github
+  who: 5993843
+- _id: 198966
+  _time: 2025-07-22 21:46:07.049078113 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#81 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 81
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 02:05:45.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198968
+  _time: 2025-07-22 21:46:07.668110403 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#94 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 94
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-06 01:24:38.000000000 Z
+  where: github
+  who: 1917892
+- _id: 198970
+  _time: 2025-07-22 21:46:08.132722745 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#74 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 74
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-08-25 17:20:35.000000000 Z
+  where: github
+  who: 526301
+- _id: 198972
+  _time: 2025-07-22 21:46:08.628104354 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#80 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 80
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-09-26 15:37:38.000000000 Z
+  where: github
+  who: 8007616
+- _id: 198974
+  _time: 2025-07-22 21:46:09.082532725 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#83 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 83
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-08-25 06:15:34.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198976
+  _time: 2025-07-22 21:46:09.559382932 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#96 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 96
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-03-02 06:30:54.000000000 Z
+  where: github
+  who: 1405237
+- _id: 198978
+  _time: 2025-07-22 21:46:10.016834037 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#75 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 75
+  repository: 12590813
+  what: issue-was-closed
+  when: 2017-09-27 12:30:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 198980
+  _time: 2025-07-22 21:46:10.504965645 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#81 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 81
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-30 02:29:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 198982
+  _time: 2025-07-22 21:46:10.967873479 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#85 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 85
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 05:01:10.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198984
+  _time: 2025-07-22 21:46:11.625070916 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#97 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 97
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-12-15 15:20:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 198986
+  _time: 2025-07-22 21:46:12.104463791 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#76 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 76
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-01-28 16:51:22.000000000 Z
+  where: github
+  who: 1964562
+- _id: 198988
+  _time: 2025-07-22 21:46:12.573218066 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#82 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 82
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-05-04 07:56:39.000000000 Z
+  where: github
+  who: 9972909
+- _id: 198990
+  _time: 2025-07-22 21:46:13.068563218 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#86 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 86
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 02:05:58.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198992
+  _time: 2025-07-22 21:46:13.560936694 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#98 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 98
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-30 07:33:08.000000000 Z
+  where: github
+  who: 1405237
+- _id: 198994
+  _time: 2025-07-22 21:46:14.023147638 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#78 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 78
+  repository: 12590813
+  what: issue-was-closed
+  when: 2018-04-18 14:17:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 198997
+  _time: 2025-07-22 21:46:15.048388589 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#89 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 89
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-12 00:17:18.000000000 Z
+  where: github
+  who: 49783909
+- _id: 198999
+  _time: 2025-07-22 21:46:15.564774678 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#99 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 99
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-26 06:52:24.000000000 Z
+  where: github
+  who: 1405237
+- _id: 199001
+  _time: 2025-07-22 21:46:16.179429589 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#79 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 79
+  repository: 12590813
+  what: issue-was-closed
+  when: 2018-04-13 14:14:32.000000000 Z
+  where: github
+  who: 2019896
+- _id: 199003
+  _time: 2025-07-22 21:46:16.687695453 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#85 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 85
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-09-09 08:35:40.000000000 Z
+  where: github
+  who: 6581896
+- _id: 199005
+  _time: 2025-07-22 21:46:17.187300630 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#91 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 91
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-12 20:25:02.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199007
+  _time: 2025-07-22 21:46:17.714584928 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#100 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 100
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-18 09:30:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 199010
+  _time: 2025-07-22 21:46:18.763681098 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#86 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 86
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-05-12 17:12:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199012
+  _time: 2025-07-22 21:46:19.245657788 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#93 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 93
+  repository: 12587702
+  what: issue-was-closed
+  when: 2020-12-13 02:05:00.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199014
+  _time: 2025-07-22 21:46:19.722161764 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#101 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 101
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-18 09:29:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199017
+  _time: 2025-07-22 21:46:20.797986753 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#87 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 87
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-11-21 20:32:17.000000000 Z
+  where: github
+  who: 1054771
+- _id: 199019
+  _time: 2025-07-22 21:46:21.264826637 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#100 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 100
+  repository: 12587702
+  what: issue-was-closed
+  when: 2021-04-26 20:33:16.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199021
+  _time: 2025-07-22 21:46:21.772862512 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#102 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 102
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-06 11:36:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 199023
+  _time: 2025-07-22 21:46:22.250056977 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#84 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 84
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-10-24 05:50:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 199025
+  _time: 2025-07-22 21:46:22.711303750 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#89 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 89
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-01-26 04:33:32.000000000 Z
+  where: github
+  who: 419884
+- _id: 199027
+  _time: 2025-07-22 21:46:23.188148445 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#101 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 101
+  repository: 12587702
+  what: issue-was-closed
+  when: 2021-07-07 12:07:22.000000000 Z
+  where: github
+  who: 9504395
+- _id: 199030
+  _time: 2025-07-22 21:46:24.143192435 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#86 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 86
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-01-28 17:17:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199032
+  _time: 2025-07-22 21:46:24.608266803 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#90 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 90
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-01-16 09:39:06.000000000 Z
+  where: github
+  who: 419884
+- _id: 199034
+  _time: 2025-07-22 21:46:25.106532337 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#102 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 102
+  repository: 12587702
+  what: issue-was-closed
+  when: 2021-04-22 13:16:36.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199037
+  _time: 2025-07-22 21:46:26.083483500 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#87 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 87
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-05-21 16:40:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 199039
+  _time: 2025-07-22 21:46:26.557780666 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#91 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 91
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-29 07:15:46.000000000 Z
+  where: github
+  who: 5909722
+- _id: 199042
+  _time: 2025-07-22 21:46:27.547238277 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#106 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 106
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-14 02:53:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 199044
+  _time: 2025-07-22 21:46:28.007527666 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#88 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 88
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-05-28 14:41:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 199046
+  _time: 2025-07-22 21:46:28.474978641 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#92 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 92
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-10 09:31:56.000000000 Z
+  where: github
+  who: 1405237
+- _id: 199049
+  _time: 2025-07-22 21:46:29.481210172 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#107 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 107
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-01-26 05:01:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 199051
+  _time: 2025-07-22 21:46:29.920884721 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#91 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 91
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-10-24 07:43:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 199053
+  _time: 2025-07-22 21:46:30.368289769 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#94 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 94
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-07-04 09:52:53.000000000 Z
+  where: github
+  who: 1405237
+- _id: 199057
+  _time: 2025-07-22 21:46:31.742451582 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#94 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 94
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-13 14:22:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199059
+  _time: 2025-07-22 21:46:32.230829928 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#96 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 96
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-09-11 10:13:19.000000000 Z
+  where: github
+  who: 419884
+- _id: 199061
+  _time: 2025-07-22 21:46:32.687220515 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#174 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 174
+  repository: 12587702
+  what: issue-was-closed
+  when: 2022-08-10 03:53:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 199063
+  _time: 2025-07-22 21:46:33.340105849 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#113 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 113
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-01-10 15:42:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199065
+  _time: 2025-07-22 21:46:33.827902734 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#95 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 95
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-05-19 16:18:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 199067
+  _time: 2025-07-22 21:46:34.318102015 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#97 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 97
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-12-03 23:16:13.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199070
+  _time: 2025-07-22 21:46:35.225350837 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#114 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 114
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-05-30 00:19:38.000000000 Z
+  where: github
+  who: 17188543
+- _id: 199072
+  _time: 2025-07-22 21:46:35.662747779 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#98 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 98
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-13 14:22:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 199074
+  _time: 2025-07-22 21:46:36.132038439 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#100 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 100
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-12-14 12:23:02.000000000 Z
+  where: github
+  who: 5909722
+- _id: 199076
+  _time: 2025-07-22 21:46:36.581271007 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#221 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 221
+  repository: 12587702
+  what: issue-was-closed
+  when: 2023-06-09 09:32:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 199078
+  _time: 2025-07-22 21:46:37.089369227 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#115 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 115
+  repository: 13717355
+  what: issue-was-closed
+  when: 2016-04-04 07:33:11.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199080
+  _time: 2025-07-22 21:46:37.539119326 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#100 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 100
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-15 14:45:56.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199082
+  _time: 2025-07-22 21:46:38.009131593 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#102 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 102
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-07-13 17:25:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 199084
+  _time: 2025-07-22 21:46:38.444297260 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-jdbc#224 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 224
+  repository: 12587702
+  what: issue-was-closed
+  when: 2023-06-12 09:48:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 199087
+  _time: 2025-07-22 21:46:39.370369910 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#101 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 101
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-13 14:08:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 199089
+  _time: 2025-07-22 21:46:39.866337310 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#104 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 104
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-08-31 07:24:19.000000000 Z
+  where: github
+  who: 526301
+- _id: 199093
+  _time: 2025-07-22 21:46:41.285022398 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#102 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 102
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-14 11:22:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 199095
+  _time: 2025-07-22 21:46:41.811211938 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#105 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 105
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 16:52:44.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199099
+  _time: 2025-07-22 21:46:43.350515228 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#103 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 103
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-08-05 08:11:17.000000000 Z
+  where: github
+  who: 526301
+- _id: 199101
+  _time: 2025-07-22 21:46:43.825776007 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#106 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 106
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-09-13 11:14:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 199105
+  _time: 2025-07-22 21:46:45.344433298 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#104 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 104
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-10-29 18:36:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 199107
+  _time: 2025-07-22 21:46:45.834789291 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#108 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 108
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-09-11 07:59:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 199109
+  _time: 2025-07-22 21:46:46.108515747 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: issues-were-scanned
+  where: github
+- _id: 199110
+  _time: 2025-07-22 21:46:46.721425300 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#126 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 126
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-01-04 15:46:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 199112
+  _time: 2025-07-22 21:46:47.169106555 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#105 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 105
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-11-13 13:07:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 199114
+  _time: 2025-07-22 21:46:47.673744738 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#109 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 109
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 11:41:12.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199116
+  _time: 2025-07-22 21:46:48.163829928 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#127 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 127
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-01-10 15:45:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199118
+  _time: 2025-07-22 21:46:48.679773939 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#106 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 106
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-11-15 19:57:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 199120
+  _time: 2025-07-22 21:46:49.301525285 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#111 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 111
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 00:02:18.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199123
+  _time: 2025-07-22 21:46:50.321172976 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#107 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 107
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-07-01 13:36:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199125
+  _time: 2025-07-22 21:46:50.794591416 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#113 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 113
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-10-03 17:19:59.000000000 Z
+  where: github
+  who: 105730
+- _id: 199127
+  _time: 2025-07-22 21:46:51.280565881 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#129 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 129
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-03-08 16:48:14.000000000 Z
+  where: github
+  who: 1714171
+- _id: 199129
+  _time: 2025-07-22 21:46:51.749036449 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#109 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 109
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-11-27 12:02:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 199131
+  _time: 2025-07-22 21:46:52.241078680 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#115 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 115
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-10-12 23:09:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199133
+  _time: 2025-07-22 21:46:52.737266491 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#130 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 130
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-04-25 12:38:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 199135
+  _time: 2025-07-22 21:46:53.192959066 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#115 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 115
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-07-01 13:35:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 199137
+  _time: 2025-07-22 21:46:53.670373798 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#116 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 116
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-10 12:05:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 199139
+  _time: 2025-07-22 21:46:54.149508437 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#131 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 131
+  repository: 13717355
+  what: issue-was-closed
+  when: 2018-01-27 00:33:36.000000000 Z
+  where: github
+  who: 1714171
+- _id: 199141
+  _time: 2025-07-22 21:46:54.648096068 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#116 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 116
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-02-15 14:18:46.000000000 Z
+  where: github
+  who: 160975
+- _id: 199143
+  _time: 2025-07-22 21:46:55.277339505 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#117 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 117
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-01-07 09:14:29.000000000 Z
+  where: github
+  who: 526301
+- _id: 199145
+  _time: 2025-07-22 21:46:55.743071542 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#133 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 133
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-05-01 16:50:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 199148
+  _time: 2025-07-22 21:46:56.679026388 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#120 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 120
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-06-21 07:52:44.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199151
+  _time: 2025-07-22 21:46:57.590238075 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#120 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 120
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-08-07 05:09:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 199153
+  _time: 2025-07-22 21:46:58.056969765 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#121 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 121
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-02-08 07:50:26.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199155
+  _time: 2025-07-22 21:46:58.551122515 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#135 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 135
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-06-14 14:20:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199157
+  _time: 2025-07-22 21:46:59.016110452 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#121 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 121
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-08-19 11:53:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 199160
+  _time: 2025-07-22 21:47:00.076293645 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#137 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 137
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-08-15 07:14:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199162
+  _time: 2025-07-22 21:47:00.564238014 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#122 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 122
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 07:28:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199164
+  _time: 2025-07-22 21:47:01.056340954 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#124 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 124
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-09 02:05:11.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199166
+  _time: 2025-07-22 21:47:01.809085498 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#138 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 138
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-08-31 12:04:26.000000000 Z
+  where: github
+  who: 4646469
+- _id: 199168
+  _time: 2025-07-22 21:47:02.265134826 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#123 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 123
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 10:58:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 199170
+  _time: 2025-07-22 21:47:02.742647870 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#126 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 126
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-12 12:12:21.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199172
+  _time: 2025-07-22 21:47:03.336491677 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#139 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 139
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-09-25 15:16:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 199174
+  _time: 2025-07-22 21:47:03.812081110 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#124 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 124
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-10-01 19:06:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 199177
+  _time: 2025-07-22 21:47:04.762075717 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#140 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 140
+  repository: 13717355
+  what: issue-was-closed
+  when: 2017-10-06 14:55:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 199179
+  _time: 2025-07-22 21:47:05.220416315 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#125 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 125
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-17 05:50:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199181
+  _time: 2025-07-22 21:47:05.683028966 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#129 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 129
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-02-24 05:40:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 199183
+  _time: 2025-07-22 21:47:06.181344320 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#142 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 142
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-09 04:23:55.000000000 Z
+  where: github
+  who: 526301
+- _id: 199185
+  _time: 2025-07-22 21:47:06.662451698 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#126 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 126
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-23 04:52:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199187
+  _time: 2025-07-22 21:47:07.140208502 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#130 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 130
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-02-25 00:16:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 199190
+  _time: 2025-07-22 21:47:08.093306275 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#127 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 127
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-10-01 19:28:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 199192
+  _time: 2025-07-22 21:47:08.544288978 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#131 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 131
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-04-17 17:29:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199194
+  _time: 2025-07-22 21:47:09.083156605 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#144 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 144
+  repository: 13717355
+  what: issue-was-closed
+  when: 2018-03-06 06:38:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 199196
+  _time: 2025-07-22 21:47:09.562403843 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#128 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 128
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-03-26 06:40:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199198
+  _time: 2025-07-22 21:47:10.057735357 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#132 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 132
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-06-16 03:37:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 199200
+  _time: 2025-07-22 21:47:10.572370388 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#145 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 145
+  repository: 13717355
+  what: issue-was-closed
+  when: 2018-03-08 21:10:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 199202
+  _time: 2025-07-22 21:47:11.383925857 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#130 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 130
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-12-24 05:30:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 199204
+  _time: 2025-07-22 21:47:11.846125329 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#135 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 135
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 01:17:10.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199206
+  _time: 2025-07-22 21:47:12.639595772 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#146 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 146
+  repository: 13717355
+  what: issue-was-closed
+  when: 2018-03-09 15:22:50.000000000 Z
+  where: github
+  who: 526301
+- _id: 199208
+  _time: 2025-07-22 21:47:13.083107326 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#131 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 131
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-01-10 15:29:45.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199211
+  _time: 2025-07-22 21:47:14.013659529 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#147 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 147
+  repository: 13717355
+  what: issue-was-closed
+  when: 2018-05-31 06:26:33.000000000 Z
+  where: github
+  who: 12680137
+- _id: 199213
+  _time: 2025-07-22 21:47:14.471870915 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#132 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 132
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-03-26 08:39:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 199215
+  _time: 2025-07-22 21:47:14.944500749 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#137 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 137
+  repository: 16312153
+  what: issue-was-closed
+  when: 2018-01-10 21:22:54.000000000 Z
+  where: github
+  who: 5598124
+- _id: 199218
+  _time: 2025-07-22 21:47:16.054417736 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#134 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 134
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-03-26 06:39:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 199220
+  _time: 2025-07-22 21:47:16.527809473 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#138 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 138
+  repository: 16312153
+  what: issue-was-closed
+  when: 2021-06-28 02:46:49.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199222
+  _time: 2025-07-22 21:47:17.020287331 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#149 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 149
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-18 09:29:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 199224
+  _time: 2025-07-22 21:47:17.470686254 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#135 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 135
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-07-04 07:52:35.000000000 Z
+  where: github
+  who: 526301
+- _id: 199226
+  _time: 2025-07-22 21:47:17.941538517 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#139 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 139
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-12-22 08:39:45.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199228
+  _time: 2025-07-22 21:47:18.501190637 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#151 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 151
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-18 09:29:02.000000000 Z
+  where: github
+  who: 526301
+- _id: 199230
+  _time: 2025-07-22 21:47:18.940483685 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#136 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 136
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-07-13 06:49:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 199232
+  _time: 2025-07-22 21:47:19.524061249 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#140 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 140
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-12-22 08:39:45.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199234
+  _time: 2025-07-22 21:47:19.992451127 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#152 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 152
+  repository: 13717355
+  what: issue-was-closed
+  when: 2019-11-08 15:05:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 199236
+  _time: 2025-07-22 21:47:20.498377829 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#138 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 138
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-08-04 02:58:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 199238
+  _time: 2025-07-22 21:47:21.001708813 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#145 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 145
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-09 01:45:37.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199240
+  _time: 2025-07-22 21:47:21.461298845 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#153 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 153
+  repository: 13717355
+  what: issue-was-closed
+  when: 2020-02-06 11:33:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 199242
+  _time: 2025-07-22 21:47:21.912445841 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#139 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 139
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-08-08 13:46:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 199244
+  _time: 2025-07-22 21:47:22.454576706 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#146 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 146
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-12-16 08:41:47.000000000 Z
+  where: github
+  who: 13505986
+- _id: 199246
+  _time: 2025-07-22 21:47:22.937815259 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#154 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 154
+  repository: 13717355
+  what: issue-was-closed
+  when: 2020-08-05 13:05:05.000000000 Z
+  where: github
+  who: 526301
+- _id: 199248
+  _time: 2025-07-22 21:47:23.380426159 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#140 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 140
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-08-09 05:31:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 199250
+  _time: 2025-07-22 21:47:23.860210719 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#147 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 147
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-11-18 16:54:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 199252
+  _time: 2025-07-22 21:47:24.348480955 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#161 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 161
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-09-17 08:03:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 199254
+  _time: 2025-07-22 21:47:24.801678060 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#141 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 141
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-08-10 03:15:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 199256
+  _time: 2025-07-22 21:47:25.392899575 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#148 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 148
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-11-21 20:56:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 199258
+  _time: 2025-07-22 21:47:25.899564063 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#162 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 162
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-22 14:19:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 199260
+  _time: 2025-07-22 21:47:26.343940438 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#142 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 142
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-08-29 05:37:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 199262
+  _time: 2025-07-22 21:47:26.865003909 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#150 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 150
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-12-22 08:39:45.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199264
+  _time: 2025-07-22 21:47:27.331255961 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#163 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 163
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-18 10:49:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 199267
+  _time: 2025-07-22 21:47:28.258819264 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#151 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 151
+  repository: 16312153
+  what: issue-was-closed
+  when: 2016-12-22 08:39:45.000000000 Z
+  where: github
+  who: 5993843
+- _id: 199269
+  _time: 2025-07-22 21:47:28.788183317 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#164 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 164
+  repository: 13717355
+  what: issue-was-closed
+  when: 2021-12-29 05:24:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 199271
+  _time: 2025-07-22 21:47:29.248630576 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#147 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 147
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-09-22 08:09:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 199274
+  _time: 2025-07-22 21:47:30.188336126 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#166 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 166
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-04-04 17:38:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199276
+  _time: 2025-07-22 21:47:30.666711142 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#189 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 189
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-10-04 14:27:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 199278
+  _time: 2025-07-22 21:47:31.133015611 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#154 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 154
+  repository: 16312153
+  what: issue-was-closed
+  when: 2017-01-12 10:21:21.000000000 Z
+  where: github
+  who: 9504395
+- _id: 199280
+  _time: 2025-07-22 21:47:31.628540464 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#167 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 167
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-09 05:00:25.000000000 Z
+  where: github
+  who: 526301
+- _id: 199282
+  _time: 2025-07-22 21:47:32.152370689 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#190 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 190
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-10-06 04:56:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 199284
+  _time: 2025-07-22 21:47:32.653826845 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#156 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 156
+  repository: 16312153
+  what: issue-was-closed
+  when: 2017-04-25 16:36:29.000000000 Z
+  where: github
+  who: 526301
+- _id: 199286
+  _time: 2025-07-22 21:47:33.135177027 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#168 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 168
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-12 06:38:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 199289
+  _time: 2025-07-22 21:47:34.051119982 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#157 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 157
+  repository: 16312153
+  what: issue-was-closed
+  when: 2017-05-08 19:41:24.000000000 Z
+  where: github
+  who: 5237764
+- _id: 199291
+  _time: 2025-07-22 21:47:34.530735458 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#169 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 169
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-22 15:11:02.000000000 Z
+  where: github
+  who: 526301
+- _id: 199293
+  _time: 2025-07-22 21:47:34.996468855 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#197 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 197
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-11-03 10:53:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 199295
+  _time: 2025-07-22 21:47:35.461359540 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#159 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 159
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 16:03:45.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199297
+  _time: 2025-07-22 21:47:35.989054798 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#170 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 170
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-22 14:37:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 199299
+  _time: 2025-07-22 21:47:36.453797044 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#199 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 199
+  repository: 12590813
+  what: issue-was-closed
+  when: 2022-11-03 16:26:05.000000000 Z
+  where: github
+  who: 526301
+- _id: 199301
+  _time: 2025-07-22 21:47:36.928119695 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#160 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 160
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 01:14:20.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199303
+  _time: 2025-07-22 21:47:37.441491770 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#171 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 171
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-25 06:40:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 199305
+  _time: 2025-07-22 21:47:38.001517815 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#228 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 228
+  repository: 12590813
+  what: issue-was-closed
+  when: 2023-01-17 15:36:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 199308
+  _time: 2025-07-22 21:47:38.932813391 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#172 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 172
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-25 17:59:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 199310
+  _time: 2025-07-22 21:47:39.414260046 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#296 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 296
+  repository: 12590813
+  what: issue-was-closed
+  when: 2023-05-28 09:05:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 199313
+  _time: 2025-07-22 21:47:40.371301029 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#173 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 173
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-08-29 05:58:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 199315
+  _time: 2025-07-22 21:47:40.863104053 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-parent#389 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 389
+  repository: 12590813
+  what: issue-was-closed
+  when: 2023-12-27 09:39:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 199320
+  _time: 2025-07-22 21:47:42.776290435 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#164 has been 'issue-was-closed'.
+  is_human: 0
+  issue: 164
+  repository: 16312153
+  what: issue-was-closed
+  when: 2019-11-29 16:22:32.000000000 Z
+  where: github
+  who: 24456188
+- _id: 199322
+  _time: 2025-07-22 21:47:43.296749048 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#182 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 182
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-09-28 07:51:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 199326
+  _time: 2025-07-22 21:47:44.803406950 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#185 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 185
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-11-03 15:25:34.000000000 Z
+  where: github
+  who: 40247101
+- _id: 199329
+  _time: 2025-07-22 21:47:45.901723049 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#170 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 170
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-08 02:01:47.000000000 Z
+  where: github
+  who: 49783909
+- _id: 199331
+  _time: 2025-07-22 21:47:46.369025099 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#191 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 191
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-12-01 09:30:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 199334
+  _time: 2025-07-22 21:47:47.274770024 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-http#171 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 171
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-06-29 04:50:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 199336
+  _time: 2025-07-22 21:47:47.751142958 Z
+  _version: 0.13.0/0.51.1/
+  details: Apparently, jcabi/jcabi-xml#193 has been 'issue-was-closed'.
+  is_human: 1
+  issue: 193
+  repository: 13717355
+  what: issue-was-closed
+  when: 2022-12-23 12:13:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 199337
+  _time: 2025-07-22 21:47:47.757900207 Z
+  _version: 0.13.0/0.51.1/
+  latest: 193
+  repository: 13717355
+  what: issues-were-scanned
+  where: github
+- _id: 199338
+  _time: 2025-07-22 21:47:48.067436724 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: issues-were-scanned
+  where: github
+- _id: 199339
+  _time: 2025-07-22 21:47:48.696827249 Z
+  _version: 0.13.0/0.51.1/
+  issue: 172
+  repository: 16312153
+  stale: who
+  what: issue-was-closed
+  when: 2018-04-05 16:13:36.000000000 Z
+  where: github
+- _id: 199341
+  _time: 2025-07-22 21:48:26.474081250 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: assignees-were-scanned
+  where: github
+- _id: 199342
+  _time: 2025-07-22 21:48:26.620625451 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: assignees-were-scanned
+  where: github
+- _id: 199346
+  _time: 2025-07-22 21:48:28.979492802 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: assignees-were-scanned
+  where: github
+- _id: 199348
+  _time: 2025-07-22 21:48:29.804840213 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: assignees-were-scanned
+  where: github
+- _id: 199349
+  _time: 2025-07-22 21:48:29.949533072 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: assignees-were-scanned
+  where: github
+- _id: 199351
+  _time: 2025-07-22 21:48:30.827147781 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: assignees-were-scanned
+  where: github
+- _id: 199352
+  _time: 2025-07-22 21:48:30.969688286 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: assignees-were-scanned
+  where: github
+- _id: 199354
+  _time: 2025-07-22 21:48:31.837766222 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: assignees-were-scanned
+  where: github
+- _id: 199355
+  _time: 2025-07-22 21:48:31.986936047 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: assignees-were-scanned
+  where: github
+- _id: 199357
+  _time: 2025-07-22 21:48:32.894819418 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: assignees-were-scanned
+  where: github
+- _id: 199358
+  _time: 2025-07-22 21:48:33.123603227 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: assignees-were-scanned
+  where: github
+- _id: 199359
+  _time: 2025-07-22 21:48:33.268483077 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: assignees-were-scanned
+  where: github
+- _id: 199360
+  _time: 2025-07-22 21:48:33.410242005 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: assignees-were-scanned
+  where: github
+- _id: 199361
+  _time: 2025-07-22 21:48:33.560432554 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: assignees-were-scanned
+  where: github
+- _id: 199362
+  _time: 2025-07-22 21:48:33.705862565 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: assignees-were-scanned
+  where: github
+- _id: 199364
+  _time: 2025-07-22 21:48:34.538348791 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: assignees-were-scanned
+  where: github
+- _id: 199365
+  _time: 2025-07-22 21:48:34.685720474 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: assignees-were-scanned
+  where: github
+- _id: 199366
+  _time: 2025-07-22 21:48:34.913631675 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: assignees-were-scanned
+  where: github
+- _id: 199369
+  _time: 2025-07-22 21:48:36.324631232 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: assignees-were-scanned
+  where: github
+- _id: 199370
+  _time: 2025-07-22 21:48:36.471209615 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: assignees-were-scanned
+  where: github
+- _id: 199371
+  _time: 2025-07-22 21:48:36.805160518 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: assignees-were-scanned
+  where: github
+- _id: 199375
+  _time: 2025-07-22 21:48:38.986227832 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: assignees-were-scanned
+  where: github
+- _id: 199376
+  _time: 2025-07-22 21:48:39.322892474 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: assignees-were-scanned
+  where: github
+- _id: 199377
+  _time: 2025-07-22 21:48:39.656034069 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: assignees-were-scanned
+  where: github
+- _id: 199379
+  _time: 2025-07-22 21:48:40.554965337 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: assignees-were-scanned
+  where: github
+- _id: 199400
+  _time: 2025-07-22 21:48:52.946636838 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: assignees-were-scanned
+  where: github
+- _id: 199459
+  _time: 2025-07-22 21:49:28.717798580 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: assignees-were-scanned
+  where: github
+- _id: 199465
+  _time: 2025-07-22 21:49:32.419507398 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: assignees-were-scanned
+  where: github
+- _id: 199477
+  _time: 2025-07-22 21:49:39.768264162 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13717355
+  what: assignees-were-scanned
+  where: github
+- _id: 199544
+  _time: 2025-07-22 21:50:19.421476469 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16312153
+  what: assignees-were-scanned
+  where: github
+- _id: 199545
+  _time: 2025-07-22 21:50:30.030863769 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: assignees-were-scanned
+  where: github
+- _id: 199546
+  _time: 2025-07-22 21:51:47.623205806 Z
+  _version: 0.13.0/0.51.1/
+  total_active_contributors: 5
+  total_commits: 18366
+  total_contributors: 117
+  total_files: 2203
+  total_issues: 2869
+  total_pulls: 5194
+  total_repositories: 31
+  what: dimensions-of-terrain
+  when: 2025-07-22 20:42:57.754029233 Z
+- _id: 199548
+  _time: 2025-07-22 21:54:00.851901994 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 4174608
+  what: labels-were-scanned
+  where: github
+- _id: 199549
+  _time: 2025-07-22 21:54:00.997410225 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 25780072
+  what: labels-were-scanned
+  where: github
+- _id: 199550
+  _time: 2025-07-22 21:54:01.147597991 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 20635353
+  what: labels-were-scanned
+  where: github
+- _id: 199552
+  _time: 2025-07-22 21:54:01.864130656 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12584841
+  what: labels-were-scanned
+  where: github
+- _id: 199553
+  _time: 2025-07-22 21:54:02.004722178 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591356
+  what: labels-were-scanned
+  where: github
+- _id: 199554
+  _time: 2025-07-22 21:54:02.235986531 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14093966
+  what: labels-were-scanned
+  where: github
+- _id: 199555
+  _time: 2025-07-22 21:54:02.382484539 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589424
+  what: labels-were-scanned
+  where: github
+- _id: 199556
+  _time: 2025-07-22 21:54:02.528686711 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 15208785
+  what: labels-were-scanned
+  where: github
+- _id: 199558
+  _time: 2025-07-22 21:54:03.213470192 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591347
+  what: labels-were-scanned
+  where: github
+- _id: 199559
+  _time: 2025-07-22 21:54:03.360585086 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12947626
+  what: labels-were-scanned
+  where: github
+- _id: 199561
+  _time: 2025-07-22 21:54:04.045493568 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587970
+  what: labels-were-scanned
+  where: github
+- _id: 199563
+  _time: 2025-07-22 21:54:04.714348183 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13359002
+  what: labels-were-scanned
+  where: github
+- _id: 199565
+  _time: 2025-07-22 21:54:05.460279505 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 13624455
+  what: labels-were-scanned
+  where: github
+- _id: 199566
+  _time: 2025-07-22 21:54:05.606136160 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591339
+  what: labels-were-scanned
+  where: github
+- _id: 199567
+  _time: 2025-07-22 21:54:05.752601706 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12589687
+  what: labels-were-scanned
+  where: github
+- _id: 199570
+  _time: 2025-07-22 21:54:07.358488631 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591382
+  what: labels-were-scanned
+  where: github
+- _id: 199572
+  _time: 2025-07-22 21:54:08.136556967 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591371
+  what: labels-were-scanned
+  where: github
+- _id: 199574
+  _time: 2025-07-22 21:54:08.812511039 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194296
+  what: labels-were-scanned
+  where: github
+- _id: 199575
+  _time: 2025-07-22 21:54:08.957572682 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 510979198
+  what: labels-were-scanned
+  where: github
+- _id: 199576
+  _time: 2025-07-22 21:54:09.103402858 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16403286
+  what: labels-were-scanned
+  where: github
+- _id: 199577
+  _time: 2025-07-22 21:54:09.499460113 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 14204295
+  what: labels-were-scanned
+  where: github
+- _id: 199579
+  _time: 2025-07-22 21:54:10.480820147 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 19194304
+  what: labels-were-scanned
+  where: github
+- _id: 199581
+  _time: 2025-07-22 21:54:11.547946386 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12591138
+  what: labels-were-scanned
+  where: github
+- _id: 199582
+  _time: 2025-07-22 21:54:11.894530302 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590126
+  what: labels-were-scanned
+  where: github
+- _id: 199583
+  _time: 2025-07-22 21:54:12.241563071 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 23238769
+  what: labels-were-scanned
+  where: github
+- _id: 199587
+  _time: 2025-07-22 21:54:14.377328995 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590128
+  what: labels-were-scanned
+  where: github
+- _id: 199600
+  _time: 2025-07-22 21:54:22.605553715 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12590813
+  what: labels-were-scanned
+  where: github
+- _id: 199604
+  _time: 2025-07-22 21:54:25.029252407 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 16312153
+  what: labels-were-scanned
+  where: github
+- _id: 199606
+  _time: 2025-07-22 21:54:25.985766743 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12262782
+  what: labels-were-scanned
+  where: github
+- _id: 199708
+  _time: 2025-07-22 21:55:38.675484967 Z
+  _version: 0.13.0/0.51.1/
+  latest: 0
+  repository: 12587702
+  what: labels-were-scanned
+  where: github
+- _id: 199709
+  _time: 2025-07-22 21:56:10.165715634 Z
+  _version: 0.13.0/0.51.1/
+  latest: 424
+  repository: 13717355
+  what: labels-were-scanned
   where: github
