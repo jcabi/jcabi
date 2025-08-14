@@ -3,19 +3,9 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>jcabi &#x2013; Sitemap</title>
+        <title>Sitemap – jcabi</title>
         <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
-                            <script>
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-1963507-23']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-            </script>
-                                            <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+                                                    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         <script src="./js/jcabi.js"></script>
     </head>
     <body>
@@ -113,23 +103,21 @@
                             <div class="logo">
                                 <a href="./"
                                     title=" logo ">
-                                    <img src="logo-square.svg"
+                                    <img src="${decoration.bannerLeft.src}"
                                         alt="jcabi"
-                                                                                    width="64"
-                                                                                                                            height="64"
-                                                                                itemprop="image"
+                                                                                                                        itemprop="image"
                                     />
                                 </a>
                             </div>
                             <ul class="badges">
                                 <li>
-                                    <strong itemprop="version">1.39.0</strong>
+                                    <strong itemprop="version">1.40.1</strong>
                                 </li>
                                 <li>
-                                    
-                                    <time itemprop="datePublished" datetime="2024-03-07T05:19:33Z">
-                                        
-                                        07-Mar-2024
+                                    $dateFormat.applyPattern("yyyy-MM-dd'T'hh:mm:ss'Z'")
+                                    <time itemprop="datePublished" datetime="${dateFormat.format($currentDate)}">
+                                        $dateFormat.applyPattern('dd-MMM-yyyy')
+                                        ${dateFormat.format($currentDate)}
                                     </time>
                                 </li>
                                 <li class="menu-button">menu</li>
@@ -141,74 +129,44 @@
                             </a>
                                                 <article itemprop="articleBody">
                             <section>
-<h2><a name="Sitemap"></a>Sitemap</h2>
-
-<p>This page lists all entries of the navigation menu in expanded form.</p>
-<section><section>
-<h4><a name="Overview"></a>Overview</h4><hr />
-
+<h1>Sitemap</h1>
+<p>This page lists all entries of the navigation menu in expanded form.</p><section>
+<h2>Overview</h2><hr />
 <ul>
-
-<li><a href="index.html">What is it?</a></li></ul>
-</section><section>
-<h4><a name="Popular_Projects"></a>Popular Projects</h4><hr />
-
+<li><a href="index.html">What is it?</a></li></ul></section><section>
+<h2>Popular Projects</h2><hr />
 <ul>
-
 <li><a class="externalLink" href="https://aspects.jcabi.com">jcabi-aspects</a></li>
-
 <li><a class="externalLink" href="https://dynamo.jcabi.com">jcabi-dynamo</a></li>
-
 <li><a class="externalLink" href="https://http.jcabi.com">jcabi-http</a></li>
-
 <li><a class="externalLink" href="https://github.jcabi.com">jcabi-github</a></li>
-
 <li><a class="externalLink" href="https://log.jcabi.com">jcabi-log</a></li>
-
 <li><a class="externalLink" href="https://manifests.jcabi.com">jcabi-manifests</a></li>
-
-<li><a class="externalLink" href="https://xml.jcabi.com">jcabi-xml</a></li></ul>
-</section><section>
-<h4><a name="Incubator"></a>Incubator</h4><hr />
-
+<li><a class="externalLink" href="https://xml.jcabi.com">jcabi-xml</a></li></ul></section><section>
+<h2>Incubator</h2><hr />
 <ul>
-
-<li><a class="externalLink" href="https://www.xembly.org">xembly</a></li></ul>
-</section><section>
-<h4><a name="Project_Documentation"></a>Project Documentation</h4><hr />
-
+<li><a class="externalLink" href="https://www.xembly.org">xembly</a></li></ul></section><section>
+<h2>Project Documentation</h2><hr />
 <ul>
-
 <li><a href="./project-info.html">Project Information</a>
-
 <ul>
-
 <li><a href="index.html">About</a></li>
-
 <li><a href="plugins.html">Plugins</a></li>
-
 <li><a href="scm.html">Source Code Management</a></li>
-
 <li><a href="summary.html">Summary</a></li></ul></li>
-
 <li><a href="./project-reports.html">Project Reports</a>
-
 <ul>
-
-<li><a href="surefire-report.html">Surefire</a></li>
-
+<li><a href="surefire.html">Surefire</a></li>
 <li><a href="dependency-updates-report.html">Dependency Updates Report</a></li>
-
 <li><a href="plugin-updates-report.html">Plugin Updates Report</a></li>
-
-<li><a href="jacoco-aggregate/index.html">JaCoCo Aggregate</a></li></ul></li></ul></section></section></section>
+<li><a href="jacoco-aggregate/index.html">JaCoCo Aggregate</a></li></ul></li></ul></section></section>
                         </article>
                     </div>
                 </main>
                 <footer class="legal-notes">
                     <div>
                         Copyright &#169;
-                                                                            2012-2024
+                                                                            2012-${currentYear}
                                             </div>
                     <div>jcabi.com, All Rights Reserved.</div>
                     <div><a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.</div>

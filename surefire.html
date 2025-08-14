@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Small Useful Java Components – jcabi</title>
+        <title>Surefire Report – jcabi</title>
         <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
                                                     <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         <script src="./js/jcabi.js"></script>
@@ -15,7 +15,7 @@
                                                                                     <li>
                             <span>Overview</span>
                                                             <ul>
-                                                                                                    <li  class='active' >
+                                                                                                    <li >
                             <span>                        <a href="index.html" title="What is it?">What is it?</a>
         </span>
                                                                                                                                                                 <ul>
@@ -87,37 +87,37 @@
                                                                                                     <li >
                             <span>                        <a href="project-info.html" title="Project Information">Project Information</a>
         </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
+                                                                                                                        <li >
+                            <span>                        <a href="project-reports.html" title="Project Reports">Project Reports</a>
+        </span>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <ul>
                                                                                                     <li  class='active' >
-                            <span>                        <a href="index.html" title="About">About</a>
+                            <span>                        <a href="surefire.html" title="Surefire">Surefire</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
                                                     </li>
                                                                                                                         <li >
-                            <span>                        <a href="plugins.html" title="Plugins">Plugins</a>
+                            <span>                        <a href="dependency-updates-report.html" title="Dependency Updates Report">Dependency Updates Report</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
                                                     </li>
                                                                                                                         <li >
-                            <span>                        <a href="scm.html" title="Source Code Management">Source Code Management</a>
+                            <span>                        <a href="plugin-updates-report.html" title="Plugin Updates Report">Plugin Updates Report</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
                                                     </li>
                                                                                                                         <li >
-                            <span>                        <a href="summary.html" title="Summary">Summary</a>
+                            <span>                        <a href="jacoco-aggregate/index.html" title="JaCoCo Aggregate">JaCoCo Aggregate</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
                                                     </li>
                                                                                         </ul>
                                                     </li>
-                                                                                                                        <li >
-                            <span>                        <a href="project-reports.html" title="Project Reports">Project Reports</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
                                                                                         </ul>
                                                     </li>
                                     </ul>
@@ -154,80 +154,44 @@
                                 <img src="https://www.jcabi.com/fork-me.svg" class="fork-me"/>
                             </a>
                                                 <article itemprop="articleBody">
-                            <section><a id="Small_Useful_Java_Components"></a>
-<h1>Small Useful Java Components</h1>
-<p>jcabi is a collection of small and useful Java components, which
-are not big enough to make their own projects. The project is maintained
-in <a href="https://github.com/jcabi" class="externalLink">Github</a>
-(you're welcome to fork it and submit your pull requests). Full list of
-components in alphabetic order:</p>
-<p><a href="http://aether.jcabi.com/index.html" class="externalLink">jcabi-aether</a> &#x2014;
-wrapper of <a href="https://docs.sonatype.org/display/AETHER/Home" class="externalLink">Sonatype Aether</a>.</p>
-<p><a href="http://aspects.jcabi.com/index.html" class="externalLink">jcabi-aspects</a> &#x2014;
-useful AOP aspects, incl. JSR-303.</p>
-<p><a href="http://beanstalk.jcabi.com/index.html" class="externalLink">jcabi-beanstalk-maven-plugin</a> &#x2014;
-AWS Elastic Beanstalk deployment.</p>
-<p><a href="http://dynamo.jcabi.com/index.html" class="externalLink">jcabi-dynamo</a> &#x2014;
-Amazon DynamoDB Object Layer.</p>
-<p><a href="http://dynamodb.jcabi.com/index.html" class="externalLink">jcabi-dynamodb-maven-plugin</a> &#x2014;
-DynamoDB Maven testing plugin.</p>
-<p><a href="http://email.jcabi.com/index.html" class="externalLink">jcabi-email</a> &#x2014;
-Email sending client.</p>
-<p><a href="http://http.jcabi.com/index.html" class="externalLink">jcabi-http</a> &#x2014;
-Fluent and Immutable HTTP Client.</p>
-<p><a href="http://github.jcabi.com/index.html" class="externalLink">jcabi-github</a> &#x2014;
-Object-Oriented Github API.</p>
-<p><a href="http://heroku.jcabi.com/index.html" class="externalLink">jcabi-heroku-maven-plugin</a> &#x2014;
-Heroku deployment.</p>
-<p><a href="http://jdbc.jcabi.com/index.html" class="externalLink">jcabi-jdbc</a> &#x2014;
-fluent wrapper of <a href="http://en.wikipedia.org/wiki/Java_Database_Connectivity" class="externalLink">JDBC</a>.</p>
-<p><a href="http://log.jcabi.com/index.html" class="externalLink">jcabi-log</a> &#x2014;
-wrapper of <a href="http://www.slf4j.org/" class="externalLink">SLF4J</a> logging facility.</p>
-<p><a href="http://manifests.jcabi.com/index.html" class="externalLink">jcabi-manifests</a> &#x2014;
-utility class reading <code>META-INF/MANIFEST.MF</code> files.</p>
-<p><a href="http://matchers.jcabi.com/index.html" class="externalLink">jcabi-matchers</a> &#x2014;
-Hamcrest matchers for XML and XHTML.</p>
-<p><a href="http://plugin.jcabi.com/index.html" class="externalLink">jcabi-maven-plugin</a> &#x2014;
-supplementary Maven plugin.</p>
-<p><a href="http://odesk.jcabi.com/index.html" class="externalLink">jcabi-odesk</a> &#x2014;
-Object-oriented Adapter of Odesk RESTful API.</p>
-<p><a href="http://s3.jcabi.com/index.html" class="externalLink">jcabi-s3</a> &#x2014;
-Object Layer on top of AWS S3 SDK.</p>
-<p><a href="http://ssh.jcabi.com/index.html" class="externalLink">jcabi-ssh</a> &#x2014;
-Simple SSH Client.</p>
-<p><a href="http://ssl.jcabi.com/index.html" class="externalLink">jcabi-ssl-maven-plugin</a> &#x2014;
-SSL keystore generator Maven reactor.</p>
-<p><a href="http://skin.jcabi.com/index.html" class="externalLink">jcabi-maven-skin</a> &#x2014;
-Maven Skin, used in this website and many others.</p>
-<p><a href="http://slf4j.jcabi.com/index.html" class="externalLink">jcabi-maven-slf4j</a> &#x2014;
-Maven Log binding for SLF4J.</p>
-<p><a href="http://mysql.jcabi.com/index.html" class="externalLink">jcabi-mysql-maven-plugin</a> &#x2014;
-Maven Plugin for MySQL Integration Testing.</p>
-<p><a href="http://simpledb.jcabi.com/index.html" class="externalLink">jcabi-simpledb</a> &#x2014;
-Object Layer on top of AWS SimpleDB.</p>
-<p><a href="http://urn.jcabi.com/index.html" class="externalLink">jcabi-urn</a> &#x2014;
-Java implementation of Uniform Resource Name (URN).</p>
-<p><a href="http://velocity.jcabi.com/index.html" class="externalLink">jcabi-velocity</a> &#x2014;
-simple wrapper of <a href="http://velocity.apache.org/" class="externalLink">Apache Velocity</a>.</p>
-<p><a href="http://w3c.jcabi.com/index.html" class="externalLink">jcabi-w3c</a> &#x2014;
-adapters to W3C online HTML/CSS validation service.</p>
-<p><a href="http://xml.jcabi.com/index.html" class="externalLink">jcabi-xml</a> &#x2014;
-XML Parsing and Printing made easy.</p>
-<p>Besides that,
-<a href="http://parent.jcabi.com/index.html" class="externalLink">com.jcabi:parent</a>
-is a very useful generic parent Maven <code>pom.xml</code>.</p>
-<p><a href="http://www.jetbrains.com/" class="externalLink">JetBrains</a> is supporting
-us with its powerful IDE.
-We highly recommend to use <a href="http://www.jetbrains.com/" class="externalLink">IntelliJ IDEA</a>
-for Java development.</p>
-<p><a href="http://www.yourkit.com/" class="externalLink">YourKit</a> is kindly supporting
-us with its full-featured Java Profiler. We highly recommend to use
-it for profiling of your Java apps.</p>
-<p>Also, there are a few projects in incubator now:</p>
-<p><a href="http://www.xembly.org/index.html" class="externalLink">xembly</a> &#x2014;
-Imperative Assembly-like XML modification language and library.</p>
-<p><a href="http://www.phandom.org/index.html" class="externalLink">phandom</a> &#x2014;
-Java DOM manipulations powered by PhantomJS.</p></section>
+                            
+<script>
+function toggleDisplay(elementId) {
+ var elm = document.getElementById(elementId + '-error');
+ if (elm == null) {
+  elm = document.getElementById(elementId + '-failure');
+ }
+ if (elm && typeof elm.style != "undefined") {
+  if (elm.style.display == "none") {
+   elm.style.display = "";
+   document.getElementById(elementId + '-off').style.display = "none";
+   document.getElementById(elementId + '-on').style.display = "inline";
+  } else if (elm.style.display == "") {   elm.style.display = "none";
+   document.getElementById(elementId + '-off').style.display = "inline";
+   document.getElementById(elementId + '-on').style.display = "none";
+  }
+ }
+ }
+</script>
+<section><a id="Surefire_Report"></a>
+<h1>Surefire Report</h1><section><a id="Summary"></a>
+<h2>Summary</h2><br />
+<table class="bodyTable">
+<tr class="a">
+<th>Tests</th>
+<th>Errors</th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>0 s</td></tr></table><br />
+<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section></section>
                         </article>
                     </div>
                 </main>
