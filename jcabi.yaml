@@ -2,11 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - The value of 'who' can't be nil
+  - 'Judge quality-of-service stopped by timeout after 10m: execution expired'
   inserted: 8
-  seconds: 892.213931995
+  seconds: 866.84015717
   version: 0.53.6
   what: judges-summary
-  when: 2025-09-08 04:05:29.810534899 Z
+  when: 2025-09-08 04:55:08.092828477 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -47305,12 +47308,18 @@
   average_build_mttr: -237852
   average_build_success_rate: 0.6562731997030438
   average_issue_lifetime: 2562.0
+  average_pull_files_size: 1.4814814814814814
+  average_pull_hoc_size: 3.5123456790123457
   average_pull_lifetime: 980633.3055555555
+  average_pull_rejection_rate: 0.28159645232815966
+  average_release_commits_size: 13.75
+  average_release_hoc_size: 47.0
   average_release_interval: 1207688.75
   average_review_size: 0.0
   average_review_time: 0
   average_reviewers_per_pull: 0.0
   average_reviews_per_pull: 0.0
+  average_triage_time: 62754.5
   since: 2025-04-28 06:16:02.806649605 Z
   what: quality-of-service
   when: 2025-05-05 06:16:02.806612185 Z
@@ -60142,747 +60151,6 @@
   when: &1418 2015-01-27 21:11:33.000000000 Z
   where: github
   who: 8086956
-- _id: 470831
-  _job: 32639
-  _time: 2025-08-11 13:29:40.878332807 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#372 has been opened by @pnatashap.
-  is_human: 1
-  issue: 372
-  repository: 14093966
-  stale: 'branch #372'
-  what: pull-was-opened
-  when: 2024-02-18 02:03:48.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470832
-  _job: 32639
-  _time: 2025-08-11 13:29:41.087454796 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The issue jcabi/jcabi-s3#373 has been opened by @pnatashap.
-  is_human: 1
-  issue: 373
-  repository: 14093966
-  stale: 'user #19815413'
-  what: issue-was-opened
-  when: 2024-02-18 13:25:18.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470833
-  _job: 32639
-  _time: 2025-08-11 13:29:41.290950623 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The issue jcabi/jcabi-s3#374 has been opened by @pnatashap.
-  is_human: 1
-  issue: 374
-  repository: 14093966
-  stale: 'user #19815413'
-  what: issue-was-opened
-  when: 2024-02-18 13:25:58.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470834
-  _job: 32639
-  _time: 2025-08-11 13:29:41.492527198 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The issue jcabi/jcabi-s3#375 has been opened by @pnatashap.
-  is_human: 1
-  issue: 375
-  repository: 14093966
-  stale: 'user #19815413'
-  what: issue-was-opened
-  when: 2024-02-18 13:26:39.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470835
-  _job: 32639
-  _time: 2025-08-11 13:29:41.698454556 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The issue jcabi/jcabi-s3#376 has been opened by @pnatashap.
-  is_human: 1
-  issue: 376
-  repository: 14093966
-  stale: 'user #19815413'
-  what: issue-was-opened
-  when: 2024-02-18 13:28:09.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470836
-  _job: 32639
-  _time: 2025-08-11 13:29:41.902517601 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The issue jcabi/jcabi-s3#377 has been opened by @pnatashap.
-  is_human: 1
-  issue: 377
-  repository: 14093966
-  stale: 'user #19815413'
-  what: issue-was-opened
-  when: 2024-02-18 22:21:52.000000000 Z
-  where: github
-  who: 19815413
-- _id: 470837
-  _job: 32639
-  _time: 2025-08-11 13:29:42.106662829 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#378 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 378
-  repository: 14093966
-  stale: 'branch #378'
-  what: pull-was-opened
-  when: 2024-02-21 00:06:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470838
-  _job: 32639
-  _time: 2025-08-11 13:29:42.307897995 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#379 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 379
-  repository: 14093966
-  stale: 'branch #379'
-  what: pull-was-opened
-  when: 2024-02-22 04:10:33.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470839
-  _job: 32639
-  _time: 2025-08-11 13:29:42.530531997 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#380 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 380
-  repository: 14093966
-  stale: 'branch #380'
-  what: pull-was-opened
-  when: 2024-02-22 23:06:37.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470840
-  _job: 32639
-  _time: 2025-08-11 13:29:42.729044846 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#381 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 381
-  repository: 14093966
-  stale: 'branch #381'
-  what: pull-was-opened
-  when: 2024-02-23 09:53:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470841
-  _job: 32639
-  _time: 2025-08-11 13:29:42.934392416 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#382 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 382
-  repository: 14093966
-  stale: 'branch #382'
-  what: pull-was-opened
-  when: 2024-02-23 13:34:27.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470842
-  _job: 32639
-  _time: 2025-08-11 13:29:43.138849041 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#383 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 383
-  repository: 14093966
-  stale: 'branch #383'
-  what: pull-was-opened
-  when: 2024-02-24 00:59:05.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470843
-  _job: 32639
-  _time: 2025-08-11 13:29:43.342648959 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#384 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 384
-  repository: 14093966
-  stale: 'branch #384'
-  what: pull-was-opened
-  when: 2024-02-27 00:05:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470844
-  _job: 32639
-  _time: 2025-08-11 13:29:43.545323419 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#385 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 385
-  repository: 14093966
-  stale: 'branch #385'
-  what: pull-was-opened
-  when: 2024-02-28 00:13:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470845
-  _job: 32639
-  _time: 2025-08-11 13:29:43.748464949 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#386 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 386
-  repository: 14093966
-  stale: 'branch #386'
-  what: pull-was-opened
-  when: 2024-02-29 01:49:04.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470846
-  _job: 32639
-  _time: 2025-08-11 13:29:43.954648299 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#387 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 387
-  repository: 14093966
-  stale: 'branch #387'
-  what: pull-was-opened
-  when: 2024-02-29 23:03:05.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470847
-  _job: 32639
-  _time: 2025-08-11 13:29:44.156207380 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#388 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 388
-  repository: 14093966
-  stale: 'branch #388'
-  what: pull-was-opened
-  when: 2024-03-02 14:56:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470848
-  _job: 32639
-  _time: 2025-08-11 13:29:44.354952411 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#389 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 389
-  repository: 14093966
-  stale: 'branch #389'
-  what: pull-was-opened
-  when: 2024-03-05 00:43:20.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470849
-  _job: 32639
-  _time: 2025-08-11 13:29:44.562937315 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#390 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 390
-  repository: 14093966
-  stale: 'branch #390'
-  what: pull-was-opened
-  when: 2024-03-06 00:47:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470850
-  _job: 32639
-  _time: 2025-08-11 13:29:44.761448408 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#391 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 391
-  repository: 14093966
-  stale: 'branch #391'
-  what: pull-was-opened
-  when: 2024-03-06 06:43:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470851
-  _job: 32639
-  _time: 2025-08-11 13:29:44.964489747 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#392 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 392
-  repository: 14093966
-  stale: 'branch #392'
-  what: pull-was-opened
-  when: 2024-03-06 23:29:09.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470852
-  _job: 32639
-  _time: 2025-08-11 13:29:45.162550446 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#393 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 393
-  repository: 14093966
-  stale: 'branch #393'
-  what: pull-was-opened
-  when: 2024-03-07 06:54:27.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470853
-  _job: 32639
-  _time: 2025-08-11 13:29:45.360230992 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#394 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 394
-  repository: 14093966
-  stale: 'branch #394'
-  what: pull-was-opened
-  when: 2024-03-08 01:26:05.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470854
-  _job: 32639
-  _time: 2025-08-11 13:29:45.558549299 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#395 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 395
-  repository: 14093966
-  stale: 'branch #395'
-  what: pull-was-opened
-  when: 2024-03-08 23:23:30.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470855
-  _job: 32639
-  _time: 2025-08-11 13:29:45.756501869 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#396 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 396
-  repository: 14093966
-  stale: 'branch #396'
-  what: pull-was-opened
-  when: 2024-03-09 13:25:05.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470856
-  _job: 32639
-  _time: 2025-08-11 13:29:45.954643769 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#397 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 397
-  repository: 14093966
-  stale: 'branch #397'
-  what: pull-was-opened
-  when: 2024-03-11 22:24:15.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470857
-  _job: 32639
-  _time: 2025-08-11 13:29:46.153683119 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#398 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 398
-  repository: 14093966
-  stale: 'branch #398'
-  what: pull-was-opened
-  when: 2024-03-13 01:02:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470858
-  _job: 32639
-  _time: 2025-08-11 13:29:46.352560854 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#399 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 399
-  repository: 14093966
-  stale: 'branch #399'
-  what: pull-was-opened
-  when: 2024-03-13 22:05:04.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470859
-  _job: 32639
-  _time: 2025-08-11 13:29:46.551861188 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#400 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 400
-  repository: 14093966
-  stale: 'branch #400'
-  what: pull-was-opened
-  when: 2024-03-13 22:05:09.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470860
-  _job: 32639
-  _time: 2025-08-11 13:29:46.753143356 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#401 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 401
-  repository: 14093966
-  stale: 'branch #401'
-  what: pull-was-opened
-  when: 2024-03-14 22:06:08.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470861
-  _job: 32639
-  _time: 2025-08-11 13:29:46.956086125 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#402 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 402
-  repository: 14093966
-  stale: 'branch #402'
-  what: pull-was-opened
-  when: 2024-03-15 22:37:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470862
-  _job: 32639
-  _time: 2025-08-11 13:29:47.158115579 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#403 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 403
-  repository: 14093966
-  stale: 'branch #403'
-  what: pull-was-opened
-  when: 2024-03-18 21:31:52.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470863
-  _job: 32639
-  _time: 2025-08-11 13:29:47.358444145 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#404 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 404
-  repository: 14093966
-  stale: 'branch #404'
-  what: pull-was-opened
-  when: 2024-03-18 21:50:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470864
-  _job: 32639
-  _time: 2025-08-11 13:29:47.561746609 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#405 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 405
-  repository: 14093966
-  stale: 'branch #405'
-  what: pull-was-opened
-  when: 2024-03-20 01:24:02.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470865
-  _job: 32639
-  _time: 2025-08-11 13:29:47.770866031 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#406 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 406
-  repository: 14093966
-  stale: 'branch #406'
-  what: pull-was-opened
-  when: 2024-03-20 01:24:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470866
-  _job: 32639
-  _time: 2025-08-11 13:29:47.975900154 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#407 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 407
-  repository: 14093966
-  stale: 'branch #407'
-  what: pull-was-opened
-  when: 2024-03-21 02:35:33.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470867
-  _job: 32639
-  _time: 2025-08-11 13:29:48.176949448 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#408 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 408
-  repository: 14093966
-  stale: 'branch #408'
-  what: pull-was-opened
-  when: 2024-03-22 02:22:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470868
-  _job: 32639
-  _time: 2025-08-11 13:29:48.379936162 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#409 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 409
-  repository: 14093966
-  stale: 'branch #409'
-  what: pull-was-opened
-  when: 2024-03-29 00:24:46.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470869
-  _job: 32639
-  _time: 2025-08-11 13:29:48.582586327 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#410 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 410
-  repository: 14093966
-  stale: 'branch #410'
-  what: pull-was-opened
-  when: 2024-05-02 15:55:00.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470870
-  _job: 32639
-  _time: 2025-08-11 13:29:48.787883508 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#411 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 411
-  repository: 14093966
-  stale: 'branch #411'
-  what: pull-was-opened
-  when: 2024-05-31 23:28:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470871
-  _job: 32639
-  _time: 2025-08-11 13:29:48.995333931 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#412 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 412
-  repository: 14093966
-  stale: 'branch #412'
-  what: pull-was-opened
-  when: 2024-06-28 01:11:48.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470872
-  _job: 32639
-  _time: 2025-08-11 13:29:49.198514650 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#413 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 413
-  repository: 14093966
-  stale: 'branch #413'
-  what: pull-was-opened
-  when: 2024-07-17 23:13:58.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470873
-  _job: 32639
-  _time: 2025-08-11 13:29:49.401792832 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#414 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 414
-  repository: 14093966
-  stale: 'branch #414'
-  what: pull-was-opened
-  when: 2024-08-01 10:52:00.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470874
-  _job: 32639
-  _time: 2025-08-11 13:29:49.602698319 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#415 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 415
-  repository: 14093966
-  stale: 'branch #415'
-  what: pull-was-opened
-  when: 2024-08-06 23:33:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470875
-  _job: 32639
-  _time: 2025-08-11 13:29:49.805079994 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#416 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 416
-  repository: 14093966
-  stale: 'branch #416'
-  what: pull-was-opened
-  when: 2024-08-07 18:47:43.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470876
-  _job: 32639
-  _time: 2025-08-11 13:29:50.012486363 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#417 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 417
-  repository: 14093966
-  stale: 'branch #417'
-  what: pull-was-opened
-  when: 2024-08-08 17:38:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470877
-  _job: 32639
-  _time: 2025-08-11 13:29:50.215235408 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#418 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 418
-  repository: 14093966
-  stale: 'branch #418'
-  what: pull-was-opened
-  when: 2024-08-10 13:46:11.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470878
-  _job: 32639
-  _time: 2025-08-11 13:29:50.419152979 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#419 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 419
-  repository: 14093966
-  stale: 'branch #419'
-  what: pull-was-opened
-  when: 2024-08-17 01:20:31.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470879
-  _job: 32639
-  _time: 2025-08-11 13:29:50.622253562 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#420 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 420
-  repository: 14093966
-  stale: 'branch #420'
-  what: pull-was-opened
-  when: 2024-08-22 13:42:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470880
-  _job: 32639
-  _time: 2025-08-11 13:29:50.826817889 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#422 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 422
-  repository: 14093966
-  stale: 'branch #422'
-  what: pull-was-opened
-  when: 2024-09-23 22:45:21.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470881
-  _job: 32639
-  _time: 2025-08-11 13:29:51.027953871 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#423 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 423
-  repository: 14093966
-  stale: 'branch #423'
-  what: pull-was-opened
-  when: 2024-09-26 19:11:55.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470882
-  _job: 32639
-  _time: 2025-08-11 13:29:51.229660297 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#424 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 424
-  repository: 14093966
-  stale: 'branch #424'
-  what: pull-was-opened
-  when: 2024-11-14 20:16:54.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470883
-  _job: 32639
-  _time: 2025-08-11 13:29:51.431797732 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#425 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 425
-  repository: 14093966
-  stale: 'branch #425'
-  what: pull-was-opened
-  when: 2024-11-15 00:04:41.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470884
-  _job: 32639
-  _time: 2025-08-11 13:29:51.634918902 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#426 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 426
-  repository: 14093966
-  stale: 'branch #426'
-  what: pull-was-opened
-  when: 2024-11-15 20:03:46.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470885
-  _job: 32639
-  _time: 2025-08-11 13:29:51.835998266 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#427 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 427
-  repository: 14093966
-  stale: 'branch #427'
-  what: pull-was-opened
-  when: 2024-12-16 23:29:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470886
-  _job: 32639
-  _time: 2025-08-11 13:29:52.037727204 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#428 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 428
-  repository: 14093966
-  stale: 'branch #428'
-  what: pull-was-opened
-  when: 2025-01-30 15:03:17.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470887
-  _job: 32639
-  _time: 2025-08-11 13:29:52.239595268 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-s3#429 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 429
-  repository: 14093966
-  stale: 'branch #429'
-  what: pull-was-opened
-  when: 2025-02-25 19:42:57.000000000 Z
-  where: github
-  who: 29139614
 - _id: 470889
   _job: 32639
   _time: 2025-08-11 13:29:52.643129008 Z
@@ -61225,29 +60493,6 @@
   when: &1428 2017-07-23 19:46:07.000000000 Z
   where: github
   who: 8086956
-- _id: 470919
-  _job: 32639
-  _time: 2025-08-11 13:29:58.708667229 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: hash61
-  comments: 44
-  comments_appreciated: 0
-  comments_by_author: 7
-  comments_by_reviewers: 37
-  comments_resolved: 0
-  comments_to_code: 25
-  details: Apparently, jcabi/jcabi-xml#69 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 254
-  is_human: 1
-  issue: 69
-  repository: 13717355
-  stale: 'user #1182139'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-10-10 13:46:49.000000000 Z
-  where: github
-  who: 1182139
 - _id: 470921
   _job: 32639
   _time: 2025-08-11 13:29:59.117005123 Z
@@ -61316,851 +60561,6 @@
   when: &1430 2017-07-29 18:01:41.000000000 Z
   where: github
   who: 8086956
-- _id: 470926
-  _job: 32639
-  _time: 2025-08-11 13:30:00.125363356 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#514 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 514
-  repository: 12590813
-  stale: 'branch #514'
-  what: pull-was-opened
-  when: 2024-08-19 14:18:18.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470927
-  _job: 32639
-  _time: 2025-08-11 13:30:00.324517108 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#515 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 515
-  repository: 12590813
-  stale: 'branch #515'
-  what: pull-was-opened
-  when: 2024-08-21 22:39:43.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470928
-  _job: 32639
-  _time: 2025-08-11 13:30:00.523815480 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#516 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 516
-  repository: 12590813
-  stale: 'branch #516'
-  what: pull-was-opened
-  when: 2024-08-21 22:39:46.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470929
-  _job: 32639
-  _time: 2025-08-11 13:30:00.724383430 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#517 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 517
-  repository: 12590813
-  stale: 'branch #517'
-  what: pull-was-opened
-  when: 2024-08-22 12:09:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470930
-  _job: 32639
-  _time: 2025-08-11 13:30:00.924510515 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#518 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 518
-  repository: 12590813
-  stale: 'branch #518'
-  what: pull-was-opened
-  when: 2024-08-22 12:09:48.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470931
-  _job: 32639
-  _time: 2025-08-11 13:30:01.126457729 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#519 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 519
-  repository: 12590813
-  stale: 'branch #519'
-  what: pull-was-opened
-  when: 2024-08-22 13:13:59.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470932
-  _job: 32639
-  _time: 2025-08-11 13:30:01.326437901 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#520 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 520
-  repository: 12590813
-  stale: 'branch #520'
-  what: pull-was-opened
-  when: 2024-08-22 16:45:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470933
-  _job: 32639
-  _time: 2025-08-11 13:30:01.527718675 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#521 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 521
-  repository: 12590813
-  stale: 'branch #521'
-  what: pull-was-opened
-  when: 2024-08-27 16:28:36.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470934
-  _job: 32639
-  _time: 2025-08-11 13:30:01.730420623 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#522 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 522
-  repository: 12590813
-  stale: 'branch #522'
-  what: pull-was-opened
-  when: 2024-08-27 16:28:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470935
-  _job: 32639
-  _time: 2025-08-11 13:30:01.932444714 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#523 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 523
-  repository: 12590813
-  stale: 'branch #523'
-  what: pull-was-opened
-  when: 2024-08-27 17:01:24.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470936
-  _job: 32639
-  _time: 2025-08-11 13:30:02.135564747 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#524 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 524
-  repository: 12590813
-  stale: 'branch #524'
-  what: pull-was-opened
-  when: 2024-08-27 17:01:27.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470937
-  _job: 32639
-  _time: 2025-08-11 13:30:02.339088378 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#525 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 525
-  repository: 12590813
-  stale: 'branch #525'
-  what: pull-was-opened
-  when: 2024-08-27 18:04:20.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470938
-  _job: 32639
-  _time: 2025-08-11 13:30:02.542286417 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#526 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 526
-  repository: 12590813
-  stale: 'branch #526'
-  what: pull-was-opened
-  when: 2024-08-27 18:04:24.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470939
-  _job: 32639
-  _time: 2025-08-11 13:30:02.755024574 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#527 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 527
-  repository: 12590813
-  stale: 'branch #527'
-  what: pull-was-opened
-  when: 2024-08-27 19:04:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470940
-  _job: 32639
-  _time: 2025-08-11 13:30:02.959906518 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#528 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 528
-  repository: 12590813
-  stale: 'branch #528'
-  what: pull-was-opened
-  when: 2024-08-28 22:41:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470941
-  _job: 32639
-  _time: 2025-08-11 13:30:03.166240464 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#529 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 529
-  repository: 12590813
-  stale: 'branch #529'
-  what: pull-was-opened
-  when: 2024-08-29 22:04:07.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470942
-  _job: 32639
-  _time: 2025-08-11 13:30:03.444707073 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#530 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 530
-  repository: 12590813
-  stale: 'branch #530'
-  what: pull-was-opened
-  when: 2024-09-03 01:40:25.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470943
-  _job: 32639
-  _time: 2025-08-11 13:30:03.646266772 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#531 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 531
-  repository: 12590813
-  stale: 'branch #531'
-  what: pull-was-opened
-  when: 2024-09-03 11:25:46.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470944
-  _job: 32639
-  _time: 2025-08-11 13:30:03.848031119 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#532 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 532
-  repository: 12590813
-  stale: 'branch #532'
-  what: pull-was-opened
-  when: 2024-09-05 22:54:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470945
-  _job: 32639
-  _time: 2025-08-11 13:30:04.050033707 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#533 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 533
-  repository: 12590813
-  stale: 'branch #533'
-  what: pull-was-opened
-  when: 2024-09-12 08:21:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470946
-  _job: 32639
-  _time: 2025-08-11 13:30:04.253091459 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#534 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 534
-  repository: 12590813
-  stale: 'branch #534'
-  what: pull-was-opened
-  when: 2024-09-14 20:14:52.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470947
-  _job: 32639
-  _time: 2025-08-11 13:30:04.455658567 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#535 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 535
-  repository: 12590813
-  stale: 'branch #535'
-  what: pull-was-opened
-  when: 2024-09-18 22:58:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470948
-  _job: 32639
-  _time: 2025-08-11 13:30:04.662563440 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#536 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 536
-  repository: 12590813
-  stale: 'branch #536'
-  what: pull-was-opened
-  when: 2024-09-23 23:34:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470949
-  _job: 32639
-  _time: 2025-08-11 13:30:04.868338352 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#537 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 537
-  repository: 12590813
-  stale: 'branch #537'
-  what: pull-was-opened
-  when: 2024-09-25 08:30:52.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470950
-  _job: 32639
-  _time: 2025-08-11 13:30:05.073753295 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#538 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 538
-  repository: 12590813
-  stale: 'branch #538'
-  what: pull-was-opened
-  when: 2024-09-26 19:07:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470951
-  _job: 32639
-  _time: 2025-08-11 13:30:05.278194916 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#539 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 539
-  repository: 12590813
-  stale: 'branch #539'
-  what: pull-was-opened
-  when: 2024-09-27 16:39:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470952
-  _job: 32639
-  _time: 2025-08-11 13:30:05.486975368 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#540 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 540
-  repository: 12590813
-  stale: 'branch #540'
-  what: pull-was-opened
-  when: 2024-09-27 16:39:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470953
-  _job: 32639
-  _time: 2025-08-11 13:30:05.689972391 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#541 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 541
-  repository: 12590813
-  stale: 'branch #541'
-  what: pull-was-opened
-  when: 2024-09-30 13:52:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470954
-  _job: 32639
-  _time: 2025-08-11 13:30:05.890646158 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#542 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 542
-  repository: 12590813
-  stale: 'branch #542'
-  what: pull-was-opened
-  when: 2024-10-01 10:32:59.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470955
-  _job: 32639
-  _time: 2025-08-11 13:30:06.092298666 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#543 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 543
-  repository: 12590813
-  stale: 'branch #543'
-  what: pull-was-opened
-  when: 2024-10-01 10:33:02.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470956
-  _job: 32639
-  _time: 2025-08-11 13:30:06.294663894 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#544 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 544
-  repository: 12590813
-  stale: 'branch #544'
-  what: pull-was-opened
-  when: 2024-10-02 17:16:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470957
-  _job: 32639
-  _time: 2025-08-11 13:30:06.497904429 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#545 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 545
-  repository: 12590813
-  stale: 'branch #545'
-  what: pull-was-opened
-  when: 2024-10-02 19:09:31.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470958
-  _job: 32639
-  _time: 2025-08-11 13:30:06.698859545 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#546 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 546
-  repository: 12590813
-  stale: 'branch #546'
-  what: pull-was-opened
-  when: 2024-10-04 15:57:01.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470959
-  _job: 32639
-  _time: 2025-08-11 13:30:06.902636570 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#547 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 547
-  repository: 12590813
-  stale: 'branch #547'
-  what: pull-was-opened
-  when: 2024-10-06 10:21:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470960
-  _job: 32639
-  _time: 2025-08-11 13:30:07.104452035 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#548 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 548
-  repository: 12590813
-  stale: 'branch #548'
-  what: pull-was-opened
-  when: 2024-10-06 11:47:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470961
-  _job: 32639
-  _time: 2025-08-11 13:30:07.308119617 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#549 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 549
-  repository: 12590813
-  stale: 'branch #549'
-  what: pull-was-opened
-  when: 2024-10-07 14:08:30.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470962
-  _job: 32639
-  _time: 2025-08-11 13:30:07.509049120 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#550 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 550
-  repository: 12590813
-  stale: 'branch #550'
-  what: pull-was-opened
-  when: 2024-10-15 15:26:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470963
-  _job: 32639
-  _time: 2025-08-11 13:30:07.710695922 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#551 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 551
-  repository: 12590813
-  stale: 'branch #551'
-  what: pull-was-opened
-  when: 2024-10-21 17:02:54.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470964
-  _job: 32639
-  _time: 2025-08-11 13:30:07.912673931 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#552 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 552
-  repository: 12590813
-  stale: 'branch #552'
-  what: pull-was-opened
-  when: 2024-10-21 19:25:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470965
-  _job: 32639
-  _time: 2025-08-11 13:30:08.115036962 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#553 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 553
-  repository: 12590813
-  stale: 'branch #553'
-  what: pull-was-opened
-  when: 2024-10-21 19:25:41.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470966
-  _job: 32639
-  _time: 2025-08-11 13:30:08.319952067 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#554 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 554
-  repository: 12590813
-  stale: 'branch #554'
-  what: pull-was-opened
-  when: 2024-10-21 20:51:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470967
-  _job: 32639
-  _time: 2025-08-11 13:30:08.524689900 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#555 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 555
-  repository: 12590813
-  stale: 'branch #555'
-  what: pull-was-opened
-  when: 2024-10-22 08:13:51.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470968
-  _job: 32639
-  _time: 2025-08-11 13:30:08.733288052 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#556 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 556
-  repository: 12590813
-  stale: 'branch #556'
-  what: pull-was-opened
-  when: 2024-10-25 17:27:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470969
-  _job: 32639
-  _time: 2025-08-11 13:30:08.940964763 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#557 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 557
-  repository: 12590813
-  stale: 'branch #557'
-  what: pull-was-opened
-  when: 2024-10-25 17:27:17.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470970
-  _job: 32639
-  _time: 2025-08-11 13:30:09.142566837 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#558 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 558
-  repository: 12590813
-  stale: 'branch #558'
-  what: pull-was-opened
-  when: 2024-10-25 18:08:59.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470971
-  _job: 32639
-  _time: 2025-08-11 13:30:09.346902710 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#559 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 559
-  repository: 12590813
-  stale: 'branch #559'
-  what: pull-was-opened
-  when: 2024-10-25 18:09:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470972
-  _job: 32639
-  _time: 2025-08-11 13:30:09.551839008 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#560 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 560
-  repository: 12590813
-  stale: 'branch #560'
-  what: pull-was-opened
-  when: 2024-10-29 12:39:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470973
-  _job: 32639
-  _time: 2025-08-11 13:30:09.755647077 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#561 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 561
-  repository: 12590813
-  stale: 'branch #561'
-  what: pull-was-opened
-  when: 2024-10-29 17:29:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470974
-  _job: 32639
-  _time: 2025-08-11 13:30:09.958340610 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#562 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 562
-  repository: 12590813
-  stale: 'branch #562'
-  what: pull-was-opened
-  when: 2024-11-02 22:37:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470975
-  _job: 32639
-  _time: 2025-08-11 13:30:10.163722986 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#563 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 563
-  repository: 12590813
-  stale: 'branch #563'
-  what: pull-was-opened
-  when: 2024-11-02 22:37:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470976
-  _job: 32639
-  _time: 2025-08-11 13:30:10.371561314 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#564 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 564
-  repository: 12590813
-  stale: 'branch #564'
-  what: pull-was-opened
-  when: 2024-11-02 23:49:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470977
-  _job: 32639
-  _time: 2025-08-11 13:30:10.623645207 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#565 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 565
-  repository: 12590813
-  stale: 'branch #565'
-  what: pull-was-opened
-  when: 2024-11-02 23:49:42.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470978
-  _job: 32639
-  _time: 2025-08-11 13:30:10.828466228 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#566 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 566
-  repository: 12590813
-  stale: 'branch #566'
-  what: pull-was-opened
-  when: 2024-11-08 07:27:29.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470979
-  _job: 32639
-  _time: 2025-08-11 13:30:11.030112517 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#567 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 567
-  repository: 12590813
-  stale: 'branch #567'
-  what: pull-was-opened
-  when: 2024-11-12 23:38:22.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470980
-  _job: 32639
-  _time: 2025-08-11 13:30:11.233242638 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#568 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 568
-  repository: 12590813
-  stale: 'branch #568'
-  what: pull-was-opened
-  when: 2024-11-14 12:11:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470981
-  _job: 32639
-  _time: 2025-08-11 13:30:11.437692772 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#569 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 569
-  repository: 12590813
-  stale: 'branch #569'
-  what: pull-was-opened
-  when: 2024-11-14 21:59:01.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470982
-  _job: 32639
-  _time: 2025-08-11 13:30:11.650015293 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#570 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 570
-  repository: 12590813
-  stale: 'branch #570'
-  what: pull-was-opened
-  when: 2024-11-15 21:55:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470983
-  _job: 32639
-  _time: 2025-08-11 13:30:11.864476701 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#571 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 571
-  repository: 12590813
-  stale: 'branch #571'
-  what: pull-was-opened
-  when: 2024-11-20 22:07:07.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470984
-  _job: 32639
-  _time: 2025-08-11 13:30:12.075084885 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#572 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 572
-  repository: 12590813
-  stale: 'branch #572'
-  what: pull-was-opened
-  when: 2024-12-02 04:34:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470985
-  _job: 32639
-  _time: 2025-08-11 13:30:12.285191833 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#574 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 574
-  repository: 12590813
-  stale: 'branch #574'
-  what: pull-was-opened
-  when: 2024-12-05 14:01:07.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470986
-  _job: 32639
-  _time: 2025-08-11 13:30:12.493081282 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#583 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 583
-  repository: 12590813
-  stale: 'branch #583'
-  what: pull-was-opened
-  when: 2025-01-29 14:52:35.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470987
-  _job: 32639
-  _time: 2025-08-11 13:30:12.707386682 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#631 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 631
-  repository: 12590813
-  stale: 'branch #631'
-  what: pull-was-opened
-  when: 2025-06-05 01:32:05.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470988
-  _job: 32639
-  _time: 2025-08-11 13:30:12.917233312 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#632 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 632
-  repository: 12590813
-  stale: 'branch #632'
-  what: pull-was-opened
-  when: 2025-06-07 10:43:02.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470989
-  _job: 32639
-  _time: 2025-08-11 13:30:13.121614996 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#633 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 633
-  repository: 12590813
-  stale: 'branch #633'
-  what: pull-was-opened
-  when: 2025-06-13 19:06:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 470990
-  _job: 32639
-  _time: 2025-08-11 13:30:13.324357215 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  details: The pull jcabi/jcabi-parent#643 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 643
-  repository: 12590813
-  stale: 'branch #643'
-  what: pull-was-opened
-  when: 2025-07-09 22:58:58.000000000 Z
-  where: github
-  who: 29139614
 - _id: 470992
   _job: 32639
   _time: 2025-08-11 13:30:13.731093537 Z
@@ -62252,28 +60652,6 @@
   when: &1433 2018-01-24 14:00:54.000000000 Z
   where: github
   who: 526301
-- _id: 470999
-  _job: 32639
-  _time: 2025-08-11 13:30:15.156039775 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-1
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#75 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 10
-  issue: 75
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-20 16:18:12.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471000
   _job: 32639
   _time: 2025-08-11 13:30:15.358014599 Z
@@ -62365,51 +60743,6 @@
   when: *351
   where: github
   who: 8086956
-- _id: 471007
-  _job: 32639
-  _time: 2025-08-11 13:30:16.803472885 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-2
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#76 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 7
-  issue: 76
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-20 16:39:19.000000000 Z
-  where: github
-  who: 15944964
-- _id: 471009
-  _job: 32639
-  _time: 2025-08-11 13:30:17.212396552 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: bug/issue-46
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-jdbc#58 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 1409
-  is_human: 1
-  issue: 58
-  repository: 12587702
-  stale: 'user #8526099'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2019-12-22 03:32:59.000000000 Z
-  where: github
-  who: 8526099
 - _id: 471010
   _job: 32639
   _time: 2025-08-11 13:30:17.415207371 Z
@@ -62433,74 +60766,6 @@
   when: &1436 2014-07-09 07:51:39.000000000 Z
   where: github
   who: 8086956
-- _id: 471012
-  _job: 32639
-  _time: 2025-08-11 13:30:17.822939726 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: master
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#77 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 9
-  issue: 77
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-20 16:52:10.000000000 Z
-  where: github
-  who: 15944964
-- _id: 471014
-  _job: 32639
-  _time: 2025-08-11 13:30:18.248926710 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: master
-  comments: 4
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#82 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 2
-  is_human: 1
-  issue: 82
-  repository: 12590813
-  stale: 'user #10466206'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2018-08-12 10:24:11.000000000 Z
-  where: github
-  who: 10466206
-- _id: 471016
-  _job: 32639
-  _time: 2025-08-11 13:30:18.660218973 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: feature/issue-57
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-jdbc#59 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 33
-  is_human: 1
-  issue: 59
-  repository: 12587702
-  stale: 'user #8526099'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2019-12-19 11:28:03.000000000 Z
-  where: github
-  who: 8526099
 - _id: 471017
   _job: 32639
   _time: 2025-08-11 13:30:18.863661295 Z
@@ -62524,28 +60789,6 @@
   when: &1437 2014-07-10 10:53:32.000000000 Z
   where: github
   who: 8086956
-- _id: 471019
-  _job: 32639
-  _time: 2025-08-11 13:30:19.271050101 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: master
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#78 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 9
-  issue: 78
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-20 17:26:27.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471023
   _job: 32639
   _time: 2025-08-11 13:30:20.103298485 Z
@@ -62592,28 +60835,6 @@
   when: &1439 2014-07-23 11:04:22.000000000 Z
   where: github
   who: 8086956
-- _id: 471025
-  _job: 32639
-  _time: 2025-08-11 13:30:20.536530874 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: imrandurranee-patch-1
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#79 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 13
-  issue: 79
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-20 17:26:18.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471026
   _job: 32639
   _time: 2025-08-11 13:30:20.746140645 Z
@@ -62660,51 +60881,6 @@
   when: &1441 2018-04-25 20:01:41.000000000 Z
   where: github
   who: 8086956
-- _id: 471031
-  _job: 32639
-  _time: 2025-08-11 13:30:21.765876416 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: fix-xcop-on-windows
-  comments: 4
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#89 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 9
-  is_human: 1
-  issue: 89
-  repository: 12590813
-  stale: 'user #34595022'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2019-05-21 16:36:23.000000000 Z
-  where: github
-  who: 34595022
-- _id: 471032
-  _job: 32639
-  _time: 2025-08-11 13:30:21.973739265 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-2
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#80 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 7
-  issue: 80
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 16:15:00.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471033
   _job: 32639
   _time: 2025-08-11 13:30:22.177475374 Z
@@ -62774,28 +60950,6 @@
   when: &1444 2019-05-21 16:07:12.000000000 Z
   where: github
   who: 8086956
-- _id: 471039
-  _job: 32639
-  _time: 2025-08-11 13:30:23.405191277 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-4
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#81 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 12
-  issue: 81
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 16:14:38.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471040
   _job: 32639
   _time: 2025-08-11 13:30:23.613103647 Z
@@ -62835,29 +60989,6 @@
   total_stars: 2194
   what: dimensions-of-terrain
   when: 2025-07-18 15:44:49.092359587 Z
-- _id: 471042
-  _job: 32639
-  _time: 2025-08-11 13:31:28.727991662 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-3
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#82 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 14
-  is_human: 1
-  issue: 82
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 16:18:34.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471046
   _job: 32639
   _time: 2025-08-11 13:31:29.540281844 Z
@@ -62881,52 +61012,6 @@
   when: &1446 2018-12-25 14:03:36.000000000 Z
   where: github
   who: 8086956
-- _id: 471048
-  _job: 32639
-  _time: 2025-08-11 13:31:29.952849565 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: '82'
-  comments: 38
-  comments_appreciated: 0
-  comments_by_author: 13
-  comments_by_reviewers: 25
-  comments_resolved: 0
-  comments_to_code: 16
-  details: Apparently, jcabi/jcabi-http#83 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 104
-  is_human: 1
-  issue: 83
-  repository: 16312153
-  stale: 'user #9972909'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-05-04 07:52:07.000000000 Z
-  where: github
-  who: 9972909
-- _id: 471049
-  _job: 32639
-  _time: 2025-08-11 13:31:30.150066242 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-5
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#83 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 45
-  is_human: 1
-  issue: 83
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 16:44:11.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471051
   _job: 32639
   _time: 2025-08-11 13:31:30.551105147 Z
@@ -62996,52 +61081,6 @@
   when: &1449 2015-05-21 23:06:06.000000000 Z
   where: github
   who: 8086956
-- _id: 471056
-  _job: 32639
-  _time: 2025-08-11 13:31:31.572691853 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-6
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#84 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 60
-  is_human: 1
-  issue: 84
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 16:56:25.000000000 Z
-  where: github
-  who: 15944964
-- _id: 471059
-  _job: 32639
-  _time: 2025-08-11 13:31:32.194317340 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  branch: patch-7
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-xml#85 has been 'pull-was-closed'.
-  failed_builds: 0
-  hoc: 59
-  is_human: 1
-  issue: 85
-  repository: 13717355
-  stale: 'user #15944964'
-  succeeded_builds: 0
-  what: pull-was-closed
-  when: 2015-11-25 17:04:47.000000000 Z
-  where: github
-  who: 15944964
 - _id: 471060
   _job: 32639
   _time: 2025-08-11 13:31:32.404308470 Z
@@ -113142,104 +111181,6 @@
   when: 2022-11-03 14:40:15.000000000 Z
   where: github
   who: 29139614
-- _id: 549932
-  _job: 36633
-  _time: 2025-09-07 17:48:15.948121432 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#202 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 202
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:38.355480433 Z
-  what: pull-was-opened
-  when: 2023-05-02 16:10:52.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549933
-  _job: 36633
-  _time: 2025-09-07 17:48:16.160695627 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#203 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 203
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:38.873080741 Z
-  what: pull-was-opened
-  when: 2023-05-25 00:49:41.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549934
-  _job: 36633
-  _time: 2025-09-07 17:48:16.375041225 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#204 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 204
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:38.976137785 Z
-  what: pull-was-opened
-  when: 2023-05-27 01:21:12.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549935
-  _job: 36633
-  _time: 2025-09-07 17:48:16.586239594 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#207 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 207
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:39.488297489 Z
-  what: pull-was-opened
-  when: 2023-06-09 02:27:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549936
-  _job: 36633
-  _time: 2025-09-07 17:48:16.799750388 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#208 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 208
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:39.909310605 Z
-  what: pull-was-opened
-  when: 2023-06-29 21:18:27.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549937
-  _job: 36633
-  _time: 2025-09-07 17:48:17.018430476 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#209 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 209
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.116827865 Z
-  what: pull-was-opened
-  when: 2023-06-30 17:39:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549938
-  _job: 36633
-  _time: 2025-09-07 17:48:17.232118727 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#210 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 210
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.448523504 Z
-  what: pull-was-opened
-  when: 2023-07-04 16:39:55.000000000 Z
-  where: github
-  who: 29139614
 - _id: 549939
   _job: 36633
   _time: 2025-09-07 17:48:17.444615845 Z
@@ -113279,104 +111220,6 @@
   when: 2023-07-20 12:49:06.000000000 Z
   where: github
   who: 51804353
-- _id: 549942
-  _job: 36633
-  _time: 2025-09-07 17:48:18.059276435 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#217 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 217
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.199999447 Z
-  what: pull-was-opened
-  when: 2023-07-23 13:32:46.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549943
-  _job: 36633
-  _time: 2025-09-07 17:48:18.270731107 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#218 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 218
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.628185143 Z
-  what: pull-was-opened
-  when: 2023-07-28 04:52:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549944
-  _job: 36633
-  _time: 2025-09-07 17:48:18.483762525 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#219 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 219
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.037025634 Z
-  what: pull-was-opened
-  when: 2023-08-01 08:08:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549945
-  _job: 36633
-  _time: 2025-09-07 17:48:18.693755212 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#220 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 220
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.775150966 Z
-  what: pull-was-opened
-  when: 2023-08-07 19:35:28.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549946
-  _job: 36633
-  _time: 2025-09-07 17:48:18.904993759 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#221 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 221
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.297292149 Z
-  what: pull-was-opened
-  when: 2023-08-09 14:26:30.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549947
-  _job: 36633
-  _time: 2025-09-07 17:48:19.115869512 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#222 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 222
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.027784259 Z
-  what: pull-was-opened
-  when: 2023-09-03 19:25:58.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549948
-  _job: 36633
-  _time: 2025-09-07 17:48:19.340380512 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#223 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 223
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.547597251 Z
-  what: pull-was-opened
-  when: 2023-09-04 14:34:44.000000000 Z
-  where: github
-  who: 29139614
 - _id: 549949
   _job: 36633
   _time: 2025-09-07 17:48:19.551939285 Z
@@ -113390,34 +111233,6 @@
   when: 2023-09-14 16:06:06.000000000 Z
   where: github
   who: 29139614
-- _id: 549950
-  _job: 36633
-  _time: 2025-09-07 17:48:19.761223136 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#226 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 226
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.269316224 Z
-  what: pull-was-opened
-  when: 2023-09-20 05:19:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549951
-  _job: 36633
-  _time: 2025-09-07 17:48:19.954261338 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#227 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 227
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.691795810 Z
-  what: pull-was-opened
-  when: 2023-10-10 22:31:44.000000000 Z
-  where: github
-  who: 29139614
 - _id: 549952
   _job: 36633
   _time: 2025-09-07 17:48:20.167021999 Z
@@ -113429,34 +111244,6 @@
   stale: branch
   what: pull-was-opened
   when: 2023-11-22 04:02:42.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549953
-  _job: 36633
-  _time: 2025-09-07 17:48:20.378300870 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#229 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 229
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.110383408 Z
-  what: pull-was-opened
-  when: 2023-11-29 17:01:15.000000000 Z
-  where: github
-  who: 29139614
-- _id: 549954
-  _job: 36633
-  _time: 2025-09-07 17:48:20.589309140 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-xml#230 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 230
-  repository: 13717355
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.426998968 Z
-  what: pull-was-opened
-  when: 2023-11-29 18:21:59.000000000 Z
   where: github
   who: 29139614
 - _id: 549955
@@ -115837,202 +113624,6 @@
   when: 2022-04-13 02:15:28.000000000 Z
   where: github
   who: 49699333
-- _id: 550238
-  _job: 36637
-  _time: 2025-09-07 18:56:32.994985548 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#152 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 152
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.547957343 Z
-  what: pull-was-opened
-  when: 2022-04-14 02:18:44.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550239
-  _job: 36637
-  _time: 2025-09-07 18:56:33.199841123 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#153 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 153
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.969166031 Z
-  what: pull-was-opened
-  when: 2022-04-14 02:18:55.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550240
-  _job: 36637
-  _time: 2025-09-07 18:56:33.405972450 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#154 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 154
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.277686449 Z
-  what: pull-was-opened
-  when: 2022-05-08 00:24:00.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550241
-  _job: 36637
-  _time: 2025-09-07 18:56:33.612666026 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#155 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 155
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.695797208 Z
-  what: pull-was-opened
-  when: 2022-05-08 00:24:05.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550242
-  _job: 36637
-  _time: 2025-09-07 18:56:33.819712294 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#156 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 156
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.998306437 Z
-  what: pull-was-opened
-  when: 2022-05-08 00:37:04.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550243
-  _job: 36637
-  _time: 2025-09-07 18:56:34.025360348 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#157 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 157
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.106712214 Z
-  what: pull-was-opened
-  when: 2022-05-08 00:37:10.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550244
-  _job: 36637
-  _time: 2025-09-07 18:56:34.231477983 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#158 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 158
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.518269555 Z
-  what: pull-was-opened
-  when: 2022-05-20 02:16:44.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550245
-  _job: 36637
-  _time: 2025-09-07 18:56:34.437163179 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#159 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 159
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.933227070 Z
-  what: pull-was-opened
-  when: 2022-05-20 02:16:48.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550246
-  _job: 36637
-  _time: 2025-09-07 18:56:34.642012394 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#160 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 160
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.452599580 Z
-  what: pull-was-opened
-  when: 2022-05-20 02:16:52.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550247
-  _job: 36637
-  _time: 2025-09-07 18:56:34.847578929 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#161 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 161
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.987553864 Z
-  what: pull-was-opened
-  when: 2022-05-20 02:16:55.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550248
-  _job: 36637
-  _time: 2025-09-07 18:56:35.052413371 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#162 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 162
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.508340988 Z
-  what: pull-was-opened
-  when: 2022-06-21 14:54:10.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550249
-  _job: 36637
-  _time: 2025-09-07 18:56:35.257019088 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#163 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 163
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.707115086 Z
-  what: pull-was-opened
-  when: 2022-06-21 14:59:06.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550250
-  _job: 36637
-  _time: 2025-09-07 18:56:35.463151722 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#164 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 164
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.128799441 Z
-  what: pull-was-opened
-  when: 2022-06-22 02:20:33.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550251
-  _job: 36637
-  _time: 2025-09-07 18:56:35.670013765 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#166 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 166
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.648672985 Z
-  what: pull-was-opened
-  when: 2022-06-30 02:20:25.000000000 Z
-  where: github
-  who: 49699333
 - _id: 550252
   _job: 36637
   _time: 2025-09-07 18:56:35.877021290 Z
@@ -116044,34 +113635,6 @@
   stale: branch
   what: pull-was-opened
   when: 2022-06-30 02:20:31.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550253
-  _job: 36637
-  _time: 2025-09-07 18:56:36.081786037 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#168 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 168
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.375565496 Z
-  what: pull-was-opened
-  when: 2022-06-30 02:20:39.000000000 Z
-  where: github
-  who: 49699333
-- _id: 550254
-  _job: 36637
-  _time: 2025-09-07 18:56:36.286367360 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-jdbc#169 has been opened by @dependabot[bot].
-  is_human: 0
-  issue: 169
-  repository: 12587702
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.795570761 Z
-  what: pull-was-opened
-  when: 2022-06-30 02:20:43.000000000 Z
   where: github
   who: 49699333
 - _id: 550255
@@ -121087,48 +118650,6 @@
   when: 2020-12-01 19:39:04.000000000 Z
   where: github
   who: 27856297
-- _id: 550752
-  _job: 36647
-  _time: 2025-09-07 20:50:35.754117455 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#236 has been opened by @andreoss.
-  is_human: 1
-  issue: 236
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.350307681 Z
-  what: pull-was-opened
-  when: 2020-12-03 22:27:01.000000000 Z
-  where: github
-  who: 49783909
-- _id: 550753
-  _job: 36647
-  _time: 2025-09-07 20:50:35.954183415 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#237 has been opened by @andreoss.
-  is_human: 1
-  issue: 237
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.878789317 Z
-  what: pull-was-opened
-  when: 2020-12-03 22:34:33.000000000 Z
-  where: github
-  who: 49783909
-- _id: 550754
-  _job: 36647
-  _time: 2025-09-07 20:50:36.155805819 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#239 has been opened by @andreoss.
-  is_human: 1
-  issue: 239
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.397421987 Z
-  what: pull-was-opened
-  when: 2021-01-18 08:51:56.000000000 Z
-  where: github
-  who: 49783909
 - _id: 550755
   _job: 36647
   _time: 2025-09-07 20:50:36.353400539 Z
@@ -121142,34 +118663,6 @@
   when: 2021-01-20 23:01:13.000000000 Z
   where: github
   who: 49699333
-- _id: 550756
-  _job: 36647
-  _time: 2025-09-07 20:50:36.551731301 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#242 has been opened by @andreoss.
-  is_human: 1
-  issue: 242
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.439112742 Z
-  what: pull-was-opened
-  when: 2021-03-08 03:20:05.000000000 Z
-  where: github
-  who: 49783909
-- _id: 550757
-  _job: 36647
-  _time: 2025-09-07 20:50:36.749481305 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#244 has been opened by @andreoss.
-  is_human: 1
-  issue: 244
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.055308129 Z
-  what: pull-was-opened
-  when: 2021-04-26 05:40:38.000000000 Z
-  where: github
-  who: 49783909
 - _id: 550758
   _job: 36647
   _time: 2025-09-07 20:50:36.947916494 Z
@@ -121222,20 +118715,6 @@
   when: 2021-06-04 01:01:48.000000000 Z
   where: github
   who: 49699333
-- _id: 550762
-  _job: 36647
-  _time: 2025-09-07 20:50:37.742977780 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-http#249 has been opened by @andreoss.
-  is_human: 1
-  issue: 249
-  repository: 16312153
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.628313920 Z
-  what: pull-was-opened
-  when: 2021-06-25 22:01:01.000000000 Z
-  where: github
-  who: 49783909
 - _id: 550763
   _job: 36647
   _time: 2025-09-07 20:50:37.942404724 Z
@@ -123898,370 +121377,6 @@
   when: 2022-09-24 16:58:16.000000000 Z
   where: github
   who: 29139614
-- _id: 551057
-  _job: 36652
-  _time: 2025-09-07 21:46:49.533380174 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#186 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 186
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:37.312696829 Z
-  what: pull-was-opened
-  when: 2022-09-28 11:27:39.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551058
-  _job: 36652
-  _time: 2025-09-07 21:46:49.730354080 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#187 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 187
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:37.729304875 Z
-  what: pull-was-opened
-  when: 2022-09-28 11:27:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551059
-  _job: 36652
-  _time: 2025-09-07 21:46:49.903561578 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#188 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 188
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:38.251388036 Z
-  what: pull-was-opened
-  when: 2022-09-28 20:26:58.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551060
-  _job: 36652
-  _time: 2025-09-07 21:46:50.099030448 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#192 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 192
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:38.771219401 Z
-  what: pull-was-opened
-  when: 2022-10-09 17:53:08.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551061
-  _job: 36652
-  _time: 2025-09-07 21:46:50.275577447 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#193 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 193
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:39.078085608 Z
-  what: pull-was-opened
-  when: 2022-10-21 03:38:35.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551062
-  _job: 36652
-  _time: 2025-09-07 21:46:50.472127842 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#194 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 194
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:39.596641000 Z
-  what: pull-was-opened
-  when: 2022-10-21 18:39:48.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551063
-  _job: 36652
-  _time: 2025-09-07 21:46:50.645754744 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#195 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 195
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.012818327 Z
-  what: pull-was-opened
-  when: 2022-10-23 16:43:37.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551064
-  _job: 36652
-  _time: 2025-09-07 21:46:50.841537642 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#196 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 196
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.218204414 Z
-  what: pull-was-opened
-  when: 2022-11-02 22:04:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551065
-  _job: 36652
-  _time: 2025-09-07 21:46:51.020230584 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#198 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 198
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.752672549 Z
-  what: pull-was-opened
-  when: 2022-11-03 12:26:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551066
-  _job: 36652
-  _time: 2025-09-07 21:46:51.218817335 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#200 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 200
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.173807790 Z
-  what: pull-was-opened
-  when: 2022-11-07 18:44:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551067
-  _job: 36652
-  _time: 2025-09-07 21:46:51.401058534 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#201 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 201
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.592655446 Z
-  what: pull-was-opened
-  when: 2022-11-14 20:05:50.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551068
-  _job: 36652
-  _time: 2025-09-07 21:46:51.607551098 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#202 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 202
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.896467319 Z
-  what: pull-was-opened
-  when: 2022-11-17 21:47:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551069
-  _job: 36652
-  _time: 2025-09-07 21:46:51.787447985 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#203 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 203
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.415567091 Z
-  what: pull-was-opened
-  when: 2022-11-17 22:53:29.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551070
-  _job: 36652
-  _time: 2025-09-07 21:46:51.987900103 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#204 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 204
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.830680487 Z
-  what: pull-was-opened
-  when: 2022-11-25 15:12:59.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551071
-  _job: 36652
-  _time: 2025-09-07 21:46:52.164599111 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#205 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 205
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.246931755 Z
-  what: pull-was-opened
-  when: 2022-11-29 23:15:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551072
-  _job: 36652
-  _time: 2025-09-07 21:46:52.363374057 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#206 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 206
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.555514144 Z
-  what: pull-was-opened
-  when: 2022-12-01 11:40:52.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551073
-  _job: 36652
-  _time: 2025-09-07 21:46:52.541417054 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#207 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 207
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.089031835 Z
-  what: pull-was-opened
-  when: 2022-12-02 00:07:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551074
-  _job: 36652
-  _time: 2025-09-07 21:46:52.741976588 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#208 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 208
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.601247016 Z
-  what: pull-was-opened
-  when: 2022-12-13 00:19:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551075
-  _job: 36652
-  _time: 2025-09-07 21:46:52.920906501 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#209 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 209
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.809145364 Z
-  what: pull-was-opened
-  when: 2022-12-14 09:01:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551076
-  _job: 36652
-  _time: 2025-09-07 21:46:53.122557379 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#210 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 210
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.232355429 Z
-  what: pull-was-opened
-  when: 2022-12-14 21:57:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551077
-  _job: 36652
-  _time: 2025-09-07 21:46:53.301895973 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#211 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 211
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.751786493 Z
-  what: pull-was-opened
-  when: 2022-12-15 13:05:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551078
-  _job: 36652
-  _time: 2025-09-07 21:46:53.504012430 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#212 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 212
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.956902734 Z
-  what: pull-was-opened
-  when: 2022-12-19 00:43:18.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551079
-  _job: 36652
-  _time: 2025-09-07 21:46:53.681132456 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#213 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 213
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.166325587 Z
-  what: pull-was-opened
-  when: 2022-12-21 18:51:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551080
-  _job: 36652
-  _time: 2025-09-07 21:46:53.882296525 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#214 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 214
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.592570161 Z
-  what: pull-was-opened
-  when: 2022-12-23 14:25:33.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551081
-  _job: 36652
-  _time: 2025-09-07 21:46:54.060742715 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#215 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 215
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.010048868 Z
-  what: pull-was-opened
-  when: 2022-12-24 07:22:04.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551082
-  _job: 36652
-  _time: 2025-09-07 21:46:54.260409128 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-parent#216 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 216
-  repository: 12590813
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.316244445 Z
-  what: pull-was-opened
-  when: 2022-12-24 16:00:37.000000000 Z
-  where: github
-  who: 29139614
 - _id: 551083
   _job: 36652
   _time: 2025-09-07 21:46:54.440740865 Z
@@ -126023,174 +123138,6 @@
   when: 2023-05-30 04:36:57.000000000 Z
   where: github
   who: 29139614
-- _id: 551275
-  _job: 36657
-  _time: 2025-09-07 22:50:47.003280091 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#220 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 220
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.333114116 Z
-  what: pull-was-opened
-  when: 2023-06-16 03:01:24.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551276
-  _job: 36657
-  _time: 2025-09-07 22:50:47.192856592 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#221 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 221
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:40.854210910 Z
-  what: pull-was-opened
-  when: 2023-06-16 22:45:20.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551277
-  _job: 36657
-  _time: 2025-09-07 22:50:47.412358057 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#222 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 222
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.489526085 Z
-  what: pull-was-opened
-  when: 2023-06-20 00:27:29.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551278
-  _job: 36657
-  _time: 2025-09-07 22:50:47.601481500 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#223 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 223
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:41.793758784 Z
-  what: pull-was-opened
-  when: 2023-06-21 00:24:08.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551279
-  _job: 36657
-  _time: 2025-09-07 22:50:47.800351893 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#224 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 224
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.312378700 Z
-  what: pull-was-opened
-  when: 2023-06-22 00:53:30.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551280
-  _job: 36657
-  _time: 2025-09-07 22:50:47.988662859 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#225 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 225
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:42.731462546 Z
-  what: pull-was-opened
-  when: 2023-06-23 01:32:22.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551281
-  _job: 36657
-  _time: 2025-09-07 22:50:48.187343370 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#226 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 226
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.148658317 Z
-  what: pull-was-opened
-  when: 2023-06-23 21:16:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551282
-  _job: 36657
-  _time: 2025-09-07 22:50:48.376028801 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#227 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 227
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:43.671425195 Z
-  what: pull-was-opened
-  when: 2023-06-23 21:33:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551283
-  _job: 36657
-  _time: 2025-09-07 22:50:48.574156761 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#228 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 228
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.193446441 Z
-  what: pull-was-opened
-  when: 2023-06-26 22:31:32.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551284
-  _job: 36657
-  _time: 2025-09-07 22:50:48.762758948 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#229 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 229
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:44.913736501 Z
-  what: pull-was-opened
-  when: 2023-06-28 23:14:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551285
-  _job: 36657
-  _time: 2025-09-07 22:50:48.963747356 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#230 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 230
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.335461918 Z
-  what: pull-was-opened
-  when: 2023-06-29 19:54:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551286
-  _job: 36657
-  _time: 2025-09-07 22:50:49.161895101 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#231 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 231
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:45.854379390 Z
-  what: pull-was-opened
-  when: 2023-06-29 23:10:07.000000000 Z
-  where: github
-  who: 29139614
 - _id: 551287
   _job: 36657
   _time: 2025-09-07 22:50:49.358383462 Z
@@ -126202,62 +123149,6 @@
   stale: branch
   what: pull-was-opened
   when: 2023-06-30 16:33:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551288
-  _job: 36657
-  _time: 2025-09-07 22:50:49.546717701 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#233 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 233
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.488955540 Z
-  what: pull-was-opened
-  when: 2023-06-30 22:50:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551289
-  _job: 36657
-  _time: 2025-09-07 22:50:49.744444945 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#234 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 234
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:46.906514882 Z
-  what: pull-was-opened
-  when: 2023-07-04 01:18:56.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551290
-  _job: 36657
-  _time: 2025-09-07 22:50:49.933058977 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#235 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 235
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.213515307 Z
-  what: pull-was-opened
-  when: 2023-07-05 23:13:25.000000000 Z
-  where: github
-  who: 29139614
-- _id: 551291
-  _job: 36657
-  _time: 2025-09-07 22:50:50.132098776 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  details: The pull jcabi/jcabi-s3#236 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 236
-  repository: 14093966
-  stale: branch
-  tombstone: 2025-09-08 03:42:47.521062220 Z
-  what: pull-was-opened
-  when: 2023-07-07 01:16:23.000000000 Z
   where: github
   who: 29139614
 - _id: 551292
@@ -133583,175 +130474,6 @@
   when: *1692
   where: github
   who: 526301
-- _id: 551930
-  _job: 36676
-  _time: 2025-09-08 03:42:52.537279152 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  issues:
-  - '19'
-  - 22-23
-  - 31-32
-  - '35'
-  - '38'
-  - '47'
-  - '49'
-  - '54'
-  - '62'
-  - '74'
-  - '94'
-  - '96'
-  - 98-99
-  - '103'
-  - '110'
-  - 119-120
-  - 124-125
-  - '165'
-  - 174-176
-  - 178-181
-  - 183-185
-  - 187-190
-  - '192'
-  - 194-195
-  - 197-205
-  - 207-210
-  - 217-223
-  - 226-227
-  - 229-230
-  - '277'
-  - '298'
-  repo: 13717355
-  what: tombstone
-  where: github
-- _id: 551931
-  _job: 36676
-  _time: 2025-09-08 03:42:55.059779303 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  issues:
-  - '32'
-  - 36-37
-  - '40'
-  - '42'
-  - 46-47
-  - '54'
-  - '60'
-  - '62'
-  - '64'
-  - '73'
-  - '82'
-  - 84-85
-  - '87'
-  - 89-90
-  - '96'
-  - '105'
-  - 112-113
-  - '116'
-  - '122'
-  - '124'
-  - 126-128
-  - 135-138
-  - 145-146
-  - '153'
-  - '175'
-  - '177'
-  - '179'
-  - '186'
-  - '190'
-  - '193'
-  - 196-198
-  - '201'
-  - 204-205
-  - 208-209
-  - 212-214
-  - '216'
-  - 218-221
-  - '226'
-  - 228-229
-  - 236-237
-  - '239'
-  - '242'
-  - '244'
-  - '249'
-  - '569'
-  repo: 16312153
-  what: tombstone
-  where: github
-- _id: 551932
-  _job: 36676
-  _time: 2025-09-08 03:42:57.559046338 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  issues:
-  - 140-205
-  - 207-209
-  - 211-231
-  - 233-236
-  - '430'
-  repo: 14093966
-  what: tombstone
-  where: github
-- _id: 551933
-  _job: 36676
-  _time: 2025-09-08 03:43:00.034772849 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  issues:
-  - 11-13
-  - '17'
-  - '21'
-  - '23'
-  - '25'
-  - 33-34
-  - '51'
-  - '54'
-  - '70'
-  - '78'
-  - '82'
-  - '84'
-  - '88'
-  - '90'
-  - '92'
-  - 94-99
-  - '104'
-  - 107-112
-  - 114-120
-  - '126'
-  - 130-136
-  - 138-142
-  - 144-149
-  - 152-166
-  - 168-169
-  - '307'
-  repo: 12587702
-  what: tombstone
-  where: github
-- _id: 551934
-  _job: 36676
-  _time: 2025-09-08 03:43:02.489277399 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  issues:
-  - 6-7
-  - 9-10
-  - '14'
-  - 16-17
-  - '19'
-  - 22-23
-  - '25'
-  - '29'
-  - '51'
-  - '57'
-  - '69'
-  - '85'
-  - '92'
-  - '108'
-  - '129'
-  - '133'
-  - 143-145
-  - 148-183
-  - 185-188
-  - 192-196
-  - '198'
-  - 200-216
-  repo: 12590813
-  what: tombstone
-  where: github
 - _id: 551935
   _job: 36676
   _time: 2025-09-08 03:43:15.852555246 Z
@@ -134887,19 +131609,6 @@
   repository: 12591347
   what: iterate
   where: github
-- _id: 552047
-  _job: 17539098685
-  _time: 2025-09-08 03:56:29.657099938 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  assignees_were_scanned: 0
-  events_were_scanned: 54362221664
-  labels_were_scanned: 145
-  min_issue_was_found: 1
-  min_pull_was_found: 20
-  repository: 13717355
-  types_were_scanned: 103
-  what: iterate
-  where: github
 - _id: 552048
   _job: 17539098685
   _time: 2025-09-08 03:56:29.875537252 Z
@@ -134967,19 +131676,6 @@
   repository: 14093966
   what: iterate
   where: github
-- _id: 552055
-  _job: 17539098685
-  _time: 2025-09-08 03:56:31.268731118 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  assignees_were_scanned: 0
-  events_were_scanned: 54360655730
-  labels_were_scanned: 109
-  min_issue_was_found: 5
-  min_pull_was_found: 21
-  repository: 12590813
-  types_were_scanned: 0
-  what: iterate
-  where: github
 - _id: 552056
   _job: 17539098685
   _time: 2025-09-08 03:56:31.428729150 Z
@@ -134988,29 +131684,6 @@
   min_issue_was_found: 0
   min_pull_was_found: 416
   repository: 12590126
-  what: iterate
-  where: github
-- _id: 552057
-  _job: 17539098685
-  _time: 2025-09-08 03:56:31.665107161 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  assignees_were_scanned: 90
-  events_were_scanned: 53449773369
-  labels_were_scanned: 163
-  min_issue_was_found: 9
-  min_pull_was_found: 8
-  repository: 16312153
-  types_were_scanned: 0
-  what: iterate
-  where: github
-- _id: 552058
-  _job: 17539098685
-  _time: 2025-09-08 03:56:31.818125970 Z
-  _version: 0.16.1/0.53.6/0.15.36
-  events_were_scanned: 54369553230
-  min_issue_was_found: 0
-  min_pull_was_found: 375
-  repository: 4174608
   what: iterate
   where: github
 - _id: 552059
@@ -135109,5 +131782,2087 @@
   events_were_scanned: 54261781026
   min_pull_was_found: 71
   repository: 16403286
+  what: iterate
+  where: github
+- _id: 552069
+  _job: 36679
+  _time: 2025-09-08 04:07:09.461209518 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  issues:
+  - '19'
+  - 22-23
+  - 31-32
+  - '35'
+  - '38'
+  - '47'
+  - '49'
+  - '54'
+  - '62'
+  - '74'
+  - '94'
+  - '96'
+  - 98-99
+  - '103'
+  - '110'
+  - 119-120
+  - 124-125
+  - '165'
+  - 174-176
+  - 178-181
+  - 183-185
+  - 187-190
+  - '192'
+  - 194-195
+  - 197-205
+  - 207-210
+  - 217-223
+  - 226-227
+  - 229-230
+  - '277'
+  - '298'
+  repo: 13717355
+  what: tombstone
+  where: github
+- _id: 552070
+  _job: 36679
+  _time: 2025-09-08 04:07:10.935292288 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  issues:
+  - 11-13
+  - '17'
+  - '21'
+  - '23'
+  - '25'
+  - 33-34
+  - '51'
+  - '54'
+  - '70'
+  - '78'
+  - '82'
+  - '84'
+  - '88'
+  - '90'
+  - '92'
+  - 94-99
+  - '104'
+  - 107-112
+  - 114-120
+  - '126'
+  - 130-136
+  - 138-142
+  - 144-149
+  - 152-166
+  - 168-169
+  - '307'
+  repo: 12587702
+  what: tombstone
+  where: github
+- _id: 552071
+  _job: 36679
+  _time: 2025-09-08 04:07:12.286648268 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  issues:
+  - '32'
+  - 36-37
+  - '40'
+  - '42'
+  - 46-47
+  - '54'
+  - '60'
+  - '62'
+  - '64'
+  - '73'
+  - '82'
+  - 84-85
+  - '87'
+  - 89-90
+  - '96'
+  - '105'
+  - 112-113
+  - '116'
+  - '122'
+  - '124'
+  - 126-128
+  - 135-138
+  - 145-146
+  - '153'
+  - '175'
+  - '177'
+  - '179'
+  - '186'
+  - '190'
+  - '193'
+  - 196-198
+  - '201'
+  - 204-205
+  - 208-209
+  - 212-214
+  - '216'
+  - 218-221
+  - '226'
+  - 228-229
+  - 236-237
+  - '239'
+  - '242'
+  - '244'
+  - '249'
+  - '569'
+  repo: 16312153
+  what: tombstone
+  where: github
+- _id: 552072
+  _job: 36679
+  _time: 2025-09-08 04:07:12.926394948 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  issues:
+  - 6-7
+  - 9-10
+  - '14'
+  - 16-17
+  - '19'
+  - 22-23
+  - '25'
+  - '29'
+  - '51'
+  - '57'
+  - '69'
+  - '85'
+  - '92'
+  - '108'
+  - '129'
+  - '133'
+  - 143-145
+  - 148-183
+  - 185-188
+  - 192-196
+  - '198'
+  - 200-216
+  repo: 12590813
+  what: tombstone
+  where: github
+- _id: 552073
+  _job: 36679
+  _time: 2025-09-08 04:07:14.841241428 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  issues:
+  - 140-205
+  - 207-209
+  - 211-231
+  - 233-236
+  - '430'
+  repo: 14093966
+  what: tombstone
+  where: github
+- _id: 552074
+  _job: 36679
+  _time: 2025-09-08 04:07:16.422367468 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#372 has been opened by @pnatashap.
+  is_human: 1
+  issue: 372
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-18 02:03:48.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552075
+  _job: 36679
+  _time: 2025-09-08 04:07:16.645153597 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The issue jcabi/jcabi-s3#373 has been opened by @pnatashap.
+  is_human: 1
+  issue: 373
+  repository: 14093966
+  what: issue-was-opened
+  when: 2024-02-18 13:25:18.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552076
+  _job: 36679
+  _time: 2025-09-08 04:07:16.864557108 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The issue jcabi/jcabi-s3#374 has been opened by @pnatashap.
+  is_human: 1
+  issue: 374
+  repository: 14093966
+  what: issue-was-opened
+  when: 2024-02-18 13:25:58.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552077
+  _job: 36679
+  _time: 2025-09-08 04:07:17.081856107 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The issue jcabi/jcabi-s3#375 has been opened by @pnatashap.
+  is_human: 1
+  issue: 375
+  repository: 14093966
+  what: issue-was-opened
+  when: 2024-02-18 13:26:39.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552078
+  _job: 36679
+  _time: 2025-09-08 04:07:17.291809018 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The issue jcabi/jcabi-s3#376 has been opened by @pnatashap.
+  is_human: 1
+  issue: 376
+  repository: 14093966
+  what: issue-was-opened
+  when: 2024-02-18 13:28:09.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552079
+  _job: 36679
+  _time: 2025-09-08 04:07:17.507813027 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The issue jcabi/jcabi-s3#377 has been opened by @pnatashap.
+  is_human: 1
+  issue: 377
+  repository: 14093966
+  what: issue-was-opened
+  when: 2024-02-18 22:21:52.000000000 Z
+  where: github
+  who: 19815413
+- _id: 552080
+  _job: 36679
+  _time: 2025-09-08 04:07:17.723375797 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#378 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 378
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-21 00:06:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552081
+  _job: 36679
+  _time: 2025-09-08 04:07:17.940998117 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#379 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 379
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-22 04:10:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552082
+  _job: 36679
+  _time: 2025-09-08 04:07:18.146497827 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#380 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 380
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-22 23:06:37.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552083
+  _job: 36679
+  _time: 2025-09-08 04:07:18.362466597 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#381 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 381
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-23 09:53:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552084
+  _job: 36679
+  _time: 2025-09-08 04:07:18.585066127 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#382 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 382
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-23 13:34:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552085
+  _job: 36679
+  _time: 2025-09-08 04:07:18.803482957 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#383 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 383
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-24 00:59:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552086
+  _job: 36679
+  _time: 2025-09-08 04:07:19.025081017 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#384 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 384
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-27 00:05:26.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552087
+  _job: 36679
+  _time: 2025-09-08 04:07:19.243599607 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#385 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 385
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-28 00:13:13.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552088
+  _job: 36679
+  _time: 2025-09-08 04:07:19.463381257 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#386 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 386
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-29 01:49:04.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552089
+  _job: 36679
+  _time: 2025-09-08 04:07:19.674397517 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#387 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 387
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-02-29 23:03:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552090
+  _job: 36679
+  _time: 2025-09-08 04:07:19.893289367 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#388 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 388
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-02 14:56:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552091
+  _job: 36679
+  _time: 2025-09-08 04:07:20.104975057 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#389 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 389
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-05 00:43:20.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552092
+  _job: 36679
+  _time: 2025-09-08 04:07:20.310183817 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#390 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 390
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-06 00:47:26.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552093
+  _job: 36679
+  _time: 2025-09-08 04:07:20.513678747 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#391 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 391
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-06 06:43:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552094
+  _job: 36679
+  _time: 2025-09-08 04:07:20.729941447 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#392 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 392
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-06 23:29:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552095
+  _job: 36679
+  _time: 2025-09-08 04:07:20.943548947 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#393 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 393
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-07 06:54:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552096
+  _job: 36679
+  _time: 2025-09-08 04:07:21.165348777 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#394 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 394
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-08 01:26:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552097
+  _job: 36679
+  _time: 2025-09-08 04:07:21.388540637 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#395 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 395
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-08 23:23:30.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552098
+  _job: 36679
+  _time: 2025-09-08 04:07:21.602488766 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#396 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 396
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-09 13:25:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552099
+  _job: 36679
+  _time: 2025-09-08 04:07:21.809797117 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#397 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 397
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-11 22:24:15.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552100
+  _job: 36679
+  _time: 2025-09-08 04:07:22.033280157 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#398 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 398
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-13 01:02:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552101
+  _job: 36679
+  _time: 2025-09-08 04:07:22.248488577 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#399 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 399
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-13 22:05:04.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552102
+  _job: 36679
+  _time: 2025-09-08 04:07:22.465197977 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#400 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 400
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-13 22:05:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552103
+  _job: 36679
+  _time: 2025-09-08 04:07:22.672797196 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#401 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 401
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-14 22:06:08.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552104
+  _job: 36679
+  _time: 2025-09-08 04:07:22.888200947 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#402 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 402
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-15 22:37:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552105
+  _job: 36679
+  _time: 2025-09-08 04:07:23.102388017 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#403 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 403
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-18 21:31:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552106
+  _job: 36679
+  _time: 2025-09-08 04:07:23.310521147 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#404 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 404
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-18 21:50:03.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552107
+  _job: 36679
+  _time: 2025-09-08 04:07:23.522334556 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#405 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 405
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-20 01:24:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552108
+  _job: 36679
+  _time: 2025-09-08 04:07:23.745596396 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#406 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 406
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-20 01:24:06.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552109
+  _job: 36679
+  _time: 2025-09-08 04:07:23.962607626 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#407 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 407
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-21 02:35:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552110
+  _job: 36679
+  _time: 2025-09-08 04:07:24.187241286 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#408 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 408
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-22 02:22:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552111
+  _job: 36679
+  _time: 2025-09-08 04:07:24.410817166 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#409 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 409
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-03-29 00:24:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552112
+  _job: 36679
+  _time: 2025-09-08 04:07:24.632003356 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#410 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 410
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-05-02 15:55:00.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552113
+  _job: 36679
+  _time: 2025-09-08 04:07:24.848668316 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#411 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 411
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-05-31 23:28:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552114
+  _job: 36679
+  _time: 2025-09-08 04:07:25.067290556 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#412 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 412
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-06-28 01:11:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552115
+  _job: 36679
+  _time: 2025-09-08 04:07:25.290684566 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#413 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 413
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-07-17 23:13:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552116
+  _job: 36679
+  _time: 2025-09-08 04:07:25.512899956 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#414 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 414
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-01 10:52:00.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552117
+  _job: 36679
+  _time: 2025-09-08 04:07:25.733584536 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#415 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 415
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-06 23:33:13.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552118
+  _job: 36679
+  _time: 2025-09-08 04:07:25.952745046 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#416 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 416
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-07 18:47:43.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552119
+  _job: 36679
+  _time: 2025-09-08 04:07:26.172362906 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#417 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 417
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-08 17:38:40.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552120
+  _job: 36679
+  _time: 2025-09-08 04:07:26.391254976 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#418 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 418
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-10 13:46:11.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552121
+  _job: 36679
+  _time: 2025-09-08 04:07:26.611212466 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#419 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 419
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-17 01:20:31.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552122
+  _job: 36679
+  _time: 2025-09-08 04:07:26.827822736 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#420 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 420
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-08-22 13:42:45.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552123
+  _job: 36679
+  _time: 2025-09-08 04:07:27.051471606 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#422 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 422
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-09-23 22:45:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552124
+  _job: 36679
+  _time: 2025-09-08 04:07:27.270329936 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#423 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 423
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-09-26 19:11:55.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552125
+  _job: 36679
+  _time: 2025-09-08 04:07:27.493572656 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#424 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 424
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-11-14 20:16:54.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552126
+  _job: 36679
+  _time: 2025-09-08 04:07:27.715528786 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#425 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 425
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-11-15 00:04:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552127
+  _job: 36679
+  _time: 2025-09-08 04:07:27.945038576 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#426 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 426
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-11-15 20:03:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552128
+  _job: 36679
+  _time: 2025-09-08 04:07:28.164398256 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#427 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 427
+  repository: 14093966
+  what: pull-was-opened
+  when: 2024-12-16 23:29:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552129
+  _job: 36679
+  _time: 2025-09-08 04:07:28.384256876 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#428 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 428
+  repository: 14093966
+  what: pull-was-opened
+  when: 2025-01-30 15:03:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552130
+  _job: 36679
+  _time: 2025-09-08 04:07:28.603057396 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-s3#429 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 429
+  repository: 14093966
+  what: pull-was-opened
+  when: 2025-02-25 19:42:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552131
+  _job: 36679
+  _time: 2025-09-08 04:07:28.826172805 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: hash61
+  comments: 44
+  comments_appreciated: 0
+  comments_by_author: 7
+  comments_by_reviewers: 37
+  comments_resolved: 0
+  comments_to_code: 25
+  details: Apparently, jcabi/jcabi-xml#69 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 254
+  is_human: 1
+  issue: 69
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-10-10 13:46:49.000000000 Z
+  where: github
+  who: 1182139
+- _id: 552132
+  _job: 36679
+  _time: 2025-09-08 04:07:29.050366826 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#514 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 514
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-19 14:18:18.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552133
+  _job: 36679
+  _time: 2025-09-08 04:07:29.281871595 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#515 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 515
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-21 22:39:43.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552134
+  _job: 36679
+  _time: 2025-09-08 04:07:29.500583466 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#516 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 516
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-21 22:39:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552135
+  _job: 36679
+  _time: 2025-09-08 04:07:29.723142906 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#517 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 517
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-22 12:09:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552136
+  _job: 36679
+  _time: 2025-09-08 04:07:29.940641005 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#518 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 518
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-22 12:09:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552137
+  _job: 36679
+  _time: 2025-09-08 04:07:30.161767645 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#519 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 519
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-22 13:13:59.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552138
+  _job: 36679
+  _time: 2025-09-08 04:07:30.372800325 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#520 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 520
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-22 16:45:45.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552139
+  _job: 36679
+  _time: 2025-09-08 04:07:30.590694315 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#521 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 521
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 16:28:36.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552140
+  _job: 36679
+  _time: 2025-09-08 04:07:30.809004805 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#522 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 522
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 16:28:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552141
+  _job: 36679
+  _time: 2025-09-08 04:07:31.025895635 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#523 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 523
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 17:01:24.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552142
+  _job: 36679
+  _time: 2025-09-08 04:07:31.243273056 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#524 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 524
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 17:01:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552143
+  _job: 36679
+  _time: 2025-09-08 04:07:31.454793496 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#525 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 525
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 18:04:20.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552144
+  _job: 36679
+  _time: 2025-09-08 04:07:31.670719355 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#526 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 526
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 18:04:24.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552145
+  _job: 36679
+  _time: 2025-09-08 04:07:31.887029355 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#527 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 527
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-27 19:04:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552146
+  _job: 36679
+  _time: 2025-09-08 04:07:32.109950496 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#528 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 528
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-28 22:41:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552147
+  _job: 36679
+  _time: 2025-09-08 04:07:32.324189175 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#529 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 529
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-08-29 22:04:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552148
+  _job: 36679
+  _time: 2025-09-08 04:07:32.542237365 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#530 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 530
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-03 01:40:25.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552149
+  _job: 36679
+  _time: 2025-09-08 04:07:32.751704485 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#531 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 531
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-03 11:25:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552150
+  _job: 36679
+  _time: 2025-09-08 04:07:32.971625095 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#532 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 532
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-05 22:54:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552151
+  _job: 36679
+  _time: 2025-09-08 04:07:33.186235885 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#533 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 533
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-12 08:21:06.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552152
+  _job: 36679
+  _time: 2025-09-08 04:07:33.392039705 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#534 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 534
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-14 20:14:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552153
+  _job: 36679
+  _time: 2025-09-08 04:07:33.603696395 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#535 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 535
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-18 22:58:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552154
+  _job: 36679
+  _time: 2025-09-08 04:07:33.822091185 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#536 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 536
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-23 23:34:45.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552155
+  _job: 36679
+  _time: 2025-09-08 04:07:34.034418515 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#537 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 537
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-25 08:30:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552156
+  _job: 36679
+  _time: 2025-09-08 04:07:34.248413685 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#538 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 538
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-26 19:07:06.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552157
+  _job: 36679
+  _time: 2025-09-08 04:07:34.471749835 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#539 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 539
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-27 16:39:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552158
+  _job: 36679
+  _time: 2025-09-08 04:07:34.687477115 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#540 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 540
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-27 16:39:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552159
+  _job: 36679
+  _time: 2025-09-08 04:07:34.906892745 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#541 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 541
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-09-30 13:52:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552160
+  _job: 36679
+  _time: 2025-09-08 04:07:35.114606295 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#542 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 542
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-01 10:32:59.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552161
+  _job: 36679
+  _time: 2025-09-08 04:07:35.328112915 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#543 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 543
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-01 10:33:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552162
+  _job: 36679
+  _time: 2025-09-08 04:07:35.549961415 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#544 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 544
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-02 17:16:06.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552163
+  _job: 36679
+  _time: 2025-09-08 04:07:35.766656484 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#545 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 545
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-02 19:09:31.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552164
+  _job: 36679
+  _time: 2025-09-08 04:07:35.982537564 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#546 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 546
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-04 15:57:01.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552165
+  _job: 36679
+  _time: 2025-09-08 04:07:36.195813154 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#547 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 547
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-06 10:21:40.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552166
+  _job: 36679
+  _time: 2025-09-08 04:07:36.425663385 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#548 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 548
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-06 11:47:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552167
+  _job: 36679
+  _time: 2025-09-08 04:07:36.641217385 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#549 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 549
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-07 14:08:30.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552168
+  _job: 36679
+  _time: 2025-09-08 04:07:36.862429514 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#550 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 550
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-15 15:26:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552169
+  _job: 36679
+  _time: 2025-09-08 04:07:37.075329215 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#551 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 551
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-21 17:02:54.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552170
+  _job: 36679
+  _time: 2025-09-08 04:07:37.303868204 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#552 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 552
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-21 19:25:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552171
+  _job: 36679
+  _time: 2025-09-08 04:07:37.514250954 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#553 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 553
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-21 19:25:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552172
+  _job: 36679
+  _time: 2025-09-08 04:07:37.727933575 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#554 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 554
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-21 20:51:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552173
+  _job: 36679
+  _time: 2025-09-08 04:07:37.942373544 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#555 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 555
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-22 08:13:51.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552174
+  _job: 36679
+  _time: 2025-09-08 04:07:38.149884084 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#556 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 556
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-25 17:27:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552175
+  _job: 36679
+  _time: 2025-09-08 04:07:38.369045455 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#557 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 557
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-25 17:27:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552176
+  _job: 36679
+  _time: 2025-09-08 04:07:38.587287844 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#558 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 558
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-25 18:08:59.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552177
+  _job: 36679
+  _time: 2025-09-08 04:07:38.805205874 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#559 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 559
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-25 18:09:03.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552178
+  _job: 36679
+  _time: 2025-09-08 04:07:39.024349735 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#560 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 560
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-29 12:39:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552179
+  _job: 36679
+  _time: 2025-09-08 04:07:39.235222314 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#561 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 561
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-10-29 17:29:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552180
+  _job: 36679
+  _time: 2025-09-08 04:07:39.450056174 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#562 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 562
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-02 22:37:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552181
+  _job: 36679
+  _time: 2025-09-08 04:07:39.667382704 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#563 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 563
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-02 22:37:40.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552182
+  _job: 36679
+  _time: 2025-09-08 04:07:39.882609894 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#564 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 564
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-02 23:49:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552183
+  _job: 36679
+  _time: 2025-09-08 04:07:40.093786124 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#565 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 565
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-02 23:49:42.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552184
+  _job: 36679
+  _time: 2025-09-08 04:07:40.315225054 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#566 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 566
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-08 07:27:29.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552185
+  _job: 36679
+  _time: 2025-09-08 04:07:40.532366114 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#567 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 567
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-12 23:38:22.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552186
+  _job: 36679
+  _time: 2025-09-08 04:07:40.750838314 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#568 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 568
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-14 12:11:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552187
+  _job: 36679
+  _time: 2025-09-08 04:07:40.970933744 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#569 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 569
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-14 21:59:01.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552188
+  _job: 36679
+  _time: 2025-09-08 04:07:41.189336404 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#570 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 570
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-15 21:55:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552189
+  _job: 36679
+  _time: 2025-09-08 04:07:41.405965574 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#571 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 571
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-11-20 22:07:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552190
+  _job: 36679
+  _time: 2025-09-08 04:07:41.624720074 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#572 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 572
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-12-02 04:34:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552191
+  _job: 36679
+  _time: 2025-09-08 04:07:41.843268414 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#574 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 574
+  repository: 12590813
+  what: pull-was-opened
+  when: 2024-12-05 14:01:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552192
+  _job: 36679
+  _time: 2025-09-08 04:07:42.052391714 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#583 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 583
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-01-29 14:52:35.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552193
+  _job: 36679
+  _time: 2025-09-08 04:07:42.272386154 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#631 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 631
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-06-05 01:32:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552194
+  _job: 36679
+  _time: 2025-09-08 04:07:42.493481384 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#632 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 632
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-06-07 10:43:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552195
+  _job: 36679
+  _time: 2025-09-08 04:07:42.709036984 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#633 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 633
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-06-13 19:06:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552196
+  _job: 36679
+  _time: 2025-09-08 04:07:42.927800414 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: The pull jcabi/jcabi-parent#643 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 643
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-07-09 22:58:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 552197
+  _job: 36679
+  _time: 2025-09-08 04:07:43.149336553 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-1
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#75 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 10
+  issue: 75
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-20 16:18:12.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552198
+  _job: 36679
+  _time: 2025-09-08 04:07:43.372968614 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-2
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#76 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 7
+  issue: 76
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-20 16:39:19.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552199
+  _job: 36679
+  _time: 2025-09-08 04:07:43.590939294 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: bug/issue-46
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#58 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 1409
+  is_human: 1
+  issue: 58
+  repository: 12587702
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2019-12-22 03:32:59.000000000 Z
+  where: github
+  who: 8526099
+- _id: 552200
+  _job: 36679
+  _time: 2025-09-08 04:07:43.810950774 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: master
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#77 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 9
+  issue: 77
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-20 16:52:10.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552201
+  _job: 36679
+  _time: 2025-09-08 04:07:44.024775574 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: master
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#82 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 2
+  is_human: 1
+  issue: 82
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2018-08-12 10:24:11.000000000 Z
+  where: github
+  who: 10466206
+- _id: 552202
+  _job: 36679
+  _time: 2025-09-08 04:07:44.232756184 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: feature/issue-57
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#59 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 33
+  is_human: 1
+  issue: 59
+  repository: 12587702
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2019-12-19 11:28:03.000000000 Z
+  where: github
+  who: 8526099
+- _id: 552203
+  _job: 36679
+  _time: 2025-09-08 04:07:44.446527134 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: master
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#78 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 9
+  issue: 78
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-20 17:26:27.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552204
+  _job: 36679
+  _time: 2025-09-08 04:07:44.655500713 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: imrandurranee-patch-1
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#79 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 13
+  issue: 79
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-20 17:26:18.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552205
+  _job: 36679
+  _time: 2025-09-08 04:07:44.869453273 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: fix-xcop-on-windows
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#89 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 9
+  is_human: 1
+  issue: 89
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2019-05-21 16:36:23.000000000 Z
+  where: github
+  who: 34595022
+- _id: 552206
+  _job: 36679
+  _time: 2025-09-08 04:07:45.083242023 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-2
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#80 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 7
+  issue: 80
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 16:15:00.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552207
+  _job: 36679
+  _time: 2025-09-08 04:07:45.293189343 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-4
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#81 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 12
+  issue: 81
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 16:14:38.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552208
+  _job: 36679
+  _time: 2025-09-08 04:07:45.504672593 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-3
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#82 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 14
+  is_human: 1
+  issue: 82
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 16:18:34.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552209
+  _job: 36679
+  _time: 2025-09-08 04:07:45.723480073 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: '82'
+  comments: 38
+  comments_appreciated: 0
+  comments_by_author: 13
+  comments_by_reviewers: 25
+  comments_resolved: 0
+  comments_to_code: 16
+  details: Apparently, jcabi/jcabi-http#83 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 104
+  is_human: 1
+  issue: 83
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-05-04 07:52:07.000000000 Z
+  where: github
+  who: 9972909
+- _id: 552210
+  _job: 36679
+  _time: 2025-09-08 04:07:45.933961033 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-5
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#83 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 45
+  is_human: 1
+  issue: 83
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 16:44:11.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552211
+  _job: 36679
+  _time: 2025-09-08 04:07:46.149881763 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-6
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#84 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 60
+  is_human: 1
+  issue: 84
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 16:56:25.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552212
+  _job: 36679
+  _time: 2025-09-08 04:07:46.364946093 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  branch: patch-7
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#85 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 59
+  is_human: 1
+  issue: 85
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 17:04:47.000000000 Z
+  where: github
+  who: 15944964
+- _id: 552213
+  _job: 17539911111
+  _time: 2025-09-08 04:41:15.726493068 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  events_were_scanned: 54370182416
+  min_issue_was_found: 0
+  min_pull_was_found: 375
+  repository: 4174608
+  what: iterate
+  where: github
+- _id: 552214
+  _job: 17539911111
+  _time: 2025-09-08 04:41:17.565506851 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: Apparently, jcabi/jcabi-parent#10 has been 'issue-was-closed'.
+  issue: 10
+  repository: 12590813
+  what: issue-was-closed
+  when: 2014-08-13 23:47:43.000000000 Z
+  where: github
+  who: 1917892
+- _id: 552215
+  _job: 17539911111
+  _time: 2025-09-08 04:41:20.650754349 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: Apparently, jcabi/jcabi-jdbc#25 has been 'issue-was-closed'.
+  issue: 25
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-08-28 13:28:07.000000000 Z
+  where: github
+  who: 5993843
+- _id: 552216
+  _job: 17539911111
+  _time: 2025-09-08 04:41:22.514857493 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  details: Apparently, jcabi/jcabi-xml#32 has been 'issue-was-closed'.
+  issue: 32
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-08 05:25:21.000000000 Z
+  where: github
+  who: 1917892
+- _id: 552217
+  _job: 17539911111
+  _time: 2025-09-08 04:55:07.578604279 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  assignees_were_scanned: 0
+  events_were_scanned: 54360655730
+  labels_were_scanned: 0
+  min_issue_was_found: 5
+  min_pull_was_found: 21
+  repository: 12590813
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 552218
+  _job: 17539911111
+  _time: 2025-09-08 04:55:07.743445014 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  assignees_were_scanned: 90
+  events_were_scanned: 53449773369
+  labels_were_scanned: 0
+  min_issue_was_found: 9
+  min_pull_was_found: 8
+  repository: 16312153
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 552219
+  _job: 17539911111
+  _time: 2025-09-08 04:55:07.902895114 Z
+  _version: 0.16.1/0.53.6/0.15.36
+  assignees_were_scanned: 0
+  events_were_scanned: 54362221664
+  labels_were_scanned: 0
+  min_issue_was_found: 1
+  min_pull_was_found: 20
+  repository: 13717355
+  types_were_scanned: 103
   what: iterate
   where: github
