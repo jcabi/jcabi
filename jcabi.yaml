@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: The value of 'who' can't be nil
   inserted: 8
-  seconds: 443.150044576
+  seconds: 891.162983567
   version: 0.53.6
   what: judges-summary
-  when: 2025-09-08 23:39:36.144878391 Z
+  when: 2025-09-09 02:25:08.051792522 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -91413,9 +91414,24 @@
   when: 2025-08-15 16:48:10.000000000 Z
   where: github
   who: 526301
-- _id: 555122
+- _id: 555123
   _job: 36789
-  _time: 2025-09-08 22:45:23.929185395 Z
+  _time: 2025-09-08 22:45:25.121368037 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  issues:
+  - 147-153
+  - '155'
+  - 158-173
+  - 176-183
+  - '185'
+  - 187-204
+  - '211'
+  repo: 12262782
+  what: tombstone
+  where: github
+- _id: 555360
+  _job: 36793
+  _time: 2025-09-08 23:40:47.807011788 Z
   _version: 0.16.1/0.53.6/0.15.37
   issues:
   - 11-13
@@ -91464,24 +91480,9 @@
   repo: 12587702
   what: tombstone
   where: github
-- _id: 555123
-  _job: 36789
-  _time: 2025-09-08 22:45:25.121368037 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  issues:
-  - 147-153
-  - '155'
-  - 158-173
-  - 176-183
-  - '185'
-  - 187-204
-  - '211'
-  repo: 12262782
-  what: tombstone
-  where: github
-- _id: 555124
-  _job: 36789
-  _time: 2025-09-08 22:45:25.358863089 Z
+- _id: 555361
+  _job: 36793
+  _time: 2025-09-08 23:40:49.014740872 Z
   _version: 0.16.1/0.53.6/0.15.37
   issues:
   - 6-10
@@ -91520,9 +91521,62 @@
   repo: 12590813
   what: tombstone
   where: github
-- _id: 555126
-  _job: 36789
-  _time: 2025-09-08 22:45:42.339204054 Z
+- _id: 555364
+  _job: 36793
+  _time: 2025-09-08 23:41:29.751900515 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  issues:
+  - '19'
+  - 22-23
+  - '26'
+  - 31-32
+  - '35'
+  - '38'
+  - 40-42
+  - 44-45
+  - '47'
+  - 49-51
+  - 53-54
+  - '56'
+  - 58-62
+  - 66-68
+  - '71'
+  - '74'
+  - 94-96
+  - 98-104
+  - 106-113
+  - 116-125
+  - '130'
+  - '133'
+  - '136'
+  - '141'
+  - 149-151
+  - 153-154
+  - '162'
+  - '165'
+  - '169'
+  - 174-176
+  - 178-181
+  - 183-185
+  - 187-190
+  - '192'
+  - 194-195
+  - 197-205
+  - 207-212
+  - 214-223
+  - 226-227
+  - 229-234
+  - 236-239
+  - 241-247
+  - 250-271
+  - 274-286
+  - '298'
+  repo: 13717355
+  what: tombstone
+  where: github
+- _id: 555365
+  _job: 36793
+  _time: 2025-09-08 23:41:30.399571433 Z
   _version: 0.16.1/0.53.6/0.15.37
   issues:
   - '32'
@@ -91608,370 +91662,37 @@
   repo: 16312153
   what: tombstone
   where: github
-- _id: 555127
-  _job: 36789
-  _time: 2025-09-08 22:45:43.588972972 Z
+- _id: 555366
+  _job: 17569589825
+  _time: 2025-09-09 02:11:14.712846785 Z
   _version: 0.16.1/0.53.6/0.15.37
-  issues:
-  - '19'
-  - 22-23
-  - '26'
-  - 31-32
-  - '35'
-  - '38'
-  - 40-42
-  - 44-45
-  - '47'
-  - 49-51
-  - 53-54
-  - '56'
-  - 58-62
-  - 66-68
-  - '71'
-  - '74'
-  - 94-96
-  - 98-104
-  - 106-113
-  - 116-125
-  - '130'
-  - '133'
-  - '136'
-  - '141'
-  - 149-151
-  - 153-154
-  - '162'
-  - '165'
-  - '169'
-  - 174-176
-  - 178-181
-  - 183-185
-  - 187-190
-  - '192'
-  - 194-195
-  - 197-205
-  - 207-212
-  - 214-223
-  - 226-227
-  - 229-234
-  - 236-239
-  - 241-247
-  - 250-271
-  - 274-286
-  - '298'
-  repo: 13717355
-  what: tombstone
+  branch: renovate/org.apache.maven.plugins-maven-javadoc-plugin-3.x
+  details: The pull request jcabi/jcabi-parent#656 has been opened by @renovate[bot].
+  event_id: 53441366121
+  event_type: PullRequestEvent
+  issue: 656
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-08-16 13:32:03.000000000 Z
   where: github
-- _id: 555135
-  _job: 17567015791
-  _time: 2025-09-08 23:35:53.585961646 Z
+  who: 29139614
+- _id: 555367
+  _job: 17569589825
+  _time: 2025-09-09 02:11:35.250639312 Z
   _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#165 has been opened by @andreoss.
-  issue: 165
-  repository: 12587702
-  what: issue-was-opened
-  when: 2022-06-24 15:16:02.000000000 Z
+  branch: renovate/mockito-monorepo
+  details: The pull request jcabi/jcabi-parent#655 has been opened by @renovate[bot].
+  event_id: 53406678848
+  event_type: PullRequestEvent
+  issue: 655
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-08-15 10:01:26.000000000 Z
   where: github
-  who: 49783909
-- _id: 555136
-  _job: 17567015791
-  _time: 2025-09-08 23:35:53.978510732 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#102 has been opened by @baudoliver7.
-  issue: 102
-  repository: 12587702
-  what: issue-was-opened
-  when: 2021-04-20 05:16:01.000000000 Z
-  where: github
-  who: 7813046
-- _id: 555137
-  _job: 17567015791
-  _time: 2025-09-08 23:35:54.369993641 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#100 has been opened by @piotrkot.
-  issue: 100
-  repository: 12587702
-  what: issue-was-opened
-  when: 2021-04-07 14:29:43.000000000 Z
-  where: github
-  who: 9504395
-- _id: 555138
-  _job: 17567015791
-  _time: 2025-09-08 23:35:55.358489106 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#80 has been opened by @golszewski86.
-  issue: 80
-  repository: 12587702
-  what: issue-was-opened
-  when: 2020-02-11 12:27:37.000000000 Z
-  where: github
-  who: 45224442
-- _id: 555139
-  _job: 17567015791
-  _time: 2025-09-08 23:35:55.545491876 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#79 has been opened by @glusk.
-  issue: 79
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-12-19 11:27:43.000000000 Z
-  where: github
-  who: 8526099
-- _id: 555140
-  _job: 17567015791
-  _time: 2025-09-08 23:35:55.774879126 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#78 has been opened by @glusk.
-  issue: 78
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-12-19 10:50:15.000000000 Z
-  where: github
-  who: 8526099
-- _id: 555141
-  _job: 17567015791
-  _time: 2025-09-08 23:35:55.887229694 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#76 has been opened by @pluresideas.
-  issue: 76
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-11-20 15:53:31.000000000 Z
-  where: github
-  who: 26636262
-- _id: 555142
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.103237313 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#74 has been opened by @glusk.
-  issue: 74
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-10-25 12:43:14.000000000 Z
-  where: github
-  who: 8526099
-- _id: 555143
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.217777455 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#73 has been opened by @scristalli.
-  issue: 73
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-07-12 12:01:27.000000000 Z
-  where: github
-  who: 7326295
-- _id: 555144
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.397118475 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#71 has been opened by @golszewski86.
-  issue: 71
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-05-15 12:23:01.000000000 Z
-  where: github
-  who: 45224442
-- _id: 555145
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.514947510 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#70 has been opened by @sz332.
-  issue: 70
-  repository: 12587702
-  what: issue-was-opened
-  when: 2019-04-06 05:33:39.000000000 Z
-  where: github
-  who: 8182138
-- _id: 555146
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.704021803 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#68 has been opened by @piotrkot.
-  issue: 68
-  repository: 12587702
-  what: issue-was-opened
-  when: 2018-11-08 17:10:20.000000000 Z
-  where: github
-  who: 9504395
-- _id: 555147
-  _job: 17567015791
-  _time: 2025-09-08 23:35:56.915783206 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#67 has been opened by @verkhovin.
-  issue: 67
-  repository: 12587702
-  what: issue-was-opened
-  when: 2018-09-10 21:52:35.000000000 Z
-  where: github
-  who: 15959667
-- _id: 555148
-  _job: 17567015791
-  _time: 2025-09-08 23:35:57.576007429 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#57 has been opened by @miroque.
-  issue: 57
-  repository: 12587702
-  what: issue-was-opened
-  when: 2017-01-31 07:59:41.000000000 Z
-  where: github
-  who: 661340
-- _id: 555149
-  _job: 17567015791
-  _time: 2025-09-08 23:35:57.881706893 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#54 has been opened by @andrejserafim.
-  issue: 54
-  repository: 12587702
-  what: issue-was-opened
-  when: 2016-11-04 19:20:05.000000000 Z
-  where: github
-  who: 13505986
-- _id: 555150
-  _job: 17567015791
-  _time: 2025-09-08 23:35:58.144476308 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#51 has been opened by @davdavid.
-  issue: 51
-  repository: 12587702
-  what: issue-was-opened
-  when: 2016-06-29 17:46:55.000000000 Z
-  where: github
-  who: 20211331
-- _id: 555151
-  _job: 17567015791
-  _time: 2025-09-08 23:35:58.370262797 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#50 has been opened by @sshafiev.
-  issue: 50
-  repository: 12587702
-  what: issue-was-opened
-  when: 2016-04-11 20:12:12.000000000 Z
-  where: github
-  who: 1702423
-- _id: 555152
-  _job: 17567015791
-  _time: 2025-09-08 23:35:58.552219619 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#49 has been opened by @lgmam.
-  issue: 49
-  repository: 12587702
-  what: issue-was-opened
-  when: 2016-03-09 20:49:26.000000000 Z
-  where: github
-  who: 3864307
-- _id: 555153
-  _job: 17567015791
-  _time: 2025-09-08 23:35:58.844634842 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#46 has been opened by @fabriciofx.
-  issue: 46
-  repository: 12587702
-  what: issue-was-opened
-  when: 2016-01-18 04:33:27.000000000 Z
-  where: github
-  who: 1964562
-- _id: 555154
-  _job: 17567015791
-  _time: 2025-09-08 23:35:59.238338233 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#43 has been opened by @yamstranger.
-  issue: 43
-  repository: 12587702
-  what: issue-was-opened
-  when: 2015-06-10 10:47:16.000000000 Z
-  where: github
-  who: 1667699
-- _id: 555155
-  _job: 17567015791
-  _time: 2025-09-08 23:35:59.730373341 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#37 has been opened by @maurezen.
-  issue: 37
-  repository: 12587702
-  what: issue-was-opened
-  when: 2015-01-21 22:51:51.000000000 Z
-  where: github
-  who: 569536
-- _id: 555156
-  _job: 17567015791
-  _time: 2025-09-08 23:35:59.920258805 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#34 has been opened by @maurezen.
-  issue: 34
-  repository: 12587702
-  what: issue-was-opened
-  when: 2015-01-08 16:38:53.000000000 Z
-  where: github
-  who: 569536
-- _id: 555157
-  _job: 17567015791
-  _time: 2025-09-08 23:36:00.051487044 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#33 has been opened by @longtimeago.
-  issue: 33
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-12-31 11:37:49.000000000 Z
-  where: github
-  who: 1388994
-- _id: 555158
-  _job: 17567015791
-  _time: 2025-09-08 23:36:00.982694072 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#25 has been opened by @ericjung.
-  issue: 25
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-06-26 16:08:14.000000000 Z
-  where: github
-  who: 5875610
-- _id: 555159
-  _job: 17567015791
-  _time: 2025-09-08 23:36:01.373192490 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#23 has been opened by @carlosmiranda.
-  issue: 23
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-06-13 00:23:04.000000000 Z
-  where: github
-  who: 1917892
-- _id: 555160
-  _job: 17567015791
-  _time: 2025-09-08 23:36:01.580418683 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#21 has been opened by @carlosmiranda.
-  issue: 21
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-04-02 01:08:00.000000000 Z
-  where: github
-  who: 1917892
-- _id: 555161
-  _job: 17567015791
-  _time: 2025-09-08 23:36:01.696771487 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#17 has been opened by @carlosmiranda.
-  issue: 17
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-03-21 01:20:59.000000000 Z
-  where: github
-  who: 1917892
-- _id: 555162
-  _job: 17567015791
-  _time: 2025-09-08 23:36:01.902740814 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  details: The issue jcabi/jcabi-jdbc#13 has been opened by @carlosmiranda.
-  issue: 13
-  repository: 12587702
-  what: issue-was-opened
-  when: 2014-03-17 01:38:21.000000000 Z
-  where: github
-  who: 1917892
-- _id: 555163
-  _job: 17567015791
-  _time: 2025-09-08 23:36:11.699053406 Z
+  who: 29139614
+- _id: 555368
+  _job: 17569589825
+  _time: 2025-09-09 02:18:33.836202785 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#228 has been opened by @mximp.
   issue: 228
@@ -91980,9 +91701,9 @@
   when: 2023-01-17 08:20:47.000000000 Z
   where: github
   who: 40247101
-- _id: 555164
-  _job: 17567015791
-  _time: 2025-09-08 23:36:13.754298141 Z
+- _id: 555369
+  _job: 17569589825
+  _time: 2025-09-09 02:18:35.860672743 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#132 has been opened by @andreoss.
   issue: 132
@@ -91991,9 +91712,9 @@
   when: 2021-12-27 01:13:15.000000000 Z
   where: github
   who: 49783909
-- _id: 555165
-  _job: 17567015791
-  _time: 2025-09-08 23:36:14.168447218 Z
+- _id: 555370
+  _job: 17569589825
+  _time: 2025-09-09 02:18:36.387105187 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#128 has been opened by @andreoss.
   issue: 128
@@ -92002,9 +91723,9 @@
   when: 2021-12-12 05:44:19.000000000 Z
   where: github
   who: 49783909
-- _id: 555166
-  _job: 17567015791
-  _time: 2025-09-08 23:36:14.615122969 Z
+- _id: 555371
+  _job: 17569589825
+  _time: 2025-09-09 02:18:36.759987699 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#124 has been opened by @andreoss.
   issue: 124
@@ -92013,9 +91734,9 @@
   when: 2021-09-09 18:08:06.000000000 Z
   where: github
   who: 49783909
-- _id: 555167
-  _job: 17567015791
-  _time: 2025-09-08 23:36:15.350263901 Z
+- _id: 555372
+  _job: 17569589825
+  _time: 2025-09-09 02:18:37.500415063 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#115 has been opened by @andreoss.
   issue: 115
@@ -92024,9 +91745,9 @@
   when: 2020-12-13 04:50:00.000000000 Z
   where: github
   who: 49783909
-- _id: 555168
-  _job: 17567015791
-  _time: 2025-09-08 23:36:15.574294862 Z
+- _id: 555373
+  _job: 17569589825
+  _time: 2025-09-09 02:18:37.674226640 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#107 has been opened by @fabriciofx.
   issue: 107
@@ -92035,9 +91756,9 @@
   when: 2020-11-23 20:54:59.000000000 Z
   where: github
   who: 1964562
-- _id: 555169
-  _job: 17567015791
-  _time: 2025-09-08 23:36:16.404125738 Z
+- _id: 555374
+  _job: 17569589825
+  _time: 2025-09-09 02:18:38.664207239 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#98 has been opened by @g4s8.
   issue: 98
@@ -92046,9 +91767,9 @@
   when: 2020-07-06 10:11:16.000000000 Z
   where: github
   who: 1524988
-- _id: 555170
-  _job: 17567015791
-  _time: 2025-09-08 23:36:16.730466606 Z
+- _id: 555375
+  _job: 17569589825
+  _time: 2025-09-09 02:18:39.082134034 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#94 has been opened by @hdouss.
   issue: 94
@@ -92057,9 +91778,9 @@
   when: 2020-02-18 10:10:45.000000000 Z
   where: github
   who: 2956255
-- _id: 555171
-  _job: 17567015791
-  _time: 2025-09-08 23:36:17.068010789 Z
+- _id: 555376
+  _job: 17569589825
+  _time: 2025-09-09 02:18:39.554474664 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#88 has been opened by @zcrusaderz.
   issue: 88
@@ -92068,9 +91789,9 @@
   when: 2019-05-08 03:26:25.000000000 Z
   where: github
   who: 34595022
-- _id: 555172
-  _job: 17567015791
-  _time: 2025-09-08 23:36:17.282748103 Z
+- _id: 555377
+  _job: 17569589825
+  _time: 2025-09-09 02:18:39.891443178 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#87 has been opened by @zcrusaderz.
   issue: 87
@@ -92079,9 +91800,9 @@
   when: 2019-05-07 11:19:31.000000000 Z
   where: github
   who: 34595022
-- _id: 555173
-  _job: 17567015791
-  _time: 2025-09-08 23:36:17.404910519 Z
+- _id: 555378
+  _job: 17569589825
+  _time: 2025-09-09 02:18:39.980963755 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#86 has been opened by @fabriciofx.
   issue: 86
@@ -92090,9 +91811,9 @@
   when: 2019-01-13 05:00:40.000000000 Z
   where: github
   who: 1964562
-- _id: 555174
-  _job: 17567015791
-  _time: 2025-09-08 23:36:17.529128134 Z
+- _id: 555379
+  _job: 17569589825
+  _time: 2025-09-09 02:18:40.096474584 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#84 has been opened by @fabriciofx.
   issue: 84
@@ -92101,9 +91822,9 @@
   when: 2018-11-11 05:12:53.000000000 Z
   where: github
   who: 1964562
-- _id: 555175
-  _job: 17567015791
-  _time: 2025-09-08 23:36:17.943985929 Z
+- _id: 555380
+  _job: 17569589825
+  _time: 2025-09-09 02:18:40.476229178 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#78 has been opened by @neonailol.
   issue: 78
@@ -92112,9 +91833,9 @@
   when: 2018-03-27 05:39:56.000000000 Z
   where: github
   who: 440768
-- _id: 555176
-  _job: 17567015791
-  _time: 2025-09-08 23:36:18.647358244 Z
+- _id: 555381
+  _job: 17569589825
+  _time: 2025-09-09 02:18:41.330756990 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#69 has been opened by @yegor256.
   issue: 69
@@ -92123,9 +91844,9 @@
   when: 2017-05-12 09:52:32.000000000 Z
   where: github
   who: 526301
-- _id: 555177
-  _job: 17567015791
-  _time: 2025-09-08 23:36:19.051082745 Z
+- _id: 555382
+  _job: 17569589825
+  _time: 2025-09-09 02:18:41.842443111 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#65 has been opened by @original-brownbear.
   issue: 65
@@ -92134,9 +91855,9 @@
   when: 2016-12-01 20:32:52.000000000 Z
   where: github
   who: 6490959
-- _id: 555178
-  _job: 17567015791
-  _time: 2025-09-08 23:36:19.641686413 Z
+- _id: 555383
+  _job: 17569589825
+  _time: 2025-09-09 02:18:42.515855459 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#57 has been opened by @krzyk.
   issue: 57
@@ -92145,9 +91866,9 @@
   when: 2016-06-06 07:42:18.000000000 Z
   where: github
   who: 105730
-- _id: 555179
-  _job: 17567015791
-  _time: 2025-09-08 23:36:19.855531614 Z
+- _id: 555384
+  _job: 17569589825
+  _time: 2025-09-09 02:18:42.848804987 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#56 has been opened by @essobedo.
   issue: 56
@@ -92156,9 +91877,9 @@
   when: 2016-05-18 20:56:18.000000000 Z
   where: github
   who: 1618116
-- _id: 555180
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.061583846 Z
+- _id: 555385
+  _job: 17569589825
+  _time: 2025-09-09 02:18:43.163944523 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#55 has been opened by @essobedo.
   issue: 55
@@ -92167,9 +91888,9 @@
   when: 2016-05-13 18:45:06.000000000 Z
   where: github
   who: 1618116
-- _id: 555181
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.169528394 Z
+- _id: 555386
+  _job: 17569589825
+  _time: 2025-09-09 02:18:43.267579636 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#54 has been opened by @longtimeago.
   issue: 54
@@ -92178,9 +91899,9 @@
   when: 2016-03-09 06:42:21.000000000 Z
   where: github
   who: 1388994
-- _id: 555182
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.380567015 Z
+- _id: 555387
+  _job: 17569589825
+  _time: 2025-09-09 02:18:43.675489646 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#51 has been opened by @mkordas.
   issue: 51
@@ -92189,9 +91910,9 @@
   when: 2016-01-28 17:10:24.000000000 Z
   where: github
   who: 5467276
-- _id: 555183
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.592790505 Z
+- _id: 555388
+  _job: 17569589825
+  _time: 2025-09-09 02:18:44.091054556 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#50 has been opened by @mkordas.
   issue: 50
@@ -92200,9 +91921,9 @@
   when: 2016-01-22 23:38:49.000000000 Z
   where: github
   who: 5467276
-- _id: 555184
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.701973786 Z
+- _id: 555389
+  _job: 17569589825
+  _time: 2025-09-09 02:18:44.425848869 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#49 has been opened by @exper0.
   issue: 49
@@ -92211,9 +91932,9 @@
   when: 2016-01-22 10:45:07.000000000 Z
   where: github
   who: 7703204
-- _id: 555185
-  _job: 17567015791
-  _time: 2025-09-08 23:36:20.906404992 Z
+- _id: 555390
+  _job: 17569589825
+  _time: 2025-09-09 02:18:44.789347638 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#48 has been opened by @oruam85.
   issue: 48
@@ -92222,9 +91943,9 @@
   when: 2016-01-12 05:05:01.000000000 Z
   where: github
   who: 5570433
-- _id: 555186
-  _job: 17567015791
-  _time: 2025-09-08 23:36:21.184548622 Z
+- _id: 555391
+  _job: 17569589825
+  _time: 2025-09-09 02:18:45.143428461 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#47 has been opened by @carlosmiranda.
   issue: 47
@@ -92233,9 +91954,9 @@
   when: 2016-01-04 02:55:21.000000000 Z
   where: github
   who: 1917892
-- _id: 555187
-  _job: 17567015791
-  _time: 2025-09-08 23:36:21.280302291 Z
+- _id: 555392
+  _job: 17569589825
+  _time: 2025-09-09 02:18:45.480550003 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#46 has been opened by @krzyk.
   issue: 46
@@ -92244,9 +91965,9 @@
   when: 2015-12-13 14:16:39.000000000 Z
   where: github
   who: 105730
-- _id: 555188
-  _job: 17567015791
-  _time: 2025-09-08 23:36:21.404625897 Z
+- _id: 555393
+  _job: 17569589825
+  _time: 2025-09-09 02:18:45.587549564 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#45 has been opened by @krzyk.
   issue: 45
@@ -92255,9 +91976,9 @@
   when: 2015-12-13 14:04:22.000000000 Z
   where: github
   who: 105730
-- _id: 555189
-  _job: 17567015791
-  _time: 2025-09-08 23:36:22.288871246 Z
+- _id: 555394
+  _job: 17569589825
+  _time: 2025-09-09 02:18:46.330175850 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#37 has been opened by @gvlasov.
   issue: 37
@@ -92266,9 +91987,9 @@
   when: 2015-07-19 18:23:47.000000000 Z
   where: github
   who: 4467948
-- _id: 555190
-  _job: 17567015791
-  _time: 2025-09-08 23:36:22.500714338 Z
+- _id: 555395
+  _job: 17569589825
+  _time: 2025-09-09 02:18:46.716931247 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#31 has been opened by @yamstranger.
   issue: 31
@@ -92277,9 +91998,9 @@
   when: 2015-06-10 10:48:30.000000000 Z
   where: github
   who: 1667699
-- _id: 555191
-  _job: 17567015791
-  _time: 2025-09-08 23:36:22.630206092 Z
+- _id: 555396
+  _job: 17569589825
+  _time: 2025-09-09 02:18:47.067678944 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-parent#29 has been opened by @wholegroup.
   issue: 29
@@ -92288,9 +92009,9 @@
   when: 2015-04-18 18:26:58.000000000 Z
   where: github
   who: 553191
-- _id: 555192
-  _job: 17567015791
-  _time: 2025-09-08 23:36:26.890213434 Z
+- _id: 555397
+  _job: 17569589825
+  _time: 2025-09-09 02:18:58.006630714 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#282 has been opened by @maxonfjvipon.
   issue: 282
@@ -92299,9 +92020,9 @@
   when: 2024-12-23 09:22:02.000000000 Z
   where: github
   who: 37025995
-- _id: 555193
-  _job: 17567015791
-  _time: 2025-09-08 23:36:27.098407655 Z
+- _id: 555398
+  _job: 17569589825
+  _time: 2025-09-09 02:18:58.309883761 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#277 has been opened by @volodya-lombrozo.
   issue: 277
@@ -92310,9 +92031,9 @@
   when: 2024-12-01 17:56:00.000000000 Z
   where: github
   who: 51804353
-- _id: 555194
-  _job: 17567015791
-  _time: 2025-09-08 23:36:27.277293283 Z
+- _id: 555399
+  _job: 17569589825
+  _time: 2025-09-09 02:18:58.652013031 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#276 has been opened by @yegor256.
   issue: 276
@@ -92321,9 +92042,9 @@
   when: 2024-12-01 12:45:55.000000000 Z
   where: github
   who: 526301
-- _id: 555195
-  _job: 17567015791
-  _time: 2025-09-08 23:36:27.865928224 Z
+- _id: 555400
+  _job: 17569589825
+  _time: 2025-09-09 02:18:59.260321819 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#244 has been opened by @l3r8yj.
   issue: 244
@@ -92332,9 +92053,9 @@
   when: 2024-04-16 20:09:20.000000000 Z
   where: github
   who: 46355873
-- _id: 555196
-  _job: 17567015791
-  _time: 2025-09-08 23:36:28.127499603 Z
+- _id: 555401
+  _job: 17569589825
+  _time: 2025-09-09 02:18:59.665757340 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#215 has been opened by @volodya-lombrozo.
   issue: 215
@@ -92343,9 +92064,9 @@
   when: 2023-07-19 14:20:33.000000000 Z
   where: github
   who: 51804353
-- _id: 555197
-  _job: 17567015791
-  _time: 2025-09-08 23:36:28.355239977 Z
+- _id: 555402
+  _job: 17569589825
+  _time: 2025-09-09 02:18:59.879202493 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#211 has been opened by @volodya-lombrozo.
   issue: 211
@@ -92354,9 +92075,9 @@
   when: 2023-07-17 10:13:51.000000000 Z
   where: github
   who: 51804353
-- _id: 555198
-  _job: 17567015791
-  _time: 2025-09-08 23:36:28.561133106 Z
+- _id: 555403
+  _job: 17569589825
+  _time: 2025-09-09 02:19:00.070621736 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#205 has been opened by @volodya-lombrozo.
   issue: 205
@@ -92365,9 +92086,9 @@
   when: 2023-06-02 09:29:32.000000000 Z
   where: github
   who: 51804353
-- _id: 555199
-  _job: 17567015791
-  _time: 2025-09-08 23:36:28.946348223 Z
+- _id: 555404
+  _job: 17569589825
+  _time: 2025-09-09 02:19:00.438949395 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#185 has been opened by @mximp.
   issue: 185
@@ -92376,9 +92097,9 @@
   when: 2022-10-18 16:01:28.000000000 Z
   where: github
   who: 40247101
-- _id: 555200
-  _job: 17567015791
-  _time: 2025-09-08 23:36:29.622387746 Z
+- _id: 555405
+  _job: 17569589825
+  _time: 2025-09-09 02:19:01.082291243 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#169 has been opened by @ingeniariussoftware.
   issue: 169
@@ -92387,9 +92108,9 @@
   when: 2022-08-22 05:46:07.000000000 Z
   where: github
   who: 33983579
-- _id: 555201
-  _job: 17567015791
-  _time: 2025-09-08 23:36:30.320803920 Z
+- _id: 555406
+  _job: 17569589825
+  _time: 2025-09-09 02:19:01.908203495 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#162 has been opened by @davewichers.
   issue: 162
@@ -92398,9 +92119,9 @@
   when: 2021-09-16 16:14:01.000000000 Z
   where: github
   who: 5004037
-- _id: 555202
-  _job: 17567015791
-  _time: 2025-09-08 23:36:30.611710858 Z
+- _id: 555407
+  _job: 17569589825
+  _time: 2025-09-09 02:19:02.338296285 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#154 has been opened by @piotrkot.
   issue: 154
@@ -92409,9 +92130,9 @@
   when: 2020-03-05 15:37:15.000000000 Z
   where: github
   who: 9504395
-- _id: 555203
-  _job: 17567015791
-  _time: 2025-09-08 23:36:30.710517998 Z
+- _id: 555408
+  _job: 17569589825
+  _time: 2025-09-09 02:19:02.669206535 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#153 has been opened by @olegmoz.
   issue: 153
@@ -92420,9 +92141,9 @@
   when: 2020-02-06 08:51:32.000000000 Z
   where: github
   who: 298504
-- _id: 555204
-  _job: 17567015791
-  _time: 2025-09-08 23:36:31.026278464 Z
+- _id: 555409
+  _job: 17569589825
+  _time: 2025-09-09 02:19:03.077309743 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#151 has been opened by @simonjenga.
   issue: 151
@@ -92431,9 +92152,9 @@
   when: 2019-02-18 16:20:52.000000000 Z
   where: github
   who: 1405237
-- _id: 555205
-  _job: 17567015791
-  _time: 2025-09-08 23:36:31.242861792 Z
+- _id: 555410
+  _job: 17569589825
+  _time: 2025-09-09 02:19:03.413346850 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#149 has been opened by @ilyakharlamov.
   issue: 149
@@ -92442,9 +92163,9 @@
   when: 2019-01-11 23:07:11.000000000 Z
   where: github
   who: 502372
-- _id: 555206
-  _job: 17567015791
-  _time: 2025-09-08 23:36:32.977892330 Z
+- _id: 555411
+  _job: 17569589825
+  _time: 2025-09-09 02:19:05.092196545 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#133 has been opened by @skapral.
   issue: 133
@@ -92453,9 +92174,9 @@
   when: 2017-04-28 16:05:00.000000000 Z
   where: github
   who: 1714171
-- _id: 555207
-  _job: 17567015791
-  _time: 2025-09-08 23:36:33.276135043 Z
+- _id: 555412
+  _job: 17569589825
+  _time: 2025-09-09 02:19:05.532807915 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#130 has been opened by @gicoprasico.
   issue: 130
@@ -92464,9 +92185,9 @@
   when: 2017-03-17 12:41:44.000000000 Z
   where: github
   who: 7222462
-- _id: 555208
-  _job: 17567015791
-  _time: 2025-09-08 23:36:33.919779307 Z
+- _id: 555413
+  _job: 17569589825
+  _time: 2025-09-09 02:19:06.246884022 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#125 has been opened by @senleft.
   issue: 125
@@ -92475,9 +92196,9 @@
   when: 2016-09-25 12:28:08.000000000 Z
   where: github
   who: 812727
-- _id: 555209
-  _job: 17567015791
-  _time: 2025-09-08 23:36:34.190320480 Z
+- _id: 555414
+  _job: 17569589825
+  _time: 2025-09-09 02:19:06.603828851 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#124 has been opened by @mstarodubtsev.
   issue: 124
@@ -92486,9 +92207,9 @@
   when: 2016-09-13 12:41:52.000000000 Z
   where: github
   who: 14348888
-- _id: 555210
-  _job: 17567015791
-  _time: 2025-09-08 23:36:34.396720986 Z
+- _id: 555415
+  _job: 17569589825
+  _time: 2025-09-09 02:19:06.930029219 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#120 has been opened by @amihaiemil.
   issue: 120
@@ -92497,9 +92218,9 @@
   when: 2016-03-29 22:15:43.000000000 Z
   where: github
   who: 6305156
-- _id: 555211
-  _job: 17567015791
-  _time: 2025-09-08 23:36:34.611889350 Z
+- _id: 555416
+  _job: 17569589825
+  _time: 2025-09-09 02:19:07.290219024 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#119 has been opened by @amihaiemil.
   issue: 119
@@ -92508,9 +92229,9 @@
   when: 2016-03-29 14:52:36.000000000 Z
   where: github
   who: 6305156
-- _id: 555212
-  _job: 17567015791
-  _time: 2025-09-08 23:36:34.906528237 Z
+- _id: 555417
+  _job: 17569589825
+  _time: 2025-09-09 02:19:07.573283937 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#113 has been opened by @ifly6.
   issue: 113
@@ -92519,9 +92240,9 @@
   when: 2016-02-19 00:00:58.000000000 Z
   where: github
   who: 984052
-- _id: 555213
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.100699656 Z
+- _id: 555418
+  _job: 17569589825
+  _time: 2025-09-09 02:19:07.891318868 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#110 has been opened by @mkordas.
   issue: 110
@@ -92530,9 +92251,9 @@
   when: 2016-01-24 16:08:49.000000000 Z
   where: github
   who: 5467276
-- _id: 555214
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.218424302 Z
+- _id: 555419
+  _job: 17569589825
+  _time: 2025-09-09 02:19:07.996184155 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#107 has been opened by @dmzaytsev.
   issue: 107
@@ -92541,9 +92262,9 @@
   when: 2016-01-16 06:38:42.000000000 Z
   where: github
   who: 9972909
-- _id: 555215
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.438733857 Z
+- _id: 555420
+  _job: 17569589825
+  _time: 2025-09-09 02:19:08.371714006 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#106 has been opened by @simonjenga.
   issue: 106
@@ -92552,9 +92273,9 @@
   when: 2016-01-10 11:54:57.000000000 Z
   where: github
   who: 1405237
-- _id: 555216
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.639684276 Z
+- _id: 555421
+  _job: 17569589825
+  _time: 2025-09-09 02:19:08.666461130 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#103 has been opened by @simonjenga.
   issue: 103
@@ -92563,9 +92284,9 @@
   when: 2015-12-26 18:15:25.000000000 Z
   where: github
   who: 1405237
-- _id: 555217
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.750718334 Z
+- _id: 555422
+  _job: 17569589825
+  _time: 2025-09-09 02:19:08.776248011 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#102 has been opened by @simonjenga.
   issue: 102
@@ -92574,9 +92295,9 @@
   when: 2015-12-25 07:31:19.000000000 Z
   where: github
   who: 1405237
-- _id: 555218
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.854126357 Z
+- _id: 555423
+  _job: 17569589825
+  _time: 2025-09-09 02:19:08.880786370 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#101 has been opened by @simonjenga.
   issue: 101
@@ -92585,9 +92306,9 @@
   when: 2015-12-24 08:13:50.000000000 Z
   where: github
   who: 1405237
-- _id: 555219
-  _job: 17567015791
-  _time: 2025-09-08 23:36:35.964589389 Z
+- _id: 555424
+  _job: 17569589825
+  _time: 2025-09-09 02:19:08.971540766 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#100 has been opened by @simonjenga.
   issue: 100
@@ -92596,9 +92317,9 @@
   when: 2015-12-23 07:13:42.000000000 Z
   where: github
   who: 1405237
-- _id: 555220
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.069805916 Z
+- _id: 555425
+  _job: 17569589825
+  _time: 2025-09-09 02:19:09.095700418 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#99 has been opened by @simonjenga.
   issue: 99
@@ -92607,9 +92328,9 @@
   when: 2015-12-17 07:08:35.000000000 Z
   where: github
   who: 1405237
-- _id: 555221
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.179445348 Z
+- _id: 555426
+  _job: 17569589825
+  _time: 2025-09-09 02:19:09.203934821 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#98 has been opened by @simonjenga.
   issue: 98
@@ -92618,9 +92339,9 @@
   when: 2015-12-16 05:52:14.000000000 Z
   where: github
   who: 1405237
-- _id: 555222
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.380367303 Z
+- _id: 555427
+  _job: 17569589825
+  _time: 2025-09-09 02:19:09.400892591 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#96 has been opened by @simonjenga.
   issue: 96
@@ -92629,9 +92350,9 @@
   when: 2015-12-15 05:30:47.000000000 Z
   where: github
   who: 1405237
-- _id: 555223
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.486302863 Z
+- _id: 555428
+  _job: 17569589825
+  _time: 2025-09-09 02:19:09.505697697 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#94 has been opened by @carlosmiranda.
   issue: 94
@@ -92640,9 +92361,9 @@
   when: 2015-12-07 03:00:00.000000000 Z
   where: github
   who: 1917892
-- _id: 555224
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.596180615 Z
+- _id: 555429
+  _job: 17569589825
+  _time: 2025-09-09 02:19:09.884803250 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#74 has been opened by @yegor256.
   issue: 74
@@ -92651,9 +92372,9 @@
   when: 2015-11-10 08:07:38.000000000 Z
   where: github
   who: 526301
-- _id: 555225
-  _job: 17567015791
-  _time: 2025-09-08 23:36:36.976708427 Z
+- _id: 555430
+  _job: 17569589825
+  _time: 2025-09-09 02:19:10.251404716 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#68 has been opened by @yaroslavhq.
   issue: 68
@@ -92662,9 +92383,9 @@
   when: 2015-06-23 12:57:10.000000000 Z
   where: github
   who: 4637784
-- _id: 555226
-  _job: 17567015791
-  _time: 2025-09-08 23:36:37.171737226 Z
+- _id: 555431
+  _job: 17569589825
+  _time: 2025-09-09 02:19:10.608623811 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#66 has been opened by @yamstranger.
   issue: 66
@@ -92673,9 +92394,9 @@
   when: 2015-06-10 10:43:03.000000000 Z
   where: github
   who: 1667699
-- _id: 555227
-  _job: 17567015791
-  _time: 2025-09-08 23:36:37.558083027 Z
+- _id: 555432
+  _job: 17569589825
+  _time: 2025-09-09 02:19:10.986787276 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#62 has been opened by @yegor256.
   issue: 62
@@ -92684,9 +92405,9 @@
   when: 2015-03-20 21:08:21.000000000 Z
   where: github
   who: 526301
-- _id: 555228
-  _job: 17567015791
-  _time: 2025-09-08 23:36:37.673493375 Z
+- _id: 555433
+  _job: 17569589825
+  _time: 2025-09-09 02:19:11.080918714 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#61 has been opened by @yegor256.
   issue: 61
@@ -92695,9 +92416,9 @@
   when: 2015-03-20 19:45:21.000000000 Z
   where: github
   who: 526301
-- _id: 555229
-  _job: 17567015791
-  _time: 2025-09-08 23:36:37.779209036 Z
+- _id: 555434
+  _job: 17569589825
+  _time: 2025-09-09 02:19:11.206901538 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#60 has been opened by @adamsiemion.
   issue: 60
@@ -92706,9 +92427,9 @@
   when: 2015-02-26 07:46:03.000000000 Z
   where: github
   who: 898997
-- _id: 555230
-  _job: 17567015791
-  _time: 2025-09-08 23:36:38.002509650 Z
+- _id: 555435
+  _job: 17569589825
+  _time: 2025-09-09 02:19:11.558443472 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#58 has been opened by @adamsiemion.
   issue: 58
@@ -92717,9 +92438,9 @@
   when: 2015-02-24 17:51:55.000000000 Z
   where: github
   who: 898997
-- _id: 555231
-  _job: 17567015791
-  _time: 2025-09-08 23:36:38.287868493 Z
+- _id: 555436
+  _job: 17569589825
+  _time: 2025-09-09 02:19:11.844766285 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#54 has been opened by @lightoze.
   issue: 54
@@ -92728,9 +92449,9 @@
   when: 2015-02-12 07:13:27.000000000 Z
   where: github
   who: 534657
-- _id: 555232
-  _job: 17567015791
-  _time: 2025-09-08 23:36:38.523520578 Z
+- _id: 555437
+  _job: 17569589825
+  _time: 2025-09-09 02:19:12.185347499 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#53 has been opened by @lightoze.
   issue: 53
@@ -92739,9 +92460,9 @@
   when: 2015-02-12 06:55:34.000000000 Z
   where: github
   who: 534657
-- _id: 555233
-  _job: 17567015791
-  _time: 2025-09-08 23:36:38.720891467 Z
+- _id: 555438
+  _job: 17569589825
+  _time: 2025-09-09 02:19:12.375779672 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#50 has been opened by @maurezen.
   issue: 50
@@ -92750,9 +92471,9 @@
   when: 2015-01-21 23:01:33.000000000 Z
   where: github
   who: 569536
-- _id: 555234
-  _job: 17567015791
-  _time: 2025-09-08 23:36:38.911307995 Z
+- _id: 555439
+  _job: 17569589825
+  _time: 2025-09-09 02:19:12.724768207 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#49 has been opened by @apocarteres.
   issue: 49
@@ -92761,9 +92482,9 @@
   when: 2015-01-21 15:29:55.000000000 Z
   where: github
   who: 3305624
-- _id: 555235
-  _job: 17567015791
-  _time: 2025-09-08 23:36:39.115760519 Z
+- _id: 555440
+  _job: 17569589825
+  _time: 2025-09-09 02:19:13.084485631 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#47 has been opened by @maurezen.
   issue: 47
@@ -92772,9 +92493,9 @@
   when: 2015-01-19 21:25:58.000000000 Z
   where: github
   who: 569536
-- _id: 555236
-  _job: 17567015791
-  _time: 2025-09-08 23:36:39.318857117 Z
+- _id: 555441
+  _job: 17569589825
+  _time: 2025-09-09 02:19:13.277166660 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#44 has been opened by @pinaf.
   issue: 44
@@ -92783,9 +92504,9 @@
   when: 2015-01-14 16:31:09.000000000 Z
   where: github
   who: 1054771
-- _id: 555237
-  _job: 17567015791
-  _time: 2025-09-08 23:36:39.613157552 Z
+- _id: 555442
+  _job: 17569589825
+  _time: 2025-09-09 02:19:13.686567396 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#41 has been opened by @maurezen.
   issue: 41
@@ -92794,9 +92515,9 @@
   when: 2015-01-08 16:33:14.000000000 Z
   where: github
   who: 569536
-- _id: 555238
-  _job: 17567015791
-  _time: 2025-09-08 23:36:39.811117110 Z
+- _id: 555443
+  _job: 17569589825
+  _time: 2025-09-09 02:19:13.893494320 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#38 has been opened by @mentiflectax.
   issue: 38
@@ -92805,9 +92526,9 @@
   when: 2015-01-02 12:48:28.000000000 Z
   where: github
   who: 1143055
-- _id: 555239
-  _job: 17567015791
-  _time: 2025-09-08 23:36:40.194681273 Z
+- _id: 555444
+  _job: 17569589825
+  _time: 2025-09-09 02:19:14.399378951 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#35 has been opened by @krzyk.
   issue: 35
@@ -92816,9 +92537,9 @@
   when: 2014-10-13 20:30:54.000000000 Z
   where: github
   who: 105730
-- _id: 555240
-  _job: 17567015791
-  _time: 2025-09-08 23:36:40.491380777 Z
+- _id: 555445
+  _job: 17569589825
+  _time: 2025-09-09 02:19:14.679691541 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#32 has been opened by @carlosmiranda.
   issue: 32
@@ -92827,9 +92548,9 @@
   when: 2014-08-21 03:03:16.000000000 Z
   where: github
   who: 1917892
-- _id: 555241
-  _job: 17567015791
-  _time: 2025-09-08 23:36:40.596813749 Z
+- _id: 555446
+  _job: 17569589825
+  _time: 2025-09-09 02:19:14.793439092 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#31 has been opened by @carlosmiranda.
   issue: 31
@@ -92838,9 +92559,9 @@
   when: 2014-08-18 01:21:50.000000000 Z
   where: github
   who: 1917892
-- _id: 555242
-  _job: 17567015791
-  _time: 2025-09-08 23:36:41.007853873 Z
+- _id: 555447
+  _job: 17569589825
+  _time: 2025-09-09 02:19:15.165726329 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#23 has been opened by @carlosmiranda.
   issue: 23
@@ -92849,9 +92570,9 @@
   when: 2014-04-21 02:53:53.000000000 Z
   where: github
   who: 1917892
-- _id: 555243
-  _job: 17567015791
-  _time: 2025-09-08 23:36:41.118145285 Z
+- _id: 555448
+  _job: 17569589825
+  _time: 2025-09-09 02:19:15.279916379 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#22 has been opened by @krzyk.
   issue: 22
@@ -92860,9 +92581,9 @@
   when: 2014-04-05 07:28:13.000000000 Z
   where: github
   who: 105730
-- _id: 555244
-  _job: 17567015791
-  _time: 2025-09-08 23:36:41.237198304 Z
+- _id: 555449
+  _job: 17569589825
+  _time: 2025-09-09 02:19:15.386247100 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-xml#19 has been opened by @carlosmiranda.
   issue: 19
@@ -92871,9 +92592,317 @@
   when: 2014-03-21 05:46:28.000000000 Z
   where: github
   who: 1917892
-- _id: 555245
-  _job: 17567015791
-  _time: 2025-09-08 23:36:48.934831150 Z
+- _id: 555450
+  _job: 17569589825
+  _time: 2025-09-09 02:19:25.055607880 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#165 has been opened by @andreoss.
+  issue: 165
+  repository: 12587702
+  what: issue-was-opened
+  when: 2022-06-24 15:16:02.000000000 Z
+  where: github
+  who: 49783909
+- _id: 555451
+  _job: 17569589825
+  _time: 2025-09-09 02:19:25.351422858 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#102 has been opened by @baudoliver7.
+  issue: 102
+  repository: 12587702
+  what: issue-was-opened
+  when: 2021-04-20 05:16:01.000000000 Z
+  where: github
+  who: 7813046
+- _id: 555452
+  _job: 17569589825
+  _time: 2025-09-09 02:19:25.783941311 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#100 has been opened by @piotrkot.
+  issue: 100
+  repository: 12587702
+  what: issue-was-opened
+  when: 2021-04-07 14:29:43.000000000 Z
+  where: github
+  who: 9504395
+- _id: 555453
+  _job: 17569589825
+  _time: 2025-09-09 02:19:26.510636881 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#80 has been opened by @golszewski86.
+  issue: 80
+  repository: 12587702
+  what: issue-was-opened
+  when: 2020-02-11 12:27:37.000000000 Z
+  where: github
+  who: 45224442
+- _id: 555454
+  _job: 17569589825
+  _time: 2025-09-09 02:19:26.861339889 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#79 has been opened by @glusk.
+  issue: 79
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-12-19 11:27:43.000000000 Z
+  where: github
+  who: 8526099
+- _id: 555455
+  _job: 17569589825
+  _time: 2025-09-09 02:19:27.212413367 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#78 has been opened by @glusk.
+  issue: 78
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-12-19 10:50:15.000000000 Z
+  where: github
+  who: 8526099
+- _id: 555456
+  _job: 17569589825
+  _time: 2025-09-09 02:19:27.318523623 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#76 has been opened by @pluresideas.
+  issue: 76
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-11-20 15:53:31.000000000 Z
+  where: github
+  who: 26636262
+- _id: 555457
+  _job: 17569589825
+  _time: 2025-09-09 02:19:27.684444997 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#74 has been opened by @glusk.
+  issue: 74
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-10-25 12:43:14.000000000 Z
+  where: github
+  who: 8526099
+- _id: 555458
+  _job: 17569589825
+  _time: 2025-09-09 02:19:27.787737533 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#73 has been opened by @scristalli.
+  issue: 73
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-07-12 12:01:27.000000000 Z
+  where: github
+  who: 7326295
+- _id: 555459
+  _job: 17569589825
+  _time: 2025-09-09 02:19:28.186073999 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#71 has been opened by @golszewski86.
+  issue: 71
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-05-15 12:23:01.000000000 Z
+  where: github
+  who: 45224442
+- _id: 555460
+  _job: 17569589825
+  _time: 2025-09-09 02:19:28.398705516 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#70 has been opened by @sz332.
+  issue: 70
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-04-06 05:33:39.000000000 Z
+  where: github
+  who: 8182138
+- _id: 555461
+  _job: 17569589825
+  _time: 2025-09-09 02:19:28.746526576 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#68 has been opened by @piotrkot.
+  issue: 68
+  repository: 12587702
+  what: issue-was-opened
+  when: 2018-11-08 17:10:20.000000000 Z
+  where: github
+  who: 9504395
+- _id: 555462
+  _job: 17569589825
+  _time: 2025-09-09 02:19:28.863860253 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#67 has been opened by @verkhovin.
+  issue: 67
+  repository: 12587702
+  what: issue-was-opened
+  when: 2018-09-10 21:52:35.000000000 Z
+  where: github
+  who: 15959667
+- _id: 555463
+  _job: 17569589825
+  _time: 2025-09-09 02:19:29.577853594 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#57 has been opened by @miroque.
+  issue: 57
+  repository: 12587702
+  what: issue-was-opened
+  when: 2017-01-31 07:59:41.000000000 Z
+  where: github
+  who: 661340
+- _id: 555464
+  _job: 17569589825
+  _time: 2025-09-09 02:19:30.029629518 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#54 has been opened by @andrejserafim.
+  issue: 54
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-11-04 19:20:05.000000000 Z
+  where: github
+  who: 13505986
+- _id: 555465
+  _job: 17569589825
+  _time: 2025-09-09 02:19:30.611640970 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#51 has been opened by @davdavid.
+  issue: 51
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-06-29 17:46:55.000000000 Z
+  where: github
+  who: 20211331
+- _id: 555466
+  _job: 17569589825
+  _time: 2025-09-09 02:19:30.942136852 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#50 has been opened by @sshafiev.
+  issue: 50
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-04-11 20:12:12.000000000 Z
+  where: github
+  who: 1702423
+- _id: 555467
+  _job: 17569589825
+  _time: 2025-09-09 02:19:31.345020171 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#49 has been opened by @lgmam.
+  issue: 49
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-03-09 20:49:26.000000000 Z
+  where: github
+  who: 3864307
+- _id: 555468
+  _job: 17569589825
+  _time: 2025-09-09 02:19:31.778748492 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#46 has been opened by @fabriciofx.
+  issue: 46
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-01-18 04:33:27.000000000 Z
+  where: github
+  who: 1964562
+- _id: 555469
+  _job: 17569589825
+  _time: 2025-09-09 02:19:32.099916694 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#43 has been opened by @yamstranger.
+  issue: 43
+  repository: 12587702
+  what: issue-was-opened
+  when: 2015-06-10 10:47:16.000000000 Z
+  where: github
+  who: 1667699
+- _id: 555470
+  _job: 17569589825
+  _time: 2025-09-09 02:19:32.451692766 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#37 has been opened by @maurezen.
+  issue: 37
+  repository: 12587702
+  what: issue-was-opened
+  when: 2015-01-21 22:51:51.000000000 Z
+  where: github
+  who: 569536
+- _id: 555471
+  _job: 17569589825
+  _time: 2025-09-09 02:19:32.582541236 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#34 has been opened by @maurezen.
+  issue: 34
+  repository: 12587702
+  what: issue-was-opened
+  when: 2015-01-08 16:38:53.000000000 Z
+  where: github
+  who: 569536
+- _id: 555472
+  _job: 17569589825
+  _time: 2025-09-09 02:19:32.701057404 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#33 has been opened by @longtimeago.
+  issue: 33
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-12-31 11:37:49.000000000 Z
+  where: github
+  who: 1388994
+- _id: 555473
+  _job: 17569589825
+  _time: 2025-09-09 02:19:33.337259447 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#25 has been opened by @ericjung.
+  issue: 25
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-06-26 16:08:14.000000000 Z
+  where: github
+  who: 5875610
+- _id: 555474
+  _job: 17569589825
+  _time: 2025-09-09 02:19:33.764213182 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#23 has been opened by @carlosmiranda.
+  issue: 23
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-06-13 00:23:04.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555475
+  _job: 17569589825
+  _time: 2025-09-09 02:19:34.076163296 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#21 has been opened by @carlosmiranda.
+  issue: 21
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-04-02 01:08:00.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555476
+  _job: 17569589825
+  _time: 2025-09-09 02:19:34.167556831 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#17 has been opened by @carlosmiranda.
+  issue: 17
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-03-21 01:20:59.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555477
+  _job: 17569589825
+  _time: 2025-09-09 02:19:34.379896040 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The issue jcabi/jcabi-jdbc#13 has been opened by @carlosmiranda.
+  issue: 13
+  repository: 12587702
+  what: issue-was-opened
+  when: 2014-03-17 01:38:21.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555478
+  _job: 17569589825
+  _time: 2025-09-09 02:19:42.628211119 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#243 has been opened by @golszewski86.
   issue: 243
@@ -92882,9 +92911,9 @@
   when: 2021-03-17 17:36:22.000000000 Z
   where: github
   who: 45224442
-- _id: 555246
-  _job: 17567015791
-  _time: 2025-09-08 23:36:49.369646179 Z
+- _id: 555479
+  _job: 17569589825
+  _time: 2025-09-09 02:19:43.023298601 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#227 has been opened by @yegor256.
   issue: 227
@@ -92893,9 +92922,9 @@
   when: 2020-11-27 12:12:52.000000000 Z
   where: github
   who: 526301
-- _id: 555247
-  _job: 17567015791
-  _time: 2025-09-08 23:36:49.459817167 Z
+- _id: 555480
+  _job: 17569589825
+  _time: 2025-09-09 02:19:43.388500185 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#224 has been opened by @andreoss.
   issue: 224
@@ -92904,9 +92933,9 @@
   when: 2020-11-02 17:17:55.000000000 Z
   where: github
   who: 49783909
-- _id: 555248
-  _job: 17567015791
-  _time: 2025-09-08 23:36:50.338296202 Z
+- _id: 555481
+  _job: 17569589825
+  _time: 2025-09-09 02:19:44.557554713 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#203 has been opened by @andreoss.
   issue: 203
@@ -92915,9 +92944,9 @@
   when: 2020-07-08 20:17:47.000000000 Z
   where: github
   who: 49783909
-- _id: 555249
-  _job: 17567015791
-  _time: 2025-09-08 23:36:50.955654174 Z
+- _id: 555482
+  _job: 17569589825
+  _time: 2025-09-09 02:19:45.066055309 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#187 has been opened by @simonjenga.
   issue: 187
@@ -92926,9 +92955,9 @@
   when: 2019-11-30 11:14:18.000000000 Z
   where: github
   who: 1405237
-- _id: 555250
-  _job: 17567015791
-  _time: 2025-09-08 23:36:51.084254235 Z
+- _id: 555483
+  _job: 17569589825
+  _time: 2025-09-09 02:19:45.196162310 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#185 has been opened by @piotrkot.
   issue: 185
@@ -92937,9 +92966,9 @@
   when: 2019-11-03 19:31:53.000000000 Z
   where: github
   who: 9504395
-- _id: 555251
-  _job: 17567015791
-  _time: 2025-09-08 23:36:51.174986260 Z
+- _id: 555484
+  _job: 17569589825
+  _time: 2025-09-09 02:19:45.311902474 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#182 has been opened by @pinaf.
   issue: 182
@@ -92948,9 +92977,9 @@
   when: 2019-07-15 02:34:38.000000000 Z
   where: github
   who: 1054771
-- _id: 555252
-  _job: 17567015791
-  _time: 2025-09-08 23:36:51.303927207 Z
+- _id: 555485
+  _job: 17569589825
+  _time: 2025-09-09 02:19:45.428871830 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#181 has been opened by @marcguilera.
   issue: 181
@@ -92959,9 +92988,9 @@
   when: 2019-07-10 08:50:28.000000000 Z
   where: github
   who: 7732696
-- _id: 555253
-  _job: 17567015791
-  _time: 2025-09-08 23:36:51.527522209 Z
+- _id: 555486
+  _job: 17569589825
+  _time: 2025-09-09 02:19:45.758329118 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#179 has been opened by @nnordrum.
   issue: 179
@@ -92970,9 +92999,9 @@
   when: 2019-03-25 20:21:42.000000000 Z
   where: github
   who: 774167
-- _id: 555254
-  _job: 17567015791
-  _time: 2025-09-08 23:36:51.835746319 Z
+- _id: 555487
+  _job: 17569589825
+  _time: 2025-09-09 02:19:46.192814651 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#177 has been opened by @paulodamaso.
   issue: 177
@@ -92981,9 +93010,9 @@
   when: 2018-09-24 12:26:55.000000000 Z
   where: github
   who: 33915433
-- _id: 555255
-  _job: 17567015791
-  _time: 2025-09-08 23:36:52.043717966 Z
+- _id: 555488
+  _job: 17569589825
+  _time: 2025-09-09 02:19:46.491992412 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#176 has been opened by @driver733.
   issue: 176
@@ -92992,9 +93021,9 @@
   when: 2018-06-13 14:05:03.000000000 Z
   where: github
   who: 10466206
-- _id: 555256
-  _job: 17567015791
-  _time: 2025-09-08 23:36:52.250910900 Z
+- _id: 555489
+  _job: 17569589825
+  _time: 2025-09-09 02:19:46.947301417 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#175 has been opened by @driver733.
   issue: 175
@@ -93003,9 +93032,9 @@
   when: 2018-06-13 11:08:14.000000000 Z
   where: github
   who: 10466206
-- _id: 555257
-  _job: 17567015791
-  _time: 2025-09-08 23:36:52.363395786 Z
+- _id: 555490
+  _job: 17569589825
+  _time: 2025-09-09 02:19:47.074030840 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#173 has been opened by @amihaiemil.
   issue: 173
@@ -93014,9 +93043,9 @@
   when: 2018-01-28 17:03:16.000000000 Z
   where: github
   who: 6305156
-- _id: 555258
-  _job: 17567015791
-  _time: 2025-09-08 23:36:52.559110271 Z
+- _id: 555491
+  _job: 17569589825
+  _time: 2025-09-09 02:19:47.276152162 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#171 has been opened by @yegor256.
   issue: 171
@@ -93025,9 +93054,9 @@
   when: 2017-12-19 14:26:50.000000000 Z
   where: github
   who: 526301
-- _id: 555259
-  _job: 17567015791
-  _time: 2025-09-08 23:36:52.655806751 Z
+- _id: 555492
+  _job: 17569589825
+  _time: 2025-09-09 02:19:47.381535886 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#170 has been opened by @rishikeshdarandale.
   issue: 170
@@ -93036,9 +93065,9 @@
   when: 2017-12-18 18:46:37.000000000 Z
   where: github
   who: 4144769
-- _id: 555260
-  _job: 17567015791
-  _time: 2025-09-08 23:36:53.305599836 Z
+- _id: 555493
+  _job: 17569589825
+  _time: 2025-09-09 02:19:48.163661846 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#160 has been opened by @jakob-o.
   issue: 160
@@ -93047,9 +93076,9 @@
   when: 2017-04-25 14:38:15.000000000 Z
   where: github
   who: 1359384
-- _id: 555261
-  _job: 17567015791
-  _time: 2025-09-08 23:36:53.524065495 Z
+- _id: 555494
+  _job: 17569589825
+  _time: 2025-09-09 02:19:48.538914541 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#159 has been opened by @jakob-o.
   issue: 159
@@ -93058,9 +93087,9 @@
   when: 2017-04-25 13:11:50.000000000 Z
   where: github
   who: 1359384
-- _id: 555262
-  _job: 17567015791
-  _time: 2025-09-08 23:36:53.714461922 Z
+- _id: 555495
+  _job: 17569589825
+  _time: 2025-09-09 02:19:48.740917632 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#156 has been opened by @sekulicd.
   issue: 156
@@ -93069,9 +93098,9 @@
   when: 2017-03-18 18:55:42.000000000 Z
   where: github
   who: 1805417
-- _id: 555263
-  _job: 17567015791
-  _time: 2025-09-08 23:36:54.013127386 Z
+- _id: 555496
+  _job: 17569589825
+  _time: 2025-09-09 02:19:49.172865547 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#153 has been opened by @passwone.
   issue: 153
@@ -93080,9 +93109,9 @@
   when: 2016-12-12 15:41:00.000000000 Z
   where: github
   who: 24527002
-- _id: 555264
-  _job: 17567015791
-  _time: 2025-09-08 23:36:54.383681233 Z
+- _id: 555497
+  _job: 17569589825
+  _time: 2025-09-09 02:19:49.705778680 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#148 has been opened by @php-coder.
   issue: 148
@@ -93091,9 +93120,9 @@
   when: 2016-11-11 15:22:15.000000000 Z
   where: github
   who: 87088
-- _id: 555265
-  _job: 17567015791
-  _time: 2025-09-08 23:36:54.582155891 Z
+- _id: 555498
+  _job: 17569589825
+  _time: 2025-09-09 02:19:50.047387033 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#147 has been opened by @php-coder.
   issue: 147
@@ -93102,9 +93131,9 @@
   when: 2016-11-11 15:15:51.000000000 Z
   where: github
   who: 87088
-- _id: 555266
-  _job: 17567015791
-  _time: 2025-09-08 23:36:54.689158542 Z
+- _id: 555499
+  _job: 17569589825
+  _time: 2025-09-09 02:19:50.163240739 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#146 has been opened by @andrejserafim.
   issue: 146
@@ -93113,9 +93142,9 @@
   when: 2016-11-04 08:17:03.000000000 Z
   where: github
   who: 13505986
-- _id: 555267
-  _job: 17567015791
-  _time: 2025-09-08 23:36:54.802001215 Z
+- _id: 555500
+  _job: 17569589825
+  _time: 2025-09-09 02:19:50.267355763 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#145 has been opened by @andrejserafim.
   issue: 145
@@ -93124,9 +93153,9 @@
   when: 2016-10-31 13:24:43.000000000 Z
   where: github
   who: 13505986
-- _id: 555268
-  _job: 17567015791
-  _time: 2025-09-08 23:36:55.095465768 Z
+- _id: 555501
+  _job: 17569589825
+  _time: 2025-09-09 02:19:50.554245966 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#138 has been opened by @yiyiwangru.
   issue: 138
@@ -93135,9 +93164,9 @@
   when: 2016-06-15 15:23:35.000000000 Z
   where: github
   who: 11848650
-- _id: 555269
-  _job: 17567015791
-  _time: 2025-09-08 23:36:55.287203361 Z
+- _id: 555502
+  _job: 17569589825
+  _time: 2025-09-09 02:19:50.854548517 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#137 has been opened by @pstorch.
   issue: 137
@@ -93146,9 +93175,9 @@
   when: 2016-06-06 08:32:44.000000000 Z
   where: github
   who: 5598124
-- _id: 555270
-  _job: 17567015791
-  _time: 2025-09-08 23:36:55.480118961 Z
+- _id: 555503
+  _job: 17569589825
+  _time: 2025-09-09 02:19:51.188579693 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#136 has been opened by @super132.
   issue: 136
@@ -93157,9 +93186,9 @@
   when: 2016-05-27 08:59:09.000000000 Z
   where: github
   who: 6581896
-- _id: 555271
-  _job: 17567015791
-  _time: 2025-09-08 23:36:55.713122398 Z
+- _id: 555504
+  _job: 17569589825
+  _time: 2025-09-09 02:19:51.538544760 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#135 has been opened by @westonal.
   issue: 135
@@ -93168,9 +93197,9 @@
   when: 2016-05-16 23:00:25.000000000 Z
   where: github
   who: 6041352
-- _id: 555272
-  _job: 17567015791
-  _time: 2025-09-08 23:36:55.940308817 Z
+- _id: 555505
+  _job: 17569589825
+  _time: 2025-09-09 02:19:51.837808738 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#132 has been opened by @amihaiemil.
   issue: 132
@@ -93179,9 +93208,9 @@
   when: 2016-05-04 10:31:31.000000000 Z
   where: github
   who: 6305156
-- _id: 555273
-  _job: 17567015791
-  _time: 2025-09-08 23:36:56.047963986 Z
+- _id: 555506
+  _job: 17569589825
+  _time: 2025-09-09 02:19:51.957925622 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#131 has been opened by @jgl-jll.
   issue: 131
@@ -93190,9 +93219,9 @@
   when: 2016-04-11 18:37:14.000000000 Z
   where: github
   who: 2061944
-- _id: 555274
-  _job: 17567015791
-  _time: 2025-09-08 23:36:56.430258671 Z
+- _id: 555507
+  _job: 17569589825
+  _time: 2025-09-09 02:19:52.469829662 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#127 has been opened by @simonjenga.
   issue: 127
@@ -93201,9 +93230,9 @@
   when: 2016-02-16 07:58:41.000000000 Z
   where: github
   who: 1405237
-- _id: 555275
-  _job: 17567015791
-  _time: 2025-09-08 23:36:56.537534993 Z
+- _id: 555508
+  _job: 17569589825
+  _time: 2025-09-09 02:19:52.574652981 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#126 has been opened by @krzyk.
   issue: 126
@@ -93212,9 +93241,9 @@
   when: 2016-02-14 21:53:43.000000000 Z
   where: github
   who: 105730
-- _id: 555276
-  _job: 17567015791
-  _time: 2025-09-08 23:36:56.653220479 Z
+- _id: 555509
+  _job: 17569589825
+  _time: 2025-09-09 02:19:52.902093507 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#124 has been opened by @cvrebert.
   issue: 124
@@ -93223,9 +93252,9 @@
   when: 2016-01-26 04:46:08.000000000 Z
   where: github
   who: 419884
-- _id: 555277
-  _job: 17567015791
-  _time: 2025-09-08 23:36:56.837180369 Z
+- _id: 555510
+  _job: 17569589825
+  _time: 2025-09-09 02:19:53.279609146 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#122 has been opened by @piddubnyi.
   issue: 122
@@ -93234,9 +93263,9 @@
   when: 2016-01-21 10:53:39.000000000 Z
   where: github
   who: 6010247
-- _id: 555278
-  _job: 17567015791
-  _time: 2025-09-08 23:36:57.302074918 Z
+- _id: 555511
+  _job: 17569589825
+  _time: 2025-09-09 02:19:53.867164838 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#116 has been opened by @yegor256.
   issue: 116
@@ -93245,9 +93274,9 @@
   when: 2015-12-09 13:43:27.000000000 Z
   where: github
   who: 526301
-- _id: 555279
-  _job: 17567015791
-  _time: 2025-09-08 23:36:57.503039795 Z
+- _id: 555512
+  _job: 17569589825
+  _time: 2025-09-09 02:19:54.075212690 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#113 has been opened by @krzyk.
   issue: 113
@@ -93256,9 +93285,9 @@
   when: 2015-09-27 06:30:38.000000000 Z
   where: github
   who: 105730
-- _id: 555280
-  _job: 17567015791
-  _time: 2025-09-08 23:36:57.617859442 Z
+- _id: 555513
+  _job: 17569589825
+  _time: 2025-09-09 02:19:54.171106001 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#111 has been opened by @daneshkohan.
   issue: 111
@@ -93267,9 +93296,9 @@
   when: 2015-09-15 13:15:07.000000000 Z
   where: github
   who: 12834398
-- _id: 555281
-  _job: 17567015791
-  _time: 2025-09-08 23:36:57.967570341 Z
+- _id: 555514
+  _job: 17569589825
+  _time: 2025-09-09 02:19:54.525863936 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#109 has been opened by @alxn.
   issue: 109
@@ -93278,9 +93307,9 @@
   when: 2015-08-31 16:56:55.000000000 Z
   where: github
   who: 4368287
-- _id: 555282
-  _job: 17567015791
-  _time: 2025-09-08 23:36:58.303811394 Z
+- _id: 555515
+  _job: 17569589825
+  _time: 2025-09-09 02:19:54.854789812 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#108 has been opened by @pinaf.
   issue: 108
@@ -93289,9 +93318,9 @@
   when: 2015-08-28 17:56:22.000000000 Z
   where: github
   who: 1054771
-- _id: 555283
-  _job: 17567015791
-  _time: 2025-09-08 23:36:58.405242778 Z
+- _id: 555516
+  _job: 17569589825
+  _time: 2025-09-09 02:19:54.958068832 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#106 has been opened by @pinaf.
   issue: 106
@@ -93300,9 +93329,9 @@
   when: 2015-08-21 19:34:03.000000000 Z
   where: github
   who: 1054771
-- _id: 555284
-  _job: 17567015791
-  _time: 2025-09-08 23:36:58.519871811 Z
+- _id: 555517
+  _job: 17569589825
+  _time: 2025-09-09 02:19:55.072027346 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#105 has been opened by @longtimeago.
   issue: 105
@@ -93311,9 +93340,9 @@
   when: 2015-08-17 21:01:46.000000000 Z
   where: github
   who: 1388994
-- _id: 555285
-  _job: 17567015791
-  _time: 2025-09-08 23:36:58.621268758 Z
+- _id: 555518
+  _job: 17569589825
+  _time: 2025-09-09 02:19:55.398653334 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#104 has been opened by @yamstranger.
   issue: 104
@@ -93322,9 +93351,9 @@
   when: 2015-08-04 12:28:26.000000000 Z
   where: github
   who: 1667699
-- _id: 555286
-  _job: 17567015791
-  _time: 2025-09-08 23:36:58.738242027 Z
+- _id: 555519
+  _job: 17569589825
+  _time: 2025-09-09 02:19:55.762528698 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#102 has been opened by @antonini.
   issue: 102
@@ -93333,9 +93362,9 @@
   when: 2015-07-08 11:53:47.000000000 Z
   where: github
   who: 209396
-- _id: 555287
-  _job: 17567015791
-  _time: 2025-09-08 23:36:59.023956614 Z
+- _id: 555520
+  _job: 17569589825
+  _time: 2025-09-09 02:19:56.180933422 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#97 has been opened by @dominicfarr.
   issue: 97
@@ -93344,9 +93373,9 @@
   when: 2015-06-18 16:19:40.000000000 Z
   where: github
   who: 95550
-- _id: 555288
-  _job: 17567015791
-  _time: 2025-09-08 23:36:59.210190755 Z
+- _id: 555521
+  _job: 17569589825
+  _time: 2025-09-09 02:19:56.878632166 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#96 has been opened by @cvrebert.
   issue: 96
@@ -93355,9 +93384,9 @@
   when: 2015-06-10 00:27:14.000000000 Z
   where: github
   who: 419884
-- _id: 555289
-  _job: 17567015791
-  _time: 2025-09-08 23:36:59.598343049 Z
+- _id: 555522
+  _job: 17569589825
+  _time: 2025-09-09 02:19:57.249573977 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#90 has been opened by @cvrebert.
   issue: 90
@@ -93366,9 +93395,9 @@
   when: 2015-05-26 08:51:29.000000000 Z
   where: github
   who: 419884
-- _id: 555290
-  _job: 17567015791
-  _time: 2025-09-08 23:36:59.720690522 Z
+- _id: 555523
+  _job: 17569589825
+  _time: 2025-09-09 02:19:57.370877273 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#89 has been opened by @cvrebert.
   issue: 89
@@ -93377,9 +93406,9 @@
   when: 2015-05-26 08:49:07.000000000 Z
   where: github
   who: 419884
-- _id: 555291
-  _job: 17567015791
-  _time: 2025-09-08 23:36:59.824030749 Z
+- _id: 555524
+  _job: 17569589825
+  _time: 2025-09-09 02:19:57.473248820 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#87 has been opened by @pinaf.
   issue: 87
@@ -93388,9 +93417,9 @@
   when: 2015-05-18 17:47:17.000000000 Z
   where: github
   who: 1054771
-- _id: 555292
-  _job: 17567015791
-  _time: 2025-09-08 23:37:00.030118648 Z
+- _id: 555525
+  _job: 17569589825
+  _time: 2025-09-09 02:19:57.678081160 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#85 has been opened by @super132.
   issue: 85
@@ -93399,9 +93428,9 @@
   when: 2015-05-10 14:51:39.000000000 Z
   where: github
   who: 6581896
-- _id: 555293
-  _job: 17567015791
-  _time: 2025-09-08 23:37:00.142523688 Z
+- _id: 555526
+  _job: 17569589825
+  _time: 2025-09-09 02:19:57.774559126 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#84 has been opened by @alehvasilyeu.
   issue: 84
@@ -93410,9 +93439,9 @@
   when: 2015-04-27 15:53:35.000000000 Z
   where: github
   who: 2071500
-- _id: 555294
-  _job: 17567015791
-  _time: 2025-09-08 23:37:00.327451496 Z
+- _id: 555527
+  _job: 17569589825
+  _time: 2025-09-09 02:19:58.155163465 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#82 has been opened by @dmzaytsev.
   issue: 82
@@ -93421,9 +93450,9 @@
   when: 2015-04-22 06:47:33.000000000 Z
   where: github
   who: 9972909
-- _id: 555295
-  _job: 17567015791
-  _time: 2025-09-08 23:37:00.442637789 Z
+- _id: 555528
+  _job: 17569589825
+  _time: 2025-09-09 02:19:58.260123082 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#81 has been opened by @bugs84.
   issue: 81
@@ -93432,9 +93461,9 @@
   when: 2015-04-07 20:31:10.000000000 Z
   where: github
   who: 511167
-- _id: 555296
-  _job: 17567015791
-  _time: 2025-09-08 23:37:01.093234344 Z
+- _id: 555529
+  _job: 17569589825
+  _time: 2025-09-09 02:19:59.073048540 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#75 has been opened by @longtimeago.
   issue: 75
@@ -93443,9 +93472,9 @@
   when: 2015-03-30 16:48:31.000000000 Z
   where: github
   who: 1388994
-- _id: 555297
-  _job: 17567015791
-  _time: 2025-09-08 23:37:01.313308286 Z
+- _id: 555530
+  _job: 17569589825
+  _time: 2025-09-09 02:19:59.182933580 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#74 has been opened by @longtimeago.
   issue: 74
@@ -93454,9 +93483,9 @@
   when: 2015-03-30 11:58:49.000000000 Z
   where: github
   who: 1388994
-- _id: 555298
-  _job: 17567015791
-  _time: 2025-09-08 23:37:01.425748262 Z
+- _id: 555531
+  _job: 17569589825
+  _time: 2025-09-09 02:19:59.303935811 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#73 has been opened by @carlosmiranda.
   issue: 73
@@ -93465,9 +93494,9 @@
   when: 2015-03-23 01:58:49.000000000 Z
   where: github
   who: 1917892
-- _id: 555299
-  _job: 17567015791
-  _time: 2025-09-08 23:37:01.820995034 Z
+- _id: 555532
+  _job: 17569589825
+  _time: 2025-09-09 02:19:59.826578254 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#70 has been opened by @mentiflectax.
   issue: 70
@@ -93476,9 +93505,9 @@
   when: 2015-01-25 18:58:18.000000000 Z
   where: github
   who: 1143055
-- _id: 555300
-  _job: 17567015791
-  _time: 2025-09-08 23:37:02.120483361 Z
+- _id: 555533
+  _job: 17569589825
+  _time: 2025-09-09 02:20:00.113141465 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#67 has been opened by @shashankrudra.
   issue: 67
@@ -93487,9 +93516,9 @@
   when: 2015-01-23 20:54:22.000000000 Z
   where: github
   who: 10676186
-- _id: 555301
-  _job: 17567015791
-  _time: 2025-09-08 23:37:02.325505991 Z
+- _id: 555534
+  _job: 17569589825
+  _time: 2025-09-09 02:20:00.456897644 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#66 has been opened by @maurezen.
   issue: 66
@@ -93498,9 +93527,9 @@
   when: 2015-01-21 23:03:59.000000000 Z
   where: github
   who: 569536
-- _id: 555302
-  _job: 17567015791
-  _time: 2025-09-08 23:37:02.530473167 Z
+- _id: 555535
+  _job: 17569589825
+  _time: 2025-09-09 02:20:00.554893012 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#64 has been opened by @davidsowerby.
   issue: 64
@@ -93509,9 +93538,9 @@
   when: 2015-01-18 14:06:08.000000000 Z
   where: github
   who: 2175702
-- _id: 555303
-  _job: 17567015791
-  _time: 2025-09-08 23:37:02.826260487 Z
+- _id: 555536
+  _job: 17569589825
+  _time: 2025-09-09 02:20:01.028236422 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#62 has been opened by @romankisilenko.
   issue: 62
@@ -93520,9 +93549,9 @@
   when: 2015-01-12 21:55:54.000000000 Z
   where: github
   who: 3440659
-- _id: 555304
-  _job: 17567015791
-  _time: 2025-09-08 23:37:03.065246363 Z
+- _id: 555537
+  _job: 17569589825
+  _time: 2025-09-09 02:20:01.383412020 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#60 has been opened by @invisible-arrow.
   issue: 60
@@ -93531,9 +93560,9 @@
   when: 2015-01-09 19:12:39.000000000 Z
   where: github
   who: 8007616
-- _id: 555305
-  _job: 17567015791
-  _time: 2025-09-08 23:37:03.287543243 Z
+- _id: 555538
+  _job: 17569589825
+  _time: 2025-09-09 02:20:01.698025857 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#59 has been opened by @maurezen.
   issue: 59
@@ -93542,9 +93571,9 @@
   when: 2015-01-08 16:35:56.000000000 Z
   where: github
   who: 569536
-- _id: 555306
-  _job: 17567015791
-  _time: 2025-09-08 23:37:03.787534284 Z
+- _id: 555539
+  _job: 17569589825
+  _time: 2025-09-09 02:20:02.168555201 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#54 has been opened by @longtimeago.
   issue: 54
@@ -93553,9 +93582,9 @@
   when: 2014-11-05 08:15:07.000000000 Z
   where: github
   who: 1388994
-- _id: 555307
-  _job: 17567015791
-  _time: 2025-09-08 23:37:04.321741529 Z
+- _id: 555540
+  _job: 17569589825
+  _time: 2025-09-09 02:20:02.671842836 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#47 has been opened by @carlosmiranda.
   issue: 47
@@ -93564,9 +93593,9 @@
   when: 2014-07-18 02:43:41.000000000 Z
   where: github
   who: 1917892
-- _id: 555308
-  _job: 17567015791
-  _time: 2025-09-08 23:37:04.437625504 Z
+- _id: 555541
+  _job: 17569589825
+  _time: 2025-09-09 02:20:02.779954682 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#46 has been opened by @carlosmiranda.
   issue: 46
@@ -93575,9 +93604,9 @@
   when: 2014-07-10 02:41:35.000000000 Z
   where: github
   who: 1917892
-- _id: 555309
-  _job: 17567015791
-  _time: 2025-09-08 23:37:04.636847234 Z
+- _id: 555542
+  _job: 17569589825
+  _time: 2025-09-09 02:20:02.985601692 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#42 has been opened by @ghost.
   issue: 42
@@ -93586,9 +93615,9 @@
   when: 2014-06-24 14:08:59.000000000 Z
   where: github
   who: 10137
-- _id: 555310
-  _job: 17567015791
-  _time: 2025-09-08 23:37:04.826782284 Z
+- _id: 555543
+  _job: 17569589825
+  _time: 2025-09-09 02:20:03.356158820 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#40 has been opened by @peterbecker.
   issue: 40
@@ -93597,9 +93626,9 @@
   when: 2014-06-19 00:52:15.000000000 Z
   where: github
   who: 279079
-- _id: 555311
-  _job: 17567015791
-  _time: 2025-09-08 23:37:05.104549384 Z
+- _id: 555544
+  _job: 17569589825
+  _time: 2025-09-09 02:20:03.834227813 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#37 has been opened by @peterbecker.
   issue: 37
@@ -93608,9 +93637,9 @@
   when: 2014-06-13 01:56:17.000000000 Z
   where: github
   who: 279079
-- _id: 555312
-  _job: 17567015791
-  _time: 2025-09-08 23:37:05.212959835 Z
+- _id: 555545
+  _job: 17569589825
+  _time: 2025-09-09 02:20:03.939469141 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#36 has been opened by @peterbecker.
   issue: 36
@@ -93619,9 +93648,9 @@
   when: 2014-06-12 23:56:44.000000000 Z
   where: github
   who: 279079
-- _id: 555313
-  _job: 17567015791
-  _time: 2025-09-08 23:37:05.410629708 Z
+- _id: 555546
+  _job: 17569589825
+  _time: 2025-09-09 02:20:04.143193222 Z
   _version: 0.16.1/0.53.6/0.15.37
   details: The issue jcabi/jcabi-http#32 has been opened by @carlosmiranda.
   issue: 32
@@ -93630,294 +93659,1127 @@
   when: 2014-06-05 05:48:02.000000000 Z
   where: github
   who: 1917892
-- _id: 555327
-  _job: 17567015791
-  _time: 2025-09-08 23:37:29.869151088 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4310062224
-  min_issue_was_found: 414
-  min_pull_was_found: 412
-  repository: 12590126
-  what: iterate
-  where: github
-- _id: 555328
-  _job: 17567015791
-  _time: 2025-09-08 23:37:29.978149025 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4340051554
-  min_pull_was_found: 275
-  repository: 12947626
-  what: iterate
-  where: github
-- _id: 555331
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.321996589 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 2927916596
-  min_issue_was_found: 1765
-  min_pull_was_found: 0
-  repository: 14204295
-  what: iterate
-  where: github
-- _id: 555332
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.434525277 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320543634
-  min_issue_was_found: 80
-  min_pull_was_found: 82
-  repository: 12584841
-  what: iterate
-  where: github
-- _id: 555333
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.547888123 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4310399901
-  min_issue_was_found: 0
-  min_pull_was_found: 124
-  repository: 19194296
-  what: iterate
-  where: github
-- _id: 555334
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.655509640 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4341648239
-  min_issue_was_found: 95
-  min_pull_was_found: 90
-  repository: 25780072
-  what: iterate
-  where: github
-- _id: 555335
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.764773664 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4356381977
-  min_pull_was_found: 416
-  repository: 12589687
-  what: iterate
-  where: github
-- _id: 555336
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.875305524 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3984610287
-  min_pull_was_found: 36
-  repository: 20635353
-  what: iterate
-  where: github
-- _id: 555337
-  _job: 17567015791
-  _time: 2025-09-08 23:37:30.986453154 Z
+- _id: 555560
+  _job: 17569589825
+  _time: 2025-09-09 02:20:42.611654572 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4382049789
-  min_issue_was_found: 445
-  min_pull_was_found: 388
+  min_issue_was_found: 0
+  min_pull_was_found: 389
   repository: 4174608
   what: iterate
   where: github
-- _id: 555338
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.101519940 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  min_pull_was_found: 243
-  repository: 13359002
-  what: iterate
-  where: github
-- _id: 555339
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.214897534 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320543380
-  min_issue_was_found: 0
-  min_pull_was_found: 65
-  repository: 12591347
-  what: iterate
-  where: github
-- _id: 555341
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.440564839 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4300992540
-  min_issue_was_found: 205
-  min_pull_was_found: 218
-  repository: 12262782
-  what: iterate
-  where: github
-- _id: 555342
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.556283743 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4356395751
-  min_pull_was_found: 312
-  repository: 13624455
-  what: iterate
-  where: github
-- _id: 555343
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.664956493 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4302891286
-  min_pull_was_found: 34
-  repository: 12591382
-  what: iterate
-  where: github
-- _id: 555345
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.892177669 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 2927914153
-  min_issue_was_found: 0
-  min_pull_was_found: 189
-  repository: 12591138
-  what: iterate
-  where: github
-- _id: 555346
-  _job: 17567015791
-  _time: 2025-09-08 23:37:31.999543088 Z
+- _id: 555561
+  _job: 17569589825
+  _time: 2025-09-09 02:20:42.738897604 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4356176445
-  min_issue_was_found: 0
-  min_pull_was_found: 65
+  min_issue_was_found: 62
+  min_pull_was_found: 66
   repository: 12591339
   what: iterate
   where: github
-- _id: 555347
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.114054247 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3341665089
-  min_issue_was_found: 0
-  min_pull_was_found: 244
-  repository: 23238769
-  what: iterate
-  where: github
-- _id: 555348
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.227824764 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4337218575
-  min_pull_was_found: 62
-  repository: 12591371
-  what: iterate
-  where: github
-- _id: 555349
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.332878327 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4196667268
-  min_pull_was_found: 46
-  repository: 12589424
-  what: iterate
-  where: github
-- _id: 555350
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.445778469 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320999970
-  min_issue_was_found: 120
-  min_pull_was_found: 0
-  repository: 19194304
-  what: iterate
-  where: github
-- _id: 555351
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.557578556 Z
+- _id: 555563
+  _job: 17569589825
+  _time: 2025-09-09 02:20:42.991413004 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4299993205
-  min_pull_was_found: 69
+  min_pull_was_found: 70
   repository: 16403286
   what: iterate
   where: github
-- _id: 555352
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.664813642 Z
+- _id: 555565
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.214257964 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4356250520
   min_issue_was_found: 373
-  min_pull_was_found: 428
+  min_pull_was_found: 429
   repository: 14093966
   what: iterate
   where: github
-- _id: 555353
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.781815552 Z
+- _id: 555566
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.342211835 Z
   _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 4314467362
-  min_pull_was_found: 54
-  repository: 12591356
+  events_were_scanned: 4310399901
+  min_issue_was_found: 70
+  min_pull_was_found: 125
+  repository: 19194296
   what: iterate
   where: github
-- _id: 555354
-  _job: 17567015791
-  _time: 2025-09-08 23:37:32.896474848 Z
+- _id: 555567
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.452903466 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 2927914153
+  min_issue_was_found: 192
+  min_pull_was_found: 190
+  repository: 12591138
+  what: iterate
+  where: github
+- _id: 555568
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.571323292 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4340095447
-  min_issue_was_found: 35
-  min_pull_was_found: 39
+  min_issue_was_found: 0
+  min_pull_was_found: 0
   repository: 12590128
   what: iterate
   where: github
-- _id: 555355
-  _job: 17567015791
-  _time: 2025-09-08 23:37:33.004001237 Z
+- _id: 555569
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.681924314 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3341665089
+  min_issue_was_found: 250
+  min_pull_was_found: 245
+  repository: 23238769
+  what: iterate
+  where: github
+- _id: 555570
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.789187477 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4341648239
+  min_issue_was_found: 0
+  min_pull_was_found: 92
+  repository: 25780072
+  what: iterate
+  where: github
+- _id: 555571
+  _job: 17569589825
+  _time: 2025-09-09 02:20:43.911345480 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4302891286
+  min_pull_was_found: 0
+  repository: 12591382
+  what: iterate
+  where: github
+- _id: 555572
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.016170631 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3320999970
+  min_issue_was_found: 0
+  min_pull_was_found: 101
+  repository: 19194304
+  what: iterate
+  where: github
+- _id: 555573
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.140740566 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3320543634
+  min_issue_was_found: 0
+  min_pull_was_found: 83
+  repository: 12584841
+  what: iterate
+  where: github
+- _id: 555574
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.248110638 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4337218575
+  min_pull_was_found: 63
+  repository: 12591371
+  what: iterate
+  where: github
+- _id: 555575
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.365335403 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4356381977
+  min_pull_was_found: 417
+  repository: 12589687
+  what: iterate
+  where: github
+- _id: 555576
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.476224172 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4300992540
+  min_issue_was_found: 213
+  min_pull_was_found: 219
+  repository: 12262782
+  what: iterate
+  where: github
+- _id: 555577
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.583691666 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4314467362
+  min_pull_was_found: 0
+  repository: 12591356
+  what: iterate
+  where: github
+- _id: 555579
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.804788183 Z
   _version: 0.16.1/0.53.6/0.15.37
   events_were_scanned: 4302865706
-  min_issue_was_found: 0
-  min_pull_was_found: 38
+  min_issue_was_found: 36
+  min_pull_was_found: 39
   repository: 15208785
   what: iterate
   where: github
-- _id: 555356
-  _job: 17567015791
-  _time: 2025-09-08 23:39:35.337959398 Z
+- _id: 555580
+  _job: 17569589825
+  _time: 2025-09-09 02:20:44.927690385 Z
   _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 0
-  events_were_scanned: 3320544628
-  labels_were_scanned: 146
-  min_issue_was_found: 26
-  min_pull_was_found: 574
-  repository: 12590813
-  types_were_scanned: 0
+  events_were_scanned: 3320543380
+  min_issue_was_found: 48
+  min_pull_was_found: 66
+  repository: 12591347
   what: iterate
   where: github
-- _id: 555357
-  _job: 17567015791
-  _time: 2025-09-08 23:39:35.443474406 Z
+- _id: 555581
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.034093893 Z
   _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 0
+  events_were_scanned: 4196667268
+  min_pull_was_found: 47
+  repository: 12589424
+  what: iterate
+  where: github
+- _id: 555582
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.152103784 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3984610287
+  min_pull_was_found: 37
+  repository: 20635353
+  what: iterate
+  where: github
+- _id: 555583
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.263773631 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  min_pull_was_found: 0
+  repository: 13359002
+  what: iterate
+  where: github
+- _id: 555584
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.369938774 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4310062224
+  min_issue_was_found: 0
+  min_pull_was_found: 413
+  repository: 12590126
+  what: iterate
+  where: github
+- _id: 555585
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.486283226 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 2927916596
+  min_issue_was_found: 1765
+  min_pull_was_found: 1763
+  repository: 14204295
+  what: iterate
+  where: github
+- _id: 555587
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.710856302 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4356395751
+  min_pull_was_found: 313
+  repository: 13624455
+  what: iterate
+  where: github
+- _id: 555588
+  _job: 17569589825
+  _time: 2025-09-09 02:20:45.816915427 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 4340051554
+  min_pull_was_found: 280
+  repository: 12947626
+  what: iterate
+  where: github
+- _id: 555589
+  _job: 17569589825
+  _time: 2025-09-09 02:20:56.361190955 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#185.
+  issue: 185
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2022-10-18 16:34:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 555590
+  _job: 17569589825
+  _time: 2025-09-09 02:21:07.354347423 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#32.
+  issue: 32
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-06-05 05:49:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 555591
+  _job: 17569589825
+  _time: 2025-09-09 02:21:09.780637352 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#205.
+  issue: 205
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2023-06-02 09:35:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 555592
+  _job: 17569589825
+  _time: 2025-09-09 02:21:10.631029182 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#36.
+  issue: 36
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-06-13 05:18:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 555593
+  _job: 17569589825
+  _time: 2025-09-09 02:21:11.435937224 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#13.
+  issue: 13
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-03-17 07:55:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 555594
+  _job: 17569589825
+  _time: 2025-09-09 02:21:13.145668813 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#37.
+  issue: 37
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-06-13 07:11:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 555595
+  _job: 17569589825
+  _time: 2025-09-09 02:21:13.803550801 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#17.
+  issue: 17
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-03-21 07:57:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 555596
+  _job: 17569589825
+  _time: 2025-09-09 02:21:17.092394974 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#21.
+  issue: 21
+  label: enhancement
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-04-02 11:08:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 555597
+  _job: 17569589825
+  _time: 2025-09-09 02:21:19.043376937 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#40.
+  issue: 40
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-06-19 07:37:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 555598
+  _job: 17569589825
+  _time: 2025-09-09 02:21:19.765354096 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#23.
+  issue: 23
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-06-13 05:17:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 555599
+  _job: 17569589825
+  _time: 2025-09-09 02:21:21.867663956 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#42.
+  issue: 42
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-06-24 14:21:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 555600
+  _job: 17569589825
+  _time: 2025-09-09 02:21:26.433430135 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#25.
+  issue: 25
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-06-26 19:53:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 555601
+  _job: 17569589825
+  _time: 2025-09-09 02:21:28.073396761 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#46.
+  issue: 46
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-07-10 06:44:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 555602
+  _job: 17569589825
+  _time: 2025-09-09 02:21:30.386653709 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#276.
+  issue: 276
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2024-12-01 12:45:55.000000000 Z
+  where: github
+  who: 526301
+- _id: 555603
+  _job: 17569589825
+  _time: 2025-09-09 02:21:31.290711218 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#47.
+  issue: 47
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-07-18 07:24:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 555604
+  _job: 17569589825
+  _time: 2025-09-09 02:21:33.294635555 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#277.
+  issue: 277
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2024-12-04 14:44:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 555605
+  _job: 17569589825
+  _time: 2025-09-09 02:21:42.083031571 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#54.
+  issue: 54
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2014-11-05 08:40:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 555606
+  _job: 17569589825
+  _time: 2025-09-09 02:21:42.841905990 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#33.
+  issue: 33
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-02 14:37:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 555607
+  _job: 17569589825
+  _time: 2025-09-09 02:21:42.911092956 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#33.
+  issue: 33
+  label: enhancement
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-02 14:37:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 555608
+  _job: 17569589825
+  _time: 2025-09-09 02:21:44.675571000 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#34.
+  issue: 34
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-10 14:59:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 555609
+  _job: 17569589825
+  _time: 2025-09-09 02:21:49.203287783 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#60.
+  issue: 60
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-01-09 19:59:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 555610
+  _job: 17569589825
+  _time: 2025-09-09 02:21:50.314002982 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#62.
+  issue: 62
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-01-13 09:36:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 555611
+  _job: 17569589825
+  _time: 2025-09-09 02:21:52.545214785 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#64.
+  issue: 64
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-01-18 18:26:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 555612
+  _job: 17569589825
+  _time: 2025-09-09 02:21:57.916054057 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#51.
+  issue: 51
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2016-07-07 22:37:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 555613
+  _job: 17569589825
+  _time: 2025-09-09 02:22:00.416138226 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#54.
+  issue: 54
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2016-11-22 05:28:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 555614
+  _job: 17569589825
+  _time: 2025-09-09 02:22:02.302036363 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#73.
+  issue: 73
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-03-30 18:18:47.000000000 Z
+  where: github
+  who: 526301
+- _id: 555615
+  _job: 17569589825
+  _time: 2025-09-09 02:22:10.420882512 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#70.
+  issue: 70
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2019-05-05 18:07:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 555616
+  _job: 17569589825
+  _time: 2025-09-09 02:22:11.248404227 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#82.
+  issue: 82
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-04-23 19:00:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 555617
+  _job: 17569589825
+  _time: 2025-09-09 02:22:11.309016192 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#82.
+  issue: 82
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-04-23 19:00:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 555618
+  _job: 17569589825
+  _time: 2025-09-09 02:22:12.472600447 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#84.
+  issue: 84
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:10:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 555619
+  _job: 17569589825
+  _time: 2025-09-09 02:22:13.852908788 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#85.
+  issue: 85
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-05-11 01:53:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 555620
+  _job: 17569589825
+  _time: 2025-09-09 02:22:16.667082915 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#87.
+  issue: 87
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:06:46.000000000 Z
+  where: github
+  who: 526301
+- _id: 555621
+  _job: 17569589825
+  _time: 2025-09-09 02:22:16.734724919 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#87.
+  issue: 87
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:06:46.000000000 Z
+  where: github
+  who: 526301
+- _id: 555622
+  _job: 17569589825
+  _time: 2025-09-09 02:22:17.268955565 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#78.
+  issue: 78
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2023-06-10 05:28:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 555623
+  _job: 17569589825
+  _time: 2025-09-09 02:22:18.239900511 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#89.
+  issue: 89
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:07:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 555624
+  _job: 17569589825
+  _time: 2025-09-09 02:22:18.309714589 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#89.
+  issue: 89
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:07:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 555625
+  _job: 17569589825
+  _time: 2025-09-09 02:22:19.852015843 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#90.
+  issue: 90
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:00:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 555626
+  _job: 17569589825
+  _time: 2025-09-09 02:22:19.910019037 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#90.
+  issue: 90
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:00:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 555627
+  _job: 17569589825
+  _time: 2025-09-09 02:22:25.243748761 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#96.
+  issue: 96
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-06-23 21:16:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 555628
+  _job: 17569589825
+  _time: 2025-09-09 02:22:31.284451488 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#105.
+  issue: 105
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-09-13 11:19:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 555629
+  _job: 17569589825
+  _time: 2025-09-09 02:22:31.336429429 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#105.
+  issue: 105
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-09-13 11:19:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 555630
+  _job: 17569589825
+  _time: 2025-09-09 02:22:34.898952948 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#165.
+  issue: 165
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2023-06-10 05:33:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 555631
+  _job: 17569589825
+  _time: 2025-09-09 02:22:36.534279510 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-http#113.
+  issue: 113
+  label: bug
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-09-29 20:25:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 555632
+  _job: 17569589825
+  _time: 2025-09-09 02:22:36.592035978 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#113.
+  issue: 113
+  label: enhancement
+  repository: 16312153
+  what: label-was-attached
+  when: 2015-09-29 20:25:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 555637
+  _job: 17569589825
+  _time: 2025-09-09 02:22:50.334478530 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#29 has been 'issue-was-closed'.
+  issue: 29
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-06-17 07:25:38.000000000 Z
+  where: github
+  who: 553191
+- _id: 555638
+  _job: 17569589825
+  _time: 2025-09-09 02:22:54.432849099 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#13 has been 'issue-was-closed'.
+  issue: 13
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-01-30 22:06:23.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555639
+  _job: 17569589825
+  _time: 2025-09-09 02:22:56.895299578 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#19 has been 'issue-was-closed'.
+  issue: 19
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-03-24 09:40:23.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555640
+  _job: 17569589825
+  _time: 2025-09-09 02:22:59.121374097 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#32 has been 'issue-was-closed'.
+  issue: 32
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-09 21:56:31.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555641
+  _job: 17569589825
+  _time: 2025-09-09 02:23:02.500647480 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#31 has been 'issue-was-closed'.
+  issue: 31
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-06-22 22:54:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 555642
+  _job: 17569589825
+  _time: 2025-09-09 02:23:03.376047319 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#17 has been 'issue-was-closed'.
+  issue: 17
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-04-02 09:29:40.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555643
+  _job: 17569589825
+  _time: 2025-09-09 02:23:04.153702076 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#22 has been 'issue-was-closed'.
+  issue: 22
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-04-23 19:09:57.000000000 Z
+  where: github
+  who: 105730
+- _id: 555644
+  _job: 17569589825
+  _time: 2025-09-09 02:23:04.866734629 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#36 has been 'issue-was-closed'.
+  issue: 36
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-07-14 03:10:35.000000000 Z
+  where: github
+  who: 279079
+- _id: 555645
+  _job: 17569589825
+  _time: 2025-09-09 02:23:06.109957425 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#37 has been 'issue-was-closed'.
+  issue: 37
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-07-23 18:08:17.000000000 Z
+  where: github
+  who: 526301
+- _id: 555646
+  _job: 17569589825
+  _time: 2025-09-09 02:23:06.712811672 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#21 has been 'issue-was-closed'.
+  issue: 21
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-04-03 09:24:50.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555647
+  _job: 17569589825
+  _time: 2025-09-09 02:23:07.288697553 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#23 has been 'issue-was-closed'.
+  issue: 23
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-04-21 11:44:37.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555648
+  _job: 17569589825
+  _time: 2025-09-09 02:23:07.944661824 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#37 has been 'issue-was-closed'.
+  issue: 37
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-19 00:46:02.000000000 Z
+  where: github
+  who: 279079
+- _id: 555649
+  _job: 17569589825
+  _time: 2025-09-09 02:23:09.220117118 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#45 has been 'issue-was-closed'.
+  issue: 45
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 10:38:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 555650
+  _job: 17569589825
+  _time: 2025-09-09 02:23:09.812888879 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#23 has been 'issue-was-closed'.
+  issue: 23
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-01-19 13:19:54.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555651
+  _job: 17569589825
+  _time: 2025-09-09 02:23:10.414111933 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#31 has been 'issue-was-closed'.
+  issue: 31
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-05-18 06:49:16.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555652
+  _job: 17569589825
+  _time: 2025-09-09 02:23:11.054921456 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#40 has been 'issue-was-closed'.
+  issue: 40
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-24 23:10:08.000000000 Z
+  where: github
+  who: 279079
+- _id: 555653
+  _job: 17569589825
+  _time: 2025-09-09 02:23:12.335130716 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#46 has been 'issue-was-closed'.
+  issue: 46
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-12-17 21:17:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 555654
+  _job: 17569589825
+  _time: 2025-09-09 02:23:12.890275204 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#25 has been 'issue-was-closed'.
+  issue: 25
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-08-28 13:28:07.000000000 Z
+  where: github
+  who: 5993843
+- _id: 555655
+  _job: 17569589825
+  _time: 2025-09-09 02:23:13.484756098 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#32 has been 'issue-was-closed'.
+  issue: 32
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-01-08 05:25:21.000000000 Z
+  where: github
+  who: 1917892
+- _id: 555656
+  _job: 17569589825
+  _time: 2025-09-09 02:23:53.330304000 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#29 was assigned to @gvlasov by @dmarkov.
+  issue: 29
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2015-06-15 08:49:33.000000000 Z
+  where: github
+  who: 4467948
+- _id: 555657
+  _job: 17569589825
+  _time: 2025-09-09 02:24:25.145242978 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#51 was assigned to @amihaiemil by @dmarkov.
+  issue: 51
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-02-08 08:23:24.000000000 Z
+  where: github
+  who: 6305156
+- _id: 555658
+  _job: 17569589825
+  _time: 2025-09-09 02:24:32.605404144 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-http#54 was assigned to @yegor256 by @dmarkov.
+  issue: 54
+  repository: 16312153
+  what: issue-was-assigned
+  when: 2014-11-10 08:52:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 555659
+  _job: 17569589825
+  _time: 2025-09-09 02:24:33.534051128 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#57 was assigned to @longtimeago by @dmarkov.
+  issue: 57
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-06-23 09:01:19.000000000 Z
+  where: github
+  who: 1388994
+- _id: 555660
+  _job: 17569589825
+  _time: 2025-09-09 02:24:33.914623761 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#57 was assigned to @prondzyn by @dmarkov.
+  issue: 57
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-07-18 07:14:48.000000000 Z
+  where: github
+  who: 5822647
+- _id: 555661
+  _job: 17569589825
+  _time: 2025-09-09 02:24:35.237120923 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-jdbc#51 was assigned to @amihaiemil by @dmarkov.
+  issue: 51
+  repository: 12587702
+  what: issue-was-assigned
+  when: 2016-08-08 07:26:10.000000000 Z
+  where: github
+  who: 6305156
+- _id: 555662
+  _job: 17569589825
+  _time: 2025-09-09 02:24:58.442133601 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-xml#61 was assigned to @tmjee by @dmarkov.
+  issue: 61
+  repository: 13717355
+  what: issue-was-assigned
+  when: 2015-10-02 13:33:06.000000000 Z
+  where: github
+  who: 1182139
+- _id: 555663
+  _job: 17569589825
+  _time: 2025-09-09 02:25:01.117420382 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-xml#62 was assigned to @gvlasov by @dmarkov.
+  issue: 62
+  repository: 13717355
+  what: issue-was-assigned
+  when: 2015-06-05 07:56:36.000000000 Z
+  where: github
+  who: 4467948
+- _id: 555664
+  _job: 17569589825
+  _time: 2025-09-09 02:25:07.505929144 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assignees_were_scanned: 79
   events_were_scanned: 3321000838
-  labels_were_scanned: 0
+  labels_were_scanned: 221
   min_issue_was_found: 13
-  min_pull_was_found: 124
+  min_pull_was_found: 125
   repository: 12587702
   types_were_scanned: 106
   what: iterate
   where: github
-- _id: 555358
-  _job: 17567015791
-  _time: 2025-09-08 23:39:35.590420347 Z
+- _id: 555665
+  _job: 17569589825
+  _time: 2025-09-09 02:25:07.636646700 Z
   _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 0
-  events_were_scanned: 3321000574
-  labels_were_scanned: 182
-  min_issue_was_found: 1
-  min_pull_was_found: 81
-  repository: 13717355
-  types_were_scanned: 103
-  what: iterate
-  where: github
-- _id: 555359
-  _job: 17567015791
-  _time: 2025-09-08 23:39:35.709901871 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 0
+  assignees_were_scanned: 74
   events_were_scanned: 3892224863
-  labels_were_scanned: 0
+  labels_were_scanned: 115
   min_issue_was_found: 9
-  min_pull_was_found: 38
+  min_pull_was_found: 41
   repository: 16312153
   types_were_scanned: 90
+  what: iterate
+  where: github
+- _id: 555666
+  _job: 17569589825
+  _time: 2025-09-09 02:25:07.759129521 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assignees_were_scanned: 86
+  events_were_scanned: 3320544628
+  labels_were_scanned: 0
+  min_issue_was_found: 26
+  min_pull_was_found: 575
+  repository: 12590813
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 555667
+  _job: 17569589825
+  _time: 2025-09-09 02:25:07.888944233 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assignees_were_scanned: 65
+  events_were_scanned: 3321000574
+  labels_were_scanned: 0
+  min_issue_was_found: 1
+  min_pull_was_found: 82
+  repository: 13717355
+  types_were_scanned: 103
   what: iterate
   where: github
