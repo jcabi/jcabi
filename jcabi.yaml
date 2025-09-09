@@ -2,11 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - The value of 'who' can't be nil
+  - 'Judge find-all-issues stopped by timeout after 59s: execution expired'
   inserted: 8
-  seconds: 891.351022754
+  seconds: 900.199026332
   version: 0.53.6
   what: judges-summary
-  when: 2025-09-09 04:54:47.703562807 Z
+  when: 2025-09-09 05:51:39.069463230 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -1367,64 +1370,6 @@
   when: &102 2025-04-28 20:45:29.000000000 Z
   where: github
   who: 29139614
-- _id: 53791
-  _job: 18822
-  _time: 2025-04-30 06:15:20.923726033 Z
-  _version: 0.10.0/0.41.0/0.6.0
-  area: hr
-  bad_branch_name_was_punished: "(award (explain 'If a branch has a name that doesn\\\\\\'t
-    obey the convention, a penalty is given to the author') (aka (let fee -12) (give
-    fee 'as a basis') 'deduct ${fee} points'))"
-  bug_report_was_rewarded: "(award (explain 'When a bug is reported and accepted by
-    the team, the reporter receives a bonus') (aka (let bonus 12) (give bonus 'as
-    a basis') 'award ${bonus} points'))"
-  code_contribution_was_rewarded: |-
-    (award (explain 'When a code contribution is made, the author receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in reviews 'the number of reviews provided') (aka (let basis 16) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold 200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold) (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc 'for too many hits-of-code (${hoc} >= ${hoc_threshold})') 'deduct ${many_hoc_fee} points if more than ${hoc_threshold}
-          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for way too many hits-of-code (${hoc} >= ${hoc_threshold2})') 'deduct ${many_hoc_fee2} points if more than ${hoc_threshold2}
-          [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)') (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review') 'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k 0.2) (let comments_max -16) (let comments_min -4) (let comments_threshold 8) (set bonus_for_comments (if (gt comments comments_threshold) (times comments (times -1 comments_k)) 0)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (give bonus_for_comments 'for too many (${comments} > ${comments_threshold}) comments that were made during review') 'deduct ${comments_k} points for every comment above ${comments_threshold} made during review, but not more than ${comments_max} points') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  code_review_was_rewarded: |-
-    (award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 12) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  days_of_running_balance: 56
-  days_to_reward: 14
-  dud_was_punished: "(award (explain 'When an issue is submitted but then rejected
-    by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as
-    a basis') 'deduct ${fee} points'))"
-  enhancement_suggestion_was_rewarded: "(award (explain 'When an enhancement is suggested
-    and accepted by the team, the reporter receives a bonus') (aka (let bonus 12)
-    (give bonus 'as a basis') 'award ${bonus} points'))"
-  long_pull_was_punished: "(award (explain 'Oversized pull requests get penalized')
-    (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))"
-  master_punish_days: 4
-  published_release_was_rewarded: |-
-    (award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
-          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
-          but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
-  push_to_master_was_punished: "(award (explain 'When someone pushes directly to the
-    default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis')
-    '${fee} points'))"
-  resolved_bug_was_rewarded: "(award (explain 'When a bug is resolved, the person
-    who was assigned to it receives a bonus') (in hours 'how many hours it took to
-    resolve the bug') (in self '1 if the bug was reported and resolved by the same
-    person, otherwise zero') (set days (div hours 24)) (aka (let basis 8) (give basis
-    'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24)
-    (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less
-    than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than
-    ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq
-    self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug
-    reported by you earlier') 'deduct ${self_fee} points if they resolved the bug
-    earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times
-    days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2
-    'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay,
-    but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt
-    (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let
-    min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to
-    give you at least something') 'make sure the reward is not larger than ${max}
-    points and not smaller than ${min} points'))"
-  what: pmp
 - _id: 53875
   _job: 18831
   _time: 2025-04-30 08:15:10.368655525 Z
@@ -91661,34 +91606,6 @@
   repo: 16312153
   what: tombstone
   where: github
-- _id: 556006
-  _job: 17571940640
-  _time: 2025-09-09 04:46:33.682200806 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  branch: renovate/org.apache.maven.plugins-maven-javadoc-plugin-3.x
-  details: The pull request jcabi/jcabi-parent#656 has been opened by @renovate[bot].
-  event_id: 53441366121
-  event_type: PullRequestEvent
-  issue: 656
-  repository: 12590813
-  what: pull-was-opened
-  when: 2025-08-16 13:32:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 556007
-  _job: 17571940640
-  _time: 2025-09-09 04:46:52.501138051 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  branch: renovate/mockito-monorepo
-  details: The pull request jcabi/jcabi-parent#655 has been opened by @renovate[bot].
-  event_id: 53406678848
-  event_type: PullRequestEvent
-  issue: 655
-  repository: 12590813
-  what: pull-was-opened
-  when: 2025-08-15 10:01:26.000000000 Z
-  where: github
-  who: 29139614
 - _id: 556012
   _job: 17571940640
   _time: 2025-09-09 04:49:55.426061343 Z
@@ -93690,16 +93607,6 @@
   repository: 12591339
   what: iterate
   where: github
-- _id: 556208
-  _job: 17571940640
-  _time: 2025-09-09 04:51:59.698850363 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320543634
-  min_issue_was_found: 0
-  min_pull_was_found: 0
-  repository: 12584841
-  what: iterate
-  where: github
 - _id: 556209
   _job: 17571940640
   _time: 2025-09-09 04:51:59.808145416 Z
@@ -93822,16 +93729,6 @@
   repository: 16403286
   what: iterate
   where: github
-- _id: 556224
-  _job: 17571940640
-  _time: 2025-09-09 04:52:01.646576638 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320999970
-  min_issue_was_found: 0
-  min_pull_was_found: 103
-  repository: 19194304
-  what: iterate
-  where: github
 - _id: 556226
   _job: 17571940640
   _time: 2025-09-09 04:52:01.891976041 Z
@@ -93849,16 +93746,6 @@
   events_were_scanned: 4314467362
   min_pull_was_found: 0
   repository: 12591356
-  what: iterate
-  where: github
-- _id: 556228
-  _job: 17571940640
-  _time: 2025-09-09 04:52:02.135905154 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  events_were_scanned: 3320543380
-  min_issue_was_found: 0
-  min_pull_was_found: 68
-  repository: 12591347
   what: iterate
   where: github
 - _id: 556229
@@ -94363,55 +94250,839 @@
   when: 2020-07-08 16:21:08.000000000 Z
   where: github
   who: 49783909
-- _id: 556272
-  _job: 17571940640
-  _time: 2025-09-09 04:54:47.176323921 Z
+- _id: 556276
+  _job: 36815
+  _time: 2025-09-09 04:55:20.804262016 Z
+  _version: 0.16.2/0.53.6/0.15.37
+  area: hr
+  bad_branch_name_was_punished: "(award (explain 'If a branch has a name that doesn\\\\\\'t
+    obey the convention, a penalty is given to the author') (aka (let fee -12) (give
+    fee 'as a basis') 'deduct ${fee} points'))"
+  bug_report_was_rewarded: "(award (explain 'When a bug is reported and accepted by
+    the team, the reporter receives a bonus') (aka (let bonus 12) (give bonus 'as
+    a basis') 'award ${bonus} points'))"
+  code_contribution_was_rewarded: "(award (explain 'When a code contribution is made,
+    the author receives a bonus') (in hoc 'the total number of hits-of-code in the
+    contribution') (in comments 'the total number of comments made by all reviewers')
+    (in reviews 'the number of reviews provided') (aka (let basis 16) (give basis
+    'as a basis') 'award ${basis} points') (aka (let hoc_k 0.05) (let hoc_threshold
+    200) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (if (lt hoc hoc_threshold)
+    (times hoc hoc_k) 0)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max))
+    (give bonus_for_hoc 'for the ${hoc} hits-of-code that you wrote') 'add ${hoc_k}
+    points for each [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+    but not more than ${hoc_max} points') (aka (let many_hoc_fee 8) (set penalty_for_hoc
+    (if (gte hoc hoc_threshold) (times -1 many_hoc_fee) 0)) (give penalty_for_hoc
+    'for too many hits-of-code (${hoc} >= ${hoc_threshold})') 'deduct ${many_hoc_fee}
+    points if more than ${hoc_threshold} [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)')
+    (aka (let many_hoc_fee2 16) (let hoc_threshold2 800) (set penalty_for_hoc2 (if
+    (gte hoc hoc_threshold2) (times -1 many_hoc_fee2) 0)) (give penalty_for_hoc2 'for
+    way too many hits-of-code (${hoc} >= ${hoc_threshold2})') 'deduct ${many_hoc_fee2}
+    points if more than ${hoc_threshold2} [hits-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html)')
+    (aka (let no_review_fee 16) (set penalty_for_no_review (if (eq reviews 0) (times
+    -1 no_review_fee) 0)) (give penalty_for_no_review 'for the lack of code review')
+    'deduct ${no_review_fee} points if there were no code review') (aka (let comments_k
+    0.2) (let comments_max -16) (let comments_min -4) (let comments_threshold 8) (set
+    bonus_for_comments (if (gt comments comments_threshold) (times comments (times
+    -1 comments_k)) 0)) (set bonus_for_comments (between bonus_for_comments comments_min
+    comments_max)) (give bonus_for_comments 'for too many (${comments} > ${comments_threshold})
+    comments that were made during review') 'deduct ${comments_k} points for every
+    comment above ${comments_threshold} made during review, but not more than ${comments_max}
+    points') (aka (let few_hoc_fee 8) (let hoc_needed 20) (set penalty_for_few_hoc
+    (if (lt hoc hoc_needed) (times -1 few_hoc_fee) 0)) (give penalty_for_few_hoc 'for
+    too few (${hoc}) hits-of-code') 'deduct ${few_hoc_fee} points if you contribute
+    less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total)
+    max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4)
+    (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you
+    at least something') 'make sure the reward is not larger than ${max} points and
+    not smaller than ${min} points'))"
+  code_review_was_rewarded: |-
+    (award (explain 'An author of every code review receives a bonus') (in hoc 'the total number of hits-of-code in the contribution') (in comments 'the total number of comments made by all reviewers') (in self '1 if the review was made for their own code contribution, otherwise zero') (aka (let basis 12) (give basis 'as a basis') 'award ${basis} points') (aka (let self_fee 24) (set penalty_for_self_review (if (eq self 1) (times -1 self_fee) 0)) (give penalty_for_self_review 'for reviewing your own contribution (which is a bad idea)') 'deduct ${self_fee} points if they reviewed their own contribution') (aka (let hoc_k 0.01) (let hoc_max 16) (let hoc_min 5) (set bonus_for_hoc (times hoc hoc_k)) (set bonus_for_hoc (between bonus_for_hoc hoc_min hoc_max)) (set bonus_for_hoc (if (eq self 1) 0 bonus_for_hoc)) (give bonus_for_hoc 'for the ${hoc} hits-of-code that you reviewed') 'add ${hoc_k} points for each
+          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+          but not more than ${hoc_max} points') (aka (let few_comments_fee 10) (let comments_needed 6) (set penalty_for_few_comments (if (and (lt comments comments_needed) (not (eq comments 0))) (times -1 few_comments_fee) 0)) (give penalty_for_few_comments 'for very few (${comments}) comments') 'deduct ${few_comments_fee} points if there were less than ${comments_needed} comments made during review') (aka (let silence_fee 16) (set penalty_for_silence (if (eq comments 0) (times -1 silence_fee) 0)) (give penalty_for_silence 'for absolutely no comments posted') 'deduct ${silence_fee} points if there were absolutely no comments made during review') (aka (let comments_k 0.25) (let comments_max 8) (let comments_min 5) (set bonus_for_comments (times comments comments_k)) (set bonus_for_comments (between bonus_for_comments comments_min comments_max)) (set bonus_for_comments (if (eq self 1) 0 bonus_for_comments)) (give bonus_for_comments 'for the ${comments} comment(s) that you have made') 'add ${comments_k} points for each comment during the review, but not more than ${comments_max} points') (aka (let hoc_fee 8) (let hoc_needed 16) (set penalty_for_hoc (if (lt hoc hoc_needed) (times -1 hoc_fee) 0)) (give penalty_for_hoc 'for too few (${hoc}) hits-of-code') 'deduct ${hoc_fee} points if there were less than ${hoc_needed} hits-of-code') (aka (let max 24) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
+  days_of_running_balance: 56
+  days_to_reward: 14
+  dud_was_punished: "(award (explain 'When an issue is submitted but then rejected
+    by the team, the reporter receives a penalty') (aka (let fee -16) (give fee 'as
+    a basis') 'deduct ${fee} points'))"
+  enhancement_suggestion_was_rewarded: "(award (explain 'When an enhancement is suggested
+    and accepted by the team, the reporter receives a bonus') (aka (let bonus 12)
+    (give bonus 'as a basis') 'award ${bonus} points'))"
+  long_pull_was_punished: "(award (explain 'Oversized pull requests get penalized')
+    (aka (let fee -8) (give fee 'as a basis') 'deduct ${fee} points'))"
+  master_punish_days: 4
+  published_release_was_rewarded: |-
+    (award (explain 'When a new release is published, everyone who contributed receives a bonus') (in hoc 'how many hits-of-code are in the release') (in contributors 'how many people contributed to the release') (aka (let basis 24) (give basis 'as a basis') 'award ${basis} points') (aka (let hoc_k 0.01) (let hoc_max 24) (let hoc_min 4) (set b1 (times hoc hoc_k)) (set b1 (between b1 hoc_min hoc_max)) (give b1 'for ${hoc} hits-of-code') 'add ${hoc_k} points for each
+          [hit-of-code](https://www.yegor256.com/2014/11/14/hits-of-code.html),
+          but not more than ${hoc_max} points') (aka (let max 32) (set over (if (gt (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to give you at least something') 'make sure the reward is not larger than ${max} points and not smaller than ${min} points'))
+  push_to_master_was_punished: "(award (explain 'When someone pushes directly to the
+    default branch, they get a penalty') (aka (let fee -16) (give fee 'as a basis')
+    '${fee} points'))"
+  resolved_bug_was_rewarded: "(award (explain 'When a bug is resolved, the person
+    who was assigned to it receives a bonus') (in hours 'how many hours it took to
+    resolve the bug') (in self '1 if the bug was reported and resolved by the same
+    person, otherwise zero') (set days (div hours 24)) (aka (let basis 8) (give basis
+    'as a basis') 'award ${basis} points') (aka (let b1 4) (let hours_threshold 24)
+    (set b1 (if (lt hours hours_threshold) b1 0)) (give b1 'for resolving it in less
+    than ${hours_threshold} hours') 'add ${b1} points if it was resolved in less than
+    ${hours_threshold} hours') (aka (let self_fee 16) (set penalty_for_self (if (eq
+    self 1) (times -1 self_fee) 0)) (give penalty_for_self 'for resolving the bug
+    reported by you earlier') 'deduct ${self_fee} points if they resolved the bug
+    earlier reported by themselves') (aka (let day_fee 1.0) (set b2 (times -1 (times
+    days day_fee))) (let days_fee_max -20) (set b2 (max b2 days_fee_max)) (give b2
+    'for ${days} days of delay') 'deduct ${day_fee} points for each day of delay,
+    but no more than ${days_fee_max} points') (aka (let max 16) (set over (if (gt
+    (total) max) (minus max (total)) 0)) (give over 'to not go over the cap') (let
+    min 4) (set least (if (lt (total) min) (minus min (total)) 0)) (give least 'to
+    give you at least something') 'make sure the reward is not larger than ${max}
+    points and not smaller than ${min} points'))"
+  what: pmp
+- _id: 556277
+  _job: 17572867808
+  _time: 2025-09-09 05:41:39.175802967 Z
   _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 0
-  events_were_scanned: 3320544628
-  labels_were_scanned: 79
-  min_issue_was_found: 26
-  min_pull_was_found: 577
+  branch: renovate/org.apache.maven.plugins-maven-javadoc-plugin-3.x
+  details: The pull request jcabi/jcabi-parent#656 has been opened by @renovate[bot].
+  event_id: 53441366121
+  event_type: PullRequestEvent
+  issue: 656
   repository: 12590813
-  types_were_scanned: 146
-  what: iterate
+  what: pull-was-opened
+  when: 2025-08-16 13:32:03.000000000 Z
   where: github
-- _id: 556273
-  _job: 17571940640
-  _time: 2025-09-09 04:54:47.299572906 Z
+  who: 29139614
+- _id: 556278
+  _job: 17572867808
+  _time: 2025-09-09 05:41:55.698650698 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  branch: renovate/mockito-monorepo
+  details: The pull request jcabi/jcabi-parent#655 has been opened by @renovate[bot].
+  event_id: 53406678848
+  event_type: PullRequestEvent
+  issue: 655
+  repository: 12590813
+  what: pull-was-opened
+  when: 2025-08-15 10:01:26.000000000 Z
+  where: github
+  who: 29139614
+- _id: 556279
+  _job: 17572867808
+  _time: 2025-09-09 05:43:39.114944674 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @dmarkov to the issue jcabi/jcabi-xml#74.
+  issue: 74
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2015-11-13 08:27:30.000000000 Z
+  where: github
+  who: 5993843
+- _id: 556280
+  _job: 17572867808
+  _time: 2025-09-09 05:43:42.939353508 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#94.
+  issue: 94
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2015-12-10 10:16:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 556281
+  _job: 17572867808
+  _time: 2025-09-09 05:43:45.932315108 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#96.
+  issue: 96
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2015-12-18 11:33:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 556282
+  _job: 17572867808
+  _time: 2025-09-09 05:43:51.256279052 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#98.
+  issue: 98
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2015-12-21 08:40:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 556283
+  _job: 17572867808
+  _time: 2025-09-09 05:43:52.488957940 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#13.
+  issue: 13
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-03-17 07:55:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 556284
+  _job: 17572867808
+  _time: 2025-09-09 05:43:53.849844064 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#99.
+  issue: 99
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2015-12-23 06:42:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 556285
+  _job: 17572867808
+  _time: 2025-09-09 05:43:55.015864901 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#17.
+  issue: 17
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-03-21 07:57:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 556286
+  _job: 17572867808
+  _time: 2025-09-09 05:43:57.158907424 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#21.
+  issue: 21
+  label: enhancement
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-04-02 11:08:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 556287
+  _job: 17572867808
+  _time: 2025-09-09 05:43:59.179960131 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#23.
+  issue: 23
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-06-13 05:17:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 556288
+  _job: 17572867808
+  _time: 2025-09-09 05:44:01.723680533 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#103.
+  issue: 103
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-01-06 11:31:17.000000000 Z
+  where: github
+  who: 526301
+- _id: 556289
+  _job: 17572867808
+  _time: 2025-09-09 05:44:02.854724048 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#25.
+  issue: 25
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2014-06-26 19:53:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 556290
+  _job: 17572867808
+  _time: 2025-09-09 05:44:09.715532071 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#110.
+  issue: 110
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-01-29 22:15:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 556291
+  _job: 17572867808
+  _time: 2025-09-09 05:44:16.226384702 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#33.
+  issue: 33
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-02 14:37:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 556292
+  _job: 17572867808
+  _time: 2025-09-09 05:44:16.279479389 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#33.
+  issue: 33
+  label: enhancement
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-02 14:37:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 556293
+  _job: 17572867808
+  _time: 2025-09-09 05:44:17.397123776 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#119.
+  issue: 119
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-04-18 14:50:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 556294
+  _job: 17572867808
+  _time: 2025-09-09 05:44:18.335560678 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#34.
+  issue: 34
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2015-01-10 14:59:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 556295
+  _job: 17572867808
+  _time: 2025-09-09 05:44:19.481561095 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#120.
+  issue: 120
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-04-04 19:17:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 556296
+  _job: 17572867808
+  _time: 2025-09-09 05:44:21.054640384 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#124.
+  issue: 124
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-11-21 20:50:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 556297
+  _job: 17572867808
+  _time: 2025-09-09 05:44:22.875585280 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#125.
+  issue: 125
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2016-11-21 15:19:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 556298
+  _job: 17572867808
+  _time: 2025-09-09 05:44:39.538221071 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#51.
+  issue: 51
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2016-07-07 22:37:10.000000000 Z
+  where: github
+  who: 526301
+- _id: 556299
+  _job: 17572867808
+  _time: 2025-09-09 05:44:43.148688255 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#54.
+  issue: 54
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2016-11-22 05:28:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 556300
+  _job: 17572867808
+  _time: 2025-09-09 05:44:55.933749641 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#70.
+  issue: 70
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2019-05-05 18:07:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 556301
+  _job: 17572867808
+  _time: 2025-09-09 05:45:03.070703367 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#78.
+  issue: 78
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2023-06-10 05:28:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 556302
+  _job: 17572867808
+  _time: 2025-09-09 05:45:22.893350366 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-jdbc#165.
+  issue: 165
+  label: bug
+  repository: 12587702
+  what: label-was-attached
+  when: 2023-06-10 05:33:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 556303
+  _job: 17572867808
+  _time: 2025-09-09 05:45:24.215868329 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#185.
+  issue: 185
+  label: bug
+  repository: 13717355
+  what: label-was-attached
+  when: 2022-10-18 16:34:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 556308
+  _job: 17572867808
+  _time: 2025-09-09 05:45:58.520471743 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 526301
+  details: jcabi/jcabi-http#179 was assigned to @yegor256 by @yegor256.
+  issue: 179
+  repository: 16312153
+  what: issue-was-assigned
+  when: 2022-08-11 10:53:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 556309
+  _job: 17572867808
+  _time: 2025-09-09 05:45:59.467352274 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 526301
+  details: jcabi/jcabi-log#196 was assigned to @yegor256 by @yegor256.
+  issue: 196
+  repository: 12262782
+  what: issue-was-assigned
+  when: 2024-08-22 08:39:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 556310
+  _job: 17572867808
+  _time: 2025-09-09 05:46:01.921573252 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 526301
+  details: jcabi/jcabi-log#204 was assigned to @yegor256 by @yegor256.
+  issue: 204
+  repository: 12262782
+  what: issue-was-assigned
+  when: 2024-11-14 00:01:45.000000000 Z
+  where: github
+  who: 526301
+- _id: 556311
+  _job: 17572867808
+  _time: 2025-09-09 05:46:16.056075569 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 526301
+  details: jcabi/jcabi-xml#276 was assigned to @yegor256 by @yegor256.
+  issue: 276
+  repository: 13717355
+  what: issue-was-assigned
+  when: 2024-12-01 12:45:55.000000000 Z
+  where: github
+  who: 526301
+- _id: 556312
+  _job: 17572867808
+  _time: 2025-09-09 05:46:17.783218521 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#29 was assigned to @gvlasov by @dmarkov.
+  issue: 29
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2015-06-15 08:49:33.000000000 Z
+  where: github
+  who: 4467948
+- _id: 556313
+  _job: 17572867808
+  _time: 2025-09-09 05:46:18.800255942 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 526301
+  details: jcabi/jcabi-xml#277 was assigned to @volodya-lombrozo by @yegor256.
+  issue: 277
+  repository: 13717355
+  what: issue-was-assigned
+  when: 2024-12-04 14:44:07.000000000 Z
+  where: github
+  who: 51804353
+- _id: 556314
+  _job: 17572867808
+  _time: 2025-09-09 05:46:38.755492214 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#51 was assigned to @amihaiemil by @dmarkov.
+  issue: 51
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-02-08 08:23:24.000000000 Z
+  where: github
+  who: 6305156
+- _id: 556315
+  _job: 17572867808
+  _time: 2025-09-09 05:46:43.522503543 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#57 was assigned to @longtimeago by @dmarkov.
+  issue: 57
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-06-23 09:01:19.000000000 Z
+  where: github
+  who: 1388994
+- _id: 556316
+  _job: 17572867808
+  _time: 2025-09-09 05:46:43.831140137 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-parent#57 was assigned to @prondzyn by @dmarkov.
+  issue: 57
+  repository: 12590813
+  what: issue-was-assigned
+  when: 2016-07-18 07:14:48.000000000 Z
+  where: github
+  who: 5822647
+- _id: 556317
+  _job: 17572867808
+  _time: 2025-09-09 05:46:44.840388356 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assigner: 5993843
+  details: jcabi/jcabi-jdbc#51 was assigned to @amihaiemil by @dmarkov.
+  issue: 51
+  repository: 12587702
+  what: issue-was-assigned
+  when: 2016-08-08 07:26:10.000000000 Z
+  where: github
+  who: 6305156
+- _id: 556321
+  _job: 17572867808
+  _time: 2025-09-09 05:50:05.207269919 Z
   _version: 0.16.1/0.53.6/0.15.37
   assignees_were_scanned: 0
-  events_were_scanned: 3321000838
-  labels_were_scanned: 0
-  min_issue_was_found: 13
-  min_pull_was_found: 128
-  repository: 12587702
-  types_were_scanned: 0
-  what: iterate
-  where: github
-- _id: 556274
-  _job: 17571940640
-  _time: 2025-09-09 04:54:47.436691300 Z
-  _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 193
   events_were_scanned: 3321000574
-  labels_were_scanned: 72
+  labels_were_scanned: 193
   min_issue_was_found: 1
   min_pull_was_found: 84
   repository: 13717355
+  types_were_scanned: 103
+  what: iterate
+  where: github
+- _id: 556322
+  _job: 17572867808
+  _time: 2025-09-09 05:50:05.318796301 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assignees_were_scanned: 109
+  events_were_scanned: 3320544628
+  labels_were_scanned: 0
+  min_issue_was_found: 26
+  min_pull_was_found: 577
+  repository: 12590813
   types_were_scanned: 0
   what: iterate
   where: github
-- _id: 556275
-  _job: 17571940640
-  _time: 2025-09-09 04:54:47.555573688 Z
+- _id: 556323
+  _job: 17572867808
+  _time: 2025-09-09 05:50:05.448678953 Z
   _version: 0.16.1/0.53.6/0.15.37
-  assignees_were_scanned: 175
+  assignees_were_scanned: 165
+  events_were_scanned: 3321000838
+  labels_were_scanned: 221
+  min_issue_was_found: 13
+  min_pull_was_found: 128
+  repository: 12587702
+  types_were_scanned: 106
+  what: iterate
+  where: github
+- _id: 556324
+  _job: 17572867808
+  _time: 2025-09-09 05:50:05.570236878 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  assignees_were_scanned: 0
   events_were_scanned: 3892224863
-  labels_were_scanned: 187
+  labels_were_scanned: 0
   min_issue_was_found: 9
   min_pull_was_found: 95
   repository: 16312153
-  types_were_scanned: 195
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 556325
+  _job: 17572867808
+  _time: 2025-09-09 05:50:17.463030408 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-log#196 has been 'issue-was-closed'.
+  issue: 196
+  repository: 12262782
+  what: issue-was-closed
+  when: 2024-08-22 09:48:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 556326
+  _job: 17572867808
+  _time: 2025-09-09 05:50:21.434246810 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#29 has been 'issue-was-closed'.
+  issue: 29
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-06-17 07:25:38.000000000 Z
+  where: github
+  who: 553191
+- _id: 556327
+  _job: 17572867808
+  _time: 2025-09-09 05:50:22.333147593 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#13 has been 'issue-was-closed'.
+  issue: 13
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-01-30 22:06:23.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556328
+  _job: 17572867808
+  _time: 2025-09-09 05:50:23.395236785 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#32 has been 'issue-was-closed'.
+  issue: 32
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-09 21:56:31.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556329
+  _job: 17572867808
+  _time: 2025-09-09 05:50:26.048862931 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#19 has been 'issue-was-closed'.
+  issue: 19
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-03-24 09:40:23.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556330
+  _job: 17572867808
+  _time: 2025-09-09 05:50:27.291780672 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-log#204 has been 'issue-was-closed'.
+  issue: 204
+  repository: 12262782
+  what: issue-was-closed
+  when: 2024-11-14 01:12:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 556331
+  _job: 17572867808
+  _time: 2025-09-09 05:50:28.525954564 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#31 has been 'issue-was-closed'.
+  issue: 31
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-06-22 22:54:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 556332
+  _job: 17572867808
+  _time: 2025-09-09 05:50:29.040251770 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#17 has been 'issue-was-closed'.
+  issue: 17
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-04-02 09:29:40.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556333
+  _job: 17572867808
+  _time: 2025-09-09 05:50:29.638910139 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#36 has been 'issue-was-closed'.
+  issue: 36
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-07-14 03:10:35.000000000 Z
+  where: github
+  who: 279079
+- _id: 556334
+  _job: 17572867808
+  _time: 2025-09-09 05:50:30.474007884 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#22 has been 'issue-was-closed'.
+  issue: 22
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-04-23 19:09:57.000000000 Z
+  where: github
+  who: 105730
+- _id: 556335
+  _job: 17572867808
+  _time: 2025-09-09 05:50:31.901037513 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#37 has been 'issue-was-closed'.
+  issue: 37
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-07-23 18:08:17.000000000 Z
+  where: github
+  who: 526301
+- _id: 556336
+  _job: 17572867808
+  _time: 2025-09-09 05:50:32.405138170 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#21 has been 'issue-was-closed'.
+  issue: 21
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-04-03 09:24:50.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556337
+  _job: 17572867808
+  _time: 2025-09-09 05:50:32.992478148 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#37 has been 'issue-was-closed'.
+  issue: 37
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-19 00:46:02.000000000 Z
+  where: github
+  who: 279079
+- _id: 556338
+  _job: 17572867808
+  _time: 2025-09-09 05:50:33.527311104 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#23 has been 'issue-was-closed'.
+  issue: 23
+  repository: 13717355
+  what: issue-was-closed
+  when: 2014-04-21 11:44:37.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556339
+  _job: 17572867808
+  _time: 2025-09-09 05:50:34.636394584 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#45 has been 'issue-was-closed'.
+  issue: 45
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-09-04 10:38:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 556340
+  _job: 17572867808
+  _time: 2025-09-09 05:50:35.141764453 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#23 has been 'issue-was-closed'.
+  issue: 23
+  repository: 12587702
+  what: issue-was-closed
+  when: 2015-01-19 13:19:54.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556341
+  _job: 17572867808
+  _time: 2025-09-09 05:50:35.730029041 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-http#40 has been 'issue-was-closed'.
+  issue: 40
+  repository: 16312153
+  what: issue-was-closed
+  when: 2014-06-24 23:10:08.000000000 Z
+  where: github
+  who: 279079
+- _id: 556342
+  _job: 17572867808
+  _time: 2025-09-09 05:50:36.271768268 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-xml#31 has been 'issue-was-closed'.
+  issue: 31
+  repository: 13717355
+  what: issue-was-closed
+  when: 2015-05-18 06:49:16.000000000 Z
+  where: github
+  who: 1917892
+- _id: 556343
+  _job: 17572867808
+  _time: 2025-09-09 05:50:37.307579441 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-parent#46 has been 'issue-was-closed'.
+  issue: 46
+  repository: 12590813
+  what: issue-was-closed
+  when: 2015-12-17 21:17:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 556344
+  _job: 17572867808
+  _time: 2025-09-09 05:50:37.849813369 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  details: Apparently, jcabi/jcabi-jdbc#25 has been 'issue-was-closed'.
+  issue: 25
+  repository: 12587702
+  what: issue-was-closed
+  when: 2014-08-28 13:28:07.000000000 Z
+  where: github
+  who: 5993843
+- _id: 556345
+  _job: 17572867808
+  _time: 2025-09-09 05:51:33.515554087 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3320543634
+  min_issue_was_found: 80
+  min_pull_was_found: 0
+  repository: 12584841
+  what: iterate
+  where: github
+- _id: 556346
+  _job: 17572867808
+  _time: 2025-09-09 05:51:33.624038158 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3320999970
+  min_issue_was_found: 120
+  min_pull_was_found: 103
+  repository: 19194304
+  what: iterate
+  where: github
+- _id: 556347
+  _job: 17572867808
+  _time: 2025-09-09 05:51:33.729319663 Z
+  _version: 0.16.1/0.53.6/0.15.37
+  events_were_scanned: 3320543380
+  min_issue_was_found: 48
+  min_pull_was_found: 68
+  repository: 12591347
   what: iterate
   where: github
