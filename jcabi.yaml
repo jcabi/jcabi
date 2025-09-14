@@ -2,11 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - 'Judge pull-was-merged stopped by timeout after 10m: execution expired'
+  - 'We are off-quota (remaining: 49), can''t do repository()'
   inserted: 8
-  seconds: 899.053011059
+  seconds: 747.357077364
   version: 0.53.6
   what: judges-summary
-  when: 2025-09-14 13:08:09.418584997 Z
+  when: 2025-09-14 13:44:30.821682577 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -44711,7 +44714,7 @@
   review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
-  when: &517 2025-09-08 16:35:26.000000000 Z
+  when: &516 2025-09-08 16:35:26.000000000 Z
   where: github
   who: 8086956
 - _id: 553756
@@ -45417,550 +45420,6 @@
   when: 2021-06-28 23:00:44.000000000 Z
   where: github
   who: 49699333
-- _id: 572729
-  _job: 37669
-  _time: 2025-09-13 17:47:42.392788338 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #16312153, the user #511167 submitted the issue #81
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-13 18:56:21.707373940 Z
-  issue: 81
-  repository: 16312153
-  tombstone: 2025-09-13 22:50:42.154159196 Z
-  what: dud-was-closed
-  when: 2015-04-07 20:31:10.000000000 Z
-  where: github
-  who: 511167
-- _id: 572730
-  _job: 37669
-  _time: 2025-09-13 17:47:42.499216795 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #16312153, the user #1143055 submitted the issue #70
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-13 18:56:22.013481067 Z
-  issue: 70
-  repository: 16312153
-  tombstone: 2025-09-13 22:50:42.246093649 Z
-  what: dud-was-closed
-  when: 2015-01-25 18:58:18.000000000 Z
-  where: github
-  who: 1143055
-- _id: 572731
-  _job: 37669
-  _time: 2025-09-13 17:47:42.606731732 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 49783909
-  details: 'In the repository #16312153, the user #10676186 submitted the issue #67
-    which was later closed by the user #49783909 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-13 18:56:22.278283750 Z
-  issue: 67
-  repository: 16312153
-  tombstone: 2025-09-13 22:50:42.336851733 Z
-  what: dud-was-closed
-  when: 2015-01-23 20:54:22.000000000 Z
-  where: github
-  who: 10676186
-- _id: 572763
-  _job: 17700561631
-  _time: 2025-09-13 18:40:08.389146395 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#98 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:36.430886553 Z
-  failed_builds: 0
-  hoc: 171
-  issue: 98
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:43.888118721 Z
-  what: pull-was-closed
-  when: 2015-06-21 13:16:53.000000000 Z
-  where: github
-  who: 95550
-- _id: 572773
-  _job: 17700561631
-  _time: 2025-09-13 18:40:54.297585643 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: timeouts
-  comments: 78
-  comments_appreciated: 0
-  comments_by_author: 11
-  comments_by_reviewers: 67
-  comments_resolved: 0
-  comments_to_code: 36
-  details: Apparently, jcabi/jcabi-http#99 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:18.953303393 Z
-  failed_builds: 0
-  hoc: 203
-  issue: 99
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:44.857966161 Z
-  what: pull-was-merged
-  when: 2015-06-29 04:38:50.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572781
-  _job: 17700561631
-  _time: 2025-09-13 18:41:37.905858645 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: documentation
-  comments: 10
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#101 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:20.508801143 Z
-  failed_builds: 0
-  hoc: 4
-  issue: 101
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:45.652118536 Z
-  what: pull-was-merged
-  when: 2015-07-02 17:48:51.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572789
-  _job: 17700561631
-  _time: 2025-09-13 18:42:11.019841499 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  comments: 22
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 18
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#103 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:37.158933466 Z
-  failed_builds: 0
-  hoc: 74
-  issue: 103
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:46.407891834 Z
-  what: pull-was-closed
-  when: 2015-09-13 18:29:44.000000000 Z
-  where: github
-  who: 1667699
-- _id: 572797
-  _job: 17700561631
-  _time: 2025-09-13 18:42:42.932076464 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: extra-and
-  comments: 22
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 20
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#107 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:23.253397872 Z
-  failed_builds: 0
-  hoc: 53
-  issue: 107
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:47.195400786 Z
-  what: pull-was-merged
-  when: 2015-08-31 07:29:11.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572805
-  _job: 17700561631
-  _time: 2025-09-13 18:43:16.112238144 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '96'
-  comments: 18
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 16
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#110 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:24.713858672 Z
-  failed_builds: 0
-  hoc: 301
-  issue: 110
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:47.998331928 Z
-  what: pull-was-merged
-  when: 2015-09-11 10:05:21.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572813
-  _job: 17700561631
-  _time: 2025-09-13 18:43:44.880925446 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: yegor256-patch-1
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#112 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:26.154496832 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 112
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:48.750811445 Z
-  what: pull-was-merged
-  when: 2015-09-27 01:26:56.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572821
-  _job: 17700561631
-  _time: 2025-09-13 18:44:10.028870666 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '133'
-  comments: 15
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 12
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#114 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:27.636690512 Z
-  failed_builds: 0
-  hoc: 118
-  issue: 114
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:49.541247622 Z
-  what: pull-was-merged
-  when: 2015-10-03 16:47:19.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572829
-  _job: 17700561631
-  _time: 2025-09-13 18:44:37.306250053 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  comments: 80
-  comments_appreciated: 0
-  comments_by_author: 11
-  comments_by_reviewers: 69
-  comments_resolved: 0
-  comments_to_code: 55
-  details: Apparently, jcabi/jcabi-http#118 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:29.169185832 Z
-  failed_builds: 0
-  hoc: 395
-  issue: 118
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:50.342522557 Z
-  what: pull-was-merged
-  when: 2016-01-15 22:22:24.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572837
-  _job: 17700561631
-  _time: 2025-09-13 18:45:16.690221308 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '89'
-  comments: 73
-  comments_appreciated: 0
-  comments_by_author: 9
-  comments_by_reviewers: 64
-  comments_resolved: 0
-  comments_to_code: 47
-  details: Apparently, jcabi/jcabi-http#119 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:30.671699431 Z
-  failed_builds: 0
-  hoc: 570
-  issue: 119
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:47:58.640729640 Z
-  what: pull-was-merged
-  when: 2016-01-23 03:59:01.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572844
-  _job: 17700561631
-  _time: 2025-09-13 18:45:48.937849447 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: badges
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#123 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:31.987103541 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 123
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:47:59.273655497 Z
-  what: pull-was-merged
-  when: 2016-01-21 16:55:58.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572851
-  _job: 17700561631
-  _time: 2025-09-13 18:46:07.522132062 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '121'
-  comments: 40
-  comments_appreciated: 0
-  comments_by_author: 7
-  comments_by_reviewers: 33
-  comments_resolved: 0
-  comments_to_code: 10
-  details: Apparently, jcabi/jcabi-http#125 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:33.334108881 Z
-  failed_builds: 0
-  hoc: 58
-  issue: 125
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:47:59.964016489 Z
-  what: pull-was-merged
-  when: 2016-02-03 04:21:57.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572858
-  _job: 17700561631
-  _time: 2025-09-13 18:46:31.764828050 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: doc
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#128 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:34.728562481 Z
-  failed_builds: 0
-  hoc: 6
-  issue: 128
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:00.604480112 Z
-  what: pull-was-merged
-  when: 2016-02-16 23:10:37.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572865
-  _job: 17700561631
-  _time: 2025-09-13 18:46:50.788372403 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: issue120
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#133 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:39.401136293 Z
-  failed_builds: 0
-  hoc: 109
-  issue: 133
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:01.246893021 Z
-  what: pull-was-closed
-  when: 2016-05-16 19:55:55.000000000 Z
-  where: github
-  who: 6041352
-- _id: 572872
-  _job: 17700561631
-  _time: 2025-09-13 18:47:08.832392281 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: SolveIssue120
-  comments: 91
-  comments_appreciated: 0
-  comments_by_author: 21
-  comments_by_reviewers: 70
-  comments_resolved: 0
-  comments_to_code: 38
-  details: Apparently, jcabi/jcabi-http#134 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:37.039580941 Z
-  failed_builds: 0
-  hoc: 172
-  issue: 134
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:01.900998335 Z
-  what: pull-was-merged
-  when: 2016-06-16 03:18:00.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572879
-  _job: 17700561631
-  _time: 2025-09-13 18:47:41.826697664 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: issue137
-  comments: 92
-  comments_appreciated: 0
-  comments_by_author: 13
-  comments_by_reviewers: 79
-  comments_resolved: 0
-  comments_to_code: 37
-  details: Apparently, jcabi/jcabi-http#141 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:39.820325305 Z
-  failed_builds: 0
-  hoc: 217
-  issue: 141
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:02.592726670 Z
-  what: pull-was-closed
-  when: 2016-09-08 00:48:27.000000000 Z
-  where: github
-  who: 6041352
-- _id: 572886
-  _job: 17700561631
-  _time: 2025-09-13 18:48:15.120867328 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '87'
-  comments: 42
-  comments_appreciated: 0
-  comments_by_author: 19
-  comments_by_reviewers: 23
-  comments_resolved: 0
-  comments_to_code: 5
-  details: Apparently, jcabi/jcabi-http#142 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:39.854292470 Z
-  failed_builds: 0
-  hoc: 153
-  issue: 142
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:03.230071969 Z
-  what: pull-was-merged
-  when: 2016-11-21 19:54:45.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572893
-  _job: 17700561631
-  _time: 2025-09-13 18:48:39.627764073 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '137'
-  comments: 61
-  comments_appreciated: 0
-  comments_by_author: 12
-  comments_by_reviewers: 49
-  comments_resolved: 0
-  comments_to_code: 32
-  details: Apparently, jcabi/jcabi-http#143 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:41.398872030 Z
-  failed_builds: 0
-  hoc: 148
-  issue: 143
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:03.882881905 Z
-  what: pull-was-merged
-  when: 2016-09-05 16:39:58.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572900
-  _job: 17700561631
-  _time: 2025-09-13 18:49:09.011404397 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  comments: 11
-  comments_appreciated: 1
-  comments_by_author: 2
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#149 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:42.933669839 Z
-  failed_builds: 0
-  hoc: 20
-  issue: 149
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:04.523662544 Z
-  what: pull-was-merged
-  when: 2020-06-16 05:55:54.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572907
-  _job: 17700561631
-  _time: 2025-09-13 18:49:29.060015989 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '146'
-  comments: 14
-  comments_appreciated: 0
-  comments_by_author: 5
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#152 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:44.492661789 Z
-  failed_builds: 0
-  hoc: 62
-  issue: 152
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:05.242175973 Z
-  what: pull-was-merged
-  when: 2016-12-15 17:05:53.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572914
-  _job: 17700561631
-  _time: 2025-09-13 18:49:47.509083931 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: jackson-response
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#158 has been 'pull-was-merged'.
-  done: 2025-09-13 19:49:45.956176290 Z
-  failed_builds: 0
-  hoc: 422
-  issue: 158
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:05.861481315 Z
-  what: pull-was-merged
-  when: 2017-04-26 14:25:06.000000000 Z
-  where: github
-  who: 8086956
-- _id: 572919
-  _job: 17700561631
-  _time: 2025-09-13 18:50:23.445117232 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assigner: 526301
-  details: jcabi/jcabi-http#171 was assigned to @0crat by @yegor256.
-  issue: 171
-  repository: 16312153
-  tombstone: 2025-09-13 18:56:31.558416203 Z
-  what: issue-was-assigned
-  when: 2017-12-19 14:27:08.000000000 Z
-  where: github
-  who: 24387511
 - _id: 572955
   _job: 37674
   _time: 2025-09-13 18:57:02.718260511 Z
@@ -47269,123 +46728,6 @@
   when: 2024-12-24 17:08:35.000000000 Z
   where: github
   who: 37025995
-- _id: 573132
-  _job: 17701082378
-  _time: 2025-09-13 19:33:30.205788779 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/commons-net-commons-net-3.x
-  details: The missing pull jcabi/jcabi-parent#207 has been opened by @renovate[bot].
-  issue: 207
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:07.364416643 Z
-  what: pull-was-opened
-  when: 2022-12-02 00:07:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573133
-  _job: 17701082378
-  _time: 2025-09-13 19:33:30.831516161 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.slf4j-slf4j-reload4j-2.x
-  details: The missing pull jcabi/jcabi-parent#208 has been opened by @renovate[bot].
-  issue: 208
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:09.126881041 Z
-  what: pull-was-opened
-  when: 2022-12-13 00:19:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573134
-  _job: 17701082378
-  _time: 2025-09-13 19:33:31.687465390 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.codehaus.mojo-versions-maven-plugin-2.x
-  details: The missing pull jcabi/jcabi-parent#209 has been opened by @renovate[bot].
-  issue: 209
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:10.713476581 Z
-  what: pull-was-opened
-  when: 2022-12-14 09:01:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573135
-  _job: 17701082378
-  _time: 2025-09-13 19:33:32.374481640 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/mockito-monorepo
-  details: The missing pull jcabi/jcabi-parent#210 has been opened by @renovate[bot].
-  issue: 210
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:11.749783698 Z
-  what: pull-was-opened
-  when: 2022-12-14 21:57:26.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573136
-  _job: 17701082378
-  _time: 2025-09-13 19:33:33.050167974 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.codehaus.mojo-versions-maven-plugin-2.x
-  details: The missing pull jcabi/jcabi-parent#211 has been opened by @renovate[bot].
-  issue: 211
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:12.968575601 Z
-  what: pull-was-opened
-  when: 2022-12-15 13:05:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573137
-  _job: 17701082378
-  _time: 2025-09-13 19:33:33.716277238 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-invoker-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#212 has been opened by @renovate[bot].
-  issue: 212
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:14.362887657 Z
-  what: pull-was-opened
-  when: 2022-12-19 00:43:18.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573138
-  _job: 17701082378
-  _time: 2025-09-13 19:33:34.433550699 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.aspectj-aspectjrt-1.x
-  details: The missing pull jcabi/jcabi-parent#213 has been opened by @renovate[bot].
-  issue: 213
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:15.578273954 Z
-  what: pull-was-opened
-  when: 2022-12-21 18:51:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573139
-  _job: 17701082378
-  _time: 2025-09-13 19:33:35.234500879 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  details: The missing pull jcabi/jcabi-parent#214 has been opened by @renovate[bot].
-  issue: 214
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:17.189413846 Z
-  what: pull-was-opened
-  when: 2022-12-23 14:25:33.000000000 Z
-  where: github
-  who: 29139614
-- _id: 573140
-  _job: 17701082378
-  _time: 2025-09-13 19:33:35.944746510 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/groovy-monorepo
-  details: The missing pull jcabi/jcabi-parent#215 has been opened by @renovate[bot].
-  issue: 215
-  repository: 12590813
-  tombstone: 2025-09-14 06:59:18.623154207 Z
-  what: pull-was-opened
-  when: 2022-12-24 07:22:04.000000000 Z
-  where: github
-  who: 29139614
 - _id: 573141
   _job: 17701082378
   _time: 2025-09-13 19:33:36.588261722 Z
@@ -47878,18 +47220,6 @@
   when: 2023-03-18 10:11:42.000000000 Z
   where: github
   who: 29139614
-- _id: 573183
-  _job: 17701082378
-  _time: 2025-09-13 19:34:07.693547779 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-http#36 has been opened by @peterbecker.
-  issue: 36
-  repository: 16312153
-  tombstone: 2025-09-13 23:46:45.423666764 Z
-  what: issue-was-opened
-  when: 2014-06-12 23:56:44.000000000 Z
-  where: github
-  who: 279079
 - _id: 573184
   _job: 17701082378
   _time: 2025-09-13 19:34:08.220756597 Z
@@ -49378,237 +48708,6 @@
   when: 2024-02-23 19:45:30.000000000 Z
   where: github
   who: 29139614
-- _id: 573408
-  _job: 17701692489
-  _time: 2025-09-13 20:33:04.745249352 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The 'enhancement' label was attached by @yegor256 to the issue jcabi/jcabi-http#36.
-  issue: 36
-  label: enhancement
-  repository: 16312153
-  tombstone: 2025-09-13 23:46:45.510862290 Z
-  what: label-was-attached
-  when: &516 2014-06-13 05:18:31.000000000 Z
-  where: github
-  who: 526301
-- _id: 573420
-  _job: 17701692489
-  _time: 2025-09-13 20:35:21.339843833 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#36 has been 'issue-was-closed'.
-  issue: 36
-  repository: 16312153
-  tombstone: 2025-09-13 23:46:45.608322423 Z
-  what: issue-was-closed
-  when: 2014-07-14 03:10:35.000000000 Z
-  where: github
-  who: 279079
-- _id: 573421
-  _job: 17701692489
-  _time: 2025-09-13 20:35:22.148292765 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-parent#31 has been 'issue-was-closed'.
-  issue: 31
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:08.682147462 Z
-  what: issue-was-closed
-  when: 2015-06-22 22:54:38.000000000 Z
-  where: github
-  who: 526301
-- _id: 573425
-  _job: 17701692489
-  _time: 2025-09-13 20:35:31.764978102 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-parent#37 has been 'issue-was-closed'.
-  issue: 37
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:08.932649080 Z
-  what: issue-was-closed
-  when: 2015-07-23 18:08:17.000000000 Z
-  where: github
-  who: 526301
-- _id: 573429
-  _job: 17701692489
-  _time: 2025-09-13 20:35:35.822916362 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-parent#38 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:51.809571063 Z
-  issue: 38
-  repository: 12590813
-  tombstone: 2025-09-14 05:49:20.207086753 Z
-  what: issue-was-closed
-  when: 2015-08-20 09:49:14.000000000 Z
-  where: github
-  who: 4467948
-- _id: 573433
-  _job: 17701692489
-  _time: 2025-09-13 20:35:39.249771955 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-parent#39 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:52.088959691 Z
-  issue: 39
-  repository: 12590813
-  tombstone: 2025-09-14 05:49:20.384541069 Z
-  what: issue-was-closed
-  when: 2015-09-03 08:05:18.000000000 Z
-  where: github
-  who: 1388994
-- _id: 573448
-  _job: 17701692489
-  _time: 2025-09-13 20:35:57.080343306 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#238 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:52.982653679 Z
-  issue: 238
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:20.919393408 Z
-  what: issue-was-closed
-  when: 2021-03-15 02:40:54.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573451
-  _job: 17701692489
-  _time: 2025-09-13 20:35:59.426998328 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#241 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:53.131169196 Z
-  issue: 241
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.006579896 Z
-  what: issue-was-closed
-  when: 2021-03-09 12:31:12.000000000 Z
-  where: github
-  who: 66594914
-- _id: 573454
-  _job: 17701692489
-  _time: 2025-09-13 20:36:05.875795878 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#252 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:53.278914410 Z
-  issue: 252
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.105911730 Z
-  what: issue-was-closed
-  when: 2021-07-02 16:00:31.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573456
-  _job: 17701692489
-  _time: 2025-09-13 20:36:14.002366138 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#265 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:53.572374498 Z
-  issue: 265
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.283711933 Z
-  what: issue-was-closed
-  when: 2023-10-29 09:16:52.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573459
-  _job: 17701692489
-  _time: 2025-09-13 20:36:16.022238390 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#278 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:54.018390869 Z
-  issue: 278
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.552842724 Z
-  what: issue-was-closed
-  when: 2021-09-15 06:31:38.000000000 Z
-  where: github
-  who: 526301
-- _id: 573461
-  _job: 17701692489
-  _time: 2025-09-13 20:36:17.122383937 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#292 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:54.314174382 Z
-  issue: 292
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.735191464 Z
-  what: issue-was-closed
-  when: 2021-12-31 20:29:09.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573462
-  _job: 17701692489
-  _time: 2025-09-13 20:36:18.078834898 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#293 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:54.463073436 Z
-  issue: 293
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:21.820915505 Z
-  what: issue-was-closed
-  when: 2021-12-31 20:29:17.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573464
-  _job: 17701692489
-  _time: 2025-09-13 20:36:19.361856652 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#294 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:54.770586637 Z
-  issue: 294
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:22.050156714 Z
-  what: issue-was-closed
-  when: 2022-07-03 01:16:48.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573466
-  _job: 17701692489
-  _time: 2025-09-13 20:36:21.249895290 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#323 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:55.127997060 Z
-  issue: 323
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:22.224697745 Z
-  what: issue-was-closed
-  when: 2022-07-03 01:48:56.000000000 Z
-  where: github
-  who: 49783909
-- _id: 573467
-  _job: 17701692489
-  _time: 2025-09-13 20:36:22.186787006 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#331 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:55.275549125 Z
-  issue: 331
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:22.311417928 Z
-  what: issue-was-closed
-  when: 2022-07-19 04:36:33.000000000 Z
-  where: github
-  who: 24456188
-- _id: 573468
-  _job: 17701692489
-  _time: 2025-09-13 20:36:23.064759231 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#332 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:55.505831482 Z
-  issue: 332
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:22.398343830 Z
-  what: issue-was-closed
-  when: 2022-07-19 04:36:38.000000000 Z
-  where: github
-  who: 24456188
-- _id: 573470
-  _job: 17701692489
-  _time: 2025-09-13 20:36:24.161075883 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#333 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:55.963042108 Z
-  issue: 333
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:22.573790692 Z
-  what: issue-was-closed
-  when: 2022-07-19 04:36:42.000000000 Z
-  where: github
-  who: 24456188
 - _id: 573472
   _job: 17701692489
   _time: 2025-09-13 20:36:25.226287220 Z
@@ -49684,29 +48783,6 @@
   when: 2017-06-28 08:24:30.000000000 Z
   where: github
   who: 8086956
-- _id: 573645
-  _job: 17702274601
-  _time: 2025-09-13 21:41:56.302403934 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.antlr-antlr4-runtime-4.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#161 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:08.067170774 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 161
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:09.222926001 Z
-  what: pull-was-merged
-  when: 2022-09-23 03:11:01.000000000 Z
-  where: github
-  who: 526301
 - _id: 573647
   _job: 17702274601
   _time: 2025-09-13 21:42:02.311177619 Z
@@ -49730,29 +48806,6 @@
   when: 2017-06-25 20:22:15.000000000 Z
   where: github
   who: 8086956
-- _id: 573653
-  _job: 17702274601
-  _time: 2025-09-13 21:42:17.628848942 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.doxia-doxia-module-markdown-1.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#162 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:08.931921631 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 162
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:09.964344709 Z
-  what: pull-was-merged
-  when: 2022-09-23 03:15:34.000000000 Z
-  where: github
-  who: 526301
 - _id: 573655
   _job: 17702274601
   _time: 2025-09-13 21:42:24.146630353 Z
@@ -49776,29 +48829,6 @@
   when: 2017-09-06 19:21:22.000000000 Z
   where: github
   who: 8086956
-- _id: 573661
-  _job: 17702274601
-  _time: 2025-09-13 21:42:39.295400668 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-help-plugin-3.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#163 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:10.013818349 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 163
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:10.710841947 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:52:26.000000000 Z
-  where: github
-  who: 526301
 - _id: 573663
   _job: 17702274601
   _time: 2025-09-13 21:42:44.874126909 Z
@@ -49820,29 +48850,6 @@
   tombstone: 2025-09-13 23:48:10.945444255 Z
   what: pull-was-merged
   when: 2017-11-16 10:55:19.000000000 Z
-  where: github
-  who: 526301
-- _id: 573669
-  _job: 17702274601
-  _time: 2025-09-13 21:42:57.941688682 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-jar-plugin-3.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#164 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:11.104985521 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 164
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:11.493276316 Z
-  what: pull-was-merged
-  when: 2022-09-23 06:39:35.000000000 Z
   where: github
   who: 526301
 - _id: 573671
@@ -49868,29 +48875,6 @@
   when: 2018-01-29 17:49:34.000000000 Z
   where: github
   who: 8086956
-- _id: 573677
-  _job: 17702274601
-  _time: 2025-09-13 21:43:16.688035043 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-jxr-plugin-2.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#165 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:12.224230937 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 165
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:12.231067529 Z
-  what: pull-was-merged
-  when: 2022-09-23 06:39:22.000000000 Z
-  where: github
-  who: 526301
 - _id: 573679
   _job: 17702274601
   _time: 2025-09-13 21:43:22.921882486 Z
@@ -49914,29 +48898,6 @@
   when: 2019-10-10 08:46:41.000000000 Z
   where: github
   who: 8086956
-- _id: 573684
-  _job: 17702274601
-  _time: 2025-09-13 21:43:37.547375179 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-project-info-reports-plugin-2.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#166 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:13.151613543 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 166
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:12.873525136 Z
-  what: pull-was-merged
-  when: 2022-09-23 12:50:10.000000000 Z
-  where: github
-  who: 526301
 - _id: 573686
   _job: 17702274601
   _time: 2025-09-13 21:43:41.457123566 Z
@@ -49960,29 +48921,6 @@
   when: 2019-11-29 16:22:26.000000000 Z
   where: github
   who: 8086956
-- _id: 573691
-  _job: 17702274601
-  _time: 2025-09-13 21:43:56.561235939 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-resources-plugin-3.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#167 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:14.092961832 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 167
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:13.528015309 Z
-  what: pull-was-merged
-  when: 2022-09-23 12:49:59.000000000 Z
-  where: github
-  who: 526301
 - _id: 573693
   _job: 17702274601
   _time: 2025-09-13 21:44:01.040354417 Z
@@ -50006,29 +48944,6 @@
   when: 2019-12-16 22:13:18.000000000 Z
   where: github
   who: 8086956
-- _id: 573698
-  _job: 17702274601
-  _time: 2025-09-13 21:44:15.695159126 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-site-plugin-3.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#168 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:15.238169112 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 168
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:14.208953635 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:52:22.000000000 Z
-  where: github
-  who: 526301
 - _id: 573700
   _job: 17702274601
   _time: 2025-09-13 21:44:18.883862678 Z
@@ -50052,29 +48967,6 @@
   when: 2019-12-23 13:20:53.000000000 Z
   where: github
   who: 8086956
-- _id: 573705
-  _job: 17702274601
-  _time: 2025-09-13 21:44:34.757139142 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-surefire-report-plugin-2.x
-  comments: 2
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 2
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#169 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:16.385080169 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 169
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:14.861229725 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:51:12.000000000 Z
-  where: github
-  who: 526301
 - _id: 573707
   _job: 17702274601
   _time: 2025-09-13 21:44:38.418637569 Z
@@ -50098,29 +48990,6 @@
   when: 2020-06-16 06:12:37.000000000 Z
   where: github
   who: 8086956
-- _id: 573712
-  _job: 17702274601
-  _time: 2025-09-13 21:44:53.857265520 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.codehaus.gmavenplus-gmavenplus-plugin-1.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#170 has been 'pull-was-merged'.
-  done: 2025-09-13 21:46:17.458120326 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 170
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:15.506058949 Z
-  what: pull-was-merged
-  when: 2022-09-23 19:40:47.000000000 Z
-  where: github
-  who: 526301
 - _id: 573714
   _job: 17702274601
   _time: 2025-09-13 21:44:57.781066811 Z
@@ -55345,29 +54214,6 @@
   when: 2023-09-22 18:46:48.000000000 Z
   where: github
   who: 29139614
-- _id: 574362
-  _job: 17703413843
-  _time: 2025-09-13 23:34:55.097131650 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.codehaus.mojo-versions-maven-plugin-2.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#171 has been 'pull-was-merged'.
-  done: 2025-09-13 23:46:48.572255994 Z
-  failed_builds: 0
-  hoc: 4
-  issue: 171
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:17.386022350 Z
-  what: pull-was-merged
-  when: 2022-09-23 19:40:55.000000000 Z
-  where: github
-  who: 526301
 - _id: 574369
   _job: 17703413843
   _time: 2025-09-13 23:35:34.503251511 Z
@@ -55391,29 +54237,6 @@
   when: 2020-06-28 13:09:57.000000000 Z
   where: github
   who: 8086956
-- _id: 574379
-  _job: 17703413843
-  _time: 2025-09-13 23:36:24.894325645 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/hibernate-validator
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#172 has been 'pull-was-merged'.
-  done: 2025-09-13 23:46:52.053046587 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 172
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:18.968392049 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:51:07.000000000 Z
-  where: github
-  who: 526301
 - _id: 574386
   _job: 17703413843
   _time: 2025-09-13 23:37:03.078667818 Z
@@ -55437,29 +54260,6 @@
   when: 2020-06-28 14:53:17.000000000 Z
   where: github
   who: 8086956
-- _id: 574396
-  _job: 17703413843
-  _time: 2025-09-13 23:37:53.016084619 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/mockito-monorepo
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#173 has been 'pull-was-merged'.
-  done: 2025-09-13 23:46:55.368155154 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 173
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:20.600830629 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:51:01.000000000 Z
-  where: github
-  who: 526301
 - _id: 574403
   _job: 17703413843
   _time: 2025-09-13 23:38:30.299556633 Z
@@ -55481,29 +54281,6 @@
   tombstone: 2025-09-13 23:48:21.250572735 Z
   what: pull-was-merged
   when: 2020-06-30 05:58:26.000000000 Z
-  where: github
-  who: 526301
-- _id: 574411
-  _job: 17703413843
-  _time: 2025-09-13 23:39:15.498290365 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/xml-apis-xml-apis-1.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#174 has been 'pull-was-merged'.
-  done: 2025-09-13 23:46:58.480012782 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 174
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:22.003157415 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:50:41.000000000 Z
   where: github
   who: 526301
 - _id: 574418
@@ -55529,29 +54306,6 @@
   when: 2020-07-07 20:55:18.000000000 Z
   where: github
   who: 8086956
-- _id: 574425
-  _job: 17703413843
-  _time: 2025-09-13 23:40:21.237287410 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/actions-cache-3.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#175 has been 'pull-was-merged'.
-  done: 2025-09-13 23:47:01.419894531 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 175
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:23.349269339 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:52:45.000000000 Z
-  where: github
-  who: 526301
 - _id: 574431
   _job: 17703413843
   _time: 2025-09-13 23:40:55.139357608 Z
@@ -55575,29 +54329,6 @@
   when: 2020-07-08 16:36:26.000000000 Z
   where: github
   who: 8086956
-- _id: 574438
-  _job: 17703413843
-  _time: 2025-09-13 23:41:27.162853899 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/actions-checkout-3.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#176 has been 'pull-was-merged'.
-  done: 2025-09-13 23:47:04.088950987 Z
-  failed_builds: 0
-  hoc: 6
-  issue: 176
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:24.562223891 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:53:00.000000000 Z
-  where: github
-  who: 526301
 - _id: 574444
   _job: 17703413843
   _time: 2025-09-13 23:42:00.747688304 Z
@@ -55621,29 +54352,6 @@
   when: 2020-07-09 01:45:08.000000000 Z
   where: github
   who: 8086956
-- _id: 574451
-  _job: 17703413843
-  _time: 2025-09-13 23:42:32.803663643 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/actions-setup-java-3.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#177 has been 'pull-was-merged'.
-  done: 2025-09-13 23:47:06.971020525 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 177
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:25.802463558 Z
-  what: pull-was-merged
-  when: 2022-09-24 03:53:40.000000000 Z
-  where: github
-  who: 526301
 - _id: 574457
   _job: 17703413843
   _time: 2025-09-13 23:43:10.911079705 Z
@@ -55667,29 +54375,6 @@
   when: 2020-07-09 10:17:29.000000000 Z
   where: github
   who: 8086956
-- _id: 574464
-  _job: 17703413843
-  _time: 2025-09-13 23:43:41.583995262 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/ant-contrib-ant-contrib-20020829.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#178 has been 'pull-was-merged'.
-  done: 2025-09-13 23:47:09.932367905 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 178
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-13 23:48:27.007795759 Z
-  what: pull-was-merged
-  when: 2022-11-04 11:46:41.000000000 Z
-  where: github
-  who: 8086956
 - _id: 574470
   _job: 37699
   _time: 2025-09-13 23:46:44.952138803 Z
@@ -55703,41 +54388,9 @@
   repository: 16312153
   tombstone: 2025-09-13 23:48:27.200640829 Z
   what: enhancement-was-accepted
-  when: *516
+  when: 2014-06-13 05:18:31.000000000 Z
   where: github
   who: 526301
-- _id: 574485
-  _job: 37699
-  _time: 2025-09-13 23:47:57.043939051 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #12590813, the user #1667699 submitted the issue #31
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 02:29:08.533543934 Z
-  issue: 31
-  repository: 12590813
-  tombstone: 2025-09-14 05:49:23.196424779 Z
-  what: dud-was-closed
-  when: 2015-06-10 10:48:30.000000000 Z
-  where: github
-  who: 1667699
-- _id: 574486
-  _job: 37699
-  _time: 2025-09-13 23:47:57.147950366 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #12590813, the user #4467948 submitted the issue #37
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 02:29:08.813138165 Z
-  issue: 37
-  repository: 12590813
-  tombstone: 2025-09-14 05:49:23.283834654 Z
-  what: dud-was-closed
-  when: 2015-07-19 18:23:47.000000000 Z
-  where: github
-  who: 4467948
 - _id: 574503
   _job: 17705054235
   _time: 2025-09-14 02:24:57.288715954 Z
@@ -55761,29 +54414,6 @@
   when: 2020-07-10 12:05:18.000000000 Z
   where: github
   who: 8086956
-- _id: 574508
-  _job: 17705054235
-  _time: 2025-09-14 02:25:22.383847137 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-antrun-plugin-3.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#179 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:11.683309282 Z
-  failed_builds: 0
-  hoc: 4
-  issue: 179
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:24.499789997 Z
-  what: pull-was-merged
-  when: 2022-09-24 13:23:16.000000000 Z
-  where: github
-  who: 526301
 - _id: 574513
   _job: 17705054235
   _time: 2025-09-14 02:25:48.208992914 Z
@@ -55807,29 +54437,6 @@
   when: 2020-07-10 17:32:13.000000000 Z
   where: github
   who: 8086956
-- _id: 574517
-  _job: 17705054235
-  _time: 2025-09-14 02:26:06.140977208 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-gpg-plugin-3.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#180 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:13.026101590 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 180
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:25.298182226 Z
-  what: pull-was-merged
-  when: 2022-09-24 13:22:58.000000000 Z
-  where: github
-  who: 526301
 - _id: 574522
   _job: 17705054235
   _time: 2025-09-14 02:26:27.895231313 Z
@@ -55853,29 +54460,6 @@
   when: 2020-07-25 13:01:16.000000000 Z
   where: github
   who: 8086956
-- _id: 574526
-  _job: 17705054235
-  _time: 2025-09-14 02:26:47.011987794 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-jxr-plugin-3.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#181 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:14.373152010 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 181
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:26.095749451 Z
-  what: pull-was-merged
-  when: 2022-09-24 13:22:49.000000000 Z
-  where: github
-  who: 526301
 - _id: 574531
   _job: 17705054235
   _time: 2025-09-14 02:27:08.205030082 Z
@@ -55899,29 +54483,6 @@
   when: 2020-07-25 13:13:59.000000000 Z
   where: github
   who: 8086956
-- _id: 574535
-  _job: 17705054235
-  _time: 2025-09-14 02:27:26.337909738 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-project-info-reports-plugin-3.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#182 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:15.698925483 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 182
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:26.948038358 Z
-  what: pull-was-merged
-  when: 2022-09-27 02:58:06.000000000 Z
-  where: github
-  who: 526301
 - _id: 574540
   _job: 17705054235
   _time: 2025-09-14 02:27:43.273837618 Z
@@ -55943,29 +54504,6 @@
   tombstone: 2025-09-14 05:49:27.389501114 Z
   what: pull-was-merged
   when: 2020-07-25 15:51:00.000000000 Z
-  where: github
-  who: 8086956
-- _id: 574543
-  _job: 17705054235
-  _time: 2025-09-14 02:27:50.144344010 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/major-hibernate-validator
-  comments: 5
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#183 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:16.731180821 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 183
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:27.659579869 Z
-  what: pull-was-merged
-  when: 2022-11-04 19:32:44.000000000 Z
   where: github
   who: 8086956
 - _id: 574548
@@ -55991,29 +54529,6 @@
   when: 2020-07-25 16:37:42.000000000 Z
   where: github
   who: 8086956
-- _id: 574550
-  _job: 17705054235
-  _time: 2025-09-14 02:28:14.619376027 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-ssh-1.x
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#185 has been 'pull-was-merged'.
-  done: 2025-09-14 02:29:17.773551821 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 185
-  repository: 12590813
-  succeeded_builds: 0
-  tombstone: 2025-09-14 05:49:28.284816623 Z
-  what: pull-was-merged
-  when: 2022-09-27 02:57:55.000000000 Z
-  where: github
-  who: 526301
 - _id: 574567
   _job: 37708
   _time: 2025-09-14 02:29:07.744623081 Z
@@ -56028,7 +54543,7 @@
   review_comments: 0
   seconds: 23982
   what: code-was-contributed
-  when: *517
+  when: *516
   where: github
   who: 29139614
 - _id: 574578
@@ -57982,7 +56497,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.107729740 Z
   what: issue-was-opened
-  when: &518 2015-03-30 16:48:31.000000000 Z
+  when: &517 2015-03-30 16:48:31.000000000 Z
   where: github
   who: 1388994
 - _id: 574854
@@ -58030,7 +56545,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.426915518 Z
   what: issue-was-opened
-  when: &519 2015-06-18 16:19:40.000000000 Z
+  when: &518 2015-06-18 16:19:40.000000000 Z
   where: github
   who: 95550
 - _id: 574858
@@ -58042,7 +56557,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.750389032 Z
   what: issue-was-opened
-  when: &520 2015-07-08 11:53:47.000000000 Z
+  when: &519 2015-07-08 11:53:47.000000000 Z
   where: github
   who: 209396
 - _id: 574859
@@ -58054,7 +56569,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.070677214 Z
   what: issue-was-opened
-  when: &521 2015-08-04 12:28:26.000000000 Z
+  when: &520 2015-08-04 12:28:26.000000000 Z
   where: github
   who: 1667699
 - _id: 574860
@@ -58066,7 +56581,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.391710849 Z
   what: issue-was-opened
-  when: &522 2015-08-21 19:34:03.000000000 Z
+  when: &521 2015-08-21 19:34:03.000000000 Z
   where: github
   who: 1054771
 - _id: 574861
@@ -58078,7 +56593,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.708738056 Z
   what: issue-was-opened
-  when: &523 2015-08-28 17:56:22.000000000 Z
+  when: &522 2015-08-28 17:56:22.000000000 Z
   where: github
   who: 1054771
 - _id: 574862
@@ -58090,7 +56605,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.024188402 Z
   what: issue-was-opened
-  when: &524 2015-08-31 16:56:55.000000000 Z
+  when: &523 2015-08-31 16:56:55.000000000 Z
   where: github
   who: 4368287
 - _id: 574863
@@ -58162,7 +56677,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.361734012 Z
   what: issue-was-opened
-  when: &525 2016-05-04 10:31:31.000000000 Z
+  when: &524 2016-05-04 10:31:31.000000000 Z
   where: github
   who: 6305156
 - _id: 574869
@@ -58222,7 +56737,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.681460103 Z
   what: issue-was-opened
-  when: &526 2017-04-25 13:11:50.000000000 Z
+  when: &525 2017-04-25 13:11:50.000000000 Z
   where: github
   who: 1359384
 - _id: 574874
@@ -58234,7 +56749,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.998365073 Z
   what: issue-was-opened
-  when: &527 2017-04-25 14:38:15.000000000 Z
+  when: &526 2017-04-25 14:38:15.000000000 Z
   where: github
   who: 1359384
 - _id: 574875
@@ -58246,7 +56761,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.315100692 Z
   what: issue-was-opened
-  when: &528 2018-01-28 17:03:16.000000000 Z
+  when: &527 2018-01-28 17:03:16.000000000 Z
   where: github
   who: 6305156
 - _id: 574876
@@ -58270,7 +56785,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.633905798 Z
   what: issue-was-opened
-  when: &529 2018-06-13 14:05:03.000000000 Z
+  when: &528 2018-06-13 14:05:03.000000000 Z
   where: github
   who: 10466206
 - _id: 574878
@@ -58294,7 +56809,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.950738214 Z
   what: issue-was-opened
-  when: &530 2019-07-15 02:34:38.000000000 Z
+  when: &529 2019-07-15 02:34:38.000000000 Z
   where: github
   who: 1054771
 - _id: 574880
@@ -58306,7 +56821,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.268284687 Z
   what: issue-was-opened
-  when: &531 2019-11-03 19:31:53.000000000 Z
+  when: &530 2019-11-03 19:31:53.000000000 Z
   where: github
   who: 9504395
 - _id: 574881
@@ -58318,7 +56833,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.585029914 Z
   what: issue-was-opened
-  when: &532 2019-11-30 11:14:18.000000000 Z
+  when: &531 2019-11-30 11:14:18.000000000 Z
   where: github
   who: 1405237
 - _id: 574882
@@ -58330,7 +56845,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.903171353 Z
   what: issue-was-opened
-  when: &533 2021-03-17 17:36:22.000000000 Z
+  when: &532 2021-03-17 17:36:22.000000000 Z
   where: github
   who: 45224442
 - _id: 574883
@@ -59950,7 +58465,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:13.855420492 Z
   what: issue-was-closed
-  when: &534 2015-09-09 08:35:40.000000000 Z
+  when: &533 2015-09-09 08:35:40.000000000 Z
   where: github
   who: 6581896
 - _id: 575059
@@ -60229,30 +58744,6 @@
   when: 2021-04-26 06:56:49.000000000 Z
   where: github
   who: 49783909
-- _id: 575150
-  _job: 17705969552
-  _time: 2025-09-14 03:54:26.311416357 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-parent#186 has been 'pull-was-merged'.
-  done: 2025-09-14 06:58:39.755271593 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 186
-  repository: 12590813
-  review_comments: 0
-  succeeded_builds: 0
-  tombstone: 2025-09-14 08:53:23.548419332 Z
-  what: pull-was-merged
-  when: &581 2022-09-28 12:40:40.000000000 Z
-  where: github
-  who: 8086956
 - _id: 575158
   _job: 17705969552
   _time: 2025-09-14 03:54:57.485583224 Z
@@ -60274,7 +58765,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:24.311045921 Z
   what: pull-was-merged
-  when: &582 2020-08-19 20:00:14.000000000 Z
+  when: &578 2020-08-19 20:00:14.000000000 Z
   where: github
   who: 8086956
 - _id: 575162
@@ -60298,7 +58789,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:24.692004722 Z
   what: pull-was-merged
-  when: &583 2022-09-28 12:33:31.000000000 Z
+  when: &579 2022-09-28 12:33:31.000000000 Z
   where: github
   who: 8086956
 - _id: 575166
@@ -60364,7 +58855,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:25.299487040 Z
   what: pull-was-merged
-  when: &584 2020-08-19 20:11:57.000000000 Z
+  when: &580 2020-08-19 20:11:57.000000000 Z
   where: github
   who: 8086956
 - _id: 575174
@@ -60388,7 +58879,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:25.677994271 Z
   what: pull-was-merged
-  when: &585 2022-09-29 03:16:14.000000000 Z
+  when: &581 2022-09-29 03:16:14.000000000 Z
   where: github
   who: 526301
 - _id: 575178
@@ -60433,7 +58924,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:26.387999538 Z
   what: pull-was-merged
-  when: &586 2020-08-28 14:30:01.000000000 Z
+  when: &582 2020-08-28 14:30:01.000000000 Z
   where: github
   who: 8086956
 - _id: 575186
@@ -60457,7 +58948,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:26.772492803 Z
   what: pull-was-merged
-  when: &587 2022-10-09 18:25:51.000000000 Z
+  when: &583 2022-10-09 18:25:51.000000000 Z
   where: github
   who: 526301
 - _id: 575189
@@ -60502,7 +58993,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:27.347093786 Z
   what: pull-was-merged
-  when: &588 2020-09-03 22:09:50.000000000 Z
+  when: &584 2020-09-03 22:09:50.000000000 Z
   where: github
   who: 8086956
 - _id: 575196
@@ -60526,7 +59017,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:27.673007175 Z
   what: pull-was-merged
-  when: &589 2022-10-21 16:00:23.000000000 Z
+  when: &585 2022-10-21 16:00:23.000000000 Z
   where: github
   who: 526301
 - _id: 575198
@@ -60571,7 +59062,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:28.150640016 Z
   what: pull-was-merged
-  when: &590 2020-11-10 12:20:59.000000000 Z
+  when: &586 2020-11-10 12:20:59.000000000 Z
   where: github
   who: 49783909
 - _id: 575205
@@ -60595,7 +59086,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:28.437933243 Z
   what: pull-was-merged
-  when: &591 2022-11-03 09:55:37.000000000 Z
+  when: &587 2022-11-03 09:55:37.000000000 Z
   where: github
   who: 526301
 - _id: 575207
@@ -60640,7 +59131,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:28.821188421 Z
   what: pull-was-merged
-  when: &592 2020-12-01 16:05:20.000000000 Z
+  when: &588 2020-12-01 16:05:20.000000000 Z
   where: github
   who: 49783909
 - _id: 575213
@@ -60664,7 +59155,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:29.144724829 Z
   what: pull-was-merged
-  when: &593 2022-10-23 16:46:47.000000000 Z
+  when: &589 2022-10-23 16:46:47.000000000 Z
   where: github
   who: 526301
 - _id: 575218
@@ -60688,7 +59179,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:29.620762112 Z
   what: pull-was-merged
-  when: &594 2020-12-01 18:55:28.000000000 Z
+  when: &590 2020-12-01 18:55:28.000000000 Z
   where: github
   who: 49783909
 - _id: 575220
@@ -60712,7 +59203,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:29.809527881 Z
   what: pull-was-merged
-  when: &595 2022-11-03 04:36:16.000000000 Z
+  when: &591 2022-11-03 04:36:16.000000000 Z
   where: github
   who: 8086956
 - _id: 575225
@@ -60736,7 +59227,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:30.318129777 Z
   what: pull-was-merged
-  when: &596 2020-12-01 22:30:09.000000000 Z
+  when: &592 2020-12-01 22:30:09.000000000 Z
   where: github
   who: 8086956
 - _id: 575227
@@ -60760,7 +59251,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:30.508334484 Z
   what: pull-was-merged
-  when: &597 2022-11-03 15:13:50.000000000 Z
+  when: &593 2022-11-03 15:13:50.000000000 Z
   where: github
   who: 526301
 - _id: 575232
@@ -60784,7 +59275,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:30.980040927 Z
   what: pull-was-merged
-  when: &598 2020-12-01 22:38:45.000000000 Z
+  when: &594 2020-12-01 22:38:45.000000000 Z
   where: github
   who: 8086956
 - _id: 575234
@@ -60808,7 +59299,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:31.169530419 Z
   what: pull-was-merged
-  when: &599 2022-11-07 19:33:35.000000000 Z
+  when: &595 2022-11-07 19:33:35.000000000 Z
   where: github
   who: 8086956
 - _id: 575262
@@ -60821,7 +59312,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:13.166900590 Z
   what: label-was-attached
-  when: &541 2015-06-23 21:10:15.000000000 Z
+  when: &540 2015-06-23 21:10:15.000000000 Z
   where: github
   who: 526301
 - _id: 575265
@@ -60834,7 +59325,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:13.943612972 Z
   what: label-was-attached
-  when: &542 2015-05-11 01:53:37.000000000 Z
+  when: &541 2015-05-11 01:53:37.000000000 Z
   where: github
   who: 526301
 - _id: 575268
@@ -60847,7 +59338,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:15.267674077 Z
   what: label-was-attached
-  when: &543 2015-06-23 21:16:57.000000000 Z
+  when: &542 2015-06-23 21:16:57.000000000 Z
   where: github
   who: 526301
 - _id: 575274
@@ -60860,7 +59351,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:16.911624603 Z
   what: label-was-attached
-  when: &544 2015-12-09 13:59:38.000000000 Z
+  when: &543 2015-12-09 13:59:38.000000000 Z
   where: github
   who: 5993843
 - _id: 575277
@@ -60873,7 +59364,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:17.609611115 Z
   what: label-was-attached
-  when: &545 2016-01-26 03:55:05.000000000 Z
+  when: &544 2016-01-26 03:55:05.000000000 Z
   where: github
   who: 526301
 - _id: 575279
@@ -60886,7 +59377,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:18.560308623 Z
   what: label-was-attached
-  when: &546 2016-01-29 21:07:52.000000000 Z
+  when: &545 2016-01-29 21:07:52.000000000 Z
   where: github
   who: 526301
 - _id: 575280
@@ -60899,7 +59390,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:18.911869144 Z
   what: label-was-attached
-  when: &547 2016-04-18 15:06:08.000000000 Z
+  when: &546 2016-04-18 15:06:08.000000000 Z
   where: github
   who: 526301
 - _id: 575282
@@ -60912,7 +59403,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:19.759300521 Z
   what: label-was-attached
-  when: &548 2020-07-08 12:34:27.000000000 Z
+  when: &547 2020-07-08 12:34:27.000000000 Z
   where: github
   who: 49783909
 - _id: 575286
@@ -60925,7 +59416,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:21.655527177 Z
   what: label-was-attached
-  when: &549 2016-06-23 00:21:55.000000000 Z
+  when: &548 2016-06-23 00:21:55.000000000 Z
   where: github
   who: 526301
 - _id: 575288
@@ -60938,7 +59429,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:22.620756344 Z
   what: label-was-attached
-  when: &550 2016-11-22 12:14:27.000000000 Z
+  when: &549 2016-11-22 12:14:27.000000000 Z
   where: github
   who: 526301
 - _id: 575290
@@ -60951,7 +59442,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:23.648359147 Z
   what: label-was-attached
-  when: &551 2016-11-21 20:50:48.000000000 Z
+  when: &550 2016-11-21 20:50:48.000000000 Z
   where: github
   who: 526301
 - _id: 575292
@@ -60964,7 +59455,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:24.254934005 Z
   what: label-was-attached
-  when: &552 2017-01-07 04:20:45.000000000 Z
+  when: &551 2017-01-07 04:20:45.000000000 Z
   where: github
   who: 526301
 - _id: 575299
@@ -60977,7 +59468,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:26.445644089 Z
   what: label-was-attached
-  when: &553 2020-07-09 02:26:44.000000000 Z
+  when: &552 2020-07-09 02:26:44.000000000 Z
   where: github
   who: 49783909
 - _id: 575301
@@ -60990,7 +59481,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:27.053029437 Z
   what: label-was-attached
-  when: &554 2018-12-25 15:05:16.000000000 Z
+  when: &553 2018-12-25 15:05:16.000000000 Z
   where: github
   who: 526301
 - _id: 575305
@@ -61035,7 +59526,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:31.456436497 Z
   what: pull-was-merged
-  when: &600 2020-12-01 22:17:31.000000000 Z
+  when: &596 2020-12-01 22:17:31.000000000 Z
   where: github
   who: 8086956
 - _id: 575308
@@ -61059,7 +59550,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:31.686168320 Z
   what: pull-was-merged
-  when: &601 2022-11-14 20:47:12.000000000 Z
+  when: &597 2022-11-14 20:47:12.000000000 Z
   where: github
   who: 8086956
 - _id: 575309
@@ -61104,7 +59595,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:32.557527201 Z
   what: pull-was-merged
-  when: &602 2020-12-03 22:41:10.000000000 Z
+  when: &598 2020-12-03 22:41:10.000000000 Z
   where: github
   who: 8086956
 - _id: 575320
@@ -61128,7 +59619,7 @@
   succeeded_builds: 0
   tombstone: 2025-09-14 08:53:32.748746066 Z
   what: pull-was-merged
-  when: &603 2022-11-17 22:53:02.000000000 Z
+  when: &599 2022-11-17 22:53:02.000000000 Z
   where: github
   who: 8086956
 - _id: 575321
@@ -65144,7 +63635,7 @@
   issue: 107
   repository: 13717355
   what: issue-was-opened
-  when: &566 2016-01-16 06:38:42.000000000 Z
+  when: &564 2016-01-16 06:38:42.000000000 Z
   where: github
   who: 9972909
 - _id: 575638
@@ -65155,7 +63646,7 @@
   issue: 106
   repository: 13717355
   what: issue-was-opened
-  when: &567 2016-01-10 11:54:57.000000000 Z
+  when: &565 2016-01-10 11:54:57.000000000 Z
   where: github
   who: 1405237
 - _id: 575639
@@ -65166,7 +63657,7 @@
   issue: 102
   repository: 13717355
   what: issue-was-opened
-  when: &568 2015-12-25 07:31:19.000000000 Z
+  when: &566 2015-12-25 07:31:19.000000000 Z
   where: github
   who: 1405237
 - _id: 575640
@@ -65177,7 +63668,7 @@
   issue: 101
   repository: 13717355
   what: issue-was-opened
-  when: &569 2015-12-24 08:13:50.000000000 Z
+  when: &567 2015-12-24 08:13:50.000000000 Z
   where: github
   who: 1405237
 - _id: 575641
@@ -65188,7 +63679,7 @@
   issue: 100
   repository: 13717355
   what: issue-was-opened
-  when: &570 2015-12-23 07:13:42.000000000 Z
+  when: &568 2015-12-23 07:13:42.000000000 Z
   where: github
   who: 1405237
 - _id: 575642
@@ -65243,7 +63734,7 @@
   issue: 66
   repository: 13717355
   what: issue-was-opened
-  when: &571 2015-06-10 10:43:03.000000000 Z
+  when: &569 2015-06-10 10:43:03.000000000 Z
   where: github
   who: 1667699
 - _id: 575647
@@ -66577,7 +65068,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.615627706 Z
   what: dud-was-closed
-  when: *518
+  when: *517
   where: github
   who: 1388994
 - _id: 575850
@@ -66593,7 +65084,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.711082187 Z
   what: dud-was-closed
-  when: *519
+  when: *518
   where: github
   who: 95550
 - _id: 575851
@@ -66609,7 +65100,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.843913671 Z
   what: dud-was-closed
-  when: *520
+  when: *519
   where: github
   who: 209396
 - _id: 575852
@@ -66625,7 +65116,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.939543475 Z
   what: dud-was-closed
-  when: *521
+  when: *520
   where: github
   who: 1667699
 - _id: 575853
@@ -66641,7 +65132,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.035050167 Z
   what: dud-was-closed
-  when: *522
+  when: *521
   where: github
   who: 1054771
 - _id: 575854
@@ -66657,7 +65148,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.131001918 Z
   what: dud-was-closed
-  when: *523
+  when: *522
   where: github
   who: 1054771
 - _id: 575855
@@ -66673,7 +65164,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.226878726 Z
   what: dud-was-closed
-  when: *524
+  when: *523
   where: github
   who: 4368287
 - _id: 575856
@@ -66689,7 +65180,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.322845396 Z
   what: dud-was-closed
-  when: *525
+  when: *524
   where: github
   who: 6305156
 - _id: 575857
@@ -66705,7 +65196,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.418887675 Z
   what: dud-was-closed
-  when: *526
+  when: *525
   where: github
   who: 1359384
 - _id: 575858
@@ -66721,7 +65212,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.515235977 Z
   what: dud-was-closed
-  when: *527
+  when: *526
   where: github
   who: 1359384
 - _id: 575859
@@ -66737,7 +65228,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.612026136 Z
   what: dud-was-closed
-  when: *528
+  when: *527
   where: github
   who: 6305156
 - _id: 575860
@@ -66753,7 +65244,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.707819704 Z
   what: dud-was-closed
-  when: *529
+  when: *528
   where: github
   who: 10466206
 - _id: 575861
@@ -66769,7 +65260,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.803485737 Z
   what: dud-was-closed
-  when: *530
+  when: *529
   where: github
   who: 1054771
 - _id: 575862
@@ -66785,7 +65276,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.898211670 Z
   what: dud-was-closed
-  when: *531
+  when: *530
   where: github
   who: 9504395
 - _id: 575863
@@ -66801,7 +65292,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.993428313 Z
   what: dud-was-closed
-  when: *532
+  when: *531
   where: github
   who: 1405237
 - _id: 575864
@@ -66817,7 +65308,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:48.089134276 Z
   what: dud-was-closed
-  when: *533
+  when: *532
   where: github
   who: 45224442
 - _id: 575878
@@ -66842,7 +65333,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:08.619042034 Z
   what: label-was-attached
-  when: &555 2015-04-23 19:00:00.000000000 Z
+  when: &554 2015-04-23 19:00:00.000000000 Z
   where: github
   who: 526301
 - _id: 575882
@@ -66855,7 +65346,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:08.711457318 Z
   what: label-was-attached
-  when: &535 2015-04-23 19:00:00.000000000 Z
+  when: &534 2015-04-23 19:00:00.000000000 Z
   where: github
   who: 526301
 - _id: 575883
@@ -66868,7 +65359,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:09.226576763 Z
   what: label-was-attached
-  when: &556 2015-06-23 21:06:46.000000000 Z
+  when: &555 2015-06-23 21:06:46.000000000 Z
   where: github
   who: 526301
 - _id: 575884
@@ -66881,7 +65372,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:09.320276128 Z
   what: label-was-attached
-  when: &536 2015-06-23 21:06:46.000000000 Z
+  when: &535 2015-06-23 21:06:46.000000000 Z
   where: github
   who: 526301
 - _id: 575885
@@ -66894,7 +65385,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.016040627 Z
   what: label-was-attached
-  when: &557 2015-06-23 21:07:51.000000000 Z
+  when: &556 2015-06-23 21:07:51.000000000 Z
   where: github
   who: 526301
 - _id: 575886
@@ -66907,7 +65398,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.124097121 Z
   what: label-was-attached
-  when: &537 2015-06-23 21:07:51.000000000 Z
+  when: &536 2015-06-23 21:07:51.000000000 Z
   where: github
   who: 526301
 - _id: 575887
@@ -66920,7 +65411,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.796532806 Z
   what: label-was-attached
-  when: &558 2015-06-23 21:00:56.000000000 Z
+  when: &557 2015-06-23 21:00:56.000000000 Z
   where: github
   who: 526301
 - _id: 575888
@@ -66933,7 +65424,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.890700429 Z
   what: label-was-attached
-  when: &538 2015-06-23 21:00:56.000000000 Z
+  when: &537 2015-06-23 21:00:56.000000000 Z
   where: github
   who: 526301
 - _id: 575889
@@ -66946,7 +65437,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:11.584533988 Z
   what: label-was-attached
-  when: &559 2015-09-13 11:19:33.000000000 Z
+  when: &558 2015-09-13 11:19:33.000000000 Z
   where: github
   who: 526301
 - _id: 575890
@@ -66959,7 +65450,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:11.693225189 Z
   what: label-was-attached
-  when: &539 2015-09-13 11:19:33.000000000 Z
+  when: &538 2015-09-13 11:19:33.000000000 Z
   where: github
   who: 526301
 - _id: 575892
@@ -66972,7 +65463,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:12.191542616 Z
   what: label-was-attached
-  when: &560 2015-09-29 20:25:52.000000000 Z
+  when: &559 2015-09-29 20:25:52.000000000 Z
   where: github
   who: 526301
 - _id: 575893
@@ -66985,7 +65476,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:12.287010817 Z
   what: label-was-attached
-  when: &540 2015-09-29 20:25:52.000000000 Z
+  when: &539 2015-09-29 20:25:52.000000000 Z
   where: github
   who: 526301
 - _id: 575894
@@ -66998,7 +65489,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:28.704206249 Z
   what: label-was-attached
-  when: &561 2016-06-27 21:02:04.000000000 Z
+  when: &560 2016-06-27 21:02:04.000000000 Z
   where: github
   who: 526301
 - _id: 575895
@@ -67011,7 +65502,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:29.123698503 Z
   what: label-was-attached
-  when: &562 2016-06-27 21:11:21.000000000 Z
+  when: &561 2016-06-27 21:11:21.000000000 Z
   where: github
   who: 526301
 - _id: 575896
@@ -67024,7 +65515,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:29.648357363 Z
   what: label-was-attached
-  when: &563 2016-06-27 21:01:25.000000000 Z
+  when: &562 2016-06-27 21:01:25.000000000 Z
   where: github
   who: 526301
 - _id: 575897
@@ -67037,7 +65528,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:30.250774892 Z
   what: label-was-attached
-  when: &564 2020-07-08 16:21:08.000000000 Z
+  when: &563 2020-07-08 16:21:08.000000000 Z
   where: github
   who: 49783909
 - _id: 575898
@@ -67148,7 +65639,7 @@
   issue: 37
   repository: 12587702
   what: issue-was-opened
-  when: &572 2015-01-21 22:51:51.000000000 Z
+  when: &570 2015-01-21 22:51:51.000000000 Z
   where: github
   who: 569536
 - _id: 575926
@@ -69573,7 +68064,7 @@
   issue: 34
   repository: 16312153
   what: issue-was-opened
-  when: &573 2014-06-06 22:19:19.000000000 Z
+  when: &571 2014-06-06 22:19:19.000000000 Z
   where: github
   who: 7406247
 - _id: 576131
@@ -69675,7 +68166,7 @@
   issue: 64
   repository: 16312153
   what: issue-was-opened
-  when: &574 2015-01-18 14:06:08.000000000 Z
+  when: &572 2015-01-18 14:06:08.000000000 Z
   where: github
   who: 2175702
 - _id: 576140
@@ -74048,7 +72539,7 @@
   seconds: 7850246
   tombstone: 2025-09-14 10:51:14.120954901 Z
   what: bug-was-resolved
-  when: *534
+  when: *533
   where: github
   who: 1667699
 - _id: 576461
@@ -74157,32 +72648,6 @@
   repository: 13717355
   what: label-was-attached
   when: 2024-11-07 13:32:04.000000000 Z
-  where: github
-  who: 526301
-- _id: 576476
-  _job: 17708770805
-  _time: 2025-09-14 08:40:47.150472717 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#276.
-  issue: 276
-  label: bug
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:32.777937644 Z
-  what: label-was-attached
-  when: 2024-12-01 12:45:55.000000000 Z
-  where: github
-  who: 526301
-- _id: 576477
-  _job: 17708770805
-  _time: 2025-09-14 08:40:48.882655790 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The 'bug' label was attached by @yegor256 to the issue jcabi/jcabi-xml#277.
-  issue: 277
-  label: bug
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:30.971959461 Z
-  what: label-was-attached
-  when: &565 2024-12-04 14:44:10.000000000 Z
   where: github
   who: 526301
 - _id: 576481
@@ -74724,18 +73189,6 @@
   when: 2015-12-09 15:59:27.000000000 Z
   where: github
   who: 526301
-- _id: 576530
-  _job: 17708770805
-  _time: 2025-09-14 08:41:57.559514632 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-xml#47 has been 'issue-was-closed'.
-  issue: 47
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:28.008759584 Z
-  what: issue-was-closed
-  when: 2015-01-28 08:37:23.000000000 Z
-  where: github
-  who: 569536
 - _id: 576531
   _job: 17708770805
   _time: 2025-09-14 08:41:57.961304824 Z
@@ -74847,18 +73300,6 @@
   when: 2016-11-23 12:26:31.000000000 Z
   where: github
   who: 7228633
-- _id: 576541
-  _job: 17708770805
-  _time: 2025-09-14 08:42:02.990691061 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-xml#54 has been 'issue-was-closed'.
-  issue: 54
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:28.421953097 Z
-  what: issue-was-closed
-  when: 2015-02-24 22:04:19.000000000 Z
-  where: github
-  who: 534657
 - _id: 576542
   _job: 17708770805
   _time: 2025-09-14 08:42:03.393790027 Z
@@ -75001,7 +73442,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:09.575069952 Z
   what: issue-was-closed
-  when: &575 2016-11-21 20:32:17.000000000 Z
+  when: &573 2016-11-21 20:32:17.000000000 Z
   where: github
   who: 1054771
 - _id: 576555
@@ -75035,7 +73476,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.298678144 Z
   what: issue-was-closed
-  when: &576 2016-01-26 04:33:32.000000000 Z
+  when: &574 2016-01-26 04:33:32.000000000 Z
   where: github
   who: 419884
 - _id: 576558
@@ -75080,7 +73521,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:11.148503799 Z
   what: issue-was-closed
-  when: &577 2016-01-16 09:39:06.000000000 Z
+  when: &575 2016-01-16 09:39:06.000000000 Z
   where: github
   who: 419884
 - _id: 576562
@@ -75561,7 +74002,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:29.295013789 Z
   what: issue-was-closed
-  when: &578 2018-01-10 21:22:54.000000000 Z
+  when: &576 2018-01-10 21:22:54.000000000 Z
   where: github
   who: 5598124
 - _id: 576605
@@ -75606,7 +74047,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:29.844397993 Z
   what: issue-was-closed
-  when: &579 2021-06-28 02:46:49.000000000 Z
+  when: &577 2021-06-28 02:46:49.000000000 Z
   where: github
   who: 49783909
 - _id: 576609
@@ -80621,54 +79062,6 @@
   when: 2023-09-13 00:44:00.000000000 Z
   where: github
   who: 8086956
-- _id: 576885
-  _job: 37741
-  _time: 2025-09-14 08:53:48.525134556 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: 'In the repository #13717355, the user #526301 attached the ''#enhancement''
-    label to the issue #31 reported by the user #1917892; this means that a feature
-    request was-accepted as valid, by the project team.'
-  done: 2025-09-14 10:51:06.010965045 Z
-  issue: 31
-  reporter: 1917892
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:29.925877713 Z
-  what: enhancement-was-accepted
-  when: 2014-08-18 04:51:49.000000000 Z
-  where: github
-  who: 526301
-- _id: 576887
-  _job: 37741
-  _time: 2025-09-14 08:53:48.774535627 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: 'In the repository #13717355, the user #526301 attached the ''#enhancement''
-    label to the issue #32 reported by the user #1917892; this means that a feature
-    request was-accepted as valid, by the project team.'
-  done: 2025-09-14 10:51:06.945182509 Z
-  issue: 32
-  reporter: 1917892
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:30.169355867 Z
-  what: enhancement-was-accepted
-  when: 2014-08-21 06:17:06.000000000 Z
-  where: github
-  who: 526301
-- _id: 576888
-  _job: 37741
-  _time: 2025-09-14 08:53:48.879585798 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: 'In the repository #13717355, the user #526301 attached the ''#enhancement''
-    label to the issue #35 reported by the user #105730; this means that a feature
-    request was-accepted as valid, by the project team.'
-  done: 2025-09-14 10:51:07.535601236 Z
-  issue: 35
-  reporter: 105730
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:30.248710661 Z
-  what: enhancement-was-accepted
-  when: 2014-10-27 19:51:16.000000000 Z
-  where: github
-  who: 526301
 - _id: 576890
   _job: 37741
   _time: 2025-09-14 08:53:49.089174812 Z
@@ -80682,7 +79075,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.438791187 Z
   what: enhancement-was-accepted
-  when: *535
+  when: *534
   where: github
   who: 526301
 - _id: 576891
@@ -80698,7 +79091,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.525431842 Z
   what: enhancement-was-accepted
-  when: *536
+  when: *535
   where: github
   who: 526301
 - _id: 576892
@@ -80714,7 +79107,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.612951129 Z
   what: enhancement-was-accepted
-  when: *537
+  when: *536
   where: github
   who: 526301
 - _id: 576893
@@ -80730,7 +79123,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.704847427 Z
   what: enhancement-was-accepted
-  when: *538
+  when: *537
   where: github
   who: 526301
 - _id: 576894
@@ -80746,7 +79139,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.795798627 Z
   what: enhancement-was-accepted
-  when: *539
+  when: *538
   where: github
   who: 526301
 - _id: 576895
@@ -80762,7 +79155,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:30.887049321 Z
   what: enhancement-was-accepted
-  when: *540
+  when: *539
   where: github
   who: 526301
 - _id: 576899
@@ -80967,18 +79360,6 @@
   when: 2024-12-24 17:59:45.000000000 Z
   where: github
   who: 526301
-- _id: 576920
-  _job: 17709334576
-  _time: 2025-09-14 09:32:20.162650888 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-xml#276 has been 'issue-was-closed'.
-  issue: 276
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:32.866917358 Z
-  what: issue-was-closed
-  when: &580 2024-12-01 13:38:16.000000000 Z
-  where: github
-  who: 526301
 - _id: 576926
   _job: 17709334576
   _time: 2025-09-14 09:45:13.676691394 Z
@@ -81105,34 +79486,6 @@
   when: 2023-10-04 05:20:29.000000000 Z
   where: github
   who: 8086956
-- _id: 576958
-  _job: 37746
-  _time: 2025-09-14 09:47:00.807621536 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#31 reported by
-    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
-  issue: 31
-  reporter: 1917892
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:06.425784167 Z
-  what: bug-was-accepted
-  when: 2014-08-18 04:51:51.000000000 Z
-  where: github
-  who: 526301
-- _id: 576959
-  _job: 37746
-  _time: 2025-09-14 09:47:01.119214065 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#32 reported by
-    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
-  issue: 32
-  reporter: 1917892
-  repository: 13717355
-  tombstone: 2025-09-14 10:51:07.388557216 Z
-  what: bug-was-accepted
-  when: 2014-08-21 06:17:05.000000000 Z
-  where: github
-  who: 526301
 - _id: 576960
   _job: 37746
   _time: 2025-09-14 09:47:01.235370401 Z
@@ -81145,7 +79498,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:31.069346525 Z
   what: bug-was-accepted
-  when: *541
+  when: *540
   where: github
   who: 526301
 - _id: 576962
@@ -81160,22 +79513,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:31.254134644 Z
   what: bug-was-accepted
-  when: *542
-  where: github
-  who: 526301
-- _id: 576964
-  _job: 37746
-  _time: 2025-09-14 09:47:02.093369009 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#38 reported by
-    @mentiflectax; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:14.632928258 Z
-  issue: 38
-  reporter: 1143055
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:31.438851769 Z
-  what: bug-was-accepted
-  when: 2015-01-02 13:00:29.000000000 Z
+  when: *541
   where: github
   who: 526301
 - _id: 576965
@@ -81190,22 +79528,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:31.540496849 Z
   what: bug-was-accepted
-  when: *543
-  where: github
-  who: 526301
-- _id: 576968
-  _job: 37746
-  _time: 2025-09-14 09:47:02.853532800 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#49 reported by
-    @apocarteres; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:15.822093879 Z
-  issue: 49
-  reporter: 3305624
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:31.723335909 Z
-  what: bug-was-accepted
-  when: 2015-01-21 17:23:37.000000000 Z
+  when: *542
   where: github
   who: 526301
 - _id: 576970
@@ -81220,7 +79543,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:31.907669040 Z
   what: bug-was-accepted
-  when: *544
+  when: *543
   where: github
   who: 5993843
 - _id: 576972
@@ -81235,24 +79558,9 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:32.102476542 Z
   what: bug-was-accepted
-  when: *545
+  when: *544
   where: github
   who: 526301
-- _id: 576973
-  _job: 37746
-  _time: 2025-09-14 09:47:03.868095383 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@dmarkov attached the '#bug' label to jcabi/jcabi-xml#62 reported by @yegor256;
-    this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:17.756742849 Z
-  issue: 62
-  reporter: 526301
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:32.194856259 Z
-  what: bug-was-accepted
-  when: 2015-03-24 07:06:59.000000000 Z
-  where: github
-  who: 5993843
 - _id: 576974
   _job: 37746
   _time: 2025-09-14 09:47:03.980663971 Z
@@ -81265,7 +79573,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:32.295813385 Z
   what: bug-was-accepted
-  when: *546
+  when: *545
   where: github
   who: 526301
 - _id: 576975
@@ -81280,24 +79588,9 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:32.386422684 Z
   what: bug-was-accepted
-  when: *547
+  when: *546
   where: github
   who: 526301
-- _id: 576976
-  _job: 37746
-  _time: 2025-09-14 09:47:04.309704252 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@dmarkov attached the '#bug' label to jcabi/jcabi-xml#74 reported by @yegor256;
-    this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:19.065865895 Z
-  issue: 74
-  reporter: 526301
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:32.477402886 Z
-  what: bug-was-accepted
-  when: 2015-11-13 08:27:30.000000000 Z
-  where: github
-  who: 5993843
 - _id: 576977
   _job: 37746
   _time: 2025-09-14 09:47:04.438822873 Z
@@ -81310,39 +79603,9 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:32.578931236 Z
   what: bug-was-accepted
-  when: *548
+  when: *547
   where: github
   who: 49783909
-- _id: 576978
-  _job: 37746
-  _time: 2025-09-14 09:47:04.692787186 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#94 reported by
-    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:19.908854399 Z
-  issue: 94
-  reporter: 1917892
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:32.671251617 Z
-  what: bug-was-accepted
-  when: 2015-12-10 10:16:16.000000000 Z
-  where: github
-  who: 526301
-- _id: 576980
-  _job: 37746
-  _time: 2025-09-14 09:47:05.017694228 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#96 reported by
-    @simonjenga; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:20.852981819 Z
-  issue: 96
-  reporter: 1405237
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:32.863388455 Z
-  what: bug-was-accepted
-  when: 2015-12-18 11:33:30.000000000 Z
-  where: github
-  who: 526301
 - _id: 576981
   _job: 37746
   _time: 2025-09-14 09:47:05.149387453 Z
@@ -81355,22 +79618,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:32.953608109 Z
   what: bug-was-accepted
-  when: *549
-  where: github
-  who: 526301
-- _id: 576982
-  _job: 37746
-  _time: 2025-09-14 09:47:05.333477191 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#98 reported by
-    @simonjenga; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:21.809044275 Z
-  issue: 98
-  reporter: 1405237
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.097510902 Z
-  what: bug-was-accepted
-  when: 2015-12-21 08:40:06.000000000 Z
+  when: *548
   where: github
   who: 526301
 - _id: 576983
@@ -81385,22 +79633,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:33.189731735 Z
   what: bug-was-accepted
-  when: *550
-  where: github
-  who: 526301
-- _id: 576984
-  _job: 37746
-  _time: 2025-09-14 09:47:05.578760525 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#99 reported by
-    @simonjenga; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:22.759846508 Z
-  issue: 99
-  reporter: 1405237
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.282354590 Z
-  what: bug-was-accepted
-  when: 2015-12-23 06:42:24.000000000 Z
+  when: *549
   where: github
   who: 526301
 - _id: 576985
@@ -81415,22 +79648,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:33.374996894 Z
   what: bug-was-accepted
-  when: *551
-  where: github
-  who: 526301
-- _id: 576986
-  _job: 37746
-  _time: 2025-09-14 09:47:05.826387453 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#103 reported by
-    @simonjenga; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:23.805724170 Z
-  issue: 103
-  reporter: 1405237
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.466797765 Z
-  what: bug-was-accepted
-  when: 2016-01-06 11:31:17.000000000 Z
+  when: *550
   where: github
   who: 526301
 - _id: 576987
@@ -81445,82 +79663,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:33.558851507 Z
   what: bug-was-accepted
-  when: *552
-  where: github
-  who: 526301
-- _id: 576989
-  _job: 37746
-  _time: 2025-09-14 09:47:06.412318320 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#110 reported by
-    @mkordas; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:24.678973429 Z
-  issue: 110
-  reporter: 5467276
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.743927218 Z
-  what: bug-was-accepted
-  when: 2016-01-29 22:15:16.000000000 Z
-  where: github
-  who: 526301
-- _id: 576990
-  _job: 37746
-  _time: 2025-09-14 09:47:06.608166644 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#119 reported by
-    @amihaiemil; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:25.037451423 Z
-  issue: 119
-  reporter: 6305156
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.835474389 Z
-  what: bug-was-accepted
-  when: 2016-04-18 14:50:30.000000000 Z
-  where: github
-  who: 526301
-- _id: 576991
-  _job: 37746
-  _time: 2025-09-14 09:47:06.851308493 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#120 reported by
-    @amihaiemil; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:25.359085225 Z
-  issue: 120
-  reporter: 6305156
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:33.926667291 Z
-  what: bug-was-accepted
-  when: 2016-04-04 19:17:11.000000000 Z
-  where: github
-  who: 526301
-- _id: 576992
-  _job: 37746
-  _time: 2025-09-14 09:47:06.986642722 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#124 reported by
-    @mstarodubtsev; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:25.635588282 Z
-  issue: 124
-  reporter: 14348888
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:34.017728362 Z
-  what: bug-was-accepted
-  when: 2016-11-21 20:50:09.000000000 Z
-  where: github
-  who: 526301
-- _id: 576993
-  _job: 37746
-  _time: 2025-09-14 09:47:07.194847556 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#125 reported by
-    @senleft; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:25.902609303 Z
-  issue: 125
-  reporter: 812727
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:34.107878762 Z
-  what: bug-was-accepted
-  when: 2016-11-21 15:19:09.000000000 Z
+  when: *551
   where: github
   who: 526301
 - _id: 576994
@@ -81535,7 +79678,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:34.201953706 Z
   what: bug-was-accepted
-  when: *553
+  when: *552
   where: github
   who: 49783909
 - _id: 576996
@@ -81550,52 +79693,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:34.396526642 Z
   what: bug-was-accepted
-  when: *554
-  where: github
-  who: 526301
-- _id: 576997
-  _job: 37746
-  _time: 2025-09-14 09:47:07.907940346 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#185 reported by
-    @mximp; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:27.191241992 Z
-  issue: 185
-  reporter: 40247101
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:34.486269782 Z
-  what: bug-was-accepted
-  when: 2022-10-18 16:34:37.000000000 Z
-  where: github
-  who: 526301
-- _id: 576998
-  _job: 37746
-  _time: 2025-09-14 09:47:08.107980124 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#47 reported by
-    @maurezen; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:27.784055230 Z
-  issue: 47
-  reporter: 569536
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:34.576882022 Z
-  what: bug-was-accepted
-  when: 2015-01-19 22:02:34.000000000 Z
-  where: github
-  who: 526301
-- _id: 576999
-  _job: 37746
-  _time: 2025-09-14 09:47:08.236062229 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#54 reported by
-    @lightoze; this means that a bug was accepted as valid, by the project team."
-  done: 2025-09-14 10:51:28.163771218 Z
-  issue: 54
-  reporter: 534657
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:34.667950854 Z
-  what: bug-was-accepted
-  when: 2015-02-13 18:32:37.000000000 Z
+  when: *553
   where: github
   who: 526301
 - _id: 577000
@@ -81609,7 +79707,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:08.905698444 Z
   what: bug-was-accepted
-  when: *555
+  when: *554
   where: github
   who: 526301
 - _id: 577001
@@ -81623,7 +79721,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:09.652272893 Z
   what: bug-was-accepted
-  when: *556
+  when: *555
   where: github
   who: 526301
 - _id: 577002
@@ -81637,7 +79735,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:10.384508710 Z
   what: bug-was-accepted
-  when: *557
+  when: *556
   where: github
   who: 526301
 - _id: 577003
@@ -81651,7 +79749,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:11.224667331 Z
   what: bug-was-accepted
-  when: *558
+  when: *557
   where: github
   who: 526301
 - _id: 577004
@@ -81665,7 +79763,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:11.868516630 Z
   what: bug-was-accepted
-  when: *559
+  when: *558
   where: github
   who: 526301
 - _id: 577005
@@ -81679,7 +79777,7 @@
   repository: 16312153
   tombstone: 2025-09-14 10:51:12.456236687 Z
   what: bug-was-accepted
-  when: *560
+  when: *559
   where: github
   who: 526301
 - _id: 577006
@@ -81694,7 +79792,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:34.761849449 Z
   what: bug-was-accepted
-  when: *561
+  when: *560
   where: github
   who: 526301
 - _id: 577007
@@ -81709,7 +79807,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:34.853055410 Z
   what: bug-was-accepted
-  when: *562
+  when: *561
   where: github
   who: 526301
 - _id: 577008
@@ -81724,7 +79822,7 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:34.953750073 Z
   what: bug-was-accepted
-  when: *563
+  when: *562
   where: github
   who: 526301
 - _id: 577009
@@ -81739,41 +79837,9 @@
   repository: 16312153
   tombstone: 2025-09-14 11:46:35.043790768 Z
   what: bug-was-accepted
-  when: *564
+  when: *563
   where: github
   who: 49783909
-- _id: 577010
-  _job: 37746
-  _time: 2025-09-14 09:47:10.135895976 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#205 reported by
-    @volodya-lombrozo; this means that a bug was accepted as valid, by the project
-    team."
-  done: 2025-09-14 10:51:30.482806872 Z
-  issue: 205
-  reporter: 51804353
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:35.137591183 Z
-  what: bug-was-accepted
-  when: 2023-06-02 09:35:56.000000000 Z
-  where: github
-  who: 526301
-- _id: 577011
-  _job: 37746
-  _time: 2025-09-14 09:47:10.319186140 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#277 reported by
-    @volodya-lombrozo; this means that a bug was accepted as valid, by the project
-    team."
-  done: 2025-09-14 10:51:30.756735151 Z
-  issue: 277
-  reporter: 51804353
-  repository: 13717355
-  tombstone: 2025-09-14 11:46:35.235661303 Z
-  what: bug-was-accepted
-  when: *565
-  where: github
-  who: 526301
 - _id: 577012
   _job: 37746
   _time: 2025-09-14 09:47:11.586707619 Z
@@ -81785,7 +79851,7 @@
   issue: 107
   repository: 13717355
   what: dud-was-closed
-  when: *566
+  when: *564
   where: github
   who: 9972909
 - _id: 577013
@@ -81799,7 +79865,7 @@
   issue: 106
   repository: 13717355
   what: dud-was-closed
-  when: *567
+  when: *565
   where: github
   who: 1405237
 - _id: 577014
@@ -81813,7 +79879,7 @@
   issue: 102
   repository: 13717355
   what: dud-was-closed
-  when: *568
+  when: *566
   where: github
   who: 1405237
 - _id: 577015
@@ -81827,7 +79893,7 @@
   issue: 101
   repository: 13717355
   what: dud-was-closed
-  when: *569
+  when: *567
   where: github
   who: 1405237
 - _id: 577016
@@ -81841,7 +79907,7 @@
   issue: 100
   repository: 13717355
   what: dud-was-closed
-  when: *570
+  when: *568
   where: github
   who: 1405237
 - _id: 577017
@@ -81855,7 +79921,7 @@
   issue: 66
   repository: 13717355
   what: dud-was-closed
-  when: *571
+  when: *569
   where: github
   who: 1667699
 - _id: 577018
@@ -81869,7 +79935,7 @@
   issue: 37
   repository: 12587702
   what: dud-was-closed
-  when: *572
+  when: *570
   where: github
   who: 569536
 - _id: 577019
@@ -81883,7 +79949,7 @@
   issue: 34
   repository: 16312153
   what: dud-was-closed
-  when: *573
+  when: *571
   where: github
   who: 7406247
 - _id: 577020
@@ -81897,7 +79963,7 @@
   issue: 64
   repository: 16312153
   what: dud-was-closed
-  when: *574
+  when: *572
   where: github
   who: 2175702
 - _id: 577024
@@ -81915,7 +79981,7 @@
   seconds: 9119140
   tombstone: 2025-09-14 10:51:09.740792372 Z
   what: bug-was-resolved
-  when: *575
+  when: *573
   where: github
   who: 6305156
 - _id: 577025
@@ -81933,7 +79999,7 @@
   seconds: 680884
   tombstone: 2025-09-14 10:51:10.471869426 Z
   what: bug-was-resolved
-  when: *576
+  when: *574
   where: github
   who: 1331856
 - _id: 577026
@@ -81951,7 +80017,7 @@
   seconds: 857224
   tombstone: 2025-09-14 10:51:11.311913404 Z
   what: bug-was-resolved
-  when: *577
+  when: *575
   where: github
   who: 6010247
 - _id: 577027
@@ -81969,7 +80035,7 @@
   seconds: 48508907
   tombstone: 2025-09-14 10:51:29.383691523 Z
   what: bug-was-resolved
-  when: *578
+  when: *576
   where: github
   who: 6041352
 - _id: 577028
@@ -81987,28 +80053,9 @@
   seconds: 157737942
   tombstone: 2025-09-14 10:51:29.930343172 Z
   what: bug-was-resolved
-  when: *579
+  when: *577
   where: github
   who: 6041352
-- _id: 577029
-  _job: 37746
-  _time: 2025-09-14 09:48:13.953369876 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: The bug/feature in the issue jcabi/jcabi-xml#276 opened @yegor256 by was
-    resolved, after 52m20s of waiting, because it was closed by @yegor256 and earlier
-    it was assigned to @yegor256 and the label '#bug' was attached.
-  done: 2025-09-14 10:51:32.560667601 Z
-  issue: 276
-  label: bug
-  opener: 526301
-  repository: 13717355
-  seconds: 3141
-  tombstone: 2025-09-14 11:46:35.322668748 Z
-  what: bug-was-resolved
-  when: *580
-  where: github
-  who: 526301
 - _id: 577034
   _job: 17709974599
   _time: 2025-09-14 10:46:24.822599074 Z
@@ -82587,7 +80634,7 @@
   seconds: 4381
   tombstone: 2025-09-14 11:46:35.414810428 Z
   what: code-was-contributed
-  when: *581
+  when: 2022-09-28 12:40:40.000000000 Z
   where: github
   who: 29139614
 - _id: 577086
@@ -82606,7 +80653,7 @@
   seconds: 758
   tombstone: 2025-09-14 11:46:35.513272319 Z
   what: code-was-contributed
-  when: *582
+  when: *578
   where: github
   who: 49783909
 - _id: 577087
@@ -82625,7 +80672,7 @@
   seconds: 3946
   tombstone: 2025-09-14 11:46:35.600274833 Z
   what: code-was-contributed
-  when: *583
+  when: *579
   where: github
   who: 29139614
 - _id: 577088
@@ -82644,7 +80691,7 @@
   seconds: 558
   tombstone: 2025-09-14 11:46:35.693423991 Z
   what: code-was-contributed
-  when: *584
+  when: *580
   where: github
   who: 49783909
 - _id: 577089
@@ -82663,7 +80710,7 @@
   seconds: 24556
   tombstone: 2025-09-14 11:46:35.792625582 Z
   what: code-was-contributed
-  when: *585
+  when: *581
   where: github
   who: 29139614
 - _id: 577090
@@ -82682,7 +80729,7 @@
   seconds: 441264
   tombstone: 2025-09-14 11:46:35.884728656 Z
   what: code-was-contributed
-  when: *586
+  when: *582
   where: github
   who: 49783909
 - _id: 577091
@@ -82701,7 +80748,7 @@
   seconds: 1963
   tombstone: 2025-09-14 11:46:35.983240307 Z
   what: code-was-contributed
-  when: *587
+  when: *583
   where: github
   who: 29139614
 - _id: 577092
@@ -82720,7 +80767,7 @@
   seconds: 92074
   tombstone: 2025-09-14 11:46:36.120931332 Z
   what: code-was-contributed
-  when: *588
+  when: *584
   where: github
   who: 49783909
 - _id: 577093
@@ -82739,7 +80786,7 @@
   seconds: 44508
   tombstone: 2025-09-14 11:46:36.202337907 Z
   what: code-was-contributed
-  when: *589
+  when: *585
   where: github
   who: 29139614
 - _id: 577094
@@ -82758,7 +80805,7 @@
   seconds: 7261
   tombstone: 2025-09-14 11:46:36.298498047 Z
   what: code-was-contributed
-  when: *590
+  when: *586
   where: github
   who: 49783909
 - _id: 577095
@@ -82777,7 +80824,7 @@
   seconds: 1091749
   tombstone: 2025-09-14 11:46:36.390980400 Z
   what: code-was-contributed
-  when: *591
+  when: *587
   where: github
   who: 29139614
 - _id: 577096
@@ -82796,7 +80843,7 @@
   seconds: 15
   tombstone: 2025-09-14 11:46:36.482748080 Z
   what: code-was-contributed
-  when: *592
+  when: *588
   where: github
   who: 49783909
 - _id: 577097
@@ -82815,7 +80862,7 @@
   seconds: 190
   tombstone: 2025-09-14 11:46:36.584123240 Z
   what: code-was-contributed
-  when: *593
+  when: *589
   where: github
   who: 29139614
 - _id: 577098
@@ -82834,7 +80881,7 @@
   seconds: 9830
   tombstone: 2025-09-14 11:46:36.672492319 Z
   what: code-was-contributed
-  when: *594
+  when: *590
   where: github
   who: 49783909
 - _id: 577099
@@ -82853,7 +80900,7 @@
   seconds: 23479
   tombstone: 2025-09-14 11:46:36.760012684 Z
   what: code-was-contributed
-  when: *595
+  when: *591
   where: github
   who: 29139614
 - _id: 577100
@@ -82872,7 +80919,7 @@
   seconds: 10368
   tombstone: 2025-09-14 11:46:36.849556239 Z
   what: code-was-contributed
-  when: *596
+  when: *592
   where: github
   who: 27856297
 - _id: 577101
@@ -82891,7 +80938,7 @@
   seconds: 10064
   tombstone: 2025-09-14 11:46:36.940785545 Z
   what: code-was-contributed
-  when: *597
+  when: *593
   where: github
   who: 29139614
 - _id: 577102
@@ -82910,7 +80957,7 @@
   seconds: 10827
   tombstone: 2025-09-14 11:46:37.033152565 Z
   what: code-was-contributed
-  when: *598
+  when: *594
   where: github
   who: 27856297
 - _id: 577103
@@ -82929,7 +80976,7 @@
   seconds: 2969
   tombstone: 2025-09-14 11:46:37.124035980 Z
   what: code-was-contributed
-  when: *599
+  when: *595
   where: github
   who: 29139614
 - _id: 577104
@@ -82948,7 +80995,7 @@
   seconds: 9530
   tombstone: 2025-09-14 11:46:37.214216974 Z
   what: code-was-contributed
-  when: *600
+  when: *596
   where: github
   who: 27856297
 - _id: 577105
@@ -82967,7 +81014,7 @@
   seconds: 2482
   tombstone: 2025-09-14 11:46:37.305447110 Z
   what: code-was-contributed
-  when: *601
+  when: *597
   where: github
   who: 29139614
 - _id: 577106
@@ -82986,7 +81033,7 @@
   seconds: 849
   tombstone: 2025-09-14 11:46:37.399565372 Z
   what: code-was-contributed
-  when: *602
+  when: *598
   where: github
   who: 49783909
 - _id: 577107
@@ -83005,7 +81052,7 @@
   seconds: 3946
   tombstone: 2025-09-14 11:46:37.490881546 Z
   what: code-was-contributed
-  when: *603
+  when: *599
   where: github
   who: 29139614
 - _id: 577117
@@ -87410,67 +85457,6 @@
   when: 2022-09-26 13:01:23.000000000 Z
   where: github
   who: 29139614
-- _id: 577540
-  _job: 37760
-  _time: 2025-09-14 11:47:29.989137090 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-160
-  - 164-165
-  - 167-177
-  - 179-193
-  - 195-201
-  - 203-221
-  - 224-249
-  - '252'
-  - '257'
-  - 259-269
-  - 271-319
-  - 321-346
-  - 348-490
-  - 492-507
-  - 509-523
-  - 525-538
-  - '540'
-  - 543-549
-  - '569'
-  repository: 16312153
-  what: tombstone
-  where: github
-- _id: 577541
-  _job: 37760
-  _time: 2025-09-14 11:47:31.709548564 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-80
-  - '82'
-  - 84-116
-  - 118-145
-  - 147-190
-  - 192-486
-  - 488-572
-  repository: 12590813
-  what: tombstone
-  where: github
-- _id: 577542
-  _job: 37760
-  _time: 2025-09-14 11:47:33.422000952 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-104
-  - 106-127
-  - 129-133
-  - 135-142
-  - 144-147
-  - 149-176
-  - 178-223
-  - 225-239
-  - 241-247
-  - 250-286
-  - '298'
-  repository: 13717355
-  what: tombstone
-  where: github
 - _id: 577543
   _job: 37760
   _time: 2025-09-14 11:47:35.107922014 Z
@@ -87588,16 +85574,6 @@
   min_issue_was_found: 80
   min_pull_was_found: 76
   repository: 12584841
-  what: iterate
-  where: github
-- _id: 577574
-  _job: 17711431609
-  _time: 2025-09-14 12:55:46.792990723 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  events_were_scanned: 54660606039
-  min_issue_was_found: 0
-  min_pull_was_found: 375
-  repository: 4174608
   what: iterate
   where: github
 - _id: 577583
@@ -91708,21 +89684,6 @@
   when: 2024-09-25 12:10:32.000000000 Z
   where: github
   who: 8086956
-- _id: 577829
-  _job: 17711431609
-  _time: 2025-09-14 13:08:06.044218733 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 54360655730
-  issues_were_scanned: 0
-  labels_were_scanned: 0
-  merges_were_scanned: 326
-  min_issue_was_found: 84
-  min_pull_was_found: 129
-  repository: 12590813
-  types_were_scanned: 0
-  what: iterate
-  where: github
 - _id: 577830
   _job: 17711431609
   _time: 2025-09-14 13:08:06.174369905 Z
@@ -91755,20 +89716,6 @@
   merges_were_scanned: 0
   min_pull_was_found: 289
   repository: 12947626
-  what: iterate
-  where: github
-- _id: 577833
-  _job: 17711431609
-  _time: 2025-09-14 13:08:06.566623262 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 54362222606
-  labels_were_scanned: 0
-  merges_were_scanned: 284
-  min_issue_was_found: 45
-  min_pull_was_found: 19
-  repository: 12587702
-  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 577834
@@ -91823,18 +89770,6 @@
   min_issue_was_found: 0
   min_pull_was_found: 101
   repository: 19194304
-  what: iterate
-  where: github
-- _id: 577839
-  _job: 17711431609
-  _time: 2025-09-14 13:08:07.361487438 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  events_were_scanned: 53329161857
-  merges_were_scanned: 0
-  min_issue_was_found: 70
-  min_pull_was_found: 135
-  repository: 19194296
-  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 577840
@@ -91911,21 +89846,6 @@
   repository: 12590126
   what: iterate
   where: github
-- _id: 577847
-  _job: 17711431609
-  _time: 2025-09-14 13:08:08.434383084 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 53449773369
-  issues_were_scanned: 0
-  labels_were_scanned: 252
-  merges_were_scanned: 404
-  min_issue_was_found: 74
-  min_pull_was_found: 556
-  repository: 16312153
-  types_were_scanned: 571
-  what: iterate
-  where: github
 - _id: 577848
   _job: 17711431609
   _time: 2025-09-14 13:08:08.569752876 Z
@@ -91947,21 +89867,6 @@
   merges_were_scanned: 0
   min_pull_was_found: 413
   repository: 12589687
-  what: iterate
-  where: github
-- _id: 577850
-  _job: 17711431609
-  _time: 2025-09-14 13:08:08.839143402 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 54362221664
-  issues_were_scanned: 0
-  labels_were_scanned: 139
-  merges_were_scanned: 90
-  min_issue_was_found: 49
-  min_pull_was_found: 357
-  repository: 13717355
-  types_were_scanned: 164
   what: iterate
   where: github
 - _id: 577851
@@ -91997,3 +89902,2651 @@
   repository: 12591382
   what: iterate
   where: github
+- _id: 577854
+  _job: 37765
+  _time: 2025-09-14 13:09:53.690885385 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-160
+  - 164-165
+  - 167-177
+  - 179-193
+  - 195-201
+  - 203-221
+  - 224-249
+  - '252'
+  - '257'
+  - 259-269
+  - 271-319
+  - 321-346
+  - 348-490
+  - 492-507
+  - 509-523
+  - 525-538
+  - '540'
+  - 543-549
+  - '569'
+  repository: 16312153
+  what: tombstone
+  where: github
+- _id: 577855
+  _job: 37765
+  _time: 2025-09-14 13:09:55.392909907 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-80
+  - '82'
+  - 84-116
+  - 118-145
+  - 147-190
+  - 192-486
+  - 488-572
+  repository: 12590813
+  what: tombstone
+  where: github
+- _id: 577856
+  _job: 37765
+  _time: 2025-09-14 13:09:57.081902088 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-104
+  - 106-127
+  - 129-133
+  - 135-142
+  - 144-147
+  - 149-176
+  - 178-223
+  - 225-239
+  - 241-247
+  - 250-286
+  - '298'
+  repository: 13717355
+  what: tombstone
+  where: github
+- _id: 577857
+  _job: 17711900323
+  _time: 2025-09-14 13:32:32.085724671 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  events_were_scanned: 54662474378
+  min_issue_was_found: 0
+  min_pull_was_found: 375
+  repository: 4174608
+  what: iterate
+  where: github
+- _id: 577858
+  _job: 17711900323
+  _time: 2025-09-14 13:32:32.204196499 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  events_were_scanned: 54660378870
+  merges_were_scanned: 0
+  min_issue_was_found: 70
+  min_pull_was_found: 135
+  repository: 19194296
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 577859
+  _job: 17711900323
+  _time: 2025-09-14 13:32:34.322864091 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/major-mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#147 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 147
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-01-14 11:31:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577860
+  _job: 17711900323
+  _time: 2025-09-14 13:32:41.524045168 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/major-javahamcrest-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#276 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 276
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-08-18 02:17:12.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577861
+  _job: 17711900323
+  _time: 2025-09-14 13:32:50.097186212 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#327 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 327
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-07-31 23:42:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577862
+  _job: 17711900323
+  _time: 2025-09-14 13:32:54.663129602 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#285 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 285
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-26 20:12:07.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577863
+  _job: 17711900323
+  _time: 2025-09-14 13:33:01.838713195 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-w3c-1.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-skin#50 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 50
+  repository: 12591347
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2022-09-27 03:50:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577864
+  _job: 17711900323
+  _time: 2025-09-14 13:33:05.407530453 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-simpledb#306 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 306
+  repository: 13624455
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-27 00:14:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577865
+  _job: 17711900323
+  _time: 2025-09-14 13:33:12.932151752 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#408 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 408
+  repository: 12589687
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-24 02:39:54.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577866
+  _job: 17711900323
+  _time: 2025-09-14 13:33:20.583992311 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-xml-0.x
+  comments: 8
+  comments_appreciated: 2
+  comments_by_author: 0
+  comments_by_reviewers: 8
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#63 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 63
+  repository: 19194296
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-07 16:00:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577867
+  _job: 17711900323
+  _time: 2025-09-14 13:33:24.565693475 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.aspectj-aspectjtools-1.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#167 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 167
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-04 08:43:46.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577868
+  _job: 17711900323
+  _time: 2025-09-14 13:33:27.717352858 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#327 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 327
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-11 00:44:10.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577869
+  _job: 17711900323
+  _time: 2025-09-14 13:33:31.643505873 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#41 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 41
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-03 10:40:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577870
+  _job: 17711900323
+  _time: 2025-09-14 13:33:34.380985345 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: master
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#107 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 107
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-24 12:24:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 577871
+  _job: 17711900323
+  _time: 2025-09-14 13:33:39.125544012 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-setup-java-4.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#33 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 33
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-29 20:08:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577872
+  _job: 17711900323
+  _time: 2025-09-14 13:33:42.143752773 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.owasp-dependency-check-maven-8.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#406 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 406
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577873
+  _job: 17711900323
+  _time: 2025-09-14 13:33:45.734168801 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1764 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1764
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-19 00:19:07.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577874
+  _job: 17711900323
+  _time: 2025-09-14 13:33:54.770100054 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: patch-13
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#91 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 44
+  issue: 91
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 19:37:46.000000000 Z
+  where: github
+  who: 15944964
+- _id: 577875
+  _job: 17711900323
+  _time: 2025-09-14 13:33:56.423225075 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#148 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 148
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-01-29 15:34:37.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577876
+  _job: 17711900323
+  _time: 2025-09-14 13:33:59.611255965 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#277 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 277
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-08-22 13:17:48.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577877
+  _job: 17711900323
+  _time: 2025-09-14 13:34:08.328922903 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-github-1.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#328 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 328
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-03 11:39:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577878
+  _job: 17711900323
+  _time: 2025-09-14 13:34:13.877235822 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/testcontainers-java-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#286 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 286
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-10-01 01:29:13.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577879
+  _job: 17711900323
+  _time: 2025-09-14 13:34:22.129718882 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-simpledb#307 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 307
+  repository: 13624455
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-15 23:53:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577880
+  _job: 17711900323
+  _time: 2025-09-14 13:34:30.020717307 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#409 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 409
+  repository: 12589687
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-26 22:15:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577881
+  _job: 17711900323
+  _time: 2025-09-14 13:34:38.734217194 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/net.sf.saxon-saxon-he-12.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#66 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 66
+  repository: 19194296
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-05 02:54:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 577882
+  _job: 17711900323
+  _time: 2025-09-14 13:34:40.975563139 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-4.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#168 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 168
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-04 14:29:15.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577883
+  _job: 17711900323
+  _time: 2025-09-14 13:34:44.002351458 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#328 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 328
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-11 17:36:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577884
+  _job: 17711900323
+  _time: 2025-09-14 13:34:47.950320651 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-4.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#43 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 43
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-04 13:55:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577885
+  _job: 17711900323
+  _time: 2025-09-14 13:34:51.098032818 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: qulice-maven-plugin-0.23.0
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#108 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 43
+  issue: 108
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 15:03:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 577886
+  _job: 17711900323
+  _time: 2025-09-14 13:34:55.582931441 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-cache-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#34 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 34
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2024-01-17 18:34:02.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577887
+  _job: 17711900323
+  _time: 2025-09-14 13:34:58.098460608 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#407 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 407
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577888
+  _job: 17711900323
+  _time: 2025-09-14 13:35:01.864948615 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1772 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1772
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-23 23:13:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577889
+  _job: 17711900323
+  _time: 2025-09-14 13:35:12.052610297 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: patch-14
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#92 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 44
+  issue: 92
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-11-25 19:52:00.000000000 Z
+  where: github
+  who: 15944964
+- _id: 577890
+  _job: 17711900323
+  _time: 2025-09-14 13:35:13.854907222 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#149 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 149
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-01-30 23:33:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577891
+  _job: 17711900323
+  _time: 2025-09-14 13:35:16.426445915 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#278 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 278
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-18 23:25:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577892
+  _job: 17711900323
+  _time: 2025-09-14 13:35:24.569527153 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-github-1.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#329 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 329
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-06 14:38:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577893
+  _job: 17711900323
+  _time: 2025-09-14 13:35:28.983098310 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/junit5-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#287 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 10
+  issue: 287
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-10-04 16:23:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577894
+  _job: 17711900323
+  _time: 2025-09-14 13:35:37.220161228 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#410 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 410
+  repository: 12589687
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-15 02:33:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577895
+  _job: 17711900323
+  _time: 2025-09-14 13:35:44.782328572 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.slf4j-slf4j-log4j12-2.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#74 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 74
+  repository: 19194296
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-03 19:32:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577896
+  _job: 17711900323
+  _time: 2025-09-14 13:35:48.213031609 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/codecov-codecov-action-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#169 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 169
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-14 17:01:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577897
+  _job: 17711900323
+  _time: 2025-09-14 13:35:50.578382872 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#329 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 329
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-14 00:44:49.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577898
+  _job: 17711900323
+  _time: 2025-09-14 13:35:53.584374227 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/codecov-codecov-action-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#44 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 44
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-14 20:37:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577899
+  _job: 17711900323
+  _time: 2025-09-14 13:35:55.896721712 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#109 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 109
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 16:06:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577900
+  _job: 17711900323
+  _time: 2025-09-14 13:36:03.163262014 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#35 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 35
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2024-02-23 11:42:25.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577901
+  _job: 17711900323
+  _time: 2025-09-14 13:36:05.819935055 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#408 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 408
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577902
+  _job: 17711900323
+  _time: 2025-09-14 13:36:09.344872502 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1780 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 1780
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-26 20:16:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577903
+  _job: 17711900323
+  _time: 2025-09-14 13:36:17.651688304 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: patch-15
+  comments: 12
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 11
+  comments_resolved: 0
+  comments_to_code: 3
+  details: Apparently, jcabi/jcabi-xml#93 has been 'pull-was-closed'.
+  failed_builds: 0
+  hoc: 46
+  issue: 93
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-closed
+  when: 2015-12-21 09:52:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 577904
+  _job: 17711900323
+  _time: 2025-09-14 13:36:22.330472993 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#150 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 150
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-09 21:37:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577905
+  _job: 17711900323
+  _time: 2025-09-14 13:36:25.125628273 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.codehaus.plexus-plexus-utils-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#279 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 279
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-24 08:14:59.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577906
+  _job: 17711900323
+  _time: 2025-09-14 13:36:33.095191643 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-matchers-1.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#330 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 330
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-07 20:41:18.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577907
+  _job: 17711900323
+  _time: 2025-09-14 13:36:36.299619687 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/junit5-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#288 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 10
+  issue: 288
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-10-21 17:03:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577908
+  _job: 17711900323
+  _time: 2025-09-14 13:36:44.128551601 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#411 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 411
+  repository: 12589687
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-15 21:04:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577909
+  _job: 17711900323
+  _time: 2025-09-14 13:36:51.804800143 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-4.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#75 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 75
+  repository: 19194296
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-04 13:51:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577910
+  _job: 17711900323
+  _time: 2025-09-14 13:36:54.417293915 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#170 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 170
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-20 04:44:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577911
+  _job: 17711900323
+  _time: 2025-09-14 13:36:57.097215310 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#330 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 330
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-14 23:43:54.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577912
+  _job: 17711900323
+  _time: 2025-09-14 13:37:00.070254293 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#45 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 45
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-20 04:42:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577913
+  _job: 17711900323
+  _time: 2025-09-14 13:37:02.717234659 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/log4j2-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#110 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 110
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 17:07:30.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577914
+  _job: 17711900323
+  _time: 2025-09-14 13:37:09.998547993 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-aspects-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#36 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 36
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2024-02-23 18:42:27.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577915
+  _job: 17711900323
+  _time: 2025-09-14 13:37:12.549022738 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#409 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 409
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577916
+  _job: 17711900323
+  _time: 2025-09-14 13:37:16.173397090 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1781 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1781
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-27 07:16:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577917
+  _job: 17711900323
+  _time: 2025-09-14 13:37:25.248146711 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: git-ignore
+  comments: 9
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 9
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#95 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 7
+  issue: 95
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2015-12-14 15:24:33.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577918
+  _job: 17711900323
+  _time: 2025-09-14 13:37:29.061007059 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.slf4j-slf4j-api-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#151 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 151
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-17 22:46:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577919
+  _job: 17711900323
+  _time: 2025-09-14 13:37:31.587579098 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#281 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 281
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-10-23 16:55:57.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577920
+  _job: 17711900323
+  _time: 2025-09-14 13:37:39.206750848 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-urn-0.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#331 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 331
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-07 20:35:48.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577921
+  _job: 17711900323
+  _time: 2025-09-14 13:37:42.585012886 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/testcontainers-java-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#289 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 289
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-10-22 22:53:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577922
+  _job: 17711900323
+  _time: 2025-09-14 13:37:51.607578582 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 9
+  comments_appreciated: 2
+  comments_by_author: 0
+  comments_by_reviewers: 9
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#171 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 171
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-05 04:08:07.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577923
+  _job: 17711900323
+  _time: 2025-09-14 13:37:55.487570220 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#331 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 331
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-16 02:04:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577924
+  _job: 17711900323
+  _time: 2025-09-14 13:37:58.384424462 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#46 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 46
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-09-22 19:39:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577925
+  _job: 17711900323
+  _time: 2025-09-14 13:38:01.173028100 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-xml-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#111 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 111
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 18:01:54.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577926
+  _job: 17711900323
+  _time: 2025-09-14 13:38:08.732840048 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#38 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 38
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2024-03-20 04:48:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577927
+  _job: 17711900323
+  _time: 2025-09-14 13:38:11.241308214 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#410 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 410
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577928
+  _job: 17711900323
+  _time: 2025-09-14 13:38:14.472070080 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/jackson-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1786 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1786
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-27 08:14:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577929
+  _job: 17711900323
+  _time: 2025-09-14 13:38:23.423074258 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: '94'
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 11
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#104 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 19
+  issue: 104
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2016-01-05 14:03:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577930
+  _job: 17711900323
+  _time: 2025-09-14 13:38:27.457315191 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.slf4j-slf4j-log4j12-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#152 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 152
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-03-17 22:40:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577931
+  _job: 17711900323
+  _time: 2025-09-14 13:38:29.932403204 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#282 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 282
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-14 23:52:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577932
+  _job: 17711900323
+  _time: 2025-09-14 13:38:37.645827241 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-22.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#332 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 332
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-09 12:44:11.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577933
+  _job: 17711900323
+  _time: 2025-09-14 13:38:40.808835700 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#290 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 290
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-14 22:57:36.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577934
+  _job: 17711900323
+  _time: 2025-09-14 13:38:49.845041961 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven.resolver-maven-resolver-api-1.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#172 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 172
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-05 04:39:08.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577935
+  _job: 17711900323
+  _time: 2025-09-14 13:38:52.370286817 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#332 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 332
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-17 08:44:19.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577936
+  _job: 17711900323
+  _time: 2025-09-14 13:38:55.181119588 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#47 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 47
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-04 22:39:54.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577937
+  _job: 17711900323
+  _time: 2025-09-14 13:38:58.355404000 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#112 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 112
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 19:13:33.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577938
+  _job: 17711900323
+  _time: 2025-09-14 13:39:05.853153871 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#39 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 39
+  repository: 12589424
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2024-06-28 06:54:13.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577939
+  _job: 17711900323
+  _time: 2025-09-14 13:39:08.079997048 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: dependabot/maven/com.google.guava-guava-32.0.0-jre
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#411 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 411
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577940
+  _job: 17711900323
+  _time: 2025-09-14 13:39:10.800191792 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1787 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1787
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-09-27 09:16:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577941
+  _job: 17711900323
+  _time: 2025-09-14 13:39:19.443367996 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: badges
+  comments: 9
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 9
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#108 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 108
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2016-01-21 16:51:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577942
+  _job: 17711900323
+  _time: 2025-09-14 13:39:22.941808462 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: up
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#153 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 153
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-04 07:02:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577943
+  _job: 17711900323
+  _time: 2025-09-14 13:39:25.108752494 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#283 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 283
+  repository: 12947626
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-15 21:50:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577944
+  _job: 17711900323
+  _time: 2025-09-14 13:39:32.300246975 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#333 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 333
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-16 12:44:25.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577945
+  _job: 17711900323
+  _time: 2025-09-14 13:39:35.782739514 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#291 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 291
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-15 23:51:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577946
+  _job: 17711900323
+  _time: 2025-09-14 13:39:45.932625200 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven-maven-core-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#173 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 173
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-05 05:39:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577947
+  _job: 17711900323
+  _time: 2025-09-14 13:39:48.393482523 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#333 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 333
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-18 01:55:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577948
+  _job: 17711900323
+  _time: 2025-09-14 13:39:51.246667407 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#48 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 48
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-19 12:47:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577949
+  _job: 17711900323
+  _time: 2025-09-14 13:39:54.449137615 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/codecov-codecov-action-5.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#113 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 113
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 21:05:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577950
+  _job: 17711900323
+  _time: 2025-09-14 13:40:02.472406429 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#40 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 40
+  repository: 12589424
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-09-26 21:22:45.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577951
+  _job: 17711900323
+  _time: 2025-09-14 13:40:10.593899290 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: me
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#412 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 33
+  issue: 412
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 03:40:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577952
+  _job: 17711900323
+  _time: 2025-09-14 13:40:13.960946290 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1788 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1788
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-10-29 02:29:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577953
+  _job: 17711900323
+  _time: 2025-09-14 13:40:22.412703036 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: master
+  comments: 25
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 23
+  comments_resolved: 0
+  comments_to_code: 9
+  details: Apparently, jcabi/jcabi-xml#109 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 81
+  issue: 109
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2016-01-25 05:49:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577954
+  _job: 17711900323
+  _time: 2025-09-14 13:40:29.500227564 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#155 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 155
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-11 20:37:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577955
+  _job: 17711900323
+  _time: 2025-09-14 13:40:32.736621551 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/groovy-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#334 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 334
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-22 09:43:42.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577956
+  _job: 17711900323
+  _time: 2025-09-14 13:40:36.468762990 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/testcontainers-java-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#292 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 292
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-21 02:31:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577957
+  _job: 17711900323
+  _time: 2025-09-14 13:40:44.816279266 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven-maven-model-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#174 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 174
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-05 06:41:23.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577958
+  _job: 17711900323
+  _time: 2025-09-14 13:40:47.311793940 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#334 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 334
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-21 01:58:59.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577959
+  _job: 17711900323
+  _time: 2025-09-14 13:40:50.406738756 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-setup-java-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-slf4j#49 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 49
+  repository: 12591339
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-29 18:59:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577960
+  _job: 17711900323
+  _time: 2025-09-14 13:40:52.773256802 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/ubuntu-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#114 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 114
+  repository: 19194304
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 22:03:11.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577961
+  _job: 17711900323
+  _time: 2025-09-14 13:41:00.905774301 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-aspects-0.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#413 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 413
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 06:56:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577962
+  _job: 17711900323
+  _time: 2025-09-14 13:41:02.629111764 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1795 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1795
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-11-15 23:55:02.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577963
+  _job: 17711900323
+  _time: 2025-09-14 13:41:11.528971446 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: master
+  comments: 9
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 9
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#111 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 6
+  issue: 111
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2016-01-29 21:30:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577964
+  _job: 17711900323
+  _time: 2025-09-14 13:41:15.306907210 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#158 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 158
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-04-21 21:34:44.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577965
+  _job: 17711900323
+  _time: 2025-09-14 13:41:18.359932175 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#335 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 335
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-22 09:38:29.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577966
+  _job: 17711900323
+  _time: 2025-09-14 13:41:21.536859970 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/testcontainers-java-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#293 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 293
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-11-21 12:55:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577967
+  _job: 17711900323
+  _time: 2025-09-14 13:41:29.507280348 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#175 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 175
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-05 07:37:31.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577968
+  _job: 17711900323
+  _time: 2025-09-14 13:41:32.088339726 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#335 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 4
+  issue: 335
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-22 04:55:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577969
+  _job: 17711900323
+  _time: 2025-09-14 13:41:36.530305188 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#414 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 414
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 04:44:42.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577970
+  _job: 17711900323
+  _time: 2025-09-14 13:41:39.375988183 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1796 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 1796
+  repository: 14204295
+  succeeded_builds: 9
+  what: pull-was-merged
+  when: 2024-11-20 21:53:54.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577971
+  _job: 17711900323
+  _time: 2025-09-14 13:41:48.442723891 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: '96'
+  comments: 58
+  comments_appreciated: 0
+  comments_by_author: 18
+  comments_by_reviewers: 40
+  comments_resolved: 0
+  comments_to_code: 16
+  details: Apparently, jcabi/jcabi-xml#112 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 105
+  issue: 112
+  repository: 13717355
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2016-02-24 16:39:34.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577972
+  _job: 17711900323
+  _time: 2025-09-14 13:42:03.361328128 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/mockito-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#159 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 159
+  repository: 12262782
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-06-18 13:33:37.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577973
+  _job: 17711900323
+  _time: 2025-09-14 13:42:07.078702431 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.maven.plugins-maven-enforcer-plugin-3.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#336 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 336
+  repository: 12590813
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-08-22 22:40:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577974
+  _job: 17711900323
+  _time: 2025-09-14 13:42:10.462396616 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: patch-2
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-jdbc#294 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 108
+  issue: 294
+  repository: 12587702
+  succeeded_builds: 8
+  what: pull-was-merged
+  when: 2024-12-02 15:10:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 577975
+  _job: 17711900323
+  _time: 2025-09-14 13:42:16.649850626 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/actions-checkout-digest
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#176 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 8
+  issue: 176
+  repository: 12591138
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-19 17:44:04.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577976
+  _job: 17711900323
+  _time: 2025-09-14 13:42:19.966971860 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#336 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 336
+  repository: 14093966
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-11-22 04:46:59.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577977
+  _job: 17711900323
+  _time: 2025-09-14 13:42:24.333080071 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  branch: renovate/com.jcabi-jcabi-matchers-1.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#415 has been 'pull-was-merged'.
+  failed_builds: 0
+  hoc: 2
+  issue: 415
+  repository: 16312153
+  succeeded_builds: 0
+  what: pull-was-merged
+  when: 2023-10-29 05:48:15.000000000 Z
+  where: github
+  who: 8086956
+- _id: 577978
+  _job: 17711900323
+  _time: 2025-09-14 13:44:23.214561555 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 53449773369
+  issues_were_scanned: 0
+  labels_were_scanned: 252
+  merges_were_scanned: 404
+  min_issue_was_found: 74
+  min_pull_was_found: 556
+  repository: 16312153
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 577979
+  _job: 17711900323
+  _time: 2025-09-14 13:44:23.351259345 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 54360655730
+  issues_were_scanned: 0
+  labels_were_scanned: 0
+  merges_were_scanned: 326
+  min_issue_was_found: 84
+  min_pull_was_found: 129
+  repository: 12590813
+  types_were_scanned: 117
+  what: iterate
+  where: github
+- _id: 577980
+  _job: 17711900323
+  _time: 2025-09-14 13:44:23.484841602 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 54362222606
+  labels_were_scanned: 0
+  merges_were_scanned: 284
+  min_issue_was_found: 45
+  min_pull_was_found: 19
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 577981
+  _job: 17711900323
+  _time: 2025-09-14 13:44:23.612965807 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 54362221664
+  issues_were_scanned: 0
+  labels_were_scanned: 139
+  merges_were_scanned: 90
+  min_issue_was_found: 49
+  min_pull_was_found: 357
+  repository: 13717355
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 577982
+  _job: 17711900323
+  _time: 2025-09-14 13:44:25.308758858 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  since: 2025-09-07 13:44:25.308959723 Z
+  what: quantity-of-deliverables
+  when: 2025-09-14 13:44:25.308916262 Z
