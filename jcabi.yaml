@@ -2,12 +2,14 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge quantity-of-deliverables stopped by timeout after 10m: execution expired'
+  error:
+  - 'Judge quality-of-service stopped by timeout after 10m: execution expired'
+  - 'Judge find-all-issues stopped by timeout after 58s: execution expired'
   inserted: 8
-  seconds: 893.400815965
+  seconds: 900.85438399
   version: 0.53.6
   what: judges-summary
-  when: 2025-09-14 09:46:02.582897710 Z
+  when: 2025-09-14 10:48:16.508941611 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -18959,6 +18961,7 @@
   composite: 0.384
   ffact: 140
   since: 2025-05-02 08:18:38.726326985 Z
+  tombstone: 2025-09-14 09:46:59.535338260 Z
   what: quality-of-service
   when: 2025-05-09 08:18:38.726291129 Z
 - _id: 447453
@@ -44711,7 +44714,7 @@
   review_comments: 0
   succeeded_builds: 14
   what: pull-was-merged
-  when: &534 2025-09-08 16:35:26.000000000 Z
+  when: &532 2025-09-08 16:35:26.000000000 Z
   where: github
   who: 8086956
 - _id: 553756
@@ -45272,664 +45275,6 @@
   total_stars: 2211
   what: dimensions-of-terrain
   when: 2025-09-12 21:44:25.862075843 Z
-- _id: 571658
-  _job: 17697893983
-  _time: 2025-09-13 14:31:27.299078275 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#43 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:45.977564895 Z
-  issue: 43
-  repository: 16312153
-  stale: who
-  tombstone: 2025-09-14 05:49:16.837189449 Z
-  what: issue-was-closed
-  when: 2014-06-24 16:15:22.000000000 Z
-  where: github
-- _id: 571671
-  _job: 17697893983
-  _time: 2025-09-13 14:34:40.645101423 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.0.0
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#309 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:27.278046390 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 309
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:14.682460542 Z
-  what: pull-was-closed
-  when: 2022-03-23 23:01:26.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571678
-  _job: 17697893983
-  _time: 2025-09-13 14:35:12.597386401 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.0.1
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#310 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:27.845037999 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 310
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:15.380029105 Z
-  what: pull-was-closed
-  when: 2022-03-28 23:00:51.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571683
-  _job: 17697893983
-  _time: 2025-09-13 14:35:38.236384759 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.0.2
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#311 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:28.228556199 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 311
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:15.850724448 Z
-  what: pull-was-closed
-  when: 2022-03-29 23:09:39.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571688
-  _job: 17697893983
-  _time: 2025-09-13 14:36:27.717512617 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.0.3
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#312 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:28.634247198 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 312
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:16.372789436 Z
-  what: pull-was-closed
-  when: 2022-03-30 23:00:53.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571693
-  _job: 17697893983
-  _time: 2025-09-13 14:36:49.217509056 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.0.4
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#313 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:28.999192998 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 313
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:16.843840371 Z
-  what: pull-was-closed
-  when: 2022-04-25 23:00:54.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571698
-  _job: 17697893983
-  _time: 2025-09-13 14:37:05.881077652 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.testcontainers-testcontainers-bom-1.17.0
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#314 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:29.528164348 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 314
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:17.310126000 Z
-  what: pull-was-closed
-  when: 2022-04-13 23:01:04.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571703
-  _job: 17697893983
-  _time: 2025-09-13 14:37:19.944936282 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.testcontainers-testcontainers-bom-1.17.1
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#315 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:30.078884261 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 315
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:17.825674730 Z
-  what: pull-was-closed
-  when: 2022-05-19 23:00:58.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571708
-  _job: 17697893983
-  _time: 2025-09-13 14:37:35.236291156 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.owasp-dependency-check-maven-7.1.0
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#316 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:30.438571665 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 316
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:18.297168482 Z
-  what: pull-was-closed
-  when: 2022-06-13 23:00:58.000000000 Z
-  where: github
-  who: 49699333
-- _id: 571713
-  _job: 17697893983
-  _time: 2025-09-13 14:37:57.133236859 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.glassfish.grizzly-grizzly-http-servlet-server-4.0.0
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#319 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:30.797170641 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 319
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:18.812144944 Z
-  what: pull-was-closed
-  when: 2022-07-20 05:25:40.000000000 Z
-  where: github
-  who: 526301
-- _id: 571717
-  _job: 17697893983
-  _time: 2025-09-13 14:38:12.867288509 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.glassfish.jersey.core-jersey-server-3.0.5
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#321 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:30.982172856 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 321
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:19.182298768 Z
-  what: pull-was-closed
-  when: 2022-07-20 05:25:41.000000000 Z
-  where: github
-  who: 526301
-- _id: 571721
-  _job: 17697893983
-  _time: 2025-09-13 14:38:31.388551382 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.glassfish.jersey.core-jersey-client-3.0.5
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#322 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:31.170015920 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 322
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:19.556288628 Z
-  what: pull-was-closed
-  when: 2022-07-20 05:25:41.000000000 Z
-  where: github
-  who: 526301
-- _id: 571725
-  _job: 17697893983
-  _time: 2025-09-13 14:38:47.485793724 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.testcontainers-testcontainers-bom-1.17.3
-  comments: 4
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#328 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:31.342292682 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 328
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:19.975145326 Z
-  what: pull-was-closed
-  when: 2022-07-20 05:25:42.000000000 Z
-  where: github
-  who: 526301
-- _id: 571729
-  _job: 17697893983
-  _time: 2025-09-13 14:39:10.611739213 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/com.jcabi-jcabi-1.33.0
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#336 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:31.528673163 Z
-  failed_builds: 0
-  hoc: 4
-  issue: 336
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:20.350486184 Z
-  what: pull-was-closed
-  when: 2022-07-20 05:25:42.000000000 Z
-  where: github
-  who: 526301
-- _id: 571733
-  _job: 17697893983
-  _time: 2025-09-13 14:39:24.107264533 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.slf4j-slf4j-log4j12-2.0.0-alpha6
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#338 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:31.714214963 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 338
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:20.778825937 Z
-  what: pull-was-closed
-  when: 2022-09-23 06:45:35.000000000 Z
-  where: github
-  who: 526301
-- _id: 571737
-  _job: 17697893983
-  _time: 2025-09-13 14:39:41.495996204 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.slf4j-slf4j-log4j12-2.x
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#350 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:31.901872884 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 350
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:21.151379917 Z
-  what: pull-was-closed
-  when: 2022-09-23 06:38:57.000000000 Z
-  where: github
-  who: 526301
-- _id: 571741
-  _job: 17697893983
-  _time: 2025-09-13 14:39:56.858602686 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.qulice-qulice-maven-plugin-0.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#360 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:32.275330598 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 360
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:21.534020816 Z
-  what: pull-was-closed
-  when: 2023-10-29 06:56:55.000000000 Z
-  where: github
-  who: 29139614
-- _id: 571745
-  _job: 17697893983
-  _time: 2025-09-13 14:40:13.222920511 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/major-javahamcrest-monorepo
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#366 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:32.649249711 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 366
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:21.949465200 Z
-  what: pull-was-closed
-  when: 2022-09-24 06:00:11.000000000 Z
-  where: github
-  who: 526301
-- _id: 571749
-  _job: 17697893983
-  _time: 2025-09-13 14:40:27.375348854 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/jersey-monorepo
-  comments: 2
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 2
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#420 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:33.027023739 Z
-  failed_builds: 0
-  hoc: 4
-  issue: 420
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:22.320833465 Z
-  what: pull-was-closed
-  when: 2023-10-29 06:19:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 571753
-  _job: 17697893983
-  _time: 2025-09-13 14:40:45.810068775 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.slf4j-slf4j-api-2.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#469 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:33.401141156 Z
-  failed_builds: 0
-  hoc: 2
-  issue: 469
-  repository: 16312153
-  succeeded_builds: 0
-  tombstone: 2025-09-13 22:50:22.701460104 Z
-  what: pull-was-closed
-  when: 2024-01-16 14:17:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 571757
-  _job: 17697893983
-  _time: 2025-09-13 14:40:55.756846309 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#511 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:33.776877503 Z
-  failed_builds: 12
-  hoc: 2
-  issue: 511
-  repository: 16312153
-  succeeded_builds: 2
-  tombstone: 2025-09-13 22:50:23.121540826 Z
-  what: pull-was-closed
-  when: 2024-08-06 08:52:35.000000000 Z
-  where: github
-  who: 29139614
-- _id: 571760
-  _job: 17697893983
-  _time: 2025-09-13 14:41:07.198083101 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.owasp-dependency-check-maven-10.x
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-http#520 has been 'pull-was-closed'.
-  done: 2025-09-13 21:46:33.965765566 Z
-  failed_builds: 12
-  hoc: 2
-  issue: 520
-  repository: 16312153
-  succeeded_builds: 2
-  tombstone: 2025-09-13 22:50:23.403076491 Z
-  what: pull-was-closed
-  when: 2024-10-21 14:48:43.000000000 Z
-  where: github
-  who: 29139614
-- _id: 571868
-  _job: 17698533250
-  _time: 2025-09-13 15:31:34.007888746 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#59 has been 'issue-was-closed'.
-  issue: 59
-  repository: 16312153
-  tombstone: 2025-09-13 18:56:13.338210669 Z
-  what: issue-was-closed
-  when: 2015-03-30 18:23:16.000000000 Z
-  where: github
-  who: 526301
-- _id: 571872
-  _job: 17698533250
-  _time: 2025-09-13 15:31:39.684478687 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#63 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:46.768782765 Z
-  is_human: 1
-  issue: 63
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:17.290840320 Z
-  what: issue-was-closed
-  when: 2015-01-13 10:09:37.000000000 Z
-  where: github
-  who: 3440659
-- _id: 571875
-  _job: 17698533250
-  _time: 2025-09-13 15:31:42.382276142 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#66 has been 'issue-was-closed'.
-  issue: 66
-  repository: 16312153
-  tombstone: 2025-09-13 18:56:13.007277069 Z
-  what: issue-was-closed
-  when: 2015-03-30 18:20:59.000000000 Z
-  where: github
-  who: 526301
-- _id: 571878
-  _job: 17698533250
-  _time: 2025-09-13 15:31:44.569066864 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#74 has been 'issue-was-closed'.
-  issue: 74
-  repository: 16312153
-  tombstone: 2025-09-13 18:56:12.677089500 Z
-  what: issue-was-closed
-  when: 2015-03-30 18:17:55.000000000 Z
-  where: github
-  who: 526301
-- _id: 571881
-  _job: 17698533250
-  _time: 2025-09-13 15:31:46.672023471 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#91 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:47.055546506 Z
-  is_human: 1
-  issue: 91
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:17.515727133 Z
-  what: issue-was-closed
-  when: 2015-06-29 07:15:46.000000000 Z
-  where: github
-  who: 5909722
-- _id: 571885
-  _job: 17698533250
-  _time: 2025-09-13 15:31:49.612918083 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#92 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:47.331746753 Z
-  is_human: 1
-  issue: 92
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:17.684217287 Z
-  what: issue-was-closed
-  when: 2015-06-10 09:31:56.000000000 Z
-  where: github
-  who: 1405237
-- _id: 571889
-  _job: 17698533250
-  _time: 2025-09-13 15:31:52.176797719 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#94 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:47.480411809 Z
-  is_human: 1
-  issue: 94
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:17.771456850 Z
-  what: issue-was-closed
-  when: 2015-07-04 09:52:53.000000000 Z
-  where: github
-  who: 1405237
-- _id: 571892
-  _job: 17698533250
-  _time: 2025-09-13 15:31:54.324966835 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#100 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:47.628692763 Z
-  is_human: 1
-  issue: 100
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:17.858973762 Z
-  what: issue-was-closed
-  when: 2015-12-14 12:23:02.000000000 Z
-  where: github
-  who: 5909722
-- _id: 571896
-  _job: 17698533250
-  _time: 2025-09-13 15:31:56.416737754 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#154 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:47.924138414 Z
-  is_human: 1
-  issue: 154
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:18.034414300 Z
-  what: issue-was-closed
-  when: 2017-01-12 10:21:21.000000000 Z
-  where: github
-  who: 9504395
-- _id: 571898
-  _job: 17698533250
-  _time: 2025-09-13 15:31:58.144951865 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#157 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:48.072680721 Z
-  is_human: 1
-  issue: 157
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:18.121576221 Z
-  what: issue-was-closed
-  when: 2017-05-08 19:41:24.000000000 Z
-  where: github
-  who: 5237764
-- _id: 571917
-  _job: 17698533250
-  _time: 2025-09-13 15:32:17.946086805 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-parent#389 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:50.177941047 Z
-  is_human: 1
-  issue: 389
-  repository: 12590813
-  tombstone: 2025-09-14 05:49:19.360009759 Z
-  what: issue-was-closed
-  when: 2023-12-27 09:39:27.000000000 Z
-  where: github
-  who: 526301
-- _id: 571918
-  _job: 17698533250
-  _time: 2025-09-13 15:32:21.683299885 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: Apparently, jcabi/jcabi-http#405 has been 'issue-was-closed'.
-  done: 2025-09-14 02:29:50.327968432 Z
-  is_human: 1
-  issue: 405
-  repository: 16312153
-  tombstone: 2025-09-14 05:49:19.456497532 Z
-  what: issue-was-closed
-  when: 2023-01-22 17:30:27.000000000 Z
-  where: github
-  who: 9504395
 - _id: 572030
   _job: 17698533250
   _time: 2025-09-13 15:35:16.204177855 Z
@@ -45943,503 +45288,6 @@
   when: 2024-12-05 12:24:38.000000000 Z
   where: github
   who: 51804353
-- _id: 572031
-  _job: 17698533250
-  _time: 2025-09-13 15:35:17.516796267 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#9 has been opened by @krzyk.
-  issue: 9
-  repository: 12590813
-  tombstone: 2025-09-13 18:55:54.215673320 Z
-  what: issue-was-opened
-  when: 2014-07-09 11:35:58.000000000 Z
-  where: github
-  who: 105730
-- _id: 572032
-  _job: 17698533250
-  _time: 2025-09-13 15:35:17.979844800 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#10 has been opened by @carlosmiranda.
-  issue: 10
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:01.010821348 Z
-  what: issue-was-opened
-  when: 2014-07-23 07:59:56.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572033
-  _job: 17698533250
-  _time: 2025-09-13 15:35:18.401293769 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#14 has been opened by @longtimeago.
-  issue: 14
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:01.698534241 Z
-  what: issue-was-opened
-  when: 2014-10-22 20:22:14.000000000 Z
-  where: github
-  who: 1388994
-- _id: 572034
-  _job: 17698533250
-  _time: 2025-09-13 15:35:18.817939121 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#16 has been opened by @alevohin.
-  issue: 16
-  repository: 12590813
-  tombstone: 2025-09-13 18:55:54.753427275 Z
-  what: issue-was-opened
-  when: 2015-01-07 19:15:54.000000000 Z
-  where: github
-  who: 1502358
-- _id: 572035
-  _job: 17698533250
-  _time: 2025-09-13 15:35:19.262217160 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#17 has been opened by @maurezen.
-  issue: 17
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:02.718188145 Z
-  what: issue-was-opened
-  when: 2015-01-08 16:29:01.000000000 Z
-  where: github
-  who: 569536
-- _id: 572036
-  _job: 17698533250
-  _time: 2025-09-13 15:35:19.694031105 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#19 has been opened by @maurezen.
-  issue: 19
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:03.054954315 Z
-  what: issue-was-opened
-  when: 2015-01-14 22:38:00.000000000 Z
-  where: github
-  who: 569536
-- _id: 572037
-  _job: 17698533250
-  _time: 2025-09-13 15:35:20.013886770 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#22 has been opened by @palyuga.
-  issue: 22
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:03.389728806 Z
-  what: issue-was-opened
-  when: 2015-01-17 22:37:30.000000000 Z
-  where: github
-  who: 927387
-- _id: 572038
-  _job: 17698533250
-  _time: 2025-09-13 15:35:20.422730549 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#23 has been opened by @ggajos.
-  issue: 23
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:04.057525817 Z
-  what: issue-was-opened
-  when: 2015-01-19 17:50:20.000000000 Z
-  where: github
-  who: 988790
-- _id: 572039
-  _job: 17698533250
-  _time: 2025-09-13 15:35:20.888752108 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#25 has been opened by @carlosmiranda.
-  issue: 25
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:04.391001675 Z
-  what: issue-was-opened
-  when: 2015-03-15 07:07:09.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572040
-  _job: 17698533250
-  _time: 2025-09-13 15:35:21.208961814 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#29 has been opened by @wholegroup.
-  issue: 29
-  repository: 12590813
-  tombstone: 2025-09-13 18:56:04.815430370 Z
-  what: issue-was-opened
-  when: 2015-04-18 18:26:58.000000000 Z
-  where: github
-  who: 553191
-- _id: 572041
-  _job: 17698533250
-  _time: 2025-09-13 15:35:21.606088014 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#31 has been opened by @yamstranger.
-  is_human: 1
-  issue: 31
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:08.563053610 Z
-  what: issue-was-opened
-  when: &532 2015-06-10 10:48:30.000000000 Z
-  where: github
-  who: 1667699
-- _id: 572042
-  _job: 17698533250
-  _time: 2025-09-13 15:35:22.158866303 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#37 has been opened by @gvlasov.
-  is_human: 1
-  issue: 37
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:08.844756185 Z
-  what: issue-was-opened
-  when: &533 2015-07-19 18:23:47.000000000 Z
-  where: github
-  who: 4467948
-- _id: 572043
-  _job: 17698533250
-  _time: 2025-09-13 15:35:22.626784137 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#38 has been opened by @gvlasov.
-  is_human: 1
-  issue: 38
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:51.839268536 Z
-  what: issue-was-opened
-  when: 2015-08-16 20:27:47.000000000 Z
-  where: github
-  who: 4467948
-- _id: 572044
-  _job: 17698533250
-  _time: 2025-09-13 15:35:22.929434145 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  details: The missing issue jcabi/jcabi-parent#39 has been opened by @longtimeago.
-  is_human: 1
-  issue: 39
-  repository: 12590813
-  tombstone: 2025-09-14 02:29:52.115296759 Z
-  what: issue-was-opened
-  when: 2015-08-30 11:09:26.000000000 Z
-  where: github
-  who: 1388994
-- _id: 572045
-  _job: 17698533250
-  _time: 2025-09-13 15:35:23.249364443 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '57'
-  details: The missing pull jcabi/jcabi-parent#58 has been opened by @longtimeago.
-  issue: 58
-  repository: 12590813
-  tombstone: 2025-09-13 21:46:34.621166868 Z
-  what: pull-was-opened
-  when: 2016-06-23 19:02:43.000000000 Z
-  where: github
-  who: 1388994
-- _id: 572046
-  _job: 17698533250
-  _time: 2025-09-13 15:35:23.957078352 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  details: The missing pull jcabi/jcabi-parent#82 has been opened by @driver733.
-  issue: 82
-  repository: 12590813
-  tombstone: 2025-09-13 21:46:34.808121236 Z
-  what: pull-was-opened
-  when: 2018-08-12 10:23:58.000000000 Z
-  where: github
-  who: 10466206
-- _id: 572047
-  _job: 17698533250
-  _time: 2025-09-13 15:35:24.763060281 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '76'
-  details: The missing pull jcabi/jcabi-parent#85 has been opened by @fabriciofx.
-  issue: 85
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:04.212499841 Z
-  what: pull-was-opened
-  when: 2019-01-13 04:57:21.000000000 Z
-  where: github
-  who: 1964562
-- _id: 572048
-  _job: 17698533250
-  _time: 2025-09-13 15:35:25.551212054 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: fix-xcop-on-windows
-  details: The missing pull jcabi/jcabi-parent#89 has been opened by @zcrusaderz.
-  issue: 89
-  repository: 12590813
-  tombstone: 2025-09-13 21:46:35.375652143 Z
-  what: pull-was-opened
-  when: 2019-05-08 13:31:46.000000000 Z
-  where: github
-  who: 34595022
-- _id: 572049
-  _job: 17698533250
-  _time: 2025-09-13 15:35:26.476823249 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.hibernate.validator-hibernate-validator-6.1.0.Final
-  details: The missing pull jcabi/jcabi-parent#92 has been opened by @dependabot[bot].
-  issue: 92
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:09.144755571 Z
-  what: pull-was-opened
-  when: 2020-01-08 17:07:33.000000000 Z
-  where: github
-  who: 49699333
-- _id: 572050
-  _job: 17698533250
-  _time: 2025-09-13 15:35:27.563018983 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '107'
-  details: The missing pull jcabi/jcabi-parent#108 has been opened by @fabriciofx.
-  issue: 108
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:11.370900620 Z
-  what: pull-was-opened
-  when: 2020-11-23 20:57:02.000000000 Z
-  where: github
-  who: 1964562
-- _id: 572051
-  _job: 17698533250
-  _time: 2025-09-13 15:35:28.241180722 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.codehaus.groovy-groovy-all-3.0.0-alpha-1
-  details: The missing pull jcabi/jcabi-parent#113 has been opened by @dependabot-preview[bot].
-  issue: 113
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:13.846175570 Z
-  what: pull-was-opened
-  when: 2020-12-01 19:38:50.000000000 Z
-  where: github
-  who: 27856297
-- _id: 572052
-  _job: 17698533250
-  _time: 2025-09-13 15:35:29.091162763 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: dependabot/maven/org.hibernate.validator-hibernate-validator-6.1.6.Final
-  details: The missing pull jcabi/jcabi-parent#114 has been opened by @dependabot-preview[bot].
-  issue: 114
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:16.176136950 Z
-  what: pull-was-opened
-  when: 2020-12-01 19:39:13.000000000 Z
-  where: github
-  who: 27856297
-- _id: 572053
-  _job: 17698533250
-  _time: 2025-09-13 15:35:29.954376366 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: qulice-config
-  details: The missing pull jcabi/jcabi-parent#118 has been opened by @g4s8.
-  issue: 118
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:18.571038303 Z
-  what: pull-was-opened
-  when: 2021-03-01 09:45:24.000000000 Z
-  where: github
-  who: 1524988
-- _id: 572054
-  _job: 17698533250
-  _time: 2025-09-13 15:35:30.787047588 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: issue-128
-  details: The missing pull jcabi/jcabi-parent#129 has been opened by @andreoss.
-  issue: 129
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:20.114784563 Z
-  what: pull-was-opened
-  when: 2021-12-23 00:27:29.000000000 Z
-  where: github
-  who: 49783909
-- _id: 572055
-  _job: 17698533250
-  _time: 2025-09-13 15:35:31.632076519 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: master
-  details: The missing pull jcabi/jcabi-parent#133 has been opened by @andreoss.
-  issue: 133
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:21.656783663 Z
-  what: pull-was-opened
-  when: 2022-01-10 15:28:08.000000000 Z
-  where: github
-  who: 49783909
-- _id: 572056
-  _job: 17698533250
-  _time: 2025-09-13 15:35:32.323955097 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: fixed-mvn-compiler-v
-  details: The missing pull jcabi/jcabi-parent#137 has been opened by @graur.
-  issue: 137
-  repository: 12590813
-  tombstone: 2025-09-13 21:46:37.563730319 Z
-  what: pull-was-opened
-  when: 2022-08-01 12:44:21.000000000 Z
-  where: github
-  who: 33455325
-- _id: 572057
-  _job: 17698533250
-  _time: 2025-09-13 15:35:33.432060312 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/configure
-  details: The missing pull jcabi/jcabi-parent#143 has been opened by @renovate[bot].
-  issue: 143
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:24.334899482 Z
-  what: pull-was-opened
-  when: 2022-09-22 04:15:50.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572058
-  _job: 17698533250
-  _time: 2025-09-13 15:35:34.151692874 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-github-1.x
-  details: The missing pull jcabi/jcabi-parent#144 has been opened by @renovate[bot].
-  issue: 144
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:25.778989022 Z
-  what: pull-was-opened
-  when: 2022-09-22 04:17:51.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572059
-  _job: 17698533250
-  _time: 2025-09-13 15:35:34.900149399 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-http-1.x
-  details: The missing pull jcabi/jcabi-parent#145 has been opened by @renovate[bot].
-  issue: 145
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:27.256047022 Z
-  what: pull-was-opened
-  when: 2022-09-22 04:17:56.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572060
-  _job: 17698533250
-  _time: 2025-09-13 15:35:35.621224707 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.antlr-antlr3-maven-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#148 has been opened by @renovate[bot].
-  issue: 148
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:28.759445272 Z
-  what: pull-was-opened
-  when: 2022-09-22 05:39:11.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572061
-  _job: 17698533250
-  _time: 2025-09-13 15:35:36.563717753 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-deploy-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#149 has been opened by @renovate[bot].
-  issue: 149
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:30.286053001 Z
-  what: pull-was-opened
-  when: 2022-09-22 05:39:17.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572062
-  _job: 17698533250
-  _time: 2025-09-13 15:35:37.288172980 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-javadoc-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#150 has been opened by @renovate[bot].
-  issue: 150
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:31.606524231 Z
-  what: pull-was-opened
-  when: 2022-09-22 11:17:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572063
-  _job: 17698533250
-  _time: 2025-09-13 15:35:38.102788124 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-plugin-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#151 has been opened by @renovate[bot].
-  issue: 151
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:32.915808652 Z
-  what: pull-was-opened
-  when: 2022-09-22 11:17:49.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572064
-  _job: 17698533250
-  _time: 2025-09-13 15:35:38.749487015 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.apache.maven.plugins-maven-war-plugin-3.x
-  details: The missing pull jcabi/jcabi-parent#152 has been opened by @renovate[bot].
-  issue: 152
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:34.337249251 Z
-  what: pull-was-opened
-  when: 2022-09-22 14:11:56.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572065
-  _job: 17698533250
-  _time: 2025-09-13 15:35:39.454677128 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/groovy-monorepo
-  details: The missing pull jcabi/jcabi-parent#153 has been opened by @renovate[bot].
-  issue: 153
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:35.595867541 Z
-  what: pull-was-opened
-  when: 2022-09-22 14:12:02.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572066
-  _job: 17698533250
-  _time: 2025-09-13 15:35:40.193531933 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/junit5-monorepo
-  details: The missing pull jcabi/jcabi-parent#154 has been opened by @renovate[bot].
-  issue: 154
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:36.654902781 Z
-  what: pull-was-opened
-  when: 2022-09-22 17:45:42.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572067
-  _job: 17698533250
-  _time: 2025-09-13 15:35:40.882894727 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/org.slf4j-slf4j-reload4j-2.x
-  details: The missing pull jcabi/jcabi-parent#155 has been opened by @renovate[bot].
-  issue: 155
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:38.175868741 Z
-  what: pull-was-opened
-  when: 2022-09-22 17:45:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572068
-  _job: 17698533250
-  _time: 2025-09-13 15:35:41.594881170 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-maven-plugin-0.x
-  details: The missing pull jcabi/jcabi-parent#156 has been opened by @renovate[bot].
-  issue: 156
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:39.449738040 Z
-  what: pull-was-opened
-  when: 2022-09-22 20:42:09.000000000 Z
-  where: github
-  who: 29139614
-- _id: 572069
-  _job: 17698533250
-  _time: 2025-09-13 15:35:42.334252152 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: renovate/com.jcabi-jcabi-simpledb-0.x
-  details: The missing pull jcabi/jcabi-parent#157 has been opened by @renovate[bot].
-  issue: 157
-  repository: 12590813
-  tombstone: 2025-09-13 19:49:40.991948360 Z
-  what: pull-was-opened
-  when: 2022-09-22 20:42:16.000000000 Z
-  where: github
-  who: 29139614
 - _id: 572070
   _job: 17698533250
   _time: 2025-09-13 15:35:42.976650904 Z
@@ -46829,97 +45677,6 @@
   when: 2024-07-18 10:08:00.000000000 Z
   where: github
   who: 26545482
-- _id: 572146
-  _job: 17698533250
-  _time: 2025-09-13 15:36:40.724289178 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '39'
-  details: The missing pull jcabi/jcabi-http#44 has been opened by @carlosmiranda.
-  issue: 44
-  repository: 16312153
-  tombstone: 2025-09-13 19:48:57.950147673 Z
-  what: pull-was-opened
-  when: 2014-07-03 02:06:34.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572147
-  _job: 17698533250
-  _time: 2025-09-13 15:36:41.694943542 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '36'
-  details: The missing pull jcabi/jcabi-http#45 has been opened by @carlosmiranda.
-  issue: 45
-  repository: 16312153
-  tombstone: 2025-09-13 19:49:00.535589122 Z
-  what: pull-was-opened
-  when: 2014-07-10 02:36:13.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572148
-  _job: 17698533250
-  _time: 2025-09-13 15:36:42.441440908 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '47'
-  details: The missing pull jcabi/jcabi-http#48 has been opened by @carlosmiranda.
-  issue: 48
-  repository: 16312153
-  tombstone: 2025-09-13 19:49:01.171289332 Z
-  what: pull-was-opened
-  when: 2014-07-23 00:16:52.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572149
-  _job: 17698533250
-  _time: 2025-09-13 15:36:43.223854038 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '46'
-  details: The missing pull jcabi/jcabi-http#49 has been opened by @carlosmiranda.
-  issue: 49
-  repository: 16312153
-  tombstone: 2025-09-13 19:49:03.790603602 Z
-  what: pull-was-opened
-  when: 2014-07-28 14:32:02.000000000 Z
-  where: github
-  who: 1917892
-- _id: 572150
-  _job: 17698533250
-  _time: 2025-09-13 15:36:43.935879345 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '60'
-  details: The missing pull jcabi/jcabi-http#61 has been opened by @romankisilenko.
-  issue: 61
-  repository: 16312153
-  tombstone: 2025-09-13 19:49:06.315365531 Z
-  what: pull-was-opened
-  when: 2015-01-12 21:54:26.000000000 Z
-  where: github
-  who: 3440659
-- _id: 572151
-  _job: 17698533250
-  _time: 2025-09-13 15:36:44.805912999 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '62'
-  details: The missing pull jcabi/jcabi-http#65 has been opened by @maurezen.
-  issue: 65
-  repository: 16312153
-  tombstone: 2025-09-13 19:49:08.698587300 Z
-  what: pull-was-opened
-  when: 2015-01-19 11:13:36.000000000 Z
-  where: github
-  who: 569536
-- _id: 572152
-  _job: 17698533250
-  _time: 2025-09-13 15:36:45.833658659 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  branch: '82'
-  details: The missing pull jcabi/jcabi-http#83 has been opened by @dmzaytsev.
-  issue: 83
-  repository: 16312153
-  tombstone: 2025-09-13 21:46:35.923485240 Z
-  what: pull-was-opened
-  when: 2015-04-24 10:22:59.000000000 Z
-  where: github
-  who: 9972909
 - _id: 572153
   _job: 17698533250
   _time: 2025-09-13 15:36:46.690106615 Z
@@ -60578,7 +59335,7 @@
   repository: 12590813
   tombstone: 2025-09-14 05:49:23.196424779 Z
   what: dud-was-closed
-  when: *532
+  when: 2015-06-10 10:48:30.000000000 Z
   where: github
   who: 1667699
 - _id: 574486
@@ -60594,7 +59351,7 @@
   repository: 12590813
   tombstone: 2025-09-14 05:49:23.283834654 Z
   what: dud-was-closed
-  when: *533
+  when: 2015-07-19 18:23:47.000000000 Z
   where: github
   who: 4467948
 - _id: 574503
@@ -60887,7 +59644,7 @@
   review_comments: 0
   seconds: 23982
   what: code-was-contributed
-  when: *534
+  when: *532
   where: github
   who: 29139614
 - _id: 574578
@@ -63186,7 +61943,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.107729740 Z
   what: issue-was-opened
-  when: &535 2015-03-30 16:48:31.000000000 Z
+  when: &533 2015-03-30 16:48:31.000000000 Z
   where: github
   who: 1388994
 - _id: 574854
@@ -63231,7 +61988,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.426915518 Z
   what: issue-was-opened
-  when: &536 2015-06-18 16:19:40.000000000 Z
+  when: &534 2015-06-18 16:19:40.000000000 Z
   where: github
   who: 95550
 - _id: 574858
@@ -63243,7 +62000,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:33.750389032 Z
   what: issue-was-opened
-  when: &537 2015-07-08 11:53:47.000000000 Z
+  when: &535 2015-07-08 11:53:47.000000000 Z
   where: github
   who: 209396
 - _id: 574859
@@ -63255,7 +62012,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.070677214 Z
   what: issue-was-opened
-  when: &538 2015-08-04 12:28:26.000000000 Z
+  when: &536 2015-08-04 12:28:26.000000000 Z
   where: github
   who: 1667699
 - _id: 574860
@@ -63267,7 +62024,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.391710849 Z
   what: issue-was-opened
-  when: &539 2015-08-21 19:34:03.000000000 Z
+  when: &537 2015-08-21 19:34:03.000000000 Z
   where: github
   who: 1054771
 - _id: 574861
@@ -63279,7 +62036,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:34.708738056 Z
   what: issue-was-opened
-  when: &540 2015-08-28 17:56:22.000000000 Z
+  when: &538 2015-08-28 17:56:22.000000000 Z
   where: github
   who: 1054771
 - _id: 574862
@@ -63291,7 +62048,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.024188402 Z
   what: issue-was-opened
-  when: &541 2015-08-31 16:56:55.000000000 Z
+  when: &539 2015-08-31 16:56:55.000000000 Z
   where: github
   who: 4368287
 - _id: 574863
@@ -63358,7 +62115,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.361734012 Z
   what: issue-was-opened
-  when: &542 2016-05-04 10:31:31.000000000 Z
+  when: &540 2016-05-04 10:31:31.000000000 Z
   where: github
   who: 6305156
 - _id: 574869
@@ -63414,7 +62171,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.681460103 Z
   what: issue-was-opened
-  when: &543 2017-04-25 13:11:50.000000000 Z
+  when: &541 2017-04-25 13:11:50.000000000 Z
   where: github
   who: 1359384
 - _id: 574874
@@ -63426,7 +62183,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:35.998365073 Z
   what: issue-was-opened
-  when: &544 2017-04-25 14:38:15.000000000 Z
+  when: &542 2017-04-25 14:38:15.000000000 Z
   where: github
   who: 1359384
 - _id: 574875
@@ -63438,7 +62195,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.315100692 Z
   what: issue-was-opened
-  when: &545 2018-01-28 17:03:16.000000000 Z
+  when: &543 2018-01-28 17:03:16.000000000 Z
   where: github
   who: 6305156
 - _id: 574876
@@ -63461,7 +62218,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.633905798 Z
   what: issue-was-opened
-  when: &546 2018-06-13 14:05:03.000000000 Z
+  when: &544 2018-06-13 14:05:03.000000000 Z
   where: github
   who: 10466206
 - _id: 574878
@@ -63484,7 +62241,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:36.950738214 Z
   what: issue-was-opened
-  when: &547 2019-07-15 02:34:38.000000000 Z
+  when: &545 2019-07-15 02:34:38.000000000 Z
   where: github
   who: 1054771
 - _id: 574880
@@ -63496,7 +62253,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.268284687 Z
   what: issue-was-opened
-  when: &548 2019-11-03 19:31:53.000000000 Z
+  when: &546 2019-11-03 19:31:53.000000000 Z
   where: github
   who: 9504395
 - _id: 574881
@@ -63508,7 +62265,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.585029914 Z
   what: issue-was-opened
-  when: &549 2019-11-30 11:14:18.000000000 Z
+  when: &547 2019-11-30 11:14:18.000000000 Z
   where: github
   who: 1405237
 - _id: 574882
@@ -63520,7 +62277,7 @@
   repository: 16312153
   tombstone: 2025-09-14 06:58:37.903171353 Z
   what: issue-was-opened
-  when: &550 2021-03-17 17:36:22.000000000 Z
+  when: &548 2021-03-17 17:36:22.000000000 Z
   where: github
   who: 45224442
 - _id: 574883
@@ -65161,7 +63918,7 @@
   issue: 196
   repository: 12262782
   what: issue-was-closed
-  when: &551 2024-08-22 09:48:33.000000000 Z
+  when: &549 2024-08-22 09:48:33.000000000 Z
   where: github
   who: 526301
 - _id: 575051
@@ -65194,7 +63951,7 @@
   issue: 204
   repository: 12262782
   what: issue-was-closed
-  when: &552 2024-11-14 01:12:08.000000000 Z
+  when: &550 2024-11-14 01:12:08.000000000 Z
   where: github
   who: 526301
 - _id: 575054
@@ -65227,7 +63984,7 @@
   issue: 85
   repository: 16312153
   what: issue-was-closed
-  when: &553 2015-09-09 08:35:40.000000000 Z
+  when: &551 2015-09-09 08:35:40.000000000 Z
   where: github
   who: 6581896
 - _id: 575057
@@ -65398,7 +64155,7 @@
   issue: 51
   repository: 12587702
   what: issue-was-closed
-  when: &554 2016-11-22 07:48:25.000000000 Z
+  when: &552 2016-11-22 07:48:25.000000000 Z
   where: github
   who: 20211331
 - _id: 575082
@@ -65420,7 +64177,7 @@
   issue: 61
   repository: 13717355
   what: issue-was-closed
-  when: &555 2022-08-09 04:24:10.000000000 Z
+  when: &553 2022-08-09 04:24:10.000000000 Z
   where: github
   who: 526301
 - _id: 575084
@@ -65442,7 +64199,7 @@
   issue: 62
   repository: 13717355
   what: issue-was-closed
-  when: &556 2015-06-12 01:52:53.000000000 Z
+  when: &554 2015-06-12 01:52:53.000000000 Z
   where: github
   who: 526301
 - _id: 575087
@@ -65464,7 +64221,7 @@
   issue: 74
   repository: 13717355
   what: issue-was-closed
-  when: &557 2016-11-21 19:21:09.000000000 Z
+  when: &555 2016-11-21 19:21:09.000000000 Z
   where: github
   who: 526301
 - _id: 575091
@@ -65487,7 +64244,7 @@
   issue: 94
   repository: 13717355
   what: issue-was-closed
-  when: &558 2016-01-06 01:24:38.000000000 Z
+  when: &556 2016-01-06 01:24:38.000000000 Z
   where: github
   who: 1917892
 - _id: 575094
@@ -65520,7 +64277,7 @@
   issue: 96
   repository: 13717355
   what: issue-was-closed
-  when: &559 2016-03-02 06:30:54.000000000 Z
+  when: &557 2016-03-02 06:30:54.000000000 Z
   where: github
   who: 1405237
 - _id: 575097
@@ -65542,7 +64299,7 @@
   issue: 98
   repository: 13717355
   what: issue-was-closed
-  when: &560 2016-01-30 07:33:08.000000000 Z
+  when: &558 2016-01-30 07:33:08.000000000 Z
   where: github
   who: 1405237
 - _id: 575100
@@ -65564,7 +64321,7 @@
   issue: 99
   repository: 13717355
   what: issue-was-closed
-  when: &561 2016-01-26 06:52:24.000000000 Z
+  when: &559 2016-01-26 06:52:24.000000000 Z
   where: github
   who: 1405237
 - _id: 575104
@@ -65682,7 +64439,7 @@
   issue: 185
   repository: 13717355
   what: issue-was-closed
-  when: &562 2022-11-03 15:25:34.000000000 Z
+  when: &560 2022-11-03 15:25:34.000000000 Z
   where: github
   who: 40247101
 - _id: 575132
@@ -66444,7 +65201,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2014-03-21 07:57:54.000000000 Z
+  when: &572 2014-03-21 07:57:54.000000000 Z
   where: github
   who: 526301
 - _id: 575256
@@ -66456,7 +65213,7 @@
   label: enhancement
   repository: 13717355
   what: label-was-attached
-  when: &563 2014-08-18 04:51:49.000000000 Z
+  when: &561 2014-08-18 04:51:49.000000000 Z
   where: github
   who: 526301
 - _id: 575257
@@ -66468,7 +65225,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2014-08-18 04:51:51.000000000 Z
+  when: &573 2014-08-18 04:51:51.000000000 Z
   where: github
   who: 526301
 - _id: 575258
@@ -66492,7 +65249,7 @@
   label: enhancement
   repository: 12587702
   what: label-was-attached
-  when: &564 2014-04-02 11:08:21.000000000 Z
+  when: &562 2014-04-02 11:08:21.000000000 Z
   where: github
   who: 526301
 - _id: 575260
@@ -66504,7 +65261,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2014-08-21 06:17:05.000000000 Z
+  when: &574 2014-08-21 06:17:05.000000000 Z
   where: github
   who: 526301
 - _id: 575261
@@ -66516,7 +65273,7 @@
   label: enhancement
   repository: 13717355
   what: label-was-attached
-  when: &565 2014-08-21 06:17:06.000000000 Z
+  when: &563 2014-08-21 06:17:06.000000000 Z
   where: github
   who: 526301
 - _id: 575262
@@ -66528,7 +65285,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-06-23 21:10:15.000000000 Z
+  when: &575 2015-06-23 21:10:15.000000000 Z
   where: github
   who: 526301
 - _id: 575263
@@ -66540,7 +65297,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2014-06-13 05:17:56.000000000 Z
+  when: &576 2014-06-13 05:17:56.000000000 Z
   where: github
   who: 526301
 - _id: 575264
@@ -66552,7 +65309,7 @@
   label: enhancement
   repository: 13717355
   what: label-was-attached
-  when: &566 2014-10-27 19:51:16.000000000 Z
+  when: &564 2014-10-27 19:51:16.000000000 Z
   where: github
   who: 526301
 - _id: 575265
@@ -66564,7 +65321,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-05-11 01:53:37.000000000 Z
+  when: &577 2015-05-11 01:53:37.000000000 Z
   where: github
   who: 526301
 - _id: 575266
@@ -66576,7 +65333,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2014-06-26 19:53:24.000000000 Z
+  when: &578 2014-06-26 19:53:24.000000000 Z
   where: github
   who: 526301
 - _id: 575267
@@ -66588,7 +65345,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-01-02 13:00:29.000000000 Z
+  when: &579 2015-01-02 13:00:29.000000000 Z
   where: github
   who: 526301
 - _id: 575268
@@ -66600,7 +65357,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-06-23 21:16:57.000000000 Z
+  when: &580 2015-06-23 21:16:57.000000000 Z
   where: github
   who: 526301
 - _id: 575269
@@ -66612,7 +65369,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2015-01-02 14:37:26.000000000 Z
+  when: &581 2015-01-02 14:37:26.000000000 Z
   where: github
   who: 526301
 - _id: 575270
@@ -66624,7 +65381,7 @@
   label: enhancement
   repository: 12587702
   what: label-was-attached
-  when: &567 2015-01-02 14:37:27.000000000 Z
+  when: &565 2015-01-02 14:37:27.000000000 Z
   where: github
   who: 526301
 - _id: 575271
@@ -66636,7 +65393,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2015-01-10 14:59:36.000000000 Z
+  when: &582 2015-01-10 14:59:36.000000000 Z
   where: github
   who: 526301
 - _id: 575272
@@ -66648,7 +65405,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-01-21 17:23:37.000000000 Z
+  when: &583 2015-01-21 17:23:37.000000000 Z
   where: github
   who: 526301
 - _id: 575273
@@ -66660,7 +65417,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2016-07-07 22:37:10.000000000 Z
+  when: &584 2016-07-07 22:37:10.000000000 Z
   where: github
   who: 526301
 - _id: 575274
@@ -66672,7 +65429,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-12-09 13:59:38.000000000 Z
+  when: &585 2015-12-09 13:59:38.000000000 Z
   where: github
   who: 5993843
 - _id: 575275
@@ -66684,7 +65441,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2016-11-22 05:28:11.000000000 Z
+  when: &586 2016-11-22 05:28:11.000000000 Z
   where: github
   who: 526301
 - _id: 575276
@@ -66708,7 +65465,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-01-26 03:55:05.000000000 Z
+  when: &587 2016-01-26 03:55:05.000000000 Z
   where: github
   who: 526301
 - _id: 575278
@@ -66720,7 +65477,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-03-24 07:06:59.000000000 Z
+  when: &588 2015-03-24 07:06:59.000000000 Z
   where: github
   who: 5993843
 - _id: 575279
@@ -66732,7 +65489,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-01-29 21:07:52.000000000 Z
+  when: &589 2016-01-29 21:07:52.000000000 Z
   where: github
   who: 526301
 - _id: 575280
@@ -66744,7 +65501,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-04-18 15:06:08.000000000 Z
+  when: &590 2016-04-18 15:06:08.000000000 Z
   where: github
   who: 526301
 - _id: 575281
@@ -66756,7 +65513,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-11-13 08:27:30.000000000 Z
+  when: &591 2015-11-13 08:27:30.000000000 Z
   where: github
   who: 5993843
 - _id: 575282
@@ -66768,7 +65525,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2020-07-08 12:34:27.000000000 Z
+  when: &592 2020-07-08 12:34:27.000000000 Z
   where: github
   who: 49783909
 - _id: 575283
@@ -66780,7 +65537,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-12-10 10:16:16.000000000 Z
+  when: &593 2015-12-10 10:16:16.000000000 Z
   where: github
   who: 526301
 - _id: 575284
@@ -66792,7 +65549,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2019-05-05 18:07:42.000000000 Z
+  when: &594 2019-05-05 18:07:42.000000000 Z
   where: github
   who: 526301
 - _id: 575285
@@ -66804,7 +65561,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-12-18 11:33:30.000000000 Z
+  when: &595 2015-12-18 11:33:30.000000000 Z
   where: github
   who: 526301
 - _id: 575286
@@ -66816,7 +65573,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-06-23 00:21:55.000000000 Z
+  when: &596 2016-06-23 00:21:55.000000000 Z
   where: github
   who: 526301
 - _id: 575287
@@ -66828,7 +65585,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-12-21 08:40:06.000000000 Z
+  when: &597 2015-12-21 08:40:06.000000000 Z
   where: github
   who: 526301
 - _id: 575288
@@ -66840,7 +65597,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-11-22 12:14:27.000000000 Z
+  when: &598 2016-11-22 12:14:27.000000000 Z
   where: github
   who: 526301
 - _id: 575289
@@ -66852,7 +65609,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-12-23 06:42:24.000000000 Z
+  when: &599 2015-12-23 06:42:24.000000000 Z
   where: github
   who: 526301
 - _id: 575290
@@ -66864,7 +65621,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-11-21 20:50:48.000000000 Z
+  when: &600 2016-11-21 20:50:48.000000000 Z
   where: github
   who: 526301
 - _id: 575291
@@ -66876,7 +65633,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-01-06 11:31:17.000000000 Z
+  when: &601 2016-01-06 11:31:17.000000000 Z
   where: github
   who: 526301
 - _id: 575292
@@ -66888,7 +65645,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2017-01-07 04:20:45.000000000 Z
+  when: &602 2017-01-07 04:20:45.000000000 Z
   where: github
   who: 526301
 - _id: 575293
@@ -66900,7 +65657,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2023-06-10 05:28:32.000000000 Z
+  when: &603 2023-06-10 05:28:32.000000000 Z
   where: github
   who: 526301
 - _id: 575294
@@ -66912,7 +65669,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-01-29 22:15:16.000000000 Z
+  when: &604 2016-01-29 22:15:16.000000000 Z
   where: github
   who: 526301
 - _id: 575295
@@ -66924,7 +65681,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-04-18 14:50:30.000000000 Z
+  when: &605 2016-04-18 14:50:30.000000000 Z
   where: github
   who: 526301
 - _id: 575296
@@ -66936,7 +65693,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-04-04 19:17:11.000000000 Z
+  when: &606 2016-04-04 19:17:11.000000000 Z
   where: github
   who: 526301
 - _id: 575297
@@ -66948,7 +65705,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-11-21 20:50:09.000000000 Z
+  when: &607 2016-11-21 20:50:09.000000000 Z
   where: github
   who: 526301
 - _id: 575298
@@ -66960,7 +65717,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2016-11-21 15:19:09.000000000 Z
+  when: &608 2016-11-21 15:19:09.000000000 Z
   where: github
   who: 526301
 - _id: 575299
@@ -66972,7 +65729,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2020-07-09 02:26:44.000000000 Z
+  when: &609 2020-07-09 02:26:44.000000000 Z
   where: github
   who: 49783909
 - _id: 575300
@@ -66984,7 +65741,7 @@
   label: bug
   repository: 12587702
   what: label-was-attached
-  when: 2023-06-10 05:33:20.000000000 Z
+  when: &610 2023-06-10 05:33:20.000000000 Z
   where: github
   who: 526301
 - _id: 575301
@@ -66996,7 +65753,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2018-12-25 15:05:16.000000000 Z
+  when: &611 2018-12-25 15:05:16.000000000 Z
   where: github
   who: 526301
 - _id: 575302
@@ -67008,7 +65765,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2022-10-18 16:34:37.000000000 Z
+  when: &612 2022-10-18 16:34:37.000000000 Z
   where: github
   who: 526301
 - _id: 575305
@@ -71194,7 +69951,7 @@
   issue: 107
   repository: 13717355
   what: issue-was-opened
-  when: 2016-01-16 06:38:42.000000000 Z
+  when: &627 2016-01-16 06:38:42.000000000 Z
   where: github
   who: 9972909
 - _id: 575638
@@ -71205,7 +69962,7 @@
   issue: 106
   repository: 13717355
   what: issue-was-opened
-  when: 2016-01-10 11:54:57.000000000 Z
+  when: &628 2016-01-10 11:54:57.000000000 Z
   where: github
   who: 1405237
 - _id: 575639
@@ -71216,7 +69973,7 @@
   issue: 102
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-25 07:31:19.000000000 Z
+  when: &629 2015-12-25 07:31:19.000000000 Z
   where: github
   who: 1405237
 - _id: 575640
@@ -71227,7 +69984,7 @@
   issue: 101
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-24 08:13:50.000000000 Z
+  when: &630 2015-12-24 08:13:50.000000000 Z
   where: github
   who: 1405237
 - _id: 575641
@@ -71238,7 +69995,7 @@
   issue: 100
   repository: 13717355
   what: issue-was-opened
-  when: 2015-12-23 07:13:42.000000000 Z
+  when: &631 2015-12-23 07:13:42.000000000 Z
   where: github
   who: 1405237
 - _id: 575642
@@ -71293,7 +70050,7 @@
   issue: 66
   repository: 13717355
   what: issue-was-opened
-  when: 2015-06-10 10:43:03.000000000 Z
+  when: &632 2015-06-10 10:43:03.000000000 Z
   where: github
   who: 1667699
 - _id: 575647
@@ -72634,230 +71391,6 @@
   repository: 12591356
   what: iterate
   where: github
-- _id: 575835
-  _job: 37726
-  _time: 2025-09-14 05:49:31.772838578 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #4637784 submitted the issue #68
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:28.608276813 Z
-  issue: 68
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.245676914 Z
-  what: dud-was-closed
-  when: 2015-06-23 12:57:10.000000000 Z
-  where: github
-  who: 4637784
-- _id: 575836
-  _job: 37726
-  _time: 2025-09-14 05:49:31.880238957 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #984052 submitted the issue #113
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:28.927489720 Z
-  issue: 113
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.340920886 Z
-  what: dud-was-closed
-  when: 2016-02-19 00:00:58.000000000 Z
-  where: github
-  who: 984052
-- _id: 575837
-  _job: 37726
-  _time: 2025-09-14 05:49:32.026787493 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #7222462 submitted the issue #130
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:29.243306559 Z
-  issue: 130
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.473841129 Z
-  what: dud-was-closed
-  when: 2017-03-17 12:41:44.000000000 Z
-  where: github
-  who: 7222462
-- _id: 575838
-  _job: 37726
-  _time: 2025-09-14 05:49:32.126090809 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #1714171 submitted the issue #133
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:29.564856920 Z
-  issue: 133
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.569735371 Z
-  what: dud-was-closed
-  when: 2017-04-28 16:05:00.000000000 Z
-  where: github
-  who: 1714171
-- _id: 575839
-  _job: 37726
-  _time: 2025-09-14 05:49:32.224919981 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #502372 submitted the issue #149
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:29.887262170 Z
-  issue: 149
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.665176219 Z
-  what: dud-was-closed
-  when: 2019-01-11 23:07:11.000000000 Z
-  where: github
-  who: 502372
-- _id: 575840
-  _job: 37726
-  _time: 2025-09-14 05:49:32.321803509 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #1405237 submitted the issue #151
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:30.206501291 Z
-  issue: 151
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.759677957 Z
-  what: dud-was-closed
-  when: 2019-02-18 16:20:52.000000000 Z
-  where: github
-  who: 1405237
-- _id: 575841
-  _job: 37726
-  _time: 2025-09-14 05:49:32.419285990 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #298504 submitted the issue #153
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:30.528217029 Z
-  issue: 153
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.855424525 Z
-  what: dud-was-closed
-  when: 2020-02-06 08:51:32.000000000 Z
-  where: github
-  who: 298504
-- _id: 575842
-  _job: 37726
-  _time: 2025-09-14 05:49:32.524446759 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #9504395 submitted the issue #154
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:30.847265968 Z
-  issue: 154
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:45.950046635 Z
-  what: dud-was-closed
-  when: 2020-03-05 15:37:15.000000000 Z
-  where: github
-  who: 9504395
-- _id: 575843
-  _job: 37726
-  _time: 2025-09-14 05:49:32.624706493 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #5004037 submitted the issue #162
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:31.163369102 Z
-  issue: 162
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.045085574 Z
-  what: dud-was-closed
-  when: 2021-09-16 16:14:01.000000000 Z
-  where: github
-  who: 5004037
-- _id: 575844
-  _job: 37726
-  _time: 2025-09-14 05:49:32.721928180 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #33983579 submitted the issue #169
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:31.480395620 Z
-  issue: 169
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.139859054 Z
-  what: dud-was-closed
-  when: 2022-08-22 05:46:07.000000000 Z
-  where: github
-  who: 33983579
-- _id: 575845
-  _job: 37726
-  _time: 2025-09-14 05:49:32.818875130 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 8086956
-  details: 'In the repository #13717355, the user #51804353 submitted the issue #211
-    which was later closed by the user #8086956 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:31.800858163 Z
-  issue: 211
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.234517186 Z
-  what: dud-was-closed
-  when: 2023-07-17 10:13:51.000000000 Z
-  where: github
-  who: 51804353
-- _id: 575846
-  _job: 37726
-  _time: 2025-09-14 05:49:32.916383788 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 8086956
-  details: 'In the repository #13717355, the user #51804353 submitted the issue #215
-    which was later closed by the user #8086956 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:32.119572390 Z
-  issue: 215
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.329735970 Z
-  what: dud-was-closed
-  when: 2023-07-19 14:20:33.000000000 Z
-  where: github
-  who: 51804353
-- _id: 575847
-  _job: 37726
-  _time: 2025-09-14 05:49:33.024995669 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 526301
-  details: 'In the repository #13717355, the user #46355873 submitted the issue #244
-    which was later closed by the user #526301 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:32.438237103 Z
-  issue: 244
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.425742751 Z
-  what: dud-was-closed
-  when: 2024-04-16 20:09:20.000000000 Z
-  where: github
-  who: 46355873
-- _id: 575848
-  _job: 37726
-  _time: 2025-09-14 05:49:33.122606637 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 8086956
-  details: 'In the repository #13717355, the user #37025995 submitted the issue #282
-    which was later closed by the user #8086956 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:32.756201789 Z
-  issue: 282
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:46.520839938 Z
-  what: dud-was-closed
-  when: 2024-12-23 09:22:02.000000000 Z
-  where: github
-  who: 37025995
 - _id: 575849
   _job: 37726
   _time: 2025-09-14 05:49:33.219807887 Z
@@ -72871,7 +71404,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.615627706 Z
   what: dud-was-closed
-  when: *535
+  when: *533
   where: github
   who: 1388994
 - _id: 575850
@@ -72887,7 +71420,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.711082187 Z
   what: dud-was-closed
-  when: *536
+  when: *534
   where: github
   who: 95550
 - _id: 575851
@@ -72903,7 +71436,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.843913671 Z
   what: dud-was-closed
-  when: *537
+  when: *535
   where: github
   who: 209396
 - _id: 575852
@@ -72919,7 +71452,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:46.939543475 Z
   what: dud-was-closed
-  when: *538
+  when: *536
   where: github
   who: 1667699
 - _id: 575853
@@ -72935,7 +71468,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.035050167 Z
   what: dud-was-closed
-  when: *539
+  when: *537
   where: github
   who: 1054771
 - _id: 575854
@@ -72951,7 +71484,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.131001918 Z
   what: dud-was-closed
-  when: *540
+  when: *538
   where: github
   who: 1054771
 - _id: 575855
@@ -72967,7 +71500,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.226878726 Z
   what: dud-was-closed
-  when: *541
+  when: *539
   where: github
   who: 4368287
 - _id: 575856
@@ -72983,7 +71516,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.322845396 Z
   what: dud-was-closed
-  when: *542
+  when: *540
   where: github
   who: 6305156
 - _id: 575857
@@ -72999,7 +71532,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.418887675 Z
   what: dud-was-closed
-  when: *543
+  when: *541
   where: github
   who: 1359384
 - _id: 575858
@@ -73015,7 +71548,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.515235977 Z
   what: dud-was-closed
-  when: *544
+  when: *542
   where: github
   who: 1359384
 - _id: 575859
@@ -73031,7 +71564,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.612026136 Z
   what: dud-was-closed
-  when: *545
+  when: *543
   where: github
   who: 6305156
 - _id: 575860
@@ -73047,7 +71580,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.707819704 Z
   what: dud-was-closed
-  when: *546
+  when: *544
   where: github
   who: 10466206
 - _id: 575861
@@ -73063,7 +71596,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.803485737 Z
   what: dud-was-closed
-  when: *547
+  when: *545
   where: github
   who: 1054771
 - _id: 575862
@@ -73079,7 +71612,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.898211670 Z
   what: dud-was-closed
-  when: *548
+  when: *546
   where: github
   who: 9504395
 - _id: 575863
@@ -73095,7 +71628,7 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:47.993428313 Z
   what: dud-was-closed
-  when: *549
+  when: *547
   where: github
   who: 1405237
 - _id: 575864
@@ -73111,25 +71644,9 @@
   repository: 16312153
   tombstone: 2025-09-14 08:53:48.089134276 Z
   what: dud-was-closed
-  when: *550
+  when: *548
   where: github
   who: 45224442
-- _id: 575865
-  _job: 37726
-  _time: 2025-09-14 05:49:34.865250726 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  closer: 8086956
-  details: 'In the repository #13717355, the user #24456188 submitted the issue #213
-    which was later closed by the user #8086956 not becoming a bug or enhancement;
-    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
-  done: 2025-09-14 06:58:38.186394187 Z
-  issue: 213
-  repository: 13717355
-  tombstone: 2025-09-14 08:53:48.222044526 Z
-  what: dud-was-closed
-  when: 2023-07-18 17:44:02.000000000 Z
-  where: github
-  who: 24456188
 - _id: 575878
   _job: 17707632488
   _time: 2025-09-14 06:53:56.775735600 Z
@@ -73151,7 +71668,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-01-19 22:02:34.000000000 Z
+  when: &613 2015-01-19 22:02:34.000000000 Z
   where: github
   who: 526301
 - _id: 575880
@@ -73163,7 +71680,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2015-02-13 18:32:37.000000000 Z
+  when: &614 2015-02-13 18:32:37.000000000 Z
   where: github
   who: 526301
 - _id: 575881
@@ -73175,7 +71692,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-04-23 19:00:00.000000000 Z
+  when: &615 2015-04-23 19:00:00.000000000 Z
   where: github
   who: 526301
 - _id: 575882
@@ -73187,7 +71704,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &568 2015-04-23 19:00:00.000000000 Z
+  when: &566 2015-04-23 19:00:00.000000000 Z
   where: github
   who: 526301
 - _id: 575883
@@ -73199,7 +71716,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-06-23 21:06:46.000000000 Z
+  when: &616 2015-06-23 21:06:46.000000000 Z
   where: github
   who: 526301
 - _id: 575884
@@ -73211,7 +71728,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &569 2015-06-23 21:06:46.000000000 Z
+  when: &567 2015-06-23 21:06:46.000000000 Z
   where: github
   who: 526301
 - _id: 575885
@@ -73223,7 +71740,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-06-23 21:07:51.000000000 Z
+  when: &617 2015-06-23 21:07:51.000000000 Z
   where: github
   who: 526301
 - _id: 575886
@@ -73235,7 +71752,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &570 2015-06-23 21:07:51.000000000 Z
+  when: &568 2015-06-23 21:07:51.000000000 Z
   where: github
   who: 526301
 - _id: 575887
@@ -73247,7 +71764,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-06-23 21:00:56.000000000 Z
+  when: &618 2015-06-23 21:00:56.000000000 Z
   where: github
   who: 526301
 - _id: 575888
@@ -73259,7 +71776,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &571 2015-06-23 21:00:56.000000000 Z
+  when: &569 2015-06-23 21:00:56.000000000 Z
   where: github
   who: 526301
 - _id: 575889
@@ -73271,7 +71788,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-09-13 11:19:33.000000000 Z
+  when: &619 2015-09-13 11:19:33.000000000 Z
   where: github
   who: 526301
 - _id: 575890
@@ -73283,7 +71800,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &572 2015-09-13 11:19:33.000000000 Z
+  when: &570 2015-09-13 11:19:33.000000000 Z
   where: github
   who: 526301
 - _id: 575892
@@ -73295,7 +71812,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2015-09-29 20:25:52.000000000 Z
+  when: &620 2015-09-29 20:25:52.000000000 Z
   where: github
   who: 526301
 - _id: 575893
@@ -73307,7 +71824,7 @@
   label: enhancement
   repository: 16312153
   what: label-was-attached
-  when: &573 2015-09-29 20:25:52.000000000 Z
+  when: &571 2015-09-29 20:25:52.000000000 Z
   where: github
   who: 526301
 - _id: 575894
@@ -73319,7 +71836,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-06-27 21:02:04.000000000 Z
+  when: &621 2016-06-27 21:02:04.000000000 Z
   where: github
   who: 526301
 - _id: 575895
@@ -73331,7 +71848,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-06-27 21:11:21.000000000 Z
+  when: &622 2016-06-27 21:11:21.000000000 Z
   where: github
   who: 526301
 - _id: 575896
@@ -73343,7 +71860,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2016-06-27 21:01:25.000000000 Z
+  when: &623 2016-06-27 21:01:25.000000000 Z
   where: github
   who: 526301
 - _id: 575897
@@ -73355,7 +71872,7 @@
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2020-07-08 16:21:08.000000000 Z
+  when: &624 2020-07-08 16:21:08.000000000 Z
   where: github
   who: 49783909
 - _id: 575898
@@ -73466,7 +71983,7 @@
   issue: 37
   repository: 12587702
   what: issue-was-opened
-  when: 2015-01-21 22:51:51.000000000 Z
+  when: &633 2015-01-21 22:51:51.000000000 Z
   where: github
   who: 569536
 - _id: 575926
@@ -75891,7 +74408,7 @@
   issue: 34
   repository: 16312153
   what: issue-was-opened
-  when: 2014-06-06 22:19:19.000000000 Z
+  when: &634 2014-06-06 22:19:19.000000000 Z
   where: github
   who: 7406247
 - _id: 576131
@@ -75993,7 +74510,7 @@
   issue: 64
   repository: 16312153
   what: issue-was-opened
-  when: 2015-01-18 14:06:08.000000000 Z
+  when: &635 2015-01-18 14:06:08.000000000 Z
   where: github
   who: 2175702
 - _id: 576140
@@ -80356,7 +78873,7 @@
   repository: 12262782
   seconds: 4136
   what: bug-was-resolved
-  when: *551
+  when: *549
   where: github
   who: 526301
 - _id: 576442
@@ -80373,7 +78890,7 @@
   repository: 12262782
   seconds: 4223
   what: bug-was-resolved
-  when: *552
+  when: *550
   where: github
   who: 526301
 - _id: 576443
@@ -80390,7 +78907,7 @@
   repository: 16312153
   seconds: 7850246
   what: bug-was-resolved
-  when: *553
+  when: *551
   where: github
   who: 1667699
 - _id: 576444
@@ -80407,7 +78924,7 @@
   repository: 12587702
   seconds: 9159735
   what: bug-was-resolved
-  when: *554
+  when: *552
   where: github
   who: 6305156
 - _id: 576445
@@ -80424,7 +78941,7 @@
   repository: 13717355
   seconds: 216226264
   what: bug-was-resolved
-  when: *555
+  when: *553
   where: github
   who: 1182139
 - _id: 576446
@@ -80441,7 +78958,7 @@
   repository: 13717355
   seconds: 582977
   what: bug-was-resolved
-  when: *556
+  when: *554
   where: github
   who: 4467948
 - _id: 576447
@@ -80458,7 +78975,7 @@
   repository: 13717355
   seconds: 7900873
   what: bug-was-resolved
-  when: *557
+  when: *555
   where: github
   who: 6305156
 - _id: 576448
@@ -80475,7 +78992,7 @@
   repository: 13717355
   seconds: 55003
   what: bug-was-resolved
-  when: *558
+  when: *556
   where: github
   who: 9972909
 - _id: 576449
@@ -80492,7 +79009,7 @@
   repository: 13717355
   seconds: 1981942
   what: bug-was-resolved
-  when: *559
+  when: *557
   where: github
   who: 6305156
 - _id: 576450
@@ -80509,7 +79026,7 @@
   repository: 13717355
   seconds: 335753
   what: bug-was-resolved
-  when: *560
+  when: *558
   where: github
   who: 6010247
 - _id: 576451
@@ -80526,7 +79043,7 @@
   repository: 13717355
   seconds: 594803
   what: bug-was-resolved
-  when: *561
+  when: *559
   where: github
   who: 6010247
 - _id: 576452
@@ -80543,7 +79060,7 @@
   repository: 13717355
   seconds: 38724
   what: bug-was-resolved
-  when: *562
+  when: *560
   where: github
   who: 526301
 - _id: 576461
@@ -80675,7 +79192,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2023-06-02 09:35:56.000000000 Z
+  when: &625 2023-06-02 09:35:56.000000000 Z
   where: github
   who: 526301
 - _id: 576475
@@ -80711,7 +79228,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2024-12-04 14:44:10.000000000 Z
+  when: &626 2024-12-04 14:44:10.000000000 Z
   where: github
   who: 526301
 - _id: 576481
@@ -81525,7 +80042,7 @@
   issue: 87
   repository: 16312153
   what: issue-was-closed
-  when: 2016-11-21 20:32:17.000000000 Z
+  when: &636 2016-11-21 20:32:17.000000000 Z
   where: github
   who: 1054771
 - _id: 576555
@@ -81558,7 +80075,7 @@
   issue: 89
   repository: 16312153
   what: issue-was-closed
-  when: 2016-01-26 04:33:32.000000000 Z
+  when: &637 2016-01-26 04:33:32.000000000 Z
   where: github
   who: 419884
 - _id: 576558
@@ -81602,7 +80119,7 @@
   issue: 90
   repository: 16312153
   what: issue-was-closed
-  when: 2016-01-16 09:39:06.000000000 Z
+  when: &638 2016-01-16 09:39:06.000000000 Z
   where: github
   who: 419884
 - _id: 576562
@@ -82075,7 +80592,7 @@
   issue: 137
   repository: 16312153
   what: issue-was-closed
-  when: 2018-01-10 21:22:54.000000000 Z
+  when: &639 2018-01-10 21:22:54.000000000 Z
   where: github
   who: 5598124
 - _id: 576605
@@ -82119,7 +80636,7 @@
   issue: 138
   repository: 16312153
   what: issue-was-closed
-  when: 2021-06-28 02:46:49.000000000 Z
+  when: &640 2021-06-28 02:46:49.000000000 Z
   where: github
   who: 49783909
 - _id: 576609
@@ -87131,7 +85648,7 @@
   reporter: 1917892
   repository: 13717355
   what: enhancement-was-accepted
-  when: *563
+  when: *561
   where: github
   who: 526301
 - _id: 576886
@@ -87145,7 +85662,7 @@
   reporter: 1917892
   repository: 12587702
   what: enhancement-was-accepted
-  when: *564
+  when: *562
   where: github
   who: 526301
 - _id: 576887
@@ -87159,7 +85676,7 @@
   reporter: 1917892
   repository: 13717355
   what: enhancement-was-accepted
-  when: *565
+  when: *563
   where: github
   who: 526301
 - _id: 576888
@@ -87173,7 +85690,7 @@
   reporter: 105730
   repository: 13717355
   what: enhancement-was-accepted
-  when: *566
+  when: *564
   where: github
   who: 526301
 - _id: 576889
@@ -87187,7 +85704,7 @@
   reporter: 1388994
   repository: 12587702
   what: enhancement-was-accepted
-  when: *567
+  when: *565
   where: github
   who: 526301
 - _id: 576890
@@ -87201,7 +85718,7 @@
   reporter: 9972909
   repository: 16312153
   what: enhancement-was-accepted
-  when: *568
+  when: *566
   where: github
   who: 526301
 - _id: 576891
@@ -87215,7 +85732,7 @@
   reporter: 1054771
   repository: 16312153
   what: enhancement-was-accepted
-  when: *569
+  when: *567
   where: github
   who: 526301
 - _id: 576892
@@ -87229,7 +85746,7 @@
   reporter: 419884
   repository: 16312153
   what: enhancement-was-accepted
-  when: *570
+  when: *568
   where: github
   who: 526301
 - _id: 576893
@@ -87243,7 +85760,7 @@
   reporter: 419884
   repository: 16312153
   what: enhancement-was-accepted
-  when: *571
+  when: *569
   where: github
   who: 526301
 - _id: 576894
@@ -87257,7 +85774,7 @@
   reporter: 1388994
   repository: 16312153
   what: enhancement-was-accepted
-  when: *572
+  when: *570
   where: github
   who: 526301
 - _id: 576895
@@ -87271,70 +85788,9 @@
   reporter: 105730
   repository: 16312153
   what: enhancement-was-accepted
-  when: *573
+  when: *571
   where: github
   who: 526301
-- _id: 576896
-  _job: 37741
-  _time: 2025-09-14 08:53:50.321575313 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-160
-  - 164-165
-  - 167-177
-  - 179-193
-  - 195-201
-  - 203-221
-  - 224-249
-  - '252'
-  - '257'
-  - 259-269
-  - 271-319
-  - 321-346
-  - 348-490
-  - 492-507
-  - 509-523
-  - 525-538
-  - '540'
-  - 543-549
-  - '569'
-  repository: 16312153
-  what: tombstone
-  where: github
-- _id: 576897
-  _job: 37741
-  _time: 2025-09-14 08:53:52.128867237 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-80
-  - '82'
-  - 84-116
-  - 118-145
-  - 147-190
-  - 192-486
-  - 488-572
-  repository: 12590813
-  what: tombstone
-  where: github
-- _id: 576898
-  _job: 37741
-  _time: 2025-09-14 08:53:53.930849823 Z
-  _version: 0.16.4/0.53.8/0.15.42
-  issues:
-  - 1-104
-  - 106-127
-  - 129-133
-  - 135-142
-  - 144-147
-  - 149-176
-  - 178-223
-  - 225-239
-  - 241-247
-  - 250-286
-  - '298'
-  repository: 13717355
-  what: tombstone
-  where: github
 - _id: 576899
   _job: 37741
   _time: 2025-09-14 08:53:55.821300020 Z
@@ -87443,16 +85899,6 @@
   - '127'
   repository: 19194296
   what: tombstone
-  where: github
-- _id: 576908
-  _job: 17709334576
-  _time: 2025-09-14 09:31:48.077694612 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  events_were_scanned: 54659961689
-  min_issue_was_found: 0
-  min_pull_was_found: 373
-  repository: 4174608
-  what: iterate
   where: github
 - _id: 576909
   _job: 17709334576
@@ -87583,7 +86029,7 @@
   issue: 276
   repository: 13717355
   what: issue-was-closed
-  when: 2024-12-01 13:38:16.000000000 Z
+  when: &641 2024-12-01 13:38:16.000000000 Z
   where: github
   who: 526301
 - _id: 576926
@@ -87723,21 +86169,6 @@
   repository: 12591138
   what: iterate
   where: github
-- _id: 576933
-  _job: 17709334576
-  _time: 2025-09-14 09:45:59.775204745 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 54362221664
-  issues_were_scanned: 0
-  labels_were_scanned: 0
-  merges_were_scanned: 24
-  min_issue_was_found: 43
-  min_pull_was_found: 355
-  repository: 13717355
-  types_were_scanned: 145
-  what: iterate
-  where: github
 - _id: 576934
   _job: 17709334576
   _time: 2025-09-14 09:45:59.895010198 Z
@@ -87792,21 +86223,6 @@
   repository: 16403286
   what: iterate
   where: github
-- _id: 576939
-  _job: 17709334576
-  _time: 2025-09-14 09:46:00.478452307 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 53449773369
-  issues_were_scanned: 0
-  labels_were_scanned: 0
-  merges_were_scanned: 375
-  min_issue_was_found: 74
-  min_pull_was_found: 554
-  repository: 16312153
-  types_were_scanned: 170
-  what: iterate
-  where: github
 - _id: 576940
   _job: 17709334576
   _time: 2025-09-14 09:46:00.592539136 Z
@@ -87816,21 +86232,6 @@
   min_issue_was_found: 36
   min_pull_was_found: 38
   repository: 15208785
-  what: iterate
-  where: github
-- _id: 576941
-  _job: 17709334576
-  _time: 2025-09-14 09:46:00.703925165 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  assignees_were_scanned: 0
-  events_were_scanned: 54360655730
-  issues_were_scanned: 0
-  labels_were_scanned: 228
-  merges_were_scanned: 295
-  min_issue_was_found: 81
-  min_pull_was_found: 18
-  repository: 12590813
-  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 576942
@@ -88001,3 +86402,1625 @@
   repository: 13624455
   what: iterate
   where: github
+- _id: 576957
+  _job: 37746
+  _time: 2025-09-14 09:47:00.309932452 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#17 reported by
+    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
+  issue: 17
+  reporter: 1917892
+  repository: 12587702
+  what: bug-was-accepted
+  when: *572
+  where: github
+  who: 526301
+- _id: 576958
+  _job: 37746
+  _time: 2025-09-14 09:47:00.807621536 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#31 reported by
+    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
+  issue: 31
+  reporter: 1917892
+  repository: 13717355
+  what: bug-was-accepted
+  when: *573
+  where: github
+  who: 526301
+- _id: 576959
+  _job: 37746
+  _time: 2025-09-14 09:47:01.119214065 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#32 reported by
+    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
+  issue: 32
+  reporter: 1917892
+  repository: 13717355
+  what: bug-was-accepted
+  when: *574
+  where: github
+  who: 526301
+- _id: 576960
+  _job: 37746
+  _time: 2025-09-14 09:47:01.235370401 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#84 reported by
+    @alehvasilyeu; this means that a bug was accepted as valid, by the project team."
+  issue: 84
+  reporter: 2071500
+  repository: 16312153
+  what: bug-was-accepted
+  when: *575
+  where: github
+  who: 526301
+- _id: 576961
+  _job: 37746
+  _time: 2025-09-14 09:47:01.613061814 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#23 reported by
+    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
+  issue: 23
+  reporter: 1917892
+  repository: 12587702
+  what: bug-was-accepted
+  when: *576
+  where: github
+  who: 526301
+- _id: 576962
+  _job: 37746
+  _time: 2025-09-14 09:47:01.727448937 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#85 reported by
+    @super132; this means that a bug was accepted as valid, by the project team."
+  issue: 85
+  reporter: 6581896
+  repository: 16312153
+  what: bug-was-accepted
+  when: *577
+  where: github
+  who: 526301
+- _id: 576963
+  _job: 37746
+  _time: 2025-09-14 09:47:01.907449028 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#25 reported by
+    @ericjung; this means that a bug was accepted as valid, by the project team."
+  issue: 25
+  reporter: 5875610
+  repository: 12587702
+  what: bug-was-accepted
+  when: *578
+  where: github
+  who: 526301
+- _id: 576964
+  _job: 37746
+  _time: 2025-09-14 09:47:02.093369009 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#38 reported by
+    @mentiflectax; this means that a bug was accepted as valid, by the project team."
+  issue: 38
+  reporter: 1143055
+  repository: 13717355
+  what: bug-was-accepted
+  when: *579
+  where: github
+  who: 526301
+- _id: 576965
+  _job: 37746
+  _time: 2025-09-14 09:47:02.308852085 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#96 reported by
+    @cvrebert; this means that a bug was accepted as valid, by the project team."
+  issue: 96
+  reporter: 419884
+  repository: 16312153
+  what: bug-was-accepted
+  when: *580
+  where: github
+  who: 526301
+- _id: 576966
+  _job: 37746
+  _time: 2025-09-14 09:47:02.478991544 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#33 reported by
+    @longtimeago; this means that a bug was accepted as valid, by the project team."
+  issue: 33
+  reporter: 1388994
+  repository: 12587702
+  what: bug-was-accepted
+  when: *581
+  where: github
+  who: 526301
+- _id: 576967
+  _job: 37746
+  _time: 2025-09-14 09:47:02.688367534 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#34 reported by
+    @maurezen; this means that a bug was accepted as valid, by the project team."
+  issue: 34
+  reporter: 569536
+  repository: 12587702
+  what: bug-was-accepted
+  when: *582
+  where: github
+  who: 526301
+- _id: 576968
+  _job: 37746
+  _time: 2025-09-14 09:47:02.853532800 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#49 reported by
+    @apocarteres; this means that a bug was accepted as valid, by the project team."
+  issue: 49
+  reporter: 3305624
+  repository: 13717355
+  what: bug-was-accepted
+  when: *583
+  where: github
+  who: 526301
+- _id: 576969
+  _job: 37746
+  _time: 2025-09-14 09:47:03.057525543 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#51 reported by
+    @davdavid; this means that a bug was accepted as valid, by the project team."
+  issue: 51
+  reporter: 20211331
+  repository: 12587702
+  what: bug-was-accepted
+  when: *584
+  where: github
+  who: 526301
+- _id: 576970
+  _job: 37746
+  _time: 2025-09-14 09:47:03.259923845 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@dmarkov attached the '#bug' label to jcabi/jcabi-http#116 reported by
+    @yegor256; this means that a bug was accepted as valid, by the project team."
+  issue: 116
+  reporter: 526301
+  repository: 16312153
+  what: bug-was-accepted
+  when: *585
+  where: github
+  who: 5993843
+- _id: 576971
+  _job: 37746
+  _time: 2025-09-14 09:47:03.471628578 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#54 reported by
+    @andrejserafim; this means that a bug was accepted as valid, by the project team."
+  issue: 54
+  reporter: 13505986
+  repository: 12587702
+  what: bug-was-accepted
+  when: *586
+  where: github
+  who: 526301
+- _id: 576972
+  _job: 37746
+  _time: 2025-09-14 09:47:03.654521335 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#122 reported by
+    @piddubnyi; this means that a bug was accepted as valid, by the project team."
+  issue: 122
+  reporter: 6010247
+  repository: 16312153
+  what: bug-was-accepted
+  when: *587
+  where: github
+  who: 526301
+- _id: 576973
+  _job: 37746
+  _time: 2025-09-14 09:47:03.868095383 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@dmarkov attached the '#bug' label to jcabi/jcabi-xml#62 reported by @yegor256;
+    this means that a bug was accepted as valid, by the project team."
+  issue: 62
+  reporter: 526301
+  repository: 13717355
+  what: bug-was-accepted
+  when: *588
+  where: github
+  who: 5993843
+- _id: 576974
+  _job: 37746
+  _time: 2025-09-14 09:47:03.980663971 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#124 reported by
+    @cvrebert; this means that a bug was accepted as valid, by the project team."
+  issue: 124
+  reporter: 419884
+  repository: 16312153
+  what: bug-was-accepted
+  when: *589
+  where: github
+  who: 526301
+- _id: 576975
+  _job: 37746
+  _time: 2025-09-14 09:47:04.114596249 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#126 reported by
+    @krzyk; this means that a bug was accepted as valid, by the project team."
+  issue: 126
+  reporter: 105730
+  repository: 16312153
+  what: bug-was-accepted
+  when: *590
+  where: github
+  who: 526301
+- _id: 576976
+  _job: 37746
+  _time: 2025-09-14 09:47:04.309704252 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@dmarkov attached the '#bug' label to jcabi/jcabi-xml#74 reported by @yegor256;
+    this means that a bug was accepted as valid, by the project team."
+  issue: 74
+  reporter: 526301
+  repository: 13717355
+  what: bug-was-accepted
+  when: *591
+  where: github
+  who: 5993843
+- _id: 576977
+  _job: 37746
+  _time: 2025-09-14 09:47:04.438822873 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@andreoss attached the '#bug' label to jcabi/jcabi-http#127 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  issue: 127
+  reporter: 1405237
+  repository: 16312153
+  what: bug-was-accepted
+  when: *592
+  where: github
+  who: 49783909
+- _id: 576978
+  _job: 37746
+  _time: 2025-09-14 09:47:04.692787186 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#94 reported by
+    @carlosmiranda; this means that a bug was accepted as valid, by the project team."
+  issue: 94
+  reporter: 1917892
+  repository: 13717355
+  what: bug-was-accepted
+  when: *593
+  where: github
+  who: 526301
+- _id: 576979
+  _job: 37746
+  _time: 2025-09-14 09:47:04.828154374 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#70 reported by
+    @sz332; this means that a bug was accepted as valid, by the project team."
+  issue: 70
+  reporter: 8182138
+  repository: 12587702
+  what: bug-was-accepted
+  when: *594
+  where: github
+  who: 526301
+- _id: 576980
+  _job: 37746
+  _time: 2025-09-14 09:47:05.017694228 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#96 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  issue: 96
+  reporter: 1405237
+  repository: 13717355
+  what: bug-was-accepted
+  when: *595
+  where: github
+  who: 526301
+- _id: 576981
+  _job: 37746
+  _time: 2025-09-14 09:47:05.149387453 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#135 reported by
+    @westonal; this means that a bug was accepted as valid, by the project team."
+  issue: 135
+  reporter: 6041352
+  repository: 16312153
+  what: bug-was-accepted
+  when: *596
+  where: github
+  who: 526301
+- _id: 576982
+  _job: 37746
+  _time: 2025-09-14 09:47:05.333477191 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#98 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  issue: 98
+  reporter: 1405237
+  repository: 13717355
+  what: bug-was-accepted
+  when: *597
+  where: github
+  who: 526301
+- _id: 576983
+  _job: 37746
+  _time: 2025-09-14 09:47:05.466788758 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#145 reported by
+    @andrejserafim; this means that a bug was accepted as valid, by the project team."
+  issue: 145
+  reporter: 13505986
+  repository: 16312153
+  what: bug-was-accepted
+  when: *598
+  where: github
+  who: 526301
+- _id: 576984
+  _job: 37746
+  _time: 2025-09-14 09:47:05.578760525 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#99 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  issue: 99
+  reporter: 1405237
+  repository: 13717355
+  what: bug-was-accepted
+  when: *599
+  where: github
+  who: 526301
+- _id: 576985
+  _job: 37746
+  _time: 2025-09-14 09:47:05.710140800 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#146 reported by
+    @andrejserafim; this means that a bug was accepted as valid, by the project team."
+  issue: 146
+  reporter: 13505986
+  repository: 16312153
+  what: bug-was-accepted
+  when: *600
+  where: github
+  who: 526301
+- _id: 576986
+  _job: 37746
+  _time: 2025-09-14 09:47:05.826387453 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#103 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  issue: 103
+  reporter: 1405237
+  repository: 13717355
+  what: bug-was-accepted
+  when: *601
+  where: github
+  who: 526301
+- _id: 576987
+  _job: 37746
+  _time: 2025-09-14 09:47:05.953827416 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#153 reported by
+    @passwone; this means that a bug was accepted as valid, by the project team."
+  issue: 153
+  reporter: 24527002
+  repository: 16312153
+  what: bug-was-accepted
+  when: *602
+  where: github
+  who: 526301
+- _id: 576988
+  _job: 37746
+  _time: 2025-09-14 09:47:06.195356564 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#78 reported by
+    @glusk; this means that a bug was accepted as valid, by the project team."
+  issue: 78
+  reporter: 8526099
+  repository: 12587702
+  what: bug-was-accepted
+  when: *603
+  where: github
+  who: 526301
+- _id: 576989
+  _job: 37746
+  _time: 2025-09-14 09:47:06.412318320 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#110 reported by
+    @mkordas; this means that a bug was accepted as valid, by the project team."
+  issue: 110
+  reporter: 5467276
+  repository: 13717355
+  what: bug-was-accepted
+  when: *604
+  where: github
+  who: 526301
+- _id: 576990
+  _job: 37746
+  _time: 2025-09-14 09:47:06.608166644 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#119 reported by
+    @amihaiemil; this means that a bug was accepted as valid, by the project team."
+  issue: 119
+  reporter: 6305156
+  repository: 13717355
+  what: bug-was-accepted
+  when: *605
+  where: github
+  who: 526301
+- _id: 576991
+  _job: 37746
+  _time: 2025-09-14 09:47:06.851308493 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#120 reported by
+    @amihaiemil; this means that a bug was accepted as valid, by the project team."
+  issue: 120
+  reporter: 6305156
+  repository: 13717355
+  what: bug-was-accepted
+  when: *606
+  where: github
+  who: 526301
+- _id: 576992
+  _job: 37746
+  _time: 2025-09-14 09:47:06.986642722 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#124 reported by
+    @mstarodubtsev; this means that a bug was accepted as valid, by the project team."
+  issue: 124
+  reporter: 14348888
+  repository: 13717355
+  what: bug-was-accepted
+  when: *607
+  where: github
+  who: 526301
+- _id: 576993
+  _job: 37746
+  _time: 2025-09-14 09:47:07.194847556 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#125 reported by
+    @senleft; this means that a bug was accepted as valid, by the project team."
+  issue: 125
+  reporter: 812727
+  repository: 13717355
+  what: bug-was-accepted
+  when: *608
+  where: github
+  who: 526301
+- _id: 576994
+  _job: 37746
+  _time: 2025-09-14 09:47:07.376445513 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@andreoss attached the '#bug' label to jcabi/jcabi-http#175 reported by
+    @driver733; this means that a bug was accepted as valid, by the project team."
+  issue: 175
+  reporter: 10466206
+  repository: 16312153
+  what: bug-was-accepted
+  when: *609
+  where: github
+  who: 49783909
+- _id: 576995
+  _job: 37746
+  _time: 2025-09-14 09:47:07.573205795 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#165 reported by
+    @andreoss; this means that a bug was accepted as valid, by the project team."
+  issue: 165
+  reporter: 49783909
+  repository: 12587702
+  what: bug-was-accepted
+  when: *610
+  where: github
+  who: 526301
+- _id: 576996
+  _job: 37746
+  _time: 2025-09-14 09:47:07.706868889 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#177 reported by
+    @paulodamaso; this means that a bug was accepted as valid, by the project team."
+  issue: 177
+  reporter: 33915433
+  repository: 16312153
+  what: bug-was-accepted
+  when: *611
+  where: github
+  who: 526301
+- _id: 576997
+  _job: 37746
+  _time: 2025-09-14 09:47:07.907940346 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#185 reported by
+    @mximp; this means that a bug was accepted as valid, by the project team."
+  issue: 185
+  reporter: 40247101
+  repository: 13717355
+  what: bug-was-accepted
+  when: *612
+  where: github
+  who: 526301
+- _id: 576998
+  _job: 37746
+  _time: 2025-09-14 09:47:08.107980124 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#47 reported by
+    @maurezen; this means that a bug was accepted as valid, by the project team."
+  issue: 47
+  reporter: 569536
+  repository: 13717355
+  what: bug-was-accepted
+  when: *613
+  where: github
+  who: 526301
+- _id: 576999
+  _job: 37746
+  _time: 2025-09-14 09:47:08.236062229 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#54 reported by
+    @lightoze; this means that a bug was accepted as valid, by the project team."
+  issue: 54
+  reporter: 534657
+  repository: 13717355
+  what: bug-was-accepted
+  when: *614
+  where: github
+  who: 526301
+- _id: 577000
+  _job: 37746
+  _time: 2025-09-14 09:47:08.446601430 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#82 reported by
+    @dmzaytsev; this means that a bug was accepted as valid, by the project team."
+  issue: 82
+  reporter: 9972909
+  repository: 16312153
+  what: bug-was-accepted
+  when: *615
+  where: github
+  who: 526301
+- _id: 577001
+  _job: 37746
+  _time: 2025-09-14 09:47:08.646929336 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#87 reported by
+    @pinaf; this means that a bug was accepted as valid, by the project team."
+  issue: 87
+  reporter: 1054771
+  repository: 16312153
+  what: bug-was-accepted
+  when: *616
+  where: github
+  who: 526301
+- _id: 577002
+  _job: 37746
+  _time: 2025-09-14 09:47:08.888770689 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#89 reported by
+    @cvrebert; this means that a bug was accepted as valid, by the project team."
+  issue: 89
+  reporter: 419884
+  repository: 16312153
+  what: bug-was-accepted
+  when: *617
+  where: github
+  who: 526301
+- _id: 577003
+  _job: 37746
+  _time: 2025-09-14 09:47:09.017255826 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#90 reported by
+    @cvrebert; this means that a bug was accepted as valid, by the project team."
+  issue: 90
+  reporter: 419884
+  repository: 16312153
+  what: bug-was-accepted
+  when: *618
+  where: github
+  who: 526301
+- _id: 577004
+  _job: 37746
+  _time: 2025-09-14 09:47:09.150136407 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#105 reported by
+    @longtimeago; this means that a bug was accepted as valid, by the project team."
+  issue: 105
+  reporter: 1388994
+  repository: 16312153
+  what: bug-was-accepted
+  when: *619
+  where: github
+  who: 526301
+- _id: 577005
+  _job: 37746
+  _time: 2025-09-14 09:47:09.316088787 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#113 reported by
+    @krzyk; this means that a bug was accepted as valid, by the project team."
+  issue: 113
+  reporter: 105730
+  repository: 16312153
+  what: bug-was-accepted
+  when: *620
+  where: github
+  who: 526301
+- _id: 577006
+  _job: 37746
+  _time: 2025-09-14 09:47:09.437777763 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#136 reported by
+    @super132; this means that a bug was accepted as valid, by the project team."
+  issue: 136
+  reporter: 6581896
+  repository: 16312153
+  what: bug-was-accepted
+  when: *621
+  where: github
+  who: 526301
+- _id: 577007
+  _job: 37746
+  _time: 2025-09-14 09:47:09.558621790 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#137 reported by
+    @pstorch; this means that a bug was accepted as valid, by the project team."
+  issue: 137
+  reporter: 5598124
+  repository: 16312153
+  what: bug-was-accepted
+  when: *622
+  where: github
+  who: 526301
+- _id: 577008
+  _job: 37746
+  _time: 2025-09-14 09:47:09.759379788 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#138 reported by
+    @yiyiwangru; this means that a bug was accepted as valid, by the project team."
+  issue: 138
+  reporter: 11848650
+  repository: 16312153
+  what: bug-was-accepted
+  when: *623
+  where: github
+  who: 526301
+- _id: 577009
+  _job: 37746
+  _time: 2025-09-14 09:47:09.947509779 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@andreoss attached the '#bug' label to jcabi/jcabi-http#179 reported by
+    @nnordrum; this means that a bug was accepted as valid, by the project team."
+  issue: 179
+  reporter: 774167
+  repository: 16312153
+  what: bug-was-accepted
+  when: *624
+  where: github
+  who: 49783909
+- _id: 577010
+  _job: 37746
+  _time: 2025-09-14 09:47:10.135895976 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#205 reported by
+    @volodya-lombrozo; this means that a bug was accepted as valid, by the project
+    team."
+  issue: 205
+  reporter: 51804353
+  repository: 13717355
+  what: bug-was-accepted
+  when: *625
+  where: github
+  who: 526301
+- _id: 577011
+  _job: 37746
+  _time: 2025-09-14 09:47:10.319186140 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#277 reported by
+    @volodya-lombrozo; this means that a bug was accepted as valid, by the project
+    team."
+  issue: 277
+  reporter: 51804353
+  repository: 13717355
+  what: bug-was-accepted
+  when: *626
+  where: github
+  who: 526301
+- _id: 577012
+  _job: 37746
+  _time: 2025-09-14 09:47:11.586707619 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #9972909 submitted the issue #107
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 107
+  repository: 13717355
+  what: dud-was-closed
+  when: *627
+  where: github
+  who: 9972909
+- _id: 577013
+  _job: 37746
+  _time: 2025-09-14 09:47:11.693177406 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #106
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 106
+  repository: 13717355
+  what: dud-was-closed
+  when: *628
+  where: github
+  who: 1405237
+- _id: 577014
+  _job: 37746
+  _time: 2025-09-14 09:47:11.800791322 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #102
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 102
+  repository: 13717355
+  what: dud-was-closed
+  when: *629
+  where: github
+  who: 1405237
+- _id: 577015
+  _job: 37746
+  _time: 2025-09-14 09:47:11.911247187 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #101
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 101
+  repository: 13717355
+  what: dud-was-closed
+  when: *630
+  where: github
+  who: 1405237
+- _id: 577016
+  _job: 37746
+  _time: 2025-09-14 09:47:12.028201104 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #1405237 submitted the issue #100
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 100
+  repository: 13717355
+  what: dud-was-closed
+  when: *631
+  where: github
+  who: 1405237
+- _id: 577017
+  _job: 37746
+  _time: 2025-09-14 09:47:12.132938657 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #13717355, the user #1667699 submitted the issue #66
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 66
+  repository: 13717355
+  what: dud-was-closed
+  when: *632
+  where: github
+  who: 1667699
+- _id: 577018
+  _job: 37746
+  _time: 2025-09-14 09:47:12.238462653 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #12587702, the user #569536 submitted the issue #37
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 37
+  repository: 12587702
+  what: dud-was-closed
+  when: *633
+  where: github
+  who: 569536
+- _id: 577019
+  _job: 37746
+  _time: 2025-09-14 09:47:12.346636042 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: 'In the repository #16312153, the user #7406247 submitted the issue #34
+    which was later closed by the user #526301 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 34
+  repository: 16312153
+  what: dud-was-closed
+  when: *634
+  where: github
+  who: 7406247
+- _id: 577020
+  _job: 37746
+  _time: 2025-09-14 09:47:12.452185710 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 49783909
+  details: 'In the repository #16312153, the user #2175702 submitted the issue #64
+    which was later closed by the user #49783909 not becoming a bug or enhancement;
+    this means that the issue was not valid, maybe a duplicate or simply a mistake.'
+  issue: 64
+  repository: 16312153
+  what: dud-was-closed
+  when: *635
+  where: github
+  who: 2175702
+- _id: 577021
+  _job: 37746
+  _time: 2025-09-14 09:47:53.848268396 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-160
+  - 164-165
+  - 167-177
+  - 179-193
+  - 195-201
+  - 203-221
+  - 224-249
+  - '252'
+  - '257'
+  - 259-269
+  - 271-319
+  - 321-346
+  - 348-490
+  - 492-507
+  - 509-523
+  - 525-538
+  - '540'
+  - 543-549
+  - '569'
+  repository: 16312153
+  what: tombstone
+  where: github
+- _id: 577022
+  _job: 37746
+  _time: 2025-09-14 09:47:55.666745325 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-80
+  - '82'
+  - 84-116
+  - 118-145
+  - 147-190
+  - 192-486
+  - 488-572
+  repository: 12590813
+  what: tombstone
+  where: github
+- _id: 577023
+  _job: 37746
+  _time: 2025-09-14 09:47:57.409139443 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  issues:
+  - 1-104
+  - 106-127
+  - 129-133
+  - 135-142
+  - 144-147
+  - 149-176
+  - 178-223
+  - 225-239
+  - 241-247
+  - 250-286
+  - '298'
+  repository: 13717355
+  what: tombstone
+  where: github
+- _id: 577024
+  _job: 37746
+  _time: 2025-09-14 09:48:12.460062268 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 1054771
+  details: The bug/feature in the issue jcabi/jcabi-http#87 opened @pinaf by was resolved,
+    after 15w of waiting, because it was closed by @pinaf and earlier it was assigned
+    to @amihaiemil and the label '#bug' was attached.
+  issue: 87
+  label: bug
+  opener: 1054771
+  repository: 16312153
+  seconds: 9119140
+  what: bug-was-resolved
+  when: *636
+  where: github
+  who: 6305156
+- _id: 577025
+  _job: 37746
+  _time: 2025-09-14 09:48:12.898595329 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 419884
+  details: The bug/feature in the issue jcabi/jcabi-http#89 opened @cvrebert by was
+    resolved, after 1w of waiting, because it was closed by @cvrebert and earlier
+    it was assigned to @idegtiarenko and the label '#bug' was attached.
+  issue: 89
+  label: bug
+  opener: 419884
+  repository: 16312153
+  seconds: 680884
+  what: bug-was-resolved
+  when: *637
+  where: github
+  who: 1331856
+- _id: 577026
+  _job: 37746
+  _time: 2025-09-14 09:48:13.212265181 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 419884
+  details: The bug/feature in the issue jcabi/jcabi-http#90 opened @cvrebert by was
+    resolved, after 1w2d of waiting, because it was closed by @cvrebert and earlier
+    it was assigned to @piddubnyi and the label '#bug' was attached.
+  issue: 90
+  label: bug
+  opener: 419884
+  repository: 16312153
+  seconds: 857224
+  what: bug-was-resolved
+  when: *638
+  where: github
+  who: 6010247
+- _id: 577027
+  _job: 37746
+  _time: 2025-09-14 09:48:13.395665132 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 5598124
+  details: The bug/feature in the issue jcabi/jcabi-http#137 opened @pstorch by was
+    resolved, after 80w1d of waiting, because it was closed by @pstorch and earlier
+    it was assigned to @westonal and the label '#bug' was attached.
+  issue: 137
+  label: bug
+  opener: 5598124
+  repository: 16312153
+  seconds: 48508907
+  what: bug-was-resolved
+  when: *639
+  where: github
+  who: 6041352
+- _id: 577028
+  _job: 37746
+  _time: 2025-09-14 09:48:13.673772719 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 49783909
+  details: The bug/feature in the issue jcabi/jcabi-http#138 opened @yiyiwangru by
+    was resolved, after 260w5d of waiting, because it was closed by @andreoss and
+    earlier it was assigned to @westonal and the label '#bug' was attached.
+  issue: 138
+  label: bug
+  opener: 11848650
+  repository: 16312153
+  seconds: 157737942
+  what: bug-was-resolved
+  when: *640
+  where: github
+  who: 6041352
+- _id: 577029
+  _job: 37746
+  _time: 2025-09-14 09:48:13.953369876 Z
+  _version: 0.16.4/0.53.8/0.15.42
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-xml#276 opened @yegor256 by was
+    resolved, after 52m20s of waiting, because it was closed by @yegor256 and earlier
+    it was assigned to @yegor256 and the label '#bug' was attached.
+  issue: 276
+  label: bug
+  opener: 526301
+  repository: 13717355
+  seconds: 3141
+  what: bug-was-resolved
+  when: *641
+  where: github
+  who: 526301
+- _id: 577030
+  _job: 17709974599
+  _time: 2025-09-14 10:33:51.957693731 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  events_were_scanned: 54660606039
+  min_issue_was_found: 0
+  min_pull_was_found: 373
+  repository: 4174608
+  what: iterate
+  where: github
+- _id: 577031
+  _job: 17709974599
+  _time: 2025-09-14 10:46:11.270926951 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 53449773369
+  issues_were_scanned: 0
+  labels_were_scanned: 0
+  merges_were_scanned: 375
+  min_issue_was_found: 74
+  min_pull_was_found: 554
+  repository: 16312153
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 577032
+  _job: 17709974599
+  _time: 2025-09-14 10:46:11.403741006 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 54362221664
+  issues_were_scanned: 0
+  labels_were_scanned: 0
+  merges_were_scanned: 24
+  min_issue_was_found: 43
+  min_pull_was_found: 355
+  repository: 13717355
+  types_were_scanned: 0
+  what: iterate
+  where: github
+- _id: 577033
+  _job: 17709974599
+  _time: 2025-09-14 10:46:11.517332604 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  assignees_were_scanned: 0
+  events_were_scanned: 54360655730
+  issues_were_scanned: 0
+  labels_were_scanned: 228
+  merges_were_scanned: 295
+  min_issue_was_found: 81
+  min_pull_was_found: 18
+  repository: 12590813
+  types_were_scanned: 228
+  what: iterate
+  where: github
+- _id: 577034
+  _job: 17709974599
+  _time: 2025-09-14 10:46:24.822599074 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#74 has been 'issue-was-closed'.
+  issue: 74
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-03-30 18:17:55.000000000 Z
+  where: github
+  who: 526301
+- _id: 577035
+  _job: 17709974599
+  _time: 2025-09-14 10:46:38.303400075 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#91 has been 'issue-was-closed'.
+  issue: 91
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-29 07:15:46.000000000 Z
+  where: github
+  who: 5909722
+- _id: 577036
+  _job: 17709974599
+  _time: 2025-09-14 10:46:39.722043165 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-parent#87 has been 'issue-was-closed'.
+  issue: 87
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-05-21 16:40:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 577037
+  _job: 17709974599
+  _time: 2025-09-14 10:46:40.954677868 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#92 has been 'issue-was-closed'.
+  issue: 92
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-06-10 09:31:56.000000000 Z
+  where: github
+  who: 1405237
+- _id: 577038
+  _job: 17709974599
+  _time: 2025-09-14 10:46:42.373634832 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-parent#88 has been 'issue-was-closed'.
+  issue: 88
+  repository: 12590813
+  what: issue-was-closed
+  when: 2019-05-28 14:41:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 577039
+  _job: 17709974599
+  _time: 2025-09-14 10:46:43.628214545 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#94 has been 'issue-was-closed'.
+  issue: 94
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-07-04 09:52:53.000000000 Z
+  where: github
+  who: 1405237
+- _id: 577040
+  _job: 17709974599
+  _time: 2025-09-14 10:46:44.978208450 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-parent#98 has been 'issue-was-closed'.
+  issue: 98
+  repository: 12590813
+  what: issue-was-closed
+  when: 2020-07-13 14:22:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 577041
+  _job: 17709974599
+  _time: 2025-09-14 10:46:46.224357920 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#100 has been 'issue-was-closed'.
+  issue: 100
+  repository: 16312153
+  what: issue-was-closed
+  when: 2015-12-14 12:23:02.000000000 Z
+  where: github
+  who: 5909722
+- _id: 577042
+  _job: 17709974599
+  _time: 2025-09-14 10:46:47.540075112 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-parent#116 has been 'issue-was-closed'.
+  issue: 116
+  repository: 12590813
+  what: issue-was-closed
+  when: 2021-02-15 14:18:46.000000000 Z
+  where: github
+  who: 160975
+- _id: 577043
+  _job: 17709974599
+  _time: 2025-09-14 10:46:55.992037575 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#154 has been 'issue-was-closed'.
+  issue: 154
+  repository: 16312153
+  what: issue-was-closed
+  when: 2017-01-12 10:21:21.000000000 Z
+  where: github
+  who: 9504395
+- _id: 577044
+  _job: 17709974599
+  _time: 2025-09-14 10:46:57.572799104 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#157 has been 'issue-was-closed'.
+  issue: 157
+  repository: 16312153
+  what: issue-was-closed
+  when: 2017-05-08 19:41:24.000000000 Z
+  where: github
+  who: 5237764
+- _id: 577045
+  _job: 17709974599
+  _time: 2025-09-14 10:47:07.560794800 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#206 has been 'issue-was-closed'.
+  issue: 206
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-10 17:32:22.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577046
+  _job: 17709974599
+  _time: 2025-09-14 10:47:08.105871968 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#207 has been 'issue-was-closed'.
+  issue: 207
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-10 12:05:25.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577047
+  _job: 17709974599
+  _time: 2025-09-14 10:47:08.660078915 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#210 has been 'issue-was-closed'.
+  issue: 210
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 13:01:22.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577048
+  _job: 17709974599
+  _time: 2025-09-14 10:47:09.265328927 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#211 has been 'issue-was-closed'.
+  issue: 211
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-07-25 15:33:21.000000000 Z
+  where: github
+  who: 49783909
+- _id: 577049
+  _job: 17709974599
+  _time: 2025-09-14 10:47:09.807030002 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#215 has been 'issue-was-closed'.
+  issue: 215
+  repository: 16312153
+  what: issue-was-closed
+  when: 2020-08-28 14:30:09.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577050
+  _job: 17709974599
+  _time: 2025-09-14 10:47:15.119295332 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: Apparently, jcabi/jcabi-http#405 has been 'issue-was-closed'.
+  issue: 405
+  repository: 16312153
+  what: issue-was-closed
+  when: 2023-01-22 17:30:27.000000000 Z
+  where: github
+  who: 9504395
+- _id: 577051
+  _job: 17709974599
+  _time: 2025-09-14 10:47:32.156453854 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#282 has been earlier opened by @maxonfjvipon.
+  issue: 282
+  repository: 13717355
+  what: issue-was-opened
+  when: 2024-12-23 09:22:02.000000000 Z
+  where: github
+  who: 37025995
+- _id: 577052
+  _job: 17709974599
+  _time: 2025-09-14 10:47:33.177700138 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#244 has been earlier opened by @l3r8yj.
+  issue: 244
+  repository: 13717355
+  what: issue-was-opened
+  when: 2024-04-16 20:09:20.000000000 Z
+  where: github
+  who: 46355873
+- _id: 577053
+  _job: 17709974599
+  _time: 2025-09-14 10:47:33.624533731 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#215 has been earlier opened by @volodya-lombrozo.
+  issue: 215
+  repository: 13717355
+  what: issue-was-opened
+  when: 2023-07-19 14:20:33.000000000 Z
+  where: github
+  who: 51804353
+- _id: 577054
+  _job: 17709974599
+  _time: 2025-09-14 10:47:33.961108871 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#213 has been earlier opened by @0pdd.
+  issue: 213
+  repository: 13717355
+  what: issue-was-opened
+  when: 2023-07-18 17:44:02.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577055
+  _job: 17709974599
+  _time: 2025-09-14 10:47:34.289878358 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#211 has been earlier opened by @volodya-lombrozo.
+  issue: 211
+  repository: 13717355
+  what: issue-was-opened
+  when: 2023-07-17 10:13:51.000000000 Z
+  where: github
+  who: 51804353
+- _id: 577056
+  _job: 17709974599
+  _time: 2025-09-14 10:47:35.827278321 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#169 has been earlier opened by @ingeniariussoftware.
+  issue: 169
+  repository: 13717355
+  what: issue-was-opened
+  when: 2022-08-22 05:46:07.000000000 Z
+  where: github
+  who: 33983579
+- _id: 577057
+  _job: 17709974599
+  _time: 2025-09-14 10:47:36.752419599 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#162 has been earlier opened by @davewichers.
+  issue: 162
+  repository: 13717355
+  what: issue-was-opened
+  when: 2021-09-16 16:14:01.000000000 Z
+  where: github
+  who: 5004037
+- _id: 577058
+  _job: 17709974599
+  _time: 2025-09-14 10:47:37.176627704 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#154 has been earlier opened by @piotrkot.
+  issue: 154
+  repository: 13717355
+  what: issue-was-opened
+  when: 2020-03-05 15:37:15.000000000 Z
+  where: github
+  who: 9504395
+- _id: 577059
+  _job: 17709974599
+  _time: 2025-09-14 10:47:37.528247658 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#153 has been earlier opened by @olegmoz.
+  issue: 153
+  repository: 13717355
+  what: issue-was-opened
+  when: 2020-02-06 08:51:32.000000000 Z
+  where: github
+  who: 298504
+- _id: 577060
+  _job: 17709974599
+  _time: 2025-09-14 10:47:37.967364830 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#151 has been earlier opened by @simonjenga.
+  issue: 151
+  repository: 13717355
+  what: issue-was-opened
+  when: 2019-02-18 16:20:52.000000000 Z
+  where: github
+  who: 1405237
+- _id: 577061
+  _job: 17709974599
+  _time: 2025-09-14 10:47:38.327059320 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#149 has been earlier opened by @ilyakharlamov.
+  issue: 149
+  repository: 13717355
+  what: issue-was-opened
+  when: 2019-01-11 23:07:11.000000000 Z
+  where: github
+  who: 502372
+- _id: 577062
+  _job: 17709974599
+  _time: 2025-09-14 10:47:40.026718242 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#133 has been earlier opened by @skapral.
+  issue: 133
+  repository: 13717355
+  what: issue-was-opened
+  when: 2017-04-28 16:05:00.000000000 Z
+  where: github
+  who: 1714171
+- _id: 577063
+  _job: 17709974599
+  _time: 2025-09-14 10:47:40.479550883 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#130 has been earlier opened by @gicoprasico.
+  issue: 130
+  repository: 13717355
+  what: issue-was-opened
+  when: 2017-03-17 12:41:44.000000000 Z
+  where: github
+  who: 7222462
+- _id: 577064
+  _job: 17709974599
+  _time: 2025-09-14 10:47:41.910146659 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#113 has been earlier opened by @ifly6.
+  issue: 113
+  repository: 13717355
+  what: issue-was-opened
+  when: 2016-02-19 00:00:58.000000000 Z
+  where: github
+  who: 984052
+- _id: 577065
+  _job: 17709974599
+  _time: 2025-09-14 10:47:44.199612874 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#68 has been earlier opened by @yaroslavhq.
+  issue: 68
+  repository: 13717355
+  what: issue-was-opened
+  when: 2015-06-23 12:57:10.000000000 Z
+  where: github
+  who: 4637784
+- _id: 577066
+  _job: 17709974599
+  _time: 2025-09-14 10:47:45.279840709 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#60 has been earlier opened by @adamsiemion.
+  issue: 60
+  repository: 13717355
+  what: issue-was-opened
+  when: 2015-02-26 07:46:03.000000000 Z
+  where: github
+  who: 898997
+- _id: 577067
+  _job: 17709974599
+  _time: 2025-09-14 10:47:45.605220870 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#58 has been earlier opened by @adamsiemion.
+  issue: 58
+  repository: 13717355
+  what: issue-was-opened
+  when: 2015-02-24 17:51:55.000000000 Z
+  where: github
+  who: 898997
+- _id: 577068
+  _job: 17709974599
+  _time: 2025-09-14 10:47:46.014414671 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#53 has been earlier opened by @lightoze.
+  issue: 53
+  repository: 13717355
+  what: issue-was-opened
+  when: 2015-02-12 06:55:34.000000000 Z
+  where: github
+  who: 534657
+- _id: 577069
+  _job: 17709974599
+  _time: 2025-09-14 10:47:46.458044742 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-xml#50 has been earlier opened by @maurezen.
+  issue: 50
+  repository: 13717355
+  what: issue-was-opened
+  when: 2015-01-21 23:01:33.000000000 Z
+  where: github
+  who: 569536
+- _id: 577070
+  _job: 17709974599
+  _time: 2025-09-14 10:47:50.569117269 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#102 has been earlier opened by @baudoliver7.
+  issue: 102
+  repository: 12587702
+  what: issue-was-opened
+  when: 2021-04-20 05:16:01.000000000 Z
+  where: github
+  who: 7813046
+- _id: 577071
+  _job: 17709974599
+  _time: 2025-09-14 10:47:51.101105643 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#100 has been earlier opened by @piotrkot.
+  issue: 100
+  repository: 12587702
+  what: issue-was-opened
+  when: 2021-04-07 14:29:43.000000000 Z
+  where: github
+  who: 9504395
+- _id: 577072
+  _job: 17709974599
+  _time: 2025-09-14 10:47:51.599532592 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#85 has been earlier opened by @0pdd.
+  issue: 85
+  repository: 12587702
+  what: issue-was-opened
+  when: 2020-08-25 17:51:31.000000000 Z
+  where: github
+  who: 24456188
+- _id: 577073
+  _job: 17709974599
+  _time: 2025-09-14 10:47:51.916745001 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#80 has been earlier opened by @golszewski86.
+  issue: 80
+  repository: 12587702
+  what: issue-was-opened
+  when: 2020-02-11 12:27:37.000000000 Z
+  where: github
+  who: 45224442
+- _id: 577074
+  _job: 17709974599
+  _time: 2025-09-14 10:47:52.284692102 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#79 has been earlier opened by @glusk.
+  issue: 79
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-12-19 11:27:43.000000000 Z
+  where: github
+  who: 8526099
+- _id: 577075
+  _job: 17709974599
+  _time: 2025-09-14 10:47:52.721901318 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#76 has been earlier opened by @pluresideas.
+  issue: 76
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-11-20 15:53:31.000000000 Z
+  where: github
+  who: 26636262
+- _id: 577076
+  _job: 17709974599
+  _time: 2025-09-14 10:47:53.054346462 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#74 has been earlier opened by @glusk.
+  issue: 74
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-10-25 12:43:14.000000000 Z
+  where: github
+  who: 8526099
+- _id: 577077
+  _job: 17709974599
+  _time: 2025-09-14 10:47:53.181785547 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#73 has been earlier opened by @scristalli.
+  issue: 73
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-07-12 12:01:27.000000000 Z
+  where: github
+  who: 7326295
+- _id: 577078
+  _job: 17709974599
+  _time: 2025-09-14 10:47:53.519077718 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#71 has been earlier opened by @golszewski86.
+  issue: 71
+  repository: 12587702
+  what: issue-was-opened
+  when: 2019-05-15 12:23:01.000000000 Z
+  where: github
+  who: 45224442
+- _id: 577079
+  _job: 17709974599
+  _time: 2025-09-14 10:47:53.724522021 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#68 has been earlier opened by @piotrkot.
+  issue: 68
+  repository: 12587702
+  what: issue-was-opened
+  when: 2018-11-08 17:10:20.000000000 Z
+  where: github
+  who: 9504395
+- _id: 577080
+  _job: 17709974599
+  _time: 2025-09-14 10:47:53.853841861 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#67 has been earlier opened by @verkhovin.
+  issue: 67
+  repository: 12587702
+  what: issue-was-opened
+  when: 2018-09-10 21:52:35.000000000 Z
+  where: github
+  who: 15959667
+- _id: 577081
+  _job: 17709974599
+  _time: 2025-09-14 10:47:54.633298706 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#57 has been earlier opened by @miroque.
+  issue: 57
+  repository: 12587702
+  what: issue-was-opened
+  when: 2017-01-31 07:59:41.000000000 Z
+  where: github
+  who: 661340
+- _id: 577082
+  _job: 17709974599
+  _time: 2025-09-14 10:47:55.434680881 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#50 has been earlier opened by @sshafiev.
+  issue: 50
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-04-11 20:12:12.000000000 Z
+  where: github
+  who: 1702423
+- _id: 577083
+  _job: 17709974599
+  _time: 2025-09-14 10:47:55.796270471 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#49 has been earlier opened by @lgmam.
+  issue: 49
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-03-09 20:49:26.000000000 Z
+  where: github
+  who: 3864307
+- _id: 577084
+  _job: 17709974599
+  _time: 2025-09-14 10:47:56.221069416 Z
+  _version: 0.16.3/0.53.6/0.15.42
+  details: The issue jcabi/jcabi-jdbc#46 has been earlier opened by @fabriciofx.
+  issue: 46
+  repository: 12587702
+  what: issue-was-opened
+  when: 2016-01-18 04:33:27.000000000 Z
+  where: github
+  who: 1964562

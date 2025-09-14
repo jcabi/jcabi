@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fb version="0.11.0" size="1884816">
+<fb version="0.11.0" size="1884861">
   <f>
     <added t="I">8</added>
     <cycles t="I">1</cycles>
     <deleted t="I">8</deleted>
-    <error t="S">Judge quantity-of-deliverables stopped by timeout after 10m: execution expired</error>
+    <error>
+      <v t="S">Judge quality-of-service stopped by timeout after 10m: execution expired</v>
+      <v t="S">Judge find-all-issues stopped by timeout after 58s: execution expired</v>
+    </error>
     <inserted t="I">8</inserted>
-    <seconds t="F">893.400815965</seconds>
+    <seconds t="F">900.85438399</seconds>
     <version t="S">0.53.6</version>
     <what t="S">judges-summary</what>
-    <when t="T">2025-09-14T09:46:02Z</when>
+    <when t="T">2025-09-14T10:48:16Z</when>
   </f>
   <f>
     <_id t="I">135</_id>
@@ -20328,6 +20331,7 @@
     <composite t="F">0.384</composite>
     <ffact t="I">140</ffact>
     <since t="T">2025-05-02T08:18:38Z</since>
+    <tombstone t="T">2025-09-14T09:46:59Z</tombstone>
     <what t="S">quality-of-service</what>
     <when t="T">2025-05-09T08:18:38Z</when>
   </f>
@@ -49143,732 +49147,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <when t="T">2025-09-12T21:44:25Z</when>
   </f>
   <f>
-    <_id t="I">571658</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:31:27Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#43 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:45Z</done>
-    <issue t="I">43</issue>
-    <repository t="I">16312153</repository>
-    <stale t="S">who</stale>
-    <tombstone t="T">2025-09-14T05:49:16Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2014-06-24T16:15:22Z</when>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">571671</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:34:40Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.0.0</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#309 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:27Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">309</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:14Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-03-23T23:01:26Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571678</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:35:12Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.0.1</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#310 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:27Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">310</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:15Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-03-28T23:00:51Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571683</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:35:38Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.0.2</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#311 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:28Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">311</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:15Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-03-29T23:09:39Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571688</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:36:27Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.0.3</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#312 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:28Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">312</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:16Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-03-30T23:00:53Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571693</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:36:49Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.0.4</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#313 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:28Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">313</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:16Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-04-25T23:00:54Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571698</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:37:05Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.testcontainers-testcontainers-bom-1.17.0</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#314 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:29Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">314</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:17Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-04-13T23:01:04Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571703</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:37:19Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.testcontainers-testcontainers-bom-1.17.1</branch>
-    <comments t="I">6</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">5</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#315 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:30Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">315</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:17Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-05-19T23:00:58Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571708</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:37:35Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.owasp-dependency-check-maven-7.1.0</branch>
-    <comments t="I">5</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">4</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#316 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:30Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">316</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:18Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-06-13T23:00:58Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">571713</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:37:57Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.glassfish.grizzly-grizzly-http-servlet-server-4.0.0</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#319 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:30Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">319</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:18Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-07-20T05:25:40Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571717</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:38:12Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.glassfish.jersey.core-jersey-server-3.0.5</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#321 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:30Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">321</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:19Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-07-20T05:25:41Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571721</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:38:31Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.glassfish.jersey.core-jersey-client-3.0.5</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#322 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:31Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">322</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:19Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-07-20T05:25:41Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571725</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:38:47Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.testcontainers-testcontainers-bom-1.17.3</branch>
-    <comments t="I">4</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">3</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#328 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:31Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">328</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:19Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-07-20T05:25:42Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571729</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:39:10Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/com.jcabi-jcabi-1.33.0</branch>
-    <comments t="I">1</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#336 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:31Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">4</hoc>
-    <issue t="I">336</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:20Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-07-20T05:25:42Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571733</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:39:24Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.slf4j-slf4j-log4j12-2.0.0-alpha6</branch>
-    <comments t="I">9</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">8</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#338 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:31Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">338</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:20Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-09-23T06:45:35Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571737</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:39:41Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.slf4j-slf4j-log4j12-2.x</branch>
-    <comments t="I">5</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">4</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#350 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:31Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">350</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:21Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-09-23T06:38:57Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571741</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:39:56Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.qulice-qulice-maven-plugin-0.x</branch>
-    <comments t="I">3</comments>
-    <comments_appreciated t="I">1</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">3</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#360 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:32Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">360</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:21Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2023-10-29T06:56:55Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">571745</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:40:13Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/major-javahamcrest-monorepo</branch>
-    <comments t="I">5</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">1</comments_by_author>
-    <comments_by_reviewers t="I">4</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#366 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:32Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">366</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:21Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2022-09-24T06:00:11Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571749</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:40:27Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/jersey-monorepo</branch>
-    <comments t="I">2</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">2</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#420 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:33Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">4</hoc>
-    <issue t="I">420</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:22Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2023-10-29T06:19:44Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">571753</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:40:45Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.slf4j-slf4j-api-2.x</branch>
-    <comments t="I">0</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#469 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:33Z</done>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">469</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">0</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:22Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2024-01-16T14:17:45Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">571757</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:40:55Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.fasterxml.jackson.core-jackson-databind-2.x</branch>
-    <comments t="I">0</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#511 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:33Z</done>
-    <failed_builds t="I">12</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">511</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">2</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:23Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2024-08-06T08:52:35Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">571760</_id>
-    <_job t="I">17697893983</_job>
-    <_time t="T">2025-09-13T14:41:07Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.owasp-dependency-check-maven-10.x</branch>
-    <comments t="I">0</comments>
-    <comments_appreciated t="I">0</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">0</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">Apparently, jcabi/jcabi-http#520 has been 'pull-was-closed'.</details>
-    <done t="T">2025-09-13T21:46:33Z</done>
-    <failed_builds t="I">12</failed_builds>
-    <hoc t="I">2</hoc>
-    <issue t="I">520</issue>
-    <repository t="I">16312153</repository>
-    <succeeded_builds t="I">2</succeeded_builds>
-    <tombstone t="T">2025-09-13T22:50:23Z</tombstone>
-    <what t="S">pull-was-closed</what>
-    <when t="T">2024-10-21T14:48:43Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">571868</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:34Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#59 has been 'issue-was-closed'.</details>
-    <issue t="I">59</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T18:56:13Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-03-30T18:23:16Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571872</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:39Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#63 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:46Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">63</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:17Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-01-13T10:09:37Z</when>
-    <where t="S">github</where>
-    <who t="I">3440659</who>
-  </f>
-  <f>
-    <_id t="I">571875</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:42Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#66 has been 'issue-was-closed'.</details>
-    <issue t="I">66</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T18:56:13Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-03-30T18:20:59Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571878</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:44Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#74 has been 'issue-was-closed'.</details>
-    <issue t="I">74</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T18:56:12Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-03-30T18:17:55Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571881</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:46Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#91 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:47Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">91</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:17Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-06-29T07:15:46Z</when>
-    <where t="S">github</where>
-    <who t="I">5909722</who>
-  </f>
-  <f>
-    <_id t="I">571885</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:49Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#92 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:47Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">92</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:17Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-06-10T09:31:56Z</when>
-    <where t="S">github</where>
-    <who t="I">1405237</who>
-  </f>
-  <f>
-    <_id t="I">571889</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:52Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#94 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:47Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">94</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:17Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-07-04T09:52:53Z</when>
-    <where t="S">github</where>
-    <who t="I">1405237</who>
-  </f>
-  <f>
-    <_id t="I">571892</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:54Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#100 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:47Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">100</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:17Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2015-12-14T12:23:02Z</when>
-    <where t="S">github</where>
-    <who t="I">5909722</who>
-  </f>
-  <f>
-    <_id t="I">571896</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:56Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#154 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:47Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">154</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:18Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2017-01-12T10:21:21Z</when>
-    <where t="S">github</where>
-    <who t="I">9504395</who>
-  </f>
-  <f>
-    <_id t="I">571898</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:31:58Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#157 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:48Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">157</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:18Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2017-05-08T19:41:24Z</when>
-    <where t="S">github</where>
-    <who t="I">5237764</who>
-  </f>
-  <f>
-    <_id t="I">571917</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:32:17Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-parent#389 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:50Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">389</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-14T05:49:19Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2023-12-27T09:39:27Z</when>
-    <where t="S">github</where>
-    <who t="I">526301</who>
-  </f>
-  <f>
-    <_id t="I">571918</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:32:21Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">Apparently, jcabi/jcabi-http#405 has been 'issue-was-closed'.</details>
-    <done t="T">2025-09-14T02:29:50Z</done>
-    <is_human t="I">1</is_human>
-    <issue t="I">405</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-14T05:49:19Z</tombstone>
-    <what t="S">issue-was-closed</what>
-    <when t="T">2023-01-22T17:30:27Z</when>
-    <where t="S">github</where>
-    <who t="I">9504395</who>
-  </f>
-  <f>
     <_id t="I">572030</_id>
     <_job t="I">17698533250</_job>
     <_time t="T">2025-09-13T15:35:16Z</_time>
@@ -49882,581 +49160,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <when t="T">2024-12-05T12:24:38Z</when>
     <where t="S">github</where>
     <who t="I">51804353</who>
-  </f>
-  <f>
-    <_id t="I">572031</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:17Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#9 has been opened by @krzyk.</details>
-    <issue t="I">9</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:55:54Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2014-07-09T11:35:58Z</when>
-    <where t="S">github</where>
-    <who t="I">105730</who>
-  </f>
-  <f>
-    <_id t="I">572032</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:17Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#10 has been opened by @carlosmiranda.</details>
-    <issue t="I">10</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:01Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2014-07-23T07:59:56Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572033</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:18Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#14 has been opened by @longtimeago.</details>
-    <issue t="I">14</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:01Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2014-10-22T20:22:14Z</when>
-    <where t="S">github</where>
-    <who t="I">1388994</who>
-  </f>
-  <f>
-    <_id t="I">572034</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:18Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#16 has been opened by @alevohin.</details>
-    <issue t="I">16</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:55:54Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-01-07T19:15:54Z</when>
-    <where t="S">github</where>
-    <who t="I">1502358</who>
-  </f>
-  <f>
-    <_id t="I">572035</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:19Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#17 has been opened by @maurezen.</details>
-    <issue t="I">17</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:02Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-01-08T16:29:01Z</when>
-    <where t="S">github</where>
-    <who t="I">569536</who>
-  </f>
-  <f>
-    <_id t="I">572036</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:19Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#19 has been opened by @maurezen.</details>
-    <issue t="I">19</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:03Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-01-14T22:38:00Z</when>
-    <where t="S">github</where>
-    <who t="I">569536</who>
-  </f>
-  <f>
-    <_id t="I">572037</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:20Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#22 has been opened by @palyuga.</details>
-    <issue t="I">22</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:03Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-01-17T22:37:30Z</when>
-    <where t="S">github</where>
-    <who t="I">927387</who>
-  </f>
-  <f>
-    <_id t="I">572038</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:20Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#23 has been opened by @ggajos.</details>
-    <issue t="I">23</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:04Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-01-19T17:50:20Z</when>
-    <where t="S">github</where>
-    <who t="I">988790</who>
-  </f>
-  <f>
-    <_id t="I">572039</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:20Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#25 has been opened by @carlosmiranda.</details>
-    <issue t="I">25</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:04Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-03-15T07:07:09Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572040</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:21Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#29 has been opened by @wholegroup.</details>
-    <issue t="I">29</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T18:56:04Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-04-18T18:26:58Z</when>
-    <where t="S">github</where>
-    <who t="I">553191</who>
-  </f>
-  <f>
-    <_id t="I">572041</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:21Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#31 has been opened by @yamstranger.</details>
-    <is_human t="I">1</is_human>
-    <issue t="I">31</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-14T02:29:08Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-06-10T10:48:30Z</when>
-    <where t="S">github</where>
-    <who t="I">1667699</who>
-  </f>
-  <f>
-    <_id t="I">572042</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:22Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#37 has been opened by @gvlasov.</details>
-    <is_human t="I">1</is_human>
-    <issue t="I">37</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-14T02:29:08Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-07-19T18:23:47Z</when>
-    <where t="S">github</where>
-    <who t="I">4467948</who>
-  </f>
-  <f>
-    <_id t="I">572043</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:22Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#38 has been opened by @gvlasov.</details>
-    <is_human t="I">1</is_human>
-    <issue t="I">38</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-14T02:29:51Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-08-16T20:27:47Z</when>
-    <where t="S">github</where>
-    <who t="I">4467948</who>
-  </f>
-  <f>
-    <_id t="I">572044</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:22Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <details t="S">The missing issue jcabi/jcabi-parent#39 has been opened by @longtimeago.</details>
-    <is_human t="I">1</is_human>
-    <issue t="I">39</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-14T02:29:52Z</tombstone>
-    <what t="S">issue-was-opened</what>
-    <when t="T">2015-08-30T11:09:26Z</when>
-    <where t="S">github</where>
-    <who t="I">1388994</who>
-  </f>
-  <f>
-    <_id t="I">572045</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:23Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">57</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#58 has been opened by @longtimeago.</details>
-    <issue t="I">58</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T21:46:34Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2016-06-23T19:02:43Z</when>
-    <where t="S">github</where>
-    <who t="I">1388994</who>
-  </f>
-  <f>
-    <_id t="I">572046</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:23Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">master</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#82 has been opened by @driver733.</details>
-    <issue t="I">82</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T21:46:34Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2018-08-12T10:23:58Z</when>
-    <where t="S">github</where>
-    <who t="I">10466206</who>
-  </f>
-  <f>
-    <_id t="I">572047</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:24Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">76</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#85 has been opened by @fabriciofx.</details>
-    <issue t="I">85</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:04Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2019-01-13T04:57:21Z</when>
-    <where t="S">github</where>
-    <who t="I">1964562</who>
-  </f>
-  <f>
-    <_id t="I">572048</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:25Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">fix-xcop-on-windows</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#89 has been opened by @zcrusaderz.</details>
-    <issue t="I">89</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T21:46:35Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2019-05-08T13:31:46Z</when>
-    <where t="S">github</where>
-    <who t="I">34595022</who>
-  </f>
-  <f>
-    <_id t="I">572049</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:26Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.hibernate.validator-hibernate-validator-6.1.0.Final</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#92 has been opened by @dependabot[bot].</details>
-    <issue t="I">92</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:09Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2020-01-08T17:07:33Z</when>
-    <where t="S">github</where>
-    <who t="I">49699333</who>
-  </f>
-  <f>
-    <_id t="I">572050</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:27Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">107</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#108 has been opened by @fabriciofx.</details>
-    <issue t="I">108</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:11Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2020-11-23T20:57:02Z</when>
-    <where t="S">github</where>
-    <who t="I">1964562</who>
-  </f>
-  <f>
-    <_id t="I">572051</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:28Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.codehaus.groovy-groovy-all-3.0.0-alpha-1</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#113 has been opened by @dependabot-preview[bot].</details>
-    <issue t="I">113</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:13Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2020-12-01T19:38:50Z</when>
-    <where t="S">github</where>
-    <who t="I">27856297</who>
-  </f>
-  <f>
-    <_id t="I">572052</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:29Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">dependabot/maven/org.hibernate.validator-hibernate-validator-6.1.6.Final</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#114 has been opened by @dependabot-preview[bot].</details>
-    <issue t="I">114</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:16Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2020-12-01T19:39:13Z</when>
-    <where t="S">github</where>
-    <who t="I">27856297</who>
-  </f>
-  <f>
-    <_id t="I">572053</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:29Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">qulice-config</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#118 has been opened by @g4s8.</details>
-    <issue t="I">118</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:18Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2021-03-01T09:45:24Z</when>
-    <where t="S">github</where>
-    <who t="I">1524988</who>
-  </f>
-  <f>
-    <_id t="I">572054</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:30Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">issue-128</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#129 has been opened by @andreoss.</details>
-    <issue t="I">129</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:20Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2021-12-23T00:27:29Z</when>
-    <where t="S">github</where>
-    <who t="I">49783909</who>
-  </f>
-  <f>
-    <_id t="I">572055</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:31Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">master</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#133 has been opened by @andreoss.</details>
-    <issue t="I">133</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:21Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-01-10T15:28:08Z</when>
-    <where t="S">github</where>
-    <who t="I">49783909</who>
-  </f>
-  <f>
-    <_id t="I">572056</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:32Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">fixed-mvn-compiler-v</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#137 has been opened by @graur.</details>
-    <issue t="I">137</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T21:46:37Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-08-01T12:44:21Z</when>
-    <where t="S">github</where>
-    <who t="I">33455325</who>
-  </f>
-  <f>
-    <_id t="I">572057</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:33Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/configure</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#143 has been opened by @renovate[bot].</details>
-    <issue t="I">143</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:24Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T04:15:50Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572058</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:34Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.jcabi-jcabi-github-1.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#144 has been opened by @renovate[bot].</details>
-    <issue t="I">144</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:25Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T04:17:51Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572059</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:34Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.jcabi-jcabi-http-1.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#145 has been opened by @renovate[bot].</details>
-    <issue t="I">145</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:27Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T04:17:56Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572060</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:35Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.antlr-antlr3-maven-plugin-3.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#148 has been opened by @renovate[bot].</details>
-    <issue t="I">148</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:28Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T05:39:11Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572061</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:36Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-deploy-plugin-3.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#149 has been opened by @renovate[bot].</details>
-    <issue t="I">149</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:30Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T05:39:17Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572062</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:37Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-javadoc-plugin-3.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#150 has been opened by @renovate[bot].</details>
-    <issue t="I">150</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:31Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T11:17:44Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572063</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:38Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-plugin-plugin-3.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#151 has been opened by @renovate[bot].</details>
-    <issue t="I">151</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:32Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T11:17:49Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572064</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:38Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-war-plugin-3.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#152 has been opened by @renovate[bot].</details>
-    <issue t="I">152</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:34Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T14:11:56Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572065</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:39Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/groovy-monorepo</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#153 has been opened by @renovate[bot].</details>
-    <issue t="I">153</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:35Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T14:12:02Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572066</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:40Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/junit5-monorepo</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#154 has been opened by @renovate[bot].</details>
-    <issue t="I">154</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:36Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T17:45:42Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572067</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:40Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/org.slf4j-slf4j-reload4j-2.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#155 has been opened by @renovate[bot].</details>
-    <issue t="I">155</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:38Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T17:45:47Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572068</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:41Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.jcabi-jcabi-maven-plugin-0.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#156 has been opened by @renovate[bot].</details>
-    <issue t="I">156</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:39Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T20:42:09Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">572069</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:35:42Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">renovate/com.jcabi-jcabi-simpledb-0.x</branch>
-    <details t="S">The missing pull jcabi/jcabi-parent#157 has been opened by @renovate[bot].</details>
-    <issue t="I">157</issue>
-    <repository t="I">12590813</repository>
-    <tombstone t="T">2025-09-13T19:49:40Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2022-09-22T20:42:16Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
   </f>
   <f>
     <_id t="I">572070</_id>
@@ -50906,111 +49609,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <when t="T">2024-07-18T10:08:00Z</when>
     <where t="S">github</where>
     <who t="I">26545482</who>
-  </f>
-  <f>
-    <_id t="I">572146</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:40Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">39</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#44 has been opened by @carlosmiranda.</details>
-    <issue t="I">44</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:48:57Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2014-07-03T02:06:34Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572147</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:41Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">36</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#45 has been opened by @carlosmiranda.</details>
-    <issue t="I">45</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:49:00Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2014-07-10T02:36:13Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572148</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:42Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">47</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#48 has been opened by @carlosmiranda.</details>
-    <issue t="I">48</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:49:01Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2014-07-23T00:16:52Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572149</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:43Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">46</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#49 has been opened by @carlosmiranda.</details>
-    <issue t="I">49</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:49:03Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2014-07-28T14:32:02Z</when>
-    <where t="S">github</where>
-    <who t="I">1917892</who>
-  </f>
-  <f>
-    <_id t="I">572150</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:43Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">60</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#61 has been opened by @romankisilenko.</details>
-    <issue t="I">61</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:49:06Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2015-01-12T21:54:26Z</when>
-    <where t="S">github</where>
-    <who t="I">3440659</who>
-  </f>
-  <f>
-    <_id t="I">572151</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:44Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">62</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#65 has been opened by @maurezen.</details>
-    <issue t="I">65</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T19:49:08Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2015-01-19T11:13:36Z</when>
-    <where t="S">github</where>
-    <who t="I">569536</who>
-  </f>
-  <f>
-    <_id t="I">572152</_id>
-    <_job t="I">17698533250</_job>
-    <_time t="T">2025-09-13T15:36:45Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <branch t="S">82</branch>
-    <details t="S">The missing pull jcabi/jcabi-http#83 has been opened by @dmzaytsev.</details>
-    <issue t="I">83</issue>
-    <repository t="I">16312153</repository>
-    <tombstone t="T">2025-09-13T21:46:35Z</tombstone>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2015-04-24T10:22:59Z</when>
-    <where t="S">github</where>
-    <who t="I">9972909</who>
   </f>
   <f>
     <_id t="I">572153</_id>
@@ -80372,230 +78970,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">575835</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:31Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #4637784 submitted the issue #68 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:28Z</done>
-    <issue t="I">68</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2015-06-23T12:57:10Z</when>
-    <where t="S">github</where>
-    <who t="I">4637784</who>
-  </f>
-  <f>
-    <_id t="I">575836</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:31Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #984052 submitted the issue #113 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:28Z</done>
-    <issue t="I">113</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2016-02-19T00:00:58Z</when>
-    <where t="S">github</where>
-    <who t="I">984052</who>
-  </f>
-  <f>
-    <_id t="I">575837</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #7222462 submitted the issue #130 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:29Z</done>
-    <issue t="I">130</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2017-03-17T12:41:44Z</when>
-    <where t="S">github</where>
-    <who t="I">7222462</who>
-  </f>
-  <f>
-    <_id t="I">575838</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #1714171 submitted the issue #133 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:29Z</done>
-    <issue t="I">133</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2017-04-28T16:05:00Z</when>
-    <where t="S">github</where>
-    <who t="I">1714171</who>
-  </f>
-  <f>
-    <_id t="I">575839</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #502372 submitted the issue #149 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:29Z</done>
-    <issue t="I">149</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2019-01-11T23:07:11Z</when>
-    <where t="S">github</where>
-    <who t="I">502372</who>
-  </f>
-  <f>
-    <_id t="I">575840</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #1405237 submitted the issue #151 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:30Z</done>
-    <issue t="I">151</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2019-02-18T16:20:52Z</when>
-    <where t="S">github</where>
-    <who t="I">1405237</who>
-  </f>
-  <f>
-    <_id t="I">575841</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #298504 submitted the issue #153 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:30Z</done>
-    <issue t="I">153</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2020-02-06T08:51:32Z</when>
-    <where t="S">github</where>
-    <who t="I">298504</who>
-  </f>
-  <f>
-    <_id t="I">575842</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #9504395 submitted the issue #154 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:30Z</done>
-    <issue t="I">154</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:45Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2020-03-05T15:37:15Z</when>
-    <where t="S">github</where>
-    <who t="I">9504395</who>
-  </f>
-  <f>
-    <_id t="I">575843</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #5004037 submitted the issue #162 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:31Z</done>
-    <issue t="I">162</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2021-09-16T16:14:01Z</when>
-    <where t="S">github</where>
-    <who t="I">5004037</who>
-  </f>
-  <f>
-    <_id t="I">575844</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #33983579 submitted the issue #169 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:31Z</done>
-    <issue t="I">169</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2022-08-22T05:46:07Z</when>
-    <where t="S">github</where>
-    <who t="I">33983579</who>
-  </f>
-  <f>
-    <_id t="I">575845</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">8086956</closer>
-    <details t="S">In the repository #13717355, the user #51804353 submitted the issue #211 which was later closed by the user #8086956 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:31Z</done>
-    <issue t="I">211</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2023-07-17T10:13:51Z</when>
-    <where t="S">github</where>
-    <who t="I">51804353</who>
-  </f>
-  <f>
-    <_id t="I">575846</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:32Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">8086956</closer>
-    <details t="S">In the repository #13717355, the user #51804353 submitted the issue #215 which was later closed by the user #8086956 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:32Z</done>
-    <issue t="I">215</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2023-07-19T14:20:33Z</when>
-    <where t="S">github</where>
-    <who t="I">51804353</who>
-  </f>
-  <f>
-    <_id t="I">575847</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:33Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">526301</closer>
-    <details t="S">In the repository #13717355, the user #46355873 submitted the issue #244 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:32Z</done>
-    <issue t="I">244</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2024-04-16T20:09:20Z</when>
-    <where t="S">github</where>
-    <who t="I">46355873</who>
-  </f>
-  <f>
-    <_id t="I">575848</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:33Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">8086956</closer>
-    <details t="S">In the repository #13717355, the user #37025995 submitted the issue #282 which was later closed by the user #8086956 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:32Z</done>
-    <issue t="I">282</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:46Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2024-12-23T09:22:02Z</when>
-    <where t="S">github</where>
-    <who t="I">37025995</who>
-  </f>
-  <f>
     <_id t="I">575849</_id>
     <_job t="I">37726</_job>
     <_time t="T">2025-09-14T05:49:33Z</_time>
@@ -80850,22 +79224,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <when t="T">2021-03-17T17:36:22Z</when>
     <where t="S">github</where>
     <who t="I">45224442</who>
-  </f>
-  <f>
-    <_id t="I">575865</_id>
-    <_job t="I">37726</_job>
-    <_time t="T">2025-09-14T05:49:34Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <closer t="I">8086956</closer>
-    <details t="S">In the repository #13717355, the user #24456188 submitted the issue #213 which was later closed by the user #8086956 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
-    <done t="T">2025-09-14T06:58:38Z</done>
-    <issue t="I">213</issue>
-    <repository t="I">13717355</repository>
-    <tombstone t="T">2025-09-14T08:53:48Z</tombstone>
-    <what t="S">dud-was-closed</what>
-    <when t="T">2023-07-18T17:44:02Z</when>
-    <where t="S">github</where>
-    <who t="I">24456188</who>
   </f>
   <f>
     <_id t="I">575878</_id>
@@ -96861,76 +95219,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <who t="I">526301</who>
   </f>
   <f>
-    <_id t="I">576896</_id>
-    <_job t="I">37741</_job>
-    <_time t="T">2025-09-14T08:53:50Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <issues>
-      <v t="S">1-160</v>
-      <v t="S">164-165</v>
-      <v t="S">167-177</v>
-      <v t="S">179-193</v>
-      <v t="S">195-201</v>
-      <v t="S">203-221</v>
-      <v t="S">224-249</v>
-      <v t="S">252</v>
-      <v t="S">257</v>
-      <v t="S">259-269</v>
-      <v t="S">271-319</v>
-      <v t="S">321-346</v>
-      <v t="S">348-490</v>
-      <v t="S">492-507</v>
-      <v t="S">509-523</v>
-      <v t="S">525-538</v>
-      <v t="S">540</v>
-      <v t="S">543-549</v>
-      <v t="S">569</v>
-    </issues>
-    <repository t="I">16312153</repository>
-    <what t="S">tombstone</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">576897</_id>
-    <_job t="I">37741</_job>
-    <_time t="T">2025-09-14T08:53:52Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <issues>
-      <v t="S">1-80</v>
-      <v t="S">82</v>
-      <v t="S">84-116</v>
-      <v t="S">118-145</v>
-      <v t="S">147-190</v>
-      <v t="S">192-486</v>
-      <v t="S">488-572</v>
-    </issues>
-    <repository t="I">12590813</repository>
-    <what t="S">tombstone</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">576898</_id>
-    <_job t="I">37741</_job>
-    <_time t="T">2025-09-14T08:53:53Z</_time>
-    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
-    <issues>
-      <v t="S">1-104</v>
-      <v t="S">106-127</v>
-      <v t="S">129-133</v>
-      <v t="S">135-142</v>
-      <v t="S">144-147</v>
-      <v t="S">149-176</v>
-      <v t="S">178-223</v>
-      <v t="S">225-239</v>
-      <v t="S">241-247</v>
-      <v t="S">250-286</v>
-      <v t="S">298</v>
-    </issues>
-    <repository t="I">13717355</repository>
-    <what t="S">tombstone</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">576899</_id>
     <_job t="I">37741</_job>
     <_time t="T">2025-09-14T08:53:55Z</_time>
@@ -97064,18 +95352,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     </issues>
     <repository t="I">19194296</repository>
     <what t="S">tombstone</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">576908</_id>
-    <_job t="I">17709334576</_job>
-    <_time t="T">2025-09-14T09:31:48Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <events_were_scanned t="I">54659961689</events_were_scanned>
-    <min_issue_was_found t="I">0</min_issue_was_found>
-    <min_pull_was_found t="I">373</min_pull_was_found>
-    <repository t="I">4174608</repository>
-    <what t="S">iterate</what>
     <where t="S">github</where>
   </f>
   <f>
@@ -97386,23 +95662,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">576933</_id>
-    <_job t="I">17709334576</_job>
-    <_time t="T">2025-09-14T09:45:59Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <assignees_were_scanned t="I">0</assignees_were_scanned>
-    <events_were_scanned t="I">54362221664</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">0</labels_were_scanned>
-    <merges_were_scanned t="I">24</merges_were_scanned>
-    <min_issue_was_found t="I">43</min_issue_was_found>
-    <min_pull_was_found t="I">355</min_pull_was_found>
-    <repository t="I">13717355</repository>
-    <types_were_scanned t="I">145</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">576934</_id>
     <_job t="I">17709334576</_job>
     <_time t="T">2025-09-14T09:45:59Z</_time>
@@ -97467,23 +95726,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">576939</_id>
-    <_job t="I">17709334576</_job>
-    <_time t="T">2025-09-14T09:46:00Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <assignees_were_scanned t="I">0</assignees_were_scanned>
-    <events_were_scanned t="I">53449773369</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">0</labels_were_scanned>
-    <merges_were_scanned t="I">375</merges_were_scanned>
-    <min_issue_was_found t="I">74</min_issue_was_found>
-    <min_pull_was_found t="I">554</min_pull_was_found>
-    <repository t="I">16312153</repository>
-    <types_were_scanned t="I">170</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">576940</_id>
     <_job t="I">17709334576</_job>
     <_time t="T">2025-09-14T09:46:00Z</_time>
@@ -97493,23 +95735,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <min_issue_was_found t="I">36</min_issue_was_found>
     <min_pull_was_found t="I">38</min_pull_was_found>
     <repository t="I">15208785</repository>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">576941</_id>
-    <_job t="I">17709334576</_job>
-    <_time t="T">2025-09-14T09:46:00Z</_time>
-    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
-    <assignees_were_scanned t="I">0</assignees_were_scanned>
-    <events_were_scanned t="I">54360655730</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">228</labels_were_scanned>
-    <merges_were_scanned t="I">295</merges_were_scanned>
-    <min_issue_was_found t="I">81</min_issue_was_found>
-    <min_pull_was_found t="I">18</min_pull_was_found>
-    <repository t="I">12590813</repository>
-    <types_were_scanned t="I">0</types_were_scanned>
     <what t="S">iterate</what>
     <where t="S">github</where>
   </f>
@@ -97710,5 +95935,1799 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <repository t="I">13624455</repository>
     <what t="S">iterate</what>
     <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">576957</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:00Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#17 reported by @carlosmiranda; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">17</issue>
+    <reporter t="I">1917892</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2014-03-21T07:57:54Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576958</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:00Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#31 reported by @carlosmiranda; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">31</issue>
+    <reporter t="I">1917892</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2014-08-18T04:51:51Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576959</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:01Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#32 reported by @carlosmiranda; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">32</issue>
+    <reporter t="I">1917892</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2014-08-21T06:17:05Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576960</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:01Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#84 reported by @alehvasilyeu; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">84</issue>
+    <reporter t="I">2071500</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-06-23T21:10:15Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576961</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:01Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#23 reported by @carlosmiranda; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">23</issue>
+    <reporter t="I">1917892</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2014-06-13T05:17:56Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576962</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:01Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#85 reported by @super132; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">85</issue>
+    <reporter t="I">6581896</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-05-11T01:53:37Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576963</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:01Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#25 reported by @ericjung; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">25</issue>
+    <reporter t="I">5875610</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2014-06-26T19:53:24Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576964</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:02Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#38 reported by @mentiflectax; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">38</issue>
+    <reporter t="I">1143055</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-01-02T13:00:29Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576965</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:02Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#96 reported by @cvrebert; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">96</issue>
+    <reporter t="I">419884</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-06-23T21:16:57Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576966</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:02Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#33 reported by @longtimeago; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">33</issue>
+    <reporter t="I">1388994</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-01-02T14:37:26Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576967</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:02Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#34 reported by @maurezen; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">34</issue>
+    <reporter t="I">569536</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-01-10T14:59:36Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576968</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:02Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#49 reported by @apocarteres; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">49</issue>
+    <reporter t="I">3305624</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-01-21T17:23:37Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576969</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#51 reported by @davdavid; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">51</issue>
+    <reporter t="I">20211331</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-07-07T22:37:10Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576970</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@dmarkov attached the '#bug' label to jcabi/jcabi-http#116 reported by @yegor256; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">116</issue>
+    <reporter t="I">526301</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-12-09T13:59:38Z</when>
+    <where t="S">github</where>
+    <who t="I">5993843</who>
+  </f>
+  <f>
+    <_id t="I">576971</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#54 reported by @andrejserafim; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">54</issue>
+    <reporter t="I">13505986</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-11-22T05:28:11Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576972</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#122 reported by @piddubnyi; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">122</issue>
+    <reporter t="I">6010247</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-01-26T03:55:05Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576973</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@dmarkov attached the '#bug' label to jcabi/jcabi-xml#62 reported by @yegor256; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">62</issue>
+    <reporter t="I">526301</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-03-24T07:06:59Z</when>
+    <where t="S">github</where>
+    <who t="I">5993843</who>
+  </f>
+  <f>
+    <_id t="I">576974</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:03Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#124 reported by @cvrebert; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">124</issue>
+    <reporter t="I">419884</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-01-29T21:07:52Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576975</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:04Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#126 reported by @krzyk; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">126</issue>
+    <reporter t="I">105730</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-04-18T15:06:08Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576976</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:04Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@dmarkov attached the '#bug' label to jcabi/jcabi-xml#74 reported by @yegor256; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">74</issue>
+    <reporter t="I">526301</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-11-13T08:27:30Z</when>
+    <where t="S">github</where>
+    <who t="I">5993843</who>
+  </f>
+  <f>
+    <_id t="I">576977</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:04Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@andreoss attached the '#bug' label to jcabi/jcabi-http#127 reported by @simonjenga; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">127</issue>
+    <reporter t="I">1405237</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2020-07-08T12:34:27Z</when>
+    <where t="S">github</where>
+    <who t="I">49783909</who>
+  </f>
+  <f>
+    <_id t="I">576978</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:04Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#94 reported by @carlosmiranda; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">94</issue>
+    <reporter t="I">1917892</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-12-10T10:16:16Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576979</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:04Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#70 reported by @sz332; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">70</issue>
+    <reporter t="I">8182138</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2019-05-05T18:07:42Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576980</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#96 reported by @simonjenga; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">96</issue>
+    <reporter t="I">1405237</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-12-18T11:33:30Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576981</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#135 reported by @westonal; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">135</issue>
+    <reporter t="I">6041352</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-06-23T00:21:55Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576982</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#98 reported by @simonjenga; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">98</issue>
+    <reporter t="I">1405237</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-12-21T08:40:06Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576983</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#145 reported by @andrejserafim; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">145</issue>
+    <reporter t="I">13505986</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-11-22T12:14:27Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576984</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#99 reported by @simonjenga; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">99</issue>
+    <reporter t="I">1405237</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-12-23T06:42:24Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576985</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#146 reported by @andrejserafim; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">146</issue>
+    <reporter t="I">13505986</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-11-21T20:50:48Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576986</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#103 reported by @simonjenga; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">103</issue>
+    <reporter t="I">1405237</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-01-06T11:31:17Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576987</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:05Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#153 reported by @passwone; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">153</issue>
+    <reporter t="I">24527002</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2017-01-07T04:20:45Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576988</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:06Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#78 reported by @glusk; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">78</issue>
+    <reporter t="I">8526099</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2023-06-10T05:28:32Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576989</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:06Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#110 reported by @mkordas; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">110</issue>
+    <reporter t="I">5467276</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-01-29T22:15:16Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576990</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:06Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#119 reported by @amihaiemil; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">119</issue>
+    <reporter t="I">6305156</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-04-18T14:50:30Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576991</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:06Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#120 reported by @amihaiemil; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">120</issue>
+    <reporter t="I">6305156</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-04-04T19:17:11Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576992</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:06Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#124 reported by @mstarodubtsev; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">124</issue>
+    <reporter t="I">14348888</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-11-21T20:50:09Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576993</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:07Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#125 reported by @senleft; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">125</issue>
+    <reporter t="I">812727</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-11-21T15:19:09Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576994</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:07Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@andreoss attached the '#bug' label to jcabi/jcabi-http#175 reported by @driver733; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">175</issue>
+    <reporter t="I">10466206</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2020-07-09T02:26:44Z</when>
+    <where t="S">github</where>
+    <who t="I">49783909</who>
+  </f>
+  <f>
+    <_id t="I">576995</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:07Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-jdbc#165 reported by @andreoss; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">165</issue>
+    <reporter t="I">49783909</reporter>
+    <repository t="I">12587702</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2023-06-10T05:33:20Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576996</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:07Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#177 reported by @paulodamaso; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">177</issue>
+    <reporter t="I">33915433</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2018-12-25T15:05:16Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576997</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:07Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#185 reported by @mximp; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">185</issue>
+    <reporter t="I">40247101</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2022-10-18T16:34:37Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576998</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:08Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#47 reported by @maurezen; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">47</issue>
+    <reporter t="I">569536</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-01-19T22:02:34Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">576999</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:08Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#54 reported by @lightoze; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">54</issue>
+    <reporter t="I">534657</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-02-13T18:32:37Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577000</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:08Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#82 reported by @dmzaytsev; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">82</issue>
+    <reporter t="I">9972909</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-04-23T19:00:00Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577001</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:08Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#87 reported by @pinaf; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">87</issue>
+    <reporter t="I">1054771</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-06-23T21:06:46Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577002</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:08Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#89 reported by @cvrebert; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">89</issue>
+    <reporter t="I">419884</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-06-23T21:07:51Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577003</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#90 reported by @cvrebert; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">90</issue>
+    <reporter t="I">419884</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-06-23T21:00:56Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577004</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#105 reported by @longtimeago; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">105</issue>
+    <reporter t="I">1388994</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-09-13T11:19:33Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577005</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#113 reported by @krzyk; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">113</issue>
+    <reporter t="I">105730</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2015-09-29T20:25:52Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577006</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#136 reported by @super132; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">136</issue>
+    <reporter t="I">6581896</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-06-27T21:02:04Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577007</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#137 reported by @pstorch; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">137</issue>
+    <reporter t="I">5598124</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-06-27T21:11:21Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577008</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-http#138 reported by @yiyiwangru; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">138</issue>
+    <reporter t="I">11848650</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2016-06-27T21:01:25Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577009</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:09Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@andreoss attached the '#bug' label to jcabi/jcabi-http#179 reported by @nnordrum; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">179</issue>
+    <reporter t="I">774167</reporter>
+    <repository t="I">16312153</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2020-07-08T16:21:08Z</when>
+    <where t="S">github</where>
+    <who t="I">49783909</who>
+  </f>
+  <f>
+    <_id t="I">577010</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:10Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#205 reported by @volodya-lombrozo; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">205</issue>
+    <reporter t="I">51804353</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2023-06-02T09:35:56Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577011</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:10Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <details t="S">@yegor256 attached the '#bug' label to jcabi/jcabi-xml#277 reported by @volodya-lombrozo; this means that a bug was accepted as valid, by the project team.</details>
+    <issue t="I">277</issue>
+    <reporter t="I">51804353</reporter>
+    <repository t="I">13717355</repository>
+    <what t="S">bug-was-accepted</what>
+    <when t="T">2024-12-04T14:44:10Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577012</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:11Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #9972909 submitted the issue #107 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">107</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2016-01-16T06:38:42Z</when>
+    <where t="S">github</where>
+    <who t="I">9972909</who>
+  </f>
+  <f>
+    <_id t="I">577013</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:11Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #1405237 submitted the issue #106 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">106</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2016-01-10T11:54:57Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577014</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:11Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #1405237 submitted the issue #102 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">102</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-12-25T07:31:19Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577015</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:11Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #1405237 submitted the issue #101 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">101</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-12-24T08:13:50Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577016</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #1405237 submitted the issue #100 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">100</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-12-23T07:13:42Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577017</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #13717355, the user #1667699 submitted the issue #66 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">66</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-06-10T10:43:03Z</when>
+    <where t="S">github</where>
+    <who t="I">1667699</who>
+  </f>
+  <f>
+    <_id t="I">577018</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #12587702, the user #569536 submitted the issue #37 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">37</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-01-21T22:51:51Z</when>
+    <where t="S">github</where>
+    <who t="I">569536</who>
+  </f>
+  <f>
+    <_id t="I">577019</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">In the repository #16312153, the user #7406247 submitted the issue #34 which was later closed by the user #526301 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">34</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2014-06-06T22:19:19Z</when>
+    <where t="S">github</where>
+    <who t="I">7406247</who>
+  </f>
+  <f>
+    <_id t="I">577020</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">49783909</closer>
+    <details t="S">In the repository #16312153, the user #2175702 submitted the issue #64 which was later closed by the user #49783909 not becoming a bug or enhancement; this means that the issue was not valid, maybe a duplicate or simply a mistake.</details>
+    <issue t="I">64</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">dud-was-closed</what>
+    <when t="T">2015-01-18T14:06:08Z</when>
+    <where t="S">github</where>
+    <who t="I">2175702</who>
+  </f>
+  <f>
+    <_id t="I">577021</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:53Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <issues>
+      <v t="S">1-160</v>
+      <v t="S">164-165</v>
+      <v t="S">167-177</v>
+      <v t="S">179-193</v>
+      <v t="S">195-201</v>
+      <v t="S">203-221</v>
+      <v t="S">224-249</v>
+      <v t="S">252</v>
+      <v t="S">257</v>
+      <v t="S">259-269</v>
+      <v t="S">271-319</v>
+      <v t="S">321-346</v>
+      <v t="S">348-490</v>
+      <v t="S">492-507</v>
+      <v t="S">509-523</v>
+      <v t="S">525-538</v>
+      <v t="S">540</v>
+      <v t="S">543-549</v>
+      <v t="S">569</v>
+    </issues>
+    <repository t="I">16312153</repository>
+    <what t="S">tombstone</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577022</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:55Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <issues>
+      <v t="S">1-80</v>
+      <v t="S">82</v>
+      <v t="S">84-116</v>
+      <v t="S">118-145</v>
+      <v t="S">147-190</v>
+      <v t="S">192-486</v>
+      <v t="S">488-572</v>
+    </issues>
+    <repository t="I">12590813</repository>
+    <what t="S">tombstone</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577023</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:47:57Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <issues>
+      <v t="S">1-104</v>
+      <v t="S">106-127</v>
+      <v t="S">129-133</v>
+      <v t="S">135-142</v>
+      <v t="S">144-147</v>
+      <v t="S">149-176</v>
+      <v t="S">178-223</v>
+      <v t="S">225-239</v>
+      <v t="S">241-247</v>
+      <v t="S">250-286</v>
+      <v t="S">298</v>
+    </issues>
+    <repository t="I">13717355</repository>
+    <what t="S">tombstone</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577024</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">1054771</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-http#87 opened @pinaf by was resolved, after 15w of waiting, because it was closed by @pinaf and earlier it was assigned to @amihaiemil and the label '#bug' was attached.</details>
+    <issue t="I">87</issue>
+    <label t="S">bug</label>
+    <opener t="I">1054771</opener>
+    <repository t="I">16312153</repository>
+    <seconds t="I">9119140</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2016-11-21T20:32:17Z</when>
+    <where t="S">github</where>
+    <who t="I">6305156</who>
+  </f>
+  <f>
+    <_id t="I">577025</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:12Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">419884</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-http#89 opened @cvrebert by was resolved, after 1w of waiting, because it was closed by @cvrebert and earlier it was assigned to @idegtiarenko and the label '#bug' was attached.</details>
+    <issue t="I">89</issue>
+    <label t="S">bug</label>
+    <opener t="I">419884</opener>
+    <repository t="I">16312153</repository>
+    <seconds t="I">680884</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2016-01-26T04:33:32Z</when>
+    <where t="S">github</where>
+    <who t="I">1331856</who>
+  </f>
+  <f>
+    <_id t="I">577026</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:13Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">419884</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-http#90 opened @cvrebert by was resolved, after 1w2d of waiting, because it was closed by @cvrebert and earlier it was assigned to @piddubnyi and the label '#bug' was attached.</details>
+    <issue t="I">90</issue>
+    <label t="S">bug</label>
+    <opener t="I">419884</opener>
+    <repository t="I">16312153</repository>
+    <seconds t="I">857224</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2016-01-16T09:39:06Z</when>
+    <where t="S">github</where>
+    <who t="I">6010247</who>
+  </f>
+  <f>
+    <_id t="I">577027</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:13Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">5598124</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-http#137 opened @pstorch by was resolved, after 80w1d of waiting, because it was closed by @pstorch and earlier it was assigned to @westonal and the label '#bug' was attached.</details>
+    <issue t="I">137</issue>
+    <label t="S">bug</label>
+    <opener t="I">5598124</opener>
+    <repository t="I">16312153</repository>
+    <seconds t="I">48508907</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2018-01-10T21:22:54Z</when>
+    <where t="S">github</where>
+    <who t="I">6041352</who>
+  </f>
+  <f>
+    <_id t="I">577028</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:13Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">49783909</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-http#138 opened @yiyiwangru by was resolved, after 260w5d of waiting, because it was closed by @andreoss and earlier it was assigned to @westonal and the label '#bug' was attached.</details>
+    <issue t="I">138</issue>
+    <label t="S">bug</label>
+    <opener t="I">11848650</opener>
+    <repository t="I">16312153</repository>
+    <seconds t="I">157737942</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2021-06-28T02:46:49Z</when>
+    <where t="S">github</where>
+    <who t="I">6041352</who>
+  </f>
+  <f>
+    <_id t="I">577029</_id>
+    <_job t="I">37746</_job>
+    <_time t="T">2025-09-14T09:48:13Z</_time>
+    <_version t="S">0.16.4/0.53.8/0.15.42</_version>
+    <closer t="I">526301</closer>
+    <details t="S">The bug/feature in the issue jcabi/jcabi-xml#276 opened @yegor256 by was resolved, after 52m20s of waiting, because it was closed by @yegor256 and earlier it was assigned to @yegor256 and the label '#bug' was attached.</details>
+    <issue t="I">276</issue>
+    <label t="S">bug</label>
+    <opener t="I">526301</opener>
+    <repository t="I">13717355</repository>
+    <seconds t="I">3141</seconds>
+    <what t="S">bug-was-resolved</what>
+    <when t="T">2024-12-01T13:38:16Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577030</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:33:51Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <events_were_scanned t="I">54660606039</events_were_scanned>
+    <min_issue_was_found t="I">0</min_issue_was_found>
+    <min_pull_was_found t="I">373</min_pull_was_found>
+    <repository t="I">4174608</repository>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577031</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:11Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <assignees_were_scanned t="I">0</assignees_were_scanned>
+    <events_were_scanned t="I">53449773369</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">0</labels_were_scanned>
+    <merges_were_scanned t="I">375</merges_were_scanned>
+    <min_issue_was_found t="I">74</min_issue_was_found>
+    <min_pull_was_found t="I">554</min_pull_was_found>
+    <repository t="I">16312153</repository>
+    <types_were_scanned t="I">0</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577032</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:11Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <assignees_were_scanned t="I">0</assignees_were_scanned>
+    <events_were_scanned t="I">54362221664</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">0</labels_were_scanned>
+    <merges_were_scanned t="I">24</merges_were_scanned>
+    <min_issue_was_found t="I">43</min_issue_was_found>
+    <min_pull_was_found t="I">355</min_pull_was_found>
+    <repository t="I">13717355</repository>
+    <types_were_scanned t="I">0</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577033</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:11Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <assignees_were_scanned t="I">0</assignees_were_scanned>
+    <events_were_scanned t="I">54360655730</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">228</labels_were_scanned>
+    <merges_were_scanned t="I">295</merges_were_scanned>
+    <min_issue_was_found t="I">81</min_issue_was_found>
+    <min_pull_was_found t="I">18</min_pull_was_found>
+    <repository t="I">12590813</repository>
+    <types_were_scanned t="I">228</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">577034</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:24Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#74 has been 'issue-was-closed'.</details>
+    <issue t="I">74</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2015-03-30T18:17:55Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577035</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:38Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#91 has been 'issue-was-closed'.</details>
+    <issue t="I">91</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2015-06-29T07:15:46Z</when>
+    <where t="S">github</where>
+    <who t="I">5909722</who>
+  </f>
+  <f>
+    <_id t="I">577036</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:39Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-parent#87 has been 'issue-was-closed'.</details>
+    <issue t="I">87</issue>
+    <repository t="I">12590813</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2019-05-21T16:40:07Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577037</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:40Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#92 has been 'issue-was-closed'.</details>
+    <issue t="I">92</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2015-06-10T09:31:56Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577038</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:42Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-parent#88 has been 'issue-was-closed'.</details>
+    <issue t="I">88</issue>
+    <repository t="I">12590813</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2019-05-28T14:41:24Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577039</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:43Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#94 has been 'issue-was-closed'.</details>
+    <issue t="I">94</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2015-07-04T09:52:53Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577040</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:44Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-parent#98 has been 'issue-was-closed'.</details>
+    <issue t="I">98</issue>
+    <repository t="I">12590813</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-07-13T14:22:31Z</when>
+    <where t="S">github</where>
+    <who t="I">526301</who>
+  </f>
+  <f>
+    <_id t="I">577041</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:46Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#100 has been 'issue-was-closed'.</details>
+    <issue t="I">100</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2015-12-14T12:23:02Z</when>
+    <where t="S">github</where>
+    <who t="I">5909722</who>
+  </f>
+  <f>
+    <_id t="I">577042</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:47Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-parent#116 has been 'issue-was-closed'.</details>
+    <issue t="I">116</issue>
+    <repository t="I">12590813</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2021-02-15T14:18:46Z</when>
+    <where t="S">github</where>
+    <who t="I">160975</who>
+  </f>
+  <f>
+    <_id t="I">577043</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:55Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#154 has been 'issue-was-closed'.</details>
+    <issue t="I">154</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2017-01-12T10:21:21Z</when>
+    <where t="S">github</where>
+    <who t="I">9504395</who>
+  </f>
+  <f>
+    <_id t="I">577044</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:46:57Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#157 has been 'issue-was-closed'.</details>
+    <issue t="I">157</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2017-05-08T19:41:24Z</when>
+    <where t="S">github</where>
+    <who t="I">5237764</who>
+  </f>
+  <f>
+    <_id t="I">577045</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:07Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#206 has been 'issue-was-closed'.</details>
+    <issue t="I">206</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-07-10T17:32:22Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577046</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:08Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#207 has been 'issue-was-closed'.</details>
+    <issue t="I">207</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-07-10T12:05:25Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577047</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:08Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#210 has been 'issue-was-closed'.</details>
+    <issue t="I">210</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-07-25T13:01:22Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577048</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:09Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#211 has been 'issue-was-closed'.</details>
+    <issue t="I">211</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-07-25T15:33:21Z</when>
+    <where t="S">github</where>
+    <who t="I">49783909</who>
+  </f>
+  <f>
+    <_id t="I">577049</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:09Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#215 has been 'issue-was-closed'.</details>
+    <issue t="I">215</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2020-08-28T14:30:09Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577050</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:15Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">Apparently, jcabi/jcabi-http#405 has been 'issue-was-closed'.</details>
+    <issue t="I">405</issue>
+    <repository t="I">16312153</repository>
+    <what t="S">issue-was-closed</what>
+    <when t="T">2023-01-22T17:30:27Z</when>
+    <where t="S">github</where>
+    <who t="I">9504395</who>
+  </f>
+  <f>
+    <_id t="I">577051</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:32Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#282 has been earlier opened by @maxonfjvipon.</details>
+    <issue t="I">282</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2024-12-23T09:22:02Z</when>
+    <where t="S">github</where>
+    <who t="I">37025995</who>
+  </f>
+  <f>
+    <_id t="I">577052</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:33Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#244 has been earlier opened by @l3r8yj.</details>
+    <issue t="I">244</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2024-04-16T20:09:20Z</when>
+    <where t="S">github</where>
+    <who t="I">46355873</who>
+  </f>
+  <f>
+    <_id t="I">577053</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:33Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#215 has been earlier opened by @volodya-lombrozo.</details>
+    <issue t="I">215</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2023-07-19T14:20:33Z</when>
+    <where t="S">github</where>
+    <who t="I">51804353</who>
+  </f>
+  <f>
+    <_id t="I">577054</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:33Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#213 has been earlier opened by @0pdd.</details>
+    <issue t="I">213</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2023-07-18T17:44:02Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577055</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:34Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#211 has been earlier opened by @volodya-lombrozo.</details>
+    <issue t="I">211</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2023-07-17T10:13:51Z</when>
+    <where t="S">github</where>
+    <who t="I">51804353</who>
+  </f>
+  <f>
+    <_id t="I">577056</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:35Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#169 has been earlier opened by @ingeniariussoftware.</details>
+    <issue t="I">169</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2022-08-22T05:46:07Z</when>
+    <where t="S">github</where>
+    <who t="I">33983579</who>
+  </f>
+  <f>
+    <_id t="I">577057</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:36Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#162 has been earlier opened by @davewichers.</details>
+    <issue t="I">162</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2021-09-16T16:14:01Z</when>
+    <where t="S">github</where>
+    <who t="I">5004037</who>
+  </f>
+  <f>
+    <_id t="I">577058</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:37Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#154 has been earlier opened by @piotrkot.</details>
+    <issue t="I">154</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2020-03-05T15:37:15Z</when>
+    <where t="S">github</where>
+    <who t="I">9504395</who>
+  </f>
+  <f>
+    <_id t="I">577059</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:37Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#153 has been earlier opened by @olegmoz.</details>
+    <issue t="I">153</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2020-02-06T08:51:32Z</when>
+    <where t="S">github</where>
+    <who t="I">298504</who>
+  </f>
+  <f>
+    <_id t="I">577060</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:37Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#151 has been earlier opened by @simonjenga.</details>
+    <issue t="I">151</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-02-18T16:20:52Z</when>
+    <where t="S">github</where>
+    <who t="I">1405237</who>
+  </f>
+  <f>
+    <_id t="I">577061</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:38Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#149 has been earlier opened by @ilyakharlamov.</details>
+    <issue t="I">149</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-01-11T23:07:11Z</when>
+    <where t="S">github</where>
+    <who t="I">502372</who>
+  </f>
+  <f>
+    <_id t="I">577062</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:40Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#133 has been earlier opened by @skapral.</details>
+    <issue t="I">133</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2017-04-28T16:05:00Z</when>
+    <where t="S">github</where>
+    <who t="I">1714171</who>
+  </f>
+  <f>
+    <_id t="I">577063</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:40Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#130 has been earlier opened by @gicoprasico.</details>
+    <issue t="I">130</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2017-03-17T12:41:44Z</when>
+    <where t="S">github</where>
+    <who t="I">7222462</who>
+  </f>
+  <f>
+    <_id t="I">577064</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:41Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#113 has been earlier opened by @ifly6.</details>
+    <issue t="I">113</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2016-02-19T00:00:58Z</when>
+    <where t="S">github</where>
+    <who t="I">984052</who>
+  </f>
+  <f>
+    <_id t="I">577065</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:44Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#68 has been earlier opened by @yaroslavhq.</details>
+    <issue t="I">68</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2015-06-23T12:57:10Z</when>
+    <where t="S">github</where>
+    <who t="I">4637784</who>
+  </f>
+  <f>
+    <_id t="I">577066</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:45Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#60 has been earlier opened by @adamsiemion.</details>
+    <issue t="I">60</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2015-02-26T07:46:03Z</when>
+    <where t="S">github</where>
+    <who t="I">898997</who>
+  </f>
+  <f>
+    <_id t="I">577067</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:45Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#58 has been earlier opened by @adamsiemion.</details>
+    <issue t="I">58</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2015-02-24T17:51:55Z</when>
+    <where t="S">github</where>
+    <who t="I">898997</who>
+  </f>
+  <f>
+    <_id t="I">577068</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:46Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#53 has been earlier opened by @lightoze.</details>
+    <issue t="I">53</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2015-02-12T06:55:34Z</when>
+    <where t="S">github</where>
+    <who t="I">534657</who>
+  </f>
+  <f>
+    <_id t="I">577069</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:46Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-xml#50 has been earlier opened by @maurezen.</details>
+    <issue t="I">50</issue>
+    <repository t="I">13717355</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2015-01-21T23:01:33Z</when>
+    <where t="S">github</where>
+    <who t="I">569536</who>
+  </f>
+  <f>
+    <_id t="I">577070</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:50Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#102 has been earlier opened by @baudoliver7.</details>
+    <issue t="I">102</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2021-04-20T05:16:01Z</when>
+    <where t="S">github</where>
+    <who t="I">7813046</who>
+  </f>
+  <f>
+    <_id t="I">577071</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:51Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#100 has been earlier opened by @piotrkot.</details>
+    <issue t="I">100</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2021-04-07T14:29:43Z</when>
+    <where t="S">github</where>
+    <who t="I">9504395</who>
+  </f>
+  <f>
+    <_id t="I">577072</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:51Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#85 has been earlier opened by @0pdd.</details>
+    <issue t="I">85</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2020-08-25T17:51:31Z</when>
+    <where t="S">github</where>
+    <who t="I">24456188</who>
+  </f>
+  <f>
+    <_id t="I">577073</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:51Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#80 has been earlier opened by @golszewski86.</details>
+    <issue t="I">80</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2020-02-11T12:27:37Z</when>
+    <where t="S">github</where>
+    <who t="I">45224442</who>
+  </f>
+  <f>
+    <_id t="I">577074</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:52Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#79 has been earlier opened by @glusk.</details>
+    <issue t="I">79</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-12-19T11:27:43Z</when>
+    <where t="S">github</where>
+    <who t="I">8526099</who>
+  </f>
+  <f>
+    <_id t="I">577075</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:52Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#76 has been earlier opened by @pluresideas.</details>
+    <issue t="I">76</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-11-20T15:53:31Z</when>
+    <where t="S">github</where>
+    <who t="I">26636262</who>
+  </f>
+  <f>
+    <_id t="I">577076</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:53Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#74 has been earlier opened by @glusk.</details>
+    <issue t="I">74</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-10-25T12:43:14Z</when>
+    <where t="S">github</where>
+    <who t="I">8526099</who>
+  </f>
+  <f>
+    <_id t="I">577077</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:53Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#73 has been earlier opened by @scristalli.</details>
+    <issue t="I">73</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-07-12T12:01:27Z</when>
+    <where t="S">github</where>
+    <who t="I">7326295</who>
+  </f>
+  <f>
+    <_id t="I">577078</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:53Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#71 has been earlier opened by @golszewski86.</details>
+    <issue t="I">71</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2019-05-15T12:23:01Z</when>
+    <where t="S">github</where>
+    <who t="I">45224442</who>
+  </f>
+  <f>
+    <_id t="I">577079</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:53Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#68 has been earlier opened by @piotrkot.</details>
+    <issue t="I">68</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2018-11-08T17:10:20Z</when>
+    <where t="S">github</where>
+    <who t="I">9504395</who>
+  </f>
+  <f>
+    <_id t="I">577080</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:53Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#67 has been earlier opened by @verkhovin.</details>
+    <issue t="I">67</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2018-09-10T21:52:35Z</when>
+    <where t="S">github</where>
+    <who t="I">15959667</who>
+  </f>
+  <f>
+    <_id t="I">577081</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:54Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#57 has been earlier opened by @miroque.</details>
+    <issue t="I">57</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2017-01-31T07:59:41Z</when>
+    <where t="S">github</where>
+    <who t="I">661340</who>
+  </f>
+  <f>
+    <_id t="I">577082</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:55Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#50 has been earlier opened by @sshafiev.</details>
+    <issue t="I">50</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2016-04-11T20:12:12Z</when>
+    <where t="S">github</where>
+    <who t="I">1702423</who>
+  </f>
+  <f>
+    <_id t="I">577083</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:55Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#49 has been earlier opened by @lgmam.</details>
+    <issue t="I">49</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2016-03-09T20:49:26Z</when>
+    <where t="S">github</where>
+    <who t="I">3864307</who>
+  </f>
+  <f>
+    <_id t="I">577084</_id>
+    <_job t="I">17709974599</_job>
+    <_time t="T">2025-09-14T10:47:56Z</_time>
+    <_version t="S">0.16.3/0.53.6/0.15.42</_version>
+    <details t="S">The issue jcabi/jcabi-jdbc#46 has been earlier opened by @fabriciofx.</details>
+    <issue t="I">46</issue>
+    <repository t="I">12587702</repository>
+    <what t="S">issue-was-opened</what>
+    <when t="T">2016-01-18T04:33:27Z</when>
+    <where t="S">github</where>
+    <who t="I">1964562</who>
   </f>
 </fb>
