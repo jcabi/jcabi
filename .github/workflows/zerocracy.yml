@@ -23,7 +23,7 @@ jobs:
           token: ${{ secrets.ZEROCRACY_TOKEN }}
           repositories: jcabi/*
           factbase: jcabi.fb
-      - uses: zerocracy/pages-action@0.6.1
+      - uses: zerocracy/pages-action@0.6.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           factbase: jcabi.fb
