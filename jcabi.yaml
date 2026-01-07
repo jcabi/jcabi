@@ -2,11 +2,16 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
   inserted: 8
-  seconds: 845.92124945
+  seconds: 861.474863164
   version: 0.58.1
   what: judges-summary
-  when: 2026-01-07 18:01:13.712402874 Z
+  when: 2026-01-07 19:07:43.839904736 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -76539,26 +76544,6 @@
   total_reviews_submitted: 25
   what: quantity-of-deliverables
   when: 2026-01-04 13:45:05.000000000 Z
-- _id: 751849
-  _job: 56414
-  _time: 2026-01-04 15:52:11.423802406 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is staying still.
-    The average punishment per task (15.0 points) is staying still.
-    The average number of builds per week (1579.0) is decreasing (R=-0.54).
-    The average number of commits per week (50.6) is staying still.
-    The average monthly punishment (598 points) is decreasing (R=-0.72).
-    The average monthly wage (8.0 points) is increasing (R=0.71).
-    The average issue cycle time (2w1d) is increasing (R=0.36).
-    The average pull cycle time (6d19h) is increasing (R=0.15).
-    The average number of releases per month (2.9) is increasing (R=0.27).
-    The average monthly turnover (67.0 developers) is staying still.
-    The average weekly cost of HoC (1.22 points) is staying still.
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-01-04 15:52:11.445288936 Z
 - _id: 751858
   _job: 20696680858
   _time: 2026-01-04 17:44:52.623184719 Z
@@ -76659,21 +76644,6 @@
   total_stars: 2216
   what: dimensions-of-terrain
   when: 2026-01-05 17:49:32.792914067 Z
-- _id: 751974
-  _job: 56579
-  _time: 2026-01-06 02:45:43.953043868 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-01-06 02:45:43.888795716 Z
 - _id: 751987
   _job: 20790896210
   _time: 2026-01-07 17:47:17.384695658 Z
@@ -77199,21 +77169,6 @@
   types_were_scanned: 80
   what: iterate
   where: github
-- _id: 752018
-  _job: 20790896210
-  _time: 2026-01-07 17:48:13.031447940 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  earliest_issue_was_found: 1
-  events_were_scanned: 6677269216
-  labels_were_scanned: 62
-  latest_issue_was_found: 66
-  merges_were_scanned: 61
-  min_issue_was_found: 68
-  min_pull_was_found: 70
-  repository: 12591339
-  types_were_scanned: 62
-  what: iterate
-  where: github
 - _id: 752019
   _job: 20790896210
   _time: 2026-01-07 17:48:13.099287812 Z
@@ -77295,23 +77250,6 @@
   min_pull_was_found: 390
   repository: 12587702
   types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 752024
-  _job: 20790896210
-  _time: 2026-01-07 17:48:13.437375985 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  assignees_were_scanned: 376
-  earliest_issue_was_found: 1
-  events_were_scanned: 6668244391
-  issues_were_scanned: 0
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 434
-  min_pull_was_found: 439
-  repository: 14093966
-  types_were_scanned: 434
   what: iterate
   where: github
 - _id: 752025
@@ -77449,6 +77387,7 @@
   issue: 735
   repository: 12590813
   review: 2026-01-07 03:03:45.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -77517,3 +77456,84 @@
   when: 2026-01-07 03:03:45.000000000 Z
   where: github
   who: 526301
+- _id: 752037
+  _job: 56738
+  _time: 2026-01-07 18:01:40.562315309 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  analyzers: 18
+  text: |-
+    The average reward per task (4.6 points) is staying still.
+    The average punishment per task (15.0 points) is staying still.
+    The average number of builds per week (1579.0) is decreasing (R=-0.54).
+    The average number of commits per week (50.6) is staying still.
+    The average monthly punishment (598 points) is decreasing (R=-0.72).
+    The average monthly wage (8.0 points) is increasing (R=0.71).
+    The average issue cycle time (2w1d) is increasing (R=0.38).
+    The average pull cycle time (6d16h) is increasing (R=0.16).
+    The average number of releases per month (2.9) is increasing (R=0.27).
+    The average monthly turnover (65.0 developers) is increasing (R=0.13).
+    The average weekly cost of HoC (1.22 points) is staying still.
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-01-07 18:01:40.578514621 Z
+- _id: 752038
+  _job: 56738
+  _time: 2026-01-07 18:03:34.649374428 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-01-07 18:03:34.569458375 Z
+- _id: 752039
+  _job: 56738
+  _time: 2026-01-07 18:03:34.949029482 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  ac: 1078
+  cost_of_qod: 15.59514443070698
+  ev: 25607
+  pv: 158704
+  qod: 1642
+  qod_per_day: 36.08251362057951
+  qod_per_sec: 6.738560657525528e-05
+  start: *541
+  what: earned-value
+  when: 2026-01-07 18:03:34.949312544 Z
+- _id: 752040
+  _job: 20792880494
+  _time: 2026-01-07 18:53:42.826534894 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  earliest_issue_was_found: 1
+  events_were_scanned: 7257937023
+  labels_were_scanned: 62
+  latest_issue_was_found: 66
+  merges_were_scanned: 61
+  min_issue_was_found: 68
+  min_pull_was_found: 70
+  repository: 12591339
+  types_were_scanned: 62
+  what: iterate
+  where: github
+- _id: 752041
+  _job: 20792880494
+  _time: 2026-01-07 18:53:42.902549052 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  assignees_were_scanned: 376
+  earliest_issue_was_found: 1
+  events_were_scanned: 7259911267
+  issues_were_scanned: 0
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 434
+  min_pull_was_found: 439
+  repository: 14093966
+  types_were_scanned: 434
+  what: iterate
+  where: github
