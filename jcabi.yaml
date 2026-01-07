@@ -2,16 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error:
-  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
-    for "api.github.com" port 443)
-  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
-    for "api.github.com" port 443)
   inserted: 8
-  seconds: 861.474863164
+  seconds: 824.989968545
   version: 0.58.1
   what: judges-summary
-  when: 2026-01-07 19:07:43.839904736 Z
+  when: 2026-01-07 19:51:20.396844502 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -77335,23 +77330,6 @@
   types_were_scanned: 317
   what: iterate
   where: github
-- _id: 752030
-  _job: 20790896210
-  _time: 2026-01-07 17:48:13.845770854 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  assignees_were_scanned: 322
-  earliest_issue_was_found: 1
-  events_were_scanned: 6886739917
-  issues_were_scanned: 0
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 0
-  min_issue_was_found: 500
-  min_pull_was_found: 499
-  repository: 4174608
-  types_were_scanned: 445
-  what: iterate
-  where: github
 - _id: 752031
   _job: 20790896210
   _time: 2026-01-07 17:48:13.918762362 Z
@@ -77391,7 +77369,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-01-07 03:11:20.000000000 Z
+  when: &844 2026-01-07 03:11:20.000000000 Z
   where: github
   who: 8086956
 - _id: 752033
@@ -77535,5 +77513,39 @@
   min_pull_was_found: 439
   repository: 14093966
   types_were_scanned: 434
+  what: iterate
+  where: github
+- _id: 752042
+  _job: 56743
+  _time: 2026-01-07 19:08:11.220796222 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#735 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 10h4m of being in review and 3 comments.
+  hoc: 2
+  issue: 735
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 36253
+  what: code-was-contributed
+  when: *844
+  where: github
+  who: 29139614
+- _id: 752043
+  _job: 20794140145
+  _time: 2026-01-07 19:38:18.297311277 Z
+  _version: 0.19.2/0.58.1/0.17.9
+  assignees_were_scanned: 322
+  earliest_issue_was_found: 1
+  events_were_scanned: 6888153477
+  issues_were_scanned: 0
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 0
+  min_issue_was_found: 500
+  min_pull_was_found: 499
+  repository: 4174608
+  types_were_scanned: 445
   what: iterate
   where: github
