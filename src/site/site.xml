@@ -3,23 +3,22 @@
  * SPDX-FileCopyrightText: Copyright (c) 2012-2026 Yegor Bugayenko
  * SPDX-License-Identifier: MIT
 -->
-<project xmlns="http://maven.apache.org/DECORATION/1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd" name="jcabi">
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd" name="jcabi">
   <skin>
     <groupId>com.jcabi</groupId>
     <artifactId>jcabi-maven-skin</artifactId>
-    <version>1.8.3</version>
+    <version>2.0.1</version>
   </skin>
-  <bannerLeft>
-    <name>jcabi</name>
-    <src>https://www.jcabi.com/logo-square.svg</src>
-    <href>https://www.jcabi.com/</href>
-    <width>64</width>
-    <height>64</height>
+  <bannerLeft name="jcabi" href="https://www.jcabi.com/">
+    <image src="https://jcabi.com/logo-square.svg" alt="jcabi" width="64" height="64"/>
   </bannerLeft>
+  <custom>
+    <jcabi>
+      <favicon>https://www.jcabi.com/favicon.ico</favicon>
+      <googleAnalyticsId>UA-1963507-23</googleAnalyticsId>
+    </jcabi>
+  </custom>
   <body>
-    <head>
-      &lt;link href="https://www.jcabi.com/favicon.ico" rel="shortcut icon"/&gt;
-    </head>
     <breadcrumbs>
       <item name="jcabi.com" href="https://www.jcabi.com"/>
     </breadcrumbs>
@@ -40,4 +39,4 @@
     </menu>
     <menu ref="reports"/>
   </body>
-</project>
+</site>
