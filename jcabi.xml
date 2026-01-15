@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fb version="0.17.0" size="1442747">
+<fb version="0.17.0" size="1440557">
   <f>
     <added t="I">8</added>
     <cycles t="I">1</cycles>
     <deleted t="I">8</deleted>
-    <error t="S">end of file reached</error>
+    <error>
+      <v t="S">GET https://api.github.com/repositories/12589687/events?per_page=100: 502 - Server Error</v>
+      <v t="S">GET https://api.github.com/repos/jcabi/jcabi-matchers/pulls/132: 502 - Server Error</v>
+    </error>
     <inserted t="I">8</inserted>
-    <seconds t="F">811.075905709</seconds>
+    <seconds t="F">810.752358294</seconds>
     <version t="S">0.58.1</version>
     <what t="S">judges-summary</what>
-    <when t="T">2026-01-15T16:03:55Z</when>
+    <when t="T">2026-01-15T17:13:13Z</when>
   </f>
   <f>
     <_id t="I">135</_id>
@@ -54,44 +57,6 @@
     <love t="I">2</love>
     <slaves t="S">torvalds</slaves>
     <what t="S">pmp</what>
-  </f>
-  <f>
-    <_id t="I">60651</_id>
-    <_job t="I">19238</_job>
-    <_time t="T">2025-05-04T16:12:46Z</_time>
-    <_version t="S">0.10.1/0.42.0/0.7.0</_version>
-    <comments t="I">2</comments>
-    <details t="S">The pull request jcabi/jcabi-parent#592 with 2 HoC created by @renovate[bot] was merged by @rultor after 1h14m of being in review and 2 comments.</details>
-    <hoc t="I">2</hoc>
-    <is_human t="I">0</is_human>
-    <issue t="I">592</issue>
-    <merger t="I">8086956</merger>
-    <repository t="I">12590813</repository>
-    <review_comments t="I">0</review_comments>
-    <seconds t="I">4458</seconds>
-    <what t="S">code-was-contributed</what>
-    <when t="T">2025-05-04T15:59:37Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">60652</_id>
-    <_job t="I">19238</_job>
-    <_time t="T">2025-05-04T16:12:47Z</_time>
-    <_version t="S">0.10.1/0.42.0/0.7.0</_version>
-    <comments t="I">2</comments>
-    <details t="S">The pull request jcabi/jcabi-parent#593 with 2 HoC created by @renovate[bot] was merged by @rultor after 1h8m of being in review and 2 comments.</details>
-    <hoc t="I">2</hoc>
-    <is_human t="I">0</is_human>
-    <issue t="I">593</issue>
-    <merger t="I">8086956</merger>
-    <repository t="I">12590813</repository>
-    <review_comments t="I">0</review_comments>
-    <seconds t="I">4116</seconds>
-    <what t="S">code-was-contributed</what>
-    <when t="T">2025-05-04T15:53:57Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
   </f>
   <f>
     <_id t="I">60815</_id>
@@ -6791,40 +6756,6 @@
     <who t="I">41898282</who>
   </f>
   <f>
-    <_id t="I">447270</_id>
-    <_job t="I">32446</_job>
-    <_time t="T">2025-08-10T10:59:38Z</_time>
-    <_version t="S">0.14.5/0.52.2/0.15.9</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-surefire-report-plugin-3.x</branch>
-    <details t="S">The pull request jcabi/jcabi-parent#593 has been opened by @renovate[bot].</details>
-    <event_id t="I">49339436421</event_id>
-    <event_type t="S">PullRequestEvent</event_type>
-    <is_human t="I">0</is_human>
-    <issue t="I">593</issue>
-    <repository t="I">12590813</repository>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2025-05-04T14:45:21Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">447271</_id>
-    <_job t="I">32446</_job>
-    <_time t="T">2025-08-10T10:59:39Z</_time>
-    <_version t="S">0.14.5/0.52.2/0.15.9</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-surefire-plugin-3.x</branch>
-    <details t="S">The pull request jcabi/jcabi-parent#592 has been opened by @renovate[bot].</details>
-    <event_id t="I">49339435927</event_id>
-    <event_type t="S">PullRequestEvent</event_type>
-    <is_human t="I">0</is_human>
-    <issue t="I">592</issue>
-    <repository t="I">12590813</repository>
-    <what t="S">pull-was-opened</what>
-    <when t="T">2025-05-04T14:45:19Z</when>
-    <where t="S">github</where>
-    <who t="I">29139614</who>
-  </f>
-  <f>
     <_id t="I">447272</_id>
     <_job t="I">32446</_job>
     <_time t="T">2025-08-10T10:59:39Z</_time>
@@ -6874,60 +6805,6 @@
     <when t="T">2025-05-04T15:54:24Z</when>
     <where t="S">github</where>
     <who t="I">29139614</who>
-  </f>
-  <f>
-    <_id t="I">447276</_id>
-    <_job t="I">32446</_job>
-    <_time t="T">2025-08-10T10:59:40Z</_time>
-    <_version t="S">0.14.5/0.52.2/0.15.9</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-surefire-plugin-3.x</branch>
-    <comments t="I">2</comments>
-    <comments_appreciated t="I">1</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">3</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">The pull request jcabi/jcabi-parent#592 has been closed by @rultor, with 2 HoC and 2 comments.</details>
-    <event_id t="I">49340355775</event_id>
-    <event_type t="S">PullRequestEvent</event_type>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <is_human t="I">0</is_human>
-    <issue t="I">592</issue>
-    <repository t="I">12590813</repository>
-    <review_comments t="I">0</review_comments>
-    <succeeded_builds t="I">12</succeeded_builds>
-    <what t="S">pull-was-merged</what>
-    <when t="T">2025-05-04T15:59:37Z</when>
-    <where t="S">github</where>
-    <who t="I">8086956</who>
-  </f>
-  <f>
-    <_id t="I">447277</_id>
-    <_job t="I">32446</_job>
-    <_time t="T">2025-08-10T10:59:40Z</_time>
-    <_version t="S">0.14.5/0.52.2/0.15.9</_version>
-    <branch t="S">renovate/org.apache.maven.plugins-maven-surefire-report-plugin-3.x</branch>
-    <comments t="I">2</comments>
-    <comments_appreciated t="I">1</comments_appreciated>
-    <comments_by_author t="I">0</comments_by_author>
-    <comments_by_reviewers t="I">3</comments_by_reviewers>
-    <comments_resolved t="I">0</comments_resolved>
-    <comments_to_code t="I">0</comments_to_code>
-    <details t="S">The pull request jcabi/jcabi-parent#593 has been closed by @rultor, with 2 HoC and 2 comments.</details>
-    <event_id t="I">49340287645</event_id>
-    <event_type t="S">PullRequestEvent</event_type>
-    <failed_builds t="I">0</failed_builds>
-    <hoc t="I">2</hoc>
-    <is_human t="I">0</is_human>
-    <issue t="I">593</issue>
-    <repository t="I">12590813</repository>
-    <review_comments t="I">0</review_comments>
-    <succeeded_builds t="I">12</succeeded_builds>
-    <what t="S">pull-was-merged</what>
-    <when t="T">2025-05-04T15:53:57Z</when>
-    <where t="S">github</where>
-    <who t="I">8086956</who>
   </f>
   <f>
     <_id t="I">447278</_id>
@@ -78291,62 +78168,6 @@
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">752617</_id>
-    <_job t="I">20878714078</_job>
-    <_time t="T">2026-01-10T13:05:46Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">120</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7340445882</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">120</labels_were_scanned>
-    <latest_issue_was_found t="I">125</latest_issue_was_found>
-    <merges_were_scanned t="I">116</merges_were_scanned>
-    <min_issue_was_found t="I">120</min_issue_was_found>
-    <min_pull_was_found t="I">125</min_pull_was_found>
-    <repository t="I">19194304</repository>
-    <types_were_scanned t="I">120</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">752620</_id>
-    <_job t="I">20878714078</_job>
-    <_time t="T">2026-01-10T13:05:46Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">64</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7339550865</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">192</labels_were_scanned>
-    <latest_issue_was_found t="I">194</latest_issue_was_found>
-    <merges_were_scanned t="I">95</merges_were_scanned>
-    <min_issue_was_found t="I">192</min_issue_was_found>
-    <min_pull_was_found t="I">194</min_pull_was_found>
-    <repository t="I">12591138</repository>
-    <types_were_scanned t="I">192</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">752624</_id>
-    <_job t="I">20878714078</_job>
-    <_time t="T">2026-01-10T13:05:47Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <earliest_issue_was_found t="I">16</earliest_issue_was_found>
-    <events_were_scanned t="I">7341709683</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">20</labels_were_scanned>
-    <latest_issue_was_found t="I">34</latest_issue_was_found>
-    <merges_were_scanned t="I">18</merges_were_scanned>
-    <min_issue_was_found t="I">20</min_issue_was_found>
-    <min_pull_was_found t="I">35</min_pull_was_found>
-    <repository t="I">12591382</repository>
-    <types_were_scanned t="I">20</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">752625</_id>
     <_job t="I">20878714078</_job>
     <_time t="T">2026-01-10T13:05:47Z</_time>
@@ -79490,43 +79311,6 @@
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">753050</_id>
-    <_job t="I">20932505288</_job>
-    <_time t="T">2026-01-12T19:51:34Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7257913232</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">136</labels_were_scanned>
-    <latest_issue_was_found t="I">135</latest_issue_was_found>
-    <merges_were_scanned t="I">125</merges_were_scanned>
-    <min_issue_was_found t="I">136</min_issue_was_found>
-    <min_pull_was_found t="I">135</min_pull_was_found>
-    <repository t="I">19194296</repository>
-    <types_were_scanned t="I">136</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753054</_id>
-    <_job t="I">20932505288</_job>
-    <_time t="T">2026-01-12T19:51:34Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">90</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7339751255</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">423</labels_were_scanned>
-    <latest_issue_was_found t="I">422</latest_issue_was_found>
-    <merges_were_scanned t="I">416</merges_were_scanned>
-    <min_issue_was_found t="I">423</min_issue_was_found>
-    <min_pull_was_found t="I">433</min_pull_was_found>
-    <repository t="I">12589687</repository>
-    <types_were_scanned t="I">423</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">753255</_id>
     <_job t="I">20971913167</_job>
     <_time t="T">2026-01-13T20:51:38Z</_time>
@@ -79605,25 +79389,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <when t="T">2026-01-15T11:00:27Z</when>
   </f>
   <f>
-    <_id t="I">753353</_id>
-    <_job t="I">57629</_job>
-    <_time t="T">2026-01-15T11:01:23Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <issues>
-      <v t="S">1-80</v>
-      <v t="S">82</v>
-      <v t="S">84-116</v>
-      <v t="S">118-145</v>
-      <v t="S">147-190</v>
-      <v t="S">192-486</v>
-      <v t="S">488-585</v>
-      <v t="S">587-590</v>
-    </issues>
-    <repository t="I">12590813</repository>
-    <what t="S">tombstone</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">753354</_id>
     <_job t="I">57629</_job>
     <_time t="T">2026-01-15T11:02:28Z</_time>
@@ -79686,155 +79451,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">753386</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:51:40Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7060713535</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">74</labels_were_scanned>
-    <latest_issue_was_found t="I">71</latest_issue_was_found>
-    <merges_were_scanned t="I">0</merges_were_scanned>
-    <min_issue_was_found t="I">82</min_issue_was_found>
-    <min_pull_was_found t="I">96</min_pull_was_found>
-    <repository t="I">12591347</repository>
-    <types_were_scanned t="I">82</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753390</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:51:40Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">6788387966</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">421</labels_were_scanned>
-    <latest_issue_was_found t="I">422</latest_issue_was_found>
-    <merges_were_scanned t="I">422</merges_were_scanned>
-    <min_issue_was_found t="I">421</min_issue_was_found>
-    <min_pull_was_found t="I">422</min_pull_was_found>
-    <repository t="I">12590126</repository>
-    <types_were_scanned t="I">421</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753391</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:51:40Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">5718917427</events_were_scanned>
-    <issues_were_scanned t="I">0</issues_were_scanned>
-    <labels_were_scanned t="I">317</labels_were_scanned>
-    <latest_issue_was_found t="I">316</latest_issue_was_found>
-    <merges_were_scanned t="I">314</merges_were_scanned>
-    <min_issue_was_found t="I">317</min_issue_was_found>
-    <min_pull_was_found t="I">332</min_pull_was_found>
-    <repository t="I">13624455</repository>
-    <types_were_scanned t="I">317</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753393</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">322</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7503773367</events_were_scanned>
-    <issues_were_scanned t="I">353</issues_were_scanned>
-    <labels_were_scanned t="I">500</labels_were_scanned>
-    <latest_issue_was_found t="I">486</latest_issue_was_found>
-    <merges_were_scanned t="I">0</merges_were_scanned>
-    <min_issue_was_found t="I">500</min_issue_was_found>
-    <min_pull_was_found t="I">499</min_pull_was_found>
-    <repository t="I">4174608</repository>
-    <types_were_scanned t="I">500</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753394</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">13</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7347332764</events_were_scanned>
-    <issues_were_scanned t="I">50</issues_were_scanned>
-    <labels_were_scanned t="I">50</labels_were_scanned>
-    <latest_issue_was_found t="I">64</latest_issue_was_found>
-    <merges_were_scanned t="I">42</merges_were_scanned>
-    <min_issue_was_found t="I">50</min_issue_was_found>
-    <min_pull_was_found t="I">64</min_pull_was_found>
-    <repository t="I">12591371</repository>
-    <types_were_scanned t="I">50</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753395</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">117</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">5708283778</events_were_scanned>
-    <issues_were_scanned t="I">608</issues_were_scanned>
-    <labels_were_scanned t="I">615</labels_were_scanned>
-    <latest_issue_was_found t="I">691</latest_issue_was_found>
-    <merges_were_scanned t="I">734</merges_were_scanned>
-    <min_issue_was_found t="I">732</min_issue_was_found>
-    <min_pull_was_found t="I">739</min_pull_was_found>
-    <repository t="I">12590813</repository>
-    <types_were_scanned t="I">677</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753396</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">106</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">5720430984</events_were_scanned>
-    <issues_were_scanned t="I">264</issues_were_scanned>
-    <labels_were_scanned t="I">319</labels_were_scanned>
-    <latest_issue_was_found t="I">365</latest_issue_was_found>
-    <merges_were_scanned t="I">375</merges_were_scanned>
-    <min_issue_was_found t="I">319</min_issue_was_found>
-    <min_pull_was_found t="I">390</min_pull_was_found>
-    <repository t="I">12587702</repository>
-    <types_were_scanned t="I">319</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753397</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">71</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7342005797</events_were_scanned>
-    <issues_were_scanned t="I">87</issues_were_scanned>
-    <labels_were_scanned t="I">122</labels_were_scanned>
-    <latest_issue_was_found t="I">137</latest_issue_was_found>
-    <merges_were_scanned t="I">110</merges_were_scanned>
-    <min_issue_was_found t="I">122</min_issue_was_found>
-    <min_pull_was_found t="I">137</min_pull_was_found>
-    <repository t="I">12587970</repository>
-    <types_were_scanned t="I">122</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">753398</_id>
     <_job t="I">21037327511</_job>
     <_time t="T">2026-01-15T15:52:50Z</_time>
@@ -79850,44 +79466,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <min_pull_was_found t="I">291</min_pull_was_found>
     <repository t="I">23238769</repository>
     <types_were_scanned t="I">161</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753399</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">59</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7340537681</events_were_scanned>
-    <issues_were_scanned t="I">67</issues_were_scanned>
-    <labels_were_scanned t="I">290</labels_were_scanned>
-    <latest_issue_was_found t="I">289</latest_issue_was_found>
-    <merges_were_scanned t="I">229</merges_were_scanned>
-    <min_issue_was_found t="I">290</min_issue_was_found>
-    <min_pull_was_found t="I">300</min_pull_was_found>
-    <repository t="I">12947626</repository>
-    <types_were_scanned t="I">290</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753400</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:50Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">163</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">5744822399</events_were_scanned>
-    <issues_were_scanned t="I">194</issues_were_scanned>
-    <labels_were_scanned t="I">571</labels_were_scanned>
-    <latest_issue_was_found t="I">573</latest_issue_was_found>
-    <merges_were_scanned t="I">574</merges_were_scanned>
-    <min_issue_was_found t="I">577</min_issue_was_found>
-    <min_pull_was_found t="I">576</min_pull_was_found>
-    <repository t="I">16312153</repository>
-    <types_were_scanned t="I">557</types_were_scanned>
     <what t="S">iterate</what>
     <where t="S">github</where>
   </f>
@@ -79911,44 +79489,6 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <where t="S">github</where>
   </f>
   <f>
-    <_id t="I">753402</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:51Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">134</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">5719693609</events_were_scanned>
-    <issues_were_scanned t="I">177</issues_were_scanned>
-    <labels_were_scanned t="I">424</labels_were_scanned>
-    <latest_issue_was_found t="I">460</latest_issue_was_found>
-    <merges_were_scanned t="I">466</merges_were_scanned>
-    <min_issue_was_found t="I">424</min_issue_was_found>
-    <min_pull_was_found t="I">471</min_pull_was_found>
-    <repository t="I">13717355</repository>
-    <types_were_scanned t="I">301</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
-    <_id t="I">753403</_id>
-    <_job t="I">21037327511</_job>
-    <_time t="T">2026-01-15T15:52:51Z</_time>
-    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
-    <assignees_were_scanned t="I">49</assignees_were_scanned>
-    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
-    <events_were_scanned t="I">7257924653</events_were_scanned>
-    <issues_were_scanned t="I">78</issues_were_scanned>
-    <labels_were_scanned t="I">114</labels_were_scanned>
-    <latest_issue_was_found t="I">243</latest_issue_was_found>
-    <merges_were_scanned t="I">104</merges_were_scanned>
-    <min_issue_was_found t="I">241</min_issue_was_found>
-    <min_pull_was_found t="I">243</min_pull_was_found>
-    <repository t="I">13359002</repository>
-    <types_were_scanned t="I">91</types_were_scanned>
-    <what t="S">iterate</what>
-    <where t="S">github</where>
-  </f>
-  <f>
     <_id t="I">753404</_id>
     <_job t="I">21037327511</_job>
     <_time t="T">2026-01-15T15:52:51Z</_time>
@@ -79963,6 +79503,344 @@ The average monthly zents/points ratio (1.00) is staying still.</text>
     <min_pull_was_found t="I">1835</min_pull_was_found>
     <repository t="I">14204295</repository>
     <types_were_scanned t="I">1813</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753405</_id>
+    <_job t="I">57654</_job>
+    <_time t="T">2026-01-15T16:05:19Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <issues>
+      <v t="S">1-80</v>
+      <v t="S">82</v>
+      <v t="S">84-116</v>
+      <v t="S">118-145</v>
+      <v t="S">147-190</v>
+      <v t="S">192-486</v>
+      <v t="S">488-585</v>
+      <v t="S">587-590</v>
+      <v t="S">592-593</v>
+    </issues>
+    <repository t="I">12590813</repository>
+    <what t="S">tombstone</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753406</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">322</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7505786168</events_were_scanned>
+    <issues_were_scanned t="I">353</issues_were_scanned>
+    <labels_were_scanned t="I">500</labels_were_scanned>
+    <latest_issue_was_found t="I">486</latest_issue_was_found>
+    <merges_were_scanned t="I">0</merges_were_scanned>
+    <min_issue_was_found t="I">500</min_issue_was_found>
+    <min_pull_was_found t="I">499</min_pull_was_found>
+    <repository t="I">4174608</repository>
+    <types_were_scanned t="I">500</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753407</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">117</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">6788477684</events_were_scanned>
+    <issues_were_scanned t="I">608</issues_were_scanned>
+    <labels_were_scanned t="I">615</labels_were_scanned>
+    <latest_issue_was_found t="I">691</latest_issue_was_found>
+    <merges_were_scanned t="I">734</merges_were_scanned>
+    <min_issue_was_found t="I">732</min_issue_was_found>
+    <min_pull_was_found t="I">739</min_pull_was_found>
+    <repository t="I">12590813</repository>
+    <types_were_scanned t="I">677</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753408</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">163</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">6867921212</events_were_scanned>
+    <issues_were_scanned t="I">194</issues_were_scanned>
+    <labels_were_scanned t="I">571</labels_were_scanned>
+    <latest_issue_was_found t="I">573</latest_issue_was_found>
+    <merges_were_scanned t="I">574</merges_were_scanned>
+    <min_issue_was_found t="I">577</min_issue_was_found>
+    <min_pull_was_found t="I">576</min_pull_was_found>
+    <repository t="I">16312153</repository>
+    <types_were_scanned t="I">557</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753409</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">5719363293</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">74</labels_were_scanned>
+    <latest_issue_was_found t="I">71</latest_issue_was_found>
+    <merges_were_scanned t="I">0</merges_were_scanned>
+    <min_issue_was_found t="I">82</min_issue_was_found>
+    <min_pull_was_found t="I">96</min_pull_was_found>
+    <repository t="I">12591347</repository>
+    <types_were_scanned t="I">82</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753410</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">134</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">6930601979</events_were_scanned>
+    <issues_were_scanned t="I">177</issues_were_scanned>
+    <labels_were_scanned t="I">424</labels_were_scanned>
+    <latest_issue_was_found t="I">460</latest_issue_was_found>
+    <merges_were_scanned t="I">466</merges_were_scanned>
+    <min_issue_was_found t="I">424</min_issue_was_found>
+    <min_pull_was_found t="I">471</min_pull_was_found>
+    <repository t="I">13717355</repository>
+    <types_were_scanned t="I">301</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753411</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">5694874335</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">421</labels_were_scanned>
+    <latest_issue_was_found t="I">422</latest_issue_was_found>
+    <merges_were_scanned t="I">422</merges_were_scanned>
+    <min_issue_was_found t="I">421</min_issue_was_found>
+    <min_pull_was_found t="I">422</min_pull_was_found>
+    <repository t="I">12590126</repository>
+    <types_were_scanned t="I">421</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753412</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">106</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">6781442529</events_were_scanned>
+    <issues_were_scanned t="I">264</issues_were_scanned>
+    <labels_were_scanned t="I">319</labels_were_scanned>
+    <latest_issue_was_found t="I">365</latest_issue_was_found>
+    <merges_were_scanned t="I">375</merges_were_scanned>
+    <min_issue_was_found t="I">319</min_issue_was_found>
+    <min_pull_was_found t="I">390</min_pull_was_found>
+    <repository t="I">12587702</repository>
+    <types_were_scanned t="I">319</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753413</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:01:54Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">6789388631</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">317</labels_were_scanned>
+    <latest_issue_was_found t="I">316</latest_issue_was_found>
+    <merges_were_scanned t="I">314</merges_were_scanned>
+    <min_issue_was_found t="I">317</min_issue_was_found>
+    <min_pull_was_found t="I">332</min_pull_was_found>
+    <repository t="I">13624455</repository>
+    <types_were_scanned t="I">317</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753414</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7257913232</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">136</labels_were_scanned>
+    <latest_issue_was_found t="I">135</latest_issue_was_found>
+    <merges_were_scanned t="I">130</merges_were_scanned>
+    <min_issue_was_found t="I">136</min_issue_was_found>
+    <min_pull_was_found t="I">135</min_pull_was_found>
+    <repository t="I">19194296</repository>
+    <types_were_scanned t="I">136</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753415</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">90</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7339751255</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">423</labels_were_scanned>
+    <latest_issue_was_found t="I">422</latest_issue_was_found>
+    <merges_were_scanned t="I">422</merges_were_scanned>
+    <min_issue_was_found t="I">423</min_issue_was_found>
+    <min_pull_was_found t="I">433</min_pull_was_found>
+    <repository t="I">12589687</repository>
+    <types_were_scanned t="I">423</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753416</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">71</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7342005797</events_were_scanned>
+    <issues_were_scanned t="I">87</issues_were_scanned>
+    <labels_were_scanned t="I">122</labels_were_scanned>
+    <latest_issue_was_found t="I">137</latest_issue_was_found>
+    <merges_were_scanned t="I">114</merges_were_scanned>
+    <min_issue_was_found t="I">122</min_issue_was_found>
+    <min_pull_was_found t="I">137</min_pull_was_found>
+    <repository t="I">12587970</repository>
+    <types_were_scanned t="I">122</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753417</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">64</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7339550865</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">192</labels_were_scanned>
+    <latest_issue_was_found t="I">194</latest_issue_was_found>
+    <merges_were_scanned t="I">193</merges_were_scanned>
+    <min_issue_was_found t="I">192</min_issue_was_found>
+    <min_pull_was_found t="I">194</min_pull_was_found>
+    <repository t="I">12591138</repository>
+    <types_were_scanned t="I">192</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753418</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">49</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7257924653</events_were_scanned>
+    <issues_were_scanned t="I">78</issues_were_scanned>
+    <labels_were_scanned t="I">114</labels_were_scanned>
+    <latest_issue_was_found t="I">243</latest_issue_was_found>
+    <merges_were_scanned t="I">233</merges_were_scanned>
+    <min_issue_was_found t="I">241</min_issue_was_found>
+    <min_pull_was_found t="I">243</min_pull_was_found>
+    <repository t="I">13359002</repository>
+    <types_were_scanned t="I">91</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753419</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <earliest_issue_was_found t="I">16</earliest_issue_was_found>
+    <events_were_scanned t="I">7341709683</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">20</labels_were_scanned>
+    <latest_issue_was_found t="I">34</latest_issue_was_found>
+    <merges_were_scanned t="I">34</merges_were_scanned>
+    <min_issue_was_found t="I">20</min_issue_was_found>
+    <min_pull_was_found t="I">35</min_pull_was_found>
+    <repository t="I">12591382</repository>
+    <types_were_scanned t="I">20</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753420</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">59</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7340537681</events_were_scanned>
+    <issues_were_scanned t="I">67</issues_were_scanned>
+    <labels_were_scanned t="I">290</labels_were_scanned>
+    <latest_issue_was_found t="I">289</latest_issue_was_found>
+    <merges_were_scanned t="I">296</merges_were_scanned>
+    <min_issue_was_found t="I">290</min_issue_was_found>
+    <min_pull_was_found t="I">300</min_pull_was_found>
+    <repository t="I">12947626</repository>
+    <types_were_scanned t="I">290</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753421</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">120</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7340445882</events_were_scanned>
+    <issues_were_scanned t="I">0</issues_were_scanned>
+    <labels_were_scanned t="I">120</labels_were_scanned>
+    <latest_issue_was_found t="I">125</latest_issue_was_found>
+    <merges_were_scanned t="I">123</merges_were_scanned>
+    <min_issue_was_found t="I">120</min_issue_was_found>
+    <min_pull_was_found t="I">125</min_pull_was_found>
+    <repository t="I">19194304</repository>
+    <types_were_scanned t="I">120</types_were_scanned>
+    <what t="S">iterate</what>
+    <where t="S">github</where>
+  </f>
+  <f>
+    <_id t="I">753422</_id>
+    <_job t="I">21039491462</_job>
+    <_time t="T">2026-01-15T17:09:50Z</_time>
+    <_version t="S">0.19.2/0.58.1/0.17.9</_version>
+    <assignees_were_scanned t="I">13</assignees_were_scanned>
+    <earliest_issue_was_found t="I">1</earliest_issue_was_found>
+    <events_were_scanned t="I">7347332764</events_were_scanned>
+    <issues_were_scanned t="I">50</issues_were_scanned>
+    <labels_were_scanned t="I">50</labels_were_scanned>
+    <latest_issue_was_found t="I">64</latest_issue_was_found>
+    <merges_were_scanned t="I">49</merges_were_scanned>
+    <min_issue_was_found t="I">50</min_issue_was_found>
+    <min_pull_was_found t="I">64</min_pull_was_found>
+    <repository t="I">12591371</repository>
+    <types_were_scanned t="I">50</types_were_scanned>
     <what t="S">iterate</what>
     <where t="S">github</where>
   </f>
