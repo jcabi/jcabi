@@ -2,11 +2,13 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: Failed to open TCP connection to api.github.com:443 (Connection refused -
+    connect(2) for "api.github.com" port 443)
   inserted: 8
-  seconds: 810.555809863
+  seconds: 810.449824328
   version: 0.58.1
   what: judges-summary
-  when: 2026-01-22 13:29:24.626055890 Z
+  when: 2026-01-22 14:12:23.280910271 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -3521,24 +3523,6 @@
   where: github
   who: 526301
   why: Pushed 2878b2c07 to the default branch 'master' in jcabi/jcabi-xml
-- _id: 422138
-  _job: 32187
-  _time: 2025-08-08 17:02:51.761948946 Z
-  _version: 0.14.4/0.52.2/0.15.8
-  award: 4
-  details: It's time to reward @h1alexbel for the code contributed in jcabi/jcabi-parent#609,
-    the reward amount is 4.
-  href: https://github.com/jcabi/jcabi-parent/issues/609/#issuecomment-2869892368
-  is_human: 1
-  issue: 609
-  receipt: receipt-#22550
-  repository: 12590813
-  tombstone: 2026-01-20 11:05:48.533693380 Z
-  what: code-contribution-was-rewarded
-  when: 2025-05-11 13:22:45.163937352 Z
-  where: github
-  who: 83453843
-  why: Contributed code in jcabi/jcabi-parent#609
 - _id: 422140
   _job: 32187
   _time: 2025-08-08 17:02:52.150447478 Z
@@ -74255,24 +74239,6 @@
   - 5.428571446945725
   what: learn-eva
   when: 2026-01-22 07:11:51.357143647 Z
-- _id: 754469
-  _job: 58493
-  _time: 2026-01-22 11:56:44.212718792 Z
-  _version: 0.19.3/0.59.0/0.17.9
-  issues:
-  - 1-80
-  - '82'
-  - 84-116
-  - 118-145
-  - 147-190
-  - 192-486
-  - 488-585
-  - 587-604
-  - 606-607
-  - '609'
-  repository: 12590813
-  what: tombstone
-  where: github
 - _id: 754470
   _job: 58493
   _time: 2026-01-22 11:57:30.612146213 Z
@@ -74293,13 +74259,31 @@
     The average monthly zents/points ratio (1.00) is staying still.
   what: assessment
   when: 2026-01-22 11:57:30.633278909 Z
-- _id: 754471
-  _job: 21249832393
-  _time: 2026-01-22 13:16:48.521049168 Z
+- _id: 754473
+  _job: 58511
+  _time: 2026-01-22 13:30:28.897108116 Z
+  _version: 0.19.3/0.59.0/0.17.9
+  issues:
+  - 1-80
+  - '82'
+  - 84-116
+  - 118-145
+  - 147-190
+  - 192-486
+  - 488-585
+  - 587-604
+  - 606-607
+  - '609'
+  repository: 12590813
+  what: tombstone
+  where: github
+- _id: 754474
+  _job: 21251201901
+  _time: 2026-01-22 13:59:34.596033655 Z
   _version: 0.19.2/0.58.1/0.17.9
   assignees_were_scanned: 329
   earliest_issue_was_found: 1
-  events_were_scanned: 7714097702
+  events_were_scanned: 7716999581
   issues_were_scanned: 353
   labels_were_scanned: 500
   latest_issue_was_found: 486
@@ -74310,13 +74294,13 @@
   types_were_scanned: 500
   what: iterate
   where: github
-- _id: 754472
-  _job: 21249832393
-  _time: 2026-01-22 13:16:48.596611009 Z
+- _id: 754475
+  _job: 21251201901
+  _time: 2026-01-22 13:59:34.674294649 Z
   _version: 0.19.2/0.58.1/0.17.9
   assignees_were_scanned: 33
   earliest_issue_was_found: 1
-  events_were_scanned: 6975010653
+  events_were_scanned: 5974783889
   issues_were_scanned: 36
   labels_were_scanned: 100
   latest_issue_was_found: 268
