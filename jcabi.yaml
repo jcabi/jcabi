@@ -2,13 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: Failed to open TCP connection to api.github.com:443 (Connection refused -
-    connect(2) for "api.github.com" port 443)
   inserted: 8
-  seconds: 756.245265014
+  seconds: 810.501927897
   version: 0.59.0
   what: judges-summary
-  when: 2026-01-26 21:55:42.713117081 Z
+  when: 2026-01-26 22:58:02.103795036 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -27666,23 +27664,6 @@
   when: 2025-01-09 06:36:47.000000000 Z
   where: github
   who: 526301
-- _id: 568306
-  _job: 17686486574
-  _time: 2025-09-12 21:44:25.856625108 Z
-  _version: 0.16.3/0.53.6/0.15.42
-  tombstone: 2026-01-18 21:50:37.448423079 Z
-  total_active_contributors: 3
-  total_commits: 18567
-  total_contributors: 117
-  total_files: 2219
-  total_forks: 974
-  total_issues: 2875
-  total_pulls: 5348
-  total_releases: 675
-  total_repositories: 31
-  total_stars: 2211
-  what: dimensions-of-terrain
-  when: 2025-09-12 21:44:25.862075843 Z
 - _id: 574567
   _job: 37708
   _time: 2025-09-14 02:29:07.744623081 Z
@@ -73839,23 +73820,6 @@
   types_were_scanned: 301
   what: iterate
   where: github
-- _id: 754651
-  _job: 21370041219
-  _time: 2026-01-26 18:57:59.189468524 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 146
-  earliest_issue_was_found: 1
-  events_were_scanned: 7836606653
-  issues_were_scanned: 608
-  labels_were_scanned: 637
-  latest_issue_was_found: 691
-  merges_were_scanned: 734
-  min_issue_was_found: 743
-  min_pull_was_found: 746
-  repository: 12590813
-  types_were_scanned: 677
-  what: iterate
-  where: github
 - _id: 754652
   _job: 21370041219
   _time: 2026-01-26 18:57:59.247959919 Z
@@ -73890,81 +73854,212 @@
   types_were_scanned: 557
   what: iterate
   where: github
-- _id: 754669
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.427801245 Z
+- _id: 754675
+  _job: 58821
+  _time: 2026-01-26 21:56:39.160676557 Z
   _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 33
-  earliest_issue_was_found: 1
-  events_were_scanned: 6071082659
-  issues_were_scanned: 36
-  labels_were_scanned: 100
-  latest_issue_was_found: 268
-  merges_were_scanned: 0
-  min_issue_was_found: 250
-  min_pull_was_found: 291
-  repository: 23238769
-  types_were_scanned: 161
-  what: iterate
+  award: 12
+  details: It's time to reward @yegor256 for the bug resolved in jcabi/jcabi-parent#743
+    in 0 hours, the reward amount is 12.
+  greeting: "Nice work closing that bug! \U0001F389 You scored **+12 points** total:
+    **+8** base points plus **+4** bonus for crushing it in under 24 hours. Your running
+    score is now [**-828**](https://jcabi.github.io/jcabi/jcabi-vitals.html) - keep
+    up the momentum and don't forget to check your [Zerocracy account](https://www.zerocracy.com/)
+    for updates!\n\n<!-- Thanks for closing this issue! You've earned +12 points for
+    this: +8 as a basis; +4 for resolving it in less than 24 hours. Your running score
+    is [-828](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check
+    your [Zerocracy account](https://www.zerocracy.com/) too).  -->"
+  href: https://github.com/jcabi/jcabi-parent/issues/743/#issuecomment-3801947295
+  issue: 743
+  repository: 12590813
+  what: resolved-bug-was-rewarded
+  when: 2026-01-26 21:56:39.171701204 Z
   where: github
-- _id: 754670
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.512466067 Z
+  who: 526301
+  why: Resolved bug in jcabi/jcabi-parent#743
+- _id: 754676
+  _job: 58821
+  _time: 2026-01-26 21:56:48.108003225 Z
   _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 17
-  earliest_issue_was_found: 1
-  events_were_scanned: 7061444510
-  issues_were_scanned: 0
-  labels_were_scanned: 317
-  latest_issue_was_found: 316
-  merges_were_scanned: 314
-  min_issue_was_found: 317
-  min_pull_was_found: 332
-  repository: 13624455
-  types_were_scanned: 317
-  what: iterate
+  award: -16
+  commit: ab7ec0d84b773023e5fe4cc69d61c3cec5e6b8c2
+  default_branch: master
+  details: It's time to punish @yegor256 for pushing to the default branch 'master'
+    in jcabi/jcabi-parent, the penalty amount is -16.
+  greeting: 'It is [not a good idea](https://www.yegor256.com/2014/07/21/read-only-master-branch.html)
+    to push directly to the default branch `master`. You''ve earned -16 points. Next
+    time, create a new branch, push your changes over there, then make a pull request
+    and merge it. Even if you are flying solo, contributing via pull requests is a
+    [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
+    Your running score is [-844](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  repository: 12590813
+  what: push-to-master-was-punished
+  when: 2026-01-26 21:56:48.110069554 Z
   where: github
-- _id: 754671
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.578463780 Z
+  who: 526301
+  why: Pushed ab7ec0d84 to the default branch 'master' in jcabi/jcabi-parent
+- _id: 754677
+  _job: 58821
+  _time: 2026-01-26 21:56:48.903778358 Z
   _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 95
-  earliest_issue_was_found: 1
-  events_were_scanned: 7062062594
-  issues_were_scanned: 0
-  labels_were_scanned: 423
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 423
-  min_pull_was_found: 435
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#740,
+    the reward amount is 4.
+  greeting: |-
+    Thanks for the review! You've earned **+4 points** for this contribution: **+12** as the base award for conducting a code review, **-16** for no comments during the review process, **-8** for the contribution having only 2 hits-of-code (below the 16 minimum), with a final adjustment to ensure you receive the minimum reward of **+4 points** as per our policy. Your running score is [**-840**](https://jcabi.github.io/jcabi/jcabi-vitals.html); please check your [Zerocracy account](https://www.zerocracy.com/) for updates.
+
+    <!-- Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to give you at least something.  Your running score is [-840](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).  -->
+  hoc: 2
+  issue: 740
+  repository: 12590813
+  review_comments: 0
+  seconds: 28695
+  what: code-review-was-rewarded
+  when: 2026-01-26 21:56:48.908828723 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-parent#740
+- _id: 754678
+  _job: 58821
+  _time: 2026-01-26 21:56:54.257308650 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#741,
+    the reward amount is 4.
+  greeting: "Thanks for the review! You've earned **+4 points** following our [bonus
+    policy](policy-link): starting with **+12** base points, then **-16** for no comments
+    during review (policy requires feedback), **-8** for insufficient code size (only
+    4 hits-of-code vs required 16+), with a **+16** adjustment to meet the minimum
+    threshold. Your running score is [**-836**](https://jcabi.github.io/jcabi/jcabi-vitals.html)
+    — check your [Zerocracy account](https://www.zerocracy.com/) for details! \U0001F4AA\n\n<!--
+    Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for
+    absolutely no comments posted; -8 for too few (4) hits-of-code; +16 to give you
+    at least something.  Your running score is [-836](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 4
+  issue: 741
+  repository: 12590813
+  review_comments: 0
+  seconds: 28687
+  what: code-review-was-rewarded
+  when: 2026-01-26 21:56:54.270892232 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-parent#741
+- _id: 754679
+  _job: 58821
+  _time: 2026-01-26 21:56:59.635290629 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-github#1838,
+    the reward amount is 4.
+  greeting: "Thanks for the review! You've earned +4 points according to our work
+    policy: +12 as the standard author bonus, -16 for posting absolutely no comments
+    during review (as per policy requirements), and -8 for contributing only 6 hits-of-code
+    (below the 16 minimum threshold), with a +16 adjustment to ensure you receive
+    the minimum reward. Your running score is [-832](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too!
+    \U0001F3AF\n\n<!-- Thanks for the review! You've earned +4 points for this: +12
+    as a basis; -16 for absolutely no comments posted; -8 for too few (6) hits-of-code;
+    +16 to give you at least something.  Your running score is [-832](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 6
+  issue: 1838
+  repository: 14204295
+  review_comments: 0
+  seconds: 57464
+  what: code-review-was-rewarded
+  when: 2026-01-26 21:56:59.649054080 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-github#1838
+- _id: 754680
+  _job: 58821
+  _time: 2026-01-26 21:57:04.748511399 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-maven-skin#97,
+    the reward amount is 4.
+  greeting: "**Great work on the review!** \U0001F389 You've earned **+4 points**
+    this round (base +12, with adjustments for feedback engagement and code coverage).
+    Your current score is [-828](https://jcabi.github.io/jcabi/jcabi-vitals.html)
+    - keep building momentum! Remember to check your [Zerocracy account](https://www.zerocracy.com/)
+    for updates.\n\n<!-- Thanks for the review! You've earned +4 points for this:
+    +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code;
+    +16 to give you at least something.  Your running score is [-828](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 2
+  issue: 97
+  repository: 12591347
+  review_comments: 0
+  seconds: 4799
+  what: code-review-was-rewarded
+  when: 2026-01-26 21:57:04.763634065 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-maven-skin#97
+- _id: 754681
+  _job: 58821
+  _time: 2026-01-26 21:57:09.649229881 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  award: 4
+  comments: 1
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-dynamo#435,
+    the reward amount is 4.
+  greeting: "Thanks for the review! You've earned **+4 points** following our [work
+    policy](policy-link): started with **+12** base points, then **-16** for no comments
+    (policy requires feedback), **-8** for only 2 hits-of-code (below 16 minimum),
+    but we added **+16** to ensure you get at least **4 points** as per policy limits.
+    Your running score is [-824](https://jcabi.github.io/jcabi/jcabi-vitals.html)
+    - check your [Zerocracy account](https://www.zerocracy.com/) and remember that
+    providing comments during reviews helps maximize your bonus! \U0001F4AA\n\n<!--
+    Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for
+    absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to give you
+    at least something.  Your running score is [-824](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 2
+  issue: 435
   repository: 12589687
-  types_were_scanned: 423
-  what: iterate
+  review_comments: 0
+  seconds: 3922
+  what: code-review-was-rewarded
+  when: 2026-01-26 21:57:09.663479562 Z
   where: github
-- _id: 754672
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.646632194 Z
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-dynamo#435
+- _id: 754682
+  _job: 21376865881
+  _time: 2026-01-26 22:45:29.956217304 Z
   _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 86
-  earliest_issue_was_found: 116
-  events_were_scanned: 7060826702
-  issues_were_scanned: 94
-  labels_were_scanned: 120
-  latest_issue_was_found: 224
-  merges_were_scanned: 221
-  min_issue_was_found: 213
-  min_pull_was_found: 229
-  repository: 12262782
-  types_were_scanned: 120
+  assignees_were_scanned: 329
+  earliest_issue_was_found: 1
+  events_were_scanned: 7843127002
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 0
+  min_issue_was_found: 500
+  min_pull_was_found: 499
+  repository: 4174608
+  types_were_scanned: 500
   what: iterate
   where: github
-- _id: 754673
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.710566354 Z
+- _id: 754683
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.086110734 Z
   _version: 0.19.3/0.59.0/0.17.10
   assignees_were_scanned: 180
   earliest_issue_was_found: 1
-  events_were_scanned: 6070663661
+  events_were_scanned: 7061430249
   issues_were_scanned: 264
   labels_were_scanned: 319
   latest_issue_was_found: 365
@@ -73975,20 +74070,88 @@
   types_were_scanned: 319
   what: iterate
   where: github
-- _id: 754674
-  _job: 21375044334
-  _time: 2026-01-26 21:43:55.777832036 Z
+- _id: 754684
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.163011027 Z
   _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 329
+  assignees_were_scanned: 17
   earliest_issue_was_found: 1
-  events_were_scanned: 7841669417
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
+  events_were_scanned: 6073179668
+  issues_were_scanned: 0
+  labels_were_scanned: 317
+  latest_issue_was_found: 316
+  merges_were_scanned: 314
+  min_issue_was_found: 317
+  min_pull_was_found: 332
+  repository: 13624455
+  types_were_scanned: 317
+  what: iterate
+  where: github
+- _id: 754685
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.228018335 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 86
+  earliest_issue_was_found: 116
+  events_were_scanned: 6072265146
+  issues_were_scanned: 94
+  labels_were_scanned: 120
+  latest_issue_was_found: 224
+  merges_were_scanned: 221
+  min_issue_was_found: 213
+  min_pull_was_found: 229
+  repository: 12262782
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 754686
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.292048828 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 95
+  earliest_issue_was_found: 1
+  events_were_scanned: 6070337552
+  issues_were_scanned: 0
+  labels_were_scanned: 423
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 423
+  min_pull_was_found: 435
+  repository: 12589687
+  types_were_scanned: 423
+  what: iterate
+  where: github
+- _id: 754687
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.357794136 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 146
+  earliest_issue_was_found: 1
+  events_were_scanned: 6077382380
+  issues_were_scanned: 608
+  labels_were_scanned: 637
+  latest_issue_was_found: 691
+  merges_were_scanned: 734
+  min_issue_was_found: 743
+  min_pull_was_found: 746
+  repository: 12590813
+  types_were_scanned: 677
+  what: iterate
+  where: github
+- _id: 754688
+  _job: 21376865881
+  _time: 2026-01-26 22:45:30.423624462 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 33
+  earliest_issue_was_found: 1
+  events_were_scanned: 7062460440
+  issues_were_scanned: 36
+  labels_were_scanned: 100
+  latest_issue_was_found: 268
   merges_were_scanned: 0
-  min_issue_was_found: 500
-  min_pull_was_found: 499
-  repository: 4174608
-  types_were_scanned: 500
+  min_issue_was_found: 250
+  min_pull_was_found: 291
+  repository: 23238769
+  types_were_scanned: 161
   what: iterate
   where: github
