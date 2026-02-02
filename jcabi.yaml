@@ -2,11 +2,18 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
   inserted: 8
-  seconds: 819.679557423
+  seconds: 813.611720294
   version: 0.59.0
   what: judges-summary
-  when: 2026-02-02 16:09:13.603986461 Z
+  when: 2026-02-02 17:20:44.334868759 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -73384,54 +73391,6 @@
   when: 2026-02-02 15:09:48.000000000 Z
   where: github
   who: 29139614
-- _id: 755750
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.145914777 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  earliest_issue_was_found: 1
-  events_were_scanned: 7257909437
-  latest_issue_was_found: 86
-  merges_were_scanned: 0
-  min_issue_was_found: 80
-  min_pull_was_found: 105
-  repository: 12584841
-  types_were_scanned: 80
-  what: iterate
-  where: github
-- _id: 755751
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.233673489 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 33
-  earliest_issue_was_found: 1
-  events_were_scanned: 7257936126
-  issues_were_scanned: 36
-  labels_were_scanned: 100
-  latest_issue_was_found: 268
-  merges_were_scanned: 0
-  min_issue_was_found: 250
-  min_pull_was_found: 291
-  repository: 23238769
-  types_were_scanned: 197
-  what: iterate
-  where: github
-- _id: 755752
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.303990424 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 143
-  earliest_issue_was_found: 1
-  events_were_scanned: 7235502281
-  issues_were_scanned: 177
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 466
-  min_issue_was_found: 424
-  min_pull_was_found: 471
-  repository: 13717355
-  types_were_scanned: 424
-  what: iterate
-  where: github
 - _id: 755753
   _job: 21597142802
   _time: 2026-02-02 15:56:43.375546004 Z
@@ -73447,91 +73406,6 @@
   min_pull_was_found: 439
   repository: 14093966
   types_were_scanned: 434
-  what: iterate
-  where: github
-- _id: 755754
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.441401493 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 180
-  earliest_issue_was_found: 1
-  events_were_scanned: 7236384984
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 375
-  min_issue_was_found: 319
-  min_pull_was_found: 397
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 755755
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.510679477 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 48
-  earliest_issue_was_found: 1
-  events_were_scanned: 7168694041
-  issues_were_scanned: 0
-  labels_were_scanned: 74
-  latest_issue_was_found: 71
-  merges_were_scanned: 0
-  min_issue_was_found: 82
-  min_pull_was_found: 97
-  repository: 12591347
-  types_were_scanned: 82
-  what: iterate
-  where: github
-- _id: 755757
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.649693961 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 86
-  earliest_issue_was_found: 116
-  events_were_scanned: 6114886490
-  issues_were_scanned: 94
-  labels_were_scanned: 120
-  latest_issue_was_found: 224
-  merges_were_scanned: 221
-  min_issue_was_found: 213
-  min_pull_was_found: 232
-  repository: 12262782
-  types_were_scanned: 120
-  what: iterate
-  where: github
-- _id: 755758
-  _job: 21597142802
-  _time: 2026-02-02 15:56:43.713527433 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 329
-  earliest_issue_was_found: 1
-  events_were_scanned: 6247059569
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 0
-  min_issue_was_found: 500
-  min_pull_was_found: 499
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
-- _id: 755759
-  _job: 21597142802
-  _time: 2026-02-02 15:59:45.980958180 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 17
-  earliest_issue_was_found: 1
-  events_were_scanned: 7257932287
-  issues_were_scanned: 0
-  labels_were_scanned: 317
-  latest_issue_was_found: 316
-  merges_were_scanned: 314
-  min_issue_was_found: 317
-  min_pull_was_found: 335
-  repository: 13624455
-  types_were_scanned: 317
   what: iterate
   where: github
 - _id: 755760
@@ -73558,3 +73432,453 @@
   when: 2026-01-26 18:45:01.000000000 Z
   where: github
   who: 29139614
+- _id: 755762
+  _job: 21599687634
+  _time: 2026-02-02 17:07:35.752184493 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 2
+  commits: 1
+  details: The pull request jcabi/jcabi#542 has been reviewed by @yegor256 with 2
+    HoC and 2 comments.
+  event_id: 6249791443
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 542
+  repository: 4174608
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-02-02 16:55:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 755763
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.125481725 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 86
+  earliest_issue_was_found: 116
+  events_were_scanned: 7234675142
+  issues_were_scanned: 94
+  labels_were_scanned: 120
+  latest_issue_was_found: 224
+  merges_were_scanned: 221
+  min_issue_was_found: 213
+  min_pull_was_found: 232
+  repository: 12262782
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 755764
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.209158304 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  earliest_issue_was_found: 1
+  events_were_scanned: 6132829929
+  latest_issue_was_found: 86
+  merges_were_scanned: 0
+  min_issue_was_found: 80
+  min_pull_was_found: 105
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 755766
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.352491530 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 143
+  earliest_issue_was_found: 1
+  events_were_scanned: 6208851705
+  issues_were_scanned: 177
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 466
+  min_issue_was_found: 424
+  min_pull_was_found: 471
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 755767
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.424789404 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 33
+  earliest_issue_was_found: 1
+  events_were_scanned: 6114000470
+  issues_were_scanned: 36
+  labels_were_scanned: 100
+  latest_issue_was_found: 268
+  merges_were_scanned: 0
+  min_issue_was_found: 250
+  min_pull_was_found: 291
+  repository: 23238769
+  types_were_scanned: 197
+  what: iterate
+  where: github
+- _id: 755768
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.492660833 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 17
+  earliest_issue_was_found: 1
+  events_were_scanned: 8055171734
+  issues_were_scanned: 0
+  labels_were_scanned: 317
+  latest_issue_was_found: 316
+  merges_were_scanned: 314
+  min_issue_was_found: 317
+  min_pull_was_found: 335
+  repository: 13624455
+  types_were_scanned: 317
+  what: iterate
+  where: github
+- _id: 755769
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.560032491 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 180
+  earliest_issue_was_found: 1
+  events_were_scanned: 8058470801
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 375
+  min_issue_was_found: 319
+  min_pull_was_found: 397
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 755770
+  _job: 21599687634
+  _time: 2026-02-02 17:08:42.633040077 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 48
+  earliest_issue_was_found: 1
+  events_were_scanned: 8058382256
+  issues_were_scanned: 0
+  labels_were_scanned: 74
+  latest_issue_was_found: 71
+  merges_were_scanned: 0
+  min_issue_was_found: 82
+  min_pull_was_found: 97
+  repository: 12591347
+  types_were_scanned: 82
+  what: iterate
+  where: github
+- _id: 755771
+  _job: 21599687634
+  _time: 2026-02-02 17:09:45.218184762 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull jcabi/jcabi#542 has been opened earlier by @renovate[bot].
+  issue: 542
+  repository: 4174608
+  what: pull-was-opened
+  when: 2026-02-02 15:28:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755772
+  _job: 21599687634
+  _time: 2026-02-02 17:11:18.582567177 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-simpledb#333 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 333
+  repository: 13624455
+  review: 2026-01-20 16:57:29.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-20 17:13:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 755773
+  _job: 21599687634
+  _time: 2026-02-02 17:11:46.917177820 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-simpledb#334 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 334
+  repository: 13624455
+  review: 2026-01-28 08:45:39.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-28 08:52:24.000000000 Z
+  where: github
+  who: 8086956
+- _id: 755774
+  _job: 21599687634
+  _time: 2026-02-02 17:12:32.587480257 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 329
+  earliest_issue_was_found: 1
+  events_were_scanned: 7626394203
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 0
+  min_issue_was_found: 500
+  min_pull_was_found: 542
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 755775
+  _job: 21599687634
+  _time: 2026-02-02 17:14:45.455907481 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#501 has been opened by @renovate[bot].
+  issue: 501
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-01 09:48:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755776
+  _job: 21599687634
+  _time: 2026-02-02 17:14:46.289764787 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#502 has been opened by @renovate[bot].
+  issue: 502
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-04 14:58:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755777
+  _job: 21599687634
+  _time: 2026-02-02 17:14:47.301126359 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/jamesives-github-pages-deploy-action-4.x
+  details: The missing pull jcabi/jcabi#503 has been opened by @renovate[bot].
+  issue: 503
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-04 15:55:50.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755778
+  _job: 21599687634
+  _time: 2026-02-02 17:14:48.171973253 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-pages-action-0.x
+  details: The missing pull jcabi/jcabi#504 has been opened by @renovate[bot].
+  issue: 504
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-10 07:50:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755779
+  _job: 21599687634
+  _time: 2026-02-02 17:14:49.016492749 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#505 has been opened by @renovate[bot].
+  issue: 505
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-12 23:59:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755780
+  _job: 21599687634
+  _time: 2026-02-02 17:14:49.952977080 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#506 has been opened by @renovate[bot].
+  issue: 506
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-13 23:52:00.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755781
+  _job: 21599687634
+  _time: 2026-02-02 17:14:50.883534367 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/davidanson-markdownlint-cli2-action-21.x
+  details: The missing pull jcabi/jcabi#507 has been opened by @renovate[bot].
+  issue: 507
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-17 01:00:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755782
+  _job: 21599687634
+  _time: 2026-02-02 17:14:51.758252773 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/actions-checkout-6.x
+  details: The missing pull jcabi/jcabi#508 has been opened by @renovate[bot].
+  issue: 508
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-20 17:02:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755783
+  _job: 21599687634
+  _time: 2026-02-02 17:14:52.610423965 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-pages-action-0.x
+  details: The missing pull jcabi/jcabi#509 has been opened by @renovate[bot].
+  issue: 509
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-25 09:01:50.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755784
+  _job: 21599687634
+  _time: 2026-02-02 17:14:53.557753270 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#510 has been opened by @renovate[bot].
+  issue: 510
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-26 21:49:18.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755785
+  _job: 21599687634
+  _time: 2026-02-02 17:14:54.507918476 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-pages-action-0.x
+  details: The missing pull jcabi/jcabi#511 has been opened by @renovate[bot].
+  issue: 511
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-11-30 13:14:11.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755786
+  _job: 21599687634
+  _time: 2026-02-02 17:14:55.393718692 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#512 has been opened by @renovate[bot].
+  issue: 512
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-01 07:54:32.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755787
+  _job: 21599687634
+  _time: 2026-02-02 17:14:56.423384965 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-pages-action-0.x
+  details: The missing pull jcabi/jcabi#513 has been opened by @renovate[bot].
+  issue: 513
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-03 14:06:40.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755788
+  _job: 21599687634
+  _time: 2026-02-02 17:14:57.291098029 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#514 has been opened by @renovate[bot].
+  issue: 514
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-05 14:36:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755789
+  _job: 21599687634
+  _time: 2026-02-02 17:14:58.194315008 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#515 has been opened by @renovate[bot].
+  issue: 515
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-05 19:00:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755790
+  _job: 21599687634
+  _time: 2026-02-02 17:14:59.058471862 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#516 has been opened by @renovate[bot].
+  issue: 516
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-06 05:28:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755791
+  _job: 21599687634
+  _time: 2026-02-02 17:14:59.932320586 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#517 has been opened by @renovate[bot].
+  issue: 517
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-07 09:54:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755792
+  _job: 21599687634
+  _time: 2026-02-02 17:17:25.888748521 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-simpledb#333 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 20h48m and 0 comments.
+  hoc: 2
+  issue: 333
+  repository: 13624455
+  review_comments: 0
+  seconds: 74902
+  what: code-was-reviewed
+  when: 2026-01-20 16:57:29.000000000 Z
+  where: github
+  who: 526301
+- _id: 755793
+  _job: 21599687634
+  _time: 2026-02-02 17:17:26.878749978 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-simpledb#334 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 38h0m and 0 comments.
+  hoc: 2
+  issue: 334
+  repository: 13624455
+  review_comments: 0
+  seconds: 136838
+  what: code-was-reviewed
+  when: 2026-01-28 08:45:39.000000000 Z
+  where: github
+  who: 526301
