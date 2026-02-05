@@ -2,12 +2,18 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge eliminate-ghosts stopped by timeout after 1m42s: execution expired'
+  error:
+  - 'Failed to open TCP connection to api.github.com:443 (getaddrinfo(3): Name or
+    service not known)'
+  - 'Failed to open TCP connection to api.github.com:443 (getaddrinfo(3): Name or
+    service not known)'
+  - 'Failed to open TCP connection to api.github.com:443 (getaddrinfo(3): Name or
+    service not known)'
   inserted: 8
-  seconds: 900.10103777
+  seconds: 465.617634001
   version: 0.59.0
   what: judges-summary
-  when: 2026-02-05 10:20:43.122998487 Z
+  when: 2026-02-05 11:13:49.615635563 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -70116,6 +70122,7 @@
   details: It's time to reward @yegor256 for the bug resolved in jcabi/jcabi-parent#743
     in 0 hours, the reward amount is 12.
   href: https://github.com/jcabi/jcabi-parent/issues/743/#issuecomment-3801947295
+  is_human: 1
   issue: 743
   receipt: receipt-#59016
   repository: 12590813
@@ -70134,6 +70141,7 @@
   details: It's time to punish @yegor256 for pushing to the default branch 'master'
     in jcabi/jcabi-parent, the penalty amount is -16.
   href: https://github.com/jcabi/jcabi-parent/commit/ab7ec0d84b773023e5fe4cc69d61c3cec5e6b8c2/#commitcomment-175690420
+  is_human: 1
   repository: 12590813
   what: push-to-master-was-punished
   when: 2026-01-26 21:56:48.110069554 Z
@@ -70150,6 +70158,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/740/#issuecomment-3802160423
+  is_human: 1
   issue: 740
   receipt: receipt-#59011
   repository: 12590813
@@ -70170,6 +70179,7 @@
     the reward amount is 4.
   hoc: 4
   href: https://github.com/jcabi/jcabi-parent/issues/741/#issuecomment-3802160499
+  is_human: 1
   issue: 741
   receipt: receipt-#59012
   repository: 12590813
@@ -70190,6 +70200,7 @@
     the reward amount is 4.
   hoc: 6
   href: https://github.com/jcabi/jcabi-github/issues/1838/#issuecomment-3802160576
+  is_human: 1
   issue: 1838
   receipt: receipt-#59013
   repository: 14204295
@@ -70210,6 +70221,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-maven-skin/issues/97/#issuecomment-3802160663
+  is_human: 1
   issue: 97
   receipt: receipt-#59014
   repository: 12591347
@@ -70230,6 +70242,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-dynamo/issues/435/#issuecomment-3802160767
+  is_human: 1
   issue: 435
   receipt: receipt-#59015
   repository: 12589687
@@ -70250,6 +70263,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-github/issues/1836/#issuecomment-3802340218
+  is_human: 1
   issue: 1836
   receipt: receipt-#59028
   repository: 14204295
@@ -70270,6 +70284,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-github/issues/1837/#issuecomment-3802340291
+  is_human: 1
   issue: 1837
   receipt: receipt-#59029
   repository: 14204295
@@ -70290,6 +70305,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-manifests/issues/104/#issuecomment-3802340386
+  is_human: 1
   issue: 104
   receipt: receipt-#59030
   repository: 12584841
@@ -70310,6 +70326,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/395/#issuecomment-3802340475
+  is_human: 1
   issue: 395
   receipt: receipt-#59031
   repository: 12587702
@@ -70330,6 +70347,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/742/#issuecomment-3802340542
+  is_human: 1
   issue: 742
   receipt: receipt-#59032
   repository: 12590813
@@ -70350,6 +70368,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/394/#issuecomment-3802340594
+  is_human: 1
   issue: 394
   receipt: receipt-#59033
   repository: 12587702
@@ -70378,6 +70397,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/745/#issuecomment-3802783891
+  is_human: 1
   issue: 745
   receipt: receipt-#59055
   repository: 12590813
@@ -70398,6 +70418,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/746/#issuecomment-3802783923
+  is_human: 1
   issue: 746
   receipt: receipt-#59056
   repository: 12590813
@@ -70420,6 +70441,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 105
   repository: 12584841
   review_comments: 0
@@ -70433,6 +70455,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The pull jcabi/jcabi-manifests#105 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 105
   repository: 12584841
   what: pull-was-opened
@@ -70454,6 +70477,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 105
   repository: 12584841
   review: 2026-01-27 03:10:06.000000000 Z
@@ -70473,6 +70497,7 @@
   details: The pull request jcabi/jcabi-manifests#105 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 10h15m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 105
   repository: 12584841
   review_comments: 0
@@ -70489,6 +70514,7 @@
   details: The pull request jcabi/jcabi-manifests#105 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 10h23m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 105
   merger: 8086956
   repository: 12584841
@@ -70526,6 +70552,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 436
   repository: 12589687
   review_comments: 0
@@ -70539,6 +70566,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The pull jcabi/jcabi-dynamo#436 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 436
   repository: 12589687
   what: pull-was-opened
@@ -70560,6 +70588,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 436
   repository: 12589687
   review: 2026-01-27 08:25:59.000000000 Z
@@ -70579,6 +70608,7 @@
   details: The pull request jcabi/jcabi-dynamo#436 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 15h40m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 436
   repository: 12589687
   review_comments: 0
@@ -70595,6 +70625,7 @@
   details: The pull request jcabi/jcabi-dynamo#436 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 15h47m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 436
   merger: 8086956
   repository: 12589687
@@ -70636,6 +70667,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 231
   repository: 12262782
   review_comments: 0
@@ -70649,6 +70681,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The pull jcabi/jcabi-log#231 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 231
   repository: 12262782
   what: pull-was-opened
@@ -70670,6 +70703,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 231
   repository: 12262782
   review: 2026-01-27 16:32:34.000000000 Z
@@ -70686,6 +70720,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi-log#230 has been opened by @renovate[bot].
+  is_human: 0
   issue: 230
   repository: 12262782
   what: pull-was-opened
@@ -70701,6 +70736,7 @@
   details: The pull request jcabi/jcabi-log#231 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 22h27m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 231
   repository: 12262782
   review_comments: 0
@@ -70738,6 +70774,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 230
   repository: 12262782
   review: 2026-01-20 03:19:34.000000000 Z
@@ -70757,6 +70794,7 @@
   details: The pull request jcabi/jcabi-log#230 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 9h13m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 230
   repository: 12262782
   review_comments: 0
@@ -70773,6 +70811,7 @@
   details: The pull request jcabi/jcabi-log#231 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 22h34m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 231
   merger: 8086956
   repository: 12262782
@@ -70790,6 +70829,7 @@
   details: The pull request jcabi/jcabi-log#230 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 9h27m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 230
   merger: 8086956
   repository: 12262782
@@ -70811,6 +70851,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 232
   repository: 12262782
   review_comments: 0
@@ -70824,6 +70865,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The pull jcabi/jcabi-log#232 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 232
   repository: 12262782
   what: pull-was-opened
@@ -70845,6 +70887,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 232
   repository: 12262782
   review: 2026-01-28 03:18:29.000000000 Z
@@ -70864,6 +70907,7 @@
   details: The pull request jcabi/jcabi-log#232 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 4h54m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 232
   repository: 12262782
   review_comments: 0
@@ -70880,6 +70924,7 @@
   details: The pull request jcabi/jcabi-log#232 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 5h51m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 232
   merger: 8086956
   repository: 12262782
@@ -70929,6 +70974,7 @@
   details: The pull request jcabi/jcabi-jdbc#397 has been opened by @renovate[bot].
   event_id: 6165788540
   event_type: PullRequestEvent
+  is_human: 0
   issue: 397
   repository: 12587702
   what: pull-was-opened
@@ -70941,6 +70987,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi-jdbc#396 has been opened by @renovate[bot].
+  is_human: 0
   issue: 396
   repository: 12587702
   what: pull-was-opened
@@ -70962,6 +71009,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 396
   repository: 12587702
   review: 2026-01-28 03:14:01.000000000 Z
@@ -70981,6 +71029,7 @@
   details: The pull request jcabi/jcabi-jdbc#396 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 34h15m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 396
   repository: 12587702
   review_comments: 0
@@ -70997,6 +71046,7 @@
   details: The pull request jcabi/jcabi-jdbc#396 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 1d11h of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 396
   merger: 8086956
   repository: 12587702
@@ -71014,6 +71064,7 @@
   details: The pull request jcabi/jcabi-parent#750 has been opened by @renovate[bot].
   event_id: 6175494930
   event_type: PullRequestEvent
+  is_human: 0
   issue: 750
   repository: 12590813
   what: pull-was-opened
@@ -71025,6 +71076,7 @@
   _time: 2026-01-30 03:14:22.717151506 Z
   _version: 0.19.3/0.59.0/0.17.10
   details: The missing issue jcabi/jcabi-parent#747 has been opened by @fabriciofx.
+  is_human: 1
   issue: 747
   repository: 12590813
   what: issue-was-opened
@@ -71037,6 +71089,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: '747'
   details: The missing pull jcabi/jcabi-parent#748 has been opened by @fabriciofx.
+  is_human: 1
   issue: 748
   repository: 12590813
   what: pull-was-opened
@@ -71049,6 +71102,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi-parent#749 has been opened by @renovate[bot].
+  is_human: 0
   issue: 749
   repository: 12590813
   what: pull-was-opened
@@ -71067,6 +71121,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 397
   repository: 12587702
   review_comments: 0
@@ -71089,6 +71144,7 @@
   failed_builds: 0
   files: 2
   hoc: 8
+  is_human: 1
   issue: 748
   repository: 12590813
   review_comments: 0
@@ -71113,6 +71169,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 397
   repository: 12587702
   review: 2026-01-30 03:29:15.000000000 Z
@@ -71138,6 +71195,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 749
   repository: 12590813
   review: 2026-01-28 03:08:41.000000000 Z
@@ -71163,6 +71221,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 750
   repository: 12590813
   review: 2026-01-30 03:29:02.000000000 Z
@@ -71182,6 +71241,7 @@
   details: The pull request jcabi/jcabi-jdbc#397 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 9h57m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 397
   repository: 12587702
   review_comments: 0
@@ -71199,6 +71259,7 @@
   details: The pull request jcabi/jcabi-parent#749 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 33h13m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 749
   repository: 12590813
   review_comments: 0
@@ -71216,6 +71277,7 @@
   details: The pull request jcabi/jcabi-parent#750 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 1h39m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 750
   repository: 12590813
   review_comments: 0
@@ -71243,6 +71305,7 @@
   details: The pull request jcabi/jcabi-parent#748 with 8 HoC created by @fabriciofx
     was merged by @yegor256 after 1d15h of being in review and 0 comments.
   hoc: 8
+  is_human: 1
   issue: 748
   merger: 526301
   repository: 12590813
@@ -71260,6 +71323,7 @@
   details: The pull request jcabi/jcabi-jdbc#397 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 10h7m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 397
   merger: 8086956
   repository: 12587702
@@ -71277,6 +71341,7 @@
   details: The pull request jcabi/jcabi-parent#749 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 1d9h of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 749
   merger: 8086956
   repository: 12590813
@@ -71294,6 +71359,7 @@
   details: The pull request jcabi/jcabi-parent#750 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 1h46m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 750
   merger: 8086956
   repository: 12590813
@@ -71331,6 +71397,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 4
+  is_human: 1
   issue: 1840
   repository: 14204295
   review_comments: 0
@@ -71353,6 +71420,7 @@
   failed_builds: 0
   files: 1
   hoc: 4
+  is_human: 0
   issue: 1840
   repository: 14204295
   review: 2026-01-31 03:30:10.000000000 Z
@@ -71372,6 +71440,7 @@
   details: The pull request jcabi/jcabi-github#1840 with 4 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 1w and 3 comments.
   hoc: 4
+  is_human: 1
   issue: 1840
   repository: 14204295
   review_comments: 0
@@ -71388,6 +71457,7 @@
   details: The pull request jcabi/jcabi-github#1840 with 4 HoC created by @renovate[bot]
     was merged by @rultor after 1w of being in review and 3 comments.
   hoc: 4
+  is_human: 0
   issue: 1840
   merger: 8086956
   repository: 14204295
@@ -71477,6 +71547,7 @@
   details: The pull request jcabi/jcabi-parent#751 has been opened by @renovate[bot].
   event_id: 6226118137
   event_type: PullRequestEvent
+  is_human: 0
   issue: 751
   repository: 12590813
   what: pull-was-opened
@@ -71491,6 +71562,7 @@
   details: The pull request jcabi/jcabi-github#1842 has been opened by @renovate[bot].
   event_id: 6226555157
   event_type: PullRequestEvent
+  is_human: 0
   issue: 1842
   repository: 14204295
   what: pull-was-opened
@@ -71503,6 +71575,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/commons-codec-commons-codec-1.x
   details: The missing pull jcabi/jcabi-github#1841 has been opened by @renovate[bot].
+  is_human: 0
   issue: 1841
   repository: 14204295
   what: pull-was-opened
@@ -71524,6 +71597,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 1841
   repository: 14204295
   review: 2026-01-30 16:41:21.000000000 Z
@@ -71543,6 +71617,7 @@
   details: The pull request jcabi/jcabi-github#1841 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 16h7m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 1841
   repository: 14204295
   review_comments: 0
@@ -71559,6 +71634,7 @@
   details: The pull request jcabi/jcabi-github#1841 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 16h18m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 1841
   merger: 8086956
   repository: 14204295
@@ -71580,6 +71656,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 1842
   repository: 14204295
   review_comments: 0
@@ -71602,6 +71679,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 751
   repository: 12590813
   review: 2026-02-02 03:30:54.000000000 Z
@@ -71627,6 +71705,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 1842
   repository: 14204295
   review: 2026-02-02 03:36:21.000000000 Z
@@ -71646,6 +71725,7 @@
   details: The pull request jcabi/jcabi-github#1842 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 5h44m and 3 comments.
   hoc: 2
+  is_human: 1
   issue: 1842
   repository: 14204295
   review_comments: 0
@@ -71663,6 +71743,7 @@
   details: The pull request jcabi/jcabi-parent#751 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 6h25m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 751
   repository: 12590813
   review_comments: 0
@@ -71679,6 +71760,7 @@
   details: The pull request jcabi/jcabi-parent#751 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 6h31m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 751
   merger: 8086956
   repository: 12590813
@@ -71696,6 +71778,7 @@
   details: The pull request jcabi/jcabi-github#1842 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 5h56m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 1842
   merger: 8086956
   repository: 14204295
@@ -71749,6 +71832,7 @@
   details: The pull request jcabi/jcabi-simpledb#335 has been opened by @renovate[bot].
   event_id: 6246439715
   event_type: PullRequestEvent
+  is_human: 0
   issue: 335
   repository: 13624455
   what: pull-was-opened
@@ -71761,6 +71845,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi-simpledb#333 has been opened by @renovate[bot].
+  is_human: 0
   issue: 333
   repository: 13624455
   what: pull-was-opened
@@ -71773,6 +71858,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi-simpledb#334 has been opened by @renovate[bot].
+  is_human: 0
   issue: 334
   repository: 13624455
   what: pull-was-opened
@@ -71787,6 +71873,7 @@
   details: The pull request jcabi/jcabi-log#233 has been opened by @renovate[bot].
   event_id: 6255016153
   event_type: PullRequestEvent
+  is_human: 0
   issue: 233
   repository: 12262782
   what: pull-was-opened
@@ -71805,6 +71892,7 @@
   event_type: PullRequestReviewEvent
   files: 1
   hoc: 2
+  is_human: 1
   issue: 542
   repository: 4174608
   review_comments: 0
@@ -71886,6 +71974,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The pull jcabi/jcabi#542 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 542
   repository: 4174608
   what: pull-was-opened
@@ -71907,6 +71996,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 542
   repository: 4174608
   review: 2026-02-02 16:55:56.000000000 Z
@@ -71932,6 +72022,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 333
   repository: 13624455
   review: 2026-01-20 16:57:29.000000000 Z
@@ -71957,6 +72048,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 334
   repository: 13624455
   review: 2026-01-28 08:45:39.000000000 Z
@@ -71973,6 +72065,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi#501 has been opened by @renovate[bot].
+  is_human: 0
   issue: 501
   repository: 4174608
   what: pull-was-opened
@@ -71985,6 +72078,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#502 has been opened by @renovate[bot].
+  is_human: 0
   issue: 502
   repository: 4174608
   what: pull-was-opened
@@ -71997,6 +72091,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/jamesives-github-pages-deploy-action-4.x
   details: The missing pull jcabi/jcabi#503 has been opened by @renovate[bot].
+  is_human: 0
   issue: 503
   repository: 4174608
   what: pull-was-opened
@@ -72009,6 +72104,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-pages-action-0.x
   details: The missing pull jcabi/jcabi#504 has been opened by @renovate[bot].
+  is_human: 0
   issue: 504
   repository: 4174608
   what: pull-was-opened
@@ -72021,6 +72117,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi#505 has been opened by @renovate[bot].
+  is_human: 0
   issue: 505
   repository: 4174608
   what: pull-was-opened
@@ -72033,6 +72130,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi#506 has been opened by @renovate[bot].
+  is_human: 0
   issue: 506
   repository: 4174608
   what: pull-was-opened
@@ -72045,6 +72143,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/davidanson-markdownlint-cli2-action-21.x
   details: The missing pull jcabi/jcabi#507 has been opened by @renovate[bot].
+  is_human: 0
   issue: 507
   repository: 4174608
   what: pull-was-opened
@@ -72057,6 +72156,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/actions-checkout-6.x
   details: The missing pull jcabi/jcabi#508 has been opened by @renovate[bot].
+  is_human: 0
   issue: 508
   repository: 4174608
   what: pull-was-opened
@@ -72069,6 +72169,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-pages-action-0.x
   details: The missing pull jcabi/jcabi#509 has been opened by @renovate[bot].
+  is_human: 0
   issue: 509
   repository: 4174608
   what: pull-was-opened
@@ -72081,6 +72182,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/crate-ci-typos-1.x
   details: The missing pull jcabi/jcabi#510 has been opened by @renovate[bot].
+  is_human: 0
   issue: 510
   repository: 4174608
   what: pull-was-opened
@@ -72093,6 +72195,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-pages-action-0.x
   details: The missing pull jcabi/jcabi#511 has been opened by @renovate[bot].
+  is_human: 0
   issue: 511
   repository: 4174608
   what: pull-was-opened
@@ -72105,6 +72208,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#512 has been opened by @renovate[bot].
+  is_human: 0
   issue: 512
   repository: 4174608
   what: pull-was-opened
@@ -72117,6 +72221,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-pages-action-0.x
   details: The missing pull jcabi/jcabi#513 has been opened by @renovate[bot].
+  is_human: 0
   issue: 513
   repository: 4174608
   what: pull-was-opened
@@ -72129,6 +72234,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#514 has been opened by @renovate[bot].
+  is_human: 0
   issue: 514
   repository: 4174608
   what: pull-was-opened
@@ -72141,6 +72247,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#515 has been opened by @renovate[bot].
+  is_human: 0
   issue: 515
   repository: 4174608
   what: pull-was-opened
@@ -72153,6 +72260,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#516 has been opened by @renovate[bot].
+  is_human: 0
   issue: 516
   repository: 4174608
   what: pull-was-opened
@@ -72165,6 +72273,7 @@
   _version: 0.19.3/0.59.0/0.17.10
   branch: renovate/zerocracy-judges-action-0.x
   details: The missing pull jcabi/jcabi#517 has been opened by @renovate[bot].
+  is_human: 0
   issue: 517
   repository: 4174608
   what: pull-was-opened
@@ -72180,6 +72289,7 @@
   details: The pull request jcabi/jcabi#542 with 2 HoC created by @renovate[bot] was
     reviewed by @yegor256 after 1h27m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 542
   repository: 4174608
   review_comments: 0
@@ -72197,6 +72307,7 @@
   details: The pull request jcabi/jcabi-simpledb#333 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 20h48m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 333
   repository: 13624455
   review_comments: 0
@@ -72214,6 +72325,7 @@
   details: The pull request jcabi/jcabi-simpledb#334 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 38h0m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 334
   repository: 13624455
   review_comments: 0
@@ -72232,6 +72344,7 @@
     @yegor256 (default branch is "master"), not associated with any pull request.'
   event_id: 8155690942
   event_type: PushEvent
+  is_human: 1
   push_id: 30450614124
   ref: refs/heads/master
   repository: 12589687
@@ -72250,6 +72363,7 @@
     @yegor256 (default branch is "master"), not associated with any pull request.'
   event_id: 8153722298
   event_type: PushEvent
+  is_human: 1
   push_id: 30448607225
   ref: refs/heads/master
   repository: 12589687
@@ -72268,6 +72382,7 @@
     @yegor256 (default branch is "master"), not associated with any pull request.'
   event_id: 8149924746
   event_type: PushEvent
+  is_human: 1
   push_id: 30444809156
   ref: refs/heads/master
   repository: 12589687
@@ -72286,6 +72401,7 @@
     @yegor256 (default branch is "master"), not associated with any pull request.'
   event_id: 8137484834
   event_type: PushEvent
+  is_human: 1
   push_id: 30432362879
   ref: refs/heads/master
   repository: 12589687
@@ -72304,6 +72420,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8155575947
   event_type: PushEvent
+  is_human: 1
   push_id: 30450490236
   ref: refs/heads/master
   repository: 14093966
@@ -72322,6 +72439,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8153706237
   event_type: PushEvent
+  is_human: 1
   push_id: 30448591227
   ref: refs/heads/master
   repository: 14093966
@@ -72340,6 +72458,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8153409576
   event_type: PushEvent
+  is_human: 1
   push_id: 30448294570
   ref: refs/heads/master
   repository: 14093966
@@ -72358,6 +72477,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8150785592
   event_type: PushEvent
+  is_human: 1
   push_id: 30445669155
   ref: refs/heads/master
   repository: 14093966
@@ -72376,6 +72496,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8149921209
   event_type: PushEvent
+  is_human: 1
   push_id: 30444805605
   ref: refs/heads/master
   repository: 14093966
@@ -72394,6 +72515,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8136939091
   event_type: PushEvent
+  is_human: 1
   push_id: 30431816839
   ref: refs/heads/master
   repository: 14093966
@@ -72412,6 +72534,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8134722844
   event_type: PushEvent
+  is_human: 1
   push_id: 30429598674
   ref: refs/heads/master
   repository: 14093966
@@ -72714,6 +72837,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 433
   repository: 14093966
   succeeded_builds: 8
@@ -72737,6 +72861,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 501
   repository: 4174608
   review: 2025-11-01 16:30:35.000000000 Z
@@ -72744,7 +72869,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-01 16:38:03.000000000 Z
+  when: &783 2025-11-01 16:38:03.000000000 Z
   where: github
   who: 8086956
 - _id: 755854
@@ -72762,6 +72887,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 437
   repository: 14093966
   succeeded_builds: 8
@@ -72785,6 +72911,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 502
   repository: 4174608
   review: 2025-11-04 16:40:27.000000000 Z
@@ -72792,7 +72919,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-04 17:01:21.000000000 Z
+  when: &784 2025-11-04 17:01:21.000000000 Z
   where: github
   who: 8086956
 - _id: 755856
@@ -72810,6 +72937,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 133
   repository: 19194296
   review: 2026-02-03 03:19:53.000000000 Z
@@ -72817,7 +72945,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-02-03 05:43:30.000000000 Z
+  when: &785 2026-02-03 05:43:30.000000000 Z
   where: github
   who: 8086956
 - _id: 755857
@@ -72835,6 +72963,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 438
   repository: 14093966
   succeeded_builds: 8
@@ -72858,6 +72987,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 503
   repository: 4174608
   review: 2025-11-04 16:40:22.000000000 Z
@@ -72865,7 +72995,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-04 16:50:07.000000000 Z
+  when: &786 2025-11-04 16:50:07.000000000 Z
   where: github
   who: 8086956
 - _id: 755859
@@ -72883,6 +73013,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 335
   repository: 13624455
   review: 2026-02-03 03:20:28.000000000 Z
@@ -72890,7 +73021,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-02-03 03:31:31.000000000 Z
+  when: &787 2026-02-03 03:31:31.000000000 Z
   where: github
   who: 8086956
 - _id: 755860
@@ -72908,6 +73039,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 504
   repository: 4174608
   review: 2025-11-10 08:25:53.000000000 Z
@@ -72915,7 +73047,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-10 08:34:58.000000000 Z
+  when: &788 2025-11-10 08:34:58.000000000 Z
   where: github
   who: 8086956
 - _id: 755861
@@ -72933,6 +73065,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 505
   repository: 4174608
   review: 2025-11-13 02:56:12.000000000 Z
@@ -72940,7 +73073,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-13 03:11:27.000000000 Z
+  when: &789 2025-11-13 03:11:27.000000000 Z
   where: github
   who: 8086956
 - _id: 755862
@@ -72958,6 +73091,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 506
   repository: 4174608
   review: 2025-11-14 08:46:29.000000000 Z
@@ -72965,7 +73099,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-14 08:56:38.000000000 Z
+  when: &790 2025-11-14 08:56:38.000000000 Z
   where: github
   who: 8086956
 - _id: 755863
@@ -72983,6 +73117,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 507
   repository: 4174608
   review: 2025-11-17 03:01:31.000000000 Z
@@ -72990,7 +73125,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-17 03:16:59.000000000 Z
+  when: &791 2025-11-17 03:16:59.000000000 Z
   where: github
   who: 8086956
 - _id: 755864
@@ -73008,6 +73143,7 @@
   failed_builds: 0
   files: 11
   hoc: 22
+  is_human: 0
   issue: 508
   repository: 4174608
   review: 2025-11-21 02:54:19.000000000 Z
@@ -73015,7 +73151,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-21 03:10:04.000000000 Z
+  when: &792 2025-11-21 03:10:04.000000000 Z
   where: github
   who: 8086956
 - _id: 755865
@@ -73033,6 +73169,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 509
   repository: 4174608
   review: 2025-11-25 16:44:45.000000000 Z
@@ -73040,7 +73177,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-26 15:08:41.000000000 Z
+  when: &793 2025-11-26 15:08:41.000000000 Z
   where: github
   who: 8086956
 - _id: 755866
@@ -73058,6 +73195,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 510
   repository: 4174608
   review: 2025-11-27 02:55:03.000000000 Z
@@ -73065,7 +73203,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-27 03:03:32.000000000 Z
+  when: &794 2025-11-27 03:03:32.000000000 Z
   where: github
   who: 8086956
 - _id: 755867
@@ -73083,6 +73221,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 511
   repository: 4174608
   review: 2025-11-30 16:50:43.000000000 Z
@@ -73090,7 +73229,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-11-30 17:00:31.000000000 Z
+  when: &795 2025-11-30 17:00:31.000000000 Z
   where: github
   who: 8086956
 - _id: 755868
@@ -73108,6 +73247,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 512
   repository: 4174608
   review: 2025-12-01 16:41:18.000000000 Z
@@ -73115,7 +73255,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2025-12-01 16:50:39.000000000 Z
+  when: &796 2025-12-01 16:50:39.000000000 Z
   where: github
   who: 8086956
 - _id: 755870
@@ -73179,6 +73319,7 @@
   details: The pull request jcabi/jcabi#542 with 2 HoC created by @renovate[bot] was
     merged by @rultor after 1h42m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 542
   merger: 8086956
   repository: 4174608
@@ -73196,6 +73337,7 @@
   details: The pull request jcabi/jcabi-simpledb#333 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 21h3m of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 333
   merger: 8086956
   repository: 13624455
@@ -73213,6 +73355,7 @@
   details: The pull request jcabi/jcabi-simpledb#334 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 1d14h of being in review and 3 comments.
   hoc: 2
+  is_human: 0
   issue: 334
   merger: 8086956
   repository: 13624455
@@ -73281,6 +73424,7 @@
     @yegor256 (default branch is "master"), not associated with any pull request.'
   event_id: 8157147236
   event_type: PushEvent
+  is_human: 1
   push_id: 30452178153
   ref: refs/heads/master
   repository: 12589687
@@ -73299,6 +73443,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8156462708
   event_type: PushEvent
+  is_human: 1
   push_id: 30451443245
   ref: refs/heads/master
   repository: 14093966
@@ -73317,6 +73462,7 @@
     (default branch is "master"), not associated with any pull request.'
   event_id: 8155766343
   event_type: PushEvent
+  is_human: 1
   push_id: 30450695040
   ref: refs/heads/master
   repository: 14093966
@@ -73325,23 +73471,6 @@
   when: 2026-02-05 09:06:48.000000000 Z
   where: github
   who: 526301
-- _id: 755883
-  _job: 21707216766
-  _time: 2026-02-05 10:07:17.144145518 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 17
-  earliest_issue_was_found: 1
-  events_were_scanned: 7257932287
-  issues_were_scanned: 0
-  labels_were_scanned: 317
-  latest_issue_was_found: 316
-  merges_were_scanned: 314
-  min_issue_was_found: 317
-  min_pull_was_found: 335
-  repository: 13624455
-  types_were_scanned: 317
-  what: iterate
-  where: github
 - _id: 755884
   _job: 21707216766
   _time: 2026-02-05 10:07:17.215195706 Z
@@ -73476,9 +73605,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 513
   repository: 4174608
   review: 2025-12-03 16:28:53.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -73500,9 +73631,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 514
   repository: 4174608
   review: 2025-12-05 16:39:30.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -73524,9 +73657,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 515
   repository: 4174608
   review: 2025-12-06 02:54:00.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -73548,9 +73683,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 516
   repository: 4174608
   review: 2025-12-06 08:24:49.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -73572,12 +73709,539 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 517
   repository: 4174608
   review: 2025-12-07 16:49:24.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
   when: 2025-12-07 16:58:52.000000000 Z
   where: github
   who: 8086956
+- _id: 755896
+  _job: 60234
+  _time: 2026-02-05 10:21:13.490010259 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#501 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 6h49m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 501
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 24580
+  what: code-was-contributed
+  when: *783
+  where: github
+  who: 29139614
+- _id: 755897
+  _job: 60234
+  _time: 2026-02-05 10:21:14.046288904 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#502 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 2h3m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 502
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 7384
+  what: code-was-contributed
+  when: *784
+  where: github
+  who: 29139614
+- _id: 755898
+  _job: 60234
+  _time: 2026-02-05 10:21:14.118103506 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi-matchers#133 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 6mo3w of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 133
+  merger: 8086956
+  repository: 19194296
+  review_comments: 0
+  seconds: 17813405
+  what: code-was-contributed
+  when: *785
+  where: github
+  who: 29139614
+- _id: 755899
+  _job: 60234
+  _time: 2026-02-05 10:21:14.429876040 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#503 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 54m16s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 503
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 3257
+  what: code-was-contributed
+  when: *786
+  where: github
+  who: 29139614
+- _id: 755900
+  _job: 60234
+  _time: 2026-02-05 10:21:14.535981164 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi-simpledb#335 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 12h21m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 335
+  merger: 8086956
+  repository: 13624455
+  review_comments: 0
+  seconds: 44503
+  what: code-was-contributed
+  when: *787
+  where: github
+  who: 29139614
+- _id: 755901
+  _job: 60234
+  _time: 2026-02-05 10:21:14.899564173 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#504 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 44m24s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 504
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 2665
+  what: code-was-contributed
+  when: *788
+  where: github
+  who: 29139614
+- _id: 755902
+  _job: 60234
+  _time: 2026-02-05 10:21:14.980970485 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#505 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 3h11m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 505
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 11501
+  what: code-was-contributed
+  when: *789
+  where: github
+  who: 29139614
+- _id: 755903
+  _job: 60234
+  _time: 2026-02-05 10:21:15.050508440 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#506 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 9h4m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 506
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 32678
+  what: code-was-contributed
+  when: *790
+  where: github
+  who: 29139614
+- _id: 755904
+  _job: 60234
+  _time: 2026-02-05 10:21:15.131744883 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#507 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 2h16m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 507
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 8161
+  what: code-was-contributed
+  when: *791
+  where: github
+  who: 29139614
+- _id: 755905
+  _job: 60234
+  _time: 2026-02-05 10:21:15.212969364 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#508 with 22 HoC created by @renovate[bot]
+    was merged by @rultor after 10h7m of being in review and 3 comments.
+  hoc: 22
+  is_human: 0
+  issue: 508
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 36438
+  what: code-was-contributed
+  when: *792
+  where: github
+  who: 29139614
+- _id: 755906
+  _job: 60234
+  _time: 2026-02-05 10:21:15.289301071 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#509 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 1d6h of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 509
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 108411
+  what: code-was-contributed
+  when: *793
+  where: github
+  who: 29139614
+- _id: 755907
+  _job: 60234
+  _time: 2026-02-05 10:21:15.356902450 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#510 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 5h14m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 510
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 18854
+  what: code-was-contributed
+  when: *794
+  where: github
+  who: 29139614
+- _id: 755908
+  _job: 60234
+  _time: 2026-02-05 10:21:15.438903344 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#511 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 3h46m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 511
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 13580
+  what: code-was-contributed
+  when: *795
+  where: github
+  who: 29139614
+- _id: 755909
+  _job: 60234
+  _time: 2026-02-05 10:21:15.517052738 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  comments: 3
+  details: The pull request jcabi/jcabi#512 with 2 HoC created by @renovate[bot] was
+    merged by @rultor after 8h56m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 512
+  merger: 8086956
+  repository: 4174608
+  review_comments: 0
+  seconds: 32167
+  what: code-was-contributed
+  when: *796
+  where: github
+  who: 29139614
+- _id: 755910
+  _job: 21709053056
+  _time: 2026-02-05 11:06:37.918819237 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 17
+  earliest_issue_was_found: 1
+  events_were_scanned: 6283792464
+  issues_were_scanned: 0
+  labels_were_scanned: 317
+  latest_issue_was_found: 316
+  merges_were_scanned: 314
+  min_issue_was_found: 317
+  min_pull_was_found: 335
+  repository: 13624455
+  types_were_scanned: 317
+  what: iterate
+  where: github
+- _id: 755911
+  _job: 21709053056
+  _time: 2026-02-05 11:10:42.732758881 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#518 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 518
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-08 10:02:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755912
+  _job: 21709053056
+  _time: 2026-02-05 11:10:43.979308952 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#519 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 519
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-09 05:01:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755913
+  _job: 21709053056
+  _time: 2026-02-05 11:10:44.929127903 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/davidanson-markdownlint-cli2-action-22.x
+  details: The missing pull jcabi/jcabi#520 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 520
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-09 07:54:03.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755914
+  _job: 21709053056
+  _time: 2026-02-05 11:10:45.871094004 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/jamesives-github-pages-deploy-action-4.x
+  details: The missing pull jcabi/jcabi#521 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 521
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-09 17:56:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755915
+  _job: 21709053056
+  _time: 2026-02-05 11:10:48.375094972 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#522 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 522
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-11 14:57:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755916
+  _job: 21709053056
+  _time: 2026-02-05 11:10:49.191305023 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/actions-cache-5.x
+  details: The missing pull jcabi/jcabi#523 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 523
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-11 22:55:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755917
+  _job: 21709053056
+  _time: 2026-02-05 11:10:50.153302108 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi#524 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 524
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-12 07:08:54.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755918
+  _job: 21709053056
+  _time: 2026-02-05 11:10:50.981379880 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#525 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 525
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-18 05:58:03.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755919
+  _job: 21709053056
+  _time: 2026-02-05 11:10:51.804739917 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi#526 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 526
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-22 19:05:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755920
+  _job: 21709053056
+  _time: 2026-02-05 11:10:52.604009863 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi#527 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 527
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-24 17:45:12.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755921
+  _job: 21709053056
+  _time: 2026-02-05 11:10:53.448802296 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  details: The missing pull jcabi/jcabi#528 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 528
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-24 17:45:15.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755922
+  _job: 21709053056
+  _time: 2026-02-05 11:10:54.245805788 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#529 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 529
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-29 15:57:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755923
+  _job: 21709053056
+  _time: 2026-02-05 11:10:54.904161157 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#530 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 530
+  repository: 4174608
+  what: pull-was-opened
+  when: 2025-12-31 15:55:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755924
+  _job: 21709053056
+  _time: 2026-02-05 11:10:55.680035333 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.jcabi-parent-0.x
+  details: The missing pull jcabi/jcabi#531 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 531
+  repository: 4174608
+  what: pull-was-opened
+  when: 2026-01-04 04:45:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755925
+  _job: 21709053056
+  _time: 2026-02-05 11:10:56.499388090 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi#532 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 532
+  repository: 4174608
+  what: pull-was-opened
+  when: 2026-01-07 21:53:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755926
+  _job: 21709053056
+  _time: 2026-02-05 11:10:57.196146843 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/jamesives-github-pages-deploy-action-4.x
+  details: The missing pull jcabi/jcabi#533 has been opened by @renovate[bot].
+  is_human: 0
+  issue: 533
+  repository: 4174608
+  what: pull-was-opened
+  when: 2026-01-09 20:49:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 755927
+  _job: 21709053056
+  _time: 2026-02-05 11:10:58.050044380 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  details: The missing issue jcabi/jcabi#534 has been opened by @yegor256.
+  is_human: 1
+  issue: 534
+  repository: 4174608
+  what: issue-was-opened
+  when: 2026-01-09 22:26:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 755928
+  _job: 21709053056
+  _time: 2026-02-05 11:12:51.764933297 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#501 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 6h42m and 0 comments.
+  hoc: 2
+  is_human: 1
+  issue: 501
+  repository: 4174608
+  review_comments: 0
+  seconds: 24132
+  what: code-was-reviewed
+  when: 2025-11-01 16:30:35.000000000 Z
+  where: github
+  who: 526301
+- _id: 755929
+  _job: 21709053056
+  _time: 2026-02-05 11:12:53.341441246 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#502 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 1h42m and 0 comments.
+  hoc: 2
+  is_human: 1
+  issue: 502
+  repository: 4174608
+  review_comments: 0
+  seconds: 6130
+  what: code-was-reviewed
+  when: 2025-11-04 16:40:27.000000000 Z
+  where: github
+  who: 526301
