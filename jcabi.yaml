@@ -2,11 +2,17 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - 'SSL_read: unexpected eof while reading'
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
+  - Failed to open TCP connection to api.github.com:443 (Connection refused - connect(2)
+    for "api.github.com" port 443)
   inserted: 8
-  seconds: 810.357417521
+  seconds: 822.626024647
   version: 0.59.0
   what: judges-summary
-  when: 2026-02-06 15:18:22.302677164 Z
+  when: 2026-02-06 16:14:15.403986422 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -53,6 +59,7 @@
   comments: 2
   details: The pull request jcabi/jcabi#395 with 2 HoC created by @renovate[bot] was
     merged by @rultor after 1h41m of being in review and 2 comments.
+  done: 2026-02-06 15:20:44.966177554 Z
   hoc: 2
   is_human: 0
   issue: 395
@@ -71,6 +78,7 @@
   comments: 2
   details: The pull request jcabi/jcabi-xml#427 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 2h3m of being in review and 2 comments.
+  done: 2026-02-06 15:20:44.989404283 Z
   hoc: 2
   is_human: 0
   issue: 427
@@ -89,6 +97,7 @@
   comments: 2
   details: The pull request jcabi/jcabi-parent#618 with 2 HoC created by @renovate[bot]
     was merged by @rultor after 26m21s of being in review and 2 comments.
+  done: 2026-02-06 15:20:45.009306482 Z
   hoc: 2
   is_human: 0
   issue: 618
@@ -107,6 +116,7 @@
   comments: 2
   details: The pull request jcabi/jcabi#396 with 2 HoC created by @renovate[bot] was
     merged by @rultor after 1h10m of being in review and 2 comments.
+  done: 2026-02-06 15:20:45.027559628 Z
   hoc: 2
   is_human: 0
   issue: 396
@@ -5855,6 +5865,7 @@
   is_human: 0
   issue: 396
   repository: 4174608
+  tombstone: 2026-02-06 15:20:45.044456492 Z
   what: pull-was-opened
   when: 2025-05-26 11:32:47.000000000 Z
   where: github
@@ -5870,6 +5881,7 @@
   is_human: 0
   issue: 395
   repository: 4174608
+  tombstone: 2026-02-06 15:20:44.987221192 Z
   what: pull-was-opened
   when: 2025-05-26 09:58:00.000000000 Z
   where: github
@@ -5885,6 +5897,7 @@
   is_human: 0
   issue: 427
   repository: 13717355
+  tombstone: 2026-02-06 15:20:45.007262150 Z
   what: pull-was-opened
   when: 2025-05-26 09:56:18.000000000 Z
   where: github
@@ -5911,6 +5924,7 @@
   repository: 4174608
   review_comments: 0
   succeeded_builds: 14
+  tombstone: 2026-02-06 15:20:44.988443913 Z
   what: pull-was-merged
   when: *45
   where: github
@@ -5937,6 +5951,7 @@
   repository: 13717355
   review_comments: 0
   succeeded_builds: 14
+  tombstone: 2026-02-06 15:20:45.008274081 Z
   what: pull-was-merged
   when: *46
   where: github
@@ -5952,6 +5967,7 @@
   is_human: 0
   issue: 618
   repository: 12590813
+  tombstone: 2026-02-06 15:20:45.025371016 Z
   what: pull-was-opened
   when: 2025-05-26 12:23:38.000000000 Z
   where: github
@@ -5978,6 +5994,7 @@
   repository: 12590813
   review_comments: 0
   succeeded_builds: 14
+  tombstone: 2026-02-06 15:20:45.026413417 Z
   what: pull-was-merged
   when: *47
   where: github
@@ -6004,6 +6021,7 @@
   repository: 4174608
   review_comments: 0
   succeeded_builds: 14
+  tombstone: 2026-02-06 15:20:45.045319933 Z
   what: pull-was-merged
   when: *48
   where: github
@@ -29077,6 +29095,7 @@
   _job: 18153864350
   _time: 2025-10-01 06:53:55.647915117 Z
   _version: 0.16.7/0.54.0/0.15.49
+  tombstone: 2026-02-06 15:20:00.601935477 Z
   total_active_contributors: 5
   total_commits: 18625
   total_contributors: 117
@@ -71797,26 +71816,6 @@
   total_stars: 2222
   what: dimensions-of-terrain
   when: 2026-02-02 15:09:42.522351954 Z
-- _id: 755748
-  _job: 59670
-  _time: 2026-02-02 15:19:03.149124116 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1438.7) is decreasing (R=-0.60).
-    The average number of commits per week (45.1) is decreasing (R=-0.19).
-    The average monthly punishment (377 points) is increasing (R=0.61).
-    The average monthly wage (8.3 points) is increasing (R=0.50).
-    The average issue cycle time (2w5d) is increasing (R=0.39).
-    The average pull cycle time (1w) is staying still.
-    The average number of releases per month (2.7) is increasing (R=0.18).
-    The average monthly turnover (58.0 developers) is staying still.
-    The average weekly cost of HoC (1.08 points) is staying still.
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-02-02 15:19:03.165853461 Z
 - _id: 755749
   _job: 21597142802
   _time: 2026-02-02 15:56:26.472633160 Z
@@ -73159,21 +73158,6 @@
   repository: 14093966
   what: tombstone
   where: github
-- _id: 755879
-  _job: 60229
-  _time: 2026-02-05 09:21:45.510086626 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-02-05 09:21:45.439364186 Z
 - _id: 755880
   _job: 21707216766
   _time: 2026-02-05 10:06:49.143348691 Z
@@ -73970,6 +73954,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-808](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/8851b32c3c37ce216492855038f6c4099b5a55d4/#commitcomment-176588701
   repository: 12589687
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:18.102268011 Z
@@ -73992,6 +73977,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-824](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/899df26e8fb74e521cefa0dd6e0f3371eab2ae73/#commitcomment-176588705
   repository: 12589687
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:18.549540616 Z
@@ -74014,6 +74000,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-840](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/a411b54592315f607a829335fe0b61f057c44534/#commitcomment-176588707
   repository: 12589687
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:18.731035974 Z
@@ -74036,6 +74023,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-856](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/899f223b2bf45c249abfe8ffd97e75caf00011c4/#commitcomment-176588708
   repository: 12589687
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:18.876770735 Z
@@ -74058,6 +74046,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-872](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/198115ecc43af0656f30577372df46a5a095e8eb/#commitcomment-176588711
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:19.021317009 Z
@@ -74080,6 +74069,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-888](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/c0360adab99d12ef2bd807a4d971913d4e99d029/#commitcomment-176588715
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:19.435927626 Z
@@ -74102,6 +74092,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-904](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/cbcd097e33a4094547c4f51530334fe3cf5ee6c9/#commitcomment-176588717
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:19.583129830 Z
@@ -74124,6 +74115,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-920](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/f6947983782d51d79b2686380bbe3652e918c2c9/#commitcomment-176588718
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:19.730947376 Z
@@ -74146,6 +74138,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-936](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/c3ff09a217588b4529e23c61483f864b506957e4/#commitcomment-176588722
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:19.878239589 Z
@@ -74168,6 +74161,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-952](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/b502e20c4907c578dbb1cf1b0c36047253f0294f/#commitcomment-176588725
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:20.024356709 Z
@@ -74190,6 +74184,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-968](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/ac030f0ecac3f3fe9c1cf13ac2891c4b5f8bf50f/#commitcomment-176588728
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:20.204859534 Z
@@ -74212,6 +74207,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-984](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-dynamo/commit/ea623a353d6ee854c12b84638be009741a20877c/#commitcomment-176588730
   repository: 12589687
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:20.350856148 Z
@@ -74234,6 +74230,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-1000](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/b813beb2cddd737aff5896e6d50b898af261356e/#commitcomment-176588734
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:20.507905253 Z
@@ -74256,6 +74253,7 @@
     [good practice](https://www.yegor256.com/2020/07/29/open-source-etiquette.html).
     Your running score is [-1016](https://jcabi.github.io/jcabi/jcabi-vitals.html);
     don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  href: https://github.com/jcabi/jcabi-s3/commit/75c2748e4658f96c99351ae5bbbda36f435cf4f8/#commitcomment-176588737
   repository: 14093966
   what: push-to-master-was-punished
   when: 2026-02-05 11:14:20.657117181 Z
@@ -74283,7 +74281,9 @@
     don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
     \ -->"
   hoc: 8
+  href: https://github.com/jcabi/jcabi-parent/issues/748/#issuecomment-3861017334
   issue: 748
+  receipt: receipt-#60495
   repository: 12590813
   review_comments: 0
   seconds: 141394
@@ -74314,7 +74314,9 @@
     don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
     \ -->"
   hoc: 2
+  href: https://github.com/jcabi/jcabi-manifests/issues/105/#issuecomment-3861017479
   issue: 105
+  receipt: receipt-#60496
   repository: 12584841
   review_comments: 0
   seconds: 36900
@@ -74342,7 +74344,9 @@
     don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
     \ -->"
   hoc: 2
+  href: https://github.com/jcabi/jcabi-dynamo/issues/436/#issuecomment-3861017626
   issue: 436
+  receipt: receipt-#60497
   repository: 12589687
   review_comments: 0
   seconds: 56418
@@ -74372,7 +74376,9 @@
     don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
     \ -->"
   hoc: 2
+  href: https://github.com/jcabi/jcabi-log/issues/231/#issuecomment-3861017759
   issue: 231
+  receipt: receipt-#60498
   repository: 12262782
   review_comments: 0
   seconds: 80843
@@ -74402,7 +74408,9 @@
     is [-1000](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check
     your [Zerocracy account](https://www.zerocracy.com/) too).  -->"
   hoc: 2
+  href: https://github.com/jcabi/jcabi-log/issues/232/#issuecomment-3861017846
   issue: 232
+  receipt: receipt-#60499
   repository: 12262782
   review_comments: 0
   seconds: 17662
@@ -74432,7 +74440,9 @@
     don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
     \ -->"
   hoc: 2
+  href: https://github.com/jcabi/jcabi-jdbc/issues/396/#issuecomment-3861018000
   issue: 396
+  receipt: receipt-#60500
   repository: 12587702
   review_comments: 0
   seconds: 123351
@@ -74531,23 +74541,6 @@
   when: 2026-02-05 09:48:44.000000000 Z
   where: github
   who: 526301
-- _id: 755960
-  _job: 21755188783
-  _time: 2026-02-06 15:06:06.098296601 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 414
-  earliest_issue_was_found: 1
-  events_were_scanned: 6270145663
-  issues_were_scanned: 0
-  labels_were_scanned: 421
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 421
-  min_pull_was_found: 422
-  repository: 12590126
-  types_were_scanned: 421
-  what: iterate
-  where: github
 - _id: 755961
   _job: 21755188783
   _time: 2026-02-06 15:06:06.165978555 Z
@@ -74599,40 +74592,6 @@
   types_were_scanned: 577
   what: iterate
   where: github
-- _id: 755965
-  _job: 21755188783
-  _time: 2026-02-06 15:06:06.462730837 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 17
-  earliest_issue_was_found: 1
-  events_were_scanned: 7257932287
-  issues_were_scanned: 0
-  labels_were_scanned: 317
-  latest_issue_was_found: 316
-  merges_were_scanned: 314
-  min_issue_was_found: 317
-  min_pull_was_found: 335
-  repository: 13624455
-  types_were_scanned: 317
-  what: iterate
-  where: github
-- _id: 755966
-  _job: 21755188783
-  _time: 2026-02-06 15:06:06.535109746 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 377
-  earliest_issue_was_found: 1
-  events_were_scanned: 6358201121
-  issues_were_scanned: 0
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 434
-  min_pull_was_found: 439
-  repository: 14093966
-  types_were_scanned: 434
-  what: iterate
-  where: github
 - _id: 755967
   _job: 21755188783
   _time: 2026-02-06 15:06:06.604456223 Z
@@ -74667,23 +74626,6 @@
   types_were_scanned: 53
   what: iterate
   where: github
-- _id: 755969
-  _job: 21755188783
-  _time: 2026-02-06 15:06:06.740367873 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 95
-  earliest_issue_was_found: 1
-  events_were_scanned: 6358043613
-  issues_were_scanned: 0
-  labels_were_scanned: 423
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 423
-  min_pull_was_found: 436
-  repository: 12589687
-  types_were_scanned: 423
-  what: iterate
-  where: github
 - _id: 755970
   _job: 21755188783
   _time: 2026-02-06 15:06:06.808610573 Z
@@ -74700,23 +74642,6 @@
   types_were_scanned: 68
   what: iterate
   where: github
-- _id: 755971
-  _job: 21755188783
-  _time: 2026-02-06 15:06:06.874698246 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 146
-  earliest_issue_was_found: 1
-  events_were_scanned: 7277527624
-  issues_were_scanned: 608
-  labels_were_scanned: 637
-  latest_issue_was_found: 691
-  merges_were_scanned: 734
-  min_issue_was_found: 747
-  min_pull_was_found: 751
-  repository: 12590813
-  types_were_scanned: 730
-  what: iterate
-  where: github
 - _id: 755972
   _job: 21755188783
   _time: 2026-02-06 15:06:06.942312915 Z
@@ -74731,23 +74656,6 @@
   min_pull_was_found: 1842
   repository: 14204295
   types_were_scanned: 1813
-  what: iterate
-  where: github
-- _id: 755973
-  _job: 21755188783
-  _time: 2026-02-06 15:06:07.013011482 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 86
-  earliest_issue_was_found: 116
-  events_were_scanned: 7257905721
-  issues_were_scanned: 94
-  labels_were_scanned: 120
-  latest_issue_was_found: 224
-  merges_were_scanned: 221
-  min_issue_was_found: 213
-  min_pull_was_found: 233
-  repository: 12262782
-  types_were_scanned: 120
   what: iterate
   where: github
 - _id: 755974
@@ -74835,37 +74743,6 @@
   types_were_scanned: 197
   what: iterate
   where: github
-- _id: 755979
-  _job: 21755188783
-  _time: 2026-02-06 15:06:07.417898995 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  earliest_issue_was_found: 1
-  events_were_scanned: 8182267162
-  latest_issue_was_found: 86
-  merges_were_scanned: 0
-  min_issue_was_found: 80
-  min_pull_was_found: 105
-  repository: 12584841
-  types_were_scanned: 80
-  what: iterate
-  where: github
-- _id: 755980
-  _job: 21755188783
-  _time: 2026-02-06 15:06:07.489299029 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 180
-  earliest_issue_was_found: 1
-  events_were_scanned: 8182551626
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 375
-  min_issue_was_found: 319
-  min_pull_was_found: 397
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
 - _id: 755981
   _job: 21755188783
   _time: 2026-02-06 15:06:07.556345770 Z
@@ -74891,7 +74768,7 @@
   issue: 534
   repository: 4174608
   what: issue-was-closed
-  when: 2026-01-09 22:42:36.000000000 Z
+  when: &802 2026-01-09 22:42:36.000000000 Z
   where: github
   who: 526301
 - _id: 755983
@@ -74935,6 +74812,7 @@
   hoc: 2
   issue: 518
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -74959,6 +74837,7 @@
   issue: 519
   repository: 4174608
   review: 2025-12-09 16:47:52.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -74983,6 +74862,7 @@
   issue: 520
   repository: 4174608
   review: 2025-12-09 16:47:47.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75007,6 +74887,7 @@
   issue: 521
   repository: 4174608
   review: 2025-12-10 03:09:08.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75030,6 +74911,7 @@
   hoc: 2
   issue: 522
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75054,6 +74936,7 @@
   issue: 523
   repository: 4174608
   review: 2025-12-12 08:33:11.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75078,6 +74961,7 @@
   issue: 524
   repository: 4174608
   review: 2025-12-12 08:33:07.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75101,6 +74985,7 @@
   hoc: 2
   issue: 525
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75125,6 +75010,7 @@
   issue: 526
   repository: 4174608
   review: 2025-12-23 03:36:06.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75149,6 +75035,7 @@
   issue: 527
   repository: 4174608
   review: 2025-12-25 03:26:54.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75173,6 +75060,7 @@
   issue: 528
   repository: 4174608
   review: 2025-12-25 03:26:51.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75197,6 +75085,7 @@
   issue: 529
   repository: 4174608
   review: 2025-12-29 16:45:16.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75221,6 +75110,7 @@
   issue: 530
   repository: 4174608
   review: 2025-12-31 16:39:07.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75245,6 +75135,7 @@
   issue: 531
   repository: 4174608
   review: 2026-01-04 08:29:41.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75269,6 +75160,7 @@
   issue: 532
   repository: 4174608
   review: 2026-01-08 03:03:30.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -75292,29 +75184,13 @@
   hoc: 2
   issue: 533
   repository: 4174608
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
   when: 2026-01-09 22:42:46.000000000 Z
   where: github
   who: 526301
-- _id: 756001
-  _job: 21755188783
-  _time: 2026-02-06 15:14:04.322359948 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 329
-  earliest_issue_was_found: 1
-  events_were_scanned: 7645144554
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 534
-  min_pull_was_found: 542
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
 - _id: 756002
   _job: 21755188783
   _time: 2026-02-06 15:14:50.813093350 Z
@@ -75906,5 +75782,644 @@
   seconds: 18583
   what: code-was-reviewed
   when: 2026-01-08 03:03:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 756039
+  _job: 60389
+  _time: 2026-02-06 15:18:47.100466781 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi#534 opened @yegor256 by was resolved,
+    after 16m27s of waiting, because it was closed by @yegor256 and earlier it was
+    assigned to @yegor256 and the label '#bug' was attached.
+  issue: 534
+  label: bug
+  opener: 526301
+  repository: 4174608
+  seconds: 988
+  what: bug-was-resolved
+  when: *802
+  where: github
+  who: 526301
+- _id: 756040
+  _job: 60389
+  _time: 2026-02-06 15:19:00.737102182 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  analyzers: 18
+  text: |-
+    The average reward per task (4.6 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1367.4) is decreasing (R=-0.53).
+    The average number of commits per week (42.6) is decreasing (R=-0.10).
+    The average monthly punishment (377 points) is increasing (R=0.31).
+    The average monthly wage (8.0 points) is increasing (R=0.26).
+    The average issue cycle time (2w5d) is increasing (R=0.34).
+    The average pull cycle time (1w) is increasing (R=0.12).
+    The average number of releases per month (2.9) is increasing (R=0.15).
+    The average monthly turnover (58.0 developers) is staying still.
+    The average weekly cost of HoC (1.02 points) is decreasing (R=-0.12).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-02-06 15:19:00.757797310 Z
+- _id: 756041
+  _job: 60389
+  _time: 2026-02-06 15:19:30.426663116 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#397,
+    the reward amount is 4.
+  greeting: |-
+    Thanks for the review! You've earned **+4 points** for this contribution: +12 as a basis for completing the review, -16 for no comments posted during the review process, -8 for having fewer than 16 hits-of-code (only 2), with a minimum adjustment of +16 to ensure you receive at least 4 points as per policy. Your running score is [-992](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check your [Zerocracy account](https://www.zerocracy.com/) for updates.
+
+    <!-- Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to give you at least something.  Your running score is [-992](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).  -->
+  hoc: 2
+  issue: 397
+  repository: 12587702
+  review_comments: 0
+  seconds: 35876
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:30.438475976 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-jdbc#397
+- _id: 756042
+  _job: 60389
+  _time: 2026-02-06 15:19:34.569441528 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#749,
+    the reward amount is 4.
+  greeting: "Great work on the review! \U0001F389 You've earned **+4 points** (base
+    +12, with adjustments for review depth and code coverage, plus a +16 bonus). Your
+    current score is [**-988**](https://jcabi.github.io/jcabi/jcabi-vitals.html) -
+    keep building momentum! Remember to check your [**Zerocracy account**](https://www.zerocracy.com/)
+    for updates.\n\n<!-- Thanks for the review! You've earned +4 points for this:
+    +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code;
+    +16 to give you at least something.  Your running score is [-988](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 2
+  issue: 749
+  repository: 12590813
+  review_comments: 0
+  seconds: 119628
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:34.585417481 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-parent#749
+- _id: 756043
+  _job: 60389
+  _time: 2026-02-06 15:19:38.214365507 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#750,
+    the reward amount is 4.
+  greeting: "Great work on the review! \U0001F389 You've been awarded **+4 points**
+    (base +12, -16 for missing comments, -8 for limited code coverage with 2 hits,
+    +16 bonus applied). Your current score stands at [**-984**](https://jcabi.github.io/jcabi/jcabi-vitals.html)
+    - keep up the momentum and don't forget to check your [Zerocracy account](https://www.zerocracy.com/)
+    for updates!\n\n<!-- Thanks for the review! You've earned +4 points for this:
+    +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code;
+    +16 to give you at least something.  Your running score is [-984](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 2
+  issue: 750
+  repository: 12590813
+  review_comments: 0
+  seconds: 5979
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:38.239399270 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-parent#750
+- _id: 756044
+  _job: 60389
+  _time: 2026-02-06 15:19:42.274717676 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-github#1840,
+    the reward amount is 4.
+  greeting: "Hey! Nice work on the review \U0001F44D You snagged **+4 points** this
+    time: started with **+12** as the base reward, but lost **-16** for no comments
+    (our policy dings you hard when there's radio silence), and another **-8** for
+    the lean **4** hits-of-code, then we bumped you **+16** to keep you above the
+    minimum. Your running score sits at [**-980**](https://jcabi.github.io/jcabi/jcabi-vitals.html)
+    - remember, adding some comments during reviews can boost your points significantly
+    (up to **+8** more!), and don't forget to peek at your [Zerocracy account](https://www.zerocracy.com/)
+    when you get a chance.\n\n<!-- Thanks for the review! You've earned +4 points
+    for this: +12 as a basis; -16 for absolutely no comments posted; -8 for too few
+    (4) hits-of-code; +16 to give you at least something.  Your running score is [-980](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).
+    \ -->"
+  hoc: 4
+  issue: 1840
+  repository: 14204295
+  review_comments: 0
+  seconds: 644334
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:42.285352586 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-github#1840
+- _id: 756045
+  _job: 60389
+  _time: 2026-02-06 15:19:49.154902292 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-github#1841,
+    the reward amount is 4.
+  greeting: |-
+    Thanks for the code review! You've earned **+4 points** for this contribution: **+12** as the base reward for authoring a review, **-16** for no comments during the review process, **-8** for having only 2 hits-of-code (below the 16 minimum), with a final adjustment of **+16** to meet the minimum threshold. Your running score is [**-976**](https://jcabi.github.io/jcabi/jcabi-vitals.html) - please check your [Zerocracy account](https://www.zerocracy.com/) for updates.
+
+    <!-- Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to give you at least something.  Your running score is [-976](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).  -->
+  hoc: 2
+  issue: 1841
+  repository: 14204295
+  review_comments: 0
+  seconds: 58020
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:49.182960937 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-github#1841
+- _id: 756046
+  _job: 60389
+  _time: 2026-02-06 15:19:54.876119797 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-github#1842,
+    the reward amount is 4.
+  greeting: |-
+    Thank you for completing the code review! You've been awarded **+4 points** based on our team policy: +12 points as the base reward for conducting a review, -16 points due to no comments being posted during the review, -8 points for the contribution having only 2 hits-of-code (below the 16 minimum), with a final adjustment of +16 points to ensure you receive the minimum reward of 4 points. Your current running score is **[-972](https://jcabi.github.io/jcabi/jcabi-vitals.html)**; please remember to check your [Zerocracy account](https://www.zerocracy.com/) for updates.
+
+    <!-- Thanks for the review! You've earned +4 points for this: +12 as a basis; -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to give you at least something.  Your running score is [-972](https://jcabi.github.io/jcabi/jcabi-vitals.html); don't forget to check your [Zerocracy account](https://www.zerocracy.com/) too).  -->
+  hoc: 2
+  issue: 1842
+  repository: 14204295
+  review_comments: 0
+  seconds: 20674
+  what: code-review-was-rewarded
+  when: 2026-02-06 15:19:54.886770387 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-github#1842
+- _id: 756047
+  _job: 60389
+  _time: 2026-02-06 15:21:08.664472812 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-02-06 15:21:08.596406704 Z
+- _id: 756048
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.519028842 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 329
+  earliest_issue_was_found: 1
+  events_were_scanned: 7646467701
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 534
+  min_pull_was_found: 542
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 756049
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.590326055 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 180
+  earliest_issue_was_found: 1
+  events_were_scanned: 6375514715
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 375
+  min_issue_was_found: 319
+  min_pull_was_found: 397
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 756050
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.653293563 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 377
+  earliest_issue_was_found: 1
+  events_were_scanned: 7257928543
+  issues_were_scanned: 0
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 434
+  min_pull_was_found: 439
+  repository: 14093966
+  types_were_scanned: 434
+  what: iterate
+  where: github
+- _id: 756051
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.710142057 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 414
+  earliest_issue_was_found: 1
+  events_were_scanned: 7257875220
+  issues_were_scanned: 0
+  labels_were_scanned: 421
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 421
+  min_pull_was_found: 422
+  repository: 12590126
+  types_were_scanned: 421
+  what: iterate
+  where: github
+- _id: 756052
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.776669337 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 86
+  earliest_issue_was_found: 116
+  events_were_scanned: 6375514074
+  issues_were_scanned: 94
+  labels_were_scanned: 120
+  latest_issue_was_found: 224
+  merges_were_scanned: 221
+  min_issue_was_found: 213
+  min_pull_was_found: 233
+  repository: 12262782
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 756053
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.839557808 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  earliest_issue_was_found: 1
+  events_were_scanned: 6375511989
+  latest_issue_was_found: 86
+  merges_were_scanned: 0
+  min_issue_was_found: 80
+  min_pull_was_found: 105
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 756054
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.897402373 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 95
+  earliest_issue_was_found: 1
+  events_were_scanned: 7257878845
+  issues_were_scanned: 0
+  labels_were_scanned: 423
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 423
+  min_pull_was_found: 436
+  repository: 12589687
+  types_were_scanned: 423
+  what: iterate
+  where: github
+- _id: 756055
+  _job: 21756966172
+  _time: 2026-02-06 16:01:52.963717066 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 146
+  earliest_issue_was_found: 1
+  events_were_scanned: 6375511069
+  issues_were_scanned: 608
+  labels_were_scanned: 637
+  latest_issue_was_found: 691
+  merges_were_scanned: 734
+  min_issue_was_found: 747
+  min_pull_was_found: 751
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
+- _id: 756056
+  _job: 21756966172
+  _time: 2026-02-06 16:01:53.029971646 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 17
+  earliest_issue_was_found: 1
+  events_were_scanned: 8182045637
+  issues_were_scanned: 0
+  labels_were_scanned: 317
+  latest_issue_was_found: 316
+  merges_were_scanned: 314
+  min_issue_was_found: 317
+  min_pull_was_found: 335
+  repository: 13624455
+  types_were_scanned: 317
+  what: iterate
+  where: github
+- _id: 756057
+  _job: 21756966172
+  _time: 2026-02-06 16:03:54.989498538 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#535 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 535
+  repository: 4174608
+  review: 2026-01-20 16:49:15.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-20 17:18:32.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756058
+  _job: 21756966172
+  _time: 2026-02-06 16:04:26.987536570 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.jcabi-parent-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#536 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 536
+  repository: 4174608
+  review: 2026-01-20 16:49:11.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-20 17:00:27.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756059
+  _job: 21756966172
+  _time: 2026-02-06 16:04:52.679276207 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#537 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 537
+  repository: 4174608
+  review: 2026-01-22 03:10:53.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-22 03:20:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756060
+  _job: 21756966172
+  _time: 2026-02-06 16:05:38.308040454 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-judges-action-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#538 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 538
+  repository: 4174608
+  review: 2026-01-23 16:32:01.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-23 16:51:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756061
+  _job: 21756966172
+  _time: 2026-02-06 16:05:50.853056672 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/zerocracy-pages-action-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#539 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 539
+  repository: 4174608
+  review: 2026-01-23 16:31:58.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-23 16:41:29.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756062
+  _job: 21756966172
+  _time: 2026-02-06 16:06:10.190534195 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#540 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 540
+  repository: 4174608
+  review: 2026-01-26 16:59:00.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-26 17:08:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756063
+  _job: 21756966172
+  _time: 2026-02-06 16:06:49.868831098 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi#541 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 541
+  repository: 4174608
+  review: 2026-01-28 03:22:06.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-01-28 04:08:42.000000000 Z
+  where: github
+  who: 8086956
+- _id: 756064
+  _job: 21756966172
+  _time: 2026-02-06 16:11:13.076467887 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#535 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 25h43m and 0 comments.
+  hoc: 2
+  issue: 535
+  repository: 4174608
+  review_comments: 0
+  seconds: 92622
+  what: code-was-reviewed
+  when: 2026-01-20 16:49:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 756065
+  _job: 21756966172
+  _time: 2026-02-06 16:11:13.855054441 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#536 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 5h43m and 0 comments.
+  hoc: 2
+  issue: 536
+  repository: 4174608
+  review_comments: 0
+  seconds: 20602
+  what: code-was-reviewed
+  when: 2026-01-20 16:49:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 756066
+  _job: 21756966172
+  _time: 2026-02-06 16:11:14.368629288 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#537 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 7h9m and 0 comments.
+  hoc: 2
+  issue: 537
+  repository: 4174608
+  review_comments: 0
+  seconds: 25792
+  what: code-was-reviewed
+  when: 2026-01-22 03:10:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 756067
+  _job: 21756966172
+  _time: 2026-02-06 16:11:14.863458159 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#538 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 5h54m and 0 comments.
+  hoc: 2
+  issue: 538
+  repository: 4174608
+  review_comments: 0
+  seconds: 21273
+  what: code-was-reviewed
+  when: 2026-01-23 16:32:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 756068
+  _job: 21756966172
+  _time: 2026-02-06 16:11:15.418618117 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#539 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 5h54m and 0 comments.
+  hoc: 2
+  issue: 539
+  repository: 4174608
+  review_comments: 0
+  seconds: 21266
+  what: code-was-reviewed
+  when: 2026-01-23 16:31:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 756069
+  _job: 21756966172
+  _time: 2026-02-06 16:11:16.055176498 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#540 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 0h9m and 0 comments.
+  hoc: 2
+  issue: 540
+  repository: 4174608
+  review_comments: 0
+  seconds: 594
+  what: code-was-reviewed
+  when: 2026-01-26 16:59:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 756070
+  _job: 21756966172
+  _time: 2026-02-06 16:11:16.646297833 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi#541 with 2 HoC created by @renovate[bot] was
+    reviewed by @yegor256 after 8h1m and 0 comments.
+  hoc: 2
+  issue: 541
+  repository: 4174608
+  review_comments: 0
+  seconds: 28899
+  what: code-was-reviewed
+  when: 2026-01-28 03:22:06.000000000 Z
   where: github
   who: 526301
