@@ -2,13 +2,15 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'GET https://api.github.com/repos/jcabi/jcabi-log/issues/97/events?per_page=100:
-    502 - Server Error'
+  error:
+  - 'GET https://api.github.com/user/2312051: 502 - Server Error'
+  - 'GET https://api.github.com/user/11192805: 502 - Server Error'
+  - 'GET https://api.github.com/repos/jcabi/jcabi-email: 502 - Server Error'
   inserted: 8
-  seconds: 870.237334494
+  seconds: 804.729179792
   version: 0.59.0
   what: judges-summary
-  when: 2026-02-11 09:24:36.139541052 Z
+  when: 2026-02-11 10:26:26.736687874 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -74715,6 +74717,7 @@
     the reward amount is 4.
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/752/#issuecomment-3873502500
+  is_human: 1
   issue: 752
   receipt: receipt-#60958
   repository: 12590813
@@ -74928,38 +74931,6 @@
     The average monthly zents/points ratio (1.00) is staying still.
   what: assessment
   when: 2026-02-10 17:46:17.144930454 Z
-- _id: 756528
-  _job: 60921
-  _time: 2026-02-11 00:12:44.146728578 Z
-  _version: 0.19.4/0.59.0/0.17.10
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-02-11 00:12:44.093417084 Z
-- _id: 756540
-  _job: 21898997630
-  _time: 2026-02-11 09:10:47.289958589 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 8335466851
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 534
-  min_pull_was_found: 542
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
 - _id: 756542
   _job: 21898997630
   _time: 2026-02-11 09:11:34.239703543 Z
@@ -74975,23 +74946,6 @@
   min_pull_was_found: 35
   repository: 12591382
   types_were_scanned: 20
-  what: iterate
-  where: github
-- _id: 756543
-  _job: 21898997630
-  _time: 2026-02-11 09:11:34.315149664 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 615
-  earliest_issue_was_found: 1
-  events_were_scanned: 6436609666
-  issues_were_scanned: 608
-  labels_were_scanned: 672
-  latest_issue_was_found: 691
-  merges_were_scanned: 753
-  min_issue_was_found: 757
-  min_pull_was_found: 759
-  repository: 12590813
-  types_were_scanned: 730
   what: iterate
   where: github
 - _id: 756544
@@ -75025,23 +74979,6 @@
   min_pull_was_found: 194
   repository: 12591138
   types_were_scanned: 192
-  what: iterate
-  where: github
-- _id: 756546
-  _job: 21898997630
-  _time: 2026-02-11 09:11:34.506705797 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 421
-  earliest_issue_was_found: 1
-  events_were_scanned: 6270145663
-  issues_were_scanned: 0
-  labels_were_scanned: 421
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 421
-  min_pull_was_found: 422
-  repository: 12590126
-  types_were_scanned: 421
   what: iterate
   where: github
 - _id: 756547
@@ -75228,5 +75165,71 @@
   min_pull_was_found: 243
   repository: 13359002
   types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 756558
+  _job: 60961
+  _time: 2026-02-11 09:26:16.314188405 Z
+  _version: 0.19.4/0.59.0/0.17.10
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-02-11 09:26:16.267142392 Z
+- _id: 756559
+  _job: 21900953596
+  _time: 2026-02-11 10:13:44.202734934 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 615
+  earliest_issue_was_found: 1
+  events_were_scanned: 7594699832
+  issues_were_scanned: 608
+  labels_were_scanned: 672
+  latest_issue_was_found: 691
+  merges_were_scanned: 753
+  min_issue_was_found: 757
+  min_pull_was_found: 759
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
+- _id: 756560
+  _job: 21900953596
+  _time: 2026-02-11 10:13:44.271915546 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 8338143194
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 534
+  min_pull_was_found: 542
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 756561
+  _job: 21900953596
+  _time: 2026-02-11 10:13:44.334006967 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 421
+  earliest_issue_was_found: 1
+  events_were_scanned: 7645840792
+  issues_were_scanned: 0
+  labels_were_scanned: 421
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 421
+  min_pull_was_found: 422
+  repository: 12590126
+  types_were_scanned: 421
   what: iterate
   where: github
