@@ -2,11 +2,13 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: Failed to open TCP connection to api.github.com:443 (Connection refused -
+    connect(2) for "api.github.com" port 443)
   inserted: 8
-  seconds: 832.180491815
+  seconds: 810.720151585
   version: 0.59.0
   what: judges-summary
-  when: 2026-02-18 10:22:55.806702355 Z
+  when: 2026-02-18 11:23:25.203174019 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -73386,26 +73388,6 @@
   total_stars: 2223
   what: dimensions-of-terrain
   when: 2026-02-16 08:07:46.856103356 Z
-- _id: 756793
-  _job: 61493
-  _time: 2026-02-16 08:14:34.507924005 Z
-  _version: 0.19.4/0.59.0/0.17.10!0.17.11
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1315.4) is staying still.
-    The average number of commits per week (40.3) is staying still.
-    The average monthly punishment (468 points) is staying still.
-    The average monthly wage (8.0 points) is increasing (R=0.32).
-    The average issue cycle time (1w6d) is increasing (R=0.34).
-    The average pull cycle time (6d1h) is increasing (R=0.16).
-    The average number of releases per month (3.6) is increasing (R=0.21).
-    The average monthly turnover (59.0 developers) is staying still.
-    The average weekly cost of HoC (0.99 points) is decreasing (R=-0.15).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-02-16 08:14:34.522764560 Z
 - _id: 756823
   _job: 22071597617
   _time: 2026-02-16 17:08:02.388762540 Z
@@ -73875,23 +73857,6 @@
   - 5.428571446945725
   what: learn-eva
   when: 2026-02-18 08:17:51.178476190 Z
-- _id: 756875
-  _job: 22135333511
-  _time: 2026-02-18 10:10:03.046919262 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 7965683922
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 534
-  min_pull_was_found: 542
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
 - _id: 756876
   _job: 22135333511
   _time: 2026-02-18 10:13:14.975927397 Z
@@ -73908,3 +73873,40 @@
   total_stars: 2223
   what: dimensions-of-terrain
   when: 2026-02-18 10:13:14.997520415 Z
+- _id: 756877
+  _job: 61889
+  _time: 2026-02-18 10:23:28.758282036 Z
+  _version: 0.19.4/0.59.0/0.17.10!0.17.11
+  analyzers: 18
+  text: |-
+    The average reward per task (4.6 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1253.7) is increasing (R=0.11).
+    The average number of commits per week (40.1) is staying still.
+    The average monthly punishment (468 points) is staying still.
+    The average monthly wage (8.0 points) is increasing (R=0.32).
+    The average issue cycle time (1w6d) is increasing (R=0.34).
+    The average pull cycle time (5d20h) is increasing (R=0.17).
+    The average number of releases per month (3.8) is increasing (R=0.17).
+    The average monthly turnover (59.0 developers) is staying still.
+    The average weekly cost of HoC (0.99 points) is decreasing (R=-0.15).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-02-18 10:23:28.787341711 Z
+- _id: 756878
+  _job: 22137297014
+  _time: 2026-02-18 11:11:15.023359547 Z
+  _version: 0.19.3/0.59.0/0.17.10
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 7967148190
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 534
+  min_pull_was_found: 542
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
