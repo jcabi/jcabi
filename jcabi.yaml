@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
   inserted: 8
-  seconds: 833.241503099
+  seconds: 900.092214039
   version: 0.60.1
   what: judges-summary
-  when: 2026-04-15 15:56:11.230426973 Z
+  when: 2026-04-15 17:52:16.952568065 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -79081,23 +79082,6 @@
   types_were_scanned: 82
   what: iterate
   where: github
-- _id: 763993
-  _job: 24383959294
-  _time: 2026-04-14 06:14:32.082046080 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 615
-  earliest_issue_was_found: 1
-  events_were_scanned: 8384196786
-  issues_were_scanned: 608
-  labels_were_scanned: 672
-  latest_issue_was_found: 691
-  merges_were_scanned: 758
-  min_issue_was_found: 767
-  min_pull_was_found: 775
-  repository: 12590813
-  types_were_scanned: 730
-  what: iterate
-  where: github
 - _id: 763994
   _job: 24383959294
   _time: 2026-04-14 06:15:02.404542214 Z
@@ -79698,88 +79682,6 @@
   types_were_scanned: 50
   what: iterate
   where: github
-- _id: 764106
-  _job: 24463815848
-  _time: 2026-04-15 15:43:55.378560957 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  earliest_issue_was_found: 1
-  events_were_scanned: 9838371973
-  latest_issue_was_found: 86
-  merges_were_scanned: 103
-  min_issue_was_found: 80
-  min_pull_was_found: 110
-  repository: 12584841
-  types_were_scanned: 80
-  what: iterate
-  where: github
-- _id: 764107
-  _job: 24463815848
-  _time: 2026-04-15 15:43:55.427366540 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 9906677788
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
-- _id: 764108
-  _job: 24463815848
-  _time: 2026-04-15 15:43:55.479255125 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 8417196958
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 469
-  repository: 14093966
-  types_were_scanned: 434
-  what: iterate
-  where: github
-- _id: 764109
-  _job: 24463815848
-  _time: 2026-04-15 15:43:55.532128298 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 118
-  earliest_issue_was_found: 1
-  events_were_scanned: 8425731607
-  issues_were_scanned: 95
-  labels_were_scanned: 423
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 441
-  min_pull_was_found: 455
-  repository: 12589687
-  types_were_scanned: 423
-  what: iterate
-  where: github
-- _id: 764110
-  _job: 24463815848
-  _time: 2026-04-15 15:43:55.584770551 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 52
-  earliest_issue_was_found: 1
-  events_were_scanned: 10028687119
-  issues_were_scanned: 0
-  labels_were_scanned: 52
-  latest_issue_was_found: 66
-  merges_were_scanned: 74
-  min_issue_was_found: 68
-  min_pull_was_found: 81
-  repository: 12591356
-  types_were_scanned: 52
-  what: iterate
-  where: github
 - _id: 764111
   _job: 24463815848
   _time: 2026-04-15 15:53:10.017166482 Z
@@ -79797,3 +79699,171 @@
   when: 2026-04-15 08:57:26.000000000 Z
   where: github
   who: 526301
+- _id: 764112
+  _job: 24468938857
+  _time: 2026-04-15 17:37:47.761145916 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  comments: 3
+  commits: 1
+  details: The pull request jcabi/jcabi-s3#470 has been reviewed by @yegor256 with
+    2 HoC and 3 comments.
+  event_id: 8451939109
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 470
+  repository: 14093966
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-04-15 16:50:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 764113
+  _job: 24468938857
+  _time: 2026-04-15 17:40:04.948339061 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  branch: renovate/guava-monorepo
+  details: The pull request jcabi/jcabi-parent#776 has been opened by @renovate[bot].
+  event_id: 8452428330
+  event_type: PullRequestEvent
+  issue: 776
+  repository: 12590813
+  what: pull-was-opened
+  when: 2026-04-15 17:05:45.000000000 Z
+  where: github
+  who: 29139614
+- _id: 764115
+  _job: 24468938857
+  _time: 2026-04-15 17:40:16.446754292 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  assignees_were_scanned: 52
+  earliest_issue_was_found: 1
+  events_were_scanned: 8384674828
+  issues_were_scanned: 0
+  labels_were_scanned: 52
+  latest_issue_was_found: 66
+  merges_were_scanned: 74
+  min_issue_was_found: 68
+  min_pull_was_found: 81
+  repository: 12591356
+  types_were_scanned: 52
+  what: iterate
+  where: github
+- _id: 764116
+  _job: 24468938857
+  _time: 2026-04-15 17:40:16.490157671 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  assignees_were_scanned: 118
+  earliest_issue_was_found: 1
+  events_were_scanned: 9476298313
+  issues_were_scanned: 95
+  labels_were_scanned: 423
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 441
+  min_pull_was_found: 455
+  repository: 12589687
+  types_were_scanned: 423
+  what: iterate
+  where: github
+- _id: 764117
+  _job: 24468938857
+  _time: 2026-04-15 17:40:16.534598883 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 9908512351
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 764118
+  _job: 24468938857
+  _time: 2026-04-15 17:40:16.577609343 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  earliest_issue_was_found: 1
+  events_were_scanned: 8435104314
+  latest_issue_was_found: 86
+  merges_were_scanned: 103
+  min_issue_was_found: 80
+  min_pull_was_found: 110
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 764120
+  _job: 24468938857
+  _time: 2026-04-15 17:41:56.031393754 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  branch: renovate/guava-monorepo
+  details: The pull jcabi/jcabi-s3#470 has been opened earlier by @renovate[bot].
+  issue: 470
+  repository: 14093966
+  what: pull-was-opened
+  when: 2026-04-14 20:56:57.000000000 Z
+  where: github
+  who: 29139614
+- _id: 764121
+  _job: 24468938857
+  _time: 2026-04-15 17:43:36.764090544 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#470 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 470
+  repository: 14093966
+  review: 2026-04-15 16:50:55.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-15 17:00:24.000000000 Z
+  where: github
+  who: 8086956
+- _id: 764122
+  _job: 24468938857
+  _time: 2026-04-15 17:44:55.692681738 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 9475224922
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 470
+  repository: 14093966
+  types_were_scanned: 434
+  what: iterate
+  where: github
+- _id: 764123
+  _job: 24468938857
+  _time: 2026-04-15 17:44:55.749961043 Z
+  _version: 0.19.9/0.60.1/0.17.15
+  assignees_were_scanned: 615
+  earliest_issue_was_found: 1
+  events_were_scanned: 8452428330
+  issues_were_scanned: 608
+  labels_were_scanned: 672
+  latest_issue_was_found: 691
+  merges_were_scanned: 758
+  min_issue_was_found: 767
+  min_pull_was_found: 776
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
