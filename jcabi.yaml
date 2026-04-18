@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 817.159113508
+  seconds: 866.803467628
   version: 0.60.2
   what: judges-summary
-  when: 2026-04-18 13:52:16.544590979 Z
+  when: 2026-04-18 16:11:33.293895713 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -52831,6 +52831,21 @@
   - 17970037.0
   - 67964.0
   - 31214.0
+  some_review_size:
+  - 0
+  - 0
+  - 0
+  some_review_time:
+  - 33062
+  - 571
+  some_reviewers_per_pull:
+  - 0
+  - 1
+  - 1
+  some_reviews_per_pull:
+  - 0
+  - 1
+  - 1
   what: quality-of-service
   when: &571 2025-12-28 03:14:49.082095541 Z
 - _id: 751188
@@ -80179,7 +80194,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-17 03:44:09.000000000 Z
+  when: &835 2026-04-17 03:44:09.000000000 Z
   where: github
   who: 8086956
 - _id: 764293
@@ -80250,13 +80265,47 @@
   repository: 23238769
   what: tombstone
   where: github
-- _id: 764296
-  _job: 24605862180
-  _time: 2026-04-18 13:39:33.060201668 Z
+- _id: 764299
+  _job: 68661
+  _time: 2026-04-18 13:53:08.860478098 Z
+  _version: 0.19.9/0.60.2/0.17.16
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#471 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 5h28m of being in review and 3 comments.
+  hoc: 12
+  issue: 471
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 19740
+  what: code-was-contributed
+  when: *835
+  where: github
+  who: 29139614
+- _id: 764300
+  _job: 24608347173
+  _time: 2026-04-18 15:58:02.261369744 Z
+  _version: 0.19.9/0.60.2/0.17.16
+  assignees_were_scanned: 52
+  earliest_issue_was_found: 1
+  events_were_scanned: 10028687119
+  issues_were_scanned: 0
+  labels_were_scanned: 52
+  latest_issue_was_found: 66
+  merges_were_scanned: 74
+  min_issue_was_found: 68
+  min_pull_was_found: 81
+  repository: 12591356
+  types_were_scanned: 52
+  what: iterate
+  where: github
+- _id: 764301
+  _job: 24608347173
+  _time: 2026-04-18 15:58:02.307093422 Z
   _version: 0.19.9/0.60.2/0.17.16
   assignees_were_scanned: 353
   earliest_issue_was_found: 1
-  events_were_scanned: 9957500917
+  events_were_scanned: 9958700132
   issues_were_scanned: 353
   labels_were_scanned: 500
   latest_issue_was_found: 486
@@ -80267,34 +80316,17 @@
   types_were_scanned: 500
   what: iterate
   where: github
-- _id: 764297
-  _job: 24605862180
-  _time: 2026-04-18 13:39:33.117931550 Z
+- _id: 764302
+  _job: 24608347173
+  _time: 2026-04-18 15:58:02.376189515 Z
   _version: 0.19.9/0.60.2/0.17.16
   earliest_issue_was_found: 1
-  events_were_scanned: 8435104314
+  events_were_scanned: 9838371973
   latest_issue_was_found: 86
   merges_were_scanned: 103
   min_issue_was_found: 80
   min_pull_was_found: 110
   repository: 12584841
   types_were_scanned: 80
-  what: iterate
-  where: github
-- _id: 764298
-  _job: 24605862180
-  _time: 2026-04-18 13:39:33.180140745 Z
-  _version: 0.19.9/0.60.2/0.17.16
-  assignees_were_scanned: 52
-  earliest_issue_was_found: 1
-  events_were_scanned: 8537648333
-  issues_were_scanned: 0
-  labels_were_scanned: 52
-  latest_issue_was_found: 66
-  merges_were_scanned: 74
-  min_issue_was_found: 68
-  min_pull_was_found: 81
-  repository: 12591356
-  types_were_scanned: 52
   what: iterate
   where: github
