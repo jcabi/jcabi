@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 836.900551352
+  seconds: 838.898317729
   version: 0.60.2
   what: judges-summary
-  when: 2026-04-25 19:28:24.129304621 Z
+  when: 2026-04-25 20:11:50.149712727 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -5769,24 +5769,6 @@
   when: 2025-08-12 17:28:28.000000000 Z
   where: github
   who: 29139614
-- _id: 494682
-  _job: 32859
-  _time: 2025-08-12 19:08:58.752167030 Z
-  _version: 0.14.7/0.52.2/0.15.9!0.15.10
-  award: 4
-  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#653,
-    the reward amount is 4.
-  href: https://github.com/jcabi/jcabi-parent/issues/653/#issuecomment-3180643897
-  is_human: 1
-  issue: 653
-  receipt: receipt-#34261
-  repository: 12590813
-  tombstone: 2026-04-25 15:20:11.045018488 Z
-  what: code-review-was-rewarded
-  when: 2025-08-12 19:08:31.944973171 Z
-  where: github
-  who: 526301
-  why: Reviewed code in jcabi/jcabi-parent#653
 - _id: 495668
   _job: 32863
   _time: 2025-08-12 19:51:37.656480339 Z
@@ -82677,23 +82659,6 @@
   repository: 12587702
   what: tombstone
   where: github
-- _id: 764807
-  _job: 69209
-  _time: 2026-04-25 15:20:15.816838922 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  issues:
-  - 1-80
-  - '82'
-  - 84-116
-  - 118-145
-  - 147-190
-  - 192-486
-  - 488-607
-  - 609-614
-  - 616-653
-  repository: 12590813
-  what: tombstone
-  where: github
 - _id: 764808
   _job: 69209
   _time: 2026-04-25 15:20:15.915120361 Z
@@ -83622,37 +83587,6 @@
   types_were_scanned: 730
   what: iterate
   where: github
-- _id: 764876
-  _job: 24938522339
-  _time: 2026-04-25 19:15:19.287753337 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 8789804692
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 60
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
-- _id: 764877
-  _job: 24938522339
-  _time: 2026-04-25 19:15:19.332397797 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  earliest_issue_was_found: 1
-  events_were_scanned: 9861565994
-  latest_issue_was_found: 86
-  merges_were_scanned: 103
-  min_issue_was_found: 80
-  min_pull_was_found: 110
-  repository: 12584841
-  types_were_scanned: 80
-  what: iterate
-  where: github
 - _id: 764878
   _job: 24938522339
   _time: 2026-04-25 19:15:19.387510532 Z
@@ -83685,23 +83619,6 @@
   min_pull_was_found: 303
   repository: 23238769
   types_were_scanned: 197
-  what: iterate
-  where: github
-- _id: 764880
-  _job: 24938522339
-  _time: 2026-04-25 19:15:19.481662940 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11041046981
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 500
   what: iterate
   where: github
 - _id: 764881
@@ -83738,9 +83655,98 @@
   hoc: 2
   issue: 55
   repository: 12589424
+  review_comments: 0
   succeeded_builds: 6
   suggestions: 0
   what: pull-was-merged
   when: 2026-04-25 19:10:08.000000000 Z
   where: github
   who: 526301
+- _id: 764883
+  _job: 69233
+  _time: 2026-04-25 19:29:02.064681632 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  issues:
+  - 1-80
+  - '82'
+  - 84-116
+  - 118-145
+  - 147-190
+  - 192-486
+  - 488-607
+  - 609-614
+  - 616-653
+  repository: 12590813
+  what: tombstone
+  where: github
+- _id: 764884
+  _job: 24939352801
+  _time: 2026-04-25 19:58:32.732822926 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  commits: 295
+  contributors:
+  - 526301
+  - 29139614
+  - 81847
+  - 83507
+  - 8086956
+  details: A new release "refresh" has been published in jcabi/jcabi-urn by @rultor.
+  event_id: 8789936656
+  event_type: ReleaseEvent
+  hoc: 1466
+  last_commit: e15d1f9bc52532702c7dcbc7b0d030a05006f33c
+  release: 313632397
+  repository: 12589424
+  tag: 0.11.0
+  what: release-published
+  when: 2026-04-25 19:25:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 764885
+  _job: 24939352801
+  _time: 2026-04-25 19:58:43.092456239 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11042562697
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 764886
+  _job: 24939352801
+  _time: 2026-04-25 19:58:43.177896312 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  earliest_issue_was_found: 1
+  events_were_scanned: 8435104314
+  latest_issue_was_found: 86
+  merges_were_scanned: 103
+  min_issue_was_found: 80
+  min_pull_was_found: 110
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 764887
+  _job: 24939352801
+  _time: 2026-04-25 19:58:43.230999482 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 9856630804
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 60
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
