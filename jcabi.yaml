@@ -2,13 +2,13 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'GET https://api.github.com/repositories/19194296/events?per_page=100: 500
+  error: 'GET https://api.github.com/repositories/12590126/events?per_page=100: 500
     -  (Octokit::InternalServerError)'
   inserted: 8
-  seconds: 810.247675512
+  seconds: 840.180453962
   version: 0.60.2
   what: judges-summary
-  when: 2026-04-30 04:22:38.333222011 Z
+  when: 2026-04-30 06:59:04.589838413 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -76131,23 +76131,6 @@
   total_stars: 2239
   what: dimensions-of-terrain
   when: 2026-04-15 09:59:08.528060040 Z
-- _id: 764089
-  _job: 24452023910
-  _time: 2026-04-15 11:32:34.018133999 Z
-  _version: 0.19.9/0.60.1/0.17.15
-  assignees_were_scanned: 36
-  earliest_issue_was_found: 1
-  events_were_scanned: 10609035850
-  issues_were_scanned: 0
-  labels_were_scanned: 36
-  latest_issue_was_found: 40
-  merges_were_scanned: 41
-  min_issue_was_found: 36
-  min_pull_was_found: 41
-  repository: 15208785
-  types_were_scanned: 36
-  what: iterate
-  where: github
 - _id: 764096
   _job: 24452023910
   _time: 2026-04-15 11:32:35.089217044 Z
@@ -77050,23 +77033,6 @@
   min_pull_was_found: 64
   repository: 12591371
   types_were_scanned: 50
-  what: iterate
-  where: github
-- _id: 764306
-  _job: 24625545906
-  _time: 2026-04-19 09:11:31.272239658 Z
-  _version: 0.19.9/0.60.2/0.17.16
-  assignees_were_scanned: 20
-  earliest_issue_was_found: 16
-  events_were_scanned: 10759481594
-  issues_were_scanned: 0
-  labels_were_scanned: 20
-  latest_issue_was_found: 34
-  merges_were_scanned: 35
-  min_issue_was_found: 20
-  min_pull_was_found: 35
-  repository: 12591382
-  types_were_scanned: 20
   what: iterate
   where: github
 - _id: 764309
@@ -82570,23 +82536,6 @@
   types_were_scanned: 319
   what: iterate
   where: github
-- _id: 765270
-  _job: 25115137358
-  _time: 2026-04-29 14:36:32.242950132 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 74
-  earliest_issue_was_found: 1
-  events_were_scanned: 8913539210
-  issues_were_scanned: 0
-  labels_were_scanned: 74
-  latest_issue_was_found: 71
-  merges_were_scanned: 96
-  min_issue_was_found: 101
-  min_pull_was_found: 108
-  repository: 12591347
-  types_were_scanned: 82
-  what: iterate
-  where: github
 - _id: 765272
   _job: 25115137358
   _time: 2026-04-29 14:36:32.346293364 Z
@@ -82805,23 +82754,6 @@
   types_were_scanned: 500
   what: iterate
   where: github
-- _id: 765306
-  _job: 25140496927
-  _time: 2026-04-30 00:13:33.321923090 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 120
-  earliest_issue_was_found: 1
-  events_were_scanned: 11224208726
-  issues_were_scanned: 53
-  labels_were_scanned: 120
-  latest_issue_was_found: 125
-  merges_were_scanned: 129
-  min_issue_was_found: 120
-  min_pull_was_found: 133
-  repository: 19194304
-  types_were_scanned: 120
-  what: iterate
-  where: github
 - _id: 765307
   _job: 25140496927
   _time: 2026-04-30 00:13:33.388312442 Z
@@ -82837,20 +82769,6 @@
   min_pull_was_found: 474
   repository: 14093966
   types_were_scanned: 434
-  what: iterate
-  where: github
-- _id: 765308
-  _job: 25140496927
-  _time: 2026-04-30 00:13:33.442031182 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  earliest_issue_was_found: 1
-  events_were_scanned: 8906701145
-  latest_issue_was_found: 86
-  merges_were_scanned: 103
-  min_issue_was_found: 80
-  min_pull_was_found: 112
-  repository: 12584841
-  types_were_scanned: 80
   what: iterate
   where: github
 - _id: 765309
@@ -82869,7 +82787,7 @@
   repository: 12590813
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-04-30 03:56:01.000000000 Z
+  when: &830 2026-04-30 03:56:01.000000000 Z
   where: github
   who: 526301
 - _id: 765311
@@ -82902,6 +82820,7 @@
   issue: 237
   repository: 12262782
   review: 2026-04-30 03:43:38.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -82926,29 +82845,13 @@
   issue: 474
   repository: 12589687
   review: 2026-04-30 03:31:49.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
   when: 2026-04-30 03:43:54.000000000 Z
   where: github
   who: 8086956
-- _id: 765314
-  _job: 25146833357
-  _time: 2026-04-30 04:13:07.417790804 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 672
-  earliest_issue_was_found: 1
-  events_were_scanned: 8941541032
-  issues_were_scanned: 608
-  labels_were_scanned: 672
-  latest_issue_was_found: 691
-  merges_were_scanned: 758
-  min_issue_was_found: 767
-  min_pull_was_found: 785
-  repository: 12590813
-  types_were_scanned: 730
-  what: iterate
-  where: github
 - _id: 765315
   _job: 25146833357
   _time: 2026-04-30 04:18:17.225429815 Z
@@ -83017,5 +82920,443 @@
   seconds: 76980
   what: code-was-reviewed
   when: 2026-04-30 03:31:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 765320
+  _job: 69826
+  _time: 2026-04-30 04:23:16.117889738 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 1
+  details: The pull request jcabi/jcabi-parent#785 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 18h42m and 1 comments.
+  hoc: 2
+  issue: 785
+  repository: 12590813
+  review_comments: 0
+  seconds: 67360
+  what: code-was-reviewed
+  when: *830
+  where: github
+  who: 526301
+- _id: 765321
+  _job: 25151413964
+  _time: 2026-04-30 06:45:34.321822622 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  comments: 3
+  commits: 1
+  details: The pull request jcabi/jcabi-maven-skin#109 has been reviewed by @yegor256
+    with 2 HoC and 3 comments.
+  event_id: 8941398458
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 109
+  repository: 12591347
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-04-30 03:47:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 765322
+  _job: 25151413964
+  _time: 2026-04-30 06:46:06.926680677 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  earliest_issue_was_found: 1
+  events_were_scanned: 10085544990
+  latest_issue_was_found: 86
+  merges_were_scanned: 103
+  min_issue_was_found: 80
+  min_pull_was_found: 112
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 765323
+  _job: 25151413964
+  _time: 2026-04-30 06:46:06.998545431 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 120
+  earliest_issue_was_found: 1
+  events_were_scanned: 8941461586
+  issues_were_scanned: 53
+  labels_were_scanned: 120
+  latest_issue_was_found: 125
+  merges_were_scanned: 129
+  min_issue_was_found: 120
+  min_pull_was_found: 133
+  repository: 19194304
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 765324
+  _job: 25151413964
+  _time: 2026-04-30 06:46:07.060824179 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 672
+  earliest_issue_was_found: 1
+  events_were_scanned: 8942846989
+  issues_were_scanned: 608
+  labels_were_scanned: 672
+  latest_issue_was_found: 691
+  merges_were_scanned: 758
+  min_issue_was_found: 767
+  min_pull_was_found: 785
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
+- _id: 765326
+  _job: 25151413964
+  _time: 2026-04-30 06:46:07.180384447 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 36
+  earliest_issue_was_found: 1
+  events_were_scanned: 11229796814
+  issues_were_scanned: 0
+  labels_were_scanned: 36
+  latest_issue_was_found: 40
+  merges_were_scanned: 41
+  min_issue_was_found: 36
+  min_pull_was_found: 41
+  repository: 15208785
+  types_were_scanned: 36
+  what: iterate
+  where: github
+- _id: 765327
+  _job: 25151413964
+  _time: 2026-04-30 06:46:07.240944610 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 20
+  earliest_issue_was_found: 16
+  events_were_scanned: 11228372639
+  issues_were_scanned: 0
+  labels_were_scanned: 20
+  latest_issue_was_found: 34
+  merges_were_scanned: 35
+  min_issue_was_found: 20
+  min_pull_was_found: 35
+  repository: 12591382
+  types_were_scanned: 20
+  what: iterate
+  where: github
+- _id: 765328
+  _job: 25151413964
+  _time: 2026-04-30 06:46:51.898301352 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  details: The pull jcabi/jcabi-maven-skin#109 has been opened earlier by @renovate[bot].
+  issue: 109
+  repository: 12591347
+  what: pull-was-opened
+  when: 2026-04-29 12:39:28.000000000 Z
+  where: github
+  who: 29139614
+- _id: 765329
+  _job: 25151413964
+  _time: 2026-04-30 06:47:18.854946359 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#236 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 236
+  repository: 12262782
+  review: 2026-04-30 03:43:42.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-30 05:22:25.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765330
+  _job: 25151413964
+  _time: 2026-04-30 06:47:34.272583967 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-skin#109 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 109
+  repository: 12591347
+  review: 2026-04-30 03:47:54.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-30 04:40:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765331
+  _job: 25151413964
+  _time: 2026-04-30 06:47:50.886753378 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#472 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 472
+  repository: 12589687
+  review: 2026-04-30 03:31:56.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-30 05:36:27.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765332
+  _job: 25151413964
+  _time: 2026-04-30 06:48:00.077481077 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.jcabi-jcabi-urn-0.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#782 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 782
+  repository: 12590813
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-27 14:16:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 765333
+  _job: 25151413964
+  _time: 2026-04-30 06:48:07.527382393 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/aws-java-sdk-v2-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#473 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 10
+  issue: 473
+  repository: 12589687
+  review: 2026-04-30 03:31:53.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-30 05:13:29.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765334
+  _job: 25151413964
+  _time: 2026-04-30 06:48:16.865258450 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven.plugins-maven-invoker-plugin-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#783 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 783
+  repository: 12590813
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-27 14:16:47.000000000 Z
+  where: github
+  who: 526301
+- _id: 765335
+  _job: 25151413964
+  _time: 2026-04-30 06:48:24.548569451 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#784 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 784
+  repository: 12590813
+  review: 2026-04-29 09:05:00.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-29 09:12:44.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765336
+  _job: 25151413964
+  _time: 2026-04-30 06:48:38.867930420 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#785 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 785
+  repository: 12590813
+  review: 2026-04-30 03:56:00.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-30 04:48:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 765337
+  _job: 25151413964
+  _time: 2026-04-30 06:49:04.159789446 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 74
+  earliest_issue_was_found: 1
+  events_were_scanned: 8942662694
+  issues_were_scanned: 0
+  labels_were_scanned: 74
+  latest_issue_was_found: 71
+  merges_were_scanned: 96
+  min_issue_was_found: 101
+  min_pull_was_found: 109
+  repository: 12591347
+  types_were_scanned: 82
+  what: iterate
+  where: github
+- _id: 765338
+  _job: 25151413964
+  _time: 2026-04-30 06:50:05.535119938 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  total_active_contributors: 7
+  total_commits: 19833
+  total_contributors: 121
+  total_files: 2259
+  total_forks: 983
+  total_issues: 2911
+  total_pulls: 6062
+  total_releases: 701
+  total_repositories: 31
+  total_stars: 2243
+  what: dimensions-of-terrain
+  when: 2026-04-30 06:50:05.554265871 Z
+- _id: 765339
+  _job: 25151413964
+  _time: 2026-04-30 06:55:27.557064188 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-log#236 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 838h30m and 0 comments.
+  hoc: 2
+  issue: 236
+  repository: 12262782
+  review_comments: 0
+  seconds: 3018655
+  what: code-was-reviewed
+  when: 2026-04-30 03:43:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 765340
+  _job: 25151413964
+  _time: 2026-04-30 06:55:28.081905866 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-skin#109 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 15h8m and 0 comments.
+  hoc: 2
+  issue: 109
+  repository: 12591347
+  review_comments: 0
+  seconds: 54506
+  what: code-was-reviewed
+  when: 2026-04-30 03:47:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 765341
+  _job: 25151413964
+  _time: 2026-04-30 06:55:28.633853404 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#472 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 57h19m and 0 comments.
+  hoc: 2
+  issue: 472
+  repository: 12589687
+  review_comments: 0
+  seconds: 206358
+  what: code-was-reviewed
+  when: 2026-04-30 03:31:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 765342
+  _job: 25151413964
+  _time: 2026-04-30 06:55:29.795507573 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#473 with 10 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 51h46m and 0 comments.
+  hoc: 10
+  issue: 473
+  repository: 12589687
+  review_comments: 0
+  seconds: 186377
+  what: code-was-reviewed
+  when: 2026-04-30 03:31:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 765343
+  _job: 25151413964
+  _time: 2026-04-30 06:55:30.815375006 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#784 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 39h55m and 0 comments.
+  hoc: 2
+  issue: 784
+  repository: 12590813
+  review_comments: 0
+  seconds: 143752
+  what: code-was-reviewed
+  when: 2026-04-29 09:05:00.000000000 Z
   where: github
   who: 526301
