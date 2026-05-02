@@ -2,11 +2,13 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'GET https://api.github.com/user/7326295: 504 - We couldn''t respond to your
+    request in time. Sorry... (Octokit::ServerError)'
   inserted: 8
-  seconds: 832.425373326
+  seconds: 861.305244824
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-02 09:50:38.245028592 Z
+  when: 2026-05-02 11:26:29.898058364 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -85716,23 +85718,6 @@
   types_were_scanned: 423
   what: iterate
   where: github
-- _id: 765726
-  _job: 25245695931
-  _time: 2026-05-02 06:24:41.871712118 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 672
-  earliest_issue_was_found: 1
-  events_were_scanned: 9013479970
-  issues_were_scanned: 608
-  labels_were_scanned: 672
-  latest_issue_was_found: 691
-  merges_were_scanned: 781
-  min_issue_was_found: 767
-  min_pull_was_found: 787
-  repository: 12590813
-  types_were_scanned: 730
-  what: iterate
-  where: github
 - _id: 765727
   _job: 25245695931
   _time: 2026-05-02 06:24:41.917494431 Z
@@ -85748,23 +85733,6 @@
   min_pull_was_found: 41
   repository: 15208785
   types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 765729
-  _job: 25245695931
-  _time: 2026-05-02 06:24:42.018810312 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 9013892926
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 474
-  repository: 14093966
-  types_were_scanned: 434
   what: iterate
   where: github
 - _id: 765732
@@ -86235,7 +86203,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-02 07:05:57.000000000 Z
+  when: &861 2026-05-02 07:05:57.000000000 Z
   where: github
   who: 526301
 - _id: 765763
@@ -86254,28 +86222,6 @@
   total_stars: 2246
   what: dimensions-of-terrain
   when: 2026-05-02 08:06:28.865481727 Z
-- _id: 765764
-  _job: 25247436699
-  _time: 2026-05-02 08:08:47.926153438 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The missing issue jcabi/jcabi-matchers#39 has been opened by @ilyakharlamov.
-  issue: 39
-  repository: 19194296
-  what: issue-was-opened
-  when: 2019-02-14 18:54:55.000000000 Z
-  where: github
-  who: 502372
-- _id: 765765
-  _job: 25247436699
-  _time: 2026-05-02 08:08:48.477914273 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The missing issue jcabi/jcabi-matchers#40 has been opened by @andreoss.
-  issue: 40
-  repository: 19194296
-  what: issue-was-opened
-  when: 2020-06-28 20:35:09.000000000 Z
-  where: github
-  who: 49783909
 - _id: 765766
   _job: 25247436699
   _time: 2026-05-02 08:08:48.950356048 Z
@@ -86286,17 +86232,6 @@
   repository: 19194296
   what: pull-was-opened
   when: 2020-06-28 20:54:41.000000000 Z
-  where: github
-  who: 49783909
-- _id: 765767
-  _job: 25247436699
-  _time: 2026-05-02 08:08:49.675945983 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The missing issue jcabi/jcabi-matchers#42 has been opened by @andreoss.
-  issue: 42
-  repository: 19194296
-  what: issue-was-opened
-  when: 2020-06-29 07:17:52.000000000 Z
   where: github
   who: 49783909
 - _id: 765768
@@ -86335,17 +86270,6 @@
   when: 2020-11-13 10:32:50.000000000 Z
   where: github
   who: 49783909
-- _id: 765771
-  _job: 25247436699
-  _time: 2026-05-02 08:08:52.079686878 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The missing issue jcabi/jcabi-matchers#46 has been opened by @yegor256.
-  issue: 46
-  repository: 19194296
-  what: issue-was-opened
-  when: 2020-11-27 05:05:21.000000000 Z
-  where: github
-  who: 526301
 - _id: 765772
   _job: 25247436699
   _time: 2026-05-02 08:08:52.527098156 Z
@@ -86406,17 +86330,6 @@
   when: 2020-12-01 19:39:27.000000000 Z
   where: github
   who: 27856297
-- _id: 765777
-  _job: 25247436699
-  _time: 2026-05-02 08:08:55.875520965 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The missing issue jcabi/jcabi-matchers#52 has been opened by @yegor256.
-  issue: 52
-  repository: 19194296
-  what: issue-was-opened
-  when: 2022-08-24 04:52:43.000000000 Z
-  where: github
-  who: 526301
 - _id: 765778
   _job: 25247436699
   _time: 2026-05-02 08:08:56.294358886 Z
@@ -86558,21 +86471,6 @@
   when: *860
   where: github
   who: 29139614
-- _id: 765788
-  _job: 70224
-  _time: 2026-05-02 08:16:42.011681890 Z
-  _version: 0.19.10/0.60.2/0.17.17
-  issues:
-  - '1'
-  - '38'
-  - 60-94
-  - 96-121
-  - '127'
-  - '131'
-  - '134'
-  repository: 19194296
-  what: tombstone
-  where: github
 - _id: 765789
   _job: 25249020079
   _time: 2026-05-02 09:38:31.026307166 Z
@@ -86607,23 +86505,6 @@
   types_were_scanned: 82
   what: iterate
   where: github
-- _id: 765791
-  _job: 25249020079
-  _time: 2026-05-02 09:38:31.138367453 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 10422171410
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
 - _id: 765792
   _job: 25249020079
   _time: 2026-05-02 09:38:31.189325496 Z
@@ -86641,78 +86522,6 @@
   types_were_scanned: 120
   what: iterate
   where: github
-- _id: 765794
-  _job: 25249020079
-  _time: 2026-05-02 09:38:31.298853416 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 10528576826
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 65
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
-- _id: 765795
-  _job: 25249020079
-  _time: 2026-05-02 09:38:53.516416933 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: Apparently, jcabi/jcabi-matchers#39 has been "issue-was-closed".
-  issue: 39
-  repository: 19194296
-  what: issue-was-closed
-  when: 2022-08-24 05:11:23.000000000 Z
-  where: github
-  who: 526301
-- _id: 765796
-  _job: 25249020079
-  _time: 2026-05-02 09:38:58.581407921 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: Apparently, jcabi/jcabi-matchers#40 has been "issue-was-closed".
-  issue: 40
-  repository: 19194296
-  what: issue-was-closed
-  when: 2020-11-13 12:56:25.000000000 Z
-  where: github
-  who: 526301
-- _id: 765797
-  _job: 25249020079
-  _time: 2026-05-02 09:39:02.264151593 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: Apparently, jcabi/jcabi-matchers#42 has been "issue-was-closed".
-  issue: 42
-  repository: 19194296
-  what: issue-was-closed
-  when: 2020-11-13 12:56:48.000000000 Z
-  where: github
-  who: 526301
-- _id: 765798
-  _job: 25249020079
-  _time: 2026-05-02 09:39:04.328449949 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: Apparently, jcabi/jcabi-matchers#46 has been "issue-was-closed".
-  issue: 46
-  repository: 19194296
-  what: issue-was-closed
-  when: 2022-07-29 09:21:15.000000000 Z
-  where: github
-  who: 526301
-- _id: 765799
-  _job: 25249020079
-  _time: 2026-05-02 09:39:05.955749145 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: Apparently, jcabi/jcabi-matchers#52 has been "issue-was-closed".
-  issue: 52
-  repository: 19194296
-  what: issue-was-closed
-  when: 2022-08-24 05:26:23.000000000 Z
-  where: github
-  who: 526301
 - _id: 765800
   _job: 25249020079
   _time: 2026-05-02 09:39:39.577147161 Z
@@ -86730,29 +86539,13 @@
   hoc: 2
   issue: 156
   repository: 19194296
+  review_comments: 0
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
   when: 2026-05-02 08:21:15.000000000 Z
   where: github
   who: 526301
-- _id: 765801
-  _job: 25249020079
-  _time: 2026-05-02 09:39:55.475660894 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 11320786838
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 152
-  repository: 19194296
-  types_were_scanned: 136
-  what: iterate
-  where: github
 - _id: 765802
   _job: 25249020079
   _time: 2026-05-02 09:41:16.336146129 Z
@@ -86800,3 +86593,137 @@
   when: 2022-09-26 12:28:20.000000000 Z
   where: github
   who: 29139614
+- _id: 765806
+  _job: 70240
+  _time: 2026-05-02 09:51:08.670844590 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-matchers#154 with 64 HoC created by @bibonix
+    was merged by @yegor256 after 42m12s of being in review and 3 comments.
+  hoc: 64
+  issue: 154
+  merger: 526301
+  repository: 19194296
+  review_comments: 0
+  seconds: 2533
+  what: code-was-contributed
+  when: *861
+  where: github
+  who: 9535539
+- _id: 765810
+  _job: 70240
+  _time: 2026-05-02 09:51:28.837021957 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  issues:
+  - '1'
+  - 38-40
+  - '42'
+  - '46'
+  - '52'
+  - 60-94
+  - 96-121
+  - '127'
+  - '131'
+  - '134'
+  repository: 19194296
+  what: tombstone
+  where: github
+- _id: 765811
+  _job: 25250583193
+  _time: 2026-05-02 11:12:40.561214761 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.jcabi-jcabi-matchers-1.x
+  details: The pull request jcabi/jcabi-parent#788 has been opened by @renovate[bot].
+  event_id: 9016894514
+  event_type: PullRequestEvent
+  issue: 788
+  repository: 12590813
+  what: pull-was-opened
+  when: 2026-05-02 09:47:49.000000000 Z
+  where: github
+  who: 29139614
+- _id: 765814
+  _job: 25250583193
+  _time: 2026-05-02 11:14:09.197683765 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 9011007909
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 65
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 765815
+  _job: 25250583193
+  _time: 2026-05-02 11:14:09.248524978 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 10141218968
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 474
+  repository: 14093966
+  types_were_scanned: 434
+  what: iterate
+  where: github
+- _id: 765816
+  _job: 25250583193
+  _time: 2026-05-02 11:14:09.301360486 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 10426325416
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 765817
+  _job: 25250583193
+  _time: 2026-05-02 11:16:00.986738430 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 9016820700
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 153
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 765818
+  _job: 25250583193
+  _time: 2026-05-02 11:16:01.052166698 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 672
+  earliest_issue_was_found: 1
+  events_were_scanned: 9016894514
+  issues_were_scanned: 608
+  labels_were_scanned: 672
+  latest_issue_was_found: 691
+  merges_were_scanned: 781
+  min_issue_was_found: 767
+  min_pull_was_found: 788
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
