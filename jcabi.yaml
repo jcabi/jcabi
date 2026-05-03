@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.404425407
+  seconds: 816.369983417
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-03 09:13:12.246957204 Z
+  when: 2026-05-03 10:42:44.177476213 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -84686,26 +84686,6 @@
   total_stars: 2243
   what: dimensions-of-terrain
   when: 2026-05-01 07:48:36.492447124 Z
-- _id: 765580
-  _job: 70018
-  _time: 2026-05-01 07:54:41.058497835 Z
-  _version: 0.19.10/0.60.2/0.17.17
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1320.3) is increasing (R=0.11).
-    The average number of commits per week (38.9) is increasing (R=0.11).
-    The average monthly punishment (604 points) is increasing (R=0.59).
-    The average monthly wage (8.5 points) is decreasing (R=-0.10).
-    The average issue cycle time (1w3d) is decreasing (R=-0.12).
-    The average pull cycle time (1w1d) is increasing (R=0.30).
-    The average number of releases per month (5.1) is decreasing (R=-0.20).
-    The average monthly turnover (53.0 developers) is decreasing (R=-0.60).
-    The average weekly cost of HoC (0.95 points) is decreasing (R=-0.18).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-05-01 07:54:41.073345660 Z
 - _id: 765581
   _job: 70018
   _time: 2026-05-01 07:54:42.944091302 Z
@@ -86620,21 +86600,6 @@
   when: 2014-07-27 10:50:31.000000000 Z
   where: github
   who: 526301
-- _id: 765865
-  _job: 70381
-  _time: 2026-05-03 00:19:51.138729251 Z
-  _version: 0.19.10/0.60.2/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-05-03 00:19:51.081820399 Z
 - _id: 765866
   _job: 25269587784
   _time: 2026-05-03 04:17:15.298860488 Z
@@ -86818,7 +86783,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-01 04:27:32.000000000 Z
+  when: &864 2026-05-01 04:27:32.000000000 Z
   where: github
   who: 8086956
 - _id: 765889
@@ -86843,7 +86808,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-26 16:36:10.000000000 Z
+  when: &865 2026-04-26 16:36:10.000000000 Z
   where: github
   who: 8086956
 - _id: 765890
@@ -86867,7 +86832,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-26 03:09:00.000000000 Z
+  when: &866 2026-04-26 03:09:00.000000000 Z
   where: github
   who: 526301
 - _id: 765891
@@ -86892,7 +86857,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-27 03:36:43.000000000 Z
+  when: &867 2026-04-27 03:36:43.000000000 Z
   where: github
   who: 8086956
 - _id: 765892
@@ -86916,7 +86881,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-27 07:44:21.000000000 Z
+  when: &868 2026-04-27 07:44:21.000000000 Z
   where: github
   who: 526301
 - _id: 765893
@@ -86941,7 +86906,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-28 03:49:04.000000000 Z
+  when: &869 2026-04-28 03:49:04.000000000 Z
   where: github
   who: 8086956
 - _id: 765894
@@ -86966,7 +86931,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-01 03:48:43.000000000 Z
+  when: &870 2026-05-01 03:48:43.000000000 Z
   where: github
   who: 8086956
 - _id: 765895
@@ -87070,7 +87035,7 @@
   repository: 12590128
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-05-03 08:57:31.000000000 Z
+  when: &863 2026-05-03 08:57:31.000000000 Z
   where: github
   who: 526301
 - _id: 765901
@@ -87092,23 +87057,6 @@
   when: 2026-05-03 08:53:20.000000000 Z
   where: github
   who: 526301
-- _id: 765902
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.626761987 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 9019801054
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 65
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
 - _id: 765903
   _job: 25274867423
   _time: 2026-05-03 09:01:36.721896413 Z
@@ -87124,108 +87072,6 @@
   min_pull_was_found: 311
   repository: 23238769
   types_were_scanned: 197
-  what: iterate
-  where: github
-- _id: 765904
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.781005393 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 9027655643
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 156
-  repository: 19194296
-  types_were_scanned: 136
-  what: iterate
-  where: github
-- _id: 765905
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.832791517 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 42
-  earliest_issue_was_found: 1
-  events_were_scanned: 9030404679
-  issues_were_scanned: 0
-  labels_were_scanned: 42
-  latest_issue_was_found: 39
-  merges_were_scanned: 44
-  min_issue_was_found: 42
-  min_pull_was_found: 56
-  repository: 12590128
-  types_were_scanned: 42
-  what: iterate
-  where: github
-- _id: 765906
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.885698686 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 9030418943
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 76
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
-- _id: 765907
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.933070566 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 74
-  earliest_issue_was_found: 1
-  events_were_scanned: 9027473046
-  issues_were_scanned: 0
-  labels_were_scanned: 74
-  latest_issue_was_found: 71
-  merges_were_scanned: 96
-  min_issue_was_found: 101
-  min_pull_was_found: 110
-  repository: 12591347
-  types_were_scanned: 82
-  what: iterate
-  where: github
-- _id: 765908
-  _job: 25274867423
-  _time: 2026-05-03 09:01:36.984722359 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 10453032849
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
-- _id: 765909
-  _job: 25274867423
-  _time: 2026-05-03 09:01:37.034808740 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 672
-  earliest_issue_was_found: 1
-  events_were_scanned: 11348107550
-  issues_were_scanned: 608
-  labels_were_scanned: 672
-  latest_issue_was_found: 691
-  merges_were_scanned: 781
-  min_issue_was_found: 767
-  min_pull_was_found: 788
-  repository: 12590813
-  types_were_scanned: 730
   what: iterate
   where: github
 - _id: 765910
@@ -87269,6 +87115,7 @@
   issue: 788
   repository: 12590813
   review: 2026-05-03 08:53:18.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -87331,3 +87178,317 @@
   when: 2026-05-03 08:53:18.000000000 Z
   where: github
   who: 526301
+- _id: 765915
+  _job: 70432
+  _time: 2026-05-03 09:13:45.563641999 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  author: 29139614
+  comments: 1
+  details: The pull request jcabi/jcabi-velocity#55 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 1d14h and 1 comments.
+  hoc: 2
+  issue: 55
+  repository: 12590128
+  review_comments: 0
+  seconds: 139459
+  what: code-was-reviewed
+  when: *863
+  where: github
+  who: 526301
+- _id: 765916
+  _job: 70432
+  _time: 2026-05-03 09:13:47.042730168 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  analyzers: 18
+  text: |-
+    The average reward per task (4.6 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1320.3) is increasing (R=0.11).
+    The average number of commits per week (38.9) is increasing (R=0.11).
+    The average monthly punishment (604 points) is increasing (R=0.59).
+    The average monthly wage (8.5 points) is decreasing (R=-0.10).
+    The average issue cycle time (1w3d) is decreasing (R=-0.12).
+    The average pull cycle time (1w1d) is increasing (R=0.28).
+    The average number of releases per month (5.1) is decreasing (R=-0.20).
+    The average monthly turnover (53.0 developers) is decreasing (R=-0.60).
+    The average weekly cost of HoC (0.95 points) is decreasing (R=-0.18).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-05-03 09:13:47.062252996 Z
+- _id: 765917
+  _job: 70432
+  _time: 2026-05-03 09:13:49.013939317 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#48 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1mo of being in review and 3 comments.
+  hoc: 2
+  issue: 48
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 3074165
+  what: code-was-contributed
+  when: *864
+  where: github
+  who: 29139614
+- _id: 765918
+  _job: 70432
+  _time: 2026-05-03 09:13:49.186520724 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#49 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 3w2d of being in review and 3 comments.
+  hoc: 2
+  issue: 49
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 2015584
+  what: code-was-contributed
+  when: *865
+  where: github
+  who: 29139614
+- _id: 765919
+  _job: 70432
+  _time: 2026-05-03 09:13:49.253186369 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-velocity#50 with 24 HoC created by @bibonix
+    was merged by @yegor256 after 2h38m of being in review and 0 comments.
+  hoc: 24
+  issue: 50
+  merger: 526301
+  repository: 12590128
+  review_comments: 0
+  seconds: 9532
+  what: code-was-contributed
+  when: *866
+  where: github
+  who: 9535539
+- _id: 765920
+  _job: 70432
+  _time: 2026-05-03 09:13:49.419896275 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#51 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 10h59m of being in review and 3 comments.
+  hoc: 2
+  issue: 51
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 39588
+  what: code-was-contributed
+  when: *867
+  where: github
+  who: 29139614
+- _id: 765921
+  _job: 70432
+  _time: 2026-05-03 09:13:49.488438928 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-velocity#52 with 24 HoC created by @bibonix
+    was merged by @yegor256 after 1h19m of being in review and 0 comments.
+  hoc: 24
+  issue: 52
+  merger: 526301
+  repository: 12590128
+  review_comments: 0
+  seconds: 4790
+  what: code-was-contributed
+  when: *868
+  where: github
+  who: 9535539
+- _id: 765922
+  _job: 70432
+  _time: 2026-05-03 09:13:49.560273790 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#53 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 10h41m of being in review and 3 comments.
+  hoc: 2
+  issue: 53
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 38466
+  what: code-was-contributed
+  when: *869
+  where: github
+  who: 29139614
+- _id: 765923
+  _job: 70432
+  _time: 2026-05-03 09:13:49.628716905 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#54 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 9h15m of being in review and 3 comments.
+  hoc: 2
+  issue: 54
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 33315
+  what: code-was-contributed
+  when: *870
+  where: github
+  who: 29139614
+- _id: 765924
+  _job: 70432
+  _time: 2026-05-03 09:14:51.213497825 Z
+  _version: 0.19.10/0.60.2/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-05-03 09:14:51.167920899 Z
+- _id: 765925
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.623944734 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 9030647583
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 76
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 765926
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.710711103 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 74
+  earliest_issue_was_found: 1
+  events_were_scanned: 10530429230
+  issues_were_scanned: 0
+  labels_were_scanned: 74
+  latest_issue_was_found: 71
+  merges_were_scanned: 96
+  min_issue_was_found: 101
+  min_pull_was_found: 110
+  repository: 12591347
+  types_were_scanned: 82
+  what: iterate
+  where: github
+- _id: 765927
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.758132442 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528766285
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 156
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 765928
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.813360024 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528576826
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 65
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 765929
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.862074821 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 42
+  earliest_issue_was_found: 1
+  events_were_scanned: 9030506431
+  issues_were_scanned: 0
+  labels_were_scanned: 42
+  latest_issue_was_found: 39
+  merges_were_scanned: 44
+  min_issue_was_found: 42
+  min_pull_was_found: 56
+  repository: 12590128
+  types_were_scanned: 42
+  what: iterate
+  where: github
+- _id: 765930
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.916266888 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 672
+  earliest_issue_was_found: 1
+  events_were_scanned: 9030447926
+  issues_were_scanned: 608
+  labels_were_scanned: 672
+  latest_issue_was_found: 691
+  merges_were_scanned: 781
+  min_issue_was_found: 767
+  min_pull_was_found: 788
+  repository: 12590813
+  types_were_scanned: 730
+  what: iterate
+  where: github
+- _id: 765931
+  _job: 25276679449
+  _time: 2026-05-03 10:30:55.965392152 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 10454071539
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 765932
+  _job: 25276679449
+  _time: 2026-05-03 10:32:04.515263557 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-velocity#55 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 55
+  repository: 12590128
+  review: 2026-05-03 08:57:29.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-03 09:05:38.000000000 Z
+  where: github
+  who: 8086956
