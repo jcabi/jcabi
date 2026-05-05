@@ -2,12 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge eliminate-ghosts stopped by timeout after 1m49s: execution expired'
   inserted: 8
-  seconds: 900.075206581
+  seconds: 810.587127799
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-05 09:40:25.518296209 Z
+  when: 2026-05-05 11:11:00.448333357 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -85406,7 +85405,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-03 03:39:29.000000000 Z
+  when: &862 2026-05-03 03:39:29.000000000 Z
   where: github
   who: 8086956
 - _id: 766112
@@ -85430,25 +85429,9 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-02 12:28:51.000000000 Z
+  when: &863 2026-05-02 12:28:51.000000000 Z
   where: github
   who: 526301
-- _id: 766113
-  _job: 25361438388
-  _time: 2026-05-05 06:36:10.738469692 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1773
-  earliest_issue_was_found: 1
-  events_were_scanned: 9086755890
-  issues_were_scanned: 1774
-  latest_issue_was_found: 1806
-  merges_were_scanned: 1839
-  min_issue_was_found: 1813
-  min_pull_was_found: 1850
-  repository: 14204295
-  types_were_scanned: 1813
-  what: iterate
-  where: github
 - _id: 766114
   _job: 25361438388
   _time: 2026-05-05 06:40:34.096971928 Z
@@ -85582,47 +85565,138 @@
   - 5.428571446945725
   what: learn-eva
   when: 2026-05-05 06:47:15.463487092 Z
-- _id: 766124
-  _job: 25368260575
-  _time: 2026-05-05 09:29:29.884600140 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 10530118550
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 76
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
+- _id: 766132
+  _job: 70775
+  _time: 2026-05-05 09:41:41.235277891 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#478 with 10 HoC created by @renovate[bot]
+    was merged by @rultor after 22h52m of being in review and 3 comments.
+  hoc: 10
+  issue: 478
+  merger: 8086956
+  repository: 12589687
+  review_comments: 0
+  seconds: 82326
+  what: code-was-contributed
+  when: *862
   where: github
-- _id: 766125
-  _job: 25368260575
-  _time: 2026-05-05 09:29:29.922965343 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 319
-  earliest_issue_was_found: 1
-  events_were_scanned: 10351244457
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 405
-  min_issue_was_found: 319
-  min_pull_was_found: 414
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
+  who: 29139614
+- _id: 766133
+  _job: 70775
+  _time: 2026-05-05 09:41:41.807963723 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-dynamo#479 with 106 HoC created by @bibonix
+    was merged by @yegor256 after 6m24s of being in review and 0 comments.
+  hoc: 106
+  issue: 479
+  merger: 526301
+  repository: 12589687
+  review_comments: 0
+  seconds: 385
+  what: code-was-contributed
+  when: *863
   where: github
-- _id: 766126
-  _job: 25368260575
-  _time: 2026-05-05 09:29:29.985521678 Z
+  who: 9535539
+- _id: 766134
+  _job: 25372277815
+  _time: 2026-05-05 11:00:24.423899835 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1145 has been closed by @yegor256.
+  event_id: 9095710672
+  event_type: IssuesEvent
+  issue: 1145
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:50:41.000000000 Z
+  where: github
+  who: 526301
+- _id: 766135
+  _job: 25372277815
+  _time: 2026-05-05 11:00:25.773443167 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1685 has been closed by @yegor256.
+  event_id: 9095520508
+  event_type: IssuesEvent
+  issue: 1685
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 766136
+  _job: 25372277815
+  _time: 2026-05-05 11:00:26.008547867 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1678 has been closed by @yegor256.
+  event_id: 9095520495
+  event_type: IssuesEvent
+  issue: 1678
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 766137
+  _job: 25372277815
+  _time: 2026-05-05 11:00:26.250050965 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1677 has been closed by @yegor256.
+  event_id: 9095520472
+  event_type: IssuesEvent
+  issue: 1677
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 766138
+  _job: 25372277815
+  _time: 2026-05-05 11:00:26.484176498 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1676 has been closed by @yegor256.
+  event_id: 9095519657
+  event_type: IssuesEvent
+  issue: 1676
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 766139
+  _job: 25372277815
+  _time: 2026-05-05 11:00:26.725316160 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1675 has been closed by @yegor256.
+  event_id: 9095519643
+  event_type: IssuesEvent
+  issue: 1675
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 766140
+  _job: 25372277815
+  _time: 2026-05-05 11:00:26.972184511 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1674 has been closed by @yegor256.
+  event_id: 9095519614
+  event_type: IssuesEvent
+  issue: 1674
+  repository: 14204295
+  what: issue-was-closed
+  when: 2026-05-05 09:45:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 766141
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.462945957 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 95
   earliest_issue_was_found: 1
-  events_were_scanned: 9036974306
+  events_were_scanned: 10523683073
   issues_were_scanned: 0
   labels_were_scanned: 95
   latest_issue_was_found: 98
@@ -85633,30 +85707,30 @@
   types_were_scanned: 95
   what: iterate
   where: github
-- _id: 766127
-  _job: 25368260575
-  _time: 2026-05-05 09:29:30.025645927 Z
+- _id: 766142
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.517550733 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
+  assignees_were_scanned: 53
   earliest_issue_was_found: 1
-  events_were_scanned: 9052386117
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 156
-  repository: 19194296
-  types_were_scanned: 136
+  events_were_scanned: 9030647583
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 76
+  repository: 16403286
+  types_were_scanned: 53
   what: iterate
   where: github
-- _id: 766128
-  _job: 25368260575
-  _time: 2026-05-05 09:29:30.068394939 Z
+- _id: 766143
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.580924809 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 24
   earliest_issue_was_found: 1
-  events_were_scanned: 9019801054
+  events_were_scanned: 10528576826
   issues_were_scanned: 0
   labels_were_scanned: 24
   latest_issue_was_found: 48
@@ -85667,30 +85741,13 @@
   types_were_scanned: 24
   what: iterate
   where: github
-- _id: 766129
-  _job: 25368260575
-  _time: 2026-05-05 09:29:30.109400519 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 36
-  earliest_issue_was_found: 1
-  events_were_scanned: 9041005403
-  issues_were_scanned: 0
-  labels_were_scanned: 36
-  latest_issue_was_found: 40
-  merges_were_scanned: 41
-  min_issue_was_found: 36
-  min_pull_was_found: 41
-  repository: 15208785
-  types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 766130
-  _job: 25368260575
-  _time: 2026-05-05 09:29:30.147002498 Z
+- _id: 766144
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.631452103 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 74
   earliest_issue_was_found: 1
-  events_were_scanned: 9027473046
+  events_were_scanned: 10530429230
   issues_were_scanned: 0
   labels_were_scanned: 74
   latest_issue_was_found: 71
@@ -85701,13 +85758,47 @@
   types_were_scanned: 82
   what: iterate
   where: github
-- _id: 766131
-  _job: 25368260575
-  _time: 2026-05-05 09:29:30.191915593 Z
+- _id: 766145
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.689788369 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 36
+  earliest_issue_was_found: 1
+  events_were_scanned: 10609012602
+  issues_were_scanned: 0
+  labels_were_scanned: 36
+  latest_issue_was_found: 40
+  merges_were_scanned: 41
+  min_issue_was_found: 36
+  min_pull_was_found: 41
+  repository: 15208785
+  types_were_scanned: 36
+  what: iterate
+  where: github
+- _id: 766146
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.742138500 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 319
+  earliest_issue_was_found: 1
+  events_were_scanned: 9013540296
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 405
+  min_issue_was_found: 319
+  min_pull_was_found: 414
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 766147
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.799213977 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 353
   earliest_issue_was_found: 1
-  events_were_scanned: 10479749548
+  events_were_scanned: 10480812473
   issues_were_scanned: 353
   labels_were_scanned: 500
   latest_issue_was_found: 486
@@ -85718,3 +85809,182 @@
   types_were_scanned: 500
   what: iterate
   where: github
+- _id: 766148
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.852099824 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528766285
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 156
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 766149
+  _job: 25372277815
+  _time: 2026-05-05 11:00:28.906590997 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 1773
+  earliest_issue_was_found: 1
+  events_were_scanned: 9095710890
+  issues_were_scanned: 1774
+  latest_issue_was_found: 1806
+  merges_were_scanned: 1839
+  min_issue_was_found: 1813
+  min_pull_was_found: 1850
+  repository: 14204295
+  types_were_scanned: 1813
+  what: iterate
+  where: github
+- _id: 766150
+  _job: 25372277815
+  _time: 2026-05-05 11:00:29.115737432 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1145 has been opened earlier by @elipsion.
+  issue: 1145
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-07-10 17:55:44.000000000 Z
+  where: github
+  who: 714809
+- _id: 766151
+  _job: 25372277815
+  _time: 2026-05-05 11:00:30.007215263 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1685 has been opened earlier by @mashbrs.
+  issue: 1685
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-10-12 11:57:53.000000000 Z
+  where: github
+  who: 113184357
+- _id: 766152
+  _job: 25372277815
+  _time: 2026-05-05 11:00:30.647662184 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1678 has been opened earlier by @kimhoang0511.
+  issue: 1678
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-09-06 08:06:26.000000000 Z
+  where: github
+  who: 34701892
+- _id: 766153
+  _job: 25372277815
+  _time: 2026-05-05 11:00:31.311867485 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1677 has been opened earlier by @kimhoang0511.
+  issue: 1677
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-09-06 08:05:58.000000000 Z
+  where: github
+  who: 34701892
+- _id: 766154
+  _job: 25372277815
+  _time: 2026-05-05 11:00:31.712952092 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1676 has been opened earlier by @kimhoang0511.
+  issue: 1676
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-09-06 08:04:32.000000000 Z
+  where: github
+  who: 34701892
+- _id: 766155
+  _job: 25372277815
+  _time: 2026-05-05 11:00:32.128610557 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1675 has been opened earlier by @kimhoang0511.
+  issue: 1675
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-09-06 07:48:30.000000000 Z
+  where: github
+  who: 34701892
+- _id: 766156
+  _job: 25372277815
+  _time: 2026-05-05 11:00:32.507525010 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The issue jcabi/jcabi-github#1674 has been opened earlier by @kimhoang0511.
+  issue: 1674
+  repository: 14204295
+  what: issue-was-opened
+  when: 2023-09-06 07:46:54.000000000 Z
+  where: github
+  who: 34701892
+- _id: 766157
+  _job: 25372277815
+  _time: 2026-05-05 11:02:24.242507499 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: fix-1145-mkcommits-persistence
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1850 has been "pull-was-merged".
+  failed_builds: 6
+  files: 2
+  hoc: 111
+  issue: 1850
+  repository: 14204295
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-05 09:50:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 766158
+  _job: 25372277815
+  _time: 2026-05-05 11:04:41.623670707 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  total_active_contributors: 8
+  total_commits: 19968
+  total_contributors: 121
+  total_files: 2260
+  total_forks: 987
+  total_issues: 2911
+  total_pulls: 6109
+  total_releases: 702
+  total_repositories: 31
+  total_stars: 2246
+  what: dimensions-of-terrain
+  when: 2026-05-05 11:04:41.633447087 Z
+- _id: 766159
+  _job: 25372277815
+  _time: 2026-05-05 11:07:18.809880504 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #714809 is known in GitHub as @elipsion.'
+  name: elipsion
+  what: who-has-name
+  when: 2026-05-05 11:07:18.814944418 Z
+  where: github
+  who: 714809
+- _id: 766160
+  _job: 25372277815
+  _time: 2026-05-05 11:07:18.856472477 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #113184357 is known in GitHub as @mashbrs.'
+  name: mashbrs
+  what: who-has-name
+  when: 2026-05-05 11:07:18.861523557 Z
+  where: github
+  who: 113184357
+- _id: 766161
+  _job: 25372277815
+  _time: 2026-05-05 11:07:18.904653219 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #34701892 is known in GitHub as @kimhoang0511.'
+  name: kimhoang0511
+  what: who-has-name
+  when: 2026-05-05 11:07:18.910994556 Z
+  where: github
+  who: 34701892
