@@ -2,11 +2,13 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'GET https://api.github.com/repositories/12590128/events?per_page=100: 502
+    - Server Error (Octokit::BadGateway)'
   inserted: 8
-  seconds: 810.442807456
+  seconds: 810.441736197
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-05 14:43:18.713956120 Z
+  when: 2026-05-05 17:12:55.468753344 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -43345,6 +43347,7 @@
   composite: 11.225
   ffact: 141
   since: *476
+  tombstone: 2026-05-05 14:43:56.052783054 Z
   total_builds_ran: 945
   total_commits_pushed: 13
   total_hoc_committed: 954
@@ -85889,23 +85892,6 @@
   types_were_scanned: 319
   what: iterate
   where: github
-- _id: 766186
-  _job: 25382520023
-  _time: 2026-05-05 14:33:03.889533384 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 10483821208
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 500
-  what: iterate
-  where: github
 - _id: 766187
   _job: 25382520023
   _time: 2026-05-05 14:33:03.944859326 Z
@@ -85974,23 +85960,6 @@
   types_were_scanned: 434
   what: iterate
   where: github
-- _id: 766191
-  _job: 25382520023
-  _time: 2026-05-05 14:33:04.156297327 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 9030647583
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 76
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
 - _id: 766193
   _job: 25382520023
   _time: 2026-05-05 14:33:04.262552679 Z
@@ -86006,23 +85975,6 @@
   min_pull_was_found: 41
   repository: 15208785
   types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 766194
-  _job: 25382520023
-  _time: 2026-05-05 14:34:50.319478846 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 10528766285
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 159
-  repository: 19194296
-  types_were_scanned: 136
   what: iterate
   where: github
 - _id: 766195
@@ -86238,3 +86190,434 @@
   when: 2026-05-05 11:26:52.000000000 Z
   where: github
   who: 29139614
+- _id: 766214
+  _job: 25390326883
+  _time: 2026-05-05 17:00:26.791003649 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 10485617352
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 500
+  what: iterate
+  where: github
+- _id: 766215
+  _job: 25390326883
+  _time: 2026-05-05 17:00:26.838686287 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 10530118550
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 76
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 766216
+  _job: 25390326883
+  _time: 2026-05-05 17:02:22.525800415 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: fix/issue-34-default-namespace-xpath
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#157 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 151
+  issue: 157
+  repository: 19194296
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-02 12:29:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 766217
+  _job: 25390326883
+  _time: 2026-05-05 17:02:38.513503517 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/jaxb-ri-monorepo
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#158 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 158
+  repository: 19194296
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-05 14:11:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 766218
+  _job: 25390326883
+  _time: 2026-05-05 17:02:56.784463953 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528766285
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 160
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 766219
+  _job: 25390326883
+  _time: 2026-05-05 17:05:00.302451495 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #1039394 is known in GitHub as @nauar.'
+  name: nauar
+  what: who-has-name
+  when: 2026-05-05 17:05:00.606665428 Z
+  where: github
+  who: 1039394
+- _id: 766220
+  _job: 25390326883
+  _time: 2026-05-05 17:05:00.645959231 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #4166562 is known in GitHub as @kpratik.'
+  name: kpratik
+  what: who-has-name
+  when: 2026-05-05 17:05:00.954152591 Z
+  where: github
+  who: 4166562
+- _id: 766221
+  _job: 25390326883
+  _time: 2026-05-05 17:05:00.991214274 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #6051814 is known in GitHub as @themistoklik.'
+  name: themistoklik
+  what: who-has-name
+  when: 2026-05-05 17:05:01.221086088 Z
+  where: github
+  who: 6051814
+- _id: 766222
+  _job: 25390326883
+  _time: 2026-05-05 17:05:01.257182943 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #3811690 is known in GitHub as @juandesi.'
+  name: juandesi
+  what: who-has-name
+  when: 2026-05-05 17:05:01.533477545 Z
+  where: github
+  who: 3811690
+- _id: 766223
+  _job: 25390326883
+  _time: 2026-05-05 17:05:01.569833887 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #798827 is known in GitHub as @cezarykluczynski.'
+  name: cezarykluczynski
+  what: who-has-name
+  when: 2026-05-05 17:05:01.858501511 Z
+  where: github
+  who: 798827
+- _id: 766224
+  _job: 25390326883
+  _time: 2026-05-05 17:05:01.899840294 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #13137156 is known in GitHub as @girishreddyb.'
+  name: girishreddyb
+  what: who-has-name
+  when: 2026-05-05 17:05:02.185284487 Z
+  where: github
+  who: 13137156
+- _id: 766225
+  _job: 25390326883
+  _time: 2026-05-05 17:09:12.866332894 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1146.
+  issue: 1146
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-09-27 02:46:25.000000000 Z
+  where: github
+  who: 526301
+- _id: 766226
+  _job: 25390326883
+  _time: 2026-05-05 17:09:15.626572293 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1147.
+  issue: 1147
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-09-26 21:53:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 766227
+  _job: 25390326883
+  _time: 2026-05-05 17:09:16.996187846 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1148.
+  issue: 1148
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-09-26 21:51:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 766228
+  _job: 25390326883
+  _time: 2026-05-05 17:09:19.966983568 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1152.
+  issue: 1152
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-08-01 01:30:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 766229
+  _job: 25390326883
+  _time: 2026-05-05 17:09:20.731836501 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1154.
+  issue: 1154
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-08-14 11:43:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 766230
+  _job: 25390326883
+  _time: 2026-05-05 17:09:21.278861795 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1155.
+  issue: 1155
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-09-13 10:32:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 766231
+  _job: 25390326883
+  _time: 2026-05-05 17:09:21.397566749 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "enhancement" label was attached by @yegor256 to the issue jcabi/jcabi-github#1155.
+  issue: 1155
+  label: enhancement
+  repository: 14204295
+  what: label-was-attached
+  when: 2015-09-13 10:32:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 766232
+  _job: 25390326883
+  _time: 2026-05-05 17:09:27.025087461 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1163 has been opened by @cezarykluczynski.
+  issue: 1163
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-22 18:30:19.000000000 Z
+  where: github
+  who: 798827
+- _id: 766233
+  _job: 25390326883
+  _time: 2026-05-05 17:09:27.482101983 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1164 has been opened by @pecko.
+  issue: 1164
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-22 22:08:31.000000000 Z
+  where: github
+  who: 534584
+- _id: 766234
+  _job: 25390326883
+  _time: 2026-05-05 17:09:28.176470001 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1165 has been opened by @pecko.
+  issue: 1165
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-23 10:54:52.000000000 Z
+  where: github
+  who: 534584
+- _id: 766235
+  _job: 25390326883
+  _time: 2026-05-05 17:09:28.666896866 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: hash1017
+  details: The missing pull jcabi/jcabi-github#1166 has been opened by @tmjee.
+  issue: 1166
+  repository: 14204295
+  what: pull-was-opened
+  when: 2015-09-23 22:17:48.000000000 Z
+  where: github
+  who: 1182139
+- _id: 766236
+  _job: 25390326883
+  _time: 2026-05-05 17:09:29.891013393 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1167 has been opened by @asaen.
+  issue: 1167
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-26 08:59:18.000000000 Z
+  where: github
+  who: 3275813
+- _id: 766237
+  _job: 25390326883
+  _time: 2026-05-05 17:09:30.683319071 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1168 has been opened by @tmjee.
+  issue: 1168
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-26 10:32:05.000000000 Z
+  where: github
+  who: 1182139
+- _id: 766238
+  _job: 25390326883
+  _time: 2026-05-05 17:09:31.139912274 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1169 has been opened by @pecko.
+  issue: 1169
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-27 00:10:45.000000000 Z
+  where: github
+  who: 534584
+- _id: 766239
+  _job: 25390326883
+  _time: 2026-05-05 17:09:31.609584060 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1170 has been opened by @pecko.
+  issue: 1170
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-28 21:50:32.000000000 Z
+  where: github
+  who: 534584
+- _id: 766240
+  _job: 25390326883
+  _time: 2026-05-05 17:09:32.090621788 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1171 has been opened by @hexvalid.
+  issue: 1171
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-29 12:26:56.000000000 Z
+  where: github
+  who: 4836149
+- _id: 766241
+  _job: 25390326883
+  _time: 2026-05-05 17:09:32.735293038 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1172 has been opened by @pecko.
+  issue: 1172
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-09-29 16:02:22.000000000 Z
+  where: github
+  who: 534584
+- _id: 766242
+  _job: 25390326883
+  _time: 2026-05-05 17:09:33.223171104 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '968'
+  details: The missing pull jcabi/jcabi-github#1173 has been opened by @shelan.
+  issue: 1173
+  repository: 14204295
+  what: pull-was-opened
+  when: 2015-09-30 18:16:41.000000000 Z
+  where: github
+  who: 6347410
+- _id: 766243
+  _job: 25390326883
+  _time: 2026-05-05 17:09:34.558628696 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: master
+  details: The missing pull jcabi/jcabi-github#1174 has been opened by @prondzyn.
+  issue: 1174
+  repository: 14204295
+  what: pull-was-opened
+  when: 2015-09-30 21:18:00.000000000 Z
+  where: github
+  who: 5822647
+- _id: 766244
+  _job: 25390326883
+  _time: 2026-05-05 17:09:35.910615990 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1175 has been opened by @shelan.
+  issue: 1175
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-10-01 06:52:07.000000000 Z
+  where: github
+  who: 6347410
+- _id: 766245
+  _job: 25390326883
+  _time: 2026-05-05 17:09:36.408670500 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1176 has been opened by @dmzaytsev.
+  issue: 1176
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-10-01 08:43:41.000000000 Z
+  where: github
+  who: 9972909
+- _id: 766246
+  _job: 25390326883
+  _time: 2026-05-05 17:09:37.356722750 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1177 has been opened by @hykim21.
+  issue: 1177
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-10-02 07:35:32.000000000 Z
+  where: github
+  who: 11568260
+- _id: 766247
+  _job: 25390326883
+  _time: 2026-05-05 17:09:38.161789549 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1178 has been opened by @prondzyn.
+  issue: 1178
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-10-06 06:42:32.000000000 Z
+  where: github
+  who: 5822647
+- _id: 766248
+  _job: 25390326883
+  _time: 2026-05-05 17:09:38.556806372 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1179 has been opened by @yegor256.
+  issue: 1179
+  repository: 14204295
+  what: issue-was-opened
+  when: 2015-10-08 00:09:36.000000000 Z
+  where: github
+  who: 526301
