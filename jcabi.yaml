@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
+  error: 'GET https://api.github.com/user/9857519: 502 - Server Error (Octokit::BadGateway)'
   inserted: 8
-  seconds: 900.124804132
+  seconds: 810.737571128
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-08 14:35:06.729010548 Z
+  when: 2026-05-08 16:09:23.990403719 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -91716,19 +91716,6 @@
   when: 2026-05-07 18:06:43.000000000 Z
   where: github
   who: 526301
-- _id: 767135
-  _job: 25516431817
-  _time: 2026-05-07 19:15:35.579408748 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  earliest_issue_was_found: 1
-  events_were_scanned: 11538709657
-  latest_issue_was_found: 40
-  merges_were_scanned: 40
-  min_issue_was_found: 27
-  min_pull_was_found: 43
-  repository: 20635353
-  what: iterate
-  where: github
 - _id: 767136
   _job: 71159
   _time: 2026-05-07 19:24:03.810284453 Z
@@ -92709,21 +92696,6 @@
   when: *892
   where: github
   who: 526301
-- _id: 767277
-  _job: 71220
-  _time: 2026-05-08 04:13:29.144730457 Z
-  _version: 0.19.10/0.60.3/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-05-08 04:13:29.111401461 Z
 - _id: 767278
   _job: 25540108104
   _time: 2026-05-08 06:15:37.017659543 Z
@@ -92752,23 +92724,6 @@
   when: 2026-05-08 04:30:16.000000000 Z
   where: github
   who: 9535539
-- _id: 767282
-  _job: 25540108104
-  _time: 2026-05-08 06:15:48.697126452 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 423
-  earliest_issue_was_found: 1
-  events_were_scanned: 11573828882
-  issues_were_scanned: 95
-  labels_were_scanned: 423
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 441
-  min_pull_was_found: 483
-  repository: 12589687
-  types_were_scanned: 439
-  what: iterate
-  where: github
 - _id: 767294
   _job: 25540108104
   _time: 2026-05-08 06:17:49.236360816 Z
@@ -93612,23 +93567,6 @@
   when: &903 2026-05-08 09:12:39.000000000 Z
   where: github
   who: 8086956
-- _id: 767376
-  _job: 25549335832
-  _time: 2026-05-08 10:03:22.279143743 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1773
-  earliest_issue_was_found: 1
-  events_were_scanned: 9229044467
-  issues_were_scanned: 1774
-  labels_were_scanned: 1390
-  latest_issue_was_found: 1806
-  merges_were_scanned: 1839
-  min_issue_was_found: 1813
-  min_pull_was_found: 1861
-  repository: 14204295
-  types_were_scanned: 1813
-  what: iterate
-  where: github
 - _id: 767377
   _job: 25549335832
   _time: 2026-05-08 10:05:04.143425473 Z
@@ -94003,193 +93941,6 @@
   when: *903
   where: github
   who: 29139614
-- _id: 767420
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.310096979 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11587329758
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
-- _id: 767421
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.377455026 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 9030647583
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 76
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
-- _id: 767422
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.445775350 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 9019801054
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 65
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
-- _id: 767423
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.513423133 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 116
-  events_were_scanned: 9157672531
-  issues_were_scanned: 101
-  labels_were_scanned: 213
-  latest_issue_was_found: 224
-  merges_were_scanned: 233
-  min_issue_was_found: 213
-  min_pull_was_found: 238
-  repository: 12262782
-  types_were_scanned: 213
-  what: iterate
-  where: github
-- _id: 767424
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.578715052 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 9228524883
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 483
-  repository: 14093966
-  types_were_scanned: 445
-  what: iterate
-  where: github
-- _id: 767425
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.647183339 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 52
-  earliest_issue_was_found: 1
-  events_were_scanned: 9141472637
-  issues_were_scanned: 0
-  labels_were_scanned: 52
-  latest_issue_was_found: 66
-  merges_were_scanned: 80
-  min_issue_was_found: 68
-  min_pull_was_found: 93
-  repository: 12591356
-  types_were_scanned: 68
-  what: iterate
-  where: github
-- _id: 767426
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.714418852 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 303
-  earliest_issue_was_found: 1
-  events_were_scanned: 9228856619
-  issues_were_scanned: 249
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 466
-  min_issue_was_found: 424
-  min_pull_was_found: 483
-  repository: 13717355
-  types_were_scanned: 424
-  what: iterate
-  where: github
-- _id: 767427
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.778916737 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 74
-  earliest_issue_was_found: 1
-  events_were_scanned: 9027473046
-  issues_were_scanned: 0
-  labels_were_scanned: 74
-  latest_issue_was_found: 71
-  merges_were_scanned: 96
-  min_issue_was_found: 101
-  min_pull_was_found: 110
-  repository: 12591347
-  types_were_scanned: 101
-  what: iterate
-  where: github
-- _id: 767428
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.848452099 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 319
-  earliest_issue_was_found: 1
-  events_were_scanned: 9194304272
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 405
-  min_issue_was_found: 319
-  min_pull_was_found: 416
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 767429
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.914724343 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 55
-  earliest_issue_was_found: 1
-  events_were_scanned: 9156684822
-  issues_were_scanned: 55
-  labels_were_scanned: 105
-  latest_issue_was_found: 268
-  merges_were_scanned: 293
-  min_issue_was_found: 250
-  min_pull_was_found: 311
-  repository: 23238769
-  types_were_scanned: 197
-  what: iterate
-  where: github
-- _id: 767430
-  _job: 25560677663
-  _time: 2026-05-08 14:23:37.978779873 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 9219290065
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 164
-  repository: 19194296
-  types_were_scanned: 136
-  what: iterate
-  where: github
 - _id: 767431
   _job: 25560677663
   _time: 2026-05-08 14:29:23.908481557 Z
@@ -94206,3 +93957,924 @@
   total_stars: 2246
   what: dimensions-of-terrain
   when: 2026-05-08 14:29:23.917615158 Z
+- _id: 767432
+  _job: 71293
+  _time: 2026-05-08 14:36:41.229395168 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-05-08 14:36:41.164520219 Z
+- _id: 767433
+  _job: 25565397168
+  _time: 2026-05-08 15:56:18.166829256 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull request jcabi/jcabi-log#242 has been opened by @renovate[bot].
+  event_id: 9240638494
+  event_type: PullRequestEvent
+  issue: 242
+  repository: 12262782
+  what: pull-was-opened
+  when: 2026-05-08 14:43:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767434
+  _job: 25565397168
+  _time: 2026-05-08 15:56:53.937706945 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: up
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-matchers#167 has been closed by @github-actions[bot],
+    with 2 HoC and 0 comments.
+  event_id: 9240855169
+  event_type: PullRequestEvent
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 167
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-05-08 14:48:12.000000000 Z
+  where: github
+  who: 41898282
+- _id: 767435
+  _job: 25565397168
+  _time: 2026-05-08 15:57:01.754269658 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: up
+  details: The pull request jcabi/jcabi-matchers#167 has been opened by @github-actions[bot].
+  event_id: 9240822924
+  event_type: PullRequestEvent
+  issue: 167
+  repository: 19194296
+  what: pull-was-opened
+  when: 2026-05-08 14:48:11.000000000 Z
+  where: github
+  who: 41898282
+- _id: 767436
+  _job: 25565397168
+  _time: 2026-05-08 15:57:02.089774596 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  details: The pull request jcabi/jcabi-matchers#166 has been opened by @renovate[bot].
+  event_id: 9240770073
+  event_type: PullRequestEvent
+  issue: 166
+  repository: 19194296
+  what: pull-was-opened
+  when: 2026-05-08 14:46:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767437
+  _job: 25565397168
+  _time: 2026-05-08 15:57:03.119570650 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull request jcabi/jcabi-matchers#165 has been opened by @renovate[bot].
+  event_id: 9240762871
+  event_type: PullRequestEvent
+  issue: 165
+  repository: 19194296
+  what: pull-was-opened
+  when: 2026-05-08 14:46:37.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767438
+  _job: 25565397168
+  _time: 2026-05-08 15:57:20.125926507 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/codecov-codecov-action-6.x
+  details: The pull request jcabi/jcabi-github#1863 has been opened by @renovate[bot].
+  event_id: 9240496671
+  event_type: PullRequestEvent
+  issue: 1863
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-05-08 14:39:36.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767439
+  _job: 25565397168
+  _time: 2026-05-08 15:57:22.171810149 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/commons-io-commons-io-2.x
+  details: The pull request jcabi/jcabi-github#1862 has been opened by @renovate[bot].
+  event_id: 9240256792
+  event_type: PullRequestEvent
+  issue: 1862
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-05-08 14:33:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767440
+  _job: 25565397168
+  _time: 2026-05-08 15:57:50.096360893 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  commit: cfe954671344559b75e9fc06efe767849cc2ab0d
+  default_branch: master
+  details: 'A new Git push #33887818936 has arrived to jcabi/jcabi-latex-maven-plugin,
+    made by @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 11596750624
+  event_type: PushEvent
+  push_id: 33887818936
+  ref: refs/heads/master
+  repository: 20635353
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-05-08 15:52:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 767441
+  _job: 25565397168
+  _time: 2026-05-08 15:57:50.820649816 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  commit: fa49b6e9b5ae31d606e4b8b93a4b9817858e4056
+  default_branch: master
+  details: 'A new Git push #33887455645 has arrived to jcabi/jcabi-latex-maven-plugin,
+    made by @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 11596387199
+  event_type: PushEvent
+  push_id: 33887455645
+  ref: refs/heads/master
+  repository: 20635353
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-05-08 15:43:50.000000000 Z
+  where: github
+  who: 526301
+- _id: 767442
+  _job: 25565397168
+  _time: 2026-05-08 15:57:56.631754216 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull request jcabi/jcabi-urn#69 has been opened by @renovate[bot].
+  event_id: 9240672735
+  event_type: PullRequestEvent
+  issue: 69
+  repository: 12589424
+  what: pull-was-opened
+  when: 2026-05-08 14:44:13.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767443
+  _job: 25565397168
+  _time: 2026-05-08 15:58:56.458024886 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 52
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528088838
+  issues_were_scanned: 0
+  labels_were_scanned: 52
+  latest_issue_was_found: 66
+  merges_were_scanned: 80
+  min_issue_was_found: 68
+  min_pull_was_found: 93
+  repository: 12591356
+  types_were_scanned: 68
+  what: iterate
+  where: github
+- _id: 767445
+  _job: 25565397168
+  _time: 2026-05-08 15:58:56.601933081 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 10530118550
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 76
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 767446
+  _job: 25565397168
+  _time: 2026-05-08 15:58:56.674533910 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 10357831128
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 483
+  repository: 14093966
+  types_were_scanned: 445
+  what: iterate
+  where: github
+- _id: 767447
+  _job: 25565397168
+  _time: 2026-05-08 15:58:56.741813200 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11593668562
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 767450
+  _job: 25565397168
+  _time: 2026-05-08 15:58:56.958123996 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 74
+  earliest_issue_was_found: 1
+  events_were_scanned: 10530429230
+  issues_were_scanned: 0
+  labels_were_scanned: 74
+  latest_issue_was_found: 71
+  merges_were_scanned: 96
+  min_issue_was_found: 101
+  min_pull_was_found: 110
+  repository: 12591347
+  types_were_scanned: 101
+  what: iterate
+  where: github
+- _id: 767451
+  _job: 25565397168
+  _time: 2026-05-08 15:58:57.026867184 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  earliest_issue_was_found: 1
+  events_were_scanned: 9243318216
+  latest_issue_was_found: 40
+  merges_were_scanned: 40
+  min_issue_was_found: 27
+  min_pull_was_found: 43
+  repository: 20635353
+  what: iterate
+  where: github
+- _id: 767453
+  _job: 25565397168
+  _time: 2026-05-08 15:58:57.169981567 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 423
+  earliest_issue_was_found: 1
+  events_were_scanned: 11593766236
+  issues_were_scanned: 95
+  labels_were_scanned: 423
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 441
+  min_pull_was_found: 483
+  repository: 12589687
+  types_were_scanned: 439
+  what: iterate
+  where: github
+- _id: 767454
+  _job: 25565397168
+  _time: 2026-05-08 15:58:57.239254380 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 303
+  earliest_issue_was_found: 1
+  events_were_scanned: 10524103835
+  issues_were_scanned: 249
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 466
+  min_issue_was_found: 424
+  min_pull_was_found: 483
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 767455
+  _job: 25565397168
+  _time: 2026-05-08 15:58:57.311274196 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 319
+  earliest_issue_was_found: 1
+  events_were_scanned: 10351244457
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 405
+  min_issue_was_found: 319
+  min_pull_was_found: 416
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 767456
+  _job: 25565397168
+  _time: 2026-05-08 15:58:57.378713086 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 55
+  earliest_issue_was_found: 1
+  events_were_scanned: 10349380232
+  issues_were_scanned: 55
+  labels_were_scanned: 105
+  latest_issue_was_found: 268
+  merges_were_scanned: 293
+  min_issue_was_found: 250
+  min_pull_was_found: 311
+  repository: 23238769
+  types_were_scanned: 197
+  what: iterate
+  where: github
+- _id: 767457
+  _job: 25565397168
+  _time: 2026-05-08 16:00:23.042728565 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-urn#69 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 69
+  repository: 12589424
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:45:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 767458
+  _job: 25565397168
+  _time: 2026-05-08 16:00:30.577127422 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-log#242 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 242
+  repository: 12262782
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:45:37.000000000 Z
+  where: github
+  who: 526301
+- _id: 767459
+  _job: 25565397168
+  _time: 2026-05-08 16:00:40.990676779 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#164 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 164
+  repository: 19194296
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:45:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 767460
+  _job: 25565397168
+  _time: 2026-05-08 16:00:49.240107471 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#165 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 165
+  repository: 19194296
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:48:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 767461
+  _job: 25565397168
+  _time: 2026-05-08 16:00:57.513639627 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#166 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 166
+  repository: 19194296
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:51:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 767462
+  _job: 25565397168
+  _time: 2026-05-08 16:01:04.965408594 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/commons-codec-commons-codec-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1861 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1861
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:32:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 767463
+  _job: 25565397168
+  _time: 2026-05-08 16:01:13.265137945 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1862 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1862
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:39:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 767464
+  _job: 25565397168
+  _time: 2026-05-08 16:01:20.353704967 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/codecov-codecov-action-6.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1863 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1863
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:45:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 767465
+  _job: 25565397168
+  _time: 2026-05-08 16:01:42.525167818 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 1773
+  earliest_issue_was_found: 1
+  events_were_scanned: 11594001119
+  issues_were_scanned: 1774
+  labels_were_scanned: 1390
+  latest_issue_was_found: 1806
+  merges_were_scanned: 1839
+  min_issue_was_found: 1813
+  min_pull_was_found: 1862
+  repository: 14204295
+  types_were_scanned: 1813
+  what: iterate
+  where: github
+- _id: 767466
+  _job: 25565397168
+  _time: 2026-05-08 16:01:42.608634757 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 116
+  events_were_scanned: 10346014050
+  issues_were_scanned: 101
+  labels_were_scanned: 213
+  latest_issue_was_found: 224
+  merges_were_scanned: 233
+  min_issue_was_found: 213
+  min_pull_was_found: 242
+  repository: 12262782
+  types_were_scanned: 213
+  what: iterate
+  where: github
+- _id: 767467
+  _job: 25565397168
+  _time: 2026-05-08 16:01:42.680965908 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528766285
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 165
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 767468
+  _job: 25565397168
+  _time: 2026-05-08 16:01:42.751580840 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 10528576826
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 69
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 767469
+  _job: 25565397168
+  _time: 2026-05-08 16:07:37.904043195 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @0pdd to the issue jcabi/jcabi-github#1417.
+  issue: 1417
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2018-05-30 15:37:53.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767470
+  _job: 25565397168
+  _time: 2026-05-08 16:07:38.725142117 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @0pdd to the issue jcabi/jcabi-github#1418.
+  issue: 1418
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2018-05-30 15:38:49.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767471
+  _job: 25565397168
+  _time: 2026-05-08 16:07:40.037389161 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @amihaiemil to the issue jcabi/jcabi-github#1421.
+  issue: 1421
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2018-06-12 17:05:31.000000000 Z
+  where: github
+  who: 6305156
+- _id: 767472
+  _job: 25565397168
+  _time: 2026-05-08 16:07:41.630837557 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @amihaiemil to the issue jcabi/jcabi-github#1424.
+  issue: 1424
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2018-07-09 09:57:01.000000000 Z
+  where: github
+  who: 6305156
+- _id: 767473
+  _job: 25565397168
+  _time: 2026-05-08 16:07:42.452100790 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The "bug" label was attached by @amihaiemil to the issue jcabi/jcabi-github#1425.
+  issue: 1425
+  label: bug
+  repository: 14204295
+  what: label-was-attached
+  when: 2018-08-22 06:46:46.000000000 Z
+  where: github
+  who: 6305156
+- _id: 767474
+  _job: 25565397168
+  _time: 2026-05-08 16:07:45.267262677 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1427 has been opened by @mdfass.
+  issue: 1427
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-08-21 00:05:44.000000000 Z
+  where: github
+  who: 10237095
+- _id: 767475
+  _job: 25565397168
+  _time: 2026-05-08 16:07:45.735563011 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1425'
+  details: The missing pull jcabi/jcabi-github#1428 has been opened by @paulodamaso.
+  issue: 1428
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-08-23 03:16:45.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767476
+  _job: 25565397168
+  _time: 2026-05-08 16:07:46.774025068 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1429 has been opened by @paulodamaso.
+  issue: 1429
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-08-29 12:10:54.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767477
+  _job: 25565397168
+  _time: 2026-05-08 16:07:47.195022220 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1430 has been opened by @0pdd.
+  issue: 1430
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-08-29 12:53:20.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767478
+  _job: 25565397168
+  _time: 2026-05-08 16:07:47.883741067 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1429'
+  details: The missing pull jcabi/jcabi-github#1431 has been opened by @paulodamaso.
+  issue: 1431
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-08-29 13:00:14.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767479
+  _job: 25565397168
+  _time: 2026-05-08 16:07:48.931995333 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1424'
+  details: The missing pull jcabi/jcabi-github#1432 has been opened by @paulodamaso.
+  issue: 1432
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-08-31 18:47:05.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767480
+  _job: 25565397168
+  _time: 2026-05-08 16:07:49.791519967 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1370'
+  details: The missing pull jcabi/jcabi-github#1433 has been opened by @paulodamaso.
+  issue: 1433
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-08-31 19:35:16.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767481
+  _job: 25565397168
+  _time: 2026-05-08 16:07:50.612337347 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1430'
+  details: The missing pull jcabi/jcabi-github#1434 has been opened by @llorllale.
+  issue: 1434
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-09-10 21:16:18.000000000 Z
+  where: github
+  who: 2019896
+- _id: 767482
+  _job: 25565397168
+  _time: 2026-05-08 16:07:51.697455556 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1435 has been opened by @0pdd.
+  issue: 1435
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-09-19 06:39:35.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767483
+  _job: 25565397168
+  _time: 2026-05-08 16:07:52.080891677 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1436 has been opened by @itflyingtoaster.
+  issue: 1436
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-09-19 16:38:31.000000000 Z
+  where: github
+  who: 43316566
+- _id: 767484
+  _job: 25565397168
+  _time: 2026-05-08 16:07:52.732961281 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1435'
+  details: The missing pull jcabi/jcabi-github#1437 has been opened by @llorllale.
+  issue: 1437
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-09-20 20:37:25.000000000 Z
+  where: github
+  who: 2019896
+- _id: 767485
+  _job: 25565397168
+  _time: 2026-05-08 16:07:53.626027941 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1438 has been opened by @llorllale.
+  issue: 1438
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-09-21 19:02:32.000000000 Z
+  where: github
+  who: 2019896
+- _id: 767486
+  _job: 25565397168
+  _time: 2026-05-08 16:07:54.014213719 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1439 has been opened by @0pdd.
+  issue: 1439
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-10-07 16:49:45.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767487
+  _job: 25565397168
+  _time: 2026-05-08 16:07:54.418304438 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1438'
+  details: The missing pull jcabi/jcabi-github#1440 has been opened by @paulodamaso.
+  issue: 1440
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-10-08 13:05:37.000000000 Z
+  where: github
+  who: 33915433
+- _id: 767488
+  _job: 25565397168
+  _time: 2026-05-08 16:07:55.184764307 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: '1439'
+  details: The missing pull jcabi/jcabi-github#1441 has been opened by @llorllale.
+  issue: 1441
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-10-14 15:48:08.000000000 Z
+  where: github
+  who: 2019896
+- _id: 767489
+  _job: 25565397168
+  _time: 2026-05-08 16:07:56.025264310 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: The missing issue jcabi/jcabi-github#1442 has been opened by @0pdd.
+  issue: 1442
+  repository: 14204295
+  what: issue-was-opened
+  when: 2018-10-18 17:24:05.000000000 Z
+  where: github
+  who: 24456188
+- _id: 767490
+  _job: 25565397168
+  _time: 2026-05-08 16:07:56.485569266 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: dangling_puzzle
+  details: The missing pull jcabi/jcabi-github#1443 has been opened by @llorllale.
+  issue: 1443
+  repository: 14204295
+  what: pull-was-opened
+  when: 2018-10-18 19:27:06.000000000 Z
+  where: github
+  who: 2019896
+- _id: 767491
+  _job: 25565397168
+  _time: 2026-05-08 16:07:58.969731606 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: deps/upgrade-parent-and-qulice
+  details: The missing pull jcabi/jcabi-log#239 has been opened by @bibonix.
+  issue: 239
+  repository: 12262782
+  what: pull-was-opened
+  when: 2026-04-27 12:59:44.000000000 Z
+  where: github
+  who: 9535539
+- _id: 767492
+  _job: 25565397168
+  _time: 2026-05-08 16:08:00.120485198 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: issue-20-fix-newline-percent-no-args
+  details: The missing pull jcabi/jcabi-log#240 has been opened by @bibonix.
+  issue: 240
+  repository: 12262782
+  what: pull-was-opened
+  when: 2026-05-01 20:23:22.000000000 Z
+  where: github
+  who: 9535539
+- _id: 767493
+  _job: 25565397168
+  _time: 2026-05-08 16:08:00.918917878 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  details: The missing pull jcabi/jcabi-log#241 has been opened by @renovate[bot].
+  issue: 241
+  repository: 12262782
+  what: pull-was-opened
+  when: 2026-05-06 08:56:14.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767494
+  _job: 25565397168
+  _time: 2026-05-08 16:08:04.148016065 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: deps-and-cleanup-2026-04
+  details: The missing pull jcabi/jcabi-urn#66 has been opened by @bibonix.
+  issue: 66
+  repository: 12589424
+  what: pull-was-opened
+  when: 2026-04-28 06:17:01.000000000 Z
+  where: github
+  who: 9535539
+- _id: 767495
+  _job: 25565397168
+  _time: 2026-05-08 16:08:04.960282315 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-urn#67 has been opened by @renovate[bot].
+  issue: 67
+  repository: 12589424
+  what: pull-was-opened
+  when: 2026-04-30 16:55:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 767496
+  _job: 25565397168
+  _time: 2026-05-08 16:08:05.778935456 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: deps/upgrade-2026-05
+  details: The missing pull jcabi/jcabi-urn#68 has been opened by @bibonix.
+  issue: 68
+  repository: 12589424
+  what: pull-was-opened
+  when: 2026-05-02 00:39:19.000000000 Z
+  where: github
+  who: 9535539
