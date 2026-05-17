@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
   inserted: 8
-  seconds: 810.606243761
+  seconds: 900.127329568
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-17 07:59:58.848440125 Z
+  when: 2026-05-17 10:16:52.841208815 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -99342,22 +99343,6 @@
   when: 2026-05-16 20:47:55.000000000 Z
   where: github
   who: 29139614
-- _id: 769239
-  _job: 25972961006
-  _time: 2026-05-16 21:11:47.651064801 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 68
-  earliest_issue_was_found: 1
-  events_were_scanned: 11952830502
-  labels_were_scanned: 68
-  latest_issue_was_found: 66
-  merges_were_scanned: 70
-  min_issue_was_found: 68
-  min_pull_was_found: 70
-  repository: 12591339
-  types_were_scanned: 68
-  what: iterate
-  where: github
 - _id: 769240
   _job: 25972961006
   _time: 2026-05-16 21:11:47.720711354 Z
@@ -99390,23 +99375,6 @@
   min_pull_was_found: 110
   repository: 25780072
   types_were_scanned: 95
-  what: iterate
-  where: github
-- _id: 769258
-  _job: 25972961006
-  _time: 2026-05-16 21:13:49.474633513 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 11953488518
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 490
-  repository: 14093966
-  types_were_scanned: 445
   what: iterate
   where: github
 - _id: 769261
@@ -99475,40 +99443,6 @@
   when: 2026-05-16 21:40:39.000000000 Z
   where: github
   who: 29139614
-- _id: 769272
-  _job: 25974198285
-  _time: 2026-05-16 22:11:17.228111566 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 52
-  earliest_issue_was_found: 1
-  events_were_scanned: 9544412952
-  issues_were_scanned: 0
-  labels_were_scanned: 52
-  latest_issue_was_found: 66
-  merges_were_scanned: 80
-  min_issue_was_found: 68
-  min_pull_was_found: 96
-  repository: 12591356
-  types_were_scanned: 68
-  what: iterate
-  where: github
-- _id: 769277
-  _job: 25974198285
-  _time: 2026-05-16 22:11:17.572961661 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 120
-  earliest_issue_was_found: 1
-  events_were_scanned: 11953768944
-  issues_were_scanned: 53
-  labels_were_scanned: 120
-  latest_issue_was_found: 125
-  merges_were_scanned: 129
-  min_issue_was_found: 120
-  min_pull_was_found: 145
-  repository: 19194304
-  types_were_scanned: 120
-  what: iterate
-  where: github
 - _id: 769282
   _job: 25974198285
   _time: 2026-05-16 22:12:54.351463593 Z
@@ -99558,23 +99492,6 @@
   when: &930 2026-05-13 06:27:47.000000000 Z
   where: github
   who: 526301
-- _id: 769286
-  _job: 25974198285
-  _time: 2026-05-16 22:13:38.103552935 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 9544426268
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 181
-  repository: 19194296
-  types_were_scanned: 136
-  what: iterate
-  where: github
 - _id: 769287
   _job: 25974198285
   _time: 2026-05-16 22:15:50.686444470 Z
@@ -99905,23 +99822,6 @@
   when: &932 2026-05-17 03:32:13.000000000 Z
   where: github
   who: 526301
-- _id: 769324
-  _job: 25981436168
-  _time: 2026-05-17 04:38:35.103809658 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 74
-  earliest_issue_was_found: 1
-  events_were_scanned: 9548755002
-  issues_were_scanned: 0
-  labels_were_scanned: 74
-  latest_issue_was_found: 71
-  merges_were_scanned: 96
-  min_issue_was_found: 101
-  min_pull_was_found: 110
-  repository: 12591347
-  types_were_scanned: 101
-  what: iterate
-  where: github
 - _id: 769325
   _job: 25981436168
   _time: 2026-05-17 04:38:35.165363928 Z
@@ -99978,7 +99878,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-17 03:41:46.000000000 Z
+  when: &937 2026-05-17 03:41:46.000000000 Z
   where: github
   who: 8086956
 - _id: 769345
@@ -100003,7 +99903,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-17 03:38:44.000000000 Z
+  when: &938 2026-05-17 03:38:44.000000000 Z
   where: github
   who: 526301
 - _id: 769346
@@ -100028,7 +99928,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-17 04:28:57.000000000 Z
+  when: &939 2026-05-17 04:28:57.000000000 Z
   where: github
   who: 8086956
 - _id: 769347
@@ -100053,7 +99953,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-17 03:38:13.000000000 Z
+  when: &940 2026-05-17 03:38:13.000000000 Z
   where: github
   who: 526301
 - _id: 769348
@@ -100217,323 +100117,6 @@
   when: 2026-05-17 06:37:16.000000000 Z
   where: github
   who: 29139614
-- _id: 769358
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.067774544 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11041046981
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
-- _id: 769359
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.135395175 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 50
-  earliest_issue_was_found: 1
-  events_were_scanned: 10761288318
-  issues_were_scanned: 50
-  labels_were_scanned: 50
-  latest_issue_was_found: 64
-  merges_were_scanned: 64
-  min_issue_was_found: 50
-  min_pull_was_found: 70
-  repository: 12591371
-  types_were_scanned: 50
-  what: iterate
-  where: github
-- _id: 769360
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.193477963 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 1
-  events_were_scanned: 11355193557
-  issues_were_scanned: 96
-  labels_were_scanned: 122
-  latest_issue_was_found: 137
-  merges_were_scanned: 137
-  min_issue_was_found: 122
-  min_pull_was_found: 137
-  repository: 12587970
-  types_were_scanned: 122
-  what: iterate
-  where: github
-- _id: 769361
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.266608479 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1773
-  earliest_issue_was_found: 1
-  events_were_scanned: 11112733128
-  issues_were_scanned: 1774
-  labels_were_scanned: 1567
-  latest_issue_was_found: 1806
-  merges_were_scanned: 1839
-  min_issue_was_found: 1813
-  min_pull_was_found: 1863
-  repository: 14204295
-  types_were_scanned: 1813
-  what: iterate
-  where: github
-- _id: 769362
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.331284199 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 84
-  earliest_issue_was_found: 1
-  events_were_scanned: 10700079599
-  issues_were_scanned: 88
-  labels_were_scanned: 241
-  latest_issue_was_found: 243
-  merges_were_scanned: 242
-  min_issue_was_found: 241
-  min_pull_was_found: 243
-  repository: 13359002
-  types_were_scanned: 241
-  what: iterate
-  where: github
-- _id: 769363
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.388933882 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 55
-  earliest_issue_was_found: 1
-  events_were_scanned: 10819575309
-  issues_were_scanned: 55
-  labels_were_scanned: 105
-  latest_issue_was_found: 268
-  merges_were_scanned: 293
-  min_issue_was_found: 250
-  min_pull_was_found: 315
-  repository: 23238769
-  types_were_scanned: 197
-  what: iterate
-  where: github
-- _id: 769364
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.455816094 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 223
-  earliest_issue_was_found: 1
-  events_were_scanned: 10883164400
-  issues_were_scanned: 223
-  labels_were_scanned: 571
-  latest_issue_was_found: 573
-  merges_were_scanned: 579
-  min_issue_was_found: 577
-  min_pull_was_found: 581
-  repository: 16312153
-  types_were_scanned: 577
-  what: iterate
-  where: github
-- _id: 769366
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.577953227 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 421
-  earliest_issue_was_found: 1
-  events_were_scanned: 10765072161
-  issues_were_scanned: 0
-  labels_were_scanned: 421
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 421
-  min_pull_was_found: 422
-  repository: 12590126
-  types_were_scanned: 421
-  what: iterate
-  where: github
-- _id: 769367
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.642907001 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 20
-  earliest_issue_was_found: 16
-  events_were_scanned: 10759481594
-  issues_were_scanned: 0
-  labels_were_scanned: 20
-  latest_issue_was_found: 34
-  merges_were_scanned: 35
-  min_issue_was_found: 20
-  min_pull_was_found: 35
-  repository: 12591382
-  types_were_scanned: 20
-  what: iterate
-  where: github
-- _id: 769368
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.705377383 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  earliest_issue_was_found: 1
-  events_were_scanned: 11111265349
-  latest_issue_was_found: 86
-  merges_were_scanned: 103
-  min_issue_was_found: 80
-  min_pull_was_found: 112
-  repository: 12584841
-  types_were_scanned: 80
-  what: iterate
-  where: github
-- _id: 769369
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.767684548 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 10951950134
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 76
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
-- _id: 769370
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.830953161 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  earliest_issue_was_found: 1
-  events_were_scanned: 10702958179
-  latest_issue_was_found: 40
-  merges_were_scanned: 40
-  min_issue_was_found: 45
-  min_pull_was_found: 49
-  repository: 20635353
-  types_were_scanned: 27
-  what: iterate
-  where: github
-- _id: 769371
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.891296481 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 9549756892
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 70
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
-- _id: 769372
-  _job: 25984991320
-  _time: 2026-05-17 07:50:44.956184081 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 42
-  earliest_issue_was_found: 1
-  events_were_scanned: 9543814660
-  issues_were_scanned: 0
-  labels_were_scanned: 42
-  latest_issue_was_found: 39
-  merges_were_scanned: 44
-  min_issue_was_found: 42
-  min_pull_was_found: 58
-  repository: 12590128
-  types_were_scanned: 42
-  what: iterate
-  where: github
-- _id: 769373
-  _job: 25984991320
-  _time: 2026-05-17 07:50:45.021047665 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 116
-  events_were_scanned: 10956759510
-  issues_were_scanned: 101
-  labels_were_scanned: 213
-  latest_issue_was_found: 224
-  merges_were_scanned: 233
-  min_issue_was_found: 213
-  min_pull_was_found: 242
-  repository: 12262782
-  types_were_scanned: 213
-  what: iterate
-  where: github
-- _id: 769374
-  _job: 25984991320
-  _time: 2026-05-17 07:50:45.079120454 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 192
-  earliest_issue_was_found: 1
-  events_were_scanned: 10703216590
-  issues_were_scanned: 84
-  labels_were_scanned: 192
-  latest_issue_was_found: 194
-  merges_were_scanned: 194
-  min_issue_was_found: 192
-  min_pull_was_found: 194
-  repository: 12591138
-  types_were_scanned: 192
-  what: iterate
-  where: github
-- _id: 769375
-  _job: 25984991320
-  _time: 2026-05-17 07:50:45.144263343 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 317
-  earliest_issue_was_found: 1
-  events_were_scanned: 10882016527
-  issues_were_scanned: 0
-  labels_were_scanned: 317
-  latest_issue_was_found: 316
-  merges_were_scanned: 332
-  min_issue_was_found: 317
-  min_pull_was_found: 335
-  repository: 13624455
-  types_were_scanned: 317
-  what: iterate
-  where: github
-- _id: 769376
-  _job: 25984991320
-  _time: 2026-05-17 07:50:45.208361387 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 319
-  earliest_issue_was_found: 1
-  events_were_scanned: 10828821874
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 405
-  min_issue_was_found: 319
-  min_pull_was_found: 419
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 769377
-  _job: 25984991320
-  _time: 2026-05-17 07:52:35.540348996 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 303
-  earliest_issue_was_found: 1
-  events_were_scanned: 10868132751
-  issues_were_scanned: 249
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 466
-  min_issue_was_found: 424
-  min_pull_was_found: 489
-  repository: 13717355
-  types_were_scanned: 424
-  what: iterate
-  where: github
 - _id: 769378
   _job: 25984991320
   _time: 2026-05-17 07:59:17.718664567 Z
@@ -100594,3 +100177,754 @@
   when: 2026-05-13 04:03:08.000000000 Z
   where: github
   who: 29139614
+- _id: 769383
+  _job: 72519
+  _time: 2026-05-17 08:00:44.188042431 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#795 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 6h1m of being in review and 3 comments.
+  hoc: 2
+  issue: 795
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 21667
+  what: code-was-contributed
+  when: *937
+  where: github
+  who: 29139614
+- _id: 769384
+  _job: 72519
+  _time: 2026-05-17 08:00:44.689263716 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1843 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 3mo of being in review and 3 comments.
+  hoc: 2
+  issue: 1843
+  merger: 526301
+  repository: 14204295
+  review_comments: 0
+  seconds: 7927641
+  what: code-was-contributed
+  when: *938
+  where: github
+  who: 29139614
+- _id: 769385
+  _job: 72519
+  _time: 2026-05-17 08:00:45.032651674 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-urn#70 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 8h1m of being in review and 3 comments.
+  hoc: 2
+  issue: 70
+  merger: 8086956
+  repository: 12589424
+  review_comments: 0
+  seconds: 28892
+  what: code-was-contributed
+  when: *939
+  where: github
+  who: 29139614
+- _id: 769386
+  _job: 72519
+  _time: 2026-05-17 08:00:45.288742485 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1845 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 3mo of being in review and 3 comments.
+  hoc: 2
+  issue: 1845
+  merger: 526301
+  repository: 14204295
+  review_comments: 0
+  seconds: 7810998
+  what: code-was-contributed
+  when: *940
+  where: github
+  who: 29139614
+- _id: 769387
+  _job: 25987762689
+  _time: 2026-05-17 10:02:39.498954185 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  comments: 2
+  commits: 1
+  details: The pull request jcabi/jcabi-ssl-maven-plugin#97 has been reviewed by @yegor256
+    with 2 HoC and 2 comments.
+  event_id: 9552900060
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 97
+  repository: 12591356
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-05-17 09:16:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 769388
+  _job: 25987762689
+  _time: 2026-05-17 10:04:07.098207685 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  comments: 1
+  commits: 1
+  details: The pull request jcabi/jcabi-matchers#181 has been reviewed by @yegor256
+    with 2 HoC and 1 comments.
+  event_id: 9552926693
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 181
+  repository: 19194296
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-05-17 09:18:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 769389
+  _job: 25987762689
+  _time: 2026-05-17 10:04:35.097230146 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  comments: 1
+  commits: 1
+  details: The pull request jcabi/jcabi-velocity#58 has been reviewed by @yegor256
+    with 2 HoC and 1 comments.
+  event_id: 9552928055
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 58
+  repository: 12590128
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-05-17 09:18:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 769390
+  _job: 25987762689
+  _time: 2026-05-17 10:05:42.484456860 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  comments: 2
+  commits: 1
+  details: The pull request jcabi/jcabi-maven-skin#114 has been reviewed by @yegor256
+    with 2 HoC and 2 comments.
+  event_id: 9552884702
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  issue: 114
+  repository: 12591347
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-05-17 09:15:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 769391
+  _job: 25987762689
+  _time: 2026-05-17 10:06:41.983401679 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 223
+  earliest_issue_was_found: 1
+  events_were_scanned: 11965325528
+  issues_were_scanned: 223
+  labels_were_scanned: 571
+  latest_issue_was_found: 573
+  merges_were_scanned: 579
+  min_issue_was_found: 577
+  min_pull_was_found: 581
+  repository: 16312153
+  types_were_scanned: 577
+  what: iterate
+  where: github
+- _id: 769392
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.057747105 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 68
+  earliest_issue_was_found: 1
+  events_were_scanned: 9553436752
+  labels_were_scanned: 68
+  latest_issue_was_found: 66
+  merges_were_scanned: 70
+  min_issue_was_found: 68
+  min_pull_was_found: 70
+  repository: 12591339
+  types_were_scanned: 68
+  what: iterate
+  where: github
+- _id: 769394
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.190790701 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 116
+  events_were_scanned: 11967898357
+  issues_were_scanned: 101
+  labels_were_scanned: 213
+  latest_issue_was_found: 224
+  merges_were_scanned: 233
+  min_issue_was_found: 213
+  min_pull_was_found: 242
+  repository: 12262782
+  types_were_scanned: 213
+  what: iterate
+  where: github
+- _id: 769395
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.256930581 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 317
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548755350
+  issues_were_scanned: 0
+  labels_were_scanned: 317
+  latest_issue_was_found: 316
+  merges_were_scanned: 332
+  min_issue_was_found: 317
+  min_pull_was_found: 335
+  repository: 13624455
+  types_were_scanned: 317
+  what: iterate
+  where: github
+- _id: 769396
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.321984074 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 9552923669
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 490
+  repository: 14093966
+  types_were_scanned: 445
+  what: iterate
+  where: github
+- _id: 769397
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.389229425 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 192
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548866274
+  issues_were_scanned: 84
+  labels_were_scanned: 192
+  latest_issue_was_found: 194
+  merges_were_scanned: 194
+  min_issue_was_found: 192
+  min_pull_was_found: 194
+  repository: 12591138
+  types_were_scanned: 192
+  what: iterate
+  where: github
+- _id: 769398
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.453231478 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11042557433
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 769399
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.520473263 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 303
+  earliest_issue_was_found: 1
+  events_were_scanned: 9553306816
+  issues_were_scanned: 249
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 466
+  min_issue_was_found: 424
+  min_pull_was_found: 489
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 769400
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.585108838 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 20
+  earliest_issue_was_found: 16
+  events_were_scanned: 11964995256
+  issues_were_scanned: 0
+  labels_were_scanned: 20
+  latest_issue_was_found: 34
+  merges_were_scanned: 35
+  min_issue_was_found: 20
+  min_pull_was_found: 35
+  repository: 12591382
+  types_were_scanned: 20
+  what: iterate
+  where: github
+- _id: 769401
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.646777665 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 9552926693
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 181
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 769402
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.710424749 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 42
+  earliest_issue_was_found: 1
+  events_were_scanned: 10877810042
+  issues_were_scanned: 0
+  labels_were_scanned: 42
+  latest_issue_was_found: 39
+  merges_were_scanned: 44
+  min_issue_was_found: 42
+  min_pull_was_found: 58
+  repository: 12590128
+  types_were_scanned: 42
+  what: iterate
+  where: github
+- _id: 769403
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.771776058 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548757379
+  issues_were_scanned: 96
+  labels_were_scanned: 122
+  latest_issue_was_found: 137
+  merges_were_scanned: 137
+  min_issue_was_found: 122
+  min_pull_was_found: 137
+  repository: 12587970
+  types_were_scanned: 122
+  what: iterate
+  where: github
+- _id: 769404
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.835334224 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 50
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548866381
+  issues_were_scanned: 50
+  labels_were_scanned: 50
+  latest_issue_was_found: 64
+  merges_were_scanned: 64
+  min_issue_was_found: 50
+  min_pull_was_found: 70
+  repository: 12591371
+  types_were_scanned: 50
+  what: iterate
+  where: github
+- _id: 769405
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.899130328 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 421
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548866461
+  issues_were_scanned: 0
+  labels_were_scanned: 421
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 421
+  min_pull_was_found: 422
+  repository: 12590126
+  types_were_scanned: 421
+  what: iterate
+  where: github
+- _id: 769406
+  _job: 25987762689
+  _time: 2026-05-17 10:06:42.960766243 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 10879244945
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 70
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 769407
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.024431732 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  earliest_issue_was_found: 1
+  events_were_scanned: 9553080968
+  latest_issue_was_found: 40
+  merges_were_scanned: 40
+  min_issue_was_found: 45
+  min_pull_was_found: 49
+  repository: 20635353
+  types_were_scanned: 27
+  what: iterate
+  where: github
+- _id: 769408
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.085459000 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 55
+  earliest_issue_was_found: 1
+  events_were_scanned: 9553297836
+  issues_were_scanned: 55
+  labels_were_scanned: 105
+  latest_issue_was_found: 268
+  merges_were_scanned: 293
+  min_issue_was_found: 250
+  min_pull_was_found: 315
+  repository: 23238769
+  types_were_scanned: 197
+  what: iterate
+  where: github
+- _id: 769410
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.213997471 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548866349
+  latest_issue_was_found: 86
+  merges_were_scanned: 103
+  min_issue_was_found: 80
+  min_pull_was_found: 112
+  repository: 12584841
+  types_were_scanned: 80
+  what: iterate
+  where: github
+- _id: 769411
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.275392302 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 120
+  earliest_issue_was_found: 1
+  events_were_scanned: 11967831100
+  issues_were_scanned: 53
+  labels_were_scanned: 120
+  latest_issue_was_found: 125
+  merges_were_scanned: 129
+  min_issue_was_found: 120
+  min_pull_was_found: 145
+  repository: 19194304
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 769412
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.339158741 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 319
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548755585
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 405
+  min_issue_was_found: 319
+  min_pull_was_found: 419
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 769413
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.400188614 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 1773
+  earliest_issue_was_found: 1
+  events_were_scanned: 9549029687
+  issues_were_scanned: 1774
+  labels_were_scanned: 1567
+  latest_issue_was_found: 1806
+  merges_were_scanned: 1839
+  min_issue_was_found: 1813
+  min_pull_was_found: 1863
+  repository: 14204295
+  types_were_scanned: 1813
+  what: iterate
+  where: github
+- _id: 769414
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.463781045 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 84
+  earliest_issue_was_found: 1
+  events_were_scanned: 9548867869
+  issues_were_scanned: 88
+  labels_were_scanned: 241
+  latest_issue_was_found: 243
+  merges_were_scanned: 242
+  min_issue_was_found: 241
+  min_pull_was_found: 243
+  repository: 13359002
+  types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 769415
+  _job: 25987762689
+  _time: 2026-05-17 10:06:43.526906826 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 9549374328
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 76
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 769416
+  _job: 25987762689
+  _time: 2026-05-17 10:07:45.021867257 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull jcabi/jcabi-ssl-maven-plugin#97 has been opened earlier by @renovate[bot].
+  issue: 97
+  repository: 12591356
+  what: pull-was-opened
+  when: 2026-05-16 21:12:28.000000000 Z
+  where: github
+  who: 29139614
+- _id: 769417
+  _job: 25987762689
+  _time: 2026-05-17 10:07:45.796544593 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The pull jcabi/jcabi-maven-skin#114 has been opened earlier by @renovate[bot].
+  issue: 114
+  repository: 12591347
+  what: pull-was-opened
+  when: 2026-05-16 21:17:04.000000000 Z
+  where: github
+  who: 29139614
+- _id: 769418
+  _job: 25987762689
+  _time: 2026-05-17 10:08:36.768770484 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-skin#114 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 114
+  repository: 12591347
+  review: 2026-05-17 09:15:12.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-17 09:52:37.000000000 Z
+  where: github
+  who: 8086956
+- _id: 769419
+  _job: 25987762689
+  _time: 2026-05-17 10:09:10.016873955 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-ssl-maven-plugin#97 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 97
+  repository: 12591356
+  review: 2026-05-17 09:16:15.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-17 09:48:42.000000000 Z
+  where: github
+  who: 8086956
+- _id: 769420
+  _job: 25987762689
+  _time: 2026-05-17 10:09:32.238884584 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: fix-120-multithread-timeout
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#484 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 16
+  issue: 484
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-07 17:02:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 769421
+  _job: 25987762689
+  _time: 2026-05-17 10:09:42.306929283 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.yegor256-jping-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#485 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 485
+  repository: 13717355
+  review: 2026-05-08 08:54:58.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:26:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 769422
+  _job: 25987762689
+  _time: 2026-05-17 10:09:54.175944034 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: fix-105-empty-xsl-stylesheet
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#486 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 17
+  issue: 486
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 09:01:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 769423
+  _job: 25987762689
+  _time: 2026-05-17 10:10:04.951941291 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.yegor256-together-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#487 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 487
+  repository: 13717355
+  review: 2026-05-11 03:27:30.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-11 03:41:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 769424
+  _job: 25987762689
+  _time: 2026-05-17 10:10:25.342686444 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/slf4j-monorepo
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#488 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 488
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-13 06:26:29.000000000 Z
+  where: github
+  who: 526301
+- _id: 769425
+  _job: 25987762689
+  _time: 2026-05-17 10:10:56.631912490 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 52
+  earliest_issue_was_found: 1
+  events_were_scanned: 11967709948
+  issues_were_scanned: 0
+  labels_were_scanned: 52
+  latest_issue_was_found: 66
+  merges_were_scanned: 80
+  min_issue_was_found: 68
+  min_pull_was_found: 97
+  repository: 12591356
+  types_were_scanned: 68
+  what: iterate
+  where: github
+- _id: 769426
+  _job: 25987762689
+  _time: 2026-05-17 10:10:56.703802622 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 74
+  earliest_issue_was_found: 1
+  events_were_scanned: 11967789980
+  issues_were_scanned: 0
+  labels_were_scanned: 74
+  latest_issue_was_found: 71
+  merges_were_scanned: 96
+  min_issue_was_found: 101
+  min_pull_was_found: 114
+  repository: 12591347
+  types_were_scanned: 101
+  what: iterate
+  where: github
