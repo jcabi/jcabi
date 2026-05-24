@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
   inserted: 8
-  seconds: 812.107166213
+  seconds: 900.116395657
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-23 23:28:27.333217410 Z
+  when: 2026-05-24 00:31:25.792265065 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -101483,7 +101484,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-18 03:37:43.000000000 Z
+  when: &979 2026-05-18 03:37:43.000000000 Z
   where: github
   who: 8086956
 - _id: 770466
@@ -101508,7 +101509,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-20 04:05:34.000000000 Z
+  when: &980 2026-05-20 04:05:34.000000000 Z
   where: github
   who: 8086956
 - _id: 770467
@@ -101533,7 +101534,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-21 03:53:15.000000000 Z
+  when: &981 2026-05-21 03:53:15.000000000 Z
   where: github
   who: 8086956
 - _id: 770468
@@ -101557,7 +101558,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-18 06:30:28.000000000 Z
+  when: &982 2026-05-18 06:30:28.000000000 Z
   where: github
   who: 526301
 - _id: 770469
@@ -101582,7 +101583,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-22 03:40:53.000000000 Z
+  when: &983 2026-05-22 03:40:53.000000000 Z
   where: github
   who: 8086956
 - _id: 770470
@@ -101607,7 +101608,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-23 03:58:34.000000000 Z
+  when: &984 2026-05-23 03:58:34.000000000 Z
   where: github
   who: 8086956
 - _id: 770472
@@ -101673,56 +101674,6 @@
   types_were_scanned: 197
   what: iterate
   where: github
-- _id: 770476
-  _job: 26346090935
-  _time: 2026-05-23 23:17:45.985175449 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 12281558771
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
-- _id: 770477
-  _job: 26346090935
-  _time: 2026-05-23 23:17:46.054243911 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 42
-  earliest_issue_was_found: 1
-  events_were_scanned: 9822555340
-  issues_were_scanned: 0
-  labels_were_scanned: 42
-  latest_issue_was_found: 39
-  merges_were_scanned: 44
-  min_issue_was_found: 42
-  min_pull_was_found: 59
-  repository: 12590128
-  types_were_scanned: 42
-  what: iterate
-  where: github
-- _id: 770478
-  _job: 26346090935
-  _time: 2026-05-23 23:17:46.123130953 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 68
-  earliest_issue_was_found: 1
-  events_were_scanned: 11062044587
-  labels_were_scanned: 68
-  latest_issue_was_found: 66
-  merges_were_scanned: 70
-  min_issue_was_found: 68
-  min_pull_was_found: 78
-  repository: 12591339
-  types_were_scanned: 68
-  what: iterate
-  where: github
 - _id: 770479
   _job: 26346090935
   _time: 2026-05-23 23:20:11.560910673 Z
@@ -101740,3 +101691,171 @@
   types_were_scanned: 101
   what: iterate
   where: github
+- _id: 770480
+  _job: 73462
+  _time: 2026-05-23 23:29:12.703759597 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-ssl-maven-plugin#100 with 2 HoC created by
+    @renovate[bot] was merged by @rultor after 2h27m of being in review and 3 comments.
+  hoc: 2
+  issue: 100
+  merger: 8086956
+  repository: 12591356
+  review_comments: 0
+  seconds: 8834
+  what: code-was-contributed
+  when: *979
+  where: github
+  who: 29139614
+- _id: 770481
+  _job: 73462
+  _time: 2026-05-23 23:29:13.200707251 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#492 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 1h53m of being in review and 3 comments.
+  hoc: 12
+  issue: 492
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 6788
+  what: code-was-contributed
+  when: *980
+  where: github
+  who: 29139614
+- _id: 770482
+  _job: 73462
+  _time: 2026-05-23 23:29:13.454751908 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#493 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 2h58m of being in review and 3 comments.
+  hoc: 12
+  issue: 493
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 10740
+  what: code-was-contributed
+  when: *981
+  where: github
+  who: 29139614
+- _id: 770483
+  _job: 73462
+  _time: 2026-05-23 23:29:13.546254901 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-ssl-maven-plugin#102 with 2 HoC created by
+    @renovate[bot] was merged by @yegor256 after 2h52m of being in review and 0 comments.
+  hoc: 2
+  issue: 102
+  merger: 526301
+  repository: 12591356
+  review_comments: 0
+  seconds: 10345
+  what: code-was-contributed
+  when: *982
+  where: github
+  who: 29139614
+- _id: 770484
+  _job: 73462
+  _time: 2026-05-23 23:29:13.732866424 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#494 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 2h1m of being in review and 3 comments.
+  hoc: 12
+  issue: 494
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 7288
+  what: code-was-contributed
+  when: *983
+  where: github
+  who: 29139614
+- _id: 770485
+  _job: 73462
+  _time: 2026-05-23 23:29:13.817907065 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#495 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 4h43m of being in review and 3 comments.
+  hoc: 12
+  issue: 495
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 17009
+  what: code-was-contributed
+  when: *984
+  where: github
+  who: 29139614
+- _id: 770486
+  _job: 26347226256
+  _time: 2026-05-24 00:19:22.392063935 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 42
+  earliest_issue_was_found: 1
+  events_were_scanned: 11036673511
+  issues_were_scanned: 0
+  labels_were_scanned: 42
+  latest_issue_was_found: 39
+  merges_were_scanned: 44
+  min_issue_was_found: 42
+  min_pull_was_found: 59
+  repository: 12590128
+  types_were_scanned: 42
+  what: iterate
+  where: github
+- _id: 770487
+  _job: 26347226256
+  _time: 2026-05-24 00:19:22.456469476 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 12282695332
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 770488
+  _job: 26347226256
+  _time: 2026-05-24 00:19:22.532623340 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 68
+  earliest_issue_was_found: 1
+  events_were_scanned: 9661825237
+  labels_were_scanned: 68
+  latest_issue_was_found: 66
+  merges_were_scanned: 70
+  min_issue_was_found: 68
+  min_pull_was_found: 78
+  repository: 12591339
+  types_were_scanned: 68
+  what: iterate
+  where: github
+- _id: 770489
+  _job: 26347226256
+  _time: 2026-05-24 00:24:55.270557931 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  total_active_contributors: 9
+  total_commits: 20341
+  total_contributors: 122
+  total_files: 2275
+  total_forks: 992
+  total_issues: 2913
+  total_pulls: 6301
+  total_releases: 705
+  total_repositories: 31
+  total_stars: 2244
+  what: dimensions-of-terrain
+  when: 2026-05-24 00:24:55.279091739 Z
