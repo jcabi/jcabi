@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
   inserted: 8
-  seconds: 810.536460673
+  seconds: 900.134720938
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-29 22:59:49.806182795 Z
+  when: 2026-05-30 01:39:44.305128197 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -42538,23 +42539,6 @@
   where: github
   who: 526301
   why: Reviewed code in jcabi/jcabi-parent#736
-- _id: 753255
-  _job: 20971913167
-  _time: 2026-01-13 20:51:38.014752641 Z
-  _version: 0.19.2/0.58.1/0.17.9
-  tombstone: 2026-05-21 21:18:04.992746596 Z
-  total_active_contributors: 7
-  total_commits: 19336
-  total_contributors: 117
-  total_files: 2219
-  total_forks: 977
-  total_issues: 2896
-  total_pulls: 5737
-  total_releases: 688
-  total_repositories: 31
-  total_stars: 2219
-  what: dimensions-of-terrain
-  when: 2026-01-13 20:51:38.026671100 Z
 - _id: 753350
   _job: 21028498301
   _time: 2026-01-15 10:51:12.798226653 Z
@@ -102182,26 +102166,6 @@
   when: 2026-05-27 03:42:49.000000000 Z
   where: github
   who: 526301
-- _id: 770905
-  _job: 74209
-  _time: 2026-05-27 20:46:24.361347092 Z
-  _version: 0.19.10/0.60.3/0.17.17
-  analyzers: 18
-  text: |-
-    The average reward per task (4.7 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1609.4) is increasing (R=0.36).
-    The average number of commits per week (60.5) is increasing (R=0.54).
-    The average monthly punishment (604 points) is increasing (R=0.59).
-    The average monthly wage (9.2 points) is decreasing (R=-0.54).
-    The average issue cycle time (2w3d) is increasing (R=0.15).
-    The average pull cycle time (1w1d) is staying still.
-    The average number of releases per month (4.5) is decreasing (R=-0.17).
-    The average monthly turnover (64.0 developers) is decreasing (R=-0.52).
-    The average weekly cost of HoC (1.02 points) is decreasing (R=-0.32).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-05-27 20:46:24.383004435 Z
 - _id: 770906
   _job: 26543482507
   _time: 2026-05-27 22:56:52.444327974 Z
@@ -103070,23 +103034,6 @@
   when: 2026-05-29 10:12:24.000000000 Z
   where: github
   who: 29139614
-- _id: 771077
-  _job: 26633211963
-  _time: 2026-05-29 10:58:26.109262608 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 12527257113
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 498
-  repository: 14093966
-  types_were_scanned: 445
-  what: iterate
-  where: github
 - _id: 771083
   _job: 26633211963
   _time: 2026-05-29 10:58:26.492631098 Z
@@ -103783,7 +103730,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-29 18:36:27.000000000 Z
+  when: &1031 2026-05-29 18:36:27.000000000 Z
   where: github
   who: 8086956
 - _id: 771170
@@ -103808,7 +103755,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-29 18:49:05.000000000 Z
+  when: &1032 2026-05-29 18:49:05.000000000 Z
   where: github
   who: 8086956
 - _id: 771171
@@ -103833,7 +103780,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-29 18:07:45.000000000 Z
+  when: &1033 2026-05-29 18:07:45.000000000 Z
   where: github
   who: 8086956
 - _id: 771175
@@ -103851,108 +103798,6 @@
   - 5.428571446945725
   what: learn-eva
   when: 2026-05-29 20:55:03.349395489 Z
-- _id: 771176
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.150743206 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 36
-  earliest_issue_was_found: 1
-  events_were_scanned: 9944284212
-  issues_were_scanned: 0
-  labels_were_scanned: 36
-  latest_issue_was_found: 40
-  merges_were_scanned: 41
-  min_issue_was_found: 36
-  min_pull_was_found: 41
-  repository: 15208785
-  types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 771177
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.309455452 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 120
-  earliest_issue_was_found: 1
-  events_were_scanned: 11224208726
-  issues_were_scanned: 53
-  labels_were_scanned: 120
-  latest_issue_was_found: 125
-  merges_were_scanned: 129
-  min_issue_was_found: 120
-  min_pull_was_found: 150
-  repository: 19194304
-  types_were_scanned: 120
-  what: iterate
-  where: github
-- _id: 771178
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.394095323 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 11217016268
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 86
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
-- _id: 771179
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.471511253 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 319
-  earliest_issue_was_found: 1
-  events_were_scanned: 12527272953
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 405
-  min_issue_was_found: 319
-  min_pull_was_found: 421
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 771180
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.543938419 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 136
-  earliest_issue_was_found: 1
-  events_were_scanned: 10062785401
-  issues_were_scanned: 0
-  labels_were_scanned: 136
-  latest_issue_was_found: 135
-  merges_were_scanned: 135
-  min_issue_was_found: 136
-  min_pull_was_found: 191
-  repository: 19194296
-  types_were_scanned: 136
-  what: iterate
-  where: github
-- _id: 771181
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.618149152 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 11260227783
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 71
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
 - _id: 771182
   _job: 26666019339
   _time: 2026-05-29 22:49:36.686864676 Z
@@ -103968,74 +103813,6 @@
   min_pull_was_found: 500
   repository: 12589687
   types_were_scanned: 439
-  what: iterate
-  where: github
-- _id: 771183
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.753777960 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 303
-  earliest_issue_was_found: 1
-  events_were_scanned: 10064226260
-  issues_were_scanned: 249
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 466
-  min_issue_was_found: 424
-  min_pull_was_found: 494
-  repository: 13717355
-  types_were_scanned: 424
-  what: iterate
-  where: github
-- _id: 771184
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.824399669 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 84
-  earliest_issue_was_found: 1
-  events_were_scanned: 9994867445
-  issues_were_scanned: 88
-  labels_were_scanned: 241
-  latest_issue_was_found: 243
-  merges_were_scanned: 242
-  min_issue_was_found: 241
-  min_pull_was_found: 243
-  repository: 13359002
-  types_were_scanned: 241
-  what: iterate
-  where: github
-- _id: 771185
-  _job: 26666019339
-  _time: 2026-05-29 22:49:36.887450080 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11365389425
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
-- _id: 771186
-  _job: 26666019339
-  _time: 2026-05-29 22:51:31.118429290 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1773
-  earliest_issue_was_found: 1
-  events_were_scanned: 12557216829
-  issues_were_scanned: 1774
-  labels_were_scanned: 1745
-  latest_issue_was_found: 1806
-  merges_were_scanned: 1839
-  min_issue_was_found: 1868
-  min_pull_was_found: 1900
-  repository: 14204295
-  types_were_scanned: 1813
   what: iterate
   where: github
 - _id: 771187
@@ -104242,3 +104019,660 @@
   when: 2026-05-29 07:18:58.000000000 Z
   where: github
   who: 51804353
+- _id: 771204
+  _job: 74563
+  _time: 2026-05-29 23:00:30.023649173 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  analyzers: 18
+  text: |-
+    The average reward per task (4.7 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1609.4) is increasing (R=0.36).
+    The average number of commits per week (60.5) is increasing (R=0.54).
+    The average monthly punishment (604 points) is increasing (R=0.59).
+    The average monthly wage (9.2 points) is decreasing (R=-0.54).
+    The average issue cycle time (2w3d) is increasing (R=0.14).
+    The average pull cycle time (1w) is staying still.
+    The average number of releases per month (4.5) is decreasing (R=-0.17).
+    The average monthly turnover (65.0 developers) is decreasing (R=-0.51).
+    The average weekly cost of HoC (1.02 points) is decreasing (R=-0.32).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-05-29 23:00:30.043193306 Z
+- _id: 771205
+  _job: 74563
+  _time: 2026-05-29 23:00:32.577479967 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1898 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 12h7m of being in review and 3 comments.
+  hoc: 2
+  issue: 1898
+  merger: 8086956
+  repository: 14204295
+  review_comments: 0
+  seconds: 43640
+  what: code-was-contributed
+  when: *1031
+  where: github
+  who: 29139614
+- _id: 771206
+  _job: 74563
+  _time: 2026-05-29 23:00:33.290089168 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1899 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 7h43m of being in review and 3 comments.
+  hoc: 2
+  issue: 1899
+  merger: 8086956
+  repository: 14204295
+  review_comments: 0
+  seconds: 27811
+  what: code-was-contributed
+  when: *1032
+  where: github
+  who: 29139614
+- _id: 771207
+  _job: 74563
+  _time: 2026-05-29 23:00:33.380449163 Z
+  _version: 0.19.10/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1900 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 4h14m of being in review and 3 comments.
+  hoc: 2
+  issue: 1900
+  merger: 8086956
+  repository: 14204295
+  review_comments: 0
+  seconds: 15255
+  what: code-was-contributed
+  when: *1033
+  where: github
+  who: 29139614
+- _id: 771208
+  _job: 26670570075
+  _time: 2026-05-30 01:27:56.696051101 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 303
+  earliest_issue_was_found: 1
+  events_were_scanned: 11281826488
+  issues_were_scanned: 249
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 466
+  min_issue_was_found: 424
+  min_pull_was_found: 494
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 771209
+  _job: 26670570075
+  _time: 2026-05-30 01:27:56.762777521 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 10035192420
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 71
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 771210
+  _job: 26670570075
+  _time: 2026-05-30 01:27:56.855520642 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 12565606114
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 498
+  repository: 14093966
+  types_were_scanned: 445
+  what: iterate
+  where: github
+- _id: 771211
+  _job: 26670570075
+  _time: 2026-05-30 01:27:56.921576763 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 36
+  earliest_issue_was_found: 1
+  events_were_scanned: 11229796814
+  issues_were_scanned: 0
+  labels_were_scanned: 36
+  latest_issue_was_found: 40
+  merges_were_scanned: 41
+  min_issue_was_found: 36
+  min_pull_was_found: 41
+  repository: 15208785
+  types_were_scanned: 36
+  what: iterate
+  where: github
+- _id: 771212
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.001799863 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 84
+  earliest_issue_was_found: 1
+  events_were_scanned: 11281811153
+  issues_were_scanned: 88
+  labels_were_scanned: 241
+  latest_issue_was_found: 243
+  merges_were_scanned: 242
+  min_issue_was_found: 241
+  min_pull_was_found: 243
+  repository: 13359002
+  types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 771213
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.070782368 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11366560678
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 771214
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.150591847 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 120
+  earliest_issue_was_found: 1
+  events_were_scanned: 10061275276
+  issues_were_scanned: 53
+  labels_were_scanned: 120
+  latest_issue_was_found: 125
+  merges_were_scanned: 129
+  min_issue_was_found: 120
+  min_pull_was_found: 150
+  repository: 19194304
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 771215
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.215349649 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 10031855241
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 86
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 771216
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.290891226 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 136
+  earliest_issue_was_found: 1
+  events_were_scanned: 11441262075
+  issues_were_scanned: 0
+  labels_were_scanned: 136
+  latest_issue_was_found: 135
+  merges_were_scanned: 135
+  min_issue_was_found: 136
+  min_pull_was_found: 191
+  repository: 19194296
+  types_were_scanned: 136
+  what: iterate
+  where: github
+- _id: 771217
+  _job: 26670570075
+  _time: 2026-05-30 01:27:57.359093206 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 319
+  earliest_issue_was_found: 1
+  events_were_scanned: 12527273299
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 405
+  min_issue_was_found: 319
+  min_pull_was_found: 421
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
+- _id: 771218
+  _job: 26670570075
+  _time: 2026-05-30 01:30:06.814858529 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1886 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1886
+  repository: 14204295
+  review: 2026-05-25 16:57:35.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-25 17:08:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771219
+  _job: 26670570075
+  _time: 2026-05-30 01:30:43.918193521 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#806 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 806
+  repository: 12590813
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 06:28:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 771220
+  _job: 26670570075
+  _time: 2026-05-30 01:30:54.472350661 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1887 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1887
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-26 06:29:31.000000000 Z
+  where: github
+  who: 526301
+- _id: 771221
+  _job: 26670570075
+  _time: 2026-05-30 01:31:07.764643839 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.jcabi-jcabi-xml-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#807 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 807
+  repository: 12590813
+  review: 2026-05-29 09:22:12.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 09:48:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771222
+  _job: 26670570075
+  _time: 2026-05-30 01:31:27.763616457 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1888 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1888
+  repository: 14204295
+  review: 2026-05-26 17:26:31.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-26 17:54:27.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771223
+  _job: 26670570075
+  _time: 2026-05-30 01:31:39.800700335 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#490 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 490
+  repository: 13717355
+  review: 2026-05-25 03:28:38.000000000 Z
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-25 03:40:33.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771224
+  _job: 26670570075
+  _time: 2026-05-30 01:31:57.000428989 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.eclipse.parsson-parsson-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1889 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1889
+  repository: 14204295
+  review: 2026-05-26 17:26:27.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-26 17:38:35.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771225
+  _job: 26670570075
+  _time: 2026-05-30 01:32:17.865788393 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#491 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 491
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 07:28:19.000000000 Z
+  where: github
+  who: 526301
+- _id: 771226
+  _job: 26670570075
+  _time: 2026-05-30 01:32:30.051662382 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1890 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1890
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-27 06:14:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 771227
+  _job: 26670570075
+  _time: 2026-05-30 01:32:41.347091305 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: perf-xsl
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#492 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 261
+  issue: 492
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 07:28:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 771228
+  _job: 26670570075
+  _time: 2026-05-30 01:32:53.567119430 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1891 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1891
+  repository: 14204295
+  review: 2026-05-27 09:47:03.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-27 09:59:06.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771229
+  _job: 26670570075
+  _time: 2026-05-30 01:33:20.345177067 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1892 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1892
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-28 06:20:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 771230
+  _job: 26670570075
+  _time: 2026-05-30 01:33:31.633969570 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1893 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1893
+  repository: 14204295
+  review: 2026-05-28 09:47:26.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-28 10:11:25.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771231
+  _job: 26670570075
+  _time: 2026-05-30 01:33:43.799512464 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/jaxb-ri-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1894 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 4
+  issue: 1894
+  repository: 14204295
+  review: 2026-05-28 09:47:22.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-28 09:58:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 771232
+  _job: 26670570075
+  _time: 2026-05-30 01:34:05.100995151 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1895 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1895
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 06:28:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 771233
+  _job: 26670570075
+  _time: 2026-05-30 01:34:15.889327367 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1896 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1896
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 06:28:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 771234
+  _job: 26670570075
+  _time: 2026-05-30 01:34:26.869932740 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/jackson-monorepo
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1897 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 6
+  issue: 1897
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-29 06:28:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 771235
+  _job: 26670570075
+  _time: 2026-05-30 01:35:00.703515216 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 1773
+  earliest_issue_was_found: 1
+  events_were_scanned: 12557216829
+  issues_were_scanned: 1774
+  labels_were_scanned: 1745
+  latest_issue_was_found: 1806
+  merges_were_scanned: 1839
+  min_issue_was_found: 1868
+  min_pull_was_found: 1901
+  repository: 14204295
+  types_were_scanned: 1813
+  what: iterate
+  where: github
