@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 1m52s: execution expired'
   inserted: 8
-  seconds: 810.909837699
+  seconds: 900.139101458
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-30 15:55:52.790738055 Z
+  when: 2026-05-30 17:49:03.149641583 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -44294,6 +44295,7 @@
   _job: 21252936544
   _time: 2026-01-22 15:00:01.375092385 Z
   _version: 0.19.2/0.58.1/0.17.9
+  tombstone: 2026-05-30 15:56:38.137068185 Z
   total_active_contributors: 6
   total_commits: 19362
   total_contributors: 117
@@ -104897,23 +104899,6 @@
   types_were_scanned: 136
   what: iterate
   where: github
-- _id: 771276
-  _job: 26678663924
-  _time: 2026-05-30 08:03:50.637589814 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1773
-  earliest_issue_was_found: 1
-  events_were_scanned: 12574608503
-  issues_were_scanned: 1774
-  labels_were_scanned: 1745
-  latest_issue_was_found: 1806
-  merges_were_scanned: 1839
-  min_issue_was_found: 1868
-  min_pull_was_found: 1901
-  repository: 14204295
-  types_were_scanned: 1813
-  what: iterate
-  where: github
 - _id: 771278
   _job: 26678663924
   _time: 2026-05-30 08:06:15.812665118 Z
@@ -105268,81 +105253,13 @@
   - 5.428571446945725
   what: learn-eva
   when: 2026-05-30 14:26:41.651365805 Z
-- _id: 771316
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.608243427 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 434
-  earliest_issue_was_found: 1
-  events_were_scanned: 11267281152
-  issues_were_scanned: 375
-  labels_were_scanned: 434
-  latest_issue_was_found: 433
-  merges_were_scanned: 432
-  min_issue_was_found: 451
-  min_pull_was_found: 498
-  repository: 14093966
-  types_were_scanned: 445
-  what: iterate
-  where: github
-- _id: 771317
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.691763076 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11396441873
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
-- _id: 771318
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.763786051 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 84
-  earliest_issue_was_found: 1
-  events_were_scanned: 11281811153
-  issues_were_scanned: 88
-  labels_were_scanned: 241
-  latest_issue_was_found: 243
-  merges_were_scanned: 242
-  min_issue_was_found: 241
-  min_pull_was_found: 243
-  repository: 13359002
-  types_were_scanned: 241
-  what: iterate
-  where: github
-- _id: 771319
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.839965162 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 10035192420
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 71
-  repository: 12589424
-  types_were_scanned: 24
-  what: iterate
-  where: github
-- _id: 771320
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.913068691 Z
+- _id: 771322
+  _job: 26690395146
+  _time: 2026-05-30 17:37:49.931465069 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 53
   earliest_issue_was_found: 1
-  events_were_scanned: 10031855241
+  events_were_scanned: 11260316709
   issues_were_scanned: 37
   labels_were_scanned: 53
   latest_issue_was_found: 71
@@ -105353,13 +105270,98 @@
   types_were_scanned: 53
   what: iterate
   where: github
-- _id: 771321
-  _job: 26687922978
-  _time: 2026-05-30 15:45:19.986890702 Z
+- _id: 771323
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.030763622 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 1773
+  earliest_issue_was_found: 1
+  events_were_scanned: 10085456024
+  issues_were_scanned: 1774
+  labels_were_scanned: 1745
+  latest_issue_was_found: 1806
+  merges_were_scanned: 1839
+  min_issue_was_found: 1868
+  min_pull_was_found: 1901
+  repository: 14204295
+  types_were_scanned: 1813
+  what: iterate
+  where: github
+- _id: 771324
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.104921325 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 11260227783
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 71
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 771325
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.173462566 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11400310411
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 771326
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.246283539 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 434
+  earliest_issue_was_found: 1
+  events_were_scanned: 10075626754
+  issues_were_scanned: 375
+  labels_were_scanned: 434
+  latest_issue_was_found: 433
+  merges_were_scanned: 432
+  min_issue_was_found: 451
+  min_pull_was_found: 498
+  repository: 14093966
+  types_were_scanned: 445
+  what: iterate
+  where: github
+- _id: 771327
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.318741461 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 84
+  earliest_issue_was_found: 1
+  events_were_scanned: 9994867445
+  issues_were_scanned: 88
+  labels_were_scanned: 241
+  latest_issue_was_found: 243
+  merges_were_scanned: 242
+  min_issue_was_found: 241
+  min_pull_was_found: 243
+  repository: 13359002
+  types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 771328
+  _job: 26690395146
+  _time: 2026-05-30 17:37:50.389217824 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 36
   earliest_issue_was_found: 1
-  events_were_scanned: 11316315180
+  events_were_scanned: 9944284212
   issues_were_scanned: 0
   labels_were_scanned: 36
   latest_issue_was_found: 40
