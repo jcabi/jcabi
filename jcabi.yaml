@@ -2,11 +2,15 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - GET https://api.github.com/repos/jcabi/jcabi-velocity/commits/4191c99d238a2b0f874b76d142dd853e952...
+    (Octokit::InternalServerError)
+  - 'Judge eliminate-ghosts stopped by timeout after 89s: execution expired'
   inserted: 8
-  seconds: 879.079614373
+  seconds: 900.124386465
   version: 0.60.2
   what: judges-summary
-  when: 2026-05-30 20:00:48.398190507 Z
+  when: 2026-05-30 21:44:47.866734102 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -105154,57 +105158,6 @@
   start: *444
   what: earned-value
   when: 2026-05-30 17:52:30.929009434 Z
-- _id: 771331
-  _job: 26693207765
-  _time: 2026-05-30 19:49:44.244040307 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 36
-  earliest_issue_was_found: 1
-  events_were_scanned: 11316315180
-  issues_were_scanned: 0
-  labels_were_scanned: 36
-  latest_issue_was_found: 40
-  merges_were_scanned: 41
-  min_issue_was_found: 36
-  min_pull_was_found: 41
-  repository: 15208785
-  types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 771332
-  _job: 26693207765
-  _time: 2026-05-30 19:49:44.339604093 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 53
-  earliest_issue_was_found: 1
-  events_were_scanned: 10031855241
-  issues_were_scanned: 37
-  labels_were_scanned: 53
-  latest_issue_was_found: 71
-  merges_were_scanned: 76
-  min_issue_was_found: 53
-  min_pull_was_found: 86
-  repository: 16403286
-  types_were_scanned: 53
-  what: iterate
-  where: github
-- _id: 771333
-  _job: 26693207765
-  _time: 2026-05-30 19:49:44.467288909 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 11404466325
-  issues_were_scanned: 353
-  labels_were_scanned: 500
-  latest_issue_was_found: 486
-  merges_were_scanned: 512
-  min_issue_was_found: 550
-  min_pull_was_found: 548
-  repository: 4174608
-  types_were_scanned: 549
-  what: iterate
-  where: github
 - _id: 771334
   _job: 26693207765
   _time: 2026-05-30 19:49:44.551868240 Z
@@ -105220,40 +105173,6 @@
   min_pull_was_found: 243
   repository: 13359002
   types_were_scanned: 241
-  what: iterate
-  where: github
-- _id: 771335
-  _job: 26693207765
-  _time: 2026-05-30 19:49:44.618039212 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 319
-  earliest_issue_was_found: 1
-  events_were_scanned: 12527273299
-  issues_were_scanned: 264
-  labels_were_scanned: 319
-  latest_issue_was_found: 365
-  merges_were_scanned: 405
-  min_issue_was_found: 319
-  min_pull_was_found: 421
-  repository: 12587702
-  types_were_scanned: 319
-  what: iterate
-  where: github
-- _id: 771336
-  _job: 26693207765
-  _time: 2026-05-30 19:49:44.686265264 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 10035192420
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 71
-  repository: 12589424
-  types_were_scanned: 24
   what: iterate
   where: github
 - _id: 771337
@@ -105306,3 +105225,88 @@
   total_stars: 2245
   what: dimensions-of-terrain
   when: 2026-05-30 19:54:57.624195607 Z
+- _id: 771340
+  _job: 26695385472
+  _time: 2026-05-30 21:33:25.772577550 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 36
+  earliest_issue_was_found: 1
+  events_were_scanned: 12591533271
+  issues_were_scanned: 0
+  labels_were_scanned: 36
+  latest_issue_was_found: 40
+  merges_were_scanned: 41
+  min_issue_was_found: 36
+  min_pull_was_found: 41
+  repository: 15208785
+  types_were_scanned: 36
+  what: iterate
+  where: github
+- _id: 771341
+  _job: 26695385472
+  _time: 2026-05-30 21:33:25.835448363 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 53
+  earliest_issue_was_found: 1
+  events_were_scanned: 11260316709
+  issues_were_scanned: 37
+  labels_were_scanned: 53
+  latest_issue_was_found: 71
+  merges_were_scanned: 76
+  min_issue_was_found: 53
+  min_pull_was_found: 86
+  repository: 16403286
+  types_were_scanned: 53
+  what: iterate
+  where: github
+- _id: 771342
+  _job: 26695385472
+  _time: 2026-05-30 21:33:25.903590170 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 11408187926
+  issues_were_scanned: 353
+  labels_were_scanned: 500
+  latest_issue_was_found: 486
+  merges_were_scanned: 512
+  min_issue_was_found: 550
+  min_pull_was_found: 548
+  repository: 4174608
+  types_were_scanned: 549
+  what: iterate
+  where: github
+- _id: 771343
+  _job: 26695385472
+  _time: 2026-05-30 21:33:25.964521100 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 11260227783
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 71
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 771344
+  _job: 26695385472
+  _time: 2026-05-30 21:33:26.031044498 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 319
+  earliest_issue_was_found: 1
+  events_were_scanned: 12527272953
+  issues_were_scanned: 264
+  labels_were_scanned: 319
+  latest_issue_was_found: 365
+  merges_were_scanned: 405
+  min_issue_was_found: 319
+  min_pull_was_found: 421
+  repository: 12587702
+  types_were_scanned: 319
+  what: iterate
+  where: github
