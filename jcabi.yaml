@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.47880508
+  seconds: 823.813220571
   version: 0.60.2
   what: judges-summary
-  when: 2026-06-08 12:25:17.854237153 Z
+  when: 2026-06-08 16:45:42.082945992 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -109137,21 +109137,6 @@
     The average monthly zents/points ratio (1.00) is staying still.
   what: assessment
   when: 2026-06-07 22:47:39.278499389 Z
-- _id: 772289
-  _job: 76248
-  _time: 2026-06-08 01:53:26.089908450 Z
-  _version: 0.19.11/0.60.3/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-06-08 01:53:26.022042278 Z
 - _id: 772290
   _job: 27121667592
   _time: 2026-06-08 07:12:21.486341285 Z
@@ -109167,23 +109152,6 @@
   min_pull_was_found: 1927
   repository: 14204295
   types_were_scanned: 1813
-  what: iterate
-  where: github
-- _id: 772296
-  _job: 27121667592
-  _time: 2026-06-08 07:12:21.965553858 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 24
-  earliest_issue_was_found: 1
-  events_were_scanned: 12939821811
-  issues_were_scanned: 0
-  labels_were_scanned: 24
-  latest_issue_was_found: 48
-  merges_were_scanned: 49
-  min_issue_was_found: 24
-  min_pull_was_found: 74
-  repository: 12589424
-  types_were_scanned: 24
   what: iterate
   where: github
 - _id: 772297
@@ -109208,7 +109176,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-06-08 06:19:47.000000000 Z
+  when: &1127 2026-06-08 06:19:47.000000000 Z
   where: github
   who: 526301
 - _id: 772298
@@ -109230,23 +109198,6 @@
   repository: 12587702
   what: tombstone
   where: github
-- _id: 772299
-  _job: 27136687434
-  _time: 2026-06-08 12:12:53.158108534 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 84
-  earliest_issue_was_found: 1
-  events_were_scanned: 9994867445
-  issues_were_scanned: 88
-  labels_were_scanned: 241
-  latest_issue_was_found: 243
-  merges_were_scanned: 242
-  min_issue_was_found: 241
-  min_pull_was_found: 243
-  repository: 13359002
-  types_were_scanned: 241
-  what: iterate
-  where: github
 - _id: 772300
   _job: 27136687434
   _time: 2026-06-08 12:12:53.224150904 Z
@@ -109262,23 +109213,6 @@
   min_pull_was_found: 508
   repository: 12589687
   types_were_scanned: 439
-  what: iterate
-  where: github
-- _id: 772301
-  _job: 27136687434
-  _time: 2026-06-08 12:12:53.299448124 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 303
-  earliest_issue_was_found: 1
-  events_were_scanned: 10370779057
-  issues_were_scanned: 249
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 466
-  min_issue_was_found: 424
-  min_pull_was_found: 494
-  repository: 13717355
-  types_were_scanned: 424
   what: iterate
   where: github
 - _id: 772302
@@ -109298,13 +109232,62 @@
   types_were_scanned: 136
   what: iterate
   where: github
-- _id: 772303
-  _job: 27136687434
-  _time: 2026-06-08 12:12:53.438511893 Z
+- _id: 772304
+  _job: 76274
+  _time: 2026-06-08 12:26:39.183386536 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  comments: 3
+  details: The pull request jcabi/jcabi-matchers#207 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 23h47m of being in review and 3 comments.
+  hoc: 2
+  issue: 207
+  merger: 526301
+  repository: 19194296
+  review_comments: 0
+  seconds: 85634
+  what: code-was-contributed
+  when: *1127
+  where: github
+  who: 29139614
+- _id: 772305
+  _job: 76274
+  _time: 2026-06-08 12:27:58.120142671 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-06-08 12:27:58.056051363 Z
+- _id: 772306
+  _job: 27152016729
+  _time: 2026-06-08 16:32:58.150502954 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 24
+  earliest_issue_was_found: 1
+  events_were_scanned: 12939821749
+  issues_were_scanned: 0
+  labels_were_scanned: 24
+  latest_issue_was_found: 48
+  merges_were_scanned: 49
+  min_issue_was_found: 24
+  min_pull_was_found: 74
+  repository: 12589424
+  types_were_scanned: 24
+  what: iterate
+  where: github
+- _id: 772307
+  _job: 27152016729
+  _time: 2026-06-08 16:32:58.260825268 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 353
   earliest_issue_was_found: 1
-  events_were_scanned: 12976727304
+  events_were_scanned: 12989990593
   issues_were_scanned: 353
   labels_were_scanned: 500
   latest_issue_was_found: 486
@@ -109315,3 +109298,54 @@
   types_were_scanned: 549
   what: iterate
   where: github
+- _id: 772308
+  _job: 27152016729
+  _time: 2026-06-08 16:32:58.347648053 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 303
+  earliest_issue_was_found: 1
+  events_were_scanned: 11653465889
+  issues_were_scanned: 249
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 466
+  min_issue_was_found: 424
+  min_pull_was_found: 494
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 772309
+  _job: 27152016729
+  _time: 2026-06-08 16:32:58.425978963 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 84
+  earliest_issue_was_found: 1
+  events_were_scanned: 11695333046
+  issues_were_scanned: 88
+  labels_were_scanned: 241
+  latest_issue_was_found: 243
+  merges_were_scanned: 242
+  min_issue_was_found: 241
+  min_pull_was_found: 243
+  repository: 13359002
+  types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 772310
+  _job: 27152016729
+  _time: 2026-06-08 16:44:08.807344986 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-matchers#207 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 10h35m and 0 comments.
+  hoc: 2
+  issue: 207
+  repository: 19194296
+  review_comments: 0
+  seconds: 38147
+  what: code-was-reviewed
+  when: 2026-06-07 17:08:20.000000000 Z
+  where: github
+  who: 526301
