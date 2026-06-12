@@ -2,13 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'GET https://api.github.com/repos/jcabi/jcabi-github/actions/jobs/79949076499:
-    502 - Server Error (Octokit::BadGateway)'
   inserted: 8
-  seconds: 810.463928302
+  seconds: 810.333313378
   version: 0.60.2
   what: judges-summary
-  when: 2026-06-12 14:31:24.696376498 Z
+  when: 2026-06-12 17:32:28.581000541 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -41769,23 +41767,6 @@
   when: *391
   where: github
   who: 29139614
-- _id: 754768
-  _job: 21387652030
-  _time: 2026-01-27 07:04:34.862344481 Z
-  _version: 0.19.3/0.59.0/0.17.10
-  tombstone: 2026-06-04 07:15:29.107481653 Z
-  total_active_contributors: 6
-  total_commits: 19370
-  total_contributors: 117
-  total_files: 2219
-  total_forks: 974
-  total_issues: 2898
-  total_pulls: 5774
-  total_releases: 689
-  total_repositories: 31
-  total_stars: 2219
-  what: dimensions-of-terrain
-  when: 2026-01-27 07:04:34.876440696 Z
 - _id: 754779
   _job: 21390635476
   _time: 2026-01-27 08:53:59.904277850 Z
@@ -108290,26 +108271,6 @@
   types_were_scanned: 45
   what: iterate
   where: github
-- _id: 772392
-  _job: 76659
-  _time: 2026-06-10 07:28:23.460876988 Z
-  _version: 0.19.11/0.60.3/0.17.17
-  analyzers: 18
-  text: |-
-    The average reward per task (4.7 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1733.8) is increasing (R=0.32).
-    The average number of commits per week (66.8) is increasing (R=0.50).
-    The average monthly punishment (604 points) is increasing (R=0.59).
-    The average monthly wage (9.5 points) is decreasing (R=-0.61).
-    The average issue cycle time (6d12h) is decreasing (R=-0.29).
-    The average pull cycle time (6d22h) is staying still.
-    The average number of releases per month (5.1) is decreasing (R=-0.22).
-    The average monthly turnover (70.0 developers) is decreasing (R=-0.32).
-    The average weekly cost of HoC (1.02 points) is decreasing (R=-0.33).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-06-10 07:28:23.484828265 Z
 - _id: 772394
   _job: 76659
   _time: 2026-06-10 07:28:56.785895565 Z
@@ -108818,21 +108779,6 @@
   when: *1120
   where: github
   who: 29139614
-- _id: 772490
-  _job: 76862
-  _time: 2026-06-11 23:16:13.620833518 Z
-  _version: 0.19.11/0.60.3/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-06-11 23:16:13.562922941 Z
 - _id: 772500
   _job: 27400028224
   _time: 2026-06-12 06:58:48.926099181 Z
@@ -109827,23 +109773,6 @@
   types_were_scanned: 241
   what: iterate
   where: github
-- _id: 772567
-  _job: 27421423390
-  _time: 2026-06-12 14:19:16.789315195 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 13222090888
-  issues_were_scanned: 353
-  labels_were_scanned: 550
-  latest_issue_was_found: 486
-  merges_were_scanned: 566
-  min_issue_was_found: 551
-  min_pull_was_found: 568
-  repository: 4174608
-  types_were_scanned: 550
-  what: iterate
-  where: github
 - _id: 772569
   _job: 27421423390
   _time: 2026-06-12 14:19:16.954455380 Z
@@ -109878,23 +109807,6 @@
   types_were_scanned: 421
   what: iterate
   where: github
-- _id: 772571
-  _job: 27421423390
-  _time: 2026-06-12 14:19:17.112173736 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 192
-  earliest_issue_was_found: 1
-  events_were_scanned: 10613092788
-  issues_were_scanned: 84
-  labels_were_scanned: 192
-  latest_issue_was_found: 194
-  merges_were_scanned: 194
-  min_issue_was_found: 192
-  min_pull_was_found: 194
-  repository: 12591138
-  types_were_scanned: 192
-  what: iterate
-  where: github
 - _id: 772572
   _job: 27421423390
   _time: 2026-06-12 14:19:17.191298093 Z
@@ -109920,7 +109832,7 @@
   issue: 497
   repository: 13717355
   what: issue-was-closed
-  when: 2026-06-11 08:02:40.000000000 Z
+  when: &1121 2026-06-11 08:02:40.000000000 Z
   where: github
   who: 526301
 - _id: 772574
@@ -109932,7 +109844,7 @@
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2026-06-11 08:26:52.000000000 Z
+  when: &1122 2026-06-11 08:26:52.000000000 Z
   where: github
   who: 526301
 - _id: 772575
@@ -109965,6 +109877,7 @@
   issue: 495
   repository: 13717355
   review: 2026-06-03 18:40:32.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -109988,6 +109901,7 @@
   hoc: 2
   issue: 1928
   repository: 14204295
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -110012,6 +109926,7 @@
   issue: 496
   repository: 13717355
   review: 2026-06-07 03:28:57.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -110050,23 +109965,6 @@
   min_pull_was_found: 499
   repository: 13717355
   types_were_scanned: 424
-  what: iterate
-  where: github
-- _id: 772584
-  _job: 27421423390
-  _time: 2026-06-12 14:21:42.078419609 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 1
-  events_were_scanned: 10610508841
-  issues_were_scanned: 96
-  labels_were_scanned: 122
-  latest_issue_was_found: 137
-  merges_were_scanned: 141
-  min_issue_was_found: 122
-  min_pull_was_found: 140
-  repository: 12587970
-  types_were_scanned: 122
   what: iterate
   where: github
 - _id: 772585
@@ -110124,5 +110022,340 @@
   repository: 12587970
   what: pull-was-opened
   when: 2026-06-12 06:36:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772589
+  _job: 76935
+  _time: 2026-06-12 14:32:01.844779050 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  closer: 526301
+  details: The bug/feature in the issue jcabi/jcabi-xml#497 opened @volodya-lombrozo
+    by was resolved, after 24m15s of waiting, because it was closed by @yegor256 and
+    earlier it was assigned to @volodya-lombrozo and the label '#bug' was attached.
+  issue: 497
+  label: bug
+  opener: 51804353
+  repository: 13717355
+  seconds: -1455
+  what: bug-was-resolved
+  when: *1121
+  where: github
+  who: 51804353
+- _id: 772590
+  _job: 76935
+  _time: 2026-06-12 14:32:04.541693249 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  analyzers: 18
+  text: |-
+    The average reward per task (4.7 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1768.3) is increasing (R=0.35).
+    The average number of commits per week (68.7) is increasing (R=0.50).
+    The average monthly punishment (604 points) is increasing (R=0.59).
+    The average monthly wage (9.5 points) is decreasing (R=-0.61).
+    The average issue cycle time (6d7h) is decreasing (R=-0.30).
+    The average pull cycle time (1w2d) is increasing (R=0.12).
+    The average number of releases per month (4.8) is decreasing (R=-0.27).
+    The average monthly turnover (70.0 developers) is decreasing (R=-0.32).
+    The average weekly cost of HoC (1.02 points) is decreasing (R=-0.33).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-06-12 14:32:04.583987677 Z
+- _id: 772591
+  _job: 76935
+  _time: 2026-06-12 14:32:07.686597128 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#497 reported by
+    @volodya-lombrozo; this means that a bug was accepted as valid, by the project
+    team."
+  issue: 497
+  reporter: 51804353
+  repository: 13717355
+  what: bug-was-accepted
+  when: *1122
+  where: github
+  who: 526301
+- _id: 772592
+  _job: 76935
+  _time: 2026-06-12 14:33:25.555752791 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-06-12 14:33:25.487669658 Z
+- _id: 772593
+  _job: 27431389238
+  _time: 2026-06-12 17:19:11.518162578 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/slf4j-monorepo
+  details: The pull request jcabi/jcabi-maven-plugin#202 has been opened by @renovate[bot].
+  event_id: 10625809743
+  event_type: PullRequestEvent
+  issue: 202
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 16:32:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772594
+  _job: 27431389238
+  _time: 2026-06-12 17:19:12.154295012 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.projectlombok-lombok-1.x
+  details: The pull request jcabi/jcabi-maven-plugin#201 has been opened by @renovate[bot].
+  event_id: 10625806492
+  event_type: PullRequestEvent
+  issue: 201
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 16:32:36.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772596
+  _job: 27431389238
+  _time: 2026-06-12 17:20:11.991523814 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 13230854509
+  issues_were_scanned: 353
+  labels_were_scanned: 550
+  latest_issue_was_found: 486
+  merges_were_scanned: 566
+  min_issue_was_found: 551
+  min_pull_was_found: 568
+  repository: 4174608
+  types_were_scanned: 550
+  what: iterate
+  where: github
+- _id: 772597
+  _job: 27431389238
+  _time: 2026-06-12 17:21:13.510750508 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: 497-thread-safe-tostring
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-xml#498 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 20
+  issue: 498
+  repository: 13717355
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-06-11 08:02:39.000000000 Z
+  where: github
+  who: 526301
+- _id: 772598
+  _job: 27431389238
+  _time: 2026-06-12 17:21:26.887348711 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1929 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1929
+  repository: 14204295
+  review: 2026-06-07 09:35:58.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-06-07 09:48:10.000000000 Z
+  where: github
+  who: 8086956
+- _id: 772599
+  _job: 27431389238
+  _time: 2026-06-12 17:21:43.921167406 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1930 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1930
+  repository: 14204295
+  review: 2026-06-07 16:52:53.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-06-07 17:04:12.000000000 Z
+  where: github
+  who: 8086956
+- _id: 772600
+  _job: 27431389238
+  _time: 2026-06-12 17:21:59.908309642 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1931 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1931
+  repository: 14204295
+  review: 2026-06-08 03:36:39.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-06-08 03:48:30.000000000 Z
+  where: github
+  who: 8086956
+- _id: 772601
+  _job: 27431389238
+  _time: 2026-06-12 17:22:15.649769183 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1932 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1932
+  repository: 14204295
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-06-08 06:19:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 772602
+  _job: 27431389238
+  _time: 2026-06-12 17:22:34.938399104 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 1
+  events_were_scanned: 10610508841
+  issues_were_scanned: 96
+  labels_were_scanned: 122
+  latest_issue_was_found: 137
+  merges_were_scanned: 141
+  min_issue_was_found: 122
+  min_pull_was_found: 141
+  repository: 12587970
+  types_were_scanned: 122
+  what: iterate
+  where: github
+- _id: 772603
+  _job: 27431389238
+  _time: 2026-06-12 17:22:35.030487938 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 192
+  earliest_issue_was_found: 1
+  events_were_scanned: 13236558532
+  issues_were_scanned: 84
+  labels_were_scanned: 192
+  latest_issue_was_found: 194
+  merges_were_scanned: 194
+  min_issue_was_found: 192
+  min_pull_was_found: 201
+  repository: 12591138
+  types_were_scanned: 192
+  what: iterate
+  where: github
+- _id: 772604
+  _job: 27431389238
+  _time: 2026-06-12 17:28:54.666512973 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven-maven-core-3.x
+  details: The missing pull jcabi/jcabi-maven-plugin#195 has been opened by @renovate[bot].
+  issue: 195
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-03-27 01:29:37.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772605
+  _job: 27431389238
+  _time: 2026-06-12 17:28:55.654504212 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven-maven-model-3.x
+  details: The missing pull jcabi/jcabi-maven-plugin#196 has been opened by @renovate[bot].
+  issue: 196
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-03-27 01:29:40.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772606
+  _job: 27431389238
+  _time: 2026-06-12 17:28:56.481976860 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  details: The missing pull jcabi/jcabi-maven-plugin#197 has been opened by @renovate[bot].
+  issue: 197
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 06:34:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772607
+  _job: 27431389238
+  _time: 2026-06-12 17:28:57.273600344 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven.resolver-maven-resolver-api-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#198 has been opened by @renovate[bot].
+  issue: 198
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 06:34:33.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772608
+  _job: 27431389238
+  _time: 2026-06-12 17:28:58.041476909 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#199 has been opened by @renovate[bot].
+  issue: 199
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 11:15:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772609
+  _job: 27431389238
+  _time: 2026-06-12 17:28:58.724961329 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.eclipse.sisu-org.eclipse.sisu.plexus-0.x
+  details: The missing pull jcabi/jcabi-maven-plugin#200 has been opened by @renovate[bot].
+  issue: 200
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 11:15:57.000000000 Z
   where: github
   who: 29139614
