@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.421627944
+  seconds: 865.02631951
   version: 0.60.2
   what: judges-summary
-  when: 2026-06-12 23:05:36.420427642 Z
+  when: 2026-06-13 01:50:35.121230326 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -47571,6 +47571,22 @@
   - 1
   - 1
   - 0
+  some_merged_pulls:
+  - 2
+  - 0
+  - 0
+  - 0
+  - 10
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
   some_review_size:
   - 0
   - 0
@@ -47685,6 +47701,22 @@
   - 1.0
   - 1.0
   - 2.0
+  some_unmerged_pulls:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 5
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   what: quality-of-service
   when: &455 2026-02-08 07:24:34.000000000 Z
 - _id: 756264
@@ -109941,21 +109973,6 @@
   when: *1122
   where: github
   who: 526301
-- _id: 772592
-  _job: 76935
-  _time: 2026-06-12 14:33:25.555752791 Z
-  _version: 0.19.11/0.60.3/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-06-12 14:33:25.487669658 Z
 - _id: 772593
   _job: 27431389238
   _time: 2026-06-12 17:19:11.518162578 Z
@@ -110939,7 +110956,7 @@
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-15 05:19:48.000000000 Z
+  when: &1131 2026-05-15 05:19:48.000000000 Z
   where: github
   who: 526301
 - _id: 772672
@@ -111009,7 +111026,7 @@
   succeeded_builds: 20
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-26 03:09:41.000000000 Z
+  when: &1132 2026-04-26 03:09:41.000000000 Z
   where: github
   who: 526301
 - _id: 772675
@@ -111056,43 +111073,9 @@
   succeeded_builds: 20
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-05 18:31:03.000000000 Z
+  when: &1133 2026-05-05 18:31:03.000000000 Z
   where: github
   who: 526301
-- _id: 772681
-  _job: 27443245282
-  _time: 2026-06-12 21:16:36.064161031 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 421
-  earliest_issue_was_found: 1
-  events_were_scanned: 10630325373
-  issues_were_scanned: 0
-  labels_were_scanned: 421
-  latest_issue_was_found: 422
-  merges_were_scanned: 427
-  min_issue_was_found: 421
-  min_pull_was_found: 430
-  repository: 12590126
-  types_were_scanned: 421
-  what: iterate
-  where: github
-- _id: 772682
-  _job: 27443245282
-  _time: 2026-06-12 21:16:36.157438321 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 290
-  earliest_issue_was_found: 1
-  events_were_scanned: 10630766050
-  issues_were_scanned: 67
-  labels_were_scanned: 290
-  latest_issue_was_found: 289
-  merges_were_scanned: 305
-  min_issue_was_found: 290
-  min_pull_was_found: 310
-  repository: 12947626
-  types_were_scanned: 290
-  what: iterate
-  where: github
 - _id: 772685
   _job: 27443245282
   _time: 2026-06-12 21:24:31.178261904 Z
@@ -111108,23 +111091,6 @@
   min_pull_was_found: 810
   repository: 12590813
   types_were_scanned: 767
-  what: iterate
-  where: github
-- _id: 772687
-  _job: 27443245282
-  _time: 2026-06-12 21:24:31.351710405 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 223
-  earliest_issue_was_found: 1
-  events_were_scanned: 10631482906
-  issues_were_scanned: 223
-  labels_were_scanned: 588
-  latest_issue_was_found: 573
-  merges_were_scanned: 585
-  min_issue_was_found: 588
-  min_pull_was_found: 595
-  repository: 16312153
-  types_were_scanned: 577
   what: iterate
   where: github
 - _id: 772688
@@ -111219,40 +111185,6 @@
   when: 2026-06-12 21:31:07.000000000 Z
   where: github
   who: 29139614
-- _id: 772694
-  _job: 27447590864
-  _time: 2026-06-12 22:53:16.920420270 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 13248600123
-  issues_were_scanned: 353
-  labels_were_scanned: 551
-  latest_issue_was_found: 486
-  merges_were_scanned: 566
-  min_issue_was_found: 551
-  min_pull_was_found: 568
-  repository: 4174608
-  types_were_scanned: 550
-  what: iterate
-  where: github
-- _id: 772697
-  _job: 27447590864
-  _time: 2026-06-12 22:53:17.191941215 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 192
-  earliest_issue_was_found: 1
-  events_were_scanned: 10636949360
-  issues_were_scanned: 84
-  labels_were_scanned: 192
-  latest_issue_was_found: 194
-  merges_were_scanned: 201
-  min_issue_was_found: 192
-  min_pull_was_found: 202
-  repository: 12591138
-  types_were_scanned: 192
-  what: iterate
-  where: github
 - _id: 772698
   _job: 27447590864
   _time: 2026-06-12 22:54:21.783196410 Z
@@ -111271,6 +111203,7 @@
   issue: 586
   repository: 16312153
   review: 2026-05-14 03:49:00.000000000 Z
+  review_comments: 0
   succeeded_builds: 20
   suggestions: 0
   what: pull-was-merged
@@ -111294,6 +111227,7 @@
   hoc: 131
   issue: 587
   repository: 16312153
+  review_comments: 0
   succeeded_builds: 20
   suggestions: 0
   what: pull-was-merged
@@ -111323,40 +111257,6 @@
   when: 2026-06-12 06:34:45.000000000 Z
   where: github
   who: 526301
-- _id: 772701
-  _job: 27447590864
-  _time: 2026-06-12 22:55:20.081102040 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 84
-  earliest_issue_was_found: 1
-  events_were_scanned: 10638798286
-  issues_were_scanned: 88
-  labels_were_scanned: 241
-  latest_issue_was_found: 243
-  merges_were_scanned: 242
-  min_issue_was_found: 241
-  min_pull_was_found: 255
-  repository: 13359002
-  types_were_scanned: 241
-  what: iterate
-  where: github
-- _id: 772702
-  _job: 27447590864
-  _time: 2026-06-12 22:55:20.172712145 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 1
-  events_were_scanned: 10636703478
-  issues_were_scanned: 96
-  labels_were_scanned: 122
-  latest_issue_was_found: 137
-  merges_were_scanned: 141
-  min_issue_was_found: 122
-  min_pull_was_found: 143
-  repository: 12587970
-  types_were_scanned: 122
-  what: iterate
-  where: github
 - _id: 772703
   _job: 27447590864
   _time: 2026-06-12 23:01:43.661276313 Z
@@ -111572,3 +111472,552 @@
   when: 2026-06-08 03:36:39.000000000 Z
   where: github
   who: 526301
+- _id: 772718
+  _job: 76977
+  _time: 2026-06-12 23:06:14.391631377 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-aspects#424 with 55 HoC created by @kreinba
+    was merged by @yegor256 after 2d13h of being in review and 0 comments.
+  hoc: 55
+  issue: 424
+  merger: 526301
+  repository: 12590126
+  review_comments: 0
+  seconds: 219635
+  what: code-was-contributed
+  when: *1131
+  where: github
+  who: 9535667
+- _id: 772719
+  _job: 76977
+  _time: 2026-06-12 23:06:14.937261706 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-http#584 with 61 HoC created by @bibonix was
+    merged by @yegor256 after 6h54m of being in review and 0 comments.
+  hoc: 61
+  issue: 584
+  merger: 526301
+  repository: 16312153
+  review_comments: 0
+  seconds: 24858
+  what: code-was-contributed
+  when: *1132
+  where: github
+  who: 9535539
+- _id: 772720
+  _job: 76977
+  _time: 2026-06-12 23:06:15.353295193 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  comments: 0
+  details: The pull request jcabi/jcabi-http#585 with 136 HoC created by @bibonix
+    was merged by @yegor256 after 1h58m of being in review and 0 comments.
+  hoc: 136
+  issue: 585
+  merger: 526301
+  repository: 16312153
+  review_comments: 0
+  seconds: 7133
+  what: code-was-contributed
+  when: *1133
+  where: github
+  who: 9535539
+- _id: 772721
+  _job: 76977
+  _time: 2026-06-12 23:07:32.737724085 Z
+  _version: 0.19.11/0.60.3/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-06-12 23:07:32.674109718 Z
+- _id: 772722
+  _job: 27452650044
+  _time: 2026-06-13 01:36:26.579576169 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/davidanson-markdownlint-cli2-action-23.x
+  details: The pull request jcabi/jcabi-dynamodb-maven-plugin#313 has been opened
+    by @renovate[bot].
+  event_id: 10641328866
+  event_type: PullRequestEvent
+  issue: 313
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-06-13 00:40:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772723
+  _job: 27452650044
+  _time: 2026-06-13 01:36:27.150242391 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/codecov-codecov-action-7.x
+  details: The pull request jcabi/jcabi-dynamodb-maven-plugin#312 has been opened
+    by @renovate[bot].
+  event_id: 10639497103
+  event_type: PullRequestEvent
+  issue: 312
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-06-12 23:12:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772724
+  _job: 27452650044
+  _time: 2026-06-13 01:36:27.539710560 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-checkout-6.x
+  details: The pull request jcabi/jcabi-dynamodb-maven-plugin#311 has been opened
+    by @renovate[bot].
+  event_id: 10639495353
+  event_type: PullRequestEvent
+  issue: 311
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-06-12 23:12:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772725
+  _job: 27452650044
+  _time: 2026-06-13 01:36:33.064333638 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/codecov-codecov-action-7.x
+  details: The pull request jcabi/jcabi-aether#147 has been opened by @renovate[bot].
+  event_id: 10641948919
+  event_type: PullRequestEvent
+  issue: 147
+  repository: 12587970
+  what: pull-was-opened
+  when: 2026-06-13 01:16:10.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772726
+  _job: 27452650044
+  _time: 2026-06-13 01:36:33.515525137 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-setup-java-5.x
+  details: The pull request jcabi/jcabi-aether#146 has been opened by @renovate[bot].
+  event_id: 10641947586
+  event_type: PullRequestEvent
+  issue: 146
+  repository: 12587970
+  what: pull-was-opened
+  when: 2026-06-13 01:16:05.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772727
+  _job: 27452650044
+  _time: 2026-06-13 01:36:51.284995730 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-checkout-6.x
+  details: The pull request jcabi/jcabi-mysql-maven-plugin#259 has been opened by
+    @renovate[bot].
+  event_id: 10642205223
+  event_type: PullRequestEvent
+  issue: 259
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-06-13 01:30:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772728
+  _job: 27452650044
+  _time: 2026-06-13 01:36:51.853903260 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-cache-5.x
+  details: The pull request jcabi/jcabi-mysql-maven-plugin#258 has been opened by
+    @renovate[bot].
+  event_id: 10642203026
+  event_type: PullRequestEvent
+  issue: 258
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-06-13 01:30:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772729
+  _job: 27452650044
+  _time: 2026-06-13 01:36:59.534051114 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/jackson-monorepo
+  details: The pull request jcabi/jcabi-http#597 has been opened by @renovate[bot].
+  event_id: 10639827843
+  event_type: PullRequestEvent
+  issue: 597
+  repository: 16312153
+  what: pull-was-opened
+  when: 2026-06-12 23:25:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772730
+  _job: 27452650044
+  _time: 2026-06-13 01:36:59.952953657 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.objenesis-objenesis-3.x
+  details: The pull request jcabi/jcabi-http#596 has been opened by @renovate[bot].
+  event_id: 10639825092
+  event_type: PullRequestEvent
+  issue: 596
+  repository: 16312153
+  what: pull-was-opened
+  when: 2026-06-12 23:25:20.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772731
+  _job: 27452650044
+  _time: 2026-06-13 01:37:08.991142762 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven.plugin-testing-maven-plugin-testing-harness-3.x
+  details: The pull request jcabi/jcabi-maven-plugin#206 has been opened by @renovate[bot].
+  event_id: 10641666296
+  event_type: PullRequestEvent
+  issue: 206
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-13 01:00:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772732
+  _job: 27452650044
+  _time: 2026-06-13 01:37:09.465717490 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The pull request jcabi/jcabi-maven-plugin#205 has been opened by @renovate[bot].
+  event_id: 10641664644
+  event_type: PullRequestEvent
+  issue: 205
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-13 01:00:12.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772733
+  _job: 27452650044
+  _time: 2026-06-13 01:37:20.647945036 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-checkout-6.x
+  details: The pull request jcabi/jcabi-aspects#432 has been opened by @renovate[bot].
+  event_id: 10639266864
+  event_type: PullRequestEvent
+  issue: 432
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-06-12 23:04:26.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772734
+  _job: 27452650044
+  _time: 2026-06-13 01:37:21.128039533 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/actions-cache-5.x
+  details: The pull request jcabi/jcabi-aspects#431 has been opened by @renovate[bot].
+  event_id: 10639263316
+  event_type: PullRequestEvent
+  issue: 431
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-06-12 23:04:19.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772740
+  _job: 27452650044
+  _time: 2026-06-13 01:37:26.748088250 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 13251740732
+  issues_were_scanned: 353
+  labels_were_scanned: 551
+  latest_issue_was_found: 486
+  merges_were_scanned: 566
+  min_issue_was_found: 551
+  min_pull_was_found: 568
+  repository: 4174608
+  types_were_scanned: 550
+  what: iterate
+  where: github
+- _id: 772742
+  _job: 27452650044
+  _time: 2026-06-13 01:38:30.554193752 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.apache.maven.plugins-maven-gpg-plugin-3.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#244 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 244
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:30:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 772743
+  _job: 27452650044
+  _time: 2026-06-13 01:38:44.373573547 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.codehaus.mojo-build-helper-maven-plugin-3.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#245 has been "pull-was-closed".
+  failed_builds: 8
+  files: 4
+  hoc: 8
+  issue: 245
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:30:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 772744
+  _job: 27452650044
+  _time: 2026-06-13 01:38:55.959532528 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/maven-org.codehaus.plexus-plexus-utils-vulnerability
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#247 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 247
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:30:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 772745
+  _job: 27452650044
+  _time: 2026-06-13 01:39:05.249106934 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#248 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 248
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:30:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 772746
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.148968893 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 421
+  earliest_issue_was_found: 1
+  events_were_scanned: 10639266864
+  issues_were_scanned: 0
+  labels_were_scanned: 421
+  latest_issue_was_found: 422
+  merges_were_scanned: 427
+  min_issue_was_found: 421
+  min_pull_was_found: 431
+  repository: 12590126
+  types_were_scanned: 421
+  what: iterate
+  where: github
+- _id: 772747
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.255531046 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 84
+  earliest_issue_was_found: 1
+  events_were_scanned: 10642205223
+  issues_were_scanned: 88
+  labels_were_scanned: 241
+  latest_issue_was_found: 243
+  merges_were_scanned: 242
+  min_issue_was_found: 241
+  min_pull_was_found: 256
+  repository: 13359002
+  types_were_scanned: 241
+  what: iterate
+  where: github
+- _id: 772748
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.336765760 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 290
+  earliest_issue_was_found: 1
+  events_were_scanned: 13254121185
+  issues_were_scanned: 67
+  labels_were_scanned: 290
+  latest_issue_was_found: 289
+  merges_were_scanned: 305
+  min_issue_was_found: 290
+  min_pull_was_found: 311
+  repository: 12947626
+  types_were_scanned: 290
+  what: iterate
+  where: github
+- _id: 772749
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.414518202 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 192
+  earliest_issue_was_found: 1
+  events_were_scanned: 10641666296
+  issues_were_scanned: 84
+  labels_were_scanned: 192
+  latest_issue_was_found: 194
+  merges_were_scanned: 201
+  min_issue_was_found: 192
+  min_pull_was_found: 205
+  repository: 12591138
+  types_were_scanned: 192
+  what: iterate
+  where: github
+- _id: 772750
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.498569746 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 1
+  events_were_scanned: 10641948919
+  issues_were_scanned: 96
+  labels_were_scanned: 122
+  latest_issue_was_found: 137
+  merges_were_scanned: 141
+  min_issue_was_found: 122
+  min_pull_was_found: 144
+  repository: 12587970
+  types_were_scanned: 122
+  what: iterate
+  where: github
+- _id: 772751
+  _job: 27452650044
+  _time: 2026-06-13 01:39:31.576368348 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 223
+  earliest_issue_was_found: 1
+  events_were_scanned: 10639827843
+  issues_were_scanned: 223
+  labels_were_scanned: 588
+  latest_issue_was_found: 573
+  merges_were_scanned: 585
+  min_issue_was_found: 588
+  min_pull_was_found: 596
+  repository: 16312153
+  types_were_scanned: 577
+  what: iterate
+  where: github
+- _id: 772752
+  _job: 27452650044
+  _time: 2026-06-13 01:41:33.316681588 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  details: 'We found out that the user #288590503 is known in GitHub as @jarocha-dev.'
+  name: jarocha-dev
+  what: who-has-name
+  when: 2026-06-13 01:41:33.494494457 Z
+  where: github
+  who: 288590503
+- _id: 772753
+  _job: 27452650044
+  _time: 2026-06-13 01:45:40.819057660 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#203 has been opened by @renovate[bot].
+  issue: 203
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 21:39:55.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772754
+  _job: 27452650044
+  _time: 2026-06-13 01:45:41.860880094 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  branch: renovate/com.jcabi-jcabi-aspects-0.x
+  details: The missing pull jcabi/jcabi-maven-plugin#204 has been opened by @renovate[bot].
+  issue: 204
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-06-12 21:40:01.000000000 Z
+  where: github
+  who: 29139614
+- _id: 772755
+  _job: 27452650044
+  _time: 2026-06-13 01:49:07.586191299 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 29139614
+  comments: 4
+  details: The pull request jcabi/jcabi-aspects#423 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 1714h37m and 0 comments.
+  hoc: 2
+  issue: 423
+  repository: 12590126
+  review_comments: 0
+  seconds: 6172626
+  what: code-was-reviewed
+  when: 2026-05-24 03:35:57.000000000 Z
+  where: github
+  who: 526301
+- _id: 772756
+  _job: 27452650044
+  _time: 2026-06-13 01:49:10.762924593 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 9535667
+  comments: 0
+  details: The pull request jcabi/jcabi-aspects#424 with 55 HoC created by @kreinba
+    was reviewed by @copilot after 61h1m and 0 comments.
+  hoc: 55
+  issue: 424
+  repository: 12590126
+  review_comments: 0
+  seconds: 219712
+  what: code-was-reviewed
+  when: 2026-05-15 05:21:05.000000000 Z
+  where: github
+  who: 175728472
+- _id: 772757
+  _job: 27452650044
+  _time: 2026-06-13 01:49:15.119557341 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  author: 9535667
+  comments: 0
+  details: The pull request jcabi/jcabi-http#586 with 28 HoC created by @kreinba was
+    reviewed by @copilot after 64h20m and 0 comments.
+  hoc: 28
+  issue: 586
+  repository: 16312153
+  review_comments: 0
+  seconds: 231616
+  what: code-was-reviewed
+  when: 2026-05-14 03:49:00.000000000 Z
+  where: github
+  who: 175728472
