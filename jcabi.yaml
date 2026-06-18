@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 2m30s: execution expired'
   inserted: 8
-  seconds: 810.374290576
+  seconds: 900.130766232
   version: 0.60.2
   what: judges-summary
-  when: 2026-06-17 22:31:11.946928778 Z
+  when: 2026-06-18 00:09:19.427712261 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -104823,7 +104824,7 @@
   total_releases_published: 0
   total_reviews_submitted: 32
   what: quantity-of-deliverables
-  when: 2026-06-10 23:54:07.000000000 Z
+  when: &1103 2026-06-10 23:54:07.000000000 Z
 - _id: 772419
   _job: 27313987220
   _time: 2026-06-11 00:06:23.646290029 Z
@@ -112051,26 +112052,6 @@
   total_stars: 2247
   what: dimensions-of-terrain
   when: 2026-06-15 19:16:30.161840994 Z
-- _id: 773221
-  _job: 77445
-  _time: 2026-06-15 20:05:34.220438261 Z
-  _version: 0.19.13/0.60.4/0.17.17
-  analyzers: 18
-  text: |-
-    The average reward per task (4.7 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1768.3) is increasing (R=0.35).
-    The average number of commits per week (68.7) is increasing (R=0.50).
-    The average monthly punishment (596 points) is increasing (R=0.60).
-    The average monthly wage (9.5 points) is decreasing (R=-0.61).
-    The average issue cycle time (6d7h) is decreasing (R=-0.30).
-    The average pull cycle time (1w1d) is staying still.
-    The average number of releases per month (4.8) is decreasing (R=-0.27).
-    The average monthly turnover (32.0 developers) is increasing (R=0.70).
-    The average weekly cost of HoC (1.03 points) is decreasing (R=-0.33).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-06-15 20:05:34.238037103 Z
 - _id: 773233
   _job: 27596688361
   _time: 2026-06-16 05:41:20.225107896 Z
@@ -112479,23 +112460,6 @@
   types_were_scanned: 767
   what: iterate
   where: github
-- _id: 773331
-  _job: 27667586179
-  _time: 2026-06-17 05:25:01.835061853 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 423
-  earliest_issue_was_found: 1
-  events_were_scanned: 13443534983
-  issues_were_scanned: 95
-  labels_were_scanned: 423
-  latest_issue_was_found: 422
-  merges_were_scanned: 422
-  min_issue_was_found: 441
-  min_pull_was_found: 515
-  repository: 12589687
-  types_were_scanned: 441
-  what: iterate
-  where: github
 - _id: 773332
   _job: 27667586179
   _time: 2026-06-17 05:34:17.326172827 Z
@@ -112873,21 +112837,6 @@
   repository: 23238769
   what: tombstone
   where: github
-- _id: 773377
-  _job: 77599
-  _time: 2026-06-17 14:20:44.680143139 Z
-  _version: 0.19.13/0.60.4/0.17.17
-  cost_of_qod:
-  - -7.662255828607436
-  - -15.236713223290405
-  - 3.5789473684210527
-  qod_per_day:
-  - 5.667857143188386
-  - 3.150285714468361
-  - 9.13757144943617
-  - 5.428571446945725
-  what: learn-eva
-  when: 2026-06-17 14:20:44.616902734 Z
 - _id: 773390
   _job: 77612
   _time: 2026-06-17 17:41:42.959006509 Z
@@ -112906,210 +112855,6 @@
   repository: 4174608
   what: tombstone
   where: github
-- _id: 773403
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.398723000 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 223
-  earliest_issue_was_found: 1
-  events_were_scanned: 10760827686
-  issues_were_scanned: 223
-  labels_were_scanned: 588
-  latest_issue_was_found: 573
-  merges_were_scanned: 585
-  min_issue_was_found: 588
-  min_pull_was_found: 611
-  repository: 16312153
-  types_were_scanned: 577
-  what: iterate
-  where: github
-- _id: 773404
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.471047036 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 42
-  earliest_issue_was_found: 1
-  events_were_scanned: 10678120771
-  issues_were_scanned: 0
-  labels_were_scanned: 42
-  latest_issue_was_found: 39
-  merges_were_scanned: 44
-  min_issue_was_found: 42
-  min_pull_was_found: 62
-  repository: 12590128
-  types_were_scanned: 42
-  what: iterate
-  where: github
-- _id: 773405
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.545305642 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 95
-  earliest_issue_was_found: 1
-  events_were_scanned: 10678176315
-  issues_were_scanned: 0
-  labels_were_scanned: 95
-  latest_issue_was_found: 98
-  merges_were_scanned: 101
-  min_issue_was_found: 95
-  min_pull_was_found: 110
-  repository: 25780072
-  types_were_scanned: 95
-  what: iterate
-  where: github
-- _id: 773406
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.616561420 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 120
-  earliest_issue_was_found: 1
-  events_were_scanned: 10647463723
-  issues_were_scanned: 53
-  labels_were_scanned: 120
-  latest_issue_was_found: 125
-  merges_were_scanned: 129
-  min_issue_was_found: 120
-  min_pull_was_found: 155
-  repository: 19194304
-  types_were_scanned: 120
-  what: iterate
-  where: github
-- _id: 773407
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.686952850 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 1
-  events_were_scanned: 10738341151
-  issues_were_scanned: 96
-  labels_were_scanned: 122
-  latest_issue_was_found: 137
-  merges_were_scanned: 141
-  min_issue_was_found: 122
-  min_pull_was_found: 154
-  repository: 12587970
-  types_were_scanned: 122
-  what: iterate
-  where: github
-- _id: 773408
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.761305561 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 96
-  earliest_issue_was_found: 116
-  events_were_scanned: 12090611865
-  issues_were_scanned: 101
-  labels_were_scanned: 213
-  latest_issue_was_found: 224
-  merges_were_scanned: 233
-  min_issue_was_found: 213
-  min_pull_was_found: 242
-  repository: 12262782
-  types_were_scanned: 213
-  what: iterate
-  where: github
-- _id: 773409
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.831639744 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 421
-  earliest_issue_was_found: 1
-  events_were_scanned: 10814024379
-  issues_were_scanned: 0
-  labels_were_scanned: 421
-  latest_issue_was_found: 422
-  merges_were_scanned: 427
-  min_issue_was_found: 421
-  min_pull_was_found: 437
-  repository: 12590126
-  types_were_scanned: 421
-  what: iterate
-  where: github
-- _id: 773410
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.901509452 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 353
-  earliest_issue_was_found: 1
-  events_were_scanned: 13486860429
-  issues_were_scanned: 353
-  labels_were_scanned: 551
-  latest_issue_was_found: 486
-  merges_were_scanned: 566
-  min_issue_was_found: 551
-  min_pull_was_found: 568
-  repository: 4174608
-  types_were_scanned: 550
-  what: iterate
-  where: github
-- _id: 773411
-  _job: 27723270540
-  _time: 2026-06-17 22:19:23.975887401 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 303
-  earliest_issue_was_found: 1
-  events_were_scanned: 10738338716
-  issues_were_scanned: 249
-  labels_were_scanned: 424
-  latest_issue_was_found: 460
-  merges_were_scanned: 496
-  min_issue_was_found: 503
-  min_pull_was_found: 505
-  repository: 13717355
-  types_were_scanned: 424
-  what: iterate
-  where: github
-- _id: 773412
-  _job: 27723270540
-  _time: 2026-06-17 22:19:24.047011854 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 192
-  earliest_issue_was_found: 1
-  events_were_scanned: 10818764472
-  issues_were_scanned: 84
-  labels_were_scanned: 192
-  latest_issue_was_found: 194
-  merges_were_scanned: 201
-  min_issue_was_found: 192
-  min_pull_was_found: 221
-  repository: 12591138
-  types_were_scanned: 192
-  what: iterate
-  where: github
-- _id: 773413
-  _job: 27723270540
-  _time: 2026-06-17 22:19:24.116919193 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 36
-  earliest_issue_was_found: 1
-  events_were_scanned: 12291300896
-  issues_were_scanned: 0
-  labels_were_scanned: 36
-  latest_issue_was_found: 40
-  merges_were_scanned: 41
-  min_issue_was_found: 36
-  min_pull_was_found: 41
-  repository: 15208785
-  types_were_scanned: 36
-  what: iterate
-  where: github
-- _id: 773414
-  _job: 27723270540
-  _time: 2026-06-17 22:19:24.189579004 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 20
-  earliest_issue_was_found: 16
-  events_were_scanned: 10738279186
-  issues_were_scanned: 0
-  labels_were_scanned: 42
-  latest_issue_was_found: 34
-  merges_were_scanned: 35
-  min_issue_was_found: 42
-  min_pull_was_found: 47
-  repository: 12591382
-  types_were_scanned: 42
-  what: iterate
-  where: github
 - _id: 773415
   _job: 27723270540
   _time: 2026-06-17 22:22:33.934833745 Z
@@ -113126,3 +112871,273 @@
   total_stars: 2247
   what: dimensions-of-terrain
   when: 2026-06-17 22:22:33.943745620 Z
+- _id: 773416
+  _job: 77636
+  _time: 2026-06-17 22:31:55.815687337 Z
+  _version: 0.19.13/0.60.4/0.17.17
+  analyzers: 18
+  text: |-
+    The average reward per task (4.8 points) is staying still.
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1679.9) is increasing (R=0.59).
+    The average number of commits per week (68.8) is increasing (R=0.54).
+    The average monthly punishment (596 points) is increasing (R=0.60).
+    The average monthly wage (9.5 points) is decreasing (R=-0.61).
+    The average issue cycle time (6d7h) is decreasing (R=-0.30).
+    The average pull cycle time (1w1d) is staying still.
+    The average number of releases per month (4.0) is decreasing (R=-0.10).
+    The average monthly turnover (31.0 developers) is increasing (R=0.72).
+    The average weekly cost of HoC (1.07 points) is decreasing (R=-0.43).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-06-17 22:31:55.836003069 Z
+- _id: 773417
+  _job: 77636
+  _time: 2026-06-17 22:33:22.530727097 Z
+  _version: 0.19.13/0.60.4/0.17.17
+  cost_of_qod:
+  - -7.662255828607436
+  - -15.236713223290405
+  - 3.5789473684210527
+  qod_per_day:
+  - 5.667857143188386
+  - 3.150285714468361
+  - 9.13757144943617
+  - 5.428571446945725
+  what: learn-eva
+  when: 2026-06-17 22:33:22.466812891 Z
+- _id: 773418
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.441681592 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 120
+  earliest_issue_was_found: 1
+  events_were_scanned: 12092605812
+  issues_were_scanned: 53
+  labels_were_scanned: 120
+  latest_issue_was_found: 125
+  merges_were_scanned: 129
+  min_issue_was_found: 120
+  min_pull_was_found: 155
+  repository: 19194304
+  types_were_scanned: 120
+  what: iterate
+  where: github
+- _id: 773419
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.518088467 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 36
+  earliest_issue_was_found: 1
+  events_were_scanned: 10647447403
+  issues_were_scanned: 0
+  labels_were_scanned: 36
+  latest_issue_was_found: 40
+  merges_were_scanned: 41
+  min_issue_was_found: 36
+  min_pull_was_found: 41
+  repository: 15208785
+  types_were_scanned: 36
+  what: iterate
+  where: github
+- _id: 773420
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.587823978 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 423
+  earliest_issue_was_found: 1
+  events_were_scanned: 13495686284
+  issues_were_scanned: 95
+  labels_were_scanned: 423
+  latest_issue_was_found: 422
+  merges_were_scanned: 422
+  min_issue_was_found: 441
+  min_pull_was_found: 515
+  repository: 12589687
+  types_were_scanned: 441
+  what: iterate
+  where: github
+- _id: 773421
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.662701080 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 421
+  earliest_issue_was_found: 1
+  events_were_scanned: 12238831194
+  issues_were_scanned: 0
+  labels_were_scanned: 421
+  latest_issue_was_found: 422
+  merges_were_scanned: 427
+  min_issue_was_found: 421
+  min_pull_was_found: 437
+  repository: 12590126
+  types_were_scanned: 421
+  what: iterate
+  where: github
+- _id: 773422
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.733373748 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 353
+  earliest_issue_was_found: 1
+  events_were_scanned: 13493295712
+  issues_were_scanned: 353
+  labels_were_scanned: 551
+  latest_issue_was_found: 486
+  merges_were_scanned: 566
+  min_issue_was_found: 551
+  min_pull_was_found: 568
+  repository: 4174608
+  types_were_scanned: 550
+  what: iterate
+  where: github
+- _id: 773423
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.804131826 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 42
+  earliest_issue_was_found: 1
+  events_were_scanned: 12275274901
+  issues_were_scanned: 0
+  labels_were_scanned: 42
+  latest_issue_was_found: 39
+  merges_were_scanned: 44
+  min_issue_was_found: 42
+  min_pull_was_found: 62
+  repository: 12590128
+  types_were_scanned: 42
+  what: iterate
+  where: github
+- _id: 773424
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.878651761 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 223
+  earliest_issue_was_found: 1
+  events_were_scanned: 12279669389
+  issues_were_scanned: 223
+  labels_were_scanned: 588
+  latest_issue_was_found: 573
+  merges_were_scanned: 585
+  min_issue_was_found: 588
+  min_pull_was_found: 611
+  repository: 16312153
+  types_were_scanned: 577
+  what: iterate
+  where: github
+- _id: 773425
+  _job: 27727276141
+  _time: 2026-06-17 23:56:30.947979511 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 116
+  events_were_scanned: 10678156313
+  issues_were_scanned: 101
+  labels_were_scanned: 213
+  latest_issue_was_found: 224
+  merges_were_scanned: 233
+  min_issue_was_found: 213
+  min_pull_was_found: 242
+  repository: 12262782
+  types_were_scanned: 213
+  what: iterate
+  where: github
+- _id: 773426
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.018650627 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 96
+  earliest_issue_was_found: 1
+  events_were_scanned: 12050493975
+  issues_were_scanned: 96
+  labels_were_scanned: 122
+  latest_issue_was_found: 137
+  merges_were_scanned: 141
+  min_issue_was_found: 122
+  min_pull_was_found: 154
+  repository: 12587970
+  types_were_scanned: 122
+  what: iterate
+  where: github
+- _id: 773427
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.091242816 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 303
+  earliest_issue_was_found: 1
+  events_were_scanned: 12090444685
+  issues_were_scanned: 249
+  labels_were_scanned: 424
+  latest_issue_was_found: 460
+  merges_were_scanned: 496
+  min_issue_was_found: 503
+  min_pull_was_found: 505
+  repository: 13717355
+  types_were_scanned: 424
+  what: iterate
+  where: github
+- _id: 773428
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.161485001 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 95
+  earliest_issue_was_found: 1
+  events_were_scanned: 12290428970
+  issues_were_scanned: 0
+  labels_were_scanned: 95
+  latest_issue_was_found: 98
+  merges_were_scanned: 101
+  min_issue_was_found: 95
+  min_pull_was_found: 110
+  repository: 25780072
+  types_were_scanned: 95
+  what: iterate
+  where: github
+- _id: 773429
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.233539969 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 20
+  earliest_issue_was_found: 16
+  events_were_scanned: 12258543334
+  issues_were_scanned: 0
+  labels_were_scanned: 42
+  latest_issue_was_found: 34
+  merges_were_scanned: 35
+  min_issue_was_found: 42
+  min_pull_was_found: 47
+  repository: 12591382
+  types_were_scanned: 42
+  what: iterate
+  where: github
+- _id: 773430
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.306020049 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  assignees_were_scanned: 192
+  earliest_issue_was_found: 1
+  events_were_scanned: 12246729817
+  issues_were_scanned: 84
+  labels_were_scanned: 192
+  latest_issue_was_found: 194
+  merges_were_scanned: 201
+  min_issue_was_found: 192
+  min_pull_was_found: 221
+  repository: 12591138
+  types_were_scanned: 192
+  what: iterate
+  where: github
+- _id: 773431
+  _job: 27727276141
+  _time: 2026-06-17 23:56:31.445080380 Z
+  _version: 0.19.9/0.60.2/0.17.17
+  since: *1103
+  total_builds_ran: 1932
+  total_commits_pushed: 30
+  total_hoc_committed: 106
+  total_issues_created: 141
+  total_pulls_submitted: 137
+  total_releases_published: 1
+  total_reviews_submitted: 3
+  what: quantity-of-deliverables
+  when: 2026-06-17 23:56:31.000000000 Z
