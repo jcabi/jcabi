@@ -3,20 +3,19 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 7179: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-10T20:57:53Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 7245: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-10T22:41:40Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 7179: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-10T20:59:10Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 7245: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-10T22:43:22Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'Judge label-was-attached stopped by timeout after 75s: execution expired'
   inserted: 8
-  seconds: 900.402431518
+  seconds: 885.455258372
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-10 21:01:26.787847415 Z
+  when: 2026-07-10 22:44:22.332610893 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -53095,19 +53094,6 @@
   when: 2026-04-23 18:36:18.000000000 Z
   where: github
   who: 9535539
-- _id: 764790
-  _job: 24933750170
-  _time: 2026-04-25 15:15:25.816829989 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/slf4j-monorepo
-  details: The missing pull jcabi/jcabi-email#85 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 85
-  repository: 25780072
-  what: pull-was-opened
-  when: 2024-08-10 11:29:32.000000000 Z
-  where: github
-  who: 29139614
 - _id: 764791
   _job: 24933750170
   _time: 2026-04-25 15:15:26.807305220 Z
@@ -53132,19 +53118,6 @@
   repository: 25780072
   what: pull-was-opened
   when: 2024-08-28 09:48:24.000000000 Z
-  where: github
-  who: 29139614
-- _id: 764793
-  _job: 24933750170
-  _time: 2026-04-25 15:15:29.134900016 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/ubuntu-24.x
-  details: The missing pull jcabi/jcabi-email#88 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 88
-  repository: 25780072
-  what: pull-was-opened
-  when: 2024-09-26 20:16:28.000000000 Z
   where: github
   who: 29139614
 - _id: 764794
@@ -54570,7 +54543,8 @@
   _version: 0.19.9/0.60.2/0.17.17
   issues:
   - '1'
-  - 82-84
+  - 82-85
+  - '88'
   - 91-94
   - '97'
   repository: 25780072
@@ -59491,71 +59465,6 @@
   total_stars: 2246
   what: dimensions-of-terrain
   when: 2026-05-02 08:06:28.865481727 Z
-- _id: 765770
-  _job: 25247436699
-  _time: 2026-05-02 08:08:51.424040353 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: master
-  details: The missing pull jcabi/jcabi-matchers#45 has been opened by @andreoss.
-  is_human: 1
-  issue: 45
-  repository: 19194296
-  what: pull-was-opened
-  when: 2020-11-13 10:32:50.000000000 Z
-  where: github
-  who: 49783909
-- _id: 765772
-  _job: 25247436699
-  _time: 2026-05-02 08:08:52.527098156 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: dependabot/maven/com.sun.jersey-jersey-client-1.19.4
-  details: The missing pull jcabi/jcabi-matchers#47 has been opened by @dependabot-preview[bot].
-  is_human: 0
-  issue: 47
-  repository: 19194296
-  what: pull-was-opened
-  when: 2020-12-01 19:37:26.000000000 Z
-  where: github
-  who: 27856297
-- _id: 765773
-  _job: 25247436699
-  _time: 2026-05-02 08:08:53.305947009 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: dependabot/maven/com.jcabi-jcabi-1.27.0
-  details: The missing pull jcabi/jcabi-matchers#48 has been opened by @dependabot-preview[bot].
-  is_human: 0
-  issue: 48
-  repository: 19194296
-  what: pull-was-opened
-  when: 2020-12-01 19:38:00.000000000 Z
-  where: github
-  who: 27856297
-- _id: 765774
-  _job: 25247436699
-  _time: 2026-05-02 08:08:53.972022389 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: dependabot/maven/org.glassfish.jaxb-jaxb-runtime-3.0.0
-  details: The missing pull jcabi/jcabi-matchers#49 has been opened by @dependabot-preview[bot].
-  is_human: 0
-  issue: 49
-  repository: 19194296
-  what: pull-was-opened
-  when: 2020-12-01 19:38:11.000000000 Z
-  where: github
-  who: 27856297
-- _id: 765775
-  _job: 25247436699
-  _time: 2026-05-02 08:08:54.604422398 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: dependabot/maven/com.jcabi-jcabi-http-1.17.3
-  details: The missing pull jcabi/jcabi-matchers#50 has been opened by @dependabot-preview[bot].
-  is_human: 0
-  issue: 50
-  repository: 19194296
-  what: pull-was-opened
-  when: 2020-12-01 19:38:42.000000000 Z
-  where: github
-  who: 27856297
 - _id: 765776
   _job: 25247436699
   _time: 2026-05-02 08:08:55.212579152 Z
@@ -59798,8 +59707,7 @@
   _version: 0.19.10/0.60.2/0.17.17
   issues:
   - '1'
-  - 38-44
-  - '46'
+  - 38-50
   - '52'
   - 60-94
   - 96-121
@@ -59907,20 +59815,9 @@
   is_human: 1
   issue: 20
   repository: 12262782
+  tombstone: 2026-07-10 21:03:09.384421631 Z
   what: issue-was-closed
   when: 2026-05-02 15:38:42.000000000 Z
-  where: github
-  who: 526301
-- _id: 765845
-  _job: 25255968945
-  _time: 2026-05-02 16:05:51.106058709 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  details: The issue jcabi/jcabi-log#20 has been opened earlier by @yegor256.
-  is_human: 1
-  issue: 20
-  repository: 12262782
-  what: issue-was-opened
-  when: 2014-07-27 10:50:31.000000000 Z
   where: github
   who: 526301
 - _id: 765866
@@ -60857,6 +60754,9 @@
   _version: 0.19.10/0.60.2/0.17.17
   issues:
   - '1'
+  - '24'
+  - '26'
+  - '28'
   - 31-33
   - '35'
   repository: 20635353
@@ -64181,6 +64081,7 @@
   is_human: 1
   issue: 1037
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.669700851 Z
   what: pull-was-opened
   when: 2015-03-28 23:05:19.000000000 Z
   where: github
@@ -64302,6 +64203,7 @@
   is_human: 1
   issue: 1047
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.536469404 Z
   what: pull-was-opened
   when: 2015-04-09 21:30:34.000000000 Z
   where: github
@@ -64327,6 +64229,7 @@
   is_human: 1
   issue: 1049
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.518022091 Z
   what: pull-was-opened
   when: 2015-04-13 04:00:23.000000000 Z
   where: github
@@ -66622,6 +66525,7 @@
   is_human: 1
   issue: 1027
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.364816052 Z
   what: issue-was-opened
   when: 2015-03-11 09:31:18.000000000 Z
   where: github
@@ -66659,6 +66563,7 @@
   is_human: 1
   issue: 1033
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.471692090 Z
   what: pull-was-opened
   when: 2015-03-24 03:38:13.000000000 Z
   where: github
@@ -66671,6 +66576,7 @@
   is_human: 1
   issue: 1034
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.405424516 Z
   what: issue-was-opened
   when: 2015-03-24 12:24:21.000000000 Z
   where: github
@@ -66684,6 +66590,7 @@
   is_human: 1
   issue: 1035
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.497184470 Z
   what: pull-was-opened
   when: 2015-03-28 10:51:06.000000000 Z
   where: github
@@ -68245,20 +68152,6 @@
   when: 2026-05-06 14:17:05.000000000 Z
   where: github
   who: 29139614
-- _id: 767078
-  _job: 25504253573
-  _time: 2026-05-07 15:20:17.666007211 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/maven.version
-  details: The missing pull jcabi/jcabi-latex-maven-plugin#26 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 26
-  repository: 20635353
-  tombstone: 2026-07-10 19:09:50.893291923 Z
-  what: pull-was-opened
-  when: 2022-11-05 04:09:30.000000000 Z
-  where: github
-  who: 29139614
 - _id: 767079
   _job: 25504253573
   _time: 2026-05-07 15:20:18.410641904 Z
@@ -68270,20 +68163,6 @@
   repository: 20635353
   what: issue-was-opened
   when: 2022-11-05 04:09:31.000000000 Z
-  where: github
-  who: 29139614
-- _id: 767080
-  _job: 25504253573
-  _time: 2026-05-07 15:20:18.937652469 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/ubuntu-22.x
-  details: The missing pull jcabi/jcabi-latex-maven-plugin#28 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 28
-  repository: 20635353
-  tombstone: 2026-07-10 19:09:50.932036724 Z
-  what: pull-was-opened
-  when: 2023-08-10 23:31:18.000000000 Z
   where: github
   who: 29139614
 - _id: 767081
@@ -68308,6 +68187,7 @@
   is_human: 0
   issue: 30
   repository: 20635353
+  tombstone: 2026-07-10 21:03:09.825340212 Z
   what: pull-was-opened
   when: 2023-08-15 18:09:47.000000000 Z
   where: github
@@ -77993,7 +77873,7 @@
   - 33-40
   - '42'
   - '44'
-  - 46-49
+  - 46-51
   - 53-58
   - '60'
   - 62-65
@@ -78012,34 +77892,6 @@
   repository: 12589687
   what: tombstone
   where: github
-- _id: 768512
-  _job: 25727381779
-  _time: 2026-05-12 10:12:01.114551355 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '35'
-  details: The missing pull jcabi/jcabi-dynamo#50 has been opened by @gvlasov.
-  is_human: 1
-  issue: 50
-  repository: 12589687
-  tombstone: 2026-07-10 19:09:50.742356499 Z
-  what: pull-was-opened
-  when: 2015-07-12 20:10:36.000000000 Z
-  where: github
-  who: 4467948
-- _id: 768513
-  _job: 25727381779
-  _time: 2026-05-12 10:12:02.634594745 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: task-48
-  details: The missing pull jcabi/jcabi-dynamo#51 has been opened by @super132.
-  is_human: 1
-  issue: 51
-  repository: 12589687
-  tombstone: 2026-07-10 19:09:50.722807017 Z
-  what: pull-was-opened
-  when: 2015-07-17 10:18:53.000000000 Z
-  where: github
-  who: 6581896
 - _id: 768514
   _job: 25727381779
   _time: 2026-05-12 10:12:04.179251762 Z
@@ -78049,6 +77901,7 @@
   is_human: 1
   issue: 52
   repository: 12589687
+  tombstone: 2026-07-10 21:03:09.689462708 Z
   what: pull-was-opened
   when: 2015-07-20 04:57:15.000000000 Z
   where: github
@@ -78062,6 +77915,7 @@
   is_human: 1
   issue: 59
   repository: 12589687
+  tombstone: 2026-07-10 21:03:09.554594572 Z
   what: pull-was-opened
   when: 2015-09-23 16:17:30.000000000 Z
   where: github
@@ -78075,6 +77929,7 @@
   is_human: 1
   issue: 61
   repository: 12589687
+  tombstone: 2026-07-10 21:03:09.572346236 Z
   what: pull-was-opened
   when: 2015-10-03 09:35:01.000000000 Z
   where: github
@@ -78088,6 +77943,7 @@
   is_human: 1
   issue: 66
   repository: 12589687
+  tombstone: 2026-07-10 21:03:09.588418937 Z
   what: pull-was-opened
   when: 2015-10-13 11:24:15.000000000 Z
   where: github
@@ -78101,6 +77957,7 @@
   is_human: 1
   issue: 68
   repository: 12589687
+  tombstone: 2026-07-10 21:03:09.603636423 Z
   what: pull-was-opened
   when: 2015-12-14 11:12:43.000000000 Z
   where: github
@@ -110217,20 +110074,6 @@
   when: 2026-06-07 05:52:08.000000000 Z
   where: github
   who: 29139614
-- _id: 773719
-  _job: 27836733258
-  _time: 2026-06-19 16:24:23.698253781 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/configure
-  details: The missing pull jcabi/jcabi-latex-maven-plugin#24 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 24
-  repository: 20635353
-  tombstone: 2026-07-10 19:09:50.810879099 Z
-  what: pull-was-opened
-  when: 2022-09-22 10:18:05.000000000 Z
-  where: github
-  who: 29139614
 - _id: 773720
   _job: 27836733258
   _time: 2026-06-19 16:24:24.570348775 Z
@@ -116381,7 +116224,7 @@
   issues_were_scanned: 96
   labels_were_scanned: 0
   latest_issue_was_found: 137
-  merges_were_scanned: 114
+  merges_were_scanned: 131
   min_issue_was_found: 122
   min_pull_was_found: 168
   repository: 12587970
@@ -117430,7 +117273,7 @@
   issues_were_scanned: 88
   labels_were_scanned: 0
   latest_issue_was_found: 243
-  merges_were_scanned: 234
+  merges_were_scanned: 0
   min_issue_was_found: 241
   min_pull_was_found: 268
   repository: 13359002
@@ -117907,7 +117750,7 @@
   issues_were_scanned: 67
   labels_were_scanned: 0
   latest_issue_was_found: 289
-  merges_were_scanned: 296
+  merges_were_scanned: 0
   min_issue_was_found: 290
   min_pull_was_found: 319
   repository: 12947626
@@ -118914,7 +118757,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
-  merges_were_scanned: 447
+  merges_were_scanned: 0
   min_issue_was_found: 439
   min_pull_was_found: 447
   repository: 12590126
@@ -118931,7 +118774,7 @@
   issues_were_scanned: 84
   labels_were_scanned: 0
   latest_issue_was_found: 194
-  merges_were_scanned: 193
+  merges_were_scanned: 0
   min_issue_was_found: 192
   min_pull_was_found: 236
   repository: 12591138
@@ -119337,7 +119180,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 34
-  merges_were_scanned: 35
+  merges_were_scanned: 0
   min_issue_was_found: 42
   min_pull_was_found: 57
   repository: 12591382
@@ -119354,7 +119197,7 @@
   issues_were_scanned: 223
   labels_were_scanned: 0
   latest_issue_was_found: 573
-  merges_were_scanned: 618
+  merges_were_scanned: 0
   min_issue_was_found: 612
   min_pull_was_found: 625
   repository: 16312153
@@ -119386,7 +119229,7 @@
   issues_were_scanned: 50
   labels_were_scanned: 0
   latest_issue_was_found: 64
-  merges_were_scanned: 49
+  merges_were_scanned: 0
   min_issue_was_found: 50
   min_pull_was_found: 80
   repository: 12591371
@@ -119499,7 +119342,7 @@
   events_were_scanned: 11350127030
   labels_were_scanned: 0
   latest_issue_was_found: 66
-  merges_were_scanned: 88
+  merges_were_scanned: 0
   min_issue_was_found: 68
   min_pull_was_found: 88
   repository: 12591339
@@ -119531,7 +119374,7 @@
   events_were_scanned: 11631095292
   labels_were_scanned: 0
   latest_issue_was_found: 40
-  merges_were_scanned: 57
+  merges_were_scanned: 0
   min_issue_was_found: 45
   min_pull_was_found: 57
   repository: 20635353
@@ -119548,7 +119391,7 @@
   issues_were_scanned: 37
   labels_were_scanned: 0
   latest_issue_was_found: 71
-  merges_were_scanned: 92
+  merges_were_scanned: 0
   min_issue_was_found: 53
   min_pull_was_found: 93
   repository: 16403286
@@ -119599,7 +119442,7 @@
   issues_were_scanned: 101
   labels_were_scanned: 0
   latest_issue_was_found: 224
-  merges_were_scanned: 253
+  merges_were_scanned: 0
   min_issue_was_found: 213
   min_pull_was_found: 253
   repository: 12262782
@@ -119612,11 +119455,11 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11595413619
+  events_were_scanned: 11634486799
   issues_were_scanned: 95
   labels_were_scanned: 0
   latest_issue_was_found: 422
-  merges_were_scanned: 68
+  merges_were_scanned: 0
   min_issue_was_found: 519
   min_pull_was_found: 529
   repository: 12589687
@@ -119666,7 +119509,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 135
-  merges_were_scanned: 50
+  merges_were_scanned: 129
   min_issue_was_found: 136
   min_pull_was_found: 217
   repository: 19194296
@@ -119686,7 +119529,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14720576247
+  events_were_scanned: 14726042687
   issues_were_scanned: 353
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -119724,7 +119567,7 @@
   issues_were_scanned: 53
   labels_were_scanned: 0
   latest_issue_was_found: 125
-  merges_were_scanned: 125
+  merges_were_scanned: 0
   min_issue_was_found: 120
   min_pull_was_found: 160
   repository: 19194304
@@ -119752,13 +119595,13 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1255
+  assignees_were_scanned: 1325
   earliest_issue_was_found: 1
   events_were_scanned: 11491299245
   issues_were_scanned: 1774
   labels_were_scanned: 1057
   latest_issue_was_found: 1806
-  merges_were_scanned: 1049
+  merges_were_scanned: 1079
   min_issue_was_found: 1935
   min_pull_was_found: 1942
   repository: 14204295
@@ -119775,7 +119618,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 98
-  merges_were_scanned: 96
+  merges_were_scanned: 0
   min_issue_was_found: 95
   min_pull_was_found: 116
   repository: 25780072
@@ -119961,31 +119804,6 @@
   when: 2026-01-20 01:14:05.000000000 Z
   where: github
   who: 29139614
-- _id: 776612
-  _job: 29116062000
-  _time: 2026-07-10 18:55:19.911868080 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/configure
-  comments: 5
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-latex-maven-plugin#24 has been "pull-was-merged".
-  done: 2026-07-10 19:09:50.797526019 Z
-  failed_builds: 0
-  files: 1
-  hoc: 6
-  issue: 24
-  repository: 20635353
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-10 19:10:50.711134809 Z
-  what: pull-was-merged
-  when: 2022-11-05 04:09:05.000000000 Z
-  where: github
-  who: 526301
 - _id: 776613
   _job: 29116062000
   _time: 2026-07-10 18:55:25.971542515 Z
@@ -120373,31 +120191,6 @@
   when: 2026-04-26 12:57:58.000000000 Z
   where: github
   who: 29139614
-- _id: 776632
-  _job: 29116062000
-  _time: 2026-07-10 18:58:32.816369915 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '35'
-  comments: 26
-  comments_appreciated: 0
-  comments_by_author: 6
-  comments_by_reviewers: 20
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-dynamo#50 has been "pull-was-merged".
-  done: 2026-07-10 19:09:50.725382634 Z
-  failed_builds: 0
-  files: 4
-  hoc: 93
-  issue: 50
-  repository: 12589687
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-10 19:10:50.750915383 Z
-  what: pull-was-merged
-  when: 2015-07-28 18:30:09.000000000 Z
-  where: github
-  who: 8086956
 - _id: 776633
   _job: 29116062000
   _time: 2026-07-10 18:58:42.046406717 Z
@@ -120423,31 +120216,6 @@
   when: 2026-03-13 17:02:24.000000000 Z
   where: github
   who: 29139614
-- _id: 776634
-  _job: 29116062000
-  _time: 2026-07-10 18:58:47.608630924 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/maven.version
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-latex-maven-plugin#26 has been "pull-was-merged".
-  done: 2026-07-10 19:09:50.876084020 Z
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 26
-  repository: 20635353
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-10 19:10:50.758797063 Z
-  what: pull-was-merged
-  when: 2025-01-24 04:07:02.000000000 Z
-  where: github
-  who: 526301
 - _id: 776635
   _job: 29116062000
   _time: 2026-07-10 18:58:51.126143160 Z
@@ -120614,7 +120382,7 @@
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
-  when: 2026-01-09 13:08:05.000000000 Z
+  when: &1155 2026-01-09 13:08:05.000000000 Z
   where: github
   who: 526301
 - _id: 776642
@@ -120664,7 +120432,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-18 06:30:37.000000000 Z
+  when: &1156 2026-05-18 06:30:37.000000000 Z
   where: github
   who: 526301
 - _id: 776644
@@ -120714,7 +120482,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-11 11:08:59.000000000 Z
+  when: &1157 2026-05-11 11:08:59.000000000 Z
   where: github
   who: 526301
 - _id: 776649
@@ -120813,31 +120581,6 @@
   when: 2026-04-26 12:57:55.000000000 Z
   where: github
   who: 29139614
-- _id: 776653
-  _job: 29116062000
-  _time: 2026-07-10 19:01:07.606100930 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: task-48
-  comments: 16
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 14
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-dynamo#51 has been "pull-was-merged".
-  done: 2026-07-10 19:09:50.702105665 Z
-  failed_builds: 0
-  files: 1
-  hoc: 38
-  issue: 51
-  repository: 12589687
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-10 19:10:50.789954033 Z
-  what: pull-was-merged
-  when: 2015-07-17 18:08:24.000000000 Z
-  where: github
-  who: 8086956
 - _id: 776654
   _job: 29116062000
   _time: 2026-07-10 19:01:14.354542947 Z
@@ -120861,31 +120604,6 @@
   suggestions: 0
   what: pull-was-closed
   when: 2026-04-26 20:15:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 776655
-  _job: 29116062000
-  _time: 2026-07-10 19:01:22.550481367 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/ubuntu-22.x
-  comments: 1
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 1
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-latex-maven-plugin#28 has been "pull-was-closed".
-  done: 2026-07-10 19:09:50.916109743 Z
-  failed_builds: 0
-  files: 3
-  hoc: 6
-  issue: 28
-  repository: 20635353
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-10 19:10:50.796634255 Z
-  what: pull-was-closed
-  when: 2024-09-27 02:24:06.000000000 Z
   where: github
   who: 29139614
 - _id: 776656
@@ -121006,7 +120724,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-03-12 18:20:04.000000000 Z
+  when: &1158 2026-03-12 18:20:04.000000000 Z
   where: github
   who: 526301
 - _id: 776661
@@ -121104,7 +120822,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-05-11 11:08:25.000000000 Z
+  when: &1159 2026-05-11 11:08:25.000000000 Z
   where: github
   who: 526301
 - _id: 776665
@@ -121178,7 +120896,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-04-26 16:43:40.000000000 Z
+  when: &1160 2026-04-26 16:43:40.000000000 Z
   where: github
   who: 8086956
 - _id: 776671
@@ -121340,10 +121058,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-w3c#158,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+4](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-w3c/issues/158/#issuecomment-4938673540
   is_human: 1
@@ -121365,10 +121079,6 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-log#253,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+8](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-log/issues/253/#issuecomment-4938673790
   is_human: 1
@@ -121390,10 +121100,6 @@
   comments: 1
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-immutable#92,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+12](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-immutable/issues/92/#issuecomment-4938674026
   is_human: 1
@@ -121415,10 +121121,6 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#429,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+16](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/429/#issuecomment-4938674316
   is_human: 1
@@ -121440,10 +121142,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-w3c#160,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+20](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-w3c/issues/160/#issuecomment-4938674519
   is_human: 1
@@ -121465,14 +121163,11 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-matchers#217,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+24](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-matchers/issues/217/#issuecomment-4938674775
   is_human: 1
   issue: 217
+  receipt: receipt-#81013
   repository: 19194296
   review_comments: 0
   seconds: 5404
@@ -121489,14 +121184,11 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#430,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+28](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/430/#issuecomment-4938674998
   is_human: 1
   issue: 430
+  receipt: receipt-#81014
   repository: 12587702
   review_comments: 0
   seconds: 4919
@@ -121513,14 +121205,11 @@
   comments: 1
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-latex-maven-plugin#57,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+32](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-latex-maven-plugin/issues/57/#issuecomment-4938675290
   is_human: 1
   issue: 57
+  receipt: receipt-#81015
   repository: 20635353
   review_comments: 0
   seconds: 8090
@@ -121537,14 +121226,11 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-ssh#328,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+36](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-ssh/issues/328/#issuecomment-4938675574
   is_human: 1
   issue: 328
+  receipt: receipt-#81016
   repository: 23238769
   review_comments: 0
   seconds: 10081
@@ -121561,14 +121247,11 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-xml#514,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+40](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-xml/issues/514/#issuecomment-4938675833
   is_human: 1
   issue: 514
+  receipt: receipt-#81017
   repository: 13717355
   review_comments: 0
   seconds: 7076
@@ -121585,14 +121268,11 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-immutable#93,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+44](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-immutable/issues/93/#issuecomment-4938676069
   is_human: 1
   issue: 93
+  receipt: receipt-#81018
   repository: 16403286
   review_comments: 0
   seconds: 28028
@@ -121609,14 +121289,11 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-parent#823,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+48](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-parent/issues/823/#issuecomment-4938676340
   is_human: 1
   issue: 823
+  receipt: receipt-#81019
   repository: 12590813
   review_comments: 0
   seconds: 18736
@@ -121633,14 +121310,11 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#431,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [+52](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/431/#issuecomment-4938676562
   is_human: 1
   issue: 431
+  receipt: receipt-#81020
   repository: 12587702
   review_comments: 0
   seconds: 12642
@@ -121657,13 +121331,11 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-dynamo#528,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (10) hits-of-code; +16 to
-    give you at least something.  Your running score is [+56](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 10
+  href: https://github.com/jcabi/jcabi-dynamo/issues/528/#issuecomment-4939514001
   is_human: 1
   issue: 528
+  receipt: receipt-#81012
   repository: 12589687
   review_comments: 0
   seconds: 777
@@ -121687,6 +121359,7 @@
   failed_builds: 13
   files: 1
   hoc: 2
+  is_human: 0
   issue: 41
   repository: 15208785
   succeeded_builds: 1
@@ -121710,8 +121383,10 @@
   failed_builds: 0
   files: 2
   hoc: 4
+  is_human: 1
   issue: 48
   repository: 12589424
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -121733,6 +121408,7 @@
   failed_builds: 6
   files: 1
   hoc: 10
+  is_human: 0
   issue: 375
   repository: 12587702
   review: 2025-11-01 03:14:15.000000000 Z
@@ -121757,6 +121433,7 @@
   failed_builds: 143
   files: 1
   hoc: 2
+  is_human: 1
   issue: 19
   repository: 12591382
   succeeded_builds: 11
@@ -121780,6 +121457,7 @@
   failed_builds: 8
   files: 1
   hoc: 2
+  is_human: 1
   issue: 220
   repository: 12262782
   succeeded_builds: 6
@@ -121803,6 +121481,7 @@
   failed_builds: 9
   files: 1
   hoc: 2
+  is_human: 1
   issue: 95
   repository: 12591138
   succeeded_builds: 5
@@ -121826,6 +121505,7 @@
   failed_builds: 8
   files: 10
   hoc: 20
+  is_human: 0
   issue: 74
   repository: 16403286
   succeeded_builds: 6
@@ -121846,6 +121526,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-dynamo#52 has been "pull-was-closed".
+  done: 2026-07-10 21:03:09.672245855 Z
   failed_builds: 0
   files: 7
   hoc: 107
@@ -121853,33 +121534,11 @@
   repository: 12589687
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.464240797 Z
   what: pull-was-closed
   when: 2015-07-27 12:40:06.000000000 Z
   where: github
   who: 6581896
-- _id: 776701
-  _job: 29122486597
-  _time: 2026-07-10 20:49:17.145959912 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-matchers#45 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 339
-  issue: 45
-  repository: 19194296
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2020-11-13 10:36:01.000000000 Z
-  where: github
-  who: 49783909
 - _id: 776702
   _job: 29122486597
   _time: 2026-07-10 20:49:19.893846552 Z
@@ -121892,6 +121551,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-latex-maven-plugin#30 has been "pull-was-closed".
+  done: 2026-07-10 21:03:09.806105535 Z
   failed_builds: 0
   files: 1
   hoc: 2
@@ -121899,6 +121559,7 @@
   repository: 20635353
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.491785255 Z
   what: pull-was-closed
   when: 2025-01-24 03:24:08.000000000 Z
   where: github
@@ -121918,6 +121579,7 @@
   failed_builds: 8
   files: 1
   hoc: 2
+  is_human: 0
   issue: 138
   repository: 13359002
   succeeded_builds: 6
@@ -121941,6 +121603,7 @@
   failed_builds: 10
   files: 1
   hoc: 4
+  is_human: 0
   issue: 116
   repository: 19194304
   review: 2025-10-22 03:13:57.000000000 Z
@@ -121965,9 +121628,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 40
   repository: 12590128
   review: 2026-04-27 03:29:49.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -121986,6 +121651,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-github#1033 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.458304085 Z
   failed_builds: 0
   files: 1
   hoc: 8
@@ -121993,6 +121659,7 @@
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.499488745 Z
   what: pull-was-merged
   when: 2015-03-25 05:55:11.000000000 Z
   where: github
@@ -122012,6 +121679,7 @@
   failed_builds: 7
   files: 1
   hoc: 2
+  is_human: 1
   issue: 229
   repository: 12947626
   succeeded_builds: 8
@@ -122020,29 +121688,6 @@
   when: 2026-06-12 06:33:02.000000000 Z
   where: github
   who: 526301
-- _id: 776708
-  _job: 29122486597
-  _time: 2026-07-10 20:49:59.157140521 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/slf4j-monorepo
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-email#85 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 85
-  repository: 25780072
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2024-08-10 11:48:46.000000000 Z
-  where: github
-  who: 8086956
 - _id: 776709
   _job: 29122486597
   _time: 2026-07-10 20:50:01.869863107 Z
@@ -122058,6 +121703,7 @@
   failed_builds: 2
   files: 1
   hoc: 4
+  is_human: 1
   issue: 578
   repository: 16312153
   succeeded_builds: 20
@@ -122081,9 +121727,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 70
   repository: 12591339
   review: 2026-01-04 03:31:09.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -122105,8 +121753,10 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 49
   repository: 12589424
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -122128,6 +121778,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 1
   issue: 315
   repository: 13624455
   succeeded_builds: 8
@@ -122151,9 +121802,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 399
   repository: 12587702
   review: 2026-04-30 09:03:50.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -122175,9 +121828,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 221
   repository: 12262782
   review: 2026-02-03 16:54:34.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -122199,6 +121854,7 @@
   failed_builds: 9
   files: 1
   hoc: 2
+  is_human: 1
   issue: 97
   repository: 12591138
   succeeded_builds: 5
@@ -122222,6 +121878,7 @@
   failed_builds: 8
   files: 1
   hoc: 2
+  is_human: 0
   issue: 75
   repository: 16403286
   succeeded_builds: 6
@@ -122242,6 +121899,7 @@
   comments_resolved: 0
   comments_to_code: 6
   details: Apparently, jcabi/jcabi-dynamo#59 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.538699563 Z
   failed_builds: 0
   files: 7
   hoc: 64
@@ -122249,33 +121907,11 @@
   repository: 12589687
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.514599600 Z
   what: pull-was-merged
   when: 2015-09-25 22:14:43.000000000 Z
   where: github
   who: 8086956
-- _id: 776718
-  _job: 29122486597
-  _time: 2026-07-10 20:51:14.273751856 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: dependabot/maven/com.sun.jersey-jersey-client-1.19.4
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-matchers#47 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 47
-  repository: 19194296
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2022-07-29 09:21:24.000000000 Z
-  where: github
-  who: 526301
 - _id: 776719
   _job: 29122486597
   _time: 2026-07-10 20:51:16.489709712 Z
@@ -122291,6 +121927,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 37
   repository: 20635353
   succeeded_builds: 0
@@ -122314,6 +121951,7 @@
   failed_builds: 8
   files: 1
   hoc: 2
+  is_human: 0
   issue: 199
   repository: 13359002
   succeeded_builds: 6
@@ -122337,8 +121975,10 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 766
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
@@ -122360,6 +122000,7 @@
   failed_builds: 10
   files: 1
   hoc: 2
+  is_human: 0
   issue: 118
   repository: 19194304
   review: 2025-10-22 03:13:53.000000000 Z
@@ -122384,6 +122025,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 43
   repository: 12590128
   succeeded_builds: 11
@@ -122404,6 +122046,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-github#1035 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.473438003 Z
   failed_builds: 0
   files: 1
   hoc: 5
@@ -122411,6 +122054,7 @@
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.529604798 Z
   what: pull-was-merged
   when: 2015-04-01 00:22:37.000000000 Z
   where: github
@@ -122430,6 +122074,7 @@
   failed_builds: 6
   files: 1
   hoc: 4
+  is_human: 1
   issue: 250
   repository: 12947626
   succeeded_builds: 8
@@ -122453,6 +122098,7 @@
   failed_builds: 3
   files: 1
   hoc: 2
+  is_human: 1
   issue: 87
   repository: 25780072
   succeeded_builds: 8
@@ -122476,6 +122122,7 @@
   failed_builds: 1
   files: 1
   hoc: 2
+  is_human: 1
   issue: 579
   repository: 16312153
   succeeded_builds: 20
@@ -122499,6 +122146,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 1
   issue: 332
   repository: 13624455
   succeeded_builds: 8
@@ -122522,9 +122170,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 400
   repository: 12587702
   review: 2026-03-29 16:51:03.000000000 Z
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
@@ -122546,6 +122196,7 @@
   failed_builds: 13
   files: 1
   hoc: 2
+  is_human: 1
   issue: 33
   repository: 12591382
   succeeded_builds: 1
@@ -122569,6 +122220,7 @@
   failed_builds: 6
   files: 1
   hoc: 4
+  is_human: 0
   issue: 224
   repository: 12262782
   succeeded_builds: 8
@@ -122592,6 +122244,7 @@
   failed_builds: 9
   files: 3
   hoc: 6
+  is_human: 1
   issue: 98
   repository: 12591138
   succeeded_builds: 5
@@ -122615,9 +122268,11 @@
   failed_builds: 0
   files: 2
   hoc: 4
+  is_human: 0
   issue: 76
   repository: 16403286
   review: 2026-05-03 08:56:30.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -122636,6 +122291,7 @@
   comments_resolved: 0
   comments_to_code: 16
   details: Apparently, jcabi/jcabi-dynamo#61 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.556703558 Z
   failed_builds: 0
   files: 23
   hoc: 464
@@ -122643,33 +122299,11 @@
   repository: 12589687
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.536925261 Z
   what: pull-was-merged
   when: 2015-10-07 19:36:00.000000000 Z
   where: github
   who: 8086956
-- _id: 776735
-  _job: 29122486597
-  _time: 2026-07-10 20:53:05.549333706 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: dependabot/maven/com.jcabi-jcabi-1.27.0
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-matchers#48 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 48
-  repository: 19194296
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2022-07-29 09:21:25.000000000 Z
-  where: github
-  who: 526301
 - _id: 776736
   _job: 29122486597
   _time: 2026-07-10 20:53:09.380879825 Z
@@ -122685,6 +122319,7 @@
   failed_builds: 8
   files: 3
   hoc: 6
+  is_human: 1
   issue: 231
   repository: 13359002
   succeeded_builds: 6
@@ -122708,6 +122343,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 119
   repository: 19194304
   succeeded_builds: 2
@@ -122731,9 +122367,11 @@
   failed_builds: 0
   files: 9
   hoc: 18
+  is_human: 0
   issue: 44
   repository: 12590128
   review: 2026-04-26 16:29:46.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -122752,6 +122390,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-github#1037 has been "pull-was-closed".
+  done: 2026-07-10 21:03:09.650780002 Z
   failed_builds: 0
   files: 1
   hoc: 2
@@ -122759,6 +122398,7 @@
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.549233997 Z
   what: pull-was-closed
   when: 2015-04-03 21:57:21.000000000 Z
   where: github
@@ -122778,6 +122418,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 1
   issue: 270
   repository: 12947626
   succeeded_builds: 8
@@ -122786,29 +122427,6 @@
   when: 2026-06-12 06:32:48.000000000 Z
   where: github
   who: 526301
-- _id: 776741
-  _job: 29122486597
-  _time: 2026-07-10 20:53:45.632536127 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/ubuntu-24.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-email#88 has been "pull-was-closed".
-  failed_builds: 0
-  files: 3
-  hoc: 6
-  issue: 88
-  repository: 25780072
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2025-01-23 09:22:38.000000000 Z
-  where: github
-  who: 29139614
 - _id: 776742
   _job: 29122486597
   _time: 2026-07-10 20:53:50.382036284 Z
@@ -122824,6 +122442,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 0
   issue: 403
   repository: 12587702
   succeeded_builds: 8
@@ -122847,6 +122466,7 @@
   failed_builds: 13
   files: 2
   hoc: 4
+  is_human: 1
   issue: 34
   repository: 12591382
   succeeded_builds: 1
@@ -122870,9 +122490,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 233
   repository: 12262782
   review: 2026-02-03 16:54:26.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -122894,6 +122516,7 @@
   failed_builds: 9
   files: 1
   hoc: 2
+  is_human: 1
   issue: 129
   repository: 12591138
   succeeded_builds: 5
@@ -122914,6 +122537,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-dynamo#66 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.574375229 Z
   failed_builds: 0
   files: 7
   hoc: 24
@@ -122921,33 +122545,11 @@
   repository: 12589687
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.561595432 Z
   what: pull-was-merged
   when: 2015-10-16 21:36:07.000000000 Z
   where: github
   who: 8086956
-- _id: 776747
-  _job: 29122486597
-  _time: 2026-07-10 20:54:24.406811048 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: dependabot/maven/org.glassfish.jaxb-jaxb-runtime-3.0.0
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-matchers#49 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 49
-  repository: 19194296
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2022-07-29 09:21:25.000000000 Z
-  where: github
-  who: 526301
 - _id: 776748
   _job: 29122486597
   _time: 2026-07-10 20:54:27.261915009 Z
@@ -122963,6 +122565,7 @@
   failed_builds: 8
   files: 3
   hoc: 6
+  is_human: 1
   issue: 233
   repository: 13359002
   succeeded_builds: 6
@@ -122986,6 +122589,7 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 122
   repository: 19194304
   succeeded_builds: 8
@@ -123006,6 +122610,7 @@
   comments_resolved: 0
   comments_to_code: 49
   details: Apparently, jcabi/jcabi-github#1047 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.520190666 Z
   failed_builds: 0
   files: 9
   hoc: 668
@@ -123013,6 +122618,7 @@
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.583702401 Z
   what: pull-was-merged
   when: 2015-04-22 01:08:44.000000000 Z
   where: github
@@ -123032,6 +122638,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 1
   issue: 272
   repository: 12947626
   succeeded_builds: 8
@@ -123055,6 +122662,7 @@
   failed_builds: 13
   files: 1
   hoc: 2
+  is_human: 1
   issue: 48
   repository: 12591371
   succeeded_builds: 1
@@ -123078,6 +122686,7 @@
   failed_builds: 0
   files: 0
   hoc: 0
+  is_human: 1
   issue: 96
   repository: 25780072
   succeeded_builds: 11
@@ -123101,6 +122710,7 @@
   failed_builds: 13
   files: 1
   hoc: 2
+  is_human: 1
   issue: 35
   repository: 12591382
   succeeded_builds: 1
@@ -123124,6 +122734,7 @@
   failed_builds: 9
   files: 1
   hoc: 4
+  is_human: 1
   issue: 193
   repository: 12591138
   succeeded_builds: 5
@@ -123147,9 +122758,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 92
   repository: 16403286
   review: 2026-07-01 09:37:23.000000000 Z
+  review_comments: 0
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
@@ -123168,6 +122781,7 @@
   comments_resolved: 0
   comments_to_code: 2
   details: Apparently, jcabi/jcabi-dynamo#68 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.590197187 Z
   failed_builds: 0
   files: 3
   hoc: 6
@@ -123175,33 +122789,11 @@
   repository: 12589687
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.592485622 Z
   what: pull-was-merged
   when: 2015-12-18 11:38:26.000000000 Z
   where: github
   who: 8086956
-- _id: 776758
-  _job: 29122486597
-  _time: 2026-07-10 20:55:50.861596351 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: dependabot/maven/com.jcabi-jcabi-http-1.17.3
-  comments: 0
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 0
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-matchers#50 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 50
-  repository: 19194296
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2022-07-29 09:21:26.000000000 Z
-  where: github
-  who: 526301
 - _id: 776759
   _job: 29122486597
   _time: 2026-07-10 20:55:53.707523285 Z
@@ -123217,6 +122809,7 @@
   failed_builds: 8
   files: 1
   hoc: 2
+  is_human: 1
   issue: 234
   repository: 13359002
   succeeded_builds: 6
@@ -123240,6 +122833,7 @@
   failed_builds: 10
   files: 1
   hoc: 2
+  is_human: 0
   issue: 125
   repository: 19194304
   succeeded_builds: 4
@@ -123260,6 +122854,7 @@
   comments_resolved: 0
   comments_to_code: 0
   details: Apparently, jcabi/jcabi-github#1049 has been "pull-was-merged".
+  done: 2026-07-10 21:03:09.499539273 Z
   failed_builds: 0
   files: 1
   hoc: 2
@@ -123267,6 +122862,7 @@
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
+  tombstone: 2026-07-10 21:03:41.607514167 Z
   what: pull-was-merged
   when: 2015-04-14 01:12:22.000000000 Z
   where: github
@@ -123286,6 +122882,7 @@
   failed_builds: 6
   files: 1
   hoc: 2
+  is_human: 1
   issue: 296
   repository: 12947626
   succeeded_builds: 8
@@ -123309,6 +122906,7 @@
   failed_builds: 13
   files: 1
   hoc: 2
+  is_human: 1
   issue: 49
   repository: 12591371
   succeeded_builds: 1
@@ -123323,8 +122921,10 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 6305156
   details: jcabi/jcabi-github#1157 was assigned to @amihaiemil by @amihaiemil.
+  is_human: 1
   issue: 1157
   repository: 14204295
+  unassigned: 2020-01-30 15:49:42.000000000 Z
   what: issue-was-assigned
   when: 2018-11-09 07:27:06.000000000 Z
   where: github
@@ -123335,6 +122935,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 526301
   details: jcabi/jcabi-github#1200 was assigned to @yegor256 by @yegor256.
+  is_human: 1
   issue: 1200
   repository: 14204295
   what: issue-was-assigned
@@ -123347,6 +122948,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 526301
   details: jcabi/jcabi-github#1233 was assigned to @yegor256 by @yegor256.
+  is_human: 1
   issue: 1233
   repository: 14204295
   what: issue-was-assigned
@@ -123361,8 +122963,9 @@
   issue: 1027
   label: bug
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.366966873 Z
   what: label-was-attached
-  when: 2015-03-25 05:48:11.000000000 Z
+  when: &1161 2015-03-25 05:48:11.000000000 Z
   where: github
   who: 526301
 - _id: 776768
@@ -123370,11 +122973,12 @@
   _time: 2026-07-10 21:00:23.489636269 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-xml#105.
+  is_human: 1
   issue: 105
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2026-05-07 18:08:03.000000000 Z
+  when: &1162 2026-05-07 18:08:03.000000000 Z
   where: github
   who: 526301
 - _id: 776769
@@ -123382,11 +122986,12 @@
   _time: 2026-07-10 21:00:28.325006483 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-dynamo#78.
+  is_human: 1
   issue: 78
   label: bug
   repository: 12589687
   what: label-was-attached
-  when: 2026-04-27 09:04:46.000000000 Z
+  when: &1163 2026-04-27 09:04:46.000000000 Z
   where: github
   who: 526301
 - _id: 776770
@@ -123394,11 +122999,12 @@
   _time: 2026-07-10 21:00:31.018365423 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-aspects#414.
+  is_human: 1
   issue: 414
   label: bug
   repository: 12590126
   what: label-was-attached
-  when: 2026-05-15 07:27:35.000000000 Z
+  when: &1164 2026-05-15 07:27:35.000000000 Z
   where: github
   who: 526301
 - _id: 776771
@@ -123406,11 +123012,12 @@
   _time: 2026-07-10 21:00:37.685633630 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-xml#143.
+  is_human: 1
   issue: 143
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2026-05-07 18:07:35.000000000 Z
+  when: &1165 2026-05-07 18:07:35.000000000 Z
   where: github
   who: 526301
 - _id: 776772
@@ -123418,35 +123025,25 @@
   _time: 2026-07-10 21:00:39.578360881 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-dynamo#88.
+  is_human: 1
   issue: 88
   label: bug
   repository: 12589687
   what: label-was-attached
-  when: 2026-04-27 09:05:04.000000000 Z
+  when: &1166 2026-04-27 09:05:04.000000000 Z
   where: github
   who: 526301
-- _id: 776773
-  _job: 29122486597
-  _time: 2026-07-10 21:00:40.396668416 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @dmarkov to the issue jcabi/jcabi-log#20.
-  issue: 20
-  label: bug
-  repository: 12262782
-  what: label-was-attached
-  when: 2015-02-25 07:32:43.000000000 Z
-  where: github
-  who: 5993843
 - _id: 776774
   _job: 29122486597
   _time: 2026-07-10 21:00:44.410027716 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-xml#148.
+  is_human: 1
   issue: 148
   label: bug
   repository: 13717355
   what: label-was-attached
-  when: 2026-05-07 18:07:09.000000000 Z
+  when: &1167 2026-05-07 18:07:09.000000000 Z
   where: github
   who: 526301
 - _id: 776775
@@ -123457,8 +123054,9 @@
   issue: 1034
   label: bug
   repository: 14204295
+  tombstone: 2026-07-10 21:03:09.407457958 Z
   what: label-was-attached
-  when: 2015-06-16 22:26:27.000000000 Z
+  when: &1168 2015-06-16 22:26:27.000000000 Z
   where: github
   who: 526301
 - _id: 776776
@@ -123466,6 +123064,7 @@
   _time: 2026-07-10 21:00:53.154080219 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1038.
+  is_human: 1
   issue: 1038
   label: bug
   repository: 14204295
@@ -123478,6 +123077,7 @@
   _time: 2026-07-10 21:00:53.286885238 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "enhancement" label was attached by @yegor256 to the issue jcabi/jcabi-github#1038.
+  is_human: 1
   issue: 1038
   label: enhancement
   repository: 14204295
@@ -123490,10 +123090,1742 @@
   _time: 2026-07-10 21:01:18.597106243 Z
   _version: 0.19.15/0.61.0/0.17.19
   details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-http#320.
+  is_human: 1
   issue: 320
   label: bug
   repository: 16312153
   what: label-was-attached
-  when: 2026-05-12 12:34:30.000000000 Z
+  when: &1169 2026-05-12 12:34:30.000000000 Z
   where: github
   who: 526301
+- _id: 776779
+  _job: 81548
+  _time: 2026-07-10 21:02:27.616825962 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 0
+  details: The pull request jcabi/jcabi-parent#734 with 2 HoC created by @github-actions[bot]
+    was merged by @yegor256 after 5d5h of being in review and 0 comments.
+  hoc: 2
+  is_human: 0
+  issue: 734
+  merger: 526301
+  repository: 12590813
+  review_comments: 0
+  seconds: 452427
+  what: code-was-contributed
+  when: *1155
+  where: github
+  who: 41898282
+- _id: 776780
+  _job: 81548
+  _time: 2026-07-10 21:02:28.103116951 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-xml#456 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 8mo of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 456
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 20921003
+  what: code-was-contributed
+  when: *1156
+  where: github
+  who: 29139614
+- _id: 776781
+  _job: 81548
+  _time: 2026-07-10 21:02:28.545816218 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#64 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 9mo of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 64
+  merger: 526301
+  repository: 12591339
+  review_comments: 0
+  seconds: 23809215
+  what: code-was-contributed
+  when: *1157
+  where: github
+  who: 29139614
+- _id: 776782
+  _job: 81548
+  _time: 2026-07-10 21:02:28.857058431 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 0
+  details: The pull request jcabi/jcabi-parent#753 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 1mo1w of being in review and 0 comments.
+  hoc: 2
+  is_human: 0
+  issue: 753
+  merger: 526301
+  repository: 12590813
+  review_comments: 0
+  seconds: 3199618
+  what: code-was-contributed
+  when: *1158
+  where: github
+  who: 29139614
+- _id: 776783
+  _job: 81548
+  _time: 2026-07-10 21:02:28.956391292 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 2
+  details: The pull request jcabi/jcabi-xml#466 with 2 HoC created by @renovate[bot]
+    was merged by @yegor256 after 6mo1w of being in review and 2 comments.
+  hoc: 2
+  is_human: 0
+  issue: 466
+  merger: 526301
+  repository: 13717355
+  review_comments: 0
+  seconds: 16569373
+  what: code-was-contributed
+  when: *1159
+  where: github
+  who: 29139614
+- _id: 776784
+  _job: 81548
+  _time: 2026-07-10 21:02:29.056526197 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#39 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 8mo1w of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 39
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 21469944
+  what: code-was-contributed
+  when: *1160
+  where: github
+  who: 29139614
+- _id: 776785
+  _job: 81548
+  _time: 2026-07-10 21:02:29.621442857 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1027 reported
+    by @cvrebert; this means that a bug was accepted as valid, by the project team."
+  done: 2026-07-10 21:03:09.346641876 Z
+  issue: 1027
+  reporter: 419884
+  repository: 14204295
+  tombstone: 2026-07-10 21:03:41.614924541 Z
+  what: bug-was-accepted
+  when: *1161
+  where: github
+  who: 526301
+- _id: 776786
+  _job: 81548
+  _time: 2026-07-10 21:02:30.063715794 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#105 reported by
+    @simonjenga; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 105
+  reporter: 1405237
+  repository: 13717355
+  what: bug-was-accepted
+  when: *1162
+  where: github
+  who: 526301
+- _id: 776787
+  _job: 81548
+  _time: 2026-07-10 21:02:30.268007534 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-dynamo#78 reported
+    by @piotrkot; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 78
+  reporter: 9504395
+  repository: 12589687
+  what: bug-was-accepted
+  when: *1163
+  where: github
+  who: 526301
+- _id: 776788
+  _job: 81548
+  _time: 2026-07-10 21:02:30.492572027 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-aspects#414 reported
+    by @samarthya-gupta1; this means that a bug was accepted as valid, by the project
+    team."
+  is_human: 1
+  issue: 414
+  reporter: 104773627
+  repository: 12590126
+  what: bug-was-accepted
+  when: *1164
+  where: github
+  who: 526301
+- _id: 776789
+  _job: 81548
+  _time: 2026-07-10 21:02:30.916614525 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#143 reported by
+    @skapral; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 143
+  reporter: 1714171
+  repository: 13717355
+  what: bug-was-accepted
+  when: *1165
+  where: github
+  who: 526301
+- _id: 776790
+  _job: 81548
+  _time: 2026-07-10 21:02:31.153656565 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-dynamo#88 reported
+    by @0pdd; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 88
+  reporter: 24456188
+  repository: 12589687
+  what: bug-was-accepted
+  when: *1166
+  where: github
+  who: 526301
+- _id: 776792
+  _job: 81548
+  _time: 2026-07-10 21:02:31.813802429 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-xml#148 reported by
+    @glusk; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 148
+  reporter: 8526099
+  repository: 13717355
+  what: bug-was-accepted
+  when: *1167
+  where: github
+  who: 526301
+- _id: 776793
+  _job: 81548
+  _time: 2026-07-10 21:02:32.030898409 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1034 reported
+    by @asaen; this means that a bug was accepted as valid, by the project team."
+  done: 2026-07-10 21:03:09.390499998 Z
+  issue: 1034
+  reporter: 3275813
+  repository: 14204295
+  tombstone: 2026-07-10 21:03:41.630247658 Z
+  what: bug-was-accepted
+  when: *1168
+  where: github
+  who: 526301
+- _id: 776794
+  _job: 81548
+  _time: 2026-07-10 21:02:32.287519829 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-http#320 reported by
+    @piotrkot; this means that a bug was accepted as valid, by the project team."
+  is_human: 1
+  issue: 320
+  reporter: 9504395
+  repository: 16312153
+  what: bug-was-accepted
+  when: *1169
+  where: github
+  who: 526301
+- _id: 776795
+  _job: 29127825683
+  _time: 2026-07-10 22:30:55.601899347 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven.version
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-beanstalk-maven-plugin#52 has been "pull-was-closed".
+  failed_builds: 13
+  files: 1
+  hoc: 2
+  issue: 52
+  repository: 12591371
+  succeeded_builds: 1
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 776796
+  _job: 29127825683
+  _time: 2026-07-10 22:31:09.886191252 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-framework-monorepo
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#297 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 4
+  issue: 297
+  repository: 12947626
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:31:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 776797
+  _job: 29127825683
+  _time: 2026-07-10 22:31:21.633169233 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-w3c#129 has been "pull-was-closed".
+  failed_builds: 10
+  files: 1
+  hoc: 2
+  issue: 129
+  repository: 19194304
+  review: 2026-03-29 08:56:06.000000000 Z
+  succeeded_builds: 4
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-04-26 20:15:41.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776798
+  _job: 29127825683
+  _time: 2026-07-10 22:31:33.049749463 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven-org.apache.commons-commons-lang3-vulnerability
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#194 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 194
+  repository: 12591138
+  succeeded_builds: 5
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:31:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 776799
+  _job: 29127825683
+  _time: 2026-07-10 22:31:44.774299907 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/javax.xml.bind-jaxb-api-2.3.1
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#51 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 51
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-07-29 09:21:26.000000000 Z
+  where: github
+  who: 526301
+- _id: 776800
+  _job: 29127825683
+  _time: 2026-07-10 22:31:48.149710519 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: patch-1
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 10
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#70 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 3
+  issue: 70
+  repository: 12589687
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-12-22 19:52:24.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776801
+  _job: 29127825683
+  _time: 2026-07-10 22:31:54.266716650 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: RetryCarefulWire
+  comments: 25
+  comments_appreciated: 0
+  comments_by_author: 6
+  comments_by_reviewers: 19
+  comments_resolved: 0
+  comments_to_code: 2
+  details: Apparently, jcabi/jcabi-github#1050 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 354
+  issue: 1050
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-15 03:52:57.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776802
+  _job: 29127825683
+  _time: 2026-07-10 22:32:02.320690532 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven-maven-core-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#235 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 235
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:32:42.000000000 Z
+  where: github
+  who: 526301
+- _id: 776803
+  _job: 29127825683
+  _time: 2026-07-10 22:32:11.670817427 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/actions-setup-java-5.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-email#98 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 4
+  issue: 98
+  repository: 25780072
+  review: 2026-04-27 09:19:11.000000000 Z
+  succeeded_builds: 13
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-27 09:34:04.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776804
+  _job: 29127825683
+  _time: 2026-07-10 22:32:22.914078119 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven-com.google.guava-guava-vulnerability
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-beanstalk-maven-plugin#56 has been "pull-was-closed".
+  failed_builds: 13
+  files: 1
+  hoc: 2
+  issue: 56
+  repository: 12591371
+  succeeded_builds: 1
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 776805
+  _job: 29127825683
+  _time: 2026-07-10 22:32:33.260489042 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/major-junit-framework-monorepo
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#300 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 4
+  issue: 300
+  repository: 12947626
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:31:24.000000000 Z
+  where: github
+  who: 526301
+- _id: 776806
+  _job: 29127825683
+  _time: 2026-07-10 22:32:46.924641597 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/configure
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#53 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 6
+  issue: 53
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-09-26 06:28:49.000000000 Z
+  where: github
+  who: 526301
+- _id: 776807
+  _job: 29127825683
+  _time: 2026-07-10 22:32:50.537877304 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: badges
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 7
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#71 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 71
+  repository: 12589687
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2016-11-18 15:26:52.000000000 Z
+  where: github
+  who: 526301
+- _id: 776808
+  _job: 29127825683
+  _time: 2026-07-10 22:32:55.304308253 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: merge-sha
+  comments: 26
+  comments_appreciated: 0
+  comments_by_author: 5
+  comments_by_reviewers: 21
+  comments_resolved: 0
+  comments_to_code: 8
+  details: Apparently, jcabi/jcabi-github#1053 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 127
+  issue: 1053
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-16 19:12:15.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776809
+  _job: 29127825683
+  _time: 2026-07-10 22:33:03.615317741 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven-maven-model-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#236 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 236
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:32:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 776810
+  _job: 29127825683
+  _time: 2026-07-10 22:33:12.651537223 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/fsfe-reuse-action-6.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-email#99 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 99
+  repository: 25780072
+  review: 2026-04-27 09:19:08.000000000 Z
+  succeeded_builds: 13
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-27 09:26:04.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776811
+  _job: 29127825683
+  _time: 2026-07-10 22:33:29.261814982 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/crate-ci-typos-1.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-beanstalk-maven-plugin#63 has been "pull-was-closed".
+  failed_builds: 13
+  files: 1
+  hoc: 2
+  issue: 63
+  repository: 12591371
+  succeeded_builds: 1
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:31:41.000000000 Z
+  where: github
+  who: 526301
+- _id: 776812
+  _job: 29127825683
+  _time: 2026-07-10 22:33:42.321409650 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-http-1.x
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#54 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 54
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-09-26 07:04:06.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776813
+  _job: 29127825683
+  _time: 2026-07-10 22:33:45.776400780 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '65'
+  comments: 10
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 9
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#74 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 8
+  issue: 74
+  repository: 12589687
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2016-03-21 20:56:25.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776814
+  _job: 29127825683
+  _time: 2026-07-10 22:33:50.522812711 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: fix-1057
+  comments: 39
+  comments_appreciated: 0
+  comments_by_author: 12
+  comments_by_reviewers: 27
+  comments_resolved: 0
+  comments_to_code: 16
+  details: Apparently, jcabi/jcabi-github#1058 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 94
+  issue: 1058
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-15 18:31:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776815
+  _job: 29127825683
+  _time: 2026-07-10 22:34:01.477421825 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#237 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 237
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:32:38.000000000 Z
+  where: github
+  who: 526301
+- _id: 776816
+  _job: 29127825683
+  _time: 2026-07-10 22:34:10.761528381 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/actions-checkout-6.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-email#101 has been "pull-was-merged".
+  failed_builds: 0
+  files: 10
+  hoc: 20
+  issue: 101
+  repository: 25780072
+  review: 2026-04-25 08:33:51.000000000 Z
+  succeeded_builds: 13
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-04-25 08:58:52.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776817
+  _job: 29127825683
+  _time: 2026-07-10 22:34:19.896958921 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/actions-setup-java-5.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-beanstalk-maven-plugin#64 has been "pull-was-closed".
+  failed_builds: 13
+  files: 2
+  hoc: 4
+  issue: 64
+  repository: 12591371
+  succeeded_builds: 1
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:31:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 776818
+  _job: 29127825683
+  _time: 2026-07-10 22:34:29.210154512 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven-maven-settings-3.x
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamodb-maven-plugin#305 has been "pull-was-closed".
+  failed_builds: 7
+  files: 1
+  hoc: 2
+  issue: 305
+  repository: 12947626
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-13 06:18:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 776819
+  _job: 29127825683
+  _time: 2026-07-10 22:34:48.259541275 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-xml-0.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#55 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 55
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-09-28 12:25:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 776820
+  _job: 29127825683
+  _time: 2026-07-10 22:34:52.718108947 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#383 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 2
+  issue: 383
+  repository: 12589687
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-04 19:04:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776821
+  _job: 29127825683
+  _time: 2026-07-10 22:34:59.979388933 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: patch-1
+  comments: 19
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 17
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1059 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1059
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-17 00:03:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776822
+  _job: 29127825683
+  _time: 2026-07-10 22:35:06.336434324 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven-maven-settings-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#238 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 238
+  repository: 13359002
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:32:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 776823
+  _job: 29127825683
+  _time: 2026-07-10 22:35:18.345010682 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven-commons-io-commons-io-vulnerability
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#120 has been "pull-was-closed".
+  failed_builds: 3
+  files: 2
+  hoc: 4
+  issue: 120
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 776824
+  _job: 29127825683
+  _time: 2026-07-10 22:35:23.792119908 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.glassfish.jaxb-jaxb-runtime-2.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#57 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 57
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2023-08-07 16:08:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 776825
+  _job: 29127825683
+  _time: 2026-07-10 22:35:26.775826353 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/aws-java-sdk-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#385 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 4
+  issue: 385
+  repository: 12589687
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-04 19:04:37.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776826
+  _job: 29127825683
+  _time: 2026-07-10 22:35:34.544728268 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: add-IssueEvents
+  comments: 29
+  comments_appreciated: 0
+  comments_by_author: 6
+  comments_by_reviewers: 23
+  comments_resolved: 0
+  comments_to_code: 7
+  details: Apparently, jcabi/jcabi-github#1061 has been "pull-was-merged".
+  failed_builds: 0
+  files: 7
+  hoc: 236
+  issue: 1061
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-17 00:32:18.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776827
+  _job: 29127825683
+  _time: 2026-07-10 22:35:48.746944575 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven-junit-junit-vulnerability
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#121 has been "pull-was-closed".
+  failed_builds: 3
+  files: 2
+  hoc: 4
+  issue: 121
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 776828
+  _job: 29127825683
+  _time: 2026-07-10 22:35:55.506759847 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.slf4j-slf4j-log4j12-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#58 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 58
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2023-08-07 16:07:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776829
+  _job: 29127825683
+  _time: 2026-07-10 22:35:58.738315157 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#386 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 2
+  issue: 386
+  repository: 12589687
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-05 07:50:15.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776830
+  _job: 29127825683
+  _time: 2026-07-10 22:36:06.031944261 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: doc-latestEvent-IllegalStateException
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 11
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1062 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 4
+  issue: 1062
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-20 07:20:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776831
+  _job: 29127825683
+  _time: 2026-07-10 22:36:13.754256839 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/ubuntu-14.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#124 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 124
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-19 06:28:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 776832
+  _job: 29127825683
+  _time: 2026-07-10 22:36:16.891542874 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-1.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#59 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 59
+  repository: 19194296
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-09-26 12:41:29.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776833
+  _job: 29127825683
+  _time: 2026-07-10 22:36:20.326765903 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#416 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 416
+  repository: 12589687
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-05 04:43:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 776834
+  _job: 29127825683
+  _time: 2026-07-10 22:36:28.140738056 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: fix-mocking
+  comments: 75
+  comments_appreciated: 0
+  comments_by_author: 29
+  comments_by_reviewers: 46
+  comments_resolved: 0
+  comments_to_code: 51
+  details: Apparently, jcabi/jcabi-github#1063 has been "pull-was-merged".
+  failed_builds: 0
+  files: 7
+  hoc: 586
+  issue: 1063
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-20 08:47:07.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776835
+  _job: 29127825683
+  _time: 2026-07-10 22:36:48.748286690 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#125 has been "pull-was-closed".
+  failed_builds: 3
+  files: 1
+  hoc: 2
+  issue: 125
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 776836
+  _job: 29127825683
+  _time: 2026-07-10 22:36:53.959777709 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#95 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 2
+  issue: 95
+  repository: 19194296
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-03-13 17:02:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776837
+  _job: 29127825683
+  _time: 2026-07-10 22:37:02.963960277 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.apache.commons-commons-lang3-3.18.0
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#419 has been "pull-was-closed".
+  failed_builds: 8
+  files: 1
+  hoc: 2
+  issue: 419
+  repository: 12589687
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-21 06:10:22.000000000 Z
+  where: github
+  who: 526301
+- _id: 776838
+  _job: 29127825683
+  _time: 2026-07-10 22:37:11.460476252 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: issue-descriptions
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 11
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1066 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 12
+  issue: 1066
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-17 22:24:48.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776839
+  _job: 29127825683
+  _time: 2026-07-10 22:37:17.212566314 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#126 has been "pull-was-closed".
+  failed_builds: 3
+  files: 2
+  hoc: 4
+  issue: 126
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 776840
+  _job: 29127825683
+  _time: 2026-07-10 22:37:22.334124290 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-xml-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#123 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 123
+  repository: 19194296
+  review: 2026-02-03 03:20:21.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-03 06:24:00.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776841
+  _job: 29127825683
+  _time: 2026-07-10 22:37:32.027979187 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/maven-org.apache.commons-commons-lang3-vulnerability
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#420 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 2
+  issue: 420
+  repository: 12589687
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-05 07:50:18.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776842
+  _job: 29127825683
+  _time: 2026-07-10 22:37:39.653349306 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: mock-gen-events
+  comments: 36
+  comments_appreciated: 0
+  comments_by_author: 11
+  comments_by_reviewers: 25
+  comments_resolved: 0
+  comments_to_code: 18
+  details: Apparently, jcabi/jcabi-github#1068 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 162
+  issue: 1068
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-22 02:21:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776843
+  _job: 29127825683
+  _time: 2026-07-10 22:37:52.106190321 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-maven-slf4j-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#127 has been "pull-was-closed".
+  failed_builds: 3
+  files: 2
+  hoc: 4
+  issue: 127
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:02.000000000 Z
+  where: github
+  who: 526301
+- _id: 776844
+  _job: 29127825683
+  _time: 2026-07-10 22:37:57.642687349 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.slf4j-slf4j-log4j12-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#124 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 4
+  issue: 124
+  repository: 19194296
+  review: 2026-02-03 03:20:17.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-03 06:33:03.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776845
+  _job: 29127825683
+  _time: 2026-07-10 22:38:07.881073600 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.codehaus.mojo-build-helper-maven-plugin-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#421 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 421
+  repository: 12589687
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-05 04:42:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 776846
+  _job: 29127825683
+  _time: 2026-07-10 22:38:15.753715464 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: MkIssue-events
+  comments: 34
+  comments_appreciated: 0
+  comments_by_author: 8
+  comments_by_reviewers: 26
+  comments_resolved: 0
+  comments_to_code: 12
+  details: Apparently, jcabi/jcabi-github#1073 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 63
+  issue: 1073
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-24 08:26:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776847
+  _job: 29127825683
+  _time: 2026-07-10 22:38:25.855851406 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-junit-dep-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#128 has been "pull-was-closed".
+  failed_builds: 3
+  files: 1
+  hoc: 2
+  issue: 128
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:35:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 776848
+  _job: 29127825683
+  _time: 2026-07-10 22:38:31.219258566 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/xml-apis-xml-apis-replacement
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#125 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 125
+  repository: 19194296
+  review: 2026-02-03 03:20:14.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-03 03:31:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776849
+  _job: 29127825683
+  _time: 2026-07-10 22:38:47.193774639 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-codec-commons-codec-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-dynamo#422 has been "pull-was-closed".
+  failed_builds: 6
+  files: 1
+  hoc: 2
+  issue: 422
+  repository: 12589687
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-05 07:50:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776850
+  _job: 29127825683
+  _time: 2026-07-10 22:38:54.596193529 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: event-label-getter
+  comments: 17
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 15
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1076 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 121
+  issue: 1076
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-04-30 23:57:11.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776851
+  _job: 29127825683
+  _time: 2026-07-10 22:39:00.904364031 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven.plugins-maven-compiler-plugin-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#129 has been "pull-was-closed".
+  failed_builds: 3
+  files: 2
+  hoc: 4
+  issue: 129
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:34:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 776852
+  _job: 29127825683
+  _time: 2026-07-10 22:39:06.035621082 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#126 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 126
+  repository: 19194296
+  review: 2026-02-03 03:20:10.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-02-03 06:33:53.000000000 Z
+  where: github
+  who: 29139614
+- _id: 776853
+  _job: 29127825683
+  _time: 2026-07-10 22:39:16.068148564 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: patch-1
+  comments: 21
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 20
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1077 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 1
+  issue: 1077
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2015-05-04 06:32:24.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776854
+  _job: 29127825683
+  _time: 2026-07-10 22:39:22.863709897 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven.shared-maven-dependency-tree-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 1
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#130 has been "pull-was-closed".
+  failed_builds: 3
+  files: 1
+  hoc: 2
+  issue: 130
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-12 06:34:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 776855
+  _job: 29127825683
+  _time: 2026-07-10 22:39:28.931881463 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#128 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 128
+  repository: 19194296
+  review: 2026-02-03 03:20:06.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-03 06:15:38.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776856
+  _job: 29127825683
+  _time: 2026-07-10 22:39:38.413256666 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: hibernate
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1079 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 5
+  issue: 1079
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2015-05-09 17:40:53.000000000 Z
+  where: github
+  who: 419884
+- _id: 776857
+  _job: 29127825683
+  _time: 2026-07-10 22:39:40.639012608 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven.wagon-wagon-provider-api-2.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aether#131 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 131
+  repository: 12587970
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-03 14:42:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 776858
+  _job: 29127825683
+  _time: 2026-07-10 22:39:43.344562851 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-matchers#129 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 129
+  repository: 19194296
+  review: 2026-02-03 03:20:02.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-02-03 06:04:18.000000000 Z
+  where: github
+  who: 8086956
+- _id: 776859
+  _job: 29127825683
+  _time: 2026-07-10 22:41:19.935692922 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  assigner: 6305156
+  details: jcabi/jcabi-github#1301 was assigned to @0crat by @amihaiemil.
+  issue: 1301
+  repository: 14204295
+  what: issue-was-assigned
+  when: 2018-12-05 07:39:23.000000000 Z
+  where: github
+  who: 24387511
