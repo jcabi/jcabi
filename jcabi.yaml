@@ -4,11 +4,11 @@
   deleted: 8
   error:
   - 'each() timed out after 60s (execution expired), fb size is 6934: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T16:26:28Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T17:30:59Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
   - 'each() timed out after 60s (execution expired), fb size is 6934: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T16:27:36Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T17:32:40Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
   - 'each() timed out after 60s (execution expired), fb size is 6934: (and (or (eq
@@ -16,13 +16,11 @@
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
-  - 'each() timed out after 60s (execution expired), fb size is 6934: (and (eq what
-    ''quality-of-service'') (exists since) (exists when))'
   inserted: 8
-  seconds: 634.005278345
+  seconds: 716.839960259
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-11 16:34:19.856533624 Z
+  when: 2026-07-11 17:39:00.403614302 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -115264,7 +115262,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14770941856
+  events_were_scanned: 14773516590
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115330,17 +115328,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 11491299245
   issues_were_scanned: 0
-  labels_were_scanned: 1555
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1275
+  types_were_scanned: 1345
   what: iterate
   where: github
 - _id: 776599
@@ -120987,3 +120985,15 @@
   when: *1199
   where: github
   who: 29139614
+- _id: 777244
+  _job: 29161592763
+  _time: 2026-07-11 17:38:19.086143747 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  total_active_contributors: 4
+  total_files: 2276
+  total_forks: 994
+  total_issues: 2922
+  total_pulls: 6830
+  total_stars: 2255
+  what: dimensions-of-terrain
+  when: 2026-07-11 17:38:19.095835751 Z
