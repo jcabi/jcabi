@@ -3,26 +3,24 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 7069: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T10:46:28Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 7021: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T12:15:53Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 7069: (and (absent
-    stale) (eq where ''github'') (exists who))'
-  - 'each() timed out after 60s (execution expired), fb size is 7069: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T10:48:29Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 7021: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T12:17:06Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 7069: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 7021: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 895.891420233
+  seconds: 727.604669526
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-11 10:52:39.561353046 Z
+  when: 2026-07-11 12:22:44.747063677 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -39551,6 +39549,27 @@
   _time: 2026-03-11 09:15:00.859798236 Z
   _version: 0.19.9/0.60.1/0.17.15
   since: 2026-02-15 07:59:04.000000000 Z
+  some_review_size:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  some_reviewers_per_pull:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  some_reviews_per_pull:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   what: quality-of-service
   when: &359 2026-03-11 09:15:00.000000000 Z
 - _id: 756946
@@ -72218,8 +72237,15 @@
   - '1625'
   - 1627-1633
   - 1636-1641
-  - 1674-1678
-  - '1685'
+  - 1643-1657
+  - '1659'
+  - 1661-1662
+  - '1666'
+  - 1669-1688
+  - 1690-1693
+  - 1695-1703
+  - '1705'
+  - '1708'
   - 1763-1764
   - '1772'
   - 1780-1781
@@ -72658,97 +72684,6 @@
   when: 2023-05-30 03:06:52.000000000 Z
   where: github
   who: 29139614
-- _id: 768059
-  _job: 25623065618
-  _time: 2026-05-10 07:47:17.156630165 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  details: The missing pull jcabi/jcabi-github#1643 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1643
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-05-30 21:50:29.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768060
-  _job: 25623065618
-  _time: 2026-05-10 07:47:17.845781591 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  details: The missing pull jcabi/jcabi-github#1644 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1644
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-05-31 01:33:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768061
-  _job: 25623065618
-  _time: 2026-05-10 07:47:18.524612858 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  details: The missing pull jcabi/jcabi-github#1645 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1645
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-05-31 01:33:20.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768062
-  _job: 25623065618
-  _time: 2026-05-10 07:47:19.201012589 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/commons-io-commons-io-2.x
-  details: The missing pull jcabi/jcabi-github#1646 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1646
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-07 22:52:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768063
-  _job: 25623065618
-  _time: 2026-05-10 07:47:19.906026068 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1647 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1647
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-09 02:10:33.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768064
-  _job: 25623065618
-  _time: 2026-05-10 07:47:20.714089670 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
-  details: The missing pull jcabi/jcabi-github#1648 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1648
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-09 18:57:18.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768065
-  _job: 25623065618
-  _time: 2026-05-10 07:47:21.390581665 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
-  details: The missing pull jcabi/jcabi-github#1649 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1649
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-09 18:57:22.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768066
   _job: 25625612342
   _time: 2026-05-10 09:51:02.319838939 Z
@@ -72826,110 +72761,6 @@
   when: 2026-05-10 09:56:52.880609656 Z
   where: github
   who: 1494347
-- _id: 768080
-  _job: 25625612342
-  _time: 2026-05-10 10:00:17.225056847 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/commons-codec-commons-codec-1.x
-  details: The missing pull jcabi/jcabi-github#1650 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1650
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-21 19:58:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768081
-  _job: 25625612342
-  _time: 2026-05-10 10:00:18.206414580 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1651 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1651
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-29 21:59:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768082
-  _job: 25625612342
-  _time: 2026-05-10 10:00:18.920431133 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1652 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1652
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-06-30 20:09:55.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768083
-  _job: 25625612342
-  _time: 2026-05-10 10:00:19.655285003 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/net.sf.saxon-saxon-he-12.x
-  details: The missing pull jcabi/jcabi-github#1653 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1653
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-07-04 19:53:24.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768084
-  _job: 25625612342
-  _time: 2026-05-10 10:00:20.357443467 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  details: The missing pull jcabi/jcabi-github#1654 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1654
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-07-19 15:02:01.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768085
-  _job: 25625612342
-  _time: 2026-05-10 10:00:21.130350480 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  details: The missing pull jcabi/jcabi-github#1655 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1655
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-07-21 11:26:38.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768086
-  _job: 25625612342
-  _time: 2026-05-10 10:00:21.902329580 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.apache.commons-commons-lang3-3.x
-  details: The missing pull jcabi/jcabi-github#1656 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1656
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-07-28 04:25:42.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768087
-  _job: 25625612342
-  _time: 2026-05-10 10:00:22.659764735 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1657 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1657
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-07-31 23:15:34.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768088
   _job: 25625612342
   _time: 2026-05-10 10:00:23.537357005 Z
@@ -72942,19 +72773,6 @@
   when: 2023-08-02 10:31:20.000000000 Z
   where: github
   who: 51804353
-- _id: 768089
-  _job: 25625612342
-  _time: 2026-05-10 10:00:24.133315765 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: 1658_url_coordinates
-  details: The missing pull jcabi/jcabi-github#1659 has been opened by @volodya-lombrozo.
-  is_human: 1
-  issue: 1659
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-02 11:32:37.000000000 Z
-  where: github
-  who: 51804353
 - _id: 768090
   _job: 25625612342
   _time: 2026-05-10 10:00:24.889224628 Z
@@ -72965,32 +72783,6 @@
   repository: 14204295
   what: issue-was-opened
   when: 2023-08-03 08:47:23.000000000 Z
-  where: github
-  who: 51804353
-- _id: 768091
-  _job: 25625612342
-  _time: 2026-05-10 10:00:25.292940844 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: 1660_stars
-  details: The missing pull jcabi/jcabi-github#1661 has been opened by @volodya-lombrozo.
-  is_human: 1
-  issue: 1661
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-03 16:16:52.000000000 Z
-  where: github
-  who: 51804353
-- _id: 768092
-  _job: 25625612342
-  _time: 2026-05-10 10:00:26.070337448 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: 1660_statistics
-  details: The missing pull jcabi/jcabi-github#1662 has been opened by @volodya-lombrozo.
-  is_human: 1
-  issue: 1662
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-04 13:22:26.000000000 Z
   where: github
   who: 51804353
 - _id: 768093
@@ -73029,19 +72821,6 @@
   when: 2023-08-04 13:44:22.000000000 Z
   where: github
   who: 24456188
-- _id: 768096
-  _job: 25625612342
-  _time: 2026-05-10 10:00:28.262359912 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: 1663_smart_statistics
-  details: The missing pull jcabi/jcabi-github#1666 has been opened by @volodya-lombrozo.
-  is_human: 1
-  issue: 1666
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-04 15:29:00.000000000 Z
-  where: github
-  who: 51804353
 - _id: 768097
   _job: 25625612342
   _time: 2026-05-10 10:03:07.353726487 Z
@@ -73203,188 +72982,6 @@
   when: 2023-08-06 08:17:21.000000000 Z
   where: github
   who: 51804353
-- _id: 768139
-  _job: 25630583606
-  _time: 2026-05-10 14:12:00.764754279 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/ubuntu-22.x
-  details: The missing pull jcabi/jcabi-github#1669 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1669
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-09 12:19:01.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768140
-  _job: 25630583606
-  _time: 2026-05-10 14:12:02.113141344 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.aspectj-aspectjrt-1.x
-  details: The missing pull jcabi/jcabi-github#1670 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1670
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-08-16 07:23:27.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768141
-  _job: 25630583606
-  _time: 2026-05-10 14:12:03.144751176 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.slf4j-slf4j-reload4j-2.x
-  details: The missing pull jcabi/jcabi-github#1671 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1671
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-03 18:42:15.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768142
-  _job: 25630583606
-  _time: 2026-05-10 14:12:04.149438719 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.aspectj-aspectjrt-1.x
-  details: The missing pull jcabi/jcabi-github#1672 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1672
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-04 06:02:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768143
-  _job: 25630583606
-  _time: 2026-05-10 14:12:05.085439643 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/actions-checkout-4.x
-  details: The missing pull jcabi/jcabi-github#1673 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1673
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-04 13:03:34.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768144
-  _job: 25630583606
-  _time: 2026-05-10 14:12:06.053582288 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/codecov-codecov-action-4.x
-  details: The missing pull jcabi/jcabi-github#1679 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1679
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-14 16:38:44.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768145
-  _job: 25630583606
-  _time: 2026-05-10 14:12:06.962384335 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: master
-  details: The missing pull jcabi/jcabi-github#1680 has been opened by @nappeg-latrus.
-  is_human: 1
-  issue: 1680
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-17 08:37:42.000000000 Z
-  where: github
-  who: 140319422
-- _id: 768146
-  _job: 25630583606
-  _time: 2026-05-10 14:12:08.256214679 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.projectlombok-lombok-1.x
-  details: The missing pull jcabi/jcabi-github#1681 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1681
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-20 03:49:10.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768147
-  _job: 25630583606
-  _time: 2026-05-10 14:12:09.246791947 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/actions-checkout-digest
-  details: The missing pull jcabi/jcabi-github#1682 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1682
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-22 19:21:28.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768148
-  _job: 25630583606
-  _time: 2026-05-10 14:12:10.178320979 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/commons-io-commons-io-2.x
-  details: The missing pull jcabi/jcabi-github#1683 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1683
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-09-29 22:03:09.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768149
-  _job: 25630583606
-  _time: 2026-05-10 14:12:11.151805888 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1684 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1684
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-11 00:40:47.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768150
-  _job: 25630583606
-  _time: 2026-05-10 14:12:12.323653931 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  details: The missing pull jcabi/jcabi-github#1686 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1686
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-13 01:30:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768151
-  _job: 25630583606
-  _time: 2026-05-10 14:12:13.298891704 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  details: The missing pull jcabi/jcabi-github#1687 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1687
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-13 01:30:19.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768152
-  _job: 25630583606
-  _time: 2026-05-10 14:12:14.287590515 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  details: The missing pull jcabi/jcabi-github#1688 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1688
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-13 02:03:23.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768153
   _job: 25630583606
   _time: 2026-05-10 14:12:15.284325885 Z
@@ -73462,58 +73059,6 @@
   when: 2023-08-04 16:30:59.000000000 Z
   where: github
   who: 24456188
-- _id: 768188
-  _job: 25636040142
-  _time: 2026-05-10 18:26:01.065831494 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
-  details: The missing pull jcabi/jcabi-github#1690 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1690
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-20 10:08:40.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768189
-  _job: 25636040142
-  _time: 2026-05-10 18:26:02.489453603 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
-  details: The missing pull jcabi/jcabi-github#1691 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1691
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-20 10:47:13.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768190
-  _job: 25636040142
-  _time: 2026-05-10 18:26:03.465985787 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/commons-io-commons-io-2.x
-  details: The missing pull jcabi/jcabi-github#1692 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1692
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-26 04:51:03.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768191
-  _job: 25636040142
-  _time: 2026-05-10 18:26:04.482495679 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.glassfish.grizzly-grizzly-http-servlet-server-4.x
-  details: The missing pull jcabi/jcabi-github#1693 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1693
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-10-26 15:46:21.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768192
   _job: 25636040142
   _time: 2026-05-10 18:26:05.454896254 Z
@@ -73527,123 +73072,6 @@
   when: 2023-10-29 10:05:52.000000000 Z
   where: github
   who: 29139614
-- _id: 768193
-  _job: 25636040142
-  _time: 2026-05-10 18:26:06.385877403 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.jcabi.incubator-xembly-0.x
-  details: The missing pull jcabi/jcabi-github#1695 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1695
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-07 10:27:56.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768194
-  _job: 25636040142
-  _time: 2026-05-10 18:26:07.364371331 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  details: The missing pull jcabi/jcabi-github#1696 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1696
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-15 22:55:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768195
-  _job: 25636040142
-  _time: 2026-05-10 18:26:08.281420859 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  details: The missing pull jcabi/jcabi-github#1697 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1697
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-15 22:55:49.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768196
-  _job: 25636040142
-  _time: 2026-05-10 18:26:09.289373254 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  details: The missing pull jcabi/jcabi-github#1698 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1698
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-15 23:40:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768197
-  _job: 25636040142
-  _time: 2026-05-10 18:26:10.176826200 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.jcabi.incubator-xembly-0.x
-  details: The missing pull jcabi/jcabi-github#1699 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1699
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-16 12:05:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768198
-  _job: 25636040142
-  _time: 2026-05-10 18:26:11.113735659 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/org.apache.commons-commons-lang3-3.x
-  details: The missing pull jcabi/jcabi-github#1700 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1700
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-22 04:52:25.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768199
-  _job: 25636040142
-  _time: 2026-05-10 18:26:12.396311118 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/actions-setup-java-4.x
-  details: The missing pull jcabi/jcabi-github#1701 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1701
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-29 16:44:17.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768200
-  _job: 25636040142
-  _time: 2026-05-10 18:26:13.394287983 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/net.sf.saxon-saxon-he-12.x
-  details: The missing pull jcabi/jcabi-github#1702 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1702
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-29 19:09:06.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768201
-  _job: 25636040142
-  _time: 2026-05-10 18:26:14.384889776 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/commons-io-commons-io-2.x
-  details: The missing pull jcabi/jcabi-github#1703 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1703
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-11-29 22:49:39.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768202
   _job: 25636040142
   _time: 2026-05-10 18:26:15.340662943 Z
@@ -73655,19 +73083,6 @@
   repository: 14204295
   what: pull-was-opened
   when: 2023-12-11 03:49:16.000000000 Z
-  where: github
-  who: 29139614
-- _id: 768203
-  _job: 25636040142
-  _time: 2026-05-10 18:26:16.270658743 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/major-guava-monorepo
-  details: The missing pull jcabi/jcabi-github#1705 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1705
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-12-19 00:31:05.000000000 Z
   where: github
   who: 29139614
 - _id: 768204
@@ -73707,19 +73122,6 @@
   when: 2023-12-20 15:27:47.000000000 Z
   where: github
   who: 47859223
-- _id: 768216
-  _job: 25637858319
-  _time: 2026-05-10 19:48:29.402332872 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  details: The missing pull jcabi/jcabi-github#1708 has been opened by @renovate[bot].
-  is_human: 0
-  issue: 1708
-  repository: 14204295
-  what: pull-was-opened
-  when: 2023-12-24 17:25:23.000000000 Z
-  where: github
-  who: 29139614
 - _id: 768217
   _job: 25637858319
   _time: 2026-05-10 19:48:30.395307970 Z
@@ -116425,7 +115827,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14753756350
+  events_were_scanned: 14757934967
   issues_were_scanned: 353
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -116491,17 +115893,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1278
+  assignees_were_scanned: 1349
   earliest_issue_was_found: 1
   events_were_scanned: 11491299245
   issues_were_scanned: 1774
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
-  merges_were_scanned: 1708
+  merges_were_scanned: 1936
   min_issue_was_found: 1935
   min_pull_was_found: 1942
   repository: 14204295
-  types_were_scanned: 1427
+  types_were_scanned: 1560
   what: iterate
   where: github
 - _id: 776599
@@ -121969,857 +121371,6 @@
   when: 2025-11-21 09:53:40.000000000 Z
   where: github
   who: 29139614
-- _id: 777145
-  _job: 29149619072
-  _time: 2026-07-11 10:39:22.225045862 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1643 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1643
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-05-30 22:35:59.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777146
-  _job: 29149619072
-  _time: 2026-07-11 10:39:51.646971252 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1644 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1644
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-05-31 02:16:03.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777147
-  _job: 29149619072
-  _time: 2026-07-11 10:40:05.596285226 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1645 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1645
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-05-31 02:09:44.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777148
-  _job: 29149619072
-  _time: 2026-07-11 10:40:18.470183890 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/commons-io-commons-io-2.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1646 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1646
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-07 23:36:48.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777149
-  _job: 29149619072
-  _time: 2026-07-11 10:40:27.420376738 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/guava-monorepo
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1647 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1647
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-09 02:57:27.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777150
-  _job: 29149619072
-  _time: 2026-07-11 10:40:35.054818345 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1648 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1648
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-09 19:39:07.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777151
-  _job: 29149619072
-  _time: 2026-07-11 10:40:42.502006550 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1649 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1649
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-09 19:32:05.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777152
-  _job: 29149619072
-  _time: 2026-07-11 10:40:50.431356590 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/commons-codec-commons-codec-1.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1650 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1650
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-21 20:35:02.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777153
-  _job: 29149619072
-  _time: 2026-07-11 10:40:55.882554535 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/guava-monorepo
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1651 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1651
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-29 22:40:55.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777154
-  _job: 29149619072
-  _time: 2026-07-11 10:41:00.883778976 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/guava-monorepo
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1652 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1652
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-06-30 20:40:43.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777155
-  _job: 29149619072
-  _time: 2026-07-11 10:41:05.150114257 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/net.sf.saxon-saxon-he-12.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1653 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1653
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-07-04 20:41:38.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777156
-  _job: 29149619072
-  _time: 2026-07-11 10:41:09.368821648 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1654 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1654
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-07-19 15:38:24.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777157
-  _job: 29149619072
-  _time: 2026-07-11 10:41:14.408239489 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.jcabi-jcabi-xml-0.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1655 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1655
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-07-21 12:45:12.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777158
-  _job: 29149619072
-  _time: 2026-07-11 10:41:19.503533752 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.apache.commons-commons-lang3-3.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1656 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1656
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-07-28 04:48:11.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777159
-  _job: 29149619072
-  _time: 2026-07-11 10:41:24.181355736 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/guava-monorepo
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1657 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1657
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-07-31 23:37:08.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777160
-  _job: 29149619072
-  _time: 2026-07-11 10:41:28.484529456 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: 1658_url_coordinates
-  comments: 9
-  comments_appreciated: 2
-  comments_by_author: 3
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1659 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 214
-  issue: 1659
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-02 11:50:29.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777161
-  _job: 29149619072
-  _time: 2026-07-11 10:41:34.626895977 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: 1660_stars
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 2
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1661 has been "pull-was-merged".
-  failed_builds: 0
-  files: 9
-  hoc: 228
-  issue: 1661
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-04 07:54:08.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777162
-  _job: 29149619072
-  _time: 2026-07-11 10:41:39.774446614 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: 1660_statistics
-  comments: 5
-  comments_appreciated: 1
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1662 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 330
-  issue: 1662
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-04 13:43:50.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777163
-  _job: 29149619072
-  _time: 2026-07-11 10:41:44.473697320 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: 1663_smart_statistics
-  comments: 9
-  comments_appreciated: 2
-  comments_by_author: 2
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1666 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 409
-  issue: 1666
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-04 16:30:40.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777164
-  _job: 29149619072
-  _time: 2026-07-11 10:41:50.664551222 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/ubuntu-22.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1669 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 6
-  issue: 1669
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-09 12:44:04.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777165
-  _job: 29149619072
-  _time: 2026-07-11 10:41:55.580514055 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.aspectj-aspectjrt-1.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1670 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1670
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-08-16 07:34:28.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777166
-  _job: 29149619072
-  _time: 2026-07-11 10:41:59.960964656 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.slf4j-slf4j-reload4j-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1671 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1671
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-03 19:34:30.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777167
-  _job: 29149619072
-  _time: 2026-07-11 10:42:04.641164146 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.aspectj-aspectjrt-1.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1672 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1672
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-04 07:41:01.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777168
-  _job: 29149619072
-  _time: 2026-07-11 10:42:09.157635743 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/actions-checkout-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1673 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 8
-  issue: 1673
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-04 13:52:58.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777169
-  _job: 29149619072
-  _time: 2026-07-11 10:42:12.710895511 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/codecov-codecov-action-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1679 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1679
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-14 17:46:35.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777170
-  _job: 29149619072
-  _time: 2026-07-11 10:42:16.165410501 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 4
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1680 has been "pull-was-closed".
-  failed_builds: 0
-  files: 1
-  hoc: 53
-  issue: 1680
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2023-09-18 10:38:08.000000000 Z
-  where: github
-  who: 140319422
-- _id: 777171
-  _job: 29149619072
-  _time: 2026-07-11 10:42:19.984247120 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.projectlombok-lombok-1.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1681 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1681
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-20 04:43:12.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777172
-  _job: 29149619072
-  _time: 2026-07-11 10:42:24.021190447 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/actions-checkout-digest
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1682 has been "pull-was-closed".
-  failed_builds: 0
-  files: 2
-  hoc: 4
-  issue: 1682
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2025-01-09 05:21:04.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777173
-  _job: 29149619072
-  _time: 2026-07-11 10:42:28.373888537 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/commons-io-commons-io-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1683 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1683
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-29 22:46:21.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777174
-  _job: 29149619072
-  _time: 2026-07-11 10:42:33.292348417 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/guava-monorepo
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1684 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1684
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-11 01:56:59.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777175
-  _job: 29149619072
-  _time: 2026-07-11 10:42:37.615499104 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1686 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1686
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-13 02:03:08.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777176
-  _job: 29149619072
-  _time: 2026-07-11 10:42:42.079339496 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1687 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1687
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-13 01:55:01.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777177
-  _job: 29149619072
-  _time: 2026-07-11 10:42:46.509822149 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1688 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1688
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-13 02:45:48.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777178
-  _job: 29149619072
-  _time: 2026-07-11 10:42:50.977662196 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1690 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1690
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-20 10:46:59.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777179
-  _job: 29149619072
-  _time: 2026-07-11 10:42:55.301731646 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1691 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1691
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-20 11:40:06.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777180
-  _job: 29149619072
-  _time: 2026-07-11 10:42:59.744020441 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/commons-io-commons-io-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1692 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1692
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-26 05:42:37.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777181
-  _job: 29149619072
-  _time: 2026-07-11 10:43:04.475656464 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.glassfish.grizzly-grizzly-http-servlet-server-4.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1693 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1693
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-10-26 16:44:37.000000000 Z
-  where: github
-  who: 8086956
 - _id: 777182
   _job: 29149619072
   _time: 2026-07-11 10:43:08.905306508 Z
@@ -122835,221 +121386,16 @@
   failed_builds: 0
   files: 3
   hoc: 6
+  is_human: 1
   issue: 1694
   repository: 14204295
+  review_comments: 0
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
   when: 2026-05-18 06:31:04.000000000 Z
   where: github
   who: 526301
-- _id: 777183
-  _job: 29149619072
-  _time: 2026-07-11 10:43:20.682078433 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.jcabi.incubator-xembly-0.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1695 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1695
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-07 10:47:11.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777184
-  _job: 29149619072
-  _time: 2026-07-11 10:43:25.536298180 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1696 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1696
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-15 23:46:53.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777185
-  _job: 29149619072
-  _time: 2026-07-11 10:43:30.030162047 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1697 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1697
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-15 23:40:07.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777186
-  _job: 29149619072
-  _time: 2026-07-11 10:43:34.553494339 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1698 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1698
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-16 00:52:17.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777187
-  _job: 29149619072
-  _time: 2026-07-11 10:43:39.083614369 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/com.jcabi.incubator-xembly-0.x
-  comments: 6
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1699 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1699
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-16 12:46:02.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777188
-  _job: 29149619072
-  _time: 2026-07-11 10:43:43.403691015 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/org.apache.commons-commons-lang3-3.x
-  comments: 5
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1700 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1700
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-22 06:42:17.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777189
-  _job: 29149619072
-  _time: 2026-07-11 10:43:47.663160647 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/actions-setup-java-4.x
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1701 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 4
-  issue: 1701
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-29 19:27:12.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777190
-  _job: 29149619072
-  _time: 2026-07-11 10:43:51.516075401 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/net.sf.saxon-saxon-he-12.x
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1702 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1702
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-29 20:28:21.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777191
-  _job: 29149619072
-  _time: 2026-07-11 10:43:55.275783719 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/commons-io-commons-io-2.x
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1703 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1703
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-29 23:47:23.000000000 Z
-  where: github
-  who: 8086956
 - _id: 777192
   _job: 29149619072
   _time: 2026-07-11 10:43:59.194026410 Z
@@ -123065,6 +121411,7 @@
   failed_builds: 9
   files: 1
   hoc: 2
+  is_human: 0
   issue: 1704
   repository: 14204295
   succeeded_builds: 6
@@ -123074,31 +121421,330 @@
   where: github
   who: 29139614
 - _id: 777193
-  _job: 29149619072
-  _time: 2026-07-11 10:44:10.110902968 Z
+  _job: 29152160127
+  _time: 2026-07-11 12:11:40.646410758 Z
   _version: 0.19.15/0.61.0/0.17.19
-  branch: renovate/major-guava-monorepo
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
   comments: 3
   comments_appreciated: 1
   comments_by_author: 0
   comments_by_reviewers: 3
   comments_resolved: 0
   comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1705 has been "pull-was-merged".
+  details: Apparently, jcabi/jcabi-github#1709 has been "pull-was-merged".
   failed_builds: 0
   files: 1
   hoc: 2
-  issue: 1705
+  issue: 1709
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
-  when: 2024-03-13 20:48:10.000000000 Z
+  when: 2023-12-24 18:40:29.000000000 Z
   where: github
   who: 8086956
 - _id: 777194
-  _job: 29149619072
-  _time: 2026-07-11 10:44:13.755800851 Z
+  _job: 29152160127
+  _time: 2026-07-11 12:11:58.413179213 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.glassfish.grizzly-grizzly-http-servlet-server-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1710 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1710
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2023-12-24 19:44:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777195
+  _job: 29152160127
+  _time: 2026-07-11 12:12:10.838018623 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1711 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1711
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2023-12-24 20:43:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777196
+  _job: 29152160127
+  _time: 2026-07-11 12:12:19.243123430 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1712 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1712
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2023-12-26 14:51:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777197
+  _job: 29152160127
+  _time: 2026-07-11 12:12:25.331713734 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1713 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1713
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2023-12-27 14:50:56.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777198
+  _job: 29152160127
+  _time: 2026-07-11 12:12:31.059677583 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.slf4j-slf4j-reload4j-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1714 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1714
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2023-12-28 22:59:48.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777199
+  _job: 29152160127
+  _time: 2026-07-11 12:12:36.038728147 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.slf4j-slf4j-reload4j-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1715 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1715
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-01-08 22:44:42.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777200
+  _job: 29152160127
+  _time: 2026-07-11 12:12:40.744681180 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi.incubator-xembly-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1716 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1716
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-01-11 06:49:20.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777201
+  _job: 29152160127
+  _time: 2026-07-11 12:12:44.590034207 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/actions-cache-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1717 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 4
+  issue: 1717
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-01-17 18:36:13.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777202
+  _job: 29152160127
+  _time: 2026-07-11 12:12:47.773961839 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi.incubator-xembly-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1718 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1718
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-01-30 20:42:45.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777203
+  _job: 29152160127
+  _time: 2026-07-11 12:12:50.971210547 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1719 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1719
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-02-06 00:50:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777204
+  _job: 29152160127
+  _time: 2026-07-11 12:12:54.675614048 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-codec-commons-codec-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1722 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1722
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-02-08 23:49:06.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777205
+  _job: 29152160127
+  _time: 2026-07-11 12:12:57.244463093 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1723 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1723
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-07 09:47:40.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777206
+  _job: 29152160127
+  _time: 2026-07-11 12:13:00.085990493 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1724 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1724
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-07 10:53:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777207
+  _job: 29152160127
+  _time: 2026-07-11 12:13:02.779616939 Z
   _version: 0.19.15/0.61.0/0.17.19
   branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
   comments: 3
@@ -123107,15 +121753,776 @@
   comments_by_reviewers: 3
   comments_resolved: 0
   comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1708 has been "pull-was-merged".
+  details: Apparently, jcabi/jcabi-github#1725 has been "pull-was-merged".
   failed_builds: 0
   files: 1
   hoc: 2
-  issue: 1708
+  issue: 1725
   repository: 14204295
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
-  when: 2023-12-24 17:45:57.000000000 Z
+  when: 2024-03-09 21:50:34.000000000 Z
   where: github
   who: 8086956
+- _id: 777208
+  _job: 29152160127
+  _time: 2026-07-11 12:13:05.394469849 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1726 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1726
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-09 22:50:59.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777209
+  _job: 29152160127
+  _time: 2026-07-11 12:13:08.227631811 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1727 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1727
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-09 23:52:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777210
+  _job: 29152160127
+  _time: 2026-07-11 12:13:11.017902372 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1728 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1728
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-12 22:53:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777211
+  _job: 29152160127
+  _time: 2026-07-11 12:13:13.609133487 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1729 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1729
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2024-03-12 23:49:29.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777212
+  _job: 29152160127
+  _time: 2026-07-11 12:13:16.430387650 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1730 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1730
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2024-03-13 01:01:26.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777213
+  _job: 29152160127
+  _time: 2026-07-11 12:13:18.687557040 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven.plugins-maven-compiler-plugin-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1732 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1732
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-18 23:54:59.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777214
+  _job: 29152160127
+  _time: 2026-07-11 12:13:20.959144382 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1733 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1733
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-20 04:51:08.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777215
+  _job: 29152160127
+  _time: 2026-07-11 12:13:23.147175843 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1735 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1735
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-03-28 23:58:35.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777216
+  _job: 29152160127
+  _time: 2026-07-11 12:13:25.399454404 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1736 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1736
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-04-08 19:02:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777217
+  _job: 29152160127
+  _time: 2026-07-11 12:13:27.662251780 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1737 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1737
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-04-12 18:00:46.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777218
+  _job: 29152160127
+  _time: 2026-07-11 12:13:29.739958812 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-codec-commons-codec-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1738 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1738
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-04-27 16:49:53.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777219
+  _job: 29152160127
+  _time: 2026-07-11 12:13:31.913258354 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1740 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1740
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-05-02 16:52:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777220
+  _job: 29152160127
+  _time: 2026-07-11 12:13:34.081420741 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1741 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1741
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-05-05 05:12:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777221
+  _job: 29152160127
+  _time: 2026-07-11 12:13:36.297498572 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1742 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1742
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-05-05 04:55:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777222
+  _job: 29152160127
+  _time: 2026-07-11 12:13:38.554250352 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1743 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1743
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-05-05 05:48:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777223
+  _job: 29152160127
+  _time: 2026-07-11 12:13:40.713056431 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1746 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1746
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-05-31 19:53:36.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777224
+  _job: 29152160127
+  _time: 2026-07-11 12:13:42.863875668 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.projectlombok-lombok-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1748 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1748
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-06-28 02:10:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777225
+  _job: 29152160127
+  _time: 2026-07-11 12:13:45.227355923 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/net.sf.saxon-saxon-he-12.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1750 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1750
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-02 11:55:13.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777226
+  _job: 29152160127
+  _time: 2026-07-11 12:13:47.398285889 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-core-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1751 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1751
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-05 21:11:26.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777227
+  _job: 29152160127
+  _time: 2026-07-11 12:13:49.573034359 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1752 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1752
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-05 20:54:32.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777228
+  _job: 29152160127
+  _time: 2026-07-11 12:13:51.584112916 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson-jackson-bom-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1753 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1753
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-05 21:55:50.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777229
+  _job: 29152160127
+  _time: 2026-07-11 12:13:53.601015824 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/commons-codec-commons-codec-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1754 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1754
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-16 02:21:58.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777230
+  _job: 29152160127
+  _time: 2026-07-11 12:13:55.788382717 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1755 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1755
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-07-17 21:52:44.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777231
+  _job: 29152160127
+  _time: 2026-07-11 12:13:58.089787785 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/major-javahamcrest-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1756 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1756
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-01 11:53:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777232
+  _job: 29152160127
+  _time: 2026-07-11 12:14:00.373949496 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1757 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1757
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-07 00:01:11.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777233
+  _job: 29152160127
+  _time: 2026-07-11 12:14:02.588139767 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1758 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1758
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-07 17:52:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777234
+  _job: 29152160127
+  _time: 2026-07-11 12:14:05.072238473 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1759 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1759
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-08 14:57:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777235
+  _job: 29152160127
+  _time: 2026-07-11 12:14:07.324527263 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/slf4j-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1760 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1760
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-10 11:51:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777236
+  _job: 29152160127
+  _time: 2026-07-11 12:14:09.596404463 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/guava-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1761 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1761
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-17 02:12:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777237
+  _job: 29152160127
+  _time: 2026-07-11 12:14:11.833269775 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-log-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1762 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1762
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2024-08-22 11:24:57.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777238
+  _job: 29152160127
+  _time: 2026-07-11 12:14:14.069030545 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.apache.commons-commons-lang3-3.18.0
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1805 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 1805
+  repository: 14204295
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-06-19 06:12:46.000000000 Z
+  where: github
+  who: 526301
+- _id: 777239
+  _job: 29152160127
+  _time: 2026-07-11 12:14:20.205586859 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/xml-apis-xml-apis-2.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1822 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1822
+  repository: 14204295
+  review: 2026-03-30 03:41:08.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-18 06:30:59.000000000 Z
+  where: github
+  who: 526301
+- _id: 777240
+  _job: 29152160127
+  _time: 2026-07-11 12:14:27.655862695 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/crate-ci-typos-1.x
+  comments: 2
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 2
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1834 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1834
+  repository: 14204295
+  review: 2026-01-08 03:11:05.000000000 Z
+  succeeded_builds: 14
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-05-08 14:39:07.000000000 Z
+  where: github
+  who: 526301
