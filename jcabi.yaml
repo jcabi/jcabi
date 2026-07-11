@@ -3,24 +3,20 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 7252: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T03:55:50Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 7149: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T06:36:29Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 7252: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-11T03:57:04Z''))
-    ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
-    where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 7252: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 7149: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 829.244609985
+  seconds: 709.002634188
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-11 04:02:46.220545357 Z
+  when: 2026-07-11 06:42:58.016149294 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -67969,32 +67965,6 @@
   when: 2018-04-06 05:31:53.000000000 Z
   where: github
   who: 37520415
-- _id: 767246
-  _job: 25535792809
-  _time: 2026-05-08 04:06:38.731879417 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1373'
-  details: The missing pull jcabi/jcabi-github#1380 has been opened by @amihaiemil.
-  is_human: 1
-  issue: 1380
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-07 09:10:46.000000000 Z
-  where: github
-  who: 6305156
-- _id: 767247
-  _job: 25535792809
-  _time: 2026-05-08 04:06:39.701678087 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1379'
-  details: The missing pull jcabi/jcabi-github#1381 has been opened by @amihaiemil.
-  is_human: 1
-  issue: 1381
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-07 13:33:50.000000000 Z
-  where: github
-  who: 6305156
 - _id: 767248
   _job: 25535792809
   _time: 2026-05-08 04:06:40.404075239 Z
@@ -68007,19 +67977,6 @@
   when: 2018-04-07 13:43:58.000000000 Z
   where: github
   who: 24456188
-- _id: 767249
-  _job: 25535792809
-  _time: 2026-05-08 04:06:40.776015575 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1382'
-  details: The missing pull jcabi/jcabi-github#1383 has been opened by @amihaiemil.
-  is_human: 1
-  issue: 1383
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-07 14:09:31.000000000 Z
-  where: github
-  who: 6305156
 - _id: 767250
   _job: 25535792809
   _time: 2026-05-08 04:06:41.505278040 Z
@@ -68044,32 +68001,6 @@
   when: 2018-04-07 14:35:31.000000000 Z
   where: github
   who: 6305156
-- _id: 767252
-  _job: 25535792809
-  _time: 2026-05-08 04:06:42.288023933 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1363'
-  details: The missing pull jcabi/jcabi-github#1386 has been opened by @amihaiemil.
-  is_human: 1
-  issue: 1386
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-14 13:02:29.000000000 Z
-  where: github
-  who: 6305156
-- _id: 767253
-  _job: 25535792809
-  _time: 2026-05-08 04:06:43.047547009 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1377'
-  details: The missing pull jcabi/jcabi-github#1387 has been opened by @llorllale.
-  is_human: 1
-  issue: 1387
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-14 15:24:55.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767254
   _job: 25535792809
   _time: 2026-05-08 04:06:43.800986575 Z
@@ -68082,19 +68013,6 @@
   when: 2018-04-14 18:14:34.000000000 Z
   where: github
   who: 24456188
-- _id: 767255
-  _job: 25535792809
-  _time: 2026-05-08 04:06:44.185568812 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1375'
-  details: The missing pull jcabi/jcabi-github#1389 has been opened by @llorllale.
-  is_human: 1
-  issue: 1389
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-16 17:14:47.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767256
   _job: 25535792809
   _time: 2026-05-08 04:06:44.907235896 Z
@@ -68107,32 +68025,6 @@
   when: 2018-04-18 20:10:11.000000000 Z
   where: github
   who: 24456188
-- _id: 767257
-  _job: 25535792809
-  _time: 2026-05-08 04:06:45.294144822 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1304'
-  details: The missing pull jcabi/jcabi-github#1391 has been opened by @llorllale.
-  is_human: 1
-  issue: 1391
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-19 14:55:55.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767258
-  _job: 25535792809
-  _time: 2026-05-08 04:06:46.073230397 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1384'
-  details: The missing pull jcabi/jcabi-github#1392 has been opened by @llorllale.
-  is_human: 1
-  issue: 1392
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-19 18:09:57.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767259
   _job: 25535792809
   _time: 2026-05-08 04:06:50.990766862 Z
@@ -68674,19 +68566,6 @@
   when: 2018-04-18 20:10:12.000000000 Z
   where: github
   who: 24456188
-- _id: 767330
-  _job: 25544401861
-  _time: 2026-05-08 08:12:43.706540443 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1388'
-  details: The missing pull jcabi/jcabi-github#1393 has been opened by @llorllale.
-  is_human: 1
-  issue: 1393
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-19 18:21:39.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767331
   _job: 25544401861
   _time: 2026-05-08 08:12:44.845806212 Z
@@ -68709,45 +68588,6 @@
   repository: 14204295
   what: issue-was-opened
   when: 2018-04-19 18:57:45.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767333
-  _job: 25544401861
-  _time: 2026-05-08 08:12:45.850475211 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1395'
-  details: The missing pull jcabi/jcabi-github#1396 has been opened by @llorllale.
-  is_human: 1
-  issue: 1396
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-23 13:01:13.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767334
-  _job: 25544401861
-  _time: 2026-05-08 08:12:46.707531209 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1390'
-  details: The missing pull jcabi/jcabi-github#1397 has been opened by @llorllale.
-  is_human: 1
-  issue: 1397
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-23 14:18:24.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767335
-  _job: 25544401861
-  _time: 2026-05-08 08:12:47.608939648 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1394'
-  details: The missing pull jcabi/jcabi-github#1398 has been opened by @llorllale.
-  is_human: 1
-  issue: 1398
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-23 14:36:40.000000000 Z
   where: github
   who: 2019896
 - _id: 767336
@@ -68786,19 +68626,6 @@
   when: 2018-04-25 08:08:20.000000000 Z
   where: github
   who: 24456188
-- _id: 767339
-  _job: 25544401861
-  _time: 2026-05-08 08:12:49.587186984 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1399'
-  details: The missing pull jcabi/jcabi-github#1402 has been opened by @llorllale.
-  is_human: 1
-  issue: 1402
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-04-30 21:45:51.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767340
   _job: 25544401861
   _time: 2026-05-08 08:12:50.405995826 Z
@@ -68823,19 +68650,6 @@
   when: 2018-05-06 08:32:49.000000000 Z
   where: github
   who: 24456188
-- _id: 767342
-  _job: 25544401861
-  _time: 2026-05-08 08:12:51.695767107 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1400'
-  details: The missing pull jcabi/jcabi-github#1405 has been opened by @llorllale.
-  is_human: 1
-  issue: 1405
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-05-06 12:28:19.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767343
   _job: 25544401861
   _time: 2026-05-08 08:12:52.607847432 Z
@@ -69265,32 +69079,6 @@
   when: 2018-05-10 17:58:15.000000000 Z
   where: github
   who: 22658439
-- _id: 767387
-  _job: 25549335832
-  _time: 2026-05-08 10:08:47.971465212 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1401'
-  details: The missing pull jcabi/jcabi-github#1411 has been opened by @llorllale.
-  is_human: 1
-  issue: 1411
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-05-14 20:06:29.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767388
-  _job: 25549335832
-  _time: 2026-05-08 10:08:49.087128936 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1404'
-  details: The missing pull jcabi/jcabi-github#1412 has been opened by @llorllale.
-  is_human: 1
-  issue: 1412
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-05-14 20:16:51.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767389
   _job: 25549335832
   _time: 2026-05-08 10:08:49.986010653 Z
@@ -69315,32 +69103,6 @@
   when: 2018-05-18 17:31:47.000000000 Z
   where: github
   who: 1203246
-- _id: 767391
-  _job: 25549335832
-  _time: 2026-05-08 10:08:51.070898611 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1406'
-  details: The missing pull jcabi/jcabi-github#1415 has been opened by @llorllale.
-  is_human: 1
-  issue: 1415
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-05-23 14:40:08.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767392
-  _job: 25549335832
-  _time: 2026-05-08 10:08:51.863608622 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1407'
-  details: The missing pull jcabi/jcabi-github#1416 has been opened by @llorllale.
-  is_human: 1
-  issue: 1416
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-05-23 15:21:12.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767393
   _job: 25549335832
   _time: 2026-05-08 10:08:52.689618163 Z
@@ -69365,32 +69127,6 @@
   when: 2018-05-30 15:38:48.000000000 Z
   where: github
   who: 24456188
-- _id: 767395
-  _job: 25549335832
-  _time: 2026-05-08 10:08:53.724672161 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1417'
-  details: The missing pull jcabi/jcabi-github#1419 has been opened by @llorllale.
-  is_human: 1
-  issue: 1419
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-06-06 13:31:41.000000000 Z
-  where: github
-  who: 2019896
-- _id: 767396
-  _job: 25549335832
-  _time: 2026-05-08 10:08:54.523238108 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1418'
-  details: The missing pull jcabi/jcabi-github#1420 has been opened by @llorllale.
-  is_human: 1
-  issue: 1420
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-06-06 13:58:57.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767398
   _job: 25549335832
   _time: 2026-05-08 10:08:56.061549411 Z
@@ -69403,19 +69139,6 @@
   when: 2018-06-15 01:24:22.000000000 Z
   where: github
   who: 26273246
-- _id: 767399
-  _job: 25549335832
-  _time: 2026-05-08 10:08:56.605483658 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1421'
-  details: The missing pull jcabi/jcabi-github#1423 has been opened by @llorllale.
-  is_human: 1
-  issue: 1423
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-06-19 13:36:20.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767402
   _job: 25549335832
   _time: 2026-05-08 10:08:58.591908370 Z
@@ -69894,19 +69617,6 @@
   when: 2018-08-21 00:05:44.000000000 Z
   where: github
   who: 10237095
-- _id: 767475
-  _job: 25565397168
-  _time: 2026-05-08 16:07:45.735563011 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1425'
-  details: The missing pull jcabi/jcabi-github#1428 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1428
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-08-23 03:16:45.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767477
   _job: 25565397168
   _time: 2026-05-08 16:07:47.195022220 Z
@@ -69919,58 +69629,6 @@
   when: 2018-08-29 12:53:20.000000000 Z
   where: github
   who: 24456188
-- _id: 767478
-  _job: 25565397168
-  _time: 2026-05-08 16:07:47.883741067 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1429'
-  details: The missing pull jcabi/jcabi-github#1431 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1431
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-08-29 13:00:14.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767479
-  _job: 25565397168
-  _time: 2026-05-08 16:07:48.931995333 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1424'
-  details: The missing pull jcabi/jcabi-github#1432 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1432
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-08-31 18:47:05.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767480
-  _job: 25565397168
-  _time: 2026-05-08 16:07:49.791519967 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1370'
-  details: The missing pull jcabi/jcabi-github#1433 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1433
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-08-31 19:35:16.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767481
-  _job: 25565397168
-  _time: 2026-05-08 16:07:50.612337347 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1430'
-  details: The missing pull jcabi/jcabi-github#1434 has been opened by @llorllale.
-  is_human: 1
-  issue: 1434
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-09-10 21:16:18.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767482
   _job: 25565397168
   _time: 2026-05-08 16:07:51.697455556 Z
@@ -69995,19 +69653,6 @@
   when: 2018-09-19 16:38:31.000000000 Z
   where: github
   who: 43316566
-- _id: 767484
-  _job: 25565397168
-  _time: 2026-05-08 16:07:52.732961281 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1435'
-  details: The missing pull jcabi/jcabi-github#1437 has been opened by @llorllale.
-  is_human: 1
-  issue: 1437
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-09-20 20:37:25.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767486
   _job: 25565397168
   _time: 2026-05-08 16:07:54.014213719 Z
@@ -70020,32 +69665,6 @@
   when: 2018-10-07 16:49:45.000000000 Z
   where: github
   who: 24456188
-- _id: 767487
-  _job: 25565397168
-  _time: 2026-05-08 16:07:54.418304438 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1438'
-  details: The missing pull jcabi/jcabi-github#1440 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1440
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-10-08 13:05:37.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767488
-  _job: 25565397168
-  _time: 2026-05-08 16:07:55.184764307 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1439'
-  details: The missing pull jcabi/jcabi-github#1441 has been opened by @llorllale.
-  is_human: 1
-  issue: 1441
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-10-14 15:48:08.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767489
   _job: 25565397168
   _time: 2026-05-08 16:07:56.025264310 Z
@@ -70058,19 +69677,6 @@
   when: 2018-10-18 17:24:05.000000000 Z
   where: github
   who: 24456188
-- _id: 767490
-  _job: 25565397168
-  _time: 2026-05-08 16:07:56.485569266 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: dangling_puzzle
-  details: The missing pull jcabi/jcabi-github#1443 has been opened by @llorllale.
-  is_human: 1
-  issue: 1443
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-10-18 19:27:06.000000000 Z
-  where: github
-  who: 2019896
 - _id: 767491
   _job: 25565397168
   _time: 2026-05-08 16:07:58.969731606 Z
@@ -70379,19 +69985,6 @@
   when: 2018-10-18 17:24:06.000000000 Z
   where: github
   who: 24456188
-- _id: 767537
-  _job: 25570594153
-  _time: 2026-05-08 17:59:29.158542177 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1442'
-  details: The missing pull jcabi/jcabi-github#1444 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1444
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-10-26 01:15:11.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767538
   _job: 25570594153
   _time: 2026-05-08 17:59:30.185047276 Z
@@ -70428,45 +70021,6 @@
   when: 2018-12-04 19:17:09.000000000 Z
   where: github
   who: 24456188
-- _id: 767541
-  _job: 25570594153
-  _time: 2026-05-08 17:59:32.031165964 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1244'
-  details: The missing pull jcabi/jcabi-github#1448 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1448
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-06 19:46:37.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767542
-  _job: 25570594153
-  _time: 2026-05-08 17:59:32.858711779 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1230'
-  details: The missing pull jcabi/jcabi-github#1449 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1449
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-07 03:22:04.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767543
-  _job: 25570594153
-  _time: 2026-05-08 17:59:33.672292676 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1301'
-  details: The missing pull jcabi/jcabi-github#1450 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1450
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-08 12:30:56.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767544
   _job: 25570594153
   _time: 2026-05-08 17:59:34.417326818 Z
@@ -70479,58 +70033,6 @@
   when: 2018-12-11 08:46:07.000000000 Z
   where: github
   who: 24456188
-- _id: 767545
-  _job: 25570594153
-  _time: 2026-05-08 17:59:34.838340421 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1447'
-  details: The missing pull jcabi/jcabi-github#1452 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1452
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-11 19:10:43.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767546
-  _job: 25570594153
-  _time: 2026-05-08 17:59:35.624914665 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1225'
-  details: The missing pull jcabi/jcabi-github#1453 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1453
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-13 13:13:41.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767547
-  _job: 25570594153
-  _time: 2026-05-08 17:59:36.417669792 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1086'
-  details: The missing pull jcabi/jcabi-github#1454 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1454
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-18 17:22:28.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767548
-  _job: 25570594153
-  _time: 2026-05-08 17:59:37.249560652 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1110'
-  details: The missing pull jcabi/jcabi-github#1455 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1455
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-18 20:10:28.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767549
   _job: 25570594153
   _time: 2026-05-08 17:59:38.056022984 Z
@@ -70555,32 +70057,6 @@
   when: 2018-12-20 08:00:56.000000000 Z
   where: github
   who: 24456188
-- _id: 767551
-  _job: 25570594153
-  _time: 2026-05-08 17:59:39.013883161 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1457'
-  details: The missing pull jcabi/jcabi-github#1458 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1458
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-20 11:53:51.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767552
-  _job: 25570594153
-  _time: 2026-05-08 17:59:39.818030398 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1204'
-  details: The missing pull jcabi/jcabi-github#1459 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1459
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-24 19:49:21.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767553
   _job: 25570594153
   _time: 2026-05-08 17:59:40.686170450 Z
@@ -70975,45 +70451,6 @@
   when: 2018-12-26 09:26:41.000000000 Z
   where: github
   who: 24456188
-- _id: 767617
-  _job: 25584119295
-  _time: 2026-05-08 23:28:43.280393829 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1451'
-  details: The missing pull jcabi/jcabi-github#1463 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1463
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-26 13:25:49.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767618
-  _job: 25584119295
-  _time: 2026-05-08 23:28:44.684109588 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1462'
-  details: The missing pull jcabi/jcabi-github#1464 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1464
-  repository: 14204295
-  what: pull-was-opened
-  when: 2018-12-27 13:21:54.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767619
-  _job: 25584119295
-  _time: 2026-05-08 23:28:45.547930454 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: gh-pages
-  details: The missing pull jcabi/jcabi-github#1465 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1465
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-02 13:36:42.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767620
   _job: 25584119295
   _time: 2026-05-08 23:28:46.818623190 Z
@@ -71074,32 +70511,6 @@
   when: 2019-01-02 18:40:02.000000000 Z
   where: github
   who: 24456188
-- _id: 767625
-  _job: 25584119295
-  _time: 2026-05-08 23:28:49.125898313 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1466'
-  details: The missing pull jcabi/jcabi-github#1471 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1471
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-03 16:02:28.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767626
-  _job: 25584119295
-  _time: 2026-05-08 23:28:50.181264386 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1461'
-  details: The missing pull jcabi/jcabi-github#1472 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1472
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-04 20:46:30.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767627
   _job: 25584119295
   _time: 2026-05-08 23:28:51.169677561 Z
@@ -71112,19 +70523,6 @@
   when: 2019-01-09 11:37:47.000000000 Z
   where: github
   who: 24456188
-- _id: 767628
-  _job: 25584119295
-  _time: 2026-05-08 23:28:51.667755827 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1469'
-  details: The missing pull jcabi/jcabi-github#1475 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1475
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-15 18:18:00.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767629
   _job: 25584119295
   _time: 2026-05-08 23:28:52.582382484 Z
@@ -71149,19 +70547,6 @@
   when: 2019-01-17 10:03:42.000000000 Z
   where: github
   who: 24456188
-- _id: 767631
-  _job: 25584119295
-  _time: 2026-05-08 23:28:53.507663228 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1467'
-  details: The missing pull jcabi/jcabi-github#1478 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1478
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-17 16:30:39.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767642
   _job: 25585856268
   _time: 2026-05-09 00:25:19.936066294 Z
@@ -71292,32 +70677,6 @@
   when: 2019-01-17 10:03:45.000000000 Z
   where: github
   who: 24456188
-- _id: 767652
-  _job: 25585856268
-  _time: 2026-05-09 00:25:30.276977554 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1473'
-  details: The missing pull jcabi/jcabi-github#1479 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1479
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-17 19:52:48.000000000 Z
-  where: github
-  who: 33915433
-- _id: 767653
-  _job: 25585856268
-  _time: 2026-05-09 00:25:31.324780795 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1468'
-  details: The missing pull jcabi/jcabi-github#1480 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1480
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-17 20:07:34.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767654
   _job: 25585856268
   _time: 2026-05-09 00:25:32.124327103 Z
@@ -71354,19 +70713,6 @@
   when: 2019-01-21 08:17:17.000000000 Z
   where: github
   who: 24456188
-- _id: 767657
-  _job: 25585856268
-  _time: 2026-05-09 00:25:33.848241918 Z
-  _version: 0.19.9/0.60.2/0.17.17
-  branch: '1470'
-  details: The missing pull jcabi/jcabi-github#1484 has been opened by @paulodamaso.
-  is_human: 1
-  issue: 1484
-  repository: 14204295
-  what: pull-was-opened
-  when: 2019-01-21 13:35:55.000000000 Z
-  where: github
-  who: 33915433
 - _id: 767658
   _job: 25585856268
   _time: 2026-05-09 00:25:34.572527063 Z
@@ -73242,11 +72588,31 @@
   - '1372'
   - '1374'
   - '1376'
-  - '1379'
-  - '1421'
-  - 1424-1425
-  - '1429'
-  - '1438'
+  - 1379-1381
+  - '1383'
+  - 1386-1387
+  - '1389'
+  - 1391-1393
+  - 1396-1398
+  - '1402'
+  - '1405'
+  - 1411-1412
+  - 1415-1416
+  - 1419-1421
+  - 1423-1425
+  - 1428-1429
+  - 1431-1434
+  - 1437-1438
+  - 1440-1441
+  - 1443-1444
+  - 1448-1450
+  - 1452-1455
+  - 1458-1459
+  - 1463-1465
+  - 1471-1472
+  - '1475'
+  - 1478-1480
+  - '1484'
   - '1496'
   - '1533'
   - '1538'
@@ -118224,7 +117590,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14734260715
+  events_were_scanned: 14741092671
   issues_were_scanned: 353
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -118290,17 +117656,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1557
+  assignees_were_scanned: 0
   earliest_issue_was_found: 1
   events_were_scanned: 11491299245
   issues_were_scanned: 1774
-  labels_were_scanned: 1276
+  labels_were_scanned: 1346
   latest_issue_was_found: 1806
-  merges_were_scanned: 1484
+  merges_were_scanned: 1583
   min_issue_was_found: 1935
   min_pull_was_found: 1942
   repository: 14204295
-  types_were_scanned: 1258
+  types_were_scanned: 1329
   what: iterate
   where: github
 - _id: 776599
@@ -122935,7 +122301,7 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-02-03 04:55:07.000000000 Z
+  when: &1193 2026-02-03 04:55:07.000000000 Z
   where: github
   who: 8086956
 - _id: 776874
@@ -123010,483 +122376,6 @@
   when: 2026-06-12 06:31:38.000000000 Z
   where: github
   who: 526301
-- _id: 776907
-  _job: 29132166423
-  _time: 2026-07-11 00:20:42.544148103 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 63
-  comments_appreciated: 0
-  comments_by_author: 12
-  comments_by_reviewers: 51
-  comments_resolved: 0
-  comments_to_code: 11
-  details: Apparently, jcabi/jcabi-github#1174 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.042385702 Z
-  failed_builds: 0
-  files: 8
-  hoc: 177
-  issue: 1174
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.894827135 Z
-  what: pull-was-merged
-  when: 2015-10-12 19:58:18.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776908
-  _job: 29132166423
-  _time: 2026-07-11 00:20:54.486161629 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: ghe_uri_support
-  comments: 27
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 23
-  comments_resolved: 0
-  comments_to_code: 7
-  details: Apparently, jcabi/jcabi-github#1191 has been "pull-was-closed".
-  done: 2026-07-11 00:31:24.470820248 Z
-  failed_builds: 0
-  files: 2
-  hoc: 78
-  issue: 1191
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.901215823 Z
-  what: pull-was-closed
-  when: 2016-03-04 08:16:49.000000000 Z
-  where: github
-  who: 2791303
-- _id: 776909
-  _job: 29132166423
-  _time: 2026-07-11 00:21:00.547111117 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 29
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 27
-  comments_resolved: 0
-  comments_to_code: 1
-  details: Apparently, jcabi/jcabi-github#1196 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.082593322 Z
-  failed_builds: 0
-  files: 15
-  hoc: 200
-  issue: 1196
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.907788044 Z
-  what: pull-was-merged
-  when: 2016-01-19 00:24:09.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776910
-  _job: 29132166423
-  _time: 2026-07-11 00:21:07.481114289 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1195'
-  comments: 55
-  comments_appreciated: 0
-  comments_by_author: 8
-  comments_by_reviewers: 47
-  comments_resolved: 0
-  comments_to_code: 29
-  details: Apparently, jcabi/jcabi-github#1199 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.099475672 Z
-  failed_builds: 0
-  files: 230
-  hoc: 3320
-  issue: 1199
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.914339852 Z
-  what: pull-was-merged
-  when: 2016-02-09 05:04:03.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776911
-  _job: 29132166423
-  _time: 2026-07-11 00:21:17.435814110 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1188'
-  comments: 4
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1201 has been "pull-was-closed".
-  done: 2026-07-11 00:31:24.533505023 Z
-  failed_builds: 0
-  files: 1
-  hoc: 9
-  issue: 1201
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.920709036 Z
-  what: pull-was-closed
-  when: 2018-04-02 11:22:52.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776912
-  _job: 29132166423
-  _time: 2026-07-11 00:21:19.932694802 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 30
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 27
-  comments_resolved: 0
-  comments_to_code: 3
-  details: Apparently, jcabi/jcabi-github#1217 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.117974563 Z
-  failed_builds: 0
-  files: 1
-  hoc: 16
-  issue: 1217
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.934236276 Z
-  what: pull-was-merged
-  when: 2016-03-29 16:52:24.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776913
-  _job: 29132166423
-  _time: 2026-07-11 00:21:26.439913657 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1187'
-  comments: 30
-  comments_appreciated: 1
-  comments_by_author: 2
-  comments_by_reviewers: 28
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1231 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.148469630 Z
-  failed_builds: 0
-  files: 3
-  hoc: 20
-  issue: 1231
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.944189499 Z
-  what: pull-was-merged
-  when: 2016-06-16 03:24:50.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776914
-  _job: 29132166423
-  _time: 2026-07-11 00:21:33.239554012 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: files-paging
-  comments: 11
-  comments_appreciated: 1
-  comments_by_author: 3
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1232 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.293913602 Z
-  failed_builds: 0
-  files: 1
-  hoc: 11
-  issue: 1232
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.952469568 Z
-  what: pull-was-merged
-  when: 2018-04-02 14:00:53.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776915
-  _job: 29132166423
-  _time: 2026-07-11 00:21:37.088683329 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: master
-  comments: 74
-  comments_appreciated: 30
-  comments_by_author: 4
-  comments_by_reviewers: 70
-  comments_resolved: 0
-  comments_to_code: 30
-  details: Apparently, jcabi/jcabi-github#1239 has been "pull-was-closed".
-  done: 2026-07-11 00:31:24.492464603 Z
-  failed_builds: 0
-  files: 3
-  hoc: 117
-  issue: 1239
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.960450312 Z
-  what: pull-was-closed
-  when: 2017-02-15 07:45:33.000000000 Z
-  where: github
-  who: 526301
-- _id: 776916
-  _job: 29132166423
-  _time: 2026-07-11 00:21:50.287053966 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1246'
-  comments: 2
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 2
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1261 has been "pull-was-closed".
-  done: 2026-07-11 00:31:24.570186695 Z
-  failed_builds: 0
-  files: 5
-  hoc: 183
-  issue: 1261
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.968406392 Z
-  what: pull-was-closed
-  when: 2018-04-03 11:14:09.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776917
-  _job: 29132166423
-  _time: 2026-07-11 00:21:52.341101530 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: fedor/fix-organizations
-  comments: 13
-  comments_appreciated: 0
-  comments_by_author: 5
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1319 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.265894958 Z
-  failed_builds: 0
-  files: 2
-  hoc: 5
-  issue: 1319
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.976469392 Z
-  what: pull-was-merged
-  when: 2018-04-02 11:11:38.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776918
-  _job: 29132166423
-  _time: 2026-07-11 00:21:56.034144152 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1323'
-  comments: 19
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 16
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1324 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.192832044 Z
-  failed_builds: 0
-  files: 2
-  hoc: 46
-  issue: 1324
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.984475105 Z
-  what: pull-was-merged
-  when: 2017-10-04 06:57:27.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776919
-  _job: 29132166423
-  _time: 2026-07-11 00:22:00.719242984 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1326'
-  comments: 23
-  comments_appreciated: 0
-  comments_by_author: 7
-  comments_by_reviewers: 16
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1327 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.170522068 Z
-  failed_builds: 0
-  files: 7
-  hoc: 36
-  issue: 1327
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.992132045 Z
-  what: pull-was-merged
-  when: 2017-09-21 08:05:24.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776920
-  _job: 29132166423
-  _time: 2026-07-11 00:22:05.954072215 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1065'
-  comments: 16
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 12
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1353 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.212421875 Z
-  failed_builds: 0
-  files: 2
-  hoc: 182
-  issue: 1353
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:29.998584026 Z
-  what: pull-was-merged
-  when: 2018-03-13 14:58:36.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776921
-  _job: 29132166423
-  _time: 2026-07-11 00:22:10.749544647 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1366'
-  comments: 13
-  comments_appreciated: 1
-  comments_by_author: 4
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 6
-  details: Apparently, jcabi/jcabi-github#1367 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.249310625 Z
-  failed_builds: 0
-  files: 4
-  hoc: 63
-  issue: 1367
-  repository: 14204295
-  review: 2018-03-22 18:59:55.000000000 Z
-  succeeded_builds: 0
-  suggestions: 3
-  tombstone: 2026-07-11 00:31:30.005358051 Z
-  what: pull-was-merged
-  when: 2018-03-23 15:12:58.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776922
-  _job: 29132166423
-  _time: 2026-07-11 00:22:14.785080455 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1362'
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1368 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.232483792 Z
-  failed_builds: 0
-  files: 2
-  hoc: 39
-  issue: 1368
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:30.013660491 Z
-  what: pull-was-merged
-  when: 2018-03-20 09:33:02.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776923
-  _job: 29132166423
-  _time: 2026-07-11 00:22:17.754334161 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: 1246-v2
-  comments: 20
-  comments_appreciated: 0
-  comments_by_author: 5
-  comments_by_reviewers: 15
-  comments_resolved: 0
-  comments_to_code: 6
-  details: Apparently, jcabi/jcabi-github#1372 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.321634160 Z
-  failed_builds: 0
-  files: 6
-  hoc: 231
-  issue: 1372
-  repository: 14204295
-  review: 2018-04-03 16:05:18.000000000 Z
-  succeeded_builds: 0
-  suggestions: 3
-  tombstone: 2026-07-11 00:31:30.020131877 Z
-  what: pull-was-merged
-  when: 2018-04-03 20:59:42.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776924
-  _job: 29132166423
-  _time: 2026-07-11 00:22:23.401297546 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1305'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1374 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.342740830 Z
-  failed_builds: 0
-  files: 2
-  hoc: 23
-  issue: 1374
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:30.033873027 Z
-  what: pull-was-merged
-  when: 2018-04-04 14:45:13.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776925
-  _job: 29132166423
-  _time: 2026-07-11 00:22:26.734550848 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1306'
-  comments: 10
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1376 has been "pull-was-merged".
-  done: 2026-07-11 00:31:24.363863605 Z
-  failed_builds: 0
-  files: 8
-  hoc: 94
-  issue: 1376
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  tombstone: 2026-07-11 00:31:30.043945478 Z
-  what: pull-was-merged
-  when: 2018-04-05 08:10:04.000000000 Z
-  where: github
-  who: 8086956
 - _id: 776926
   _job: 29132166423
   _time: 2026-07-11 00:23:26.277594546 Z
@@ -123566,227 +122455,6 @@
   when: 2018-04-07 13:44:49.000000000 Z
   where: github
   who: 6305156
-- _id: 776932
-  _job: 29132166423
-  _time: 2026-07-11 00:26:19.084668480 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1060.
-  issue: 1060
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.091532767 Z
-  what: label-was-attached
-  when: &1192 2015-06-16 22:54:12.000000000 Z
-  where: github
-  who: 526301
-- _id: 776933
-  _job: 29132166423
-  _time: 2026-07-11 00:26:45.398677261 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1069.
-  issue: 1069
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.112250342 Z
-  what: label-was-attached
-  when: &1193 2015-06-23 20:42:35.000000000 Z
-  where: github
-  who: 526301
-- _id: 776934
-  _job: 29132166423
-  _time: 2026-07-11 00:26:49.451926511 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1070.
-  issue: 1070
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.134551692 Z
-  what: label-was-attached
-  when: &1194 2015-06-23 20:42:45.000000000 Z
-  where: github
-  who: 526301
-- _id: 776935
-  _job: 29132166423
-  _time: 2026-07-11 00:26:52.794021966 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1071.
-  issue: 1071
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.153529510 Z
-  what: label-was-attached
-  when: &1195 2015-06-23 20:42:53.000000000 Z
-  where: github
-  who: 526301
-- _id: 776936
-  _job: 29132166423
-  _time: 2026-07-11 00:27:02.458971630 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1081.
-  issue: 1081
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.171432348 Z
-  what: label-was-attached
-  when: &1196 2015-05-24 20:25:41.000000000 Z
-  where: github
-  who: 526301
-- _id: 776937
-  _job: 29132166423
-  _time: 2026-07-11 00:27:03.987419851 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1082.
-  issue: 1082
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.189991950 Z
-  what: label-was-attached
-  when: &1197 2015-05-24 20:25:51.000000000 Z
-  where: github
-  who: 526301
-- _id: 776938
-  _job: 29132166423
-  _time: 2026-07-11 00:27:06.974080972 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1086.
-  issue: 1086
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.226732633 Z
-  what: label-was-attached
-  when: &1198 2015-06-16 22:26:42.000000000 Z
-  where: github
-  who: 526301
-- _id: 776939
-  _job: 29132166423
-  _time: 2026-07-11 00:27:11.607090810 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1092.
-  issue: 1092
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.250758949 Z
-  what: label-was-attached
-  when: &1199 2015-05-27 22:29:11.000000000 Z
-  where: github
-  who: 526301
-- _id: 776940
-  _job: 29132166423
-  _time: 2026-07-11 00:27:13.575056739 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1097.
-  issue: 1097
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.272437628 Z
-  what: label-was-attached
-  when: &1200 2015-06-16 22:20:36.000000000 Z
-  where: github
-  who: 526301
-- _id: 776941
-  _job: 29132166423
-  _time: 2026-07-11 00:27:14.080418479 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1099.
-  issue: 1099
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.294665895 Z
-  what: label-was-attached
-  when: &1201 2015-06-16 22:14:11.000000000 Z
-  where: github
-  who: 526301
-- _id: 776942
-  _job: 29132166423
-  _time: 2026-07-11 00:27:14.670902560 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1104.
-  issue: 1104
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.314273677 Z
-  what: label-was-attached
-  when: &1202 2015-06-08 22:36:35.000000000 Z
-  where: github
-  who: 526301
-- _id: 776943
-  _job: 29132166423
-  _time: 2026-07-11 00:27:16.105105458 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1110.
-  issue: 1110
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.334935086 Z
-  what: label-was-attached
-  when: &1203 2015-06-23 20:59:09.000000000 Z
-  where: github
-  who: 526301
-- _id: 776944
-  _job: 29132166423
-  _time: 2026-07-11 00:27:17.849982056 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1117.
-  issue: 1117
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.363594139 Z
-  what: label-was-attached
-  when: &1204 2015-06-23 20:56:29.000000000 Z
-  where: github
-  who: 526301
-- _id: 776945
-  _job: 29132166423
-  _time: 2026-07-11 00:27:22.072506902 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1135.
-  issue: 1135
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.390907827 Z
-  what: label-was-attached
-  when: &1205 2015-06-29 04:31:20.000000000 Z
-  where: github
-  who: 526301
-- _id: 776946
-  _job: 29132166423
-  _time: 2026-07-11 00:27:22.488193153 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1137.
-  issue: 1137
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.413863171 Z
-  what: label-was-attached
-  when: &1206 2015-06-30 02:27:37.000000000 Z
-  where: github
-  who: 526301
-- _id: 776947
-  _job: 29132166423
-  _time: 2026-07-11 00:27:23.281981436 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1140.
-  issue: 1140
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.436101935 Z
-  what: label-was-attached
-  when: &1207 2015-07-10 03:05:56.000000000 Z
-  where: github
-  who: 526301
-- _id: 776948
-  _job: 29132166423
-  _time: 2026-07-11 00:27:23.693305153 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: The "bug" label was attached by @yegor256 to the issue jcabi/jcabi-github#1142.
-  issue: 1142
-  label: bug
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:23.458141779 Z
-  what: label-was-attached
-  when: &1208 2015-06-30 02:27:28.000000000 Z
-  where: github
-  who: 526301
 - _id: 776949
   _job: 81579
   _time: 2026-07-11 00:30:39.478775872 Z
@@ -124003,261 +122671,6 @@
   when: *1191
   where: github
   who: 29139614
-- _id: 776961
-  _job: 81579
-  _time: 2026-07-11 00:30:42.131677931 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1060 reported
-    by @sonofra; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.071622514 Z
-  issue: 1060
-  reporter: 1269520
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.052403140 Z
-  what: bug-was-accepted
-  when: *1192
-  where: github
-  who: 526301
-- _id: 776962
-  _job: 81579
-  _time: 2026-07-11 00:30:42.565861238 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1069 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.093624905 Z
-  issue: 1069
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.060298135 Z
-  what: bug-was-accepted
-  when: *1193
-  where: github
-  who: 526301
-- _id: 776963
-  _job: 81579
-  _time: 2026-07-11 00:30:42.786205449 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1070 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.114317580 Z
-  issue: 1070
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.068214467 Z
-  what: bug-was-accepted
-  when: *1194
-  where: github
-  who: 526301
-- _id: 776964
-  _job: 81579
-  _time: 2026-07-11 00:30:42.889116406 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1071 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.136577526 Z
-  issue: 1071
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.076283820 Z
-  what: bug-was-accepted
-  when: *1195
-  where: github
-  who: 526301
-- _id: 776965
-  _job: 81579
-  _time: 2026-07-11 00:30:42.998165828 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1081 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.155327716 Z
-  issue: 1081
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.084252737 Z
-  what: bug-was-accepted
-  when: *1196
-  where: github
-  who: 526301
-- _id: 776966
-  _job: 81579
-  _time: 2026-07-11 00:30:43.098830510 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1082 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.173221265 Z
-  issue: 1082
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.091866992 Z
-  what: bug-was-accepted
-  when: *1197
-  where: github
-  who: 526301
-- _id: 776967
-  _job: 81579
-  _time: 2026-07-11 00:30:43.209849140 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1086 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.197046097 Z
-  issue: 1086
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.098400241 Z
-  what: bug-was-accepted
-  when: *1198
-  where: github
-  who: 526301
-- _id: 776968
-  _job: 81579
-  _time: 2026-07-11 00:30:43.311651782 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1092 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.229329674 Z
-  issue: 1092
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.104813038 Z
-  what: bug-was-accepted
-  when: *1199
-  where: github
-  who: 526301
-- _id: 776969
-  _job: 81579
-  _time: 2026-07-11 00:30:43.419391773 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1097 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.252983392 Z
-  issue: 1097
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.111380956 Z
-  what: bug-was-accepted
-  when: *1200
-  where: github
-  who: 526301
-- _id: 776970
-  _job: 81579
-  _time: 2026-07-11 00:30:43.519757658 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1099 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.274559723 Z
-  issue: 1099
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.120325418 Z
-  what: bug-was-accepted
-  when: *1201
-  where: github
-  who: 526301
-- _id: 776971
-  _job: 81579
-  _time: 2026-07-11 00:30:43.627592136 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1104 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.296861648 Z
-  issue: 1104
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.132814807 Z
-  what: bug-was-accepted
-  when: *1202
-  where: github
-  who: 526301
-- _id: 776972
-  _job: 81579
-  _time: 2026-07-11 00:30:43.729167038 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1110 reported
-    by @longtimeago; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.316164891 Z
-  issue: 1110
-  reporter: 1388994
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.141449358 Z
-  what: bug-was-accepted
-  when: *1203
-  where: github
-  who: 526301
-- _id: 776973
-  _job: 81579
-  _time: 2026-07-11 00:30:43.985969669 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1117 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.336789808 Z
-  issue: 1117
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.149683973 Z
-  what: bug-was-accepted
-  when: *1204
-  where: github
-  who: 526301
-- _id: 776974
-  _job: 81579
-  _time: 2026-07-11 00:30:44.090472656 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1135 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.367050548 Z
-  issue: 1135
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.157848383 Z
-  what: bug-was-accepted
-  when: *1205
-  where: github
-  who: 526301
-- _id: 776975
-  _job: 81579
-  _time: 2026-07-11 00:30:44.197877656 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1137 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.393427328 Z
-  issue: 1137
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.165628061 Z
-  what: bug-was-accepted
-  when: *1206
-  where: github
-  who: 526301
-- _id: 776976
-  _job: 81579
-  _time: 2026-07-11 00:30:44.298748111 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1140 reported
-    by @douglarek; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.416012685 Z
-  issue: 1140
-  reporter: 1488134
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.174137928 Z
-  what: bug-was-accepted
-  when: *1207
-  where: github
-  who: 526301
-- _id: 776977
-  _job: 81579
-  _time: 2026-07-11 00:30:44.519248295 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  details: "@yegor256 attached the '#bug' label to jcabi/jcabi-github#1142 reported
-    by @cvrebert; this means that a bug was accepted as valid, by the project team."
-  done: 2026-07-11 00:31:23.438490791 Z
-  issue: 1142
-  reporter: 419884
-  repository: 14204295
-  tombstone: 2026-07-11 00:31:30.182248054 Z
-  what: bug-was-accepted
-  when: *1208
-  where: github
-  who: 526301
 - _id: 776978
   _job: 29138577140
   _time: 2026-07-11 03:49:11.237542350 Z
@@ -124275,7 +122688,7 @@
   repository: 12589687
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-07-11 03:28:53.000000000 Z
+  when: &1192 2026-07-11 03:28:53.000000000 Z
   where: github
   who: 526301
 - _id: 776979
@@ -124299,6 +122712,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   branch: renovate/aws-java-sdk-v2-monorepo
   details: The missing pull jcabi/jcabi-dynamo#530 has been opened by @renovate[bot].
+  is_human: 0
   issue: 530
   repository: 12589687
   what: pull-was-opened
@@ -124311,6 +122725,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   branch: renovate/aws-java-sdk-v2-monorepo
   details: The missing pull jcabi/jcabi-dynamo#531 has been opened by @renovate[bot].
+  is_human: 0
   issue: 531
   repository: 12589687
   what: pull-was-opened
@@ -124332,36 +122747,15 @@
   failed_builds: 0
   files: 1
   hoc: 10
+  is_human: 0
   issue: 530
   repository: 12589687
   review: 2026-07-09 17:28:50.000000000 Z
+  review_comments: 0
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
   when: 2026-07-09 17:45:22.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776983
-  _job: 29138577140
-  _time: 2026-07-11 03:50:17.738405651 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1373'
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1380 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1380
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-07 09:28:57.000000000 Z
   where: github
   who: 8086956
 - _id: 776984
@@ -124379,36 +122773,15 @@
   failed_builds: 0
   files: 1
   hoc: 10
+  is_human: 0
   issue: 531
   repository: 12589687
   review: 2026-07-10 03:32:02.000000000 Z
+  review_comments: 0
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
   when: 2026-07-10 03:41:12.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776985
-  _job: 29138577140
-  _time: 2026-07-11 03:50:46.763273654 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1379'
-  comments: 11
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1381 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 166
-  issue: 1381
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-07 13:43:45.000000000 Z
   where: github
   who: 8086956
 - _id: 776986
@@ -124426,1130 +122799,15 @@
   failed_builds: 0
   files: 1
   hoc: 10
+  is_human: 0
   issue: 532
   repository: 12589687
   review: 2026-07-11 03:28:51.000000000 Z
+  review_comments: 0
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
   when: 2026-07-11 03:39:48.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776987
-  _job: 29138577140
-  _time: 2026-07-11 03:51:10.668634091 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1382'
-  comments: 10
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1383 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 26
-  issue: 1383
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-07 14:21:38.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776988
-  _job: 29138577140
-  _time: 2026-07-11 03:51:20.360581504 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1363'
-  comments: 13
-  comments_appreciated: 0
-  comments_by_author: 4
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1386 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 131
-  issue: 1386
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-18 20:09:50.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776989
-  _job: 29138577140
-  _time: 2026-07-11 03:51:27.701621816 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1377'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1387 has been "pull-was-merged".
-  failed_builds: 0
-  files: 7
-  hoc: 79
-  issue: 1387
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-14 18:14:10.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776990
-  _job: 29138577140
-  _time: 2026-07-11 03:51:34.095989672 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1375'
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1389 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 79
-  issue: 1389
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-18 20:09:17.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776991
-  _job: 29138577140
-  _time: 2026-07-11 03:51:39.097182996 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1304'
-  comments: 18
-  comments_appreciated: 1
-  comments_by_author: 7
-  comments_by_reviewers: 11
-  comments_resolved: 0
-  comments_to_code: 4
-  details: Apparently, jcabi/jcabi-github#1391 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 56
-  issue: 1391
-  repository: 14204295
-  review: 2018-04-19 18:10:41.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2018-04-25 08:07:29.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776992
-  _job: 29138577140
-  _time: 2026-07-11 03:51:46.411956460 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1384'
-  comments: 11
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1392 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 21
-  issue: 1392
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-19 18:56:07.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776993
-  _job: 29138577140
-  _time: 2026-07-11 03:51:51.235290384 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1388'
-  comments: 2
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 2
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1393 has been "pull-was-merged".
-  failed_builds: 0
-  files: 8
-  hoc: 102
-  issue: 1393
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-19 18:56:28.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776994
-  _job: 29138577140
-  _time: 2026-07-11 03:51:54.258420958 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1395'
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1396 has been "pull-was-merged".
-  failed_builds: 0
-  files: 6
-  hoc: 16
-  issue: 1396
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-23 15:02:24.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776995
-  _job: 29138577140
-  _time: 2026-07-11 03:51:57.671017627 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1390'
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1397 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 20
-  issue: 1397
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-23 15:02:06.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776996
-  _job: 29138577140
-  _time: 2026-07-11 03:52:00.902462670 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1394'
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1398 has been "pull-was-merged".
-  failed_builds: 0
-  files: 8
-  hoc: 97
-  issue: 1398
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-04-23 15:02:32.000000000 Z
-  where: github
-  who: 6305156
-- _id: 776997
-  _job: 29138577140
-  _time: 2026-07-11 03:52:04.146958115 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1399'
-  comments: 8
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1402 has been "pull-was-merged".
-  failed_builds: 0
-  files: 9
-  hoc: 96
-  issue: 1402
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-05-06 08:32:25.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776998
-  _job: 29138577140
-  _time: 2026-07-11 03:52:07.602677430 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1400'
-  comments: 7
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1405 has been "pull-was-merged".
-  failed_builds: 0
-  files: 7
-  hoc: 209
-  issue: 1405
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-05-07 06:26:17.000000000 Z
-  where: github
-  who: 8086956
-- _id: 776999
-  _job: 29138577140
-  _time: 2026-07-11 03:52:10.739687128 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1401'
-  comments: 10
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1411 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 46
-  issue: 1411
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-05-15 09:03:56.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777000
-  _job: 29138577140
-  _time: 2026-07-11 03:52:14.476537264 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1404'
-  comments: 10
-  comments_appreciated: 1
-  comments_by_author: 1
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1412 has been "pull-was-merged".
-  failed_builds: 0
-  files: 8
-  hoc: 95
-  issue: 1412
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-05-15 08:50:44.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777001
-  _job: 29138577140
-  _time: 2026-07-11 03:52:18.138018148 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1406'
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1415 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 9
-  issue: 1415
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-05-23 15:03:45.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777002
-  _job: 29138577140
-  _time: 2026-07-11 03:52:21.589082564 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1407'
-  comments: 14
-  comments_appreciated: 1
-  comments_by_author: 2
-  comments_by_reviewers: 12
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-github#1416 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 87
-  issue: 1416
-  repository: 14204295
-  review: 2018-05-30 14:08:37.000000000 Z
-  succeeded_builds: 0
-  suggestions: 1
-  what: pull-was-merged
-  when: 2018-05-30 14:36:29.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777003
-  _job: 29138577140
-  _time: 2026-07-11 03:52:26.471781814 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1417'
-  comments: 13
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 11
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1419 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 77
-  issue: 1419
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-06-12 16:58:39.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777004
-  _job: 29138577140
-  _time: 2026-07-11 03:52:30.890052049 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1418'
-  comments: 13
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 11
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1420 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 69
-  issue: 1420
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-06-12 16:58:53.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777005
-  _job: 29138577140
-  _time: 2026-07-11 03:52:34.940788505 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1421'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1423 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 34
-  issue: 1423
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-06-20 08:04:18.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777006
-  _job: 29138577140
-  _time: 2026-07-11 03:52:38.479065713 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1425'
-  comments: 18
-  comments_appreciated: 1
-  comments_by_author: 4
-  comments_by_reviewers: 14
-  comments_resolved: 0
-  comments_to_code: 3
-  details: Apparently, jcabi/jcabi-github#1428 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 168
-  issue: 1428
-  repository: 14204295
-  review: 2018-08-25 22:02:37.000000000 Z
-  succeeded_builds: 0
-  suggestions: 3
-  what: pull-was-merged
-  when: 2018-08-29 12:52:50.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777007
-  _job: 29138577140
-  _time: 2026-07-11 03:52:43.841048385 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1429'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1431 has been "pull-was-merged".
-  failed_builds: 0
-  files: 476
-  hoc: 952
-  issue: 1431
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-08-31 05:40:40.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777008
-  _job: 29138577140
-  _time: 2026-07-11 03:52:47.026958867 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1424'
-  comments: 16
-  comments_appreciated: 0
-  comments_by_author: 6
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-github#1432 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 118
-  issue: 1432
-  repository: 14204295
-  review: 2018-09-05 07:02:05.000000000 Z
-  succeeded_builds: 0
-  suggestions: 1
-  what: pull-was-merged
-  when: 2018-09-06 14:31:32.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777009
-  _job: 29138577140
-  _time: 2026-07-11 03:52:51.760231258 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1370'
-  comments: 15
-  comments_appreciated: 0
-  comments_by_author: 5
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 4
-  details: Apparently, jcabi/jcabi-github#1433 has been "pull-was-merged".
-  failed_builds: 0
-  files: 11
-  hoc: 90
-  issue: 1433
-  repository: 14204295
-  review: 2018-09-05 06:52:57.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2018-09-06 10:45:35.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777010
-  _job: 29138577140
-  _time: 2026-07-11 03:52:56.428686919 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1430'
-  comments: 33
-  comments_appreciated: 0
-  comments_by_author: 10
-  comments_by_reviewers: 23
-  comments_resolved: 0
-  comments_to_code: 14
-  details: Apparently, jcabi/jcabi-github#1434 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 146
-  issue: 1434
-  repository: 14204295
-  review: 2018-09-11 03:38:26.000000000 Z
-  succeeded_builds: 0
-  suggestions: 7
-  what: pull-was-merged
-  when: 2018-09-19 06:39:10.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777011
-  _job: 29138577140
-  _time: 2026-07-11 03:53:04.450017341 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1435'
-  comments: 34
-  comments_appreciated: 0
-  comments_by_author: 10
-  comments_by_reviewers: 24
-  comments_resolved: 0
-  comments_to_code: 4
-  details: Apparently, jcabi/jcabi-github#1437 has been "pull-was-merged".
-  failed_builds: 0
-  files: 7
-  hoc: 47
-  issue: 1437
-  repository: 14204295
-  review: 2018-09-21 12:01:52.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2018-10-07 16:49:20.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777012
-  _job: 29138577140
-  _time: 2026-07-11 03:53:11.686631437 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1438'
-  comments: 9
-  comments_appreciated: 1
-  comments_by_author: 2
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1440 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 6
-  issue: 1440
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-10-11 05:21:23.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777013
-  _job: 29138577140
-  _time: 2026-07-11 03:53:14.872704303 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1439'
-  comments: 15
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 14
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-github#1441 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 96
-  issue: 1441
-  repository: 14204295
-  review: 2018-10-16 03:20:39.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2018-10-18 17:23:50.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777014
-  _job: 29138577140
-  _time: 2026-07-11 03:53:19.436019614 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: dangling_puzzle
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1443 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1443
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-10-19 05:46:24.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777015
-  _job: 29138577140
-  _time: 2026-07-11 03:53:22.522832223 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1442'
-  comments: 16
-  comments_appreciated: 1
-  comments_by_author: 3
-  comments_by_reviewers: 13
-  comments_resolved: 0
-  comments_to_code: 1
-  details: Apparently, jcabi/jcabi-github#1444 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 28
-  issue: 1444
-  repository: 14204295
-  review: 2018-10-26 14:22:48.000000000 Z
-  succeeded_builds: 0
-  suggestions: 1
-  what: pull-was-merged
-  when: 2018-11-02 08:31:41.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777016
-  _job: 29138577140
-  _time: 2026-07-11 03:53:27.085721061 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1244'
-  comments: 11
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1448 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 20
-  issue: 1448
-  repository: 14204295
-  review: 2018-12-07 10:59:42.000000000 Z
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-07 11:10:28.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777017
-  _job: 29138577140
-  _time: 2026-07-11 03:53:30.728894293 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1230'
-  comments: 14
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 11
-  comments_resolved: 0
-  comments_to_code: 5
-  details: Apparently, jcabi/jcabi-github#1449 has been "pull-was-merged".
-  failed_builds: 0
-  files: 10
-  hoc: 203
-  issue: 1449
-  repository: 14204295
-  review: 2018-12-07 11:05:24.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2018-12-11 08:45:41.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777018
-  _job: 29138577140
-  _time: 2026-07-11 03:53:35.495592940 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1301'
-  comments: 7
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1450 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 1450
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-11 08:27:19.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777019
-  _job: 29138577140
-  _time: 2026-07-11 03:53:38.351902267 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1447'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1452 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 29
-  issue: 1452
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-17 18:50:15.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777020
-  _job: 29138577140
-  _time: 2026-07-11 03:53:41.550267271 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1225'
-  comments: 8
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1453 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 11
-  issue: 1453
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-17 18:38:04.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777021
-  _job: 29138577140
-  _time: 2026-07-11 03:53:44.489963380 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1086'
-  comments: 14
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 12
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1454 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 61
-  issue: 1454
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-20 08:00:32.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777022
-  _job: 29138577140
-  _time: 2026-07-11 03:53:48.602815261 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1110'
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1455 has been "pull-was-merged".
-  failed_builds: 0
-  files: 14
-  hoc: 712
-  issue: 1455
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-26 09:12:51.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777023
-  _job: 29138577140
-  _time: 2026-07-11 03:53:51.404505610 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1457'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-github#1458 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 11
-  issue: 1458
-  repository: 14204295
-  review: 2018-12-26 09:05:13.000000000 Z
-  succeeded_builds: 0
-  suggestions: 1
-  what: pull-was-merged
-  when: 2019-01-02 18:22:17.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777024
-  _job: 29138577140
-  _time: 2026-07-11 03:53:54.856316104 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1204'
-  comments: 7
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 7
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1459 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 113
-  issue: 1459
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2018-12-26 09:26:10.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777025
-  _job: 29138577140
-  _time: 2026-07-11 03:53:57.739979946 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1451'
-  comments: 6
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 6
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1463 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 58
-  issue: 1463
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-02 18:38:10.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777026
-  _job: 29138577140
-  _time: 2026-07-11 03:54:00.562431174 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1462'
-  comments: 10
-  comments_appreciated: 0
-  comments_by_author: 2
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 2
-  details: Apparently, jcabi/jcabi-github#1464 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 53
-  issue: 1464
-  repository: 14204295
-  review: 2019-01-02 18:09:36.000000000 Z
-  succeeded_builds: 0
-  suggestions: 2
-  what: pull-was-merged
-  when: 2019-01-09 11:49:44.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777027
-  _job: 29138577140
-  _time: 2026-07-11 03:54:04.141185081 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: gh-pages
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1465 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 4
-  issue: 1465
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-02 18:06:38.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777028
-  _job: 29138577140
-  _time: 2026-07-11 03:54:06.353325225 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1466'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1471 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 30
-  issue: 1471
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-17 10:03:20.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777029
-  _job: 29138577140
-  _time: 2026-07-11 03:54:09.471103110 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1461'
-  comments: 5
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1472 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 171
-  issue: 1472
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-09 11:37:22.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777030
-  _job: 29138577140
-  _time: 2026-07-11 03:54:12.117132991 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1469'
-  comments: 11
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 11
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1475 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 96
-  issue: 1475
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-16 08:21:25.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777031
-  _job: 29138577140
-  _time: 2026-07-11 03:54:15.427176437 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1467'
-  comments: 13
-  comments_appreciated: 0
-  comments_by_author: 3
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1478 has been "pull-was-merged".
-  failed_builds: 0
-  files: 3
-  hoc: 114
-  issue: 1478
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-21 08:16:44.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777032
-  _job: 29138577140
-  _time: 2026-07-11 03:54:19.093154202 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1473'
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1479 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 385
-  issue: 1479
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-19 14:43:28.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777033
-  _job: 29138577140
-  _time: 2026-07-11 03:54:21.278910164 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1468'
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1480 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 40
-  issue: 1480
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-19 14:43:18.000000000 Z
-  where: github
-  who: 6305156
-- _id: 777034
-  _job: 29138577140
-  _time: 2026-07-11 03:54:23.812567834 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  branch: '1470'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 8
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-github#1484 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 83
-  issue: 1484
-  repository: 14204295
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2019-01-23 16:34:44.000000000 Z
   where: github
   who: 8086956
 - _id: 777035
@@ -125558,8 +122816,10 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 6305156
   details: jcabi/jcabi-github#1460 was assigned to @0crat by @amihaiemil.
+  is_human: 1
   issue: 1460
   repository: 14204295
+  unassigned: 2018-12-26 09:01:03.000000000 Z
   what: issue-was-assigned
   when: 2018-12-26 09:00:57.000000000 Z
   where: github
@@ -125570,6 +122830,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 6305156
   details: jcabi/jcabi-github#1503 was assigned to @amihaiemil by @amihaiemil.
+  is_human: 1
   issue: 1503
   repository: 14204295
   what: issue-was-assigned
@@ -125582,6 +122843,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 24387511
   details: jcabi/jcabi-github#1505 was assigned to @alemdomarco by @0crat.
+  is_human: 1
   issue: 1505
   repository: 14204295
   what: issue-was-assigned
@@ -125594,6 +122856,7 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 6305156
   details: jcabi/jcabi-github#1509 was assigned to @amihaiemil by @amihaiemil.
+  is_human: 1
   issue: 1509
   repository: 14204295
   what: issue-was-assigned
@@ -125606,8 +122869,10 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 6305156
   details: jcabi/jcabi-github#1526 was assigned to @0crat by @amihaiemil.
+  is_human: 1
   issue: 1526
   repository: 14204295
+  unassigned: 2020-03-12 06:56:51.000000000 Z
   what: issue-was-assigned
   when: 2020-03-12 06:56:43.000000000 Z
   where: github
@@ -125618,9 +122883,1142 @@
   _version: 0.19.15/0.61.0/0.17.19
   assigner: 526301
   details: jcabi/jcabi-github#1530 was assigned to @yegor256 by @yegor256.
+  is_human: 1
   issue: 1530
   repository: 14204295
   what: issue-was-assigned
   when: 2020-05-19 11:00:10.000000000 Z
   where: github
   who: 526301
+- _id: 777041
+  _job: 81599
+  _time: 2026-07-11 04:03:21.100388245 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#532 with 10 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 28m44s and 3 comments.
+  hoc: 10
+  is_human: 1
+  issue: 532
+  repository: 12589687
+  review_comments: 0
+  seconds: 1724
+  what: code-was-reviewed
+  when: *1192
+  where: github
+  who: 526301
+- _id: 777042
+  _job: 81599
+  _time: 2026-07-11 04:03:23.374507982 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-matchers#130 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 9mo of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 130
+  merger: 8086956
+  repository: 19194296
+  review_comments: 0
+  seconds: 23894639
+  what: code-was-contributed
+  when: *1193
+  where: github
+  who: 29139614
+- _id: 777043
+  _job: 29142915663
+  _time: 2026-07-11 06:32:15.277076296 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1477'
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1485 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 70
+  issue: 1485
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2019-01-23 16:19:57.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777044
+  _job: 29142915663
+  _time: 2026-07-11 06:32:31.634095059 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1482'
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1486 has been "pull-was-merged".
+  failed_builds: 0
+  files: 11
+  hoc: 757
+  issue: 1486
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2019-01-23 16:06:32.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777045
+  _job: 29142915663
+  _time: 2026-07-11 06:32:42.718620847 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1487'
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 4
+  comments_by_reviewers: 7
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1488 has been "pull-was-merged".
+  failed_builds: 0
+  files: 11
+  hoc: 840
+  issue: 1488
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2019-02-05 14:50:26.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777046
+  _job: 29142915663
+  _time: 2026-07-11 06:32:51.572007222 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1483'
+  comments: 11
+  comments_appreciated: 0
+  comments_by_author: 4
+  comments_by_reviewers: 7
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1489 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 24
+  issue: 1489
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2019-02-05 15:05:28.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777047
+  _job: 29142915663
+  _time: 2026-07-11 06:32:58.091231789 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1490'
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1491 has been "pull-was-merged".
+  failed_builds: 0
+  files: 8
+  hoc: 525
+  issue: 1491
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2019-02-10 13:00:14.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777048
+  _job: 29142915663
+  _time: 2026-07-11 06:33:03.491918582 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1502 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 63
+  issue: 1502
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-15 09:01:40.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777049
+  _job: 29142915663
+  _time: 2026-07-11 06:33:08.232076261 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1503'
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1506 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 41
+  issue: 1506
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-15 18:28:25.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777050
+  _job: 29142915663
+  _time: 2026-07-11 06:33:12.557693124 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1508 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 15
+  issue: 1508
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-19 08:59:27.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777051
+  _job: 29142915663
+  _time: 2026-07-11 06:33:16.102036492 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1509'
+  comments: 10
+  comments_appreciated: 0
+  comments_by_author: 3
+  comments_by_reviewers: 7
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1512 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 35
+  issue: 1512
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-19 09:32:00.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777052
+  _job: 29142915663
+  _time: 2026-07-11 06:33:22.596482091 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1511'
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1515 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 23
+  issue: 1515
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-24 19:20:24.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777053
+  _job: 29142915663
+  _time: 2026-07-11 06:33:25.627525258 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1517'
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1518 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 125
+  issue: 1518
+  repository: 14204295
+  review: 2020-01-25 17:28:16.000000000 Z
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-01-25 16:55:18.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777054
+  _job: 29142915663
+  _time: 2026-07-11 06:33:28.504111299 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1505'
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 2
+  details: Apparently, jcabi/jcabi-github#1519 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 38
+  issue: 1519
+  repository: 14204295
+  review: 2020-01-26 15:14:02.000000000 Z
+  succeeded_builds: 0
+  suggestions: 1
+  what: pull-was-merged
+  when: 2020-01-27 12:11:49.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777055
+  _job: 29142915663
+  _time: 2026-07-11 06:33:31.891641591 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: remove-hardcoded-repos
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 4
+  details: Apparently, jcabi/jcabi-github#1522 has been "pull-was-closed".
+  failed_builds: 0
+  files: 74
+  hoc: 260
+  issue: 1522
+  repository: 14204295
+  review: 2020-01-29 07:59:33.000000000 Z
+  succeeded_builds: 0
+  suggestions: 4
+  what: pull-was-closed
+  when: 2020-01-29 11:00:52.000000000 Z
+  where: github
+  who: 8935543
+- _id: 777056
+  _job: 29142915663
+  _time: 2026-07-11 06:33:35.026881996 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1510'
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1524 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 19
+  issue: 1524
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-02-04 17:44:02.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777057
+  _job: 29142915663
+  _time: 2026-07-11 06:33:37.563506047 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: '1504'
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1525 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 21
+  issue: 1525
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-02-05 23:06:53.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777058
+  _job: 29142915663
+  _time: 2026-07-11 06:33:41.057307268 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1532 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 41
+  issue: 1532
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-05-28 07:39:51.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777059
+  _job: 29142915663
+  _time: 2026-07-11 06:33:44.172740929 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1534 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 7
+  issue: 1534
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-05-28 06:18:21.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777060
+  _job: 29142915663
+  _time: 2026-07-11 06:33:46.425448002 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/xerces-xercesImpl-2.12.0
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1536 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1536
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-06-15 19:39:33.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777061
+  _job: 29142915663
+  _time: 2026-07-11 06:33:48.801299257 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/commons-collections-commons-collections-3.2.2
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1537 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1537
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-06-16 07:09:55.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777062
+  _job: 29142915663
+  _time: 2026-07-11 06:33:51.232870882 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/junit-junit-4.13.1
+  comments: 9
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 8
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1542 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1542
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2021-07-02 04:54:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 777063
+  _job: 29142915663
+  _time: 2026-07-11 06:33:54.582887258 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: bump-jcabi-http
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1543 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 13
+  issue: 1543
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2020-11-17 07:49:10.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777064
+  _job: 29142915663
+  _time: 2026-07-11 06:33:56.724422105 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/com.sun.grizzly-grizzly-servlet-webserver-1.9.65
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1545 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1545
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2021-07-02 04:37:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 777065
+  _job: 29142915663
+  _time: 2026-07-11 06:33:58.815657239 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/com.jcabi.incubator-xembly-0.25.0
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1546 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1546
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2021-07-02 04:45:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777066
+  _job: 29142915663
+  _time: 2026-07-11 06:34:01.286852449 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.apache.httpcomponents-httpcore-4.4.14
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1547 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1547
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2021-07-01 16:13:05.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777067
+  _job: 29142915663
+  _time: 2026-07-11 06:34:03.609411647 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.glassfish.jersey.core-jersey-server-2.32
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1548 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1548
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2021-07-02 04:37:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 777068
+  _job: 29142915663
+  _time: 2026-07-11 06:34:05.653674639 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.apache.maven.plugins-maven-javadoc-plugin-3.2.0
+  comments: 4
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1549 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1549
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2021-07-01 16:34:17.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777069
+  _job: 29142915663
+  _time: 2026-07-11 06:34:07.868369850 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: issue-1544
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1550 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1550
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-07-05 19:40:28.000000000 Z
+  where: github
+  who: 526301
+- _id: 777070
+  _job: 29142915663
+  _time: 2026-07-11 06:34:10.345407739 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1551 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 35
+  issue: 1551
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2021-04-07 17:30:29.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777071
+  _job: 29142915663
+  _time: 2026-07-11 06:34:12.475971101 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: master
+  comments: 6
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1552 has been "pull-was-closed".
+  failed_builds: 0
+  files: 206
+  hoc: 2879
+  issue: 1552
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2021-04-26 06:59:54.000000000 Z
+  where: github
+  who: 6305156
+- _id: 777072
+  _job: 29142915663
+  _time: 2026-07-11 06:34:15.018318716 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/commons-io-commons-io-2.7
+  comments: 5
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1553 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1553
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2021-07-02 04:37:05.000000000 Z
+  where: github
+  who: 526301
+- _id: 777073
+  _job: 29142915663
+  _time: 2026-07-11 06:34:17.298602492 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/org.apache.httpcomponents-httpclient-4.5.13
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1554 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1554
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2021-07-01 13:35:10.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777074
+  _job: 29142915663
+  _time: 2026-07-11 06:34:19.362724859 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/xerces-xercesImpl-2.12.2
+  comments: 7
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1556 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1556
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-07-10 19:33:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 777075
+  _job: 29142915663
+  _time: 2026-07-11 06:34:22.007975403 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.12.6.1
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1564 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1564
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-07-10 19:33:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 777076
+  _job: 29142915663
+  _time: 2026-07-11 06:34:23.867743913 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/src/it/basic-usage/junit-junit-4.13.1
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1565 has been "pull-was-closed".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1565
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2022-07-10 19:33:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 777077
+  _job: 29142915663
+  _time: 2026-07-11 06:34:25.707758326 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/configure
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1570 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 6
+  issue: 1570
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-09-26 06:24:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 777078
+  _job: 29142915663
+  _time: 2026-07-11 06:34:27.495166028 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.sun.xml.bind-jaxb-core-4.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1571 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1571
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 04:15:16.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777079
+  _job: 29142915663
+  _time: 2026-07-11 06:34:29.491454304 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.sun.xml.bind-jaxb-impl-4.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1572 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1572
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 11:05:22.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777080
+  _job: 29142915663
+  _time: 2026-07-11 06:34:31.831661583 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.slf4j-slf4j-reload4j-2.x
+  comments: 5
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 5
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1574 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1574
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-04 11:37:04.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777081
+  _job: 29142915663
+  _time: 2026-07-11 06:34:34.158239473 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1575 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 1575
+  repository: 14204295
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2025-11-21 09:53:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777082
+  _job: 29142915663
+  _time: 2026-07-11 06:34:39.957071847 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.jcabi-jcabi-http-1.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1576 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1576
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 12:23:04.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777083
+  _job: 29142915663
+  _time: 2026-07-11 06:34:42.465292754 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 4
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1577 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 1577
+  repository: 14204295
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2025-11-21 09:53:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777084
+  _job: 29142915663
+  _time: 2026-07-11 06:34:48.611853894 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.sun.jersey-jersey-client-1.x
+  comments: 6
+  comments_appreciated: 2
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1578 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 1578
+  repository: 14204295
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2025-11-21 09:53:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777085
+  _job: 29142915663
+  _time: 2026-07-11 06:34:54.894128763 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-junit-4.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1579 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1579
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-04 22:18:45.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777086
+  _job: 29142915663
+  _time: 2026-07-11 06:34:57.255075015 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.apache.maven.plugins-maven-compiler-plugin-3.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1580 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1580
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 06:32:56.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777087
+  _job: 29142915663
+  _time: 2026-07-11 06:34:59.773224756 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/org.reflections-reflections-0.x
+  comments: 7
+  comments_appreciated: 2
+  comments_by_author: 0
+  comments_by_reviewers: 7
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1581 has been "pull-was-closed".
+  failed_builds: 9
+  files: 1
+  hoc: 2
+  issue: 1581
+  repository: 14204295
+  succeeded_builds: 6
+  suggestions: 0
+  what: pull-was-closed
+  when: 2025-11-21 09:53:52.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777088
+  _job: 29142915663
+  _time: 2026-07-11 06:35:06.282021024 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.13.4.1
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1582 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1582
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-04 18:27:01.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777089
+  _job: 29142915663
+  _time: 2026-07-11 06:35:08.661373605 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/com.fasterxml.jackson.core-jackson-databind-2.x
+  comments: 6
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 6
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1583 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1583
+  repository: 14204295
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 02:41:56.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777090
+  _job: 29142915663
+  _time: 2026-07-11 06:36:04.315308678 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  assigner: 526301
+  details: jcabi/jcabi-github#1613 was assigned to @volodya-lombrozo by @yegor256.
+  issue: 1613
+  repository: 14204295
+  what: issue-was-assigned
+  when: 2023-02-14 22:25:43.000000000 Z
+  where: github
+  who: 51804353
