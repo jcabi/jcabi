@@ -4,13 +4,11 @@
   deleted: 8
   error:
   - 'each() timed out after 60s (execution expired), fb size is 6935: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T07:10:17Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T09:25:31Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6935: (and (absent
-    stale) (eq where ''github'') (exists who))'
   - 'each() timed out after 60s (execution expired), fb size is 6935: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T07:12:18Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T09:26:41Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
   - 'each() timed out after 60s (execution expired), fb size is 6935: (and (or (eq
@@ -18,13 +16,11 @@
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
-  - 'each() timed out after 60s (execution expired), fb size is 6935: (and (eq what
-    ''quality-of-service'') (exists since) (exists when))'
   inserted: 8
-  seconds: 863.442503309
+  seconds: 575.946726994
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-12 07:19:57.133288829 Z
+  when: 2026-07-12 09:31:56.970363626 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -39553,6 +39549,28 @@
   _time: 2026-03-11 09:15:00.859798236 Z
   _version: 0.19.9/0.60.1/0.17.15
   since: 2026-02-15 07:59:04.000000000 Z
+  some_backlog_size:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
   some_pull_files_size:
   - 1
   - 1
@@ -115246,7 +115264,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14798222258
+  events_were_scanned: 14805379609
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115312,17 +115330,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1349
+  assignees_were_scanned: 1481
   earliest_issue_was_found: 1
   events_were_scanned: 11491299245
   issues_were_scanned: 0
-  labels_were_scanned: 1346
+  labels_were_scanned: 1555
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1028
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1634
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776599
