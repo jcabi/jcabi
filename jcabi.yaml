@@ -3,24 +3,26 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T17:34:17Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6945: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T19:41:38Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T17:36:00Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6945: (and (absent
+    stale) (eq where ''github'') (exists who))'
+  - 'each() timed out after 60s (execution expired), fb size is 6945: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T19:43:39Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6945: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 745.668035165
+  seconds: 873.464020408
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-12 17:42:37.310476426 Z
+  when: 2026-07-12 19:50:46.198525327 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -114458,7 +114460,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14813733982
+  events_were_scanned: 14836295975
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 66
@@ -114508,7 +114510,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11675613812
+  events_were_scanned: 14840377145
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -115173,7 +115175,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 116
-  events_were_scanned: 14813175183
+  events_were_scanned: 14835572802
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 224
@@ -115264,7 +115266,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14829537901
+  events_were_scanned: 14835392248
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115330,17 +115332,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1349
+  assignees_were_scanned: 1481
   earliest_issue_was_found: 1
-  events_were_scanned: 11672842638
+  events_were_scanned: 14837644586
   issues_were_scanned: 0
-  labels_were_scanned: 1555
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1029
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1634
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776599
@@ -115366,7 +115368,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11630516327
+  events_were_scanned: 14838221779
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -115486,26 +115488,6 @@
   total_stars: 2255
   what: dimensions-of-terrain
   when: 2026-07-10 17:19:49.490783279 Z
-- _id: 776609
-  _job: 81527
-  _time: 2026-07-10 17:20:59.135799762 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  analyzers: 18
-  text: |-
-    The average reward per task (4.8 points) is staying still.
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1637.5) is increasing (R=0.18).
-    The average number of commits per week (64.0) is staying still.
-    The average monthly punishment (784 points) is increasing (R=0.15).
-    The average monthly wage (8.9 points) is decreasing (R=-0.50).
-    The average issue cycle time (4d10h) is decreasing (R=-0.50).
-    The average pull cycle time (1w1d) is staying still.
-    The average number of releases per month (3.5) is decreasing (R=-0.29).
-    The average monthly turnover (27.0 developers) is increasing (R=0.53).
-    The average weekly cost of HoC (0.72 points) is decreasing (R=-0.29).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-07-10 17:20:59.211547389 Z
 - _id: 776610
   _job: 81527
   _time: 2026-07-10 17:23:04.532246053 Z
@@ -121083,9 +121065,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 327
   repository: 23238769
   review: 2026-07-01 09:33:26.000000000 Z
+  review_comments: 0
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
@@ -121098,7 +121082,136 @@
   _version: 0.19.15/0.61.0/0.17.19
   total_active_contributors: 4
   total_commits: 20699
+  total_contributors: 122
+  total_files: 2276
+  total_forks: 994
   total_issues: 2922
   total_pulls: 6834
+  total_releases: 708
+  total_repositories: 31
+  total_stars: 2254
   what: dimensions-of-terrain
   when: 2026-07-12 17:42:09.865752040 Z
+- _id: 777250
+  _job: 81899
+  _time: 2026-07-12 17:43:29.231226816 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  analyzers: 18
+  text: |-
+    The average reward per task (4.7 points) is decreasing (R=-0.12).
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1637.5) is increasing (R=0.18).
+    The average number of commits per week (64.0) is staying still.
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (784 points) is increasing (R=0.15).
+    The average monthly wage (8.3 points) is decreasing (R=-0.67).
+    The average issue cycle time (4d10h) is decreasing (R=-0.50).
+    The average pull cycle time (1w4d) is staying still.
+    The average number of releases per month (3.5) is decreasing (R=-0.29).
+    The average monthly turnover (27.0 developers) is increasing (R=0.53).
+    The average weekly cost of HoC (0.70 points) is decreasing (R=-0.31).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-07-12 17:43:29.249633955 Z
+- _id: 777251
+  _job: 29206072477
+  _time: 2026-07-12 19:36:32.100639621 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-framework-monorepo
+  details: The pull request jcabi/jcabi-parent#824 has been opened by @renovate[bot].
+  event_id: 11680711744
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 824
+  repository: 12590813
+  what: pull-was-opened
+  when: 2026-07-12 18:45:12.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777252
+  _job: 29206072477
+  _time: 2026-07-12 19:36:47.885539486 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-framework-monorepo
+  details: The pull request jcabi/jcabi-github#1945 has been opened by @renovate[bot].
+  event_id: 11680510265
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 1945
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-07-12 18:32:50.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777253
+  _job: 29206072477
+  _time: 2026-07-12 19:37:18.204829793 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/davidanson-markdownlint-cli2-action-24.x
+  details: The missing pull jcabi/jcabi-github#1943 has been opened by @renovate[bot].
+  issue: 1943
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-07-05 03:33:55.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777254
+  _job: 29206072477
+  _time: 2026-07-12 19:37:19.155840700 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/jackson-monorepo
+  details: The missing pull jcabi/jcabi-github#1944 has been opened by @renovate[bot].
+  issue: 1944
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-07-08 01:35:29.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777255
+  _job: 29206072477
+  _time: 2026-07-12 19:38:36.430987671 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/davidanson-markdownlint-cli2-action-24.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1943 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1943
+  repository: 14204295
+  review: 2026-07-05 09:23:20.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-07-05 09:34:32.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777256
+  _job: 29206072477
+  _time: 2026-07-12 19:39:03.146016342 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/jackson-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1944 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 6
+  issue: 1944
+  repository: 14204295
+  review: 2026-07-08 03:28:16.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-07-08 03:40:00.000000000 Z
+  where: github
+  who: 8086956
