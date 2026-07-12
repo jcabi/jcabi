@@ -3,24 +3,26 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6935: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T12:13:27Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T14:05:38Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6935: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T12:14:42Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (absent
+    stale) (eq where ''github'') (exists who))'
+  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T14:07:38Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6935: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 600.668743525
+  seconds: 857.100063933
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-12 12:20:25.504592809 Z
+  when: 2026-07-12 14:14:42.709963207 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -113501,7 +113503,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14318322048
+  events_were_scanned: 11674969600
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 289
@@ -114508,7 +114510,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14414970565
+  events_were_scanned: 11675613812
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -114525,7 +114527,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14411931366
+  events_were_scanned: 11675352852
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 194
@@ -115207,7 +115209,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14732797775
+  events_were_scanned: 11675822797
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 433
@@ -115264,7 +115266,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14815765668
+  events_were_scanned: 14819258817
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115298,7 +115300,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11630506860
+  events_were_scanned: 14820135908
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 125
@@ -115315,7 +115317,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11346845602
+  events_were_scanned: 14818889659
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 71
@@ -115330,17 +115332,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 11672842638
   issues_were_scanned: 0
-  labels_were_scanned: 1177
+  labels_were_scanned: 1276
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1028
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1275
+  types_were_scanned: 1345
   what: iterate
   where: github
 - _id: 776599
@@ -115349,7 +115351,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11357151886
+  events_were_scanned: 14821474478
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 98
@@ -121024,3 +121026,27 @@
     The average monthly zents/points ratio (1.00) is staying still.
   what: assessment
   when: 2026-07-11 17:39:40.810841755 Z
+- _id: 777246
+  _job: 29195399373
+  _time: 2026-07-12 14:02:02.236949677 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-s3#521 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 521
+  repository: 14093966
+  review: 2026-07-01 09:33:13.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-07-12 13:57:06.000000000 Z
+  where: github
+  who: 8086956
