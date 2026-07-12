@@ -3,26 +3,26 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6946: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T21:15:41Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T22:14:09Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6946: (and (absent
-    stale) (eq where ''github'') (exists who))'
-  - 'each() timed out after 60s (execution expired), fb size is 6946: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T21:17:41Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T22:15:26Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6946: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
+  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (eq what
+    ''quality-of-service'') (exists since) (exists when))'
   inserted: 8
-  seconds: 894.080013873
+  seconds: 710.812654102
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-12 21:25:19.165717220 Z
+  when: 2026-07-12 22:22:54.821172470 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -111982,7 +111982,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 137
   merges_were_scanned: 0
-  min_issue_was_found: 67
+  min_issue_was_found: 71
   min_pull_was_found: 0
   repository: 12587970
   types_were_scanned: 0
@@ -113031,7 +113031,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 243
   merges_were_scanned: 0
-  min_issue_was_found: 15
+  min_issue_was_found: 45
   min_pull_was_found: 0
   repository: 13359002
   types_were_scanned: 0
@@ -113508,7 +113508,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 289
   merges_were_scanned: 0
-  min_issue_was_found: 32
+  min_issue_was_found: 57
   min_pull_was_found: 0
   repository: 12947626
   types_were_scanned: 0
@@ -114465,7 +114465,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 66
   merges_were_scanned: 0
-  min_issue_was_found: 68
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12591356
   types_were_scanned: 0
@@ -114498,7 +114498,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 316
   merges_were_scanned: 0
-  min_issue_was_found: 317
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 13624455
   types_were_scanned: 0
@@ -114938,7 +114938,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 34
   merges_were_scanned: 0
-  min_issue_was_found: 20
+  min_issue_was_found: 42
   min_pull_was_found: 0
   repository: 12591382
   types_were_scanned: 0
@@ -114955,7 +114955,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 573
   merges_were_scanned: 0
-  min_issue_was_found: 161
+  min_issue_was_found: 162
   min_pull_was_found: 0
   repository: 16312153
   types_were_scanned: 0
@@ -114987,7 +114987,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 64
   merges_were_scanned: 0
-  min_issue_was_found: 0
+  min_issue_was_found: 7
   min_pull_was_found: 0
   repository: 12591371
   types_were_scanned: 0
@@ -115064,7 +115064,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 39
   merges_were_scanned: 0
-  min_issue_was_found: 15
+  min_issue_was_found: 35
   min_pull_was_found: 0
   repository: 12590128
   types_were_scanned: 0
@@ -115080,7 +115080,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 66
   merges_were_scanned: 0
-  min_issue_was_found: 0
+  min_issue_was_found: 68
   min_pull_was_found: 0
   repository: 12591339
   types_were_scanned: 0
@@ -115097,7 +115097,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 48
   merges_were_scanned: 0
-  min_issue_was_found: 24
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12589424
   types_were_scanned: 0
@@ -115129,7 +115129,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 71
   merges_were_scanned: 0
-  min_issue_was_found: 0
+  min_issue_was_found: 14
   min_pull_was_found: 0
   repository: 16403286
   types_were_scanned: 0
@@ -115146,7 +115146,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 365
   merges_were_scanned: 0
-  min_issue_was_found: 61
+  min_issue_was_found: 105
   min_pull_was_found: 0
   repository: 12587702
   types_were_scanned: 0
@@ -115163,7 +115163,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 460
   merges_were_scanned: 0
-  min_issue_was_found: 143
+  min_issue_was_found: 148
   min_pull_was_found: 0
   repository: 13717355
   types_were_scanned: 0
@@ -115197,7 +115197,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 422
   merges_were_scanned: 0
-  min_issue_was_found: 78
+  min_issue_was_found: 88
   min_pull_was_found: 530
   repository: 12589687
   types_were_scanned: 0
@@ -115247,7 +115247,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 135
   merges_were_scanned: 0
-  min_issue_was_found: 56
+  min_issue_was_found: 122
   min_pull_was_found: 0
   repository: 19194296
   types_were_scanned: 0
@@ -115266,7 +115266,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14841256930
+  events_were_scanned: 14845309707
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115288,7 +115288,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 268
   merges_were_scanned: 0
-  min_issue_was_found: 0
+  min_issue_was_found: 13
   min_pull_was_found: 0
   repository: 23238769
   types_were_scanned: 0
@@ -115322,7 +115322,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 71
   merges_were_scanned: 0
-  min_issue_was_found: 82
+  min_issue_was_found: 101
   min_pull_was_found: 0
   repository: 12591347
   types_were_scanned: 0
@@ -115332,17 +115332,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1731
+  assignees_were_scanned: 0
   earliest_issue_was_found: 1
   events_were_scanned: 14837644586
   issues_were_scanned: 0
-  labels_were_scanned: 1177
+  labels_were_scanned: 1276
   latest_issue_was_found: 1806
   merges_were_scanned: 0
-  min_issue_was_found: 1029
+  min_issue_was_found: 1038
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1176
+  types_were_scanned: 1275
   what: iterate
   where: github
 - _id: 776599
@@ -115356,7 +115356,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 98
   merges_were_scanned: 0
-  min_issue_was_found: 95
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 25780072
   types_were_scanned: 0
@@ -115373,7 +115373,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 691
   merges_were_scanned: 0
-  min_issue_was_found: 81
+  min_issue_was_found: 83
   min_pull_was_found: 0
   repository: 12590813
   types_were_scanned: 0
@@ -121192,7 +121192,7 @@
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-05 09:34:32.000000000 Z
+  when: &1202 2026-07-05 09:34:32.000000000 Z
   where: github
   who: 8086956
 - _id: 777256
@@ -121218,7 +121218,7 @@
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-08 03:40:00.000000000 Z
+  when: &1203 2026-07-08 03:40:00.000000000 Z
   where: github
   who: 8086956
 - _id: 777257
@@ -121237,5 +121237,41 @@
   seconds: 1027643
   what: code-was-contributed
   when: *1201
+  where: github
+  who: 29139614
+- _id: 777258
+  _job: 81933
+  _time: 2026-07-12 21:26:12.687895443 Z
+  _version: 0.19.16/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1943 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 6h of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 1943
+  merger: 8086956
+  repository: 14204295
+  review_comments: 0
+  seconds: 21637
+  what: code-was-contributed
+  when: *1202
+  where: github
+  who: 29139614
+- _id: 777259
+  _job: 81933
+  _time: 2026-07-12 21:26:13.231448764 Z
+  _version: 0.19.16/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-github#1944 with 6 HoC created by @renovate[bot]
+    was merged by @rultor after 2h4m of being in review and 3 comments.
+  hoc: 6
+  is_human: 0
+  issue: 1944
+  merger: 8086956
+  repository: 14204295
+  review_comments: 0
+  seconds: 7471
+  what: code-was-contributed
+  when: *1203
   where: github
   who: 29139614
