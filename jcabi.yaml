@@ -3,26 +3,24 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T15:33:21Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T17:34:17Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T15:34:33Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-12T17:36:00Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6938: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
-  - 'each() timed out after 60s (execution expired), fb size is 6936: (and (eq what
-    ''quality-of-service'') (exists since) (exists when))'
   inserted: 8
-  seconds: 697.235700986
+  seconds: 745.668035165
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-12 15:41:56.632212059 Z
+  when: 2026-07-12 17:42:37.310476426 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -115158,7 +115156,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11630513525
+  events_were_scanned: 14833922018
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 460
@@ -115266,7 +115264,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14825310490
+  events_were_scanned: 14829537901
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115283,7 +115281,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11630512311
+  events_were_scanned: 11679140980
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 268
@@ -115332,17 +115330,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1278
+  assignees_were_scanned: 1349
   earliest_issue_was_found: 1
   events_were_scanned: 11672842638
   issues_were_scanned: 0
-  labels_were_scanned: 1346
+  labels_were_scanned: 1555
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1029
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1467
+  types_were_scanned: 1634
   what: iterate
   where: github
 - _id: 776599
@@ -121049,6 +121047,58 @@
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-12 13:57:06.000000000 Z
+  when: &1200 2026-07-12 13:57:06.000000000 Z
   where: github
   who: 8086956
+- _id: 777247
+  _job: 81873
+  _time: 2026-07-12 15:42:32.990854176 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#521 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1w4d of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 521
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 1015650
+  what: code-was-contributed
+  when: *1200
+  where: github
+  who: 29139614
+- _id: 777248
+  _job: 29202076680
+  _time: 2026-07-12 17:31:30.852248358 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-ssh#327 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 327
+  repository: 23238769
+  review: 2026-07-01 09:33:26.000000000 Z
+  succeeded_builds: 12
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-07-12 17:10:33.000000000 Z
+  where: github
+  who: 8086956
+- _id: 777249
+  _job: 29202076680
+  _time: 2026-07-12 17:42:09.848972060 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  total_active_contributors: 4
+  total_commits: 20699
+  total_issues: 2922
+  total_pulls: 6834
+  what: dimensions-of-terrain
+  when: 2026-07-12 17:42:09.865752040 Z
