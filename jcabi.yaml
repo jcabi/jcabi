@@ -3,26 +3,24 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T07:50:55Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6949: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T11:37:37Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (absent
-    stale) (eq where ''github'') (exists who))'
-  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T07:52:56Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6949: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T11:38:53Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6948: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6949: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 853.997555279
+  seconds: 616.700568576
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-13 08:00:07.115774194 Z
+  when: 2026-07-13 11:44:16.655117364 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -115290,7 +115288,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14861885973
+  events_were_scanned: 14873232424
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115356,17 +115354,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1481
+  assignees_were_scanned: 1731
   earliest_issue_was_found: 1
-  events_were_scanned: 14837644586
+  events_were_scanned: 11704322744
   issues_were_scanned: 0
-  labels_were_scanned: 1177
+  labels_were_scanned: 1276
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1749
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776599
@@ -115392,7 +115390,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14838221779
+  events_were_scanned: 11704448134
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -121299,3 +121297,27 @@
   when: *1203
   where: github
   who: 29139614
+- _id: 777260
+  _job: 29246622028
+  _time: 2026-07-13 11:35:44.308059573 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/junit-framework-monorepo
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1945 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1945
+  repository: 14204295
+  review: 2026-07-13 09:41:08.000000000 Z
+  succeeded_builds: 15
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-07-13 10:06:37.000000000 Z
+  where: github
+  who: 8086956
