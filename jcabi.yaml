@@ -3,26 +3,26 @@
   cycles: 1
   deleted: 8
   error:
-  - 'each() timed out after 60s (execution expired), fb size is 6950: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T20:41:53Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6951: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T23:28:57Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6950: (and (absent
+  - 'each() timed out after 60s (execution expired), fb size is 6951: (and (absent
     stale) (eq where ''github'') (exists who))'
-  - 'each() timed out after 60s (execution expired), fb size is 6950: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T20:43:54Z''))
+  - 'each() timed out after 60s (execution expired), fb size is 6951: (and (eq what
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-13T23:30:57Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6950: (and (or (eq
+  - 'each() timed out after 60s (execution expired), fb size is 6951: (and (or (eq
     what ''pull-was-merged'') (eq what ''pull-was-closed'')) (exists repository) (exists
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
   inserted: 8
-  seconds: 877.724272474
+  seconds: 890.324410409
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-13 20:51:18.811164624 Z
+  when: 2026-07-13 23:38:39.951982401 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -115216,7 +115216,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11645653079
+  events_were_scanned: 14925386337
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -115290,7 +115290,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14910398240
+  events_were_scanned: 14920468057
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115356,17 +115356,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 11704322744
   issues_were_scanned: 0
-  labels_were_scanned: 1555
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1275
+  types_were_scanned: 1345
   what: iterate
   where: github
 - _id: 776599
@@ -121009,27 +121009,6 @@
   total_stars: 2255
   what: dimensions-of-terrain
   when: 2026-07-11 17:38:19.095835751 Z
-- _id: 777245
-  _job: 81734
-  _time: 2026-07-11 17:39:40.792107712 Z
-  _version: 0.19.15/0.61.0/0.17.19
-  analyzers: 18
-  text: |-
-    The average reward per task (4.7 points) is decreasing (R=-0.12).
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1637.5) is increasing (R=0.18).
-    The average number of commits per week (64.0) is staying still.
-    The average bugs accepted per month (5.0) is decreasing (R=0.10).
-    The average monthly punishment (784 points) is increasing (R=0.15).
-    The average monthly wage (8.3 points) is decreasing (R=-0.67).
-    The average issue cycle time (4d10h) is decreasing (R=-0.50).
-    The average pull cycle time (1w4d) is staying still.
-    The average number of releases per month (3.5) is decreasing (R=-0.29).
-    The average monthly turnover (27.0 developers) is increasing (R=0.53).
-    The average weekly cost of HoC (0.70 points) is decreasing (R=-0.31).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-07-11 17:39:40.810841755 Z
 - _id: 777246
   _job: 29195399373
   _time: 2026-07-12 14:02:02.236949677 Z
@@ -121343,3 +121322,50 @@
   when: *1204
   where: github
   who: 29139614
+- _id: 777262
+  _job: 82320
+  _time: 2026-07-13 23:03:10.961741219 Z
+  _version: 0.19.16/0.61.0/0.17.19!0.17.20
+  analyzers: 18
+  text: |-
+    The average reward per task (4.7 points) is decreasing (R=-0.12).
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1637.5) is increasing (R=0.18).
+    The average number of commits per week (64.0) is staying still.
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (784 points) is increasing (R=0.15).
+    The average monthly wage (8.3 points) is decreasing (R=-0.67).
+    The average issue cycle time (2d22h) is decreasing (R=-0.33).
+    The average pull cycle time (1w3d) is staying still.
+    The average number of releases per month (3.5) is decreasing (R=-0.29).
+    The average monthly turnover (27.0 developers) is increasing (R=0.53).
+    The average weekly cost of HoC (0.70 points) is decreasing (R=-0.31).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-07-13 23:03:10.977562790 Z
+- _id: 777263
+  _job: 29292850774
+  _time: 2026-07-13 23:24:07.985658508 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  branch: renovate/aws-java-sdk-v2-monorepo
+  details: The pull request jcabi/jcabi-dynamo#533 has been opened by @renovate[bot].
+  event_id: 11737482592
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 533
+  repository: 12589687
+  what: pull-was-opened
+  when: 2026-07-13 22:43:54.000000000 Z
+  where: github
+  who: 29139614
+- _id: 777264
+  _job: 29292850774
+  _time: 2026-07-13 23:37:45.928718413 Z
+  _version: 0.19.15/0.61.0/0.17.19
+  total_active_contributors: 4
+  total_commits: 20701
+  total_contributors: 122
+  total_files: 2276
+  total_repositories: 31
+  what: dimensions-of-terrain
+  when: 2026-07-13 23:37:45.943134465 Z
