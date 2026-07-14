@@ -4,13 +4,11 @@
   deleted: 8
   error:
   - 'each() timed out after 60s (execution expired), fb size is 6952: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-14T12:49:41Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-14T15:10:17Z''))
     ''2 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
-  - 'each() timed out after 60s (execution expired), fb size is 6952: (and (absent
-    stale) (eq where ''github'') (exists who))'
   - 'each() timed out after 60s (execution expired), fb size is 6952: (and (eq what
-    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-14T12:51:41Z''))
+    ''who-has-name'') (lt when (minus (to_time (env ''TODAY'' ''2026-07-14T15:12:02Z''))
     ''5 days'')) (absent stale) (absent tombstone) (absent done) (exists who) (eq
     where ''github''))'
   - 'each() timed out after 60s (execution expired), fb size is 6952: (and (or (eq
@@ -18,12 +16,11 @@
     issue) (absent stale) (absent tombstone) (absent done) (eq where ''github'') (unique
     where repository issue) (empty (and (eq issue $issue) (eq repository $repository)
     (eq where ''github'') (eq what ''code-was-reviewed''))))'
-  - 'Judge type-was-attached stopped by timeout after 1m53s: execution expired'
   inserted: 8
-  seconds: 900.634643793
+  seconds: 713.495299548
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-14 12:58:45.930972678 Z
+  when: 2026-07-14 15:18:03.389675299 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -112010,7 +112007,7 @@
   min_issue_was_found: 71
   min_pull_was_found: 0
   repository: 12587970
-  types_were_scanned: 92
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 775678
@@ -113059,7 +113056,7 @@
   min_issue_was_found: 45
   min_pull_was_found: 0
   repository: 13359002
-  types_were_scanned: 84
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 775985
@@ -113536,7 +113533,7 @@
   min_issue_was_found: 57
   min_pull_was_found: 0
   repository: 12947626
-  types_were_scanned: 72
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776061
@@ -114983,7 +114980,7 @@
   min_issue_was_found: 163
   min_pull_was_found: 0
   repository: 16312153
-  types_were_scanned: 222
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776390
@@ -115191,7 +115188,7 @@
   min_issue_was_found: 177
   min_pull_was_found: 0
   repository: 13717355
-  types_were_scanned: 249
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776560
@@ -115208,7 +115205,7 @@
   min_issue_was_found: 40
   min_pull_was_found: 0
   repository: 12262782
-  types_were_scanned: 97
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776567
@@ -115225,7 +115222,7 @@
   min_issue_was_found: 90
   min_pull_was_found: 530
   repository: 12589687
-  types_were_scanned: 441
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776575
@@ -115242,7 +115239,7 @@
   min_issue_was_found: 373
   min_pull_was_found: 0
   repository: 14093966
-  types_were_scanned: 450
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776584
@@ -115291,7 +115288,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 14956585008
+  events_were_scanned: 14962394718
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -115299,7 +115296,7 @@
   min_issue_was_found: 316
   min_pull_was_found: 0
   repository: 4174608
-  types_were_scanned: 534
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776595
@@ -115316,7 +115313,7 @@
   min_issue_was_found: 13
   min_pull_was_found: 0
   repository: 23238769
-  types_were_scanned: 40
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776596
@@ -115357,17 +115354,17 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1278
+  assignees_were_scanned: 1349
   earliest_issue_was_found: 1
   events_were_scanned: 11704322744
   issues_were_scanned: 0
-  labels_were_scanned: 1177
+  labels_were_scanned: 1276
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 1283
+  types_were_scanned: 1354
   what: iterate
   where: github
 - _id: 776599
@@ -115401,7 +115398,7 @@
   min_issue_was_found: 117
   min_pull_was_found: 0
   repository: 12590813
-  types_were_scanned: 608
+  types_were_scanned: 0
   what: iterate
   where: github
 - _id: 776601
