@@ -2,12 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge code-was-reviewed stopped by timeout after 3m19s: execution expired'
   inserted: 8
-  seconds: 900.165039639
+  seconds: 871.711571102
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-16 07:49:09.761633720 Z
+  when: 2026-07-16 10:37:44.262918434 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -13580,50 +13579,6 @@
   when: 2025-10-29 20:43:32.000000000 Z
   where: github
   who: 29793349
-- _id: 630094
-  _job: 46725
-  _time: 2025-11-02 06:59:38.505574742 Z
-  _version: 0.16.8/0.55.0/0.16.0
-  award: 4
-  comments: 3
-  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#373,
-    the reward amount is 4.
-  hoc: 2
-  href: https://github.com/jcabi/jcabi-jdbc/issues/373/#issuecomment-3477481001
-  is_human: 1
-  issue: 373
-  receipt: receipt-#46799
-  repository: 12587702
-  review_comments: 0
-  seconds: 36450
-  tombstone: 2026-07-05 08:36:53.597032783 Z
-  what: code-review-was-rewarded
-  when: 2025-11-02 04:54:40.505419346 Z
-  where: github
-  who: 526301
-  why: Reviewed code in jcabi/jcabi-jdbc#373
-- _id: 630095
-  _job: 46725
-  _time: 2025-11-02 06:59:38.687146718 Z
-  _version: 0.16.8/0.55.0/0.16.0
-  award: 4
-  comments: 3
-  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#374,
-    the reward amount is 4.
-  hoc: 2
-  href: https://github.com/jcabi/jcabi-jdbc/issues/374/#issuecomment-3477481009
-  is_human: 1
-  issue: 374
-  receipt: receipt-#46800
-  repository: 12587702
-  review_comments: 0
-  seconds: 13373
-  tombstone: 2026-07-10 17:21:45.037213572 Z
-  what: code-review-was-rewarded
-  when: 2025-11-02 04:54:46.067524962 Z
-  where: github
-  who: 526301
-  why: Reviewed code in jcabi/jcabi-jdbc#374
 - _id: 631029
   _job: 46779
   _time: 2025-11-02 13:10:52.525544377 Z
@@ -114600,7 +114555,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 11855234714
+  events_were_scanned: 11863140704
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -114674,7 +114629,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15076058390
+  events_were_scanned: 15086536042
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -114740,11 +114695,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1481
+  assignees_were_scanned: 1731
   earliest_issue_was_found: 1
   events_were_scanned: 11794247774
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121870,7 +121825,7 @@
   succeeded_builds: 15
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-16 03:42:32.000000000 Z
+  when: &1201 2026-07-16 03:42:32.000000000 Z
   where: github
   who: 8086956
 - _id: 777326
@@ -121891,3 +121846,46 @@
   when: *1200
   where: github
   who: 526301
+- _id: 777327
+  _job: 82730
+  _time: 2026-07-16 07:50:10.823956682 Z
+  _version: 0.19.16/0.61.0/0.17.20
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#535 with 10 HoC created by @renovate[bot]
+    was merged by @rultor after 2h47m of being in review and 3 comments.
+  hoc: 10
+  is_human: 0
+  issue: 535
+  merger: 8086956
+  repository: 12589687
+  review_comments: 0
+  seconds: 10029
+  what: code-was-contributed
+  when: *1201
+  where: github
+  who: 29139614
+- _id: 777328
+  _job: 82730
+  _time: 2026-07-16 07:50:11.954578602 Z
+  _version: 0.19.16/0.61.0/0.17.20
+  award: 4
+  comments: 3
+  details: It's time to reward @yegor256 for the code review in jcabi/jcabi-dynamo#535,
+    the reward amount is 4.
+  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
+    -16 for absolutely no comments posted; -8 for too few (10) hits-of-code; +16 to
+    give you at least something.  Your running score is [+104](https://jcabi.github.io/jcabi/jcabi-vitals.html);
+    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
+  hoc: 10
+  href: https://github.com/jcabi/jcabi-dynamo/issues/535/#issuecomment-4989467387
+  is_human: 1
+  issue: 535
+  receipt: receipt-#81941
+  repository: 12589687
+  review_comments: 0
+  seconds: 9447
+  what: code-review-was-rewarded
+  when: 2026-07-16 07:50:11.967301375 Z
+  where: github
+  who: 526301
+  why: Reviewed code in jcabi/jcabi-dynamo#535
