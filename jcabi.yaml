@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge code-was-reviewed stopped by timeout after 6m44s: execution expired'
+  error: 'Judge code-was-reviewed stopped by timeout after 50s: execution expired'
   inserted: 8
-  seconds: 900.169616687
+  seconds: 900.193971455
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-19 11:03:26.313331589 Z
+  when: 2026-07-19 12:25:14.005987128 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -8201,21 +8201,6 @@
   when: 2025-09-30 19:07:52.000000000 Z
   where: github
   who: 29139614
-- _id: 578387
-  _job: 18153864350
-  _time: 2025-10-01 06:47:50.389150638 Z
-  _version: 0.16.7/0.54.0/0.15.49
-  branch: '677'
-  details: The pull request jcabi/jcabi-parent#682 has been opened by @fabriciofx.
-  event_id: 54991630305
-  event_type: PullRequestEvent
-  is_human: 1
-  issue: 682
-  repository: 12590813
-  what: pull-was-opened
-  when: 2025-09-21 17:57:24.000000000 Z
-  where: github
-  who: 1964562
 - _id: 578413
   _job: 18153864350
   _time: 2025-10-01 06:49:07.805106959 Z
@@ -113027,8 +113012,7 @@
   - 488-607
   - 609-614
   - 616-669
-  - 671-681
-  - 683-690
+  - 671-690
   - 692-701
   repository: 12590813
   what: tombstone
@@ -114110,7 +114094,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15292750069
+  events_were_scanned: 15296650482
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -114176,11 +114160,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 15263836814
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -114511,6 +114495,7 @@
   review: 2025-09-22 06:27:36.000000000 Z
   succeeded_builds: 14
   suggestions: 3
+  tombstone: 2026-07-19 11:04:39.417666459 Z
   what: pull-was-closed
   when: 2026-01-08 21:43:38.000000000 Z
   where: github
@@ -121831,6 +121816,7 @@
   details: The pull request jcabi/jcabi-parent#817 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 13h21m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 817
   repository: 12590813
   review_comments: 0
@@ -121848,6 +121834,7 @@
   details: The pull request jcabi/jcabi-parent#818 with 4 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 13h21m and 0 comments.
   hoc: 4
+  is_human: 1
   issue: 818
   repository: 12590813
   review_comments: 0
@@ -121865,6 +121852,7 @@
   details: The pull request jcabi/jcabi-parent#819 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 11h10m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 819
   repository: 12590813
   review_comments: 0
@@ -121882,6 +121870,7 @@
   details: The pull request jcabi/jcabi-parent#820 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 11h10m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 820
   repository: 12590813
   review_comments: 0
@@ -121899,6 +121888,7 @@
   details: The pull request jcabi/jcabi-parent#821 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 7h36m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 821
   repository: 12590813
   review_comments: 0
@@ -121916,6 +121906,7 @@
   details: The pull request jcabi/jcabi-parent#822 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 7h36m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 822
   repository: 12590813
   review_comments: 0
@@ -121933,6 +121924,7 @@
   details: The pull request jcabi/jcabi-dynamo#527 with 2 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 1h29m and 0 comments.
   hoc: 2
+  is_human: 1
   issue: 527
   repository: 12589687
   review_comments: 0
@@ -121950,28 +121942,12 @@
   details: The pull request jcabi/jcabi-dynamo#529 with 10 HoC created by @renovate[bot]
     was reviewed by @yegor256 after 4h41m and 0 comments.
   hoc: 10
+  is_human: 1
   issue: 529
   repository: 12589687
   review_comments: 0
   seconds: 16879
   what: code-was-reviewed
   when: 2026-07-08 03:33:34.000000000 Z
-  where: github
-  who: 526301
-- _id: 777366
-  _job: 29683955341
-  _time: 2026-07-19 11:03:23.173022306 Z
-  _version: 0.19.16/0.61.0/0.17.20
-  author: 1964562
-  comments: 4
-  details: The pull request jcabi/jcabi-parent#682 with 19 HoC created by @fabriciofx
-    was reviewed by @yegor256 after 12h30m and 1 comments.
-  hoc: 19
-  issue: 682
-  repository: 12590813
-  review_comments: 1
-  seconds: 45014
-  what: code-was-reviewed
-  when: 2025-09-22 06:27:36.000000000 Z
   where: github
   who: 526301
