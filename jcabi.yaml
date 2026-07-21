@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge who-has-name stopped by timeout after 2m59s: execution expired'
+  error: 'Judge label-was-attached stopped by timeout after 1m52s: execution expired'
   inserted: 8
-  seconds: 900.129546876
+  seconds: 900.320320644
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-21 07:00:59.049895055 Z
+  when: 2026-07-21 10:01:55.804071011 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -110346,7 +110346,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 11006789754
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 106
   latest_issue_was_found: 137
   merges_were_scanned: 0
   min_issue_was_found: 71
@@ -112876,7 +112876,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15415244927
+  events_were_scanned: 15431337320
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -113633,7 +113633,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15418986208
+  events_were_scanned: 15429269070
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -113652,7 +113652,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 15264588771
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 69
   latest_issue_was_found: 268
   merges_were_scanned: 0
   min_issue_was_found: 13
@@ -113699,11 +113699,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1349
+  assignees_were_scanned: 1481
   earliest_issue_was_found: 1
   events_were_scanned: 15400611273
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1057
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121304,27 +121304,6 @@
   when: *1194
   where: github
   who: 29139614
-- _id: 777357
-  _job: 83111
-  _time: 2026-07-19 04:17:02.736228187 Z
-  _version: 0.19.16/0.61.0/0.17.20
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is decreasing (R=-0.12).
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1649.1) is staying still.
-    The average number of commits per week (64.9) is staying still.
-    The average bugs accepted per month (5.0) is decreasing (R=0.10).
-    The average monthly punishment (784 points) is increasing (R=0.15).
-    The average monthly wage (8.3 points) is decreasing (R=-0.67).
-    The average issue cycle time (2d22h) is decreasing (R=-0.33).
-    The average pull cycle time (1w3d) is staying still.
-    The average number of releases per month (3.5) is decreasing (R=-0.39).
-    The average monthly turnover (30.0 developers) is increasing (R=0.52).
-    The average weekly cost of HoC (0.50 points) is decreasing (R=0.46).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-07-19 04:17:02.754850640 Z
 - _id: 777358
   _job: 29683955341
   _time: 2026-07-19 11:03:08.848097311 Z
@@ -121651,3 +121630,24 @@
   start: *338
   what: earned-value
   when: 2026-07-20 19:28:25.233038468 Z
+- _id: 777375
+  _job: 83395
+  _time: 2026-07-21 07:02:28.236905857 Z
+  _version: 0.19.16/0.61.0/0.17.20
+  analyzers: 18
+  text: |-
+    The average reward per task (4.5 points) is decreasing (R=-0.11).
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1649.1) is staying still.
+    The average number of commits per week (64.9) is staying still.
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (784 points) is increasing (R=0.15).
+    The average monthly wage (8.3 points) is decreasing (R=-0.67).
+    The average issue cycle time (1d14h) is decreasing (R=-0.23).
+    The average pull cycle time (1w3d) is staying still.
+    The average number of releases per month (3.5) is decreasing (R=-0.39).
+    The average monthly turnover (30.0 developers) is increasing (R=0.52).
+    The average weekly cost of HoC (0.49 points) is decreasing (R=0.60).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-07-21 07:02:28.255067227 Z
