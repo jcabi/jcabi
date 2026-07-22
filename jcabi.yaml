@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge code-was-reviewed stopped by timeout after 2m13s: execution expired'
   inserted: 8
-  seconds: 888.28242119
+  seconds: 900.166559934
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-22 07:01:43.960816895 Z
+  when: 2026-07-22 09:59:09.914463986 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -113535,7 +113536,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15508138080
+  events_were_scanned: 15519254090
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -113601,11 +113602,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 15497202568
   issues_were_scanned: 0
-  labels_were_scanned: 1555
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121497,27 +121498,6 @@
   where: github
   who: 526301
   why: Reviewed code in jcabi/jcabi-dynamo#529
-- _id: 777373
-  _job: 83252
-  _time: 2026-07-20 05:12:49.577766522 Z
-  _version: 0.19.16/0.61.0/0.17.20
-  analyzers: 18
-  text: |-
-    The average reward per task (4.6 points) is decreasing (R=-0.13).
-    The average punishment per task (16.0 points) is staying still.
-    The average number of builds per week (1649.1) is staying still.
-    The average number of commits per week (64.9) is staying still.
-    The average bugs accepted per month (5.0) is decreasing (R=0.10).
-    The average monthly punishment (784 points) is increasing (R=0.15).
-    The average monthly wage (8.3 points) is decreasing (R=-0.67).
-    The average issue cycle time (1d14h) is decreasing (R=-0.23).
-    The average pull cycle time (1w3d) is staying still.
-    The average number of releases per month (3.5) is decreasing (R=-0.39).
-    The average monthly turnover (30.0 developers) is increasing (R=0.52).
-    The average weekly cost of HoC (0.49 points) is decreasing (R=0.52).
-    The average monthly zents/points ratio (1.00) is staying still.
-  what: assessment
-  when: 2026-07-20 05:12:49.596501666 Z
 - _id: 777374
   _job: 83319
   _time: 2026-07-20 19:28:25.232817721 Z
@@ -121670,3 +121650,24 @@
   when: *1194
   where: github
   who: 29139614
+- _id: 777383
+  _job: 83544
+  _time: 2026-07-22 07:02:54.180852465 Z
+  _version: 0.19.16/0.61.0/0.17.20
+  analyzers: 18
+  text: |-
+    The average reward per task (4.5 points) is decreasing (R=-0.11).
+    The average punishment per task (16.0 points) is staying still.
+    The average number of builds per week (1649.1) is staying still.
+    The average number of commits per week (64.9) is staying still.
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (784 points) is increasing (R=0.15).
+    The average monthly wage (8.3 points) is decreasing (R=-0.67).
+    The average issue cycle time (1d14h) is decreasing (R=-0.23).
+    The average pull cycle time (1w3d) is staying still.
+    The average number of releases per month (3.5) is decreasing (R=-0.39).
+    The average monthly turnover (30.0 developers) is increasing (R=0.52).
+    The average weekly cost of HoC (0.49 points) is decreasing (R=0.60).
+    The average monthly zents/points ratio (1.00) is staying still.
+  what: assessment
+  when: 2026-07-22 07:02:54.199526790 Z
