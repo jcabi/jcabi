@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: data error
+  error: 'Judge code-was-reviewed stopped by timeout after 99s: execution expired'
   inserted: 8
-  seconds: 900.119571319
+  seconds: 900.172774455
   version: 0.61.0
   what: judges-summary
-  when: 2026-07-24 00:30:56.079345156 Z
+  when: 2026-07-24 04:06:11.727113724 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -112578,7 +112578,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15146130846
+  events_were_scanned: 15672647635
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 573
@@ -112820,7 +112820,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15664044704
+  events_were_scanned: 15671870167
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -112894,7 +112894,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15669123891
+  events_were_scanned: 15671279755
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -112960,11 +112960,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 15497202568
   issues_were_scanned: 0
-  labels_were_scanned: 1276
+  labels_were_scanned: 1346
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121045,3 +121045,26 @@
   total_reviews_submitted: 1
   what: quantity-of-deliverables
   when: 2026-07-23 12:54:19.304661187 Z
+- _id: 777386
+  _job: 30065208361
+  _time: 2026-07-24 03:53:43.404077035 Z
+  _version: 0.19.16/0.61.0/0.17.20
+  branch: dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.22.0
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-http#623 has been "pull-was-closed".
+  failed_builds: 1
+  files: 1
+  hoc: 2
+  issue: 623
+  repository: 16312153
+  succeeded_builds: 20
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-07-24 01:09:39.000000000 Z
+  where: github
+  who: 49699333
