@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.195256152
+  seconds: 810.774332564
   version: 0.61.1
   what: judges-summary
-  when: 2026-07-27 21:47:15.550326408 Z
+  when: 2026-07-27 23:44:28.781736043 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -102261,8 +102261,7 @@
   - 51-53
   - 55-58
   - '60'
-  - 62-63
-  - 70-93
+  - 62-93
   repository: 12584841
   what: tombstone
   where: github
@@ -110752,7 +110751,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 12366410778
+  events_were_scanned: 15973246825
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -110826,7 +110825,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 15964475339
+  events_were_scanned: 15969416142
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -110892,11 +110891,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1278
+  assignees_were_scanned: 1349
   earliest_issue_was_found: 1
   events_were_scanned: 12367548837
   issues_were_scanned: 0
-  labels_were_scanned: 1346
+  labels_were_scanned: 1555
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121685,7 +121684,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-27 17:03:53.000000000 Z
+  when: &1164 2026-07-27 17:03:53.000000000 Z
   where: github
   who: 8086956
 - _id: 777583
@@ -121711,7 +121710,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-27 17:39:17.000000000 Z
+  when: &1165 2026-07-27 17:39:17.000000000 Z
   where: github
   who: 8086956
 - _id: 777585
@@ -121737,7 +121736,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-27 17:09:23.000000000 Z
+  when: &1166 2026-07-27 17:09:23.000000000 Z
   where: github
   who: 8086956
 - _id: 777587
@@ -121763,7 +121762,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-27 17:02:16.000000000 Z
+  when: &1167 2026-07-27 17:02:16.000000000 Z
   where: github
   who: 8086956
 - _id: 777604
@@ -121774,10 +121773,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-jdbc#434,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-328](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-jdbc/issues/434/#issuecomment-5096352941
   is_human: 1
@@ -121799,10 +121794,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-immutable#95,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-324](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-immutable/issues/95/#issuecomment-5096353363
   is_human: 1
@@ -121824,10 +121815,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-email#119,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-320](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-email/issues/119/#issuecomment-5096353769
   is_human: 1
@@ -121841,221 +121828,12 @@
   where: github
   who: 526301
   why: Reviewed code in jcabi/jcabi-email#119
-- _id: 777607
-  _job: 30307298420
-  _time: 2026-07-27 21:34:32.397162481 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/ubuntu-22.x
-  details: The missing pull jcabi/jcabi-manifests#64 has been opened by @renovate[bot].
-  issue: 64
-  repository: 12584841
-  what: pull-was-opened
-  when: 2023-08-09 14:16:36.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777608
-  _job: 30307298420
-  _time: 2026-07-27 21:34:33.182598361 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-checkout-4.x
-  details: The missing pull jcabi/jcabi-manifests#65 has been opened by @renovate[bot].
-  issue: 65
-  repository: 12584841
-  what: pull-was-opened
-  when: 2023-09-04 14:07:45.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777609
-  _job: 30307298420
-  _time: 2026-07-27 21:34:33.972903960 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/codecov-codecov-action-4.x
-  details: The missing pull jcabi/jcabi-manifests#66 has been opened by @renovate[bot].
-  issue: 66
-  repository: 12584841
-  what: pull-was-opened
-  when: 2023-09-14 15:55:57.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777610
-  _job: 30307298420
-  _time: 2026-07-27 21:34:34.686739095 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-setup-java-4.x
-  details: The missing pull jcabi/jcabi-manifests#67 has been opened by @renovate[bot].
-  issue: 67
-  repository: 12584841
-  what: pull-was-opened
-  when: 2023-11-29 17:23:49.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777611
-  _job: 30307298420
-  _time: 2026-07-27 21:34:35.497337179 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-cache-4.x
-  details: The missing pull jcabi/jcabi-manifests#68 has been opened by @renovate[bot].
-  issue: 68
-  repository: 12584841
-  what: pull-was-opened
-  when: 2024-01-17 17:27:14.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777612
-  _job: 30307298420
-  _time: 2026-07-27 21:34:36.238606445 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/com.jcabi-jcabi-1.x
-  details: The missing pull jcabi/jcabi-manifests#69 has been opened by @renovate[bot].
-  issue: 69
-  repository: 12584841
-  what: pull-was-opened
-  when: 2024-02-23 13:30:48.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777613
-  _job: 30307298420
-  _time: 2026-07-27 21:34:42.180307222 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/ubuntu-22.x
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#64 has been "pull-was-closed".
-  failed_builds: 0
-  files: 3
-  hoc: 6
-  issue: 64
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-closed
-  when: 2024-09-26 19:28:23.000000000 Z
-  where: github
-  who: 29139614
-- _id: 777614
-  _job: 30307298420
-  _time: 2026-07-27 21:35:08.587225128 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-checkout-4.x
-  comments: 4
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 4
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#65 has been "pull-was-merged".
-  failed_builds: 0
-  files: 4
-  hoc: 8
-  issue: 65
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-04 17:48:56.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777615
-  _job: 30307298420
-  _time: 2026-07-27 21:35:26.409313424 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/codecov-codecov-action-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#66 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 66
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-09-14 16:59:32.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777616
-  _job: 30307298420
-  _time: 2026-07-27 21:35:38.605568367 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-setup-java-4.x
-  comments: 5
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 5
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#67 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 4
-  issue: 67
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2023-11-29 18:56:34.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777617
-  _job: 30307298420
-  _time: 2026-07-27 21:35:47.763864870 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/actions-cache-4.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#68 has been "pull-was-merged".
-  failed_builds: 0
-  files: 2
-  hoc: 4
-  issue: 68
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2024-01-17 18:57:34.000000000 Z
-  where: github
-  who: 8086956
-- _id: 777618
-  _job: 30307298420
-  _time: 2026-07-27 21:35:55.252635201 Z
-  _version: 0.19.16/0.61.1/0.17.21
-  branch: renovate/com.jcabi-jcabi-1.x
-  comments: 3
-  comments_appreciated: 1
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-manifests#69 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 69
-  repository: 12584841
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2024-02-23 13:50:04.000000000 Z
-  where: github
-  who: 8086956
 - _id: 777619
   _job: 30307298420
   _time: 2026-07-27 21:39:57.616226955 Z
   _version: 0.19.16/0.61.1/0.17.21
   details: 'We found out that the user #71331081 is known in GitHub as @dfraser-pattison.'
+  is_human: 1
   name: dfraser-pattison
   what: who-has-name
   when: 2026-07-27 21:39:57.619887896 Z
@@ -122066,8 +121844,81 @@
   _time: 2026-07-27 21:39:57.677870223 Z
   _version: 0.19.16/0.61.1/0.17.21
   details: 'We found out that the user #124660619 is known in GitHub as @wade-tech.'
+  is_human: 1
   name: wade-tech
   what: who-has-name
   when: 2026-07-27 21:39:57.681106878 Z
   where: github
   who: 124660619
+- _id: 777621
+  _job: 84217
+  _time: 2026-07-27 21:47:47.188893609 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#68 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1h15m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 68
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 4505
+  what: code-was-contributed
+  when: *1164
+  where: github
+  who: 29139614
+- _id: 777622
+  _job: 84217
+  _time: 2026-07-27 21:47:47.751863754 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-immutable#95 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 12m30s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 95
+  merger: 8086956
+  repository: 16403286
+  review_comments: 0
+  seconds: 750
+  what: code-was-contributed
+  when: *1165
+  where: github
+  who: 29139614
+- _id: 777623
+  _job: 84217
+  _time: 2026-07-27 21:47:48.068202527 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#434 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 19m34s of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 434
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 1174
+  what: code-was-contributed
+  when: *1166
+  where: github
+  who: 29139614
+- _id: 777624
+  _job: 84217
+  _time: 2026-07-27 21:47:48.374141961 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-email#119 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 2h8m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 119
+  merger: 8086956
+  repository: 25780072
+  review_comments: 0
+  seconds: 7714
+  what: code-was-contributed
+  when: *1167
+  where: github
+  who: 29139614
