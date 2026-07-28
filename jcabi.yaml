@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.416771464
+  seconds: 810.85357157
   version: 0.61.1
   what: judges-summary
-  when: 2026-07-28 19:05:33.042384713 Z
+  when: 2026-07-28 20:51:45.640381626 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -110128,7 +110128,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16048383974
+  events_were_scanned: 16056370966
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -110194,11 +110194,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1481
+  assignees_were_scanned: 1731
   earliest_issue_was_found: 1
   events_were_scanned: 12367548837
   issues_were_scanned: 0
-  labels_were_scanned: 1183
+  labels_were_scanned: 1280
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -121409,7 +121409,7 @@
   repository: 12591339
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-07-28 16:56:50.000000000 Z
+  when: &1157 2026-07-28 16:56:50.000000000 Z
   where: github
   who: 526301
 - _id: 777636
@@ -121429,7 +121429,7 @@
   repository: 12591339
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-07-28 16:56:46.000000000 Z
+  when: &1158 2026-07-28 16:56:46.000000000 Z
   where: github
   who: 526301
 - _id: 777637
@@ -121447,9 +121447,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 90
   repository: 12591339
   review: 2026-07-28 16:56:49.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -121471,9 +121473,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 91
   repository: 12591339
   review: 2026-07-28 16:56:45.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -121486,3 +121490,39 @@
   _version: 0.19.16/0.61.1/0.17.21
   what: dimensions-of-terrain
   when: 2026-07-28 19:05:32.978635571 Z
+- _id: 777640
+  _job: 84297
+  _time: 2026-07-28 19:06:09.266279585 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#90 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 21h17m and 3 comments.
+  hoc: 2
+  is_human: 1
+  issue: 90
+  repository: 12591339
+  review_comments: 0
+  seconds: 76679
+  what: code-was-reviewed
+  when: *1157
+  where: github
+  who: 526301
+- _id: 777641
+  _job: 84297
+  _time: 2026-07-28 19:06:09.836715641 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#91 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 21h17m and 3 comments.
+  hoc: 2
+  is_human: 1
+  issue: 91
+  repository: 12591339
+  review_comments: 0
+  seconds: 76669
+  what: code-was-reviewed
+  when: *1158
+  where: github
+  who: 526301
