@@ -2,11 +2,16 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error:
+  - Failed to open TCP connection to api.github.com:443 (user specified timeout for
+    20.29.134.17:443)
+  - Failed to open TCP connection to api.github.com:443 (user specified timeout for
+    20.29.134.17:443)
   inserted: 8
-  seconds: 814.97771654
+  seconds: 810.18718884
   version: 0.61.1
   what: judges-summary
-  when: 2026-07-29 20:42:14.611106054 Z
+  when: 2026-07-29 21:39:49.234382622 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -108220,7 +108225,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16145928961
+  events_were_scanned: 16159438665
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 289
@@ -109175,7 +109180,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16145456949
+  events_were_scanned: 16159260500
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 66
@@ -109208,7 +109213,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16144877632
+  events_were_scanned: 16160324299
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 316
@@ -109225,7 +109230,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16144494635
+  events_were_scanned: 16159202410
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -109808,7 +109813,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16154477792
+  events_were_scanned: 16160866741
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 48
@@ -109891,7 +109896,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 116
-  events_were_scanned: 16150991535
+  events_were_scanned: 16159527911
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 224
@@ -109925,7 +109930,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16147783270
+  events_were_scanned: 16161092411
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 433
@@ -109982,7 +109987,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16152985377
+  events_were_scanned: 16159751391
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -110048,11 +110053,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1349
+  assignees_were_scanned: 1481
   earliest_issue_was_found: 1
   events_were_scanned: 12367548837
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -110084,7 +110089,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16151955972
+  events_were_scanned: 16160226351
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -122334,7 +122339,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-29 16:55:40.000000000 Z
+  when: &1168 2026-07-29 16:55:40.000000000 Z
   where: github
   who: 8086956
 - _id: 777695
@@ -122360,7 +122365,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-07-29 16:56:15.000000000 Z
+  when: &1169 2026-07-29 16:56:15.000000000 Z
   where: github
   who: 8086956
 - _id: 777696
@@ -122369,3 +122374,39 @@
   _version: 0.19.16/0.61.1/0.17.21
   what: dimensions-of-terrain
   when: 2026-07-29 20:42:14.553972721 Z
+- _id: 777697
+  _job: 84434
+  _time: 2026-07-29 20:43:07.624534551 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#436 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 3h41m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 436
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 13261
+  what: code-was-contributed
+  when: *1168
+  where: github
+  who: 29139614
+- _id: 777698
+  _job: 84434
+  _time: 2026-07-29 20:43:08.207242530 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#93 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 5h43m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 93
+  merger: 8086956
+  repository: 12591339
+  review_comments: 0
+  seconds: 20607
+  what: code-was-contributed
+  when: *1169
+  where: github
+  who: 29139614
