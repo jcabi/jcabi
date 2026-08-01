@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.430788247
+  seconds: 810.736729423
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-01 04:57:26.010157657 Z
+  when: 2026-08-01 07:53:19.639064476 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -108740,7 +108740,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16361818456
+  events_were_scanned: 16372460455
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -108806,11 +108806,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1349
+  assignees_were_scanned: 1481
   earliest_issue_was_found: 1
   events_were_scanned: 16335519369
   issues_were_scanned: 0
-  labels_were_scanned: 1618
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -125223,7 +125223,7 @@
   repository: 12590813
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-08-01 03:32:17.000000000 Z
+  when: &1222 2026-08-01 03:32:17.000000000 Z
   where: github
   who: 526301
 - _id: 777915
@@ -125248,6 +125248,7 @@
   _version: 0.19.16/0.61.1/0.17.21
   branch: renovate/com.qulice-qulice-maven-plugin-0.x
   details: The missing pull jcabi/jcabi-parent#837 has been opened by @renovate[bot].
+  is_human: 0
   issue: 837
   repository: 12590813
   what: pull-was-opened
@@ -125260,6 +125261,7 @@
   _version: 0.19.16/0.61.1/0.17.21
   branch: renovate/com.qulice-qulice-maven-plugin-0.x
   details: The pull jcabi/jcabi-parent#838 has been opened earlier by @renovate[bot].
+  is_human: 0
   issue: 838
   repository: 12590813
   what: pull-was-opened
@@ -125281,9 +125283,11 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 837
   repository: 12590813
   review: 2026-07-31 17:04:53.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -125305,12 +125309,32 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 0
   issue: 838
   repository: 12590813
   review: 2026-08-01 03:32:16.000000000 Z
+  review_comments: 0
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
   when: 2026-08-01 03:38:28.000000000 Z
   where: github
   who: 8086956
+- _id: 777920
+  _job: 84673
+  _time: 2026-08-01 04:58:15.840828753 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#838 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 10h18m and 3 comments.
+  hoc: 2
+  is_human: 1
+  issue: 838
+  repository: 12590813
+  review_comments: 0
+  seconds: 37113
+  what: code-was-reviewed
+  when: *1222
+  where: github
+  who: 526301
