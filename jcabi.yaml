@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.652919777
+  seconds: 810.517943619
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-02 11:52:18.555823916 Z
+  when: 2026-08-02 14:18:11.743127333 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -105113,7 +105113,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12586525197
   issues_were_scanned: 0
-  labels_were_scanned: 122
+  labels_were_scanned: 0
   latest_issue_was_found: 137
   merges_were_scanned: 0
   min_issue_was_found: 71
@@ -108399,7 +108399,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 16466792594
+  events_were_scanned: 16471878266
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -108418,7 +108418,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12609168235
   issues_were_scanned: 0
-  labels_were_scanned: 69
+  labels_were_scanned: 0
   latest_issue_was_found: 268
   merges_were_scanned: 0
   min_issue_was_found: 13
@@ -108465,11 +108465,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 16335519369
   issues_were_scanned: 0
-  labels_were_scanned: 1297
+  labels_were_scanned: 1385
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -125120,7 +125120,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-02 09:08:28.000000000 Z
+  when: &1225 2026-08-02 09:08:28.000000000 Z
   where: github
   who: 8086956
 - _id: 777930
@@ -125146,7 +125146,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-02 09:13:51.000000000 Z
+  when: &1226 2026-08-02 09:13:51.000000000 Z
   where: github
   who: 8086956
 - _id: 777931
@@ -125172,6 +125172,60 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-02 09:23:59.000000000 Z
+  when: &1227 2026-08-02 09:23:59.000000000 Z
   where: github
   who: 8086956
+- _id: 777932
+  _job: 84848
+  _time: 2026-08-02 11:53:19.635913743 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#839 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 23h41m of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 839
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 85267
+  what: code-was-contributed
+  when: *1225
+  where: github
+  who: 29139614
+- _id: 777933
+  _job: 84848
+  _time: 2026-08-02 11:53:20.193283658 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#95 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 1d21h of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 95
+  merger: 8086956
+  repository: 12591339
+  review_comments: 0
+  seconds: 164385
+  what: code-was-contributed
+  when: *1226
+  where: github
+  who: 29139614
+- _id: 777934
+  _job: 84848
+  _time: 2026-08-02 11:53:20.487831439 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-ssl-maven-plugin#118 with 2 HoC created by
+    @renovate[bot] was merged by @rultor after 1d17h of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 118
+  merger: 8086956
+  repository: 12591356
+  review_comments: 0
+  seconds: 148490
+  what: code-was-contributed
+  when: *1227
+  where: github
+  who: 29139614
