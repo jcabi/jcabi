@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: deadlock; recursive locking
   inserted: 8
-  seconds: 810.141834678
+  seconds: 810.325048163
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-08 10:13:01.493748342 Z
+  when: 2026-08-08 11:10:01.172954430 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -103681,7 +103682,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17018541841
+  events_were_scanned: 17120725699
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 40
@@ -105353,7 +105354,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17072878374
+  events_were_scanned: 17118484914
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 460
@@ -105461,7 +105462,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17116622295
+  events_were_scanned: 17119099790
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -105478,7 +105479,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17067241847
+  events_were_scanned: 17118451177
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 268
@@ -105527,11 +105528,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 17062678656
   issues_were_scanned: 0
-  labels_were_scanned: 1352
+  labels_were_scanned: 1573
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -124281,6 +124282,24 @@
   succeeded_builds: 14
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-08 08:33:30.000000000 Z
+  when: &1233 2026-08-08 08:33:30.000000000 Z
   where: github
   who: 8086956
+- _id: 778060
+  _job: 85725
+  _time: 2026-08-08 10:13:43.254222104 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-ssl-maven-plugin#112 with 4 HoC created by
+    @renovate[bot] was merged by @rultor after 1mo1w of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 112
+  merger: 8086956
+  repository: 12591356
+  review_comments: 0
+  seconds: 3526978
+  what: code-was-contributed
+  when: *1233
+  where: github
+  who: 29139614
