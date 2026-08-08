@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: deadlock; recursive locking
   inserted: 8
-  seconds: 810.977753155
+  seconds: 810.767464495
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-08 05:25:59.364774144 Z
+  when: 2026-08-08 06:15:02.843957665 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -104687,7 +104688,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17078195169
+  events_were_scanned: 17106470879
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 316
@@ -105287,7 +105288,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17066398576
+  events_were_scanned: 17106499889
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 48
@@ -105461,7 +105462,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17102284912
+  events_were_scanned: 17105145233
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -105527,11 +105528,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 17062678656
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -124231,7 +124232,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-08 03:14:25.000000000 Z
+  when: &1232 2026-08-08 03:14:25.000000000 Z
   where: github
   who: 8086956
 - _id: 778057
@@ -124240,3 +124241,21 @@
   _version: 0.19.16/0.61.1/0.17.21
   what: dimensions-of-terrain
   when: 2026-08-08 05:25:59.275167300 Z
+- _id: 778058
+  _job: 85660
+  _time: 2026-08-08 05:26:32.138082971 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-maven-slf4j#86 with 4 HoC created by @renovate[bot]
+    was merged by @rultor after 1mo1w of being in review and 3 comments.
+  hoc: 4
+  is_human: 0
+  issue: 86
+  merger: 8086956
+  repository: 12591339
+  review_comments: 0
+  seconds: 3502778
+  what: code-was-contributed
+  when: *1232
+  where: github
+  who: 29139614
