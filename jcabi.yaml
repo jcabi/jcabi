@@ -1,12 +1,60 @@
 ---
 - added: 8
-  cycles: 1
+  cycles: 2
   deleted: 8
+  error:
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'Failure in repository #19194304 at #4: SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443
+    state=error: certificate verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'Failure in repository #19194296 at #56: SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443
+    state=error: certificate verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'Failure in repository #12587970 at #12586525197: SSL_connect returned=1 errno=0
+    peeraddr=172.182.252.137:443 state=error: certificate verify failed (self-signed
+    certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
+  - 'SSL_connect returned=1 errno=0 peeraddr=172.182.252.137:443 state=error: certificate
+    verify failed (self-signed certificate)'
   inserted: 8
-  seconds: 810.777329842
+  seconds: 510.778049784
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-11 17:37:15.323374380 Z
+  when: 2026-08-11 18:21:13.442577575 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -38829,6 +38877,30 @@
   _time: 2026-04-08 11:40:29.846189264 Z
   _version: 0.19.9/0.60.1/0.17.15
   since: 2026-04-01 09:52:42.000000000 Z
+  some_merged_pulls:
+  - 0
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 2
+  - 0
+  - 0
+  some_unmerged_pulls:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   what: quality-of-service
   when: &324 2026-04-08 11:40:29.000000000 Z
 - _id: 763305
@@ -101336,10 +101408,10 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12586525197
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 65
   latest_issue_was_found: 137
   merges_were_scanned: 0
-  min_issue_was_found: 71
+  min_issue_was_found: 72
   min_pull_was_found: 0
   repository: 12587970
   types_were_scanned: 0
@@ -102626,7 +102698,7 @@
   min_issue_was_found: 117
   min_pull_was_found: 0
   repository: 12584841
-  types_were_scanned: 0
+  types_were_scanned: 32
   what: iterate
   where: github
 - _id: 776025
@@ -102850,10 +102922,10 @@
   labels_were_scanned: 0
   latest_issue_was_found: 40
   merges_were_scanned: 0
-  min_issue_was_found: 36
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 15208785
-  types_were_scanned: 0
+  types_were_scanned: 36
   what: iterate
   where: github
 - _id: 776057
@@ -102867,7 +102939,7 @@
   labels_were_scanned: 0
   latest_issue_was_found: 289
   merges_were_scanned: 0
-  min_issue_was_found: 57
+  min_issue_was_found: 59
   min_pull_was_found: 0
   repository: 12947626
   types_were_scanned: 0
@@ -103826,7 +103898,7 @@
   min_issue_was_found: 52
   min_pull_was_found: 0
   repository: 12591356
-  types_were_scanned: 0
+  types_were_scanned: 52
   what: iterate
   where: github
 - _id: 776247
@@ -103853,7 +103925,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17313828857
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 17
   latest_issue_was_found: 316
   merges_were_scanned: 0
   min_issue_was_found: 0
@@ -103876,7 +103948,7 @@
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12590126
-  types_were_scanned: 0
+  types_were_scanned: 414
   what: iterate
   where: github
 - _id: 776260
@@ -103887,7 +103959,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17324928231
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 55
   latest_issue_was_found: 194
   merges_were_scanned: 0
   min_issue_was_found: 0
@@ -104300,7 +104372,7 @@
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12591382
-  types_were_scanned: 0
+  types_were_scanned: 15
   what: iterate
   where: github
 - _id: 776388
@@ -104314,10 +104386,10 @@
   labels_were_scanned: 0
   latest_issue_was_found: 573
   merges_were_scanned: 0
-  min_issue_was_found: 163
+  min_issue_was_found: 166
   min_pull_was_found: 0
   repository: 16312153
-  types_were_scanned: 0
+  types_were_scanned: 161
   what: iterate
   where: github
 - _id: 776390
@@ -104349,7 +104421,7 @@
   min_issue_was_found: 12
   min_pull_was_found: 0
   repository: 12591371
-  types_were_scanned: 0
+  types_were_scanned: 7
   what: iterate
   where: github
 - _id: 776440
@@ -104453,7 +104525,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17318387213
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 24
   latest_issue_was_found: 48
   merges_were_scanned: 0
   min_issue_was_found: 24
@@ -104468,10 +104540,10 @@
   _version: 0.19.9/0.60.2/0.17.17
   earliest_issue_was_found: 1
   events_were_scanned: 16957838654
-  labels_were_scanned: 0
+  labels_were_scanned: 27
   latest_issue_was_found: 40
   merges_were_scanned: 0
-  min_issue_was_found: 45
+  min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 20635353
   types_were_scanned: 0
@@ -104505,10 +104577,10 @@
   labels_were_scanned: 0
   latest_issue_was_found: 365
   merges_were_scanned: 0
-  min_issue_was_found: 106
+  min_issue_was_found: 180
   min_pull_was_found: 0
   repository: 12587702
-  types_were_scanned: 0
+  types_were_scanned: 61
   what: iterate
   where: github
 - _id: 776559
@@ -104525,7 +104597,7 @@
   min_issue_was_found: 177
   min_pull_was_found: 0
   repository: 13717355
-  types_were_scanned: 0
+  types_were_scanned: 105
   what: iterate
   where: github
 - _id: 776560
@@ -104536,10 +104608,10 @@
   earliest_issue_was_found: 116
   events_were_scanned: 17325977558
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 7
   latest_issue_was_found: 224
   merges_were_scanned: 0
-  min_issue_was_found: 40
+  min_issue_was_found: 52
   min_pull_was_found: 0
   repository: 12262782
   types_were_scanned: 0
@@ -104573,10 +104645,10 @@
   labels_were_scanned: 0
   latest_issue_was_found: 433
   merges_were_scanned: 0
-  min_issue_was_found: 373
+  min_issue_was_found: 374
   min_pull_was_found: 0
   repository: 14093966
-  types_were_scanned: 0
+  types_were_scanned: 373
   what: iterate
   where: github
 - _id: 776584
@@ -104625,7 +104697,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17409968071
+  events_were_scanned: 17414364613
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -104633,7 +104705,7 @@
   min_issue_was_found: 316
   min_pull_was_found: 0
   repository: 4174608
-  types_were_scanned: 0
+  types_were_scanned: 131
   what: iterate
   where: github
 - _id: 776595
@@ -104681,10 +104753,10 @@
   labels_were_scanned: 0
   latest_issue_was_found: 71
   merges_were_scanned: 0
-  min_issue_was_found: 0
+  min_issue_was_found: 48
   min_pull_was_found: 0
   repository: 12591347
-  types_were_scanned: 0
+  types_were_scanned: 48
   what: iterate
   where: github
 - _id: 776598
@@ -104695,13 +104767,13 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12991261230
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1028
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
   min_pull_was_found: 0
   repository: 14204295
-  types_were_scanned: 0
+  types_were_scanned: 1028
   what: iterate
   where: github
 - _id: 776599
@@ -104729,10 +104801,10 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12980478179
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 83
   latest_issue_was_found: 691
   merges_were_scanned: 0
-  min_issue_was_found: 117
+  min_issue_was_found: 146
   min_pull_was_found: 0
   repository: 12590813
   types_were_scanned: 0
@@ -123599,5 +123671,11 @@
   _job: 31470047954
   _time: 2026-08-11 07:57:09.858296595 Z
   _version: 0.19.16/0.61.1/0.17.21
+  total_contributors: 122
+  total_forks: 993
+  total_issues: 2924
+  total_pulls: 7010
+  total_releases: 710
+  total_stars: 2254
   what: dimensions-of-terrain
   when: 2026-08-11 07:57:09.867980943 Z
