@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 810.262342984
+  seconds: 810.61229721
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-12 22:21:11.145490618 Z
+  when: 2026-08-12 23:20:36.944898066 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -3232,20 +3232,6 @@
   when: 2025-04-30 17:10:22.224637981 Z
   where: github
   who: 41898282
-- _id: 447333
-  _job: 32446
-  _time: 2025-08-10 10:59:51.247066239 Z
-  _version: 0.14.5/0.52.2/0.15.9
-  details: The issue jcabi/jcabi-parent#608 has been opened by @h1alexbel.
-  event_id: 49493653011
-  event_type: IssuesEvent
-  is_human: 1
-  issue: 608
-  repository: 12590813
-  what: issue-was-opened
-  when: 2025-05-08 09:23:23.000000000 Z
-  where: github
-  who: 83453843
 - _id: 447339
   _job: 32446
   _time: 2025-08-10 10:59:52.422320505 Z
@@ -103210,8 +103196,7 @@
   - 118-145
   - 147-190
   - 192-486
-  - 488-607
-  - 609-614
+  - 488-614
   - 616-669
   - 671-690
   - 692-708
@@ -104297,7 +104282,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17515596959
+  events_were_scanned: 17518565587
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -104363,11 +104348,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   earliest_issue_was_found: 1
   events_were_scanned: 17435363271
   issues_were_scanned: 0
-  labels_were_scanned: 1503
+  labels_were_scanned: 0
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -123394,7 +123379,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-08 16:43:24.000000000 Z
+  when: &1220 2026-08-08 16:43:24.000000000 Z
   where: github
   who: 8086956
 - _id: 778082
@@ -123420,7 +123405,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-12 21:09:06.000000000 Z
+  when: &1221 2026-08-12 21:09:06.000000000 Z
   where: github
   who: 526301
 - _id: 778083
@@ -123433,6 +123418,7 @@
   is_human: 1
   issue: 608
   repository: 12590813
+  tombstone: 2026-08-12 22:23:35.457278270 Z
   what: issue-was-closed
   when: 2026-08-12 21:36:16.000000000 Z
   where: github
@@ -123491,8 +123477,10 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 847
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -123514,8 +123502,10 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 848
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -123537,11 +123527,49 @@
   failed_builds: 0
   files: 1
   hoc: 2
+  is_human: 1
   issue: 849
   repository: 12590813
+  review_comments: 0
   succeeded_builds: 0
   suggestions: 0
   what: pull-was-merged
   when: 2026-08-12 21:35:41.000000000 Z
+  where: github
+  who: 526301
+- _id: 778089
+  _job: 86628
+  _time: 2026-08-12 22:22:56.881270720 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#844 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 15h37m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 844
+  merger: 8086956
+  repository: 12590813
+  review_comments: 0
+  seconds: 56254
+  what: code-was-contributed
+  when: *1220
+  where: github
+  who: 29139614
+- _id: 778090
+  _job: 86628
+  _time: 2026-08-12 22:22:57.456214969 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 0
+  details: The pull request jcabi/jcabi-parent#846 with 4 HoC created by @yegor256
+    was merged by @yegor256 after 45s of being in review and 0 comments.
+  hoc: 4
+  is_human: 1
+  issue: 846
+  merger: 526301
+  repository: 12590813
+  review_comments: 0
+  seconds: 45
+  what: code-was-contributed
+  when: *1221
   where: github
   who: 526301
