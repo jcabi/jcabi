@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: deadlock; recursive locking
   inserted: 8
-  seconds: 810.148612677
+  seconds: 810.313401877
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-14 03:17:09.605373720 Z
+  when: 2026-08-14 05:24:46.777145535 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -103754,7 +103755,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17611074288
+  events_were_scanned: 17618543740
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -103820,11 +103821,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1278
+  assignees_were_scanned: 1349
   earliest_issue_was_found: 1
   events_were_scanned: 13233028570
   issues_were_scanned: 0
-  labels_were_scanned: 1354
+  labels_were_scanned: 1598
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -123928,6 +123929,8 @@
   _job: 31765558958
   _time: 2026-08-14 03:04:33.657276078 Z
   _version: 0.19.16/0.61.1/0.17.21
+  composite: 22.257
+  ffact: 141
   since: *1224
   total_builds_ran: 2740
   total_commits_pushed: 44
