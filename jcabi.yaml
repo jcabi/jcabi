@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: deadlock; recursive locking
   inserted: 8
-  seconds: 811.570352064
+  seconds: 811.729961206
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-16 08:04:11.928329598 Z
+  when: 2026-08-16 09:05:49.910733929 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -100297,7 +100298,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 12586525197
   issues_were_scanned: 0
-  labels_were_scanned: 96
+  labels_were_scanned: 122
   latest_issue_was_found: 137
   merges_were_scanned: 0
   min_issue_was_found: 72
@@ -101346,7 +101347,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17759101476
   issues_were_scanned: 0
-  labels_were_scanned: 114
+  labels_were_scanned: 0
   latest_issue_was_found: 243
   merges_were_scanned: 0
   min_issue_was_found: 45
@@ -101581,7 +101582,7 @@
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
   events_were_scanned: 13334011323
-  labels_were_scanned: 54
+  labels_were_scanned: 0
   latest_issue_was_found: 86
   merges_were_scanned: 0
   min_issue_was_found: 117
@@ -101825,7 +101826,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17755316584
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 85
   latest_issue_was_found: 289
   merges_were_scanned: 0
   min_issue_was_found: 59
@@ -103271,7 +103272,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 17724531053
   issues_were_scanned: 0
-  labels_were_scanned: 254
+  labels_were_scanned: 0
   latest_issue_was_found: 573
   merges_were_scanned: 0
   min_issue_was_found: 166
@@ -103395,7 +103396,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17761586571
+  events_were_scanned: 13350443122
   labels_were_scanned: 0
   latest_issue_was_found: 66
   merges_were_scanned: 0
@@ -103477,7 +103478,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 13335062349
+  events_were_scanned: 17811224840
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 460
@@ -103496,7 +103497,7 @@
   earliest_issue_was_found: 116
   events_were_scanned: 13334992557
   issues_were_scanned: 0
-  labels_were_scanned: 101
+  labels_were_scanned: 0
   latest_issue_was_found: 224
   merges_were_scanned: 0
   min_issue_was_found: 52
@@ -103585,9 +103586,9 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17805185133
+  events_were_scanned: 17808531506
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 550
   latest_issue_was_found: 486
   merges_were_scanned: 0
   min_issue_was_found: 316
@@ -103604,7 +103605,7 @@
   earliest_issue_was_found: 1
   events_were_scanned: 13344854947
   issues_were_scanned: 0
-  labels_were_scanned: 55
+  labels_were_scanned: 75
   latest_issue_was_found: 268
   merges_were_scanned: 0
   min_issue_was_found: 13
@@ -103619,7 +103620,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17761476159
+  events_were_scanned: 13350479834
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 125
@@ -103651,11 +103652,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 13335751401
   issues_were_scanned: 0
-  labels_were_scanned: 1193
+  labels_were_scanned: 1210
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -103687,9 +103688,9 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 13347933284
+  events_were_scanned: 17810866375
   issues_were_scanned: 0
-  labels_were_scanned: 845
+  labels_were_scanned: 0
   latest_issue_was_found: 691
   merges_were_scanned: 0
   min_issue_was_found: 146
@@ -125826,3 +125827,74 @@
     The average monthly zents/points ratio (1.00) is staying still.
   what: assessment
   when: 2026-08-16 07:20:07.312191526 Z
+- _id: 778254
+  _job: 31937503953
+  _time: 2026-08-16 08:52:44.449715933 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  branch: up
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-xml#524 has been closed by @github-actions[bot],
+    with 0 HoC and 0 comments.
+  event_id: 13350379659
+  event_type: PullRequestEvent
+  failed_builds: 0
+  files: 0
+  hoc: 0
+  is_human: 0
+  issue: 524
+  repository: 13717355
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-08-15 17:15:49.000000000 Z
+  where: github
+  who: 41898282
+- _id: 778255
+  _job: 31937503953
+  _time: 2026-08-16 08:53:17.178616468 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  commits: 1
+  details: The pull request jcabi/jcabi-parent#855 has been reviewed by @yegor256
+    with 2 HoC and 3 comments.
+  event_id: 13350176389
+  event_type: PullRequestReviewEvent
+  files: 1
+  hoc: 2
+  is_human: 1
+  issue: 855
+  repository: 12590813
+  review_comments: 0
+  what: pull-was-reviewed
+  when: 2026-08-16 08:31:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 778256
+  _job: 31937503953
+  _time: 2026-08-16 08:54:31.441927819 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-parent#855 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 855
+  repository: 12590813
+  review: 2026-08-16 08:31:32.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-08-16 08:38:28.000000000 Z
+  where: github
+  who: 8086956
