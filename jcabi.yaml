@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'GET https://api.github.com/repositories/12589687: 500 -  (Octokit::InternalServerError)'
+  error: deadlock; recursive locking
   inserted: 8
-  seconds: 810.574296858
+  seconds: 810.553562882
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-16 14:02:59.677660899 Z
+  when: 2026-08-16 14:57:33.526230503 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -101826,7 +101826,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17812491778
+  events_were_scanned: 17839134835
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 289
@@ -102831,7 +102831,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17817601945
+  events_were_scanned: 17838219864
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -103304,7 +103304,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 13326286718
+  events_were_scanned: 17838731556
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 64
@@ -103514,7 +103514,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17815927821
+  events_were_scanned: 17839006796
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -103588,7 +103588,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17832196921
+  events_were_scanned: 17836271668
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -103654,11 +103654,11 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   earliest_issue_was_found: 1
   events_were_scanned: 17812769832
   issues_were_scanned: 0
-  labels_were_scanned: 0
+  labels_were_scanned: 1177
   latest_issue_was_found: 1806
   merges_were_scanned: 0
   min_issue_was_found: 1039
@@ -126420,3 +126420,160 @@
   when: *1249
   where: github
   who: 29139614
+- _id: 778286
+  _job: 31953514314
+  _time: 2026-08-16 14:44:14.413794982 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: 5a85483ca7981e029d23b28026a718a3c3e61f00
+  default_branch: master
+  details: 'A new Git push #40163347873 has arrived to jcabi/jcabi-dynamo, made by
+    @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 17839006796
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40163347873
+  ref: refs/heads/master
+  repository: 12589687
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:41:43.000000000 Z
+  where: github
+  who: 526301
+- _id: 778287
+  _job: 31953514314
+  _time: 2026-08-16 14:44:30.089731603 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: 68ae8710d21e54c2ef805ac1c397865ddf50c329
+  default_branch: master
+  details: 'A new Git push #40160574939 has arrived to jcabi/jcabi, made by @yegor256
+    (default branch is "master"), not associated with any pull request.'
+  event_id: 17836271668
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40160574939
+  ref: refs/heads/master
+  repository: 4174608
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:11:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 778288
+  _job: 31953514314
+  _time: 2026-08-16 14:44:31.086781328 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: 488d1d08f6678223647b2aa29c980ad96a44e681
+  default_branch: master
+  details: 'A new Git push #40163476255 has arrived to jcabi/jcabi-dynamodb-maven-plugin,
+    made by @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 17839134835
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40163476255
+  ref: refs/heads/master
+  repository: 12947626
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:43:11.000000000 Z
+  where: github
+  who: 526301
+- _id: 778289
+  _job: 31953514314
+  _time: 2026-08-16 14:44:35.725071103 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: d32514eb7e085f1a10f7eb6e06036e1e0e051c01
+  default_branch: master
+  details: 'A new Git push #40162555485 has arrived to jcabi/jcabi-aspects, made by
+    @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 17838219864
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40162555485
+  ref: refs/heads/master
+  repository: 12590126
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:32:48.000000000 Z
+  where: github
+  who: 526301
+- _id: 778290
+  _job: 31953514314
+  _time: 2026-08-16 14:44:36.281787145 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: cfc38b9a35eb13892def39e2f6509a6b86a68aab
+  default_branch: master
+  details: 'A new Git push #40161345543 has arrived to jcabi/jcabi-aspects, made by
+    @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 17837031276
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40161345543
+  ref: refs/heads/master
+  repository: 12590126
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:19:36.000000000 Z
+  where: github
+  who: 526301
+- _id: 778291
+  _job: 31953514314
+  _time: 2026-08-16 14:44:37.409270520 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  branch: renovate/actions-cache-6.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: The pull request jcabi/jcabi-beanstalk-maven-plugin#77 has been closed
+    by @renovate[bot], with 4 HoC and 0 comments.
+  event_id: 13357013258
+  event_type: PullRequestEvent
+  failed_builds: 12
+  files: 2
+  hoc: 4
+  is_human: 0
+  issue: 77
+  repository: 12591371
+  succeeded_builds: 2
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-08-15 08:41:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 778292
+  _job: 31953514314
+  _time: 2026-08-16 14:44:49.232811205 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The pull request jcabi/jcabi-beanstalk-maven-plugin#83 has been opened
+    by @renovate[bot].
+  event_id: 13357008295
+  event_type: PullRequestEvent
+  is_human: 0
+  issue: 83
+  repository: 12591371
+  what: pull-was-opened
+  when: 2026-08-16 14:38:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 778293
+  _job: 31953514314
+  _time: 2026-08-16 14:44:49.532963881 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  commit: 25a431d8da3c7ce05dac3ae0306c0b54ebf48e23
+  default_branch: master
+  details: 'A new Git push #40163000093 has arrived to jcabi/jcabi-beanstalk-maven-plugin,
+    made by @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 17838670158
+  event_type: PushEvent
+  is_human: 1
+  push_id: 40163000093
+  ref: refs/heads/master
+  repository: 12591371
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-08-16 14:37:46.000000000 Z
+  where: github
+  who: 526301
