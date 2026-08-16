@@ -2,11 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
+  error: 'Judge eliminate-ghosts stopped by timeout after 2m30s: execution expired'
   inserted: 8
-  seconds: 810.873284023
+  seconds: 900.292530075
   version: 0.61.1
   what: judges-summary
-  when: 2026-08-16 19:05:06.761221387 Z
+  when: 2026-08-16 19:55:40.613927318 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -103512,7 +103513,7 @@
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 17853980948
+  events_were_scanned: 17858656417
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -103578,7 +103579,7 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1731
+  assignees_were_scanned: 0
   earliest_issue_was_found: 1
   events_were_scanned: 17839305191
   issues_were_scanned: 0
@@ -127253,7 +127254,7 @@
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-16 17:14:21.000000000 Z
+  when: &1256 2026-08-16 17:14:21.000000000 Z
   where: github
   who: 8086956
 - _id: 778333
@@ -127279,7 +127280,7 @@
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
-  when: 2026-08-16 17:09:10.000000000 Z
+  when: &1257 2026-08-16 17:09:10.000000000 Z
   where: github
   who: 8086956
 - _id: 778334
@@ -127362,10 +127363,6 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-odesk#51,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-744](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-odesk/issues/51/#issuecomment-5308844871
   is_human: 1
@@ -127387,10 +127384,6 @@
   comments: 2
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-maven-slf4j#99,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-740](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-maven-slf4j/issues/99/#issuecomment-5308845046
   is_human: 1
@@ -127412,10 +127405,6 @@
   comments: 3
   details: It's time to reward @yegor256 for the code review in jcabi/jcabi-velocity#76,
     the reward amount is 4.
-  greeting: 'Thanks for the review! You''ve earned +4 points for this: +12 as a basis;
-    -16 for absolutely no comments posted; -8 for too few (2) hits-of-code; +16 to
-    give you at least something.  Your running score is [-736](https://jcabi.github.io/jcabi/jcabi-vitals.html);
-    don''t forget to check your [Zerocracy account](https://www.zerocracy.com/) too). '
   hoc: 2
   href: https://github.com/jcabi/jcabi-velocity/issues/76/#issuecomment-5308845267
   is_human: 1
@@ -127429,3 +127418,39 @@
   where: github
   who: 526301
   why: Reviewed code in jcabi/jcabi-velocity#76
+- _id: 778341
+  _job: 87334
+  _time: 2026-08-16 19:06:24.185669331 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#444 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 8h18m of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 444
+  merger: 8086956
+  repository: 12587702
+  review_comments: 0
+  seconds: 29934
+  what: code-was-contributed
+  when: *1256
+  where: github
+  who: 29139614
+- _id: 778342
+  _job: 87334
+  _time: 2026-08-16 19:06:24.777792473 Z
+  _version: 0.19.16/0.61.1/0.17.21
+  comments: 3
+  details: The pull request jcabi/jcabi-beanstalk-maven-plugin#80 with 2 HoC created
+    by @renovate[bot] was merged by @rultor after 1mo1w of being in review and 3 comments.
+  hoc: 2
+  is_human: 0
+  issue: 80
+  merger: 8086956
+  repository: 12591371
+  review_comments: 0
+  seconds: 3733948
+  what: code-was-contributed
+  when: *1257
+  where: github
+  who: 29139614
