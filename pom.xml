@@ -127,12 +127,6 @@
             <groupId>com.qulice</groupId>
             <artifactId>qulice-maven-plugin</artifactId>
             <version>0.30.11</version>
-            <configuration>
-              <excludes combine.children="append">
-                <exclude>checkstyle:/src/site/resources/.*</exclude>
-                <exclude>checkstyle:/src/site/site.xml</exclude>
-              </excludes>
-            </configuration>
           </plugin>
         </plugins>
       </build>
