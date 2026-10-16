@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 830.148783781
+  seconds: 578.159013303
   version: 0.61.1
   what: judges-summary
-  when: 2026-10-15 23:22:33.706434463 Z
+  when: 2026-10-16 01:40:45.885739201 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -87524,7 +87524,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 43
   earliest_issue_was_found: 16
-  events_were_scanned: 24113353300
+  events_were_scanned: 24142821711
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 34
@@ -87940,7 +87940,7 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 0
+  assignees_were_scanned: 1177
   closures_were_checked: 1968
   earliest_issue_was_found: 1
   events_were_scanned: 17320814039
@@ -143930,27 +143930,6 @@
   when: *1649
   where: github
   who: 526301
-- _id: 780135
-  _job: 99449
-  _time: 2026-10-13 19:38:48.378219767 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  analyzers: 18
-  text: |-
-    The average reward per task (4.2 points) is decreasing (R=-0.12).
-    The average punishment per task (15.0 points) is decreasing (R=-0.13).
-    The average number of builds per week (2049.4) is increasing (R=0.24).
-    The average number of commits per week (67.9) is decreasing (R=-0.22).
-    The average bugs accepted per month (5.0) is decreasing (R=0.10).
-    The average monthly punishment (536 points) is decreasing (R=-0.14).
-    The average monthly wage (5.7 points) is decreasing (R=-0.57).
-    The average issue cycle time (3h35m) is decreasing (R=-0.53).
-    The average pull cycle time (6d19h) is staying still.
-    The average number of releases per month (2.3) is decreasing (R=-0.29).
-    The average monthly turnover (29.0 developers) is staying still.
-    The average weekly cost of HoC (0.55 points) is decreasing (R=0.20).
-    The average monthly zents/points ratio (0.84) is decreasing (R=-0.68).
-  what: assessment
-  when: 2026-10-13 19:38:48.405266451 Z
 - _id: 780136
   _job: 99449
   _time: 2026-10-13 19:40:30.107449286 Z
@@ -149776,7 +149755,7 @@
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
-  when: 2026-10-15 17:31:09.000000000 Z
+  when: &1734 2026-10-15 17:31:09.000000000 Z
   where: github
   who: 8086956
 - _id: 780454
@@ -149829,7 +149808,7 @@
   repository: 23238769
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-10-15 20:42:48.000000000 Z
+  when: &1730 2026-10-15 20:42:48.000000000 Z
   where: github
   who: 526301
 - _id: 780457
@@ -149848,7 +149827,7 @@
   repository: 12587702
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-10-15 22:22:37.000000000 Z
+  when: &1731 2026-10-15 22:22:37.000000000 Z
   where: github
   who: 526301
 - _id: 780458
@@ -149867,7 +149846,7 @@
   repository: 12262782
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-10-15 20:46:41.000000000 Z
+  when: &1732 2026-10-15 20:46:41.000000000 Z
   where: github
   who: 526301
 - _id: 780459
@@ -149886,7 +149865,7 @@
   repository: 12590813
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-10-15 20:35:26.000000000 Z
+  when: &1733 2026-10-15 20:35:26.000000000 Z
   where: github
   who: 526301
 - _id: 780460
@@ -149955,6 +149934,7 @@
   issue: 477
   repository: 12587702
   review: 2026-10-15 16:34:20.000000000 Z
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -149979,6 +149959,7 @@
   issue: 370
   repository: 23238769
   review: 2026-10-15 16:56:57.000000000 Z
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -150003,9 +149984,123 @@
   issue: 898
   repository: 12590813
   review: 2026-10-15 16:42:06.000000000 Z
+  review_comments: 0
   succeeded_builds: 9
   suggestions: 0
   what: pull-was-merged
   when: 2026-10-15 16:52:23.000000000 Z
   where: github
   who: 8086956
+- _id: 780467
+  _job: 99899
+  _time: 2026-10-15 23:23:14.151933892 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-ssh#370 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 15h48m and 3 comments.
+  hoc: 2
+  issue: 370
+  repository: 23238769
+  review_comments: 0
+  seconds: 56932
+  what: code-was-reviewed
+  when: *1730
+  where: github
+  who: 526301
+- _id: 780468
+  _job: 99899
+  _time: 2026-10-15 23:23:14.824441257 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-jdbc#477 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 15h11m and 3 comments.
+  hoc: 2
+  issue: 477
+  repository: 12587702
+  review_comments: 0
+  seconds: 54692
+  what: code-was-reviewed
+  when: *1731
+  where: github
+  who: 526301
+- _id: 780469
+  _job: 99899
+  _time: 2026-10-15 23:23:15.163091375 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 1
+  details: The pull request jcabi/jcabi-log#288 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 14h59m and 1 comments.
+  hoc: 2
+  issue: 288
+  repository: 12262782
+  review_comments: 0
+  seconds: 53967
+  what: code-was-reviewed
+  when: *1732
+  where: github
+  who: 526301
+- _id: 780470
+  _job: 99899
+  _time: 2026-10-15 23:23:15.500586165 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-parent#898 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 17h2m and 3 comments.
+  hoc: 2
+  issue: 898
+  repository: 12590813
+  review_comments: 0
+  seconds: 61323
+  what: code-was-reviewed
+  when: *1733
+  where: github
+  who: 526301
+- _id: 780471
+  _job: 99899
+  _time: 2026-10-15 23:23:18.943410384 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  analyzers: 18
+  text: |-
+    The average reward per task (4.2 points) is decreasing (R=-0.12).
+    The average punishment per task (15.0 points) is staying still.
+    The average number of builds per week (1995.1) is increasing (R=0.57).
+    The average number of commits per week (53.9) is increasing (R=0.44).
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (536 points) is decreasing (R=-0.14).
+    The average monthly wage (5.3 points) is decreasing (R=-0.39).
+    The average issue cycle time (3h35m) is decreasing (R=-0.53).
+    The average pull cycle time (6d13h) is staying still.
+    The average number of releases per month (1.4) is increasing (R=0.15).
+    The average monthly turnover (33.0 developers) is decreasing (R=-0.22).
+    The average weekly cost of HoC (0.56 points) is decreasing (R=0.15).
+    The average monthly zents/points ratio (0.84) is decreasing (R=-0.68).
+  what: assessment
+  when: 2026-10-15 23:23:18.986888660 Z
+- _id: 780472
+  _job: 99899
+  _time: 2026-10-15 23:23:21.260327577 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  comments: 3
+  details: The pull request jcabi/jcabi-velocity#102 with 2 HoC created by @renovate[bot]
+    was merged by @rultor after 10h17m of being in review and 3 comments.
+  hoc: 2
+  issue: 102
+  merger: 8086956
+  repository: 12590128
+  review_comments: 0
+  seconds: 37034
+  what: code-was-contributed
+  when: *1734
+  where: github
+  who: 29139614
+- _id: 780473
+  _job: 38835453558
+  _time: 2026-10-16 01:40:12.426678784 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  total_active_contributors: 3
+  what: dimensions-of-terrain
+  when: 2026-10-16 01:40:12.408781890 Z
