@@ -33,3 +33,4 @@ jobs:
       - run: java -version
       - run: mvn -version
       - run: mvn --errors --batch-mode clean install -Pqulice
+      - run: python tests/test_package.py

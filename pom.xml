@@ -70,54 +70,6 @@
       <url>https://www.jcabi.com/</url>
     </site>
   </distributionManagement>
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration combine.children="append">
-          <archive>
-            <manifestEntries>
-              <JCabi-Version>${project.version}</JCabi-Version>
-              <JCabi-Build>${buildNumber}</JCabi-Build>
-              <JCabi-Date>${maven.build.timestamp}</JCabi-Date>
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifestEntries>
-              <JCabi-Version>${project.version}</JCabi-Version>
-              <JCabi-Build>${buildNumber}</JCabi-Build>
-              <JCabi-Date>${maven.build.timestamp}</JCabi-Date>
-            </manifestEntries>
-          </archive>
-        </configuration>
-        <executions>
-          <execution>
-            <id>assemble-all</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>6.2.0</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
   <profiles>
     <profile>
       <id>qulice</id>
