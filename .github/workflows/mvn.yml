@@ -32,4 +32,5 @@ jobs:
             ${{ runner.os }}-jdk-${{ matrix.java }}-maven-
       - run: java -version
       - run: mvn -version
+      - run: python -m unittest discover -s src/test/python
       - run: mvn --errors --batch-mode clean install -Pqulice
