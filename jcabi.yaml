@@ -2,12 +2,12 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'Judge eliminate-ghosts stopped by timeout after 77s: execution expired'
+  error: 'Judge eliminate-ghosts stopped by timeout after 86s: execution expired'
   inserted: 8
-  seconds: 900.21379379
+  seconds: 900.229739284
   version: 0.61.1
   what: judges-summary
-  when: 2026-11-17 13:55:01.848441259 Z
+  when: 2026-11-17 22:45:10.214676941 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -8669,7 +8669,9 @@
   _version: 0.16.7/0.54.0/0.15.49
   issues:
   - '1'
-  - '19'
+  - '6'
+  - '8'
+  - 19-21
   - '36'
   - '39'
   repository: 15208785
@@ -80930,7 +80932,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 137
-  merges_were_scanned: 113
+  merges_were_scanned: 0
   min_issue_was_found: 72
   min_pull_was_found: 0
   repository: 12587970
@@ -81972,11 +81974,11 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27439179924
+  events_were_scanned: 27457036545
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 243
-  merges_were_scanned: 285
+  merges_were_scanned: 292
   min_issue_was_found: 45
   min_pull_was_found: 0
   repository: 13359002
@@ -82440,7 +82442,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 40
-  merges_were_scanned: 21
+  merges_were_scanned: 0
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 15208785
@@ -83405,7 +83407,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27433364357
+  events_were_scanned: 27442578689
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 66
@@ -83462,7 +83464,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
-  merges_were_scanned: 470
+  merges_were_scanned: 477
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12590126
@@ -83476,11 +83478,11 @@
   assignees_were_scanned: 0
   closures_were_checked: 243
   earliest_issue_was_found: 1
-  events_were_scanned: 27398648335
+  events_were_scanned: 27444648879
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 194
-  merges_were_scanned: 261
+  merges_were_scanned: 270
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12591138
@@ -83888,7 +83890,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 34
-  merges_were_scanned: 72
+  merges_were_scanned: 82
   min_issue_was_found: 0
   min_pull_was_found: 0
   repository: 12591382
@@ -83906,7 +83908,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 573
-  merges_were_scanned: 625
+  merges_were_scanned: 0
   min_issue_was_found: 166
   min_pull_was_found: 0
   repository: 16312153
@@ -83939,7 +83941,7 @@
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 64
-  merges_were_scanned: 124
+  merges_were_scanned: 0
   min_issue_was_found: 12
   min_pull_was_found: 0
   repository: 12591371
@@ -84155,7 +84157,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27440194894
+  events_were_scanned: 27463695999
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -84295,14 +84297,14 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   closures_were_checked: 0
   earliest_issue_was_found: 1
   events_were_scanned: 27390220022
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 1806
-  merges_were_scanned: 1990
+  merges_were_scanned: 1997
   min_issue_was_found: 1039
   min_pull_was_found: 0
   repository: 14204295
@@ -84334,7 +84336,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27231475256
+  events_were_scanned: 20435067437
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -186828,7 +186830,7 @@
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
-  when: 2026-11-17 02:43:06.000000000 Z
+  when: &2439 2026-11-17 02:43:06.000000000 Z
   where: github
   who: 8086956
 - _id: 782806
@@ -186883,18 +186885,6 @@
   when: 2026-11-14 08:21:38.000000000 Z
   where: github
   who: 526301
-- _id: 782810
-  _job: 44014018788
-  _time: 2026-11-17 04:12:55.056410576 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: "#1"
-  details: The missing pull jcabi/jcabi-odesk#6 has been opened by @cyberone.
-  issue: 6
-  repository: 15208785
-  what: pull-was-opened
-  when: 2015-01-02 03:52:47.000000000 Z
-  where: github
-  who: 904080
 - _id: 782811
   _job: 44014018788
   _time: 2026-11-17 04:12:55.715704744 Z
@@ -186906,18 +186896,6 @@
   when: 2015-01-08 16:38:02.000000000 Z
   where: github
   who: 569536
-- _id: 782812
-  _job: 44014018788
-  _time: 2026-11-17 04:12:56.352382139 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: '7'
-  details: The missing pull jcabi/jcabi-odesk#8 has been opened by @romankisilenko.
-  issue: 8
-  repository: 15208785
-  what: pull-was-opened
-  when: 2015-01-17 13:14:21.000000000 Z
-  where: github
-  who: 3440659
 - _id: 782813
   _job: 44014018788
   _time: 2026-11-17 04:12:57.383737794 Z
@@ -187028,30 +187006,6 @@
   when: 2015-09-13 16:18:20.000000000 Z
   where: github
   who: 526301
-- _id: 782823
-  _job: 44014018788
-  _time: 2026-11-17 04:13:02.633419781 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: badges
-  details: The missing pull jcabi/jcabi-odesk#20 has been opened by @valery1707.
-  issue: 20
-  repository: 15208785
-  what: pull-was-opened
-  when: 2016-01-20 12:12:26.000000000 Z
-  where: github
-  who: 83507
-- _id: 782824
-  _job: 44014018788
-  _time: 2026-11-17 04:13:03.635550357 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: badge-javadoc
-  details: The missing pull jcabi/jcabi-odesk#21 has been opened by @valery1707.
-  issue: 21
-  repository: 15208785
-  what: pull-was-opened
-  when: 2017-11-16 09:12:15.000000000 Z
-  where: github
-  who: 83507
 - _id: 782825
   _job: 44014018788
   _time: 2026-11-17 04:13:04.434969979 Z
@@ -188168,7 +188122,7 @@
   repository: 12589687
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-11-17 08:23:01.000000000 Z
+  when: &2438 2026-11-17 08:23:01.000000000 Z
   where: github
   who: 526301
 - _id: 782914
@@ -188213,6 +188167,7 @@
   issue: 623
   repository: 12589687
   review: 2026-11-17 08:22:55.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188261,6 +188216,7 @@
   issue: 68
   repository: 12591382
   review: 2026-09-16 02:36:12.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188285,6 +188241,7 @@
   issue: 1986
   repository: 14204295
   review: 2026-10-15 17:01:20.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188308,35 +188265,13 @@
   hoc: 2
   issue: 120
   repository: 12591371
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
   when: 2026-11-11 04:31:29.000000000 Z
   where: github
   who: 29139614
-- _id: 782921
-  _job: 44094802558
-  _time: 2026-11-17 13:46:43.930828357 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: "#1"
-  comments: 11
-  comments_appreciated: 0
-  comments_by_author: 1
-  comments_by_reviewers: 10
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-odesk#6 has been "pull-was-merged".
-  failed_builds: 0
-  files: 5
-  hoc: 175
-  issue: 6
-  repository: 15208785
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2015-01-02 14:35:28.000000000 Z
-  where: github
-  who: 8086956
 - _id: 782922
   _job: 44094802558
   _time: 2026-11-17 13:46:51.704928470 Z
@@ -188355,6 +188290,7 @@
   issue: 467
   repository: 12590126
   review: 2026-10-22 02:46:24.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188379,6 +188315,7 @@
   issue: 258
   repository: 12591138
   review: 2026-09-16 02:50:46.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188403,33 +188340,11 @@
   issue: 1987
   repository: 14204295
   review: 2026-10-18 02:32:40.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
   when: 2026-10-18 02:43:34.000000000 Z
-  where: github
-  who: 8086956
-- _id: 782925
-  _job: 44094802558
-  _time: 2026-11-17 13:47:58.361445655 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: '7'
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-odesk#8 has been "pull-was-merged".
-  failed_builds: 0
-  files: 22
-  hoc: 44
-  issue: 8
-  repository: 15208785
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2015-01-20 12:05:55.000000000 Z
   where: github
   who: 8086956
 - _id: 782926
@@ -188450,6 +188365,7 @@
   issue: 283
   repository: 13359002
   review: 2026-10-26 08:48:53.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188474,6 +188390,7 @@
   issue: 468
   repository: 12590126
   review: 2026-10-22 16:37:28.000000000 Z
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -188498,6 +188415,7 @@
   issue: 259
   repository: 12591138
   review: 2026-09-17 08:53:14.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188522,6 +188440,7 @@
   issue: 70
   repository: 12591382
   review: 2026-09-26 03:14:04.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188546,6 +188465,7 @@
   issue: 1988
   repository: 14204295
   review: 2026-10-22 02:49:51.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188570,35 +188490,13 @@
   issue: 123
   repository: 12591371
   review: 2026-11-11 04:54:02.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
   when: 2026-11-14 12:52:55.000000000 Z
   where: github
   who: 526301
-- _id: 782932
-  _job: 44094802558
-  _time: 2026-11-17 13:50:14.270744122 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: badges
-  comments: 9
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 9
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-odesk#20 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 20
-  repository: 15208785
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2016-01-23 04:04:58.000000000 Z
-  where: github
-  who: 8086956
 - _id: 782933
   _job: 44094802558
   _time: 2026-11-17 13:50:20.849831095 Z
@@ -188617,6 +188515,7 @@
   issue: 284
   repository: 13359002
   review: 2026-10-30 19:20:00.000000000 Z
+  review_comments: 0
   succeeded_builds: 7
   suggestions: 0
   what: pull-was-merged
@@ -188641,6 +188540,7 @@
   issue: 469
   repository: 12590126
   review: 2026-10-26 16:54:45.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188665,6 +188565,7 @@
   issue: 260
   repository: 12591138
   review: 2026-09-20 16:45:54.000000000 Z
+  review_comments: 0
   succeeded_builds: 12
   suggestions: 0
   what: pull-was-merged
@@ -188689,6 +188590,7 @@
   issue: 71
   repository: 12591382
   review: 2026-10-07 08:40:48.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188713,6 +188615,7 @@
   issue: 1989
   repository: 14204295
   review: 2026-10-23 16:50:41.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188736,33 +188639,11 @@
   hoc: 67
   issue: 124
   repository: 12591371
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
   when: 2026-11-16 15:11:28.000000000 Z
-  where: github
-  who: 526301
-- _id: 782939
-  _job: 44094802558
-  _time: 2026-11-17 13:52:15.297548799 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  branch: badge-javadoc
-  comments: 3
-  comments_appreciated: 0
-  comments_by_author: 0
-  comments_by_reviewers: 3
-  comments_resolved: 0
-  comments_to_code: 0
-  details: Apparently, jcabi/jcabi-odesk#21 has been "pull-was-merged".
-  failed_builds: 0
-  files: 1
-  hoc: 2
-  issue: 21
-  repository: 15208785
-  succeeded_builds: 0
-  suggestions: 0
-  what: pull-was-merged
-  when: 2017-11-16 10:50:12.000000000 Z
   where: github
   who: 526301
 - _id: 782940
@@ -188782,6 +188663,7 @@
   hoc: 8
   issue: 285
   repository: 13359002
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
@@ -188806,6 +188688,7 @@
   issue: 470
   repository: 12590126
   review: 2026-11-03 05:21:22.000000000 Z
+  review_comments: 0
   succeeded_builds: 7
   suggestions: 0
   what: pull-was-merged
@@ -188830,6 +188713,7 @@
   issue: 261
   repository: 12591138
   review: 2026-09-20 16:45:50.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188854,6 +188738,7 @@
   issue: 72
   repository: 12591382
   review: 2026-10-14 02:42:40.000000000 Z
+  review_comments: 0
   succeeded_builds: 11
   suggestions: 0
   what: pull-was-merged
@@ -188878,9 +188763,963 @@
   issue: 1990
   repository: 14204295
   review: 2026-10-23 16:50:38.000000000 Z
+  review_comments: 0
   succeeded_builds: 8
   suggestions: 0
   what: pull-was-merged
   when: 2026-10-23 17:36:19.000000000 Z
   where: github
   who: 8086956
+- _id: 782945
+  _job: 109755
+  _time: 2026-11-17 13:55:39.040485121 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-dynamo#623 with 10 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 5h21m and 3 comments.
+  hoc: 10
+  issue: 623
+  repository: 12589687
+  review_comments: 0
+  seconds: 19313
+  what: code-was-reviewed
+  when: *2438
+  where: github
+  who: 526301
+- _id: 782946
+  _job: 109755
+  _time: 2026-11-17 13:55:42.770114548 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  comments: 3
+  details: The pull request jcabi/jcabi-s3#587 with 12 HoC created by @renovate[bot]
+    was merged by @rultor after 54m45s of being in review and 3 comments.
+  hoc: 12
+  issue: 587
+  merger: 8086956
+  repository: 14093966
+  review_comments: 0
+  seconds: 3285
+  what: code-was-contributed
+  when: *2439
+  where: github
+  who: 29139614
+- _id: 782947
+  _job: 44190507578
+  _time: 2026-11-17 22:35:16.389334084 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#262 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 262
+  repository: 12591138
+  review: 2026-09-23 08:41:44.000000000 Z
+  succeeded_builds: 12
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-09-23 08:51:43.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782948
+  _job: 44190507578
+  _time: 2026-11-17 22:35:46.337302927 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/java-jdk-25.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#73 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 73
+  repository: 12591382
+  review: 2026-10-22 16:34:49.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-22 16:55:27.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782949
+  _job: 44190507578
+  _time: 2026-11-17 22:36:14.705051904 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#471 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 471
+  repository: 12590126
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-03 05:44:51.000000000 Z
+  where: github
+  who: 526301
+- _id: 782950
+  _job: 44190507578
+  _time: 2026-11-17 22:36:26.589163184 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/configure
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-odesk#22 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 6
+  issue: 22
+  repository: 15208785
+  succeeded_builds: 0
+  suggestions: 0
+  what: pull-was-merged
+  when: 2022-11-05 04:07:58.000000000 Z
+  where: github
+  who: 526301
+- _id: 782951
+  _job: 44190507578
+  _time: 2026-11-17 22:36:30.842497122 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/davidanson-markdownlint-cli2-action-25.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1991 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 1991
+  repository: 14204295
+  review: 2026-10-26 16:42:31.000000000 Z
+  succeeded_builds: 10
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-26 16:54:19.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782952
+  _job: 44190507578
+  _time: 2026-11-17 22:36:56.656185803 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven.plugins-maven-dependency-plugin-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#286 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 6
+  issue: 286
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 09:59:09.000000000 Z
+  where: github
+  who: 526301
+- _id: 782953
+  _job: 44190507578
+  _time: 2026-11-17 22:37:09.578065590 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#263 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 263
+  repository: 12591138
+  review: 2026-10-01 17:10:41.000000000 Z
+  succeeded_builds: 12
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-01 17:45:47.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782954
+  _job: 44190507578
+  _time: 2026-11-17 22:37:34.436899995 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/davidanson-markdownlint-cli2-action-25.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#74 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 74
+  repository: 12591382
+  review: 2026-10-26 03:04:33.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 10:48:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 782955
+  _job: 44190507578
+  _time: 2026-11-17 22:37:49.698023363 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#472 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 8
+  issue: 472
+  repository: 12590126
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-04 18:18:16.000000000 Z
+  where: github
+  who: 526301
+- _id: 782956
+  _job: 44190507578
+  _time: 2026-11-17 22:38:00.930679015 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.scribe-scribe-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-odesk#23 has been "pull-was-closed".
+  failed_builds: 13
+  files: 1
+  hoc: 2
+  issue: 23
+  repository: 15208785
+  succeeded_builds: 1
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-05-05 12:19:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 782957
+  _job: 44190507578
+  _time: 2026-11-17 22:38:14.581555197 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1142'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1992 has been "pull-was-merged".
+  failed_builds: 0
+  files: 4
+  hoc: 73
+  issue: 1992
+  repository: 14204295
+  review: 2026-10-30 18:43:24.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 11:05:04.000000000 Z
+  where: github
+  who: 526301
+- _id: 782958
+  _job: 44190507578
+  _time: 2026-11-17 22:38:24.057814170 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven.plugins-maven-failsafe-plugin-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#287 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 6
+  issue: 287
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:06:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 782959
+  _job: 44190507578
+  _time: 2026-11-17 22:38:34.689456948 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-core-3.x
+  comments: 2
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#264 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 30
+  issue: 264
+  repository: 12591138
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 23:53:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 782960
+  _job: 44190507578
+  _time: 2026-11-17 22:38:44.601996826 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#75 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 75
+  repository: 12591382
+  review: 2026-11-02 02:37:32.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-02 02:55:06.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782961
+  _job: 44190507578
+  _time: 2026-11-17 22:39:07.924609628 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '439'
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#473 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 5
+  issue: 473
+  repository: 12590126
+  review: 2026-11-05 10:11:03.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-06 13:30:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 782962
+  _job: 44190507578
+  _time: 2026-11-17 22:39:17.193627480 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1147'
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1993 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 21
+  issue: 1993
+  repository: 14204295
+  review: 2026-10-30 18:44:10.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 04:20:08.000000000 Z
+  where: github
+  who: 526301
+- _id: 782963
+  _job: 44190507578
+  _time: 2026-11-17 22:39:25.326797435 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven.plugins-maven-invoker-plugin-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#288 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 288
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:26:06.000000000 Z
+  where: github
+  who: 526301
+- _id: 782964
+  _job: 44190507578
+  _time: 2026-11-17 22:39:35.840300449 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-model-3.x
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#265 has been "pull-was-closed".
+  failed_builds: 3
+  files: 1
+  hoc: 2
+  issue: 265
+  repository: 12591138
+  succeeded_builds: 5
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-10-31 23:42:44.000000000 Z
+  where: github
+  who: 526301
+- _id: 782965
+  _job: 44190507578
+  _time: 2026-11-17 22:39:45.850476812 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#76 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 76
+  repository: 12591382
+  review: 2026-11-03 02:24:17.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-03 02:36:51.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782966
+  _job: 44190507578
+  _time: 2026-11-17 22:40:09.657098697 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: fix/obsolete-it-log4j
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#474 has been "pull-was-merged".
+  failed_builds: 0
+  files: 7
+  hoc: 22
+  issue: 474
+  repository: 12590126
+  review: 2026-11-06 10:57:38.000000000 Z
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-06 13:26:21.000000000 Z
+  where: github
+  who: 526301
+- _id: 782967
+  _job: 44190507578
+  _time: 2026-11-17 22:40:19.784070163 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1069'
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1994 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 21
+  issue: 1994
+  repository: 14204295
+  review: 2026-10-30 18:45:04.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 05:22:13.000000000 Z
+  where: github
+  who: 526301
+- _id: 782968
+  _job: 44190507578
+  _time: 2026-11-17 22:40:28.751461144 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/junit-junit-4.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#289 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 6
+  issue: 289
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:26:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 782969
+  _job: 44190507578
+  _time: 2026-11-17 22:40:38.847285366 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  comments: 3
+  comments_appreciated: 0
+  comments_by_author: 2
+  comments_by_reviewers: 1
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#266 has been "pull-was-closed".
+  failed_builds: 3
+  files: 1
+  hoc: 2
+  issue: 266
+  repository: 12591138
+  succeeded_builds: 5
+  suggestions: 0
+  what: pull-was-closed
+  when: 2026-10-31 23:42:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 782970
+  _job: 44190507578
+  _time: 2026-11-17 22:40:48.895105190 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate-automerge
+  comments: 6
+  comments_appreciated: 2
+  comments_by_author: 2
+  comments_by_reviewers: 4
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#77 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 4
+  issue: 77
+  repository: 12591382
+  review: 2026-11-03 05:22:23.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-03 18:31:56.000000000 Z
+  where: github
+  who: 526301
+- _id: 782971
+  _job: 44190507578
+  _time: 2026-11-17 22:41:03.765848643 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#475 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 475
+  repository: 12590126
+  succeeded_builds: 10
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-06 21:30:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 782972
+  _job: 44190507578
+  _time: 2026-11-17 22:41:14.029666439 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1071'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1995 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 66
+  issue: 1995
+  repository: 14204295
+  review: 2026-10-30 18:45:22.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 08:43:54.000000000 Z
+  where: github
+  who: 526301
+- _id: 782973
+  _job: 44190507578
+  _time: 2026-11-17 22:41:22.536231093 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.plexus-plexus-utils-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#290 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 290
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:26:29.000000000 Z
+  where: github
+  who: 526301
+- _id: 782974
+  _job: 44190507578
+  _time: 2026-11-17 22:41:31.858403001 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '267'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#268 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 57
+  issue: 268
+  repository: 12591138
+  review: 2026-10-30 20:30:26.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 03:49:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 782975
+  _job: 44190507578
+  _time: 2026-11-17 22:41:40.211204014 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '78'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#79 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 29
+  issue: 79
+  repository: 12591382
+  review: 2026-11-06 19:27:18.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-14 10:17:12.000000000 Z
+  where: github
+  who: 526301
+- _id: 782976
+  _job: 44190507578
+  _time: 2026-11-17 22:41:53.051368105 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: maintenance-javadoc-20261106
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#476 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 476
+  repository: 12590126
+  review: 2026-11-06 19:37:18.000000000 Z
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-14 08:24:32.000000000 Z
+  where: github
+  who: 526301
+- _id: 782977
+  _job: 44190507578
+  _time: 2026-11-17 22:42:02.819168610 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1202'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1996 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 59
+  issue: 1996
+  repository: 14204295
+  review: 2026-10-30 18:49:22.000000000 Z
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-30 18:54:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 782978
+  _job: 44190507578
+  _time: 2026-11-17 22:42:12.430257635 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/commons-io-commons-io-2.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#291 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 291
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 17:50:27.000000000 Z
+  where: github
+  who: 526301
+- _id: 782979
+  _job: 44190507578
+  _time: 2026-11-17 22:42:20.860494609 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/java-jdk-25.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#269 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 269
+  repository: 12591138
+  succeeded_builds: 10
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:06:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 782980
+  _job: 44190507578
+  _time: 2026-11-17 22:42:31.246065417 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  comments: 3
+  comments_appreciated: 1
+  comments_by_author: 0
+  comments_by_reviewers: 3
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#80 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 80
+  repository: 12591382
+  review: 2026-11-10 02:24:12.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-10 02:46:41.000000000 Z
+  where: github
+  who: 8086956
+- _id: 782981
+  _job: 44190507578
+  _time: 2026-11-17 22:42:56.039091359 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: 99-test-weaving
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-aspects#477 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 14
+  issue: 477
+  repository: 12590126
+  review: 2026-11-06 20:41:45.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-14 09:13:30.000000000 Z
+  where: github
+  who: 526301
+- _id: 782982
+  _job: 44190507578
+  _time: 2026-11-17 22:43:04.479112013 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1203'
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-github#1997 has been "pull-was-merged".
+  failed_builds: 0
+  files: 2
+  hoc: 32
+  issue: 1997
+  repository: 14204295
+  review: 2026-10-30 18:49:55.000000000 Z
+  succeeded_builds: 7
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-30 18:53:20.000000000 Z
+  where: github
+  who: 526301
+- _id: 782983
+  _job: 44190507578
+  _time: 2026-11-17 22:43:12.745544323 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.commons-commons-lang3-3.x
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-mysql-maven-plugin#292 has been "pull-was-merged".
+  failed_builds: 0
+  files: 1
+  hoc: 2
+  issue: 292
+  repository: 13359002
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 17:58:33.000000000 Z
+  where: github
+  who: 526301
+- _id: 782984
+  _job: 44190507578
+  _time: 2026-11-17 22:43:21.737389250 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/hibernate-validator
+  comments: 0
+  comments_appreciated: 0
+  comments_by_author: 0
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-maven-plugin#270 has been "pull-was-merged".
+  failed_builds: 0
+  files: 3
+  hoc: 6
+  issue: 270
+  repository: 12591138
+  succeeded_builds: 8
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-10-31 16:26:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 782985
+  _job: 44190507578
+  _time: 2026-11-17 22:43:30.740160538 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: upgrade-deps
+  comments: 1
+  comments_appreciated: 0
+  comments_by_author: 1
+  comments_by_reviewers: 0
+  comments_resolved: 0
+  comments_to_code: 0
+  details: Apparently, jcabi/jcabi-heroku-maven-plugin#82 has been "pull-was-merged".
+  failed_builds: 0
+  files: 10
+  hoc: 24
+  issue: 82
+  repository: 12591382
+  review: 2026-11-11 00:44:04.000000000 Z
+  succeeded_builds: 11
+  suggestions: 0
+  what: pull-was-merged
+  when: 2026-11-11 03:23:11.000000000 Z
+  where: github
+  who: 526301
