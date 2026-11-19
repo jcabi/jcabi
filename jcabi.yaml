@@ -3,10 +3,10 @@
   cycles: 1
   deleted: 8
   inserted: 8
-  seconds: 604.598502375
+  seconds: 831.4313263
   version: 0.61.1
   what: judges-summary
-  when: 2026-11-19 13:44:07.967082872 Z
+  when: 2026-11-19 22:32:29.616193154 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -83903,7 +83903,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 603
   earliest_issue_was_found: 1
-  events_were_scanned: 27501631431
+  events_were_scanned: 20695282914
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 573
@@ -84033,7 +84033,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 20622369592
+  events_were_scanned: 27634258939
   labels_were_scanned: 0
   latest_issue_was_found: 66
   merges_were_scanned: 0
@@ -84156,7 +84156,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27618080055
+  events_were_scanned: 27661796518
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 422
@@ -84296,10 +84296,10 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 20561177112
+  events_were_scanned: 27655566335
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 1806
@@ -84335,7 +84335,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27629247928
+  events_were_scanned: 27655011820
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -164056,7 +164056,7 @@
   total_releases_published: 4
   total_reviews_submitted: 592
   what: quantity-of-deliverables
-  when: 2026-11-12 20:22:30.997636719 Z
+  when: &2524 2026-11-12 20:22:30.997636719 Z
 - _id: 781590
   _job: 108309
   _time: 2026-11-12 20:24:59.046505816 Z
@@ -188053,27 +188053,6 @@
   when: *2437
   where: github
   who: 526301
-- _id: 782912
-  _job: 109644
-  _time: 2026-11-17 04:14:58.184441219 Z
-  _version: 0.19.16/0.61.1/0.17.23
-  analyzers: 18
-  text: |-
-    The average reward per task (4.2 points) is decreasing (R=-0.14).
-    The average punishment per task (15.0 points) is staying still.
-    The average number of builds per week (2518.4) is increasing (R=0.86).
-    The average number of commits per week (86.0) is increasing (R=0.86).
-    The average bugs accepted per month (5.0) is decreasing (R=0.10).
-    The average monthly punishment (658 points) is decreasing (R=-0.33).
-    The average monthly wage (5.3 points) is decreasing (R=-0.65).
-    The average issue cycle time (1w) is staying still.
-    The average pull cycle time (1w1d) is increasing (R=0.20).
-    The average number of releases per month (2.0) is increasing (R=0.23).
-    The average monthly turnover (33.0 developers) is decreasing (R=-0.51).
-    The average weekly cost of HoC (0.57 points) is staying still.
-    The average monthly zents/points ratio (0.76) is decreasing (R=-0.74).
-  what: assessment
-  when: 2026-11-17 04:14:58.200770308 Z
 - _id: 782913
   _job: 44094802558
   _time: 2026-11-17 13:40:52.540460863 Z
@@ -192044,6 +192023,7 @@
   hoc: 2
   issue: 138
   repository: 12589424
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -192068,6 +192048,7 @@
   issue: 393
   repository: 23238769
   review: 2026-11-19 02:24:07.000000000 Z
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -192091,6 +192072,7 @@
   hoc: 2
   issue: 167
   repository: 25780072
+  review_comments: 0
   succeeded_builds: 10
   suggestions: 0
   what: pull-was-merged
@@ -192104,3 +192086,56 @@
   total_active_contributors: 7
   what: dimensions-of-terrain
   when: 2026-11-19 13:43:26.803197121 Z
+- _id: 783116
+  _job: 110259
+  _time: 2026-11-19 13:44:40.647091126 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  analyzers: 18
+  text: |-
+    The average reward per task (4.2 points) is decreasing (R=-0.14).
+    The average punishment per task (15.0 points) is staying still.
+    The average number of builds per week (2518.4) is increasing (R=0.86).
+    The average number of commits per week (86.0) is increasing (R=0.86).
+    The average bugs accepted per month (5.0) is decreasing (R=0.10).
+    The average monthly punishment (658 points) is decreasing (R=-0.33).
+    The average monthly wage (5.3 points) is decreasing (R=-0.65).
+    The average issue cycle time (1w) is staying still.
+    The average pull cycle time (1w1d) is increasing (R=0.18).
+    The average number of releases per month (2.0) is increasing (R=0.23).
+    The average monthly turnover (34.0 developers) is decreasing (R=-0.50).
+    The average weekly cost of HoC (0.57 points) is staying still.
+    The average monthly zents/points ratio (0.76) is decreasing (R=-0.74).
+  what: assessment
+  when: 2026-11-19 13:44:40.664225808 Z
+- _id: 783117
+  _job: 44627236100
+  _time: 2026-11-19 22:19:12.068755010 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  commit: 5b668f59b281a794f7ef72ee9c711e208fa04510
+  default_branch: master
+  details: 'A new Git push #50853815035 has arrived to jcabi/jcabi-dynamo, made by
+    @yegor256 (default branch is "master"), not associated with any pull request.'
+  event_id: 27661796518
+  event_type: PushEvent
+  push_id: 50853815035
+  ref: refs/heads/master
+  repository: 12589687
+  to_master: 1
+  what: git-was-pushed
+  when: 2026-11-18 14:53:01.000000000 Z
+  where: github
+  who: 526301
+- _id: 783118
+  _job: 44627236100
+  _time: 2026-11-19 22:22:17.961837715 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  since: *2524
+  total_builds_ran: 3164
+  total_commits_pushed: 147
+  total_hoc_committed: 2607
+  total_issues_created: 121
+  total_pulls_submitted: 115
+  total_releases_published: 2
+  total_reviews_submitted: 42
+  what: quantity-of-deliverables
+  when: 2026-11-19 22:22:17.947451352 Z
