@@ -2,12 +2,11 @@
 - added: 8
   cycles: 1
   deleted: 8
-  error: 'GET https://api.github.com/user/4065685: 502 - Server Error (Octokit::BadGateway)'
   inserted: 8
-  seconds: 827.723529782
+  seconds: 833.989556558
   version: 0.61.1
   what: judges-summary
-  when: 2026-11-21 11:41:46.664613078 Z
+  when: 2026-11-21 19:45:22.529633408 Z
 - _id: 135
   _job: 16435
   _time: 2025-03-31 16:17:47.672268783 Z
@@ -82987,7 +82986,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27667114771
+  events_were_scanned: 27843689397
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 66
@@ -83005,7 +83004,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27772663926
+  events_were_scanned: 27824271914
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 316
@@ -83039,7 +83038,7 @@
   _time: 2026-07-06 16:35:51.094397814 Z
   _version: 0.19.9/0.60.2/0.17.17
   assignees_were_scanned: 0
-  closures_were_checked: 0
+  closures_were_checked: 243
   earliest_issue_was_found: 1
   events_were_scanned: 27770178891
   issues_were_scanned: 0
@@ -83774,7 +83773,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27782033526
+  events_were_scanned: 27820125242
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 486
@@ -83843,7 +83842,7 @@
   _job: 29035274564
   _time: 2026-07-09 16:59:47.524231117 Z
   _version: 0.19.9/0.60.2/0.17.17
-  assignees_were_scanned: 1177
+  assignees_were_scanned: 1278
   closures_were_checked: 0
   earliest_issue_was_found: 1
   events_were_scanned: 27714866998
@@ -83882,7 +83881,7 @@
   assignees_were_scanned: 0
   closures_were_checked: 0
   earliest_issue_was_found: 1
-  events_were_scanned: 27782312656
+  events_were_scanned: 27839725344
   issues_were_scanned: 0
   labels_were_scanned: 0
   latest_issue_was_found: 691
@@ -192551,7 +192550,7 @@
   repository: 16312153
   review_comments: 0
   what: pull-was-reviewed
-  when: 2026-11-21 08:49:47.000000000 Z
+  when: &2530 2026-11-21 08:49:47.000000000 Z
   where: github
   who: 526301
 - _id: 783184
@@ -192584,6 +192583,7 @@
   issue: 670
   repository: 16312153
   review: 2026-11-21 08:49:45.000000000 Z
+  review_comments: 0
   succeeded_builds: 13
   suggestions: 0
   what: pull-was-merged
@@ -192607,3 +192607,963 @@
   since: *2529
   what: quality-of-service
   when: 2026-11-21 11:41:28.986515943 Z
+- _id: 783188
+  _job: 110688
+  _time: 2026-11-21 11:42:17.327428228 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  author: 29139614
+  comments: 3
+  details: The pull request jcabi/jcabi-http#670 with 2 HoC created by @renovate[bot]
+    was reviewed by @yegor256 after 1w3d and 3 comments.
+  hoc: 2
+  issue: 670
+  repository: 16312153
+  review_comments: 0
+  seconds: 871900
+  what: code-was-reviewed
+  when: *2530
+  where: github
+  who: 526301
+- _id: 783189
+  _job: 44941305492
+  _time: 2026-11-21 19:44:04.892363335 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/codecov-codecov-action-7.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#300 has been opened by
+    @renovate[bot].
+  issue: 300
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-10-31 22:16:04.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783190
+  _job: 44941305492
+  _time: 2026-11-21 19:44:05.919839494 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/davidanson-markdownlint-cli2-action-25.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#301 has been opened by
+    @renovate[bot].
+  issue: 301
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-10-31 23:57:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783191
+  _job: 44941305492
+  _time: 2026-11-21 19:44:06.675113228 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/java-jdk-25.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#302 has been opened by
+    @renovate[bot].
+  issue: 302
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-10-31 23:57:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783192
+  _job: 44941305492
+  _time: 2026-11-21 19:44:07.366301586 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/ubuntu-26.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#303 has been opened by
+    @renovate[bot].
+  issue: 303
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-01 00:30:15.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783193
+  _job: 44941305492
+  _time: 2026-11-21 19:44:08.233411031 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/fsfe-reuse-action-6.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#304 has been opened by
+    @renovate[bot].
+  issue: 304
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-01 00:30:20.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783194
+  _job: 44941305492
+  _time: 2026-11-21 19:44:08.937920788 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/major-javahamcrest-monorepo
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#305 has been opened by
+    @renovate[bot].
+  issue: 305
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-01 03:00:36.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783195
+  _job: 44941305492
+  _time: 2026-11-21 19:44:09.733074178 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.plexus-plexus-utils-4.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#306 has been opened by
+    @renovate[bot].
+  issue: 306
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-01 03:00:42.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783196
+  _job: 44941305492
+  _time: 2026-11-21 19:44:10.597961022 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#307 has been opened by
+    @renovate[bot].
+  issue: 307
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-01 17:08:06.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783197
+  _job: 44941305492
+  _time: 2026-11-21 19:44:11.318900459 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#308 has been opened by
+    @renovate[bot].
+  issue: 308
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-03 00:51:25.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783198
+  _job: 44941305492
+  _time: 2026-11-21 19:44:12.283092306 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/guava-monorepo
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#309 has been opened by
+    @renovate[bot].
+  issue: 309
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-03 00:51:30.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783199
+  _job: 44941305492
+  _time: 2026-11-21 19:44:13.052452456 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate-automerge
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#310 has been opened by
+    @yegor256.
+  issue: 310
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-03 05:22:41.000000000 Z
+  where: github
+  who: 526301
+- _id: 783200
+  _job: 44941305492
+  _time: 2026-11-21 19:44:14.017306381 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  details: The missing issue jcabi/jcabi-mysql-maven-plugin#311 has been opened by
+    @yegor256.
+  issue: 311
+  repository: 13359002
+  what: issue-was-opened
+  when: 2026-11-05 10:20:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 783201
+  _job: 44941305492
+  _time: 2026-11-21 19:44:14.542047964 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.mojo-build-helper-maven-plugin-3.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#312 has been opened by
+    @renovate[bot].
+  issue: 312
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-06 14:09:31.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783202
+  _job: 44941305492
+  _time: 2026-11-21 19:44:15.264775729 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#313 has been opened by
+    @renovate[bot].
+  issue: 313
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-06 19:28:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783203
+  _job: 44941305492
+  _time: 2026-11-21 19:44:16.076826618 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#314 has been opened by
+    @renovate[bot].
+  issue: 314
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-07 16:29:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783204
+  _job: 44941305492
+  _time: 2026-11-21 19:44:16.878595437 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#315 has been opened by
+    @renovate[bot].
+  issue: 315
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-09 21:05:24.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783205
+  _job: 44941305492
+  _time: 2026-11-21 19:44:17.672664043 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.mojo-build-helper-maven-plugin-3.x
+  details: The missing pull jcabi/jcabi-mysql-maven-plugin#316 has been opened by
+    @renovate[bot].
+  issue: 316
+  repository: 13359002
+  what: pull-was-opened
+  when: 2026-11-09 21:05:30.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783206
+  _job: 44941305492
+  _time: 2026-11-21 19:44:18.786215806 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: upgrade-deps
+  details: The missing pull jcabi/jcabi-aspects#484 has been opened by @yegor256.
+  issue: 484
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-10 22:28:03.000000000 Z
+  where: github
+  who: 526301
+- _id: 783207
+  _job: 44941305492
+  _time: 2026-11-21 19:44:19.496087959 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  details: The missing issue jcabi/jcabi-aspects#485 has been opened by @yegor256.
+  issue: 485
+  repository: 12590126
+  what: issue-was-opened
+  when: 2026-11-10 23:11:46.000000000 Z
+  where: github
+  who: 526301
+- _id: 783208
+  _job: 44941305492
+  _time: 2026-11-21 19:44:20.010870283 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-aspects#486 has been opened by @renovate[bot].
+  issue: 486
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-11 03:22:47.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783209
+  _job: 44941305492
+  _time: 2026-11-21 19:44:20.790961786 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '485'
+  details: The missing pull jcabi/jcabi-aspects#487 has been opened by @yegor256.
+  issue: 487
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-11 03:43:14.000000000 Z
+  where: github
+  who: 526301
+- _id: 783210
+  _job: 44941305492
+  _time: 2026-11-21 19:44:21.546485940 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '209'
+  details: The missing pull jcabi/jcabi-aspects#488 has been opened by @yegor256.
+  issue: 488
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-11 03:47:23.000000000 Z
+  where: github
+  who: 526301
+- _id: 783211
+  _job: 44941305492
+  _time: 2026-11-21 19:44:22.408239878 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.jcabi-jcabi-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi-aspects#489 has been opened by @renovate[bot].
+  issue: 489
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-12 16:50:10.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783212
+  _job: 44941305492
+  _time: 2026-11-21 19:44:23.120654566 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: update-uncovered-dependencies
+  details: The missing pull jcabi/jcabi-aspects#491 has been opened by @yegor256.
+  issue: 491
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-15 05:28:18.000000000 Z
+  where: github
+  who: 526301
+- _id: 783213
+  _job: 44941305492
+  _time: 2026-11-21 19:44:23.917148398 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.jcabi-parent-0.x
+  details: The missing pull jcabi/jcabi-aspects#492 has been opened by @renovate[bot].
+  issue: 492
+  repository: 12590126
+  what: pull-was-opened
+  when: 2026-11-18 12:51:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783214
+  _job: 44941305492
+  _time: 2026-11-21 19:44:25.377162496 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/guava-monorepo
+  details: The missing pull jcabi/jcabi-maven-plugin#274 has been opened by @renovate[bot].
+  issue: 274
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-10-31 23:53:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783215
+  _job: 44941305492
+  _time: 2026-11-21 19:44:26.120593304 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.eclipse.sisu-org.eclipse.sisu.plexus-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#275 has been opened by @renovate[bot].
+  issue: 275
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-10-31 23:53:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783216
+  _job: 44941305492
+  _time: 2026-11-21 19:44:26.912403205 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi-maven-plugin#276 has been opened by @renovate[bot].
+  issue: 276
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-01 16:06:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783217
+  _job: 44941305492
+  _time: 2026-11-21 19:44:27.731280979 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#277 has been opened by @renovate[bot].
+  issue: 277
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-02 21:25:35.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783218
+  _job: 44941305492
+  _time: 2026-11-21 19:44:28.459768139 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/guava-monorepo
+  details: The missing pull jcabi/jcabi-maven-plugin#278 has been opened by @renovate[bot].
+  issue: 278
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-02 21:25:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783219
+  _job: 44941305492
+  _time: 2026-11-21 19:44:29.326951711 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate-automerge
+  details: The missing pull jcabi/jcabi-maven-plugin#279 has been opened by @yegor256.
+  issue: 279
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-03 05:21:15.000000000 Z
+  where: github
+  who: 526301
+- _id: 783220
+  _job: 44941305492
+  _time: 2026-11-21 19:44:30.093390926 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#280 has been opened by @renovate[bot].
+  issue: 280
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-04 17:44:53.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783221
+  _job: 44941305492
+  _time: 2026-11-21 19:44:30.847904484 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.aspectj-aspectjtools-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#281 has been opened by @renovate[bot].
+  issue: 281
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-04 17:44:58.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783222
+  _job: 44941305492
+  _time: 2026-11-21 19:44:31.806917083 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  details: The missing issue jcabi/jcabi-maven-plugin#282 has been opened by @yegor256.
+  issue: 282
+  repository: 12591138
+  what: issue-was-opened
+  when: 2026-11-05 10:18:53.000000000 Z
+  where: github
+  who: 526301
+- _id: 783223
+  _job: 44941305492
+  _time: 2026-11-21 19:44:32.312207950 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '192'
+  details: The missing pull jcabi/jcabi-maven-plugin#283 has been opened by @yegor256.
+  issue: 283
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-06 15:09:47.000000000 Z
+  where: github
+  who: 526301
+- _id: 783224
+  _job: 44941305492
+  _time: 2026-11-21 19:44:33.046928355 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '282'
+  details: The missing pull jcabi/jcabi-maven-plugin#284 has been opened by @yegor256.
+  issue: 284
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-06 15:10:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 783225
+  _job: 44941305492
+  _time: 2026-11-21 19:44:33.776777805 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#285 has been opened by @renovate[bot].
+  issue: 285
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-06 15:31:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783226
+  _job: 44941305492
+  _time: 2026-11-21 19:44:34.570842842 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#286 has been opened by @renovate[bot].
+  issue: 286
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-07 18:25:46.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783227
+  _job: 44941305492
+  _time: 2026-11-21 19:44:35.341414797 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven.resolver-maven-resolver-api-2.x
+  details: The missing pull jcabi/jcabi-maven-plugin#287 has been opened by @renovate[bot].
+  issue: 287
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-08 14:24:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783228
+  _job: 44941305492
+  _time: 2026-11-21 19:44:36.139669683 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.eclipse.sisu-org.eclipse.sisu.plexus-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#288 has been opened by @renovate[bot].
+  issue: 288
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-09 19:27:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783229
+  _job: 44941305492
+  _time: 2026-11-21 19:44:36.897490316 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#289 has been opened by @renovate[bot].
+  issue: 289
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-10 00:59:25.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783230
+  _job: 44941305492
+  _time: 2026-11-21 19:44:37.826716390 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-maven-plugin#290 has been opened by @renovate[bot].
+  issue: 290
+  repository: 12591138
+  what: pull-was-opened
+  when: 2026-11-10 19:02:28.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783231
+  _job: 44941305492
+  _time: 2026-11-21 19:44:39.164965102 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '932'
+  details: The missing pull jcabi/jcabi-github#2003 has been opened by @yegor256.
+  issue: 2003
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-10-30 18:59:40.000000000 Z
+  where: github
+  who: 526301
+- _id: 783232
+  _job: 44941305492
+  _time: 2026-11-21 19:44:39.912665431 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1335'
+  details: The missing pull jcabi/jcabi-github#2004 has been opened by @yegor256.
+  issue: 2004
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-10-30 20:29:07.000000000 Z
+  where: github
+  who: 526301
+- _id: 783233
+  _job: 44941305492
+  _time: 2026-11-21 19:44:40.623851737 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi-github#2005 has been opened by @renovate[bot].
+  issue: 2005
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-01 13:40:16.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783234
+  _job: 44941305492
+  _time: 2026-11-21 19:44:41.306398140 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/net.bytebuddy-byte-buddy-1.x
+  details: The missing pull jcabi/jcabi-github#2006 has been opened by @renovate[bot].
+  issue: 2006
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-01 21:44:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783235
+  _job: 44941305492
+  _time: 2026-11-21 19:44:42.024007320 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/net.bytebuddy-byte-buddy-agent-1.x
+  details: The missing pull jcabi/jcabi-github#2007 has been opened by @renovate[bot].
+  issue: 2007
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-01 21:44:07.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783236
+  _job: 44941305492
+  _time: 2026-11-21 19:44:42.766370259 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1498'
+  details: The missing pull jcabi/jcabi-github#2008 has been opened by @yegor256.
+  issue: 2008
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-02 10:25:00.000000000 Z
+  where: github
+  who: 526301
+- _id: 783237
+  _job: 44941305492
+  _time: 2026-11-21 19:44:43.517332010 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-github#2009 has been opened by @renovate[bot].
+  issue: 2009
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-02 21:13:42.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783238
+  _job: 44941305492
+  _time: 2026-11-21 19:44:44.298366316 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/guava-monorepo
+  details: The missing pull jcabi/jcabi-github#2010 has been opened by @renovate[bot].
+  issue: 2010
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-02 21:13:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783239
+  _job: 44941305492
+  _time: 2026-11-21 19:44:45.211197603 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate-automerge
+  details: The missing pull jcabi/jcabi-github#2011 has been opened by @yegor256.
+  issue: 2011
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-03 05:21:19.000000000 Z
+  where: github
+  who: 526301
+- _id: 783240
+  _job: 44941305492
+  _time: 2026-11-21 19:44:46.003350771 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: '1624'
+  details: The missing pull jcabi/jcabi-github#2012 has been opened by @yegor256.
+  issue: 2012
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-03 11:38:34.000000000 Z
+  where: github
+  who: 526301
+- _id: 783241
+  _job: 44941305492
+  _time: 2026-11-21 19:44:46.780007553 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  details: The missing pull jcabi/jcabi-github#2013 has been opened by @renovate[bot].
+  issue: 2013
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-04 17:37:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783242
+  _job: 44941305492
+  _time: 2026-11-21 19:44:47.543177291 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: maintenance-jcabi-xml-0371-20261106
+  details: The missing pull jcabi/jcabi-github#2014 has been opened by @yegor256.
+  issue: 2014
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-06 14:16:35.000000000 Z
+  where: github
+  who: 526301
+- _id: 783243
+  _job: 44941305492
+  _time: 2026-11-21 19:44:48.297165755 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-github#2015 has been opened by @renovate[bot].
+  issue: 2015
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-06 19:28:02.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783244
+  _job: 44941305492
+  _time: 2026-11-21 19:44:49.055408566 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-github#2016 has been opened by @renovate[bot].
+  issue: 2016
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-07 17:33:55.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783245
+  _job: 44941305492
+  _time: 2026-11-21 19:44:49.732776829 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/jackson-monorepo
+  details: The missing pull jcabi/jcabi-github#2017 has been opened by @renovate[bot].
+  issue: 2017
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-08 02:05:17.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783246
+  _job: 44941305492
+  _time: 2026-11-21 19:44:50.506295403 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-github#2018 has been opened by @renovate[bot].
+  issue: 2018
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-10 00:00:09.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783247
+  _job: 44941305492
+  _time: 2026-11-21 19:44:51.320311466 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-github#2019 has been opened by @renovate[bot].
+  issue: 2019
+  repository: 14204295
+  what: pull-was-opened
+  when: 2026-11-10 18:34:11.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783248
+  _job: 44941305492
+  _time: 2026-11-21 19:44:52.444369848 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/reviewdog-action-actionlint-1.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#339 has been opened
+    by @renovate[bot].
+  issue: 339
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-09-18 05:10:39.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783249
+  _job: 44941305492
+  _time: 2026-11-21 19:44:53.196544276 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/ubuntu-26.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#340 has been opened
+    by @renovate[bot].
+  issue: 340
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-09-18 14:14:44.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783250
+  _job: 44941305492
+  _time: 2026-11-21 19:44:53.936411755 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#341 has been opened
+    by @renovate[bot].
+  issue: 341
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 08:11:21.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783251
+  _job: 44941305492
+  _time: 2026-11-21 19:44:54.733690355 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-artifact-3.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#342 has been opened
+    by @renovate[bot].
+  issue: 342
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 08:11:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783252
+  _job: 44941305492
+  _time: 2026-11-21 19:44:55.493069649 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-core-3.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#343 has been opened
+    by @renovate[bot].
+  issue: 343
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 09:06:45.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783253
+  _job: 44941305492
+  _time: 2026-11-21 19:44:56.206376899 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-model-3.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#344 has been opened
+    by @renovate[bot].
+  issue: 344
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 09:06:49.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783254
+  _job: 44941305492
+  _time: 2026-11-21 19:44:56.924532741 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-plugin-api-3.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#345 has been opened
+    by @renovate[bot].
+  issue: 345
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 12:58:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783255
+  _job: 44941305492
+  _time: 2026-11-21 19:44:57.685316563 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.apache.maven-maven-settings-3.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#346 has been opened
+    by @renovate[bot].
+  issue: 346
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-03 12:58:43.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783256
+  _job: 44941305492
+  _time: 2026-11-21 19:44:58.719442658 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#347 has been opened
+    by @renovate[bot].
+  issue: 347
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-07 00:43:34.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783257
+  _job: 44941305492
+  _time: 2026-11-21 19:44:59.433326567 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.aspectj-aspectjrt-1.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#348 has been opened
+    by @renovate[bot].
+  issue: 348
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-21 22:51:27.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783258
+  _job: 44941305492
+  _time: 2026-11-21 19:45:00.189203761 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/java-jdk-25.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#349 has been opened
+    by @renovate[bot].
+  issue: 349
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-22 16:33:35.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783259
+  _job: 44941305492
+  _time: 2026-11-21 19:45:00.950813918 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.plexus-plexus-utils-4.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#350 has been opened
+    by @renovate[bot].
+  issue: 350
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-22 17:22:48.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783260
+  _job: 44941305492
+  _time: 2026-11-21 19:45:01.766917122 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/davidanson-markdownlint-cli2-action-25.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#351 has been opened
+    by @renovate[bot].
+  issue: 351
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-10-26 00:51:59.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783261
+  _job: 44941305492
+  _time: 2026-11-21 19:45:02.545887715 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/com.qulice-qulice-maven-plugin-0.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#352 has been opened
+    by @renovate[bot].
+  issue: 352
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-11-01 17:37:10.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783262
+  _job: 44941305492
+  _time: 2026-11-21 19:45:03.345861335 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/org.codehaus.plexus-plexus-utils-4.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#353 has been opened
+    by @renovate[bot].
+  issue: 353
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-11-02 10:16:23.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783263
+  _job: 44941305492
+  _time: 2026-11-21 19:45:04.067685787 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate/crate-ci-typos-1.x
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#354 has been opened
+    by @renovate[bot].
+  issue: 354
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-11-03 02:06:38.000000000 Z
+  where: github
+  who: 29139614
+- _id: 783264
+  _job: 44941305492
+  _time: 2026-11-21 19:45:04.833725639 Z
+  _version: 0.19.16/0.61.1/0.17.23
+  branch: renovate-automerge
+  details: The missing pull jcabi/jcabi-dynamodb-maven-plugin#355 has been opened
+    by @yegor256.
+  issue: 355
+  repository: 12947626
+  what: pull-was-opened
+  when: 2026-11-03 05:22:33.000000000 Z
+  where: github
+  who: 526301
